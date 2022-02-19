@@ -6,11 +6,11 @@ Right now I have two navigation options:
 <br/>
 The diagrams were all made using <a href="https://graphviz.org/">Graphviz</a> and the <a href="https://graphviz.org/doc/info/lang.html">DOT language</a>.
 <br/>
-Sources:
+Sources:<br/>
 The idea for this project, and the beginnings of many of the pages, come from <i>Roots: Family Histories of Familiar Words</i> by Peter Davies (McGraw Hill, 1981).
 My primary source is <i>The American Heritage College Dictionary</i> (Houghton Mifflin, 2004). More sources and more specific citations are in the works.
 <br/>
-More information on PIE:
-https://en.wikipedia.org/wiki/Proto-Indo-European_language
-https://www.archaeology.org/exclusives/articles/1302-proto-indo-european-schleichers-fable
-https://www.thegreatcoursesdaily.com/reconstructing-the-proto-indo-european-language/
+More information on PIE:<br/>
+https://en.wikipedia.org/wiki/Proto-Indo-European_language<br/>
+https://www.archaeology.org/exclusives/articles/1302-proto-indo-european-schleichers-fable<br/>
+https://www.thegreatcoursesdaily.com/reconstructing-the-proto-indo-european-language/<br/>
