@@ -3,14 +3,14 @@ These diagrams represent reconstructed Proto-Indo-European (called Indo-European
 Right now I have two navigation options:
 <li><a href="root-list.html">alphabetical list of PIE roots</a></li>
 <li><a href="alpha-index.html">alphabetical index of Modern English words</a></li>
-<br/>
+
 The diagrams were all made using <a href="https://graphviz.org/">Graphviz</a> and the <a href="https://graphviz.org/doc/info/lang.html">DOT language</a>.
-<br/>
+
 Sources:<br/>
 The idea for this project, and the beginnings of many of the pages, come from <i>Roots: Family Histories of Familiar Words</i> by Peter Davies (McGraw Hill, 1981).
 My primary source is <i>The American Heritage College Dictionary</i> (Houghton Mifflin, 2004). More sources and more specific citations are in the works.
-<br/>
+
 More information on PIE:<br/>
-https://en.wikipedia.org/wiki/Proto-Indo-European_language<br/>
-https://www.archaeology.org/exclusives/articles/1302-proto-indo-european-schleichers-fable<br/>
-https://www.thegreatcoursesdaily.com/reconstructing-the-proto-indo-european-language/<br/>
+<a href="https://en.wikipedia.org/wiki/Proto-Indo-European_language">"Proto-Indo-European" on Wikipedia</a><br/>
+<a href="https://www.thegreatcoursesdaily.com/reconstructing-the-proto-indo-european-language/">"Reconstructing the Proto-Indo-European Language" on The Great Courses Daily</a><br/>
+<a href="https://www.archaeology.org/exclusives/articles/1302-proto-indo-european-schleichers-fable">"Telling Tales in Proto-Indo-European" on Archaeology (with audio recording)<br/>
