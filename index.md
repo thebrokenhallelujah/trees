@@ -13,4 +13,4 @@ My primary source is <i>The American Heritage College Dictionary</i> (Houghton M
 More information on PIE:<br/>
 <a href="https://en.wikipedia.org/wiki/Proto-Indo-European_language">"Proto-Indo-European" on Wikipedia</a><br/>
 <a href="https://www.thegreatcoursesdaily.com/reconstructing-the-proto-indo-european-language/">"Reconstructing the Proto-Indo-European Language" on The Great Courses Daily</a><br/>
-<a href="https://www.archaeology.org/exclusives/articles/1302-proto-indo-european-schleichers-fable">"Telling Tales in Proto-Indo-European" on Archaeology (with audio recording)<br/>
+<a href="https://www.archaeology.org/exclusives/articles/1302-proto-indo-european-schleichers-fable">"Telling Tales in Proto-Indo-European" on Archaeology (with audio recording)</a><br/>
