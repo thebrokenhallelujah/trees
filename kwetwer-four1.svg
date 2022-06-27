@@ -428,7 +428,7 @@
 <!-- quatreOF&#45;&gt;caterME -->
 <g id="edge27" class="edge">
 <title>quatreOF&#45;&gt;caterME</title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M866.5,-309C866.5,-309 864.55,-297.47 862.29,-284.12"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M866.5,-309C866.5,-309 864.55,-297.47 862.29,-284.12"/>
 <polygon fill="black" stroke="black" points="865.73,-283.49 860.61,-274.22 858.83,-284.66 865.73,-283.49"/>
 </g>
 <!-- quatrain -->
@@ -441,7 +441,7 @@
 <!-- quatrainF&#45;&gt;quatrain -->
 <g id="edge26" class="edge">
 <title>quatrainF&#45;&gt;quatrain</title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M950.55,-218.67C952.13,-183.57 955.13,-117 956.95,-76.35"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M950.55,-218.67C952.13,-183.57 955.13,-117 956.95,-76.35"/>
 <polygon fill="black" stroke="black" points="960.46,-76.26 957.41,-66.12 953.47,-75.95 960.46,-76.26"/>
 </g>
 <!-- catercorner -->
@@ -477,13 +477,13 @@
 <!-- milquattrocento&#45;&gt;quattrocento -->
 <g id="edge32" class="edge">
 <title>milquattrocento&#45;&gt;quattrocento</title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M742.5,-127.99C742.5,-117.14 742.5,-102.51 742.5,-88.39"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M742.5,-127.99C742.5,-117.14 742.5,-102.51 742.5,-88.39"/>
 <polygon fill="black" stroke="black" points="746,-88.27 742.5,-78.27 739,-88.27 746,-88.27"/>
 </g>
 <!-- taqAr&#45;&gt;chartaqP -->
 <g id="edge34" class="edge">
 <title>taqAr&#45;&gt;chartaqP</title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M1122.05,-481.74C1113.51,-472.04 1104.19,-461.44 1098.12,-454.53"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M1122.05,-481.74C1113.51,-472.04 1104.19,-461.44 1098.12,-454.53"/>
 <polygon fill="black" stroke="black" points="1100.73,-452.2 1091.5,-447 1095.47,-456.82 1100.73,-452.2"/>
 </g>
 <!-- cardakT -->
@@ -499,7 +499,7 @@
 <!-- chartaqP&#45;&gt;cardakT -->
 <g id="edge35" class="edge">
 <title>chartaqP&#45;&gt;cardakT</title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M1090.5,-395.7C1090.5,-387.42 1090.5,-378 1090.5,-369.14"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M1090.5,-395.7C1090.5,-387.42 1090.5,-378 1090.5,-369.14"/>
 <polygon fill="black" stroke="black" points="1094,-369.09 1090.5,-359.09 1087,-369.09 1094,-369.09"/>
 </g>
 <!-- cardakSC -->
@@ -515,7 +515,7 @@
 <!-- cardakT&#45;&gt;cardakSC -->
 <g id="edge36" class="edge">
 <title>cardakT&#45;&gt;cardakSC</title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M1090.5,-310.82C1090.5,-300.64 1090.5,-288.49 1090.5,-277.36"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M1090.5,-310.82C1090.5,-300.64 1090.5,-288.49 1090.5,-277.36"/>
 <polygon fill="black" stroke="black" points="1094,-277.1 1090.5,-267.1 1087,-277.1 1094,-277.1"/>
 </g>
 <!-- csardasH -->
@@ -532,7 +532,7 @@
 <!-- cardakSC&#45;&gt;csardasH -->
 <g id="edge37" class="edge">
 <title>cardakSC&#45;&gt;csardasH</title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M1090.5,-218.52C1090.5,-208.86 1090.5,-197.4 1090.5,-186.52"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M1090.5,-218.52C1090.5,-208.86 1090.5,-197.4 1090.5,-186.52"/>
 <polygon fill="black" stroke="black" points="1094,-186.33 1090.5,-176.34 1087,-186.34 1094,-186.33"/>
 </g>
 <!-- czardas -->
@@ -548,7 +548,7 @@
 <!-- csardasH&#45;&gt;czardas -->
 <g id="edge38" class="edge">
 <title>csardasH&#45;&gt;czardas</title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M1090.5,-115.76C1090.5,-103.49 1090.5,-89.14 1090.5,-76.37"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M1090.5,-115.76C1090.5,-103.49 1090.5,-89.14 1090.5,-76.37"/>
 <polygon fill="black" stroke="black" points="1094,-76.1 1090.5,-66.1 1087,-76.1 1094,-76.1"/>
 </g>
 <!-- feorthaOE -->
@@ -661,7 +661,7 @@
 <!-- quarteOF&#45;&gt;quartME -->
 <g id="edge49" class="edge">
 <title>quarteOF&#45;&gt;quartME</title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M320.73,-316.65C320.25,-305.76 319.6,-291.36 319.02,-278.25"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M320.73,-316.65C320.25,-305.76 319.6,-291.36 319.02,-278.25"/>
 <polygon fill="black" stroke="black" points="322.51,-277.94 318.57,-268.1 315.52,-278.25 322.51,-277.94"/>
 </g>
 <!-- quart -->
@@ -699,7 +699,7 @@
 <!-- quartierOF&#45;&gt;quarterME -->
 <g id="edge53" class="edge">
 <title>quartierOF&#45;&gt;quarterME</title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M224.5,-224.58C224.5,-212.51 224.5,-196.04 224.5,-181.38"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M224.5,-224.58C224.5,-212.51 224.5,-196.04 224.5,-181.38"/>
 <polygon fill="black" stroke="black" points="228,-181.11 224.5,-171.11 221,-181.11 228,-181.11"/>
 </g>
 <!-- quarter -->
