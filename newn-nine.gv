@@ -1,0 +1,97 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+newn [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">newn̥</font></td><td><font point-size="16">nine</font></td></tr></table>> tooltip="Indo-European \"newn̥\" nine" shape=box peripheries=2 margin=.3]
+
+neweno [label=<<font color="red">neweno-</font><br/><font point-size="12">ninth</font>>]
+enewn [label=<<font color="red">ənewn̥, ənwn̥</font>>]
+newn -> { neweno enewn } [sametail=1]
+
+/* omitted: novemdecillion, novena, nones, nonagon */
+
+/* dekm */
+dekmIE [label=<<b>Indo-<br/>European</b><br/><font color="red">dekm̥</font><br/><font point-size="12">ten</font>> shape=box style="dashed,rounded" URL="dekm-ten0.svg"]
+tehunGm [label=<<b>Germanic</b><br/><font color="red">tehun</font>>]
+teneOE [label=<<b>Old English</b><br/><font color="red">-tēne, -tīne, -tȳne</font>>]
+dekmIE -> tehunGm [sametail=1]
+tehunGm -> teneOE [sametail=1]
+kontaIE [label=<<font color="red">-dkōm-tā̆, -kontā̆</font>>]
+gintaL [label=<<b>Latin</b><br/><font color="red">-gintā</font><br/><font point-size="12">ten times</font>>]
+dekmIE -> kontaIE [sametail=1]
+kontaIE -> gintaL
+
+/* English */
+nigunGm [label=<<b>Germanic</b><br/><font color="red">niwun, nigun</font>>]
+nigonOE [label=<<b>Old English</b><br/><font color="red">nigon</font>>]
+nineME [label=<<b>Middle<br/>English</b><br/><font color="red">nine</font>>]
+nine [label=<<b>Modern<br/>English</b><br/><font color="red">nine</font>>]
+newn -> nigunGm [sametail=1]
+nigunGm -> nigonOE
+nigonOE -> nineME [sametail=1]
+nineME -> nine
+/* ninth < ninatheME < nigontheOE */
+nigontigOE [label=<<font color="red">nigontig</font><br/><font point-size="12">ninety</font>>]
+nintiME [label=<<b>Middle<br/>English</b><br/><font color="red">ninti</font>>]
+ninety [label=<<b>Modern<br/>English</b><br/><font color="red">ninety</font>>]
+nigonOE -> nigontigOE [sametail=1]
+nigontigOE -> nintiME -> ninety
+nigonteneOE [label=<<font color="red">nigontēne</font><br/><font point-size="12">nineteen</font>>]
+ninteneME [label=<<b>Middle<br/>English</b><br/><font color="red">nintene</font>>]
+nineteen [label=<<b>Modern<br/>English</b><br/><font color="red">nineteen</font>>]
+nigonOE -> nigonteneOE [sametail=1 samehead=1]
+teneOE -> nigonteneOE [samehead=1]
+nigonteneOE -> ninteneME -> nineteen
+
+/* Latin novem */
+novemL [label=<<b>Latin</b><br/><font color="red">novem</font>>] // -em to match septem, decem
+novemberL [label=<<font color="red">November</font><br/><font point-size="12">ninth month</font>>]
+novembreOF [label=<<b>Old French</b><br/><font color="red">Novembre</font>>]
+novembreME [label=<<b>Middle<br/>English</b><br/><font color="red">Novembre</font>>]
+november [label=<<b>Modern<br/>English</b><br/><font color="red">November</font>>]
+newn -> novemL [sametail=1]
+novemL -> novemberL [sametail=1]
+novemberL -> novembreOF
+novembreOF -> novembreME [style=dotted]
+novembreME -> november
+
+/* Latin nonus */
+nonusL [label=<<b>Latin</b><br/><font color="red">nōnus</font><br/><font point-size="12">ninth</font>>]
+nonaE [label=<<b>Modern<br/>English</b><br/><font color="red">nona-</font>>]
+neweno -> nonusL
+nonusL -> nonaE [style=dotted sametail=1]
+nonagintaL [label=<<font color="red">nōnāgintā</font><br/><font point-size="12">ninety</font>>]
+nonageniL [label=<<font color="red">nōnāgēnī</font><br/><font point-size="12">ninety each</font><br/><font color="red">nōnāgēnārius</font><br/><font point-size="12">containing ninety</font>>]
+nonagenarian [label=<<b>Modern<br/>English</b><br/><font color="red">nonagenarian</font>>]
+nonusL -> nonagintaL [sametail=1 samehead=1]
+gintaL -> nonagintaL [samehead=1]
+nonagintaL -> nonageniL
+nonageniL -> nonagenarian [style=dotted]
+nonoI [label=<<b>Italian</b><br/><font color="red">nono</font>>]
+nonettoI [label=<<font color="red">nonetto</font><br/><font point-size="12">(diminutive)</font>>]
+nonet [label=<<b>Modern<br/>English</b><br/><font color="red">nonet</font>>]
+nonusL -> nonoI [sametail=1]
+nonoI -> nonettoI
+nonettoI -> nonet [style=dotted]
+nonaL [label=<<font color="red">nōna (hōra)</font><br/><font point-size="12">ninth (hour)</font>>]
+nonOE [label=<<b>Old English</b><br/><font color="red">nōn</font><br/><font point-size="12">(roughly 3pm)</font>>]
+nonME [label=<<b>Middle<br/>English</b><br/><font color="red">non</font>>] // midday?
+noon [label=<<b>Modern<br/>English</b><br/><font color="red">noon</font>>]
+nonusL -> nonaL [sametail=1]
+nonaL -> nonOE [style=dotted]
+nonOE -> nonME -> noon
+
+/* Greek */
+enneaG [label=<<b>Greek</b><br/><font color="red">ennea</font>>]
+enneasG [label=<<font color="red">enneas, ennead-</font>>] // same meaning?
+ennead [label=<<b>Modern<br/>English</b><br/><font color="red">ennead</font>>]
+enewn -> enneaG -> enneasG
+enneasG -> ennead [style=dotted]
+
+{ rank=sink nine ninety nineteen november nonaE nonagenarian nonet noon ennead }
+{ rank=source newn dekmIE }
+{ rank=same nigunGm novemL nonusL gintaL tehunGm enneaG }
+enneaG -> enneasG [weight=2]
+// not sure about this order:
+tehunGm -> nigunGm -> gintaL -> nonusL [style=invis]
+//nonagenarian -> nineteen -> ninety -> nine [style=invis]
+}

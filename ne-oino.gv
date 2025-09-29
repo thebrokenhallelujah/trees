@@ -1,0 +1,52 @@
+digraph {
+node [shape=none];
+ne [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ne</font></td><td><font point-size="16">not</font></td></tr></table>> tooltip="Indo-European \"*ne\" not" shape=rect style=dashed peripheries=1 margin=.3 URL="ne-not0.svg"]
+oino [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*oi-no-</font></td><td><font point-size="16">one</font></td></tr></table>> tooltip="Indo-European \"*oi-no-\" one" shape=rect style=dashed peripheries=1 margin=.3 URL="oino-one0.svg"]
+oino -> oinolo;
+oinolo [label=<<font color="red">*oino-lo-</font>>];
+/* L nullus, omitted: nullipara (a woman who has never given birth) */
+ne -> neL -> nullusL;
+oinolo -> ullusL -> nullusL;
+neL [label=<<b>Latin</b><br/><font color="red">ne-</font>>];
+ullusL [label=<<b>Latin</b><br/><font color="red">ūllus</font><br/><font point-size="12">any</font>>];
+nullusL [label=<<font color="red">nūllus</font><br/><font point-size="12">none</font>>];
+/* null */
+nullusL -> nulOF -> nulF;
+nulF -> null [style=dashed];
+nulOF [label=<<b>Old French</b><br/><font color="red">nul</font>>];
+nulF [label=<<b>French</b><br/><font color="red">nul</font>>];
+null [label=<<b>Modern<br/>English</b><br/><font color="red">null</font>>];
+/* nullify */
+nullusL -> nullificareL;
+nullificareL -> nullify [style=dashed];
+nullificareL [label=<<font color="red">nūllificāre</font><br/><font point-size="12">"to make none,"<br/>to despise</font>>]; // make an entry for -ficare?
+nullify [label=<<b>Modern<br/>English</b><br/><font color="red">nullify</font>>];
+/* annul */
+{ ad; nullusL } -> annullareL -> annullerOF;
+annullerOF -> annullenME [style=dashed];
+annullenME -> annul;
+ad [label=<<font color="red">ad-</font><br/><font point-size="12">to</font>>];
+annullareL [label=<<font color="red">annullāre</font>>];
+annullerOF [label=<<b>Old French</b><br/><font color="red">anuller</font>>];
+annullenME [label=<<b>Middle<br/>English</b><br/><font color="red">annullen</font>>];
+annul [label=<<b>Modern<br/>English</b><br/><font color="red">annul</font>>];
+/* L non, omitted: nonsuit, nonpareil, persona non grata */
+{ ne; oino } -> neoinom -> nonL;
+neoinom [label=<<font color="red">*ne-oin-om</font><br/><font point-size="12">not one thing</font>>];
+nonL [label=<<b>Latin</b><br/><font color="red">nōn</font><br/><font point-size="12">not</font>>];
+nonL -> nonOF;
+nonOF -> nonME [style=dashed];
+nonME -> nonE;
+nonOF [label=<<b>Old French</b><br/><font color="red">non-</font>>];
+nonME [label=<<b>Middle<br/>English</b><br/><font color="red">non-</font>>];
+nonE [label=<<b>Modern<br/>English</b><br/><font color="red">non-</font>>];
+/* nonplus */
+nonL -> nonplusL;
+nonplusL -> nonplus [style=dashed];
+nonplusL [label=<<font color="red">nōn plūs</font><br/><font point-size="12">no more</font>>];
+nonplus [label=<<b>Modern<br/>English</b><br/><font color="red">nonplus</font>>];
+{ rank=same; null; nullify; annul; nonE; nonplus; }
+{ rank=same; neL; ullusL; nonL; } // top Latin
+{ rank=same; nonOF; annullerOF; nulOF; } // Old French
+{ rank=same; nullificareL; annullareL; nonplusL } // bottom Latin
+}

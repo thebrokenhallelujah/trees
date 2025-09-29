@@ -1,0 +1,57 @@
+digraph oino_aina {
+/* sources: Rfh, AHD */
+node [shape=none];
+oino [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*oi-no-</font></td><td><font point-size="16">one, unique</font></td></tr></table>> tooltip="Indo-European \"*oi-no-\" one, unique" shape=rect style=dashed peripheries=1 margin=.3 URL="oino-one0.svg"] // oinos
+oino -> ainaGm;
+/* omitted: einkorn, turnverein */
+/* none */
+anOE -> nanOE -> noneME -> none;
+nanOE [label=<<font color="red">nān</font>>];
+noneME [label=<<b>Middle English</b><br/><font color="red">none</font>>];
+none [label=<<b>Modern English</b><br/><font color="red">none</font>>];
+ne -> neGm -> neOE -> nanOE;
+ne [label=<<b>Indo-<br/>European</b><br/><font color="red">*ne</font><br/><font point-size="12">not</font>> shape=box style="dashed,rounded" URL="ne-not1.svg"]
+neGm [label=<<b>Germanic</b><br/><font color="red">*ne-</font>>];
+neOE [label=<<b>Old English</b><br/><font color="red">ne</font>>];
+/* a, an */
+ainaGm -> anOE -> anME -> an;
+ainaGm  [label=<<b>Germanic</b><br/><font color="red">*aina-</font>>];
+anOE [label=<<b>Old<br/>English</b><br/><font color="red">ān</font>>];
+anME [label=<<b>Middle<br/>English</b><br/><font color="red">an, a</font>>];
+an [label=<<b>Modern<br/>English</b><br/><font color="red">an, a</font>>];
+/* one, once */
+anOE -> onME -> one;
+onME -> onesME -> once;
+onME [label=<<b>Middle<br/>English</b><br/><font color="red">on, one</font>>];
+one [label=<<b>Modern<br/>English</b><br/><font color="red">one</font>>];
+onesME [label=<<font color="red">ones, anes</font><br/><font point-size="12">"one time"</font>>];
+once [label=<<b>Modern<br/>English</b><br/><font color="red">once</font>>];
+/* nonce */
+onesME -> nonesME -> nonce;
+nonesME [label=<<font color="red">for then anes<br/>for the nones</font><br/><font point-size="12">for the occasion</font>>];
+nonce [label=<<b>Modern English</b><br/><font color="red">nonce</font>>];
+/* alone, lone, lonely */
+onME -> aloneME -> alone;
+aloneME [label=<<font color="red">al one</font><br/><font point-size="12">"all by<br/>oneself"</font>>];
+alone [label=<<b>Modern<br/>English</b><br/><font color="red">alone<br/>lone<br/>lonely</font>>];
+/* anon */
+anOE -> onanOE -> anonME -> anon;
+onanOE [label=<<font color="red">on ān</font><br/><font point-size="12">"in one"</font>>];
+anonME [label=<<b>Middle<br/>English</b><br/><font color="red">anon</font>>];
+anon [label=<<b>Modern<br/>English</b><br/><font color="red">anon</font><br/><font point-size="12">later, soon</font>>];
+/* atone */
+onME -> atoneME -> atone;
+atoneME [label=<<font color="red">at one</font><br/><font point-size="12">in agreement</font><br/><font color="red">atonen</font><br/><font point-size="12">to be reconciled</font>>];
+atone [label=<<b>Modern English</b><br/><font color="red">atone</font>>];
+/* eleven */
+{ ainaGm; lifGm } -> ainlifGm -> endleofanOE -> elevneME -> eleven;
+ainlifGm [label=<<font color="red">*ain-lif-</font><br/><font point-size="12">"one left<br/>(after ten),"<br/>eleven</font>>];
+endleofanOE [label=<<b>Old English</b><br/><font color="red">endleofan<br/>elefne</font>>];
+elevneME [label=<<b>Middle<br/>English</b><br/><font color="red">elevne</font>>]; // elleven
+eleven [label=<<b>Modern<br/>English</b><br/><font color="red">eleven</font>>];
+leikw -> lifGm;
+leikw [label=<<b>Indo-<br/>European</b><br/><font color="red">*leikʷ-</font><br/><font point-size="12">to leave</font>> shape=box style="dashed,rounded" URL="leikw-leave.svg"];
+lifGm [label=<<b>Germanic</b><br/><font color="red">*lif-</font><br/><font point-size="12">left over</font>>];
+{ rank=same; an; one; once; nonce; alone; anon; atone; none; eleven; }
+{ rank=same; noneME; anME; onesME; anonME; elevneME; }
+}

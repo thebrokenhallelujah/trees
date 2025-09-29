@@ -1,0 +1,83 @@
+digraph oino_unus {
+/* sources: Rfh, AHD */
+node [shape=none];
+oino [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*oi-no-</font></td><td><font point-size="16">one, unique</font></td></tr></table>> tooltip="Indo-European \"*oi-no-\" one, unique" shape=rect style=dashed peripheries=1 margin=.3 URL="oino-one0.svg"]
+oino -> unusL;
+/* uni-, omitted: Uniat/Uniate, coadunate, triune */
+/* list: unicycle, uniform, unitard, unicameral, unicolor, unidimensional, unidirectional, unifilar, unilateral, unilinear, unilingual, unipersonal, unisex(ual), univocal */
+/* science: uniaxial, unicellular, unicostate, unifactorial, unifoliate, unifoliolate, uniformitarianism, unilocular, uninucleate, uniparous, unipolar, unipotent, univalent, univalve */
+unusL -> { uniL; unioL; unireL; unitasL; unanimusL; universusL; unicornisL; }
+uniL -> uniE [style=dashed]; // through MF, ME?
+unusL [label=<<b>Latin</b><br/><font color="red">ūnus</font>>];
+uniL [label=<<font color="red">ūni-</font>>];
+uniE [label=<<b>Modern<br/>English</b><br/><font color="red">uni-</font>>];
+/* unify */
+uniL -> unificareL -> unifierOF -> unifierF;
+unifierF -> unify [style=dashed];
+unificareL [label=<<font color="red">ūnificāre</font><br/><font point-size="12">to make one</font>>];
+unifierOF [label=<<b>Old French</b><br/><font color="red">unifier</font>>];
+unifierF [label=<<b>French</b><br/><font color="red">unifier</font>>];
+unify [label=<<b>Modern<br/>English</b><br/><font color="red">unify</font>>];
+/* union */
+unioL -> unionOF;
+unionOF -> unionME [style=dashed];
+unionME -> union;
+unioL [label=<<font color="red">ūniō, ūniōn-</font>>];
+unionOF [label=<<b>Old French</b><br/><font color="red">union</font>>];
+unionME [label=<<b>Middle<br/>English</b><br/><font color="red">union</font>>];
+union [label=<<b>Modern<br/>English</b><br/><font color="red">union</font>>];
+/* unite */
+unireL -> unitenME [style=dashed];
+unitenME -> unite;
+unireL [label=<<font color="red">ūnīre, ūnīt-</font><br/><font point-size="12">to make<br/>into one</font>>];
+unitenME [label=<<b>Middle<br/>English</b><br/><font color="red">uniten</font>>];
+unite [label=<<b>Modern<br/>English</b><br/><font color="red">unite</font>>];
+/* unity, unit, omitted: Unitarian */
+unitasL -> uniteOF;
+uniteOF -> uniteME [style=dashed];
+uniteME -> unity;
+unitasL [label=<<font color="red">ūnitās</font>>];
+uniteOF [label=<<b>Old French</b><br/><font color="red">unite</font>>];
+uniteME [label=<<b>Middle<br/>English</b><br/><font color="red">unite</font>>];
+unity [label=<<b>Modern<br/>English</b><br/><font color="red">unity<br/>unit</font>>]; // or should I put unity ->(sideways) unit?
+/* universe */
+universusL -> universOF;
+universOF -> universeME [style=dashed];
+universeME -> universe;
+universusL [label=<<font color="red">ūniversus</font><br/><font point-size="12">whole</font>>]; // "universum" for universe
+universOF [label=<<b>Old French</b><br/><font color="red">univers</font>>];
+universeME [label=<<b>Middle<br/>English</b><br/><font color="red">universe</font>>];
+universe [label=<<b>Modern<br/>English</b><br/><font color="red">universe</font>>];
+wer -> vertereL -> universusL;
+wer [label=<<b>Indo-<br/>European</b><br/><font color="red">*wer-</font><br/><font point-size="12">to turn</font>> shape=box style="dashed,rounded" URL="wer-turn.svg"];
+vertereL [label=<<b>Latin</b><br/><font color="red">vertere<br/>versus</font>>];
+/* university */
+universusL -> universitasL -> universiteOF;
+universiteOF -> universiteME [style=dashed];
+universiteME -> university;
+universitasL [label=<<font color="red">ūniversitās</font><br/><font point-size="12">the whole,<br/>a corporate body</font>>];
+universiteOF [label=<<b>Old French</b><br/><font color="red">universite</font>>];
+universiteME [label=<<b>Middle<br/>English</b><br/><font color="red">universite</font>>];
+university [label=<<b>Modern<br/>English</b><br/><font color="red">university</font>>];
+/* unicorn */
+unicornisL -> unicorneOF;
+unicorneOF -> unicorneME [style=dashed];
+unicorneME -> unicorn;
+unicornisL [label=<<font color="red">ūnicornis</font><br/><font point-size="12">having one horn,<br/>a unicorn</font>>];
+unicorneOF [label=<<b>Old French</b><br/><font color="red">unicorne</font>>];
+unicorneME [label=<<b>Middle<br/>English</b><br/><font color="red">unicorne</font>>];
+unicorn [label=<<b>Modern<br/>English</b><br/><font color="red">unicorn</font>>];
+ker -> cornuL -> unicornisL;
+ker [label=<<b>Indo-<br/>European</b><br/><font color="red">*ker-</font><br/><font point-size="12">horn</font>> shape=box style="dashed,rounded" URL="ker-horn.svg"];
+cornuL [label=<<b>Latin</b><br/><font color="red">cornū</font>>];
+/* unanimous */
+unanimusL -> unanimous [style=dashed];
+unanimusL [label=<<font color="red">ūnanimus</font>>];
+unanimous [label=<<b>Modern<br/>English</b><br/><font color="red">unanimous</font>>];
+ane -> animusL -> unanimusL;
+ane [label=<<b>Indo-<br/>European</b><br/><font color="red">*anə-</font><br/><font point-size="12">to breathe</font>> shape=box style="dashed,rounded" URL="ane-breathe.svg"];
+animusL [label=<<b>Latin</b><br/><font color="red">animus</font><br/><font point-size="12">mind</font>>];
+{ rank=same; uniE; unify; unite; unity; union; universe; university; unicorn; unanimous; }
+{ rank=same; unionOF; uniteOF; unifierOF; universiteOF; universOF; unicorneOF } // Old French
+{ rank=same; unionME; unitenME }
+}

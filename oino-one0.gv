@@ -1,0 +1,12 @@
+digraph {
+/* sources: Rfh, AHD */
+oino [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*oi-no-</font></td><td><font point-size="16">one, unique</font></td></tr></table>> tooltip="Indo-European \"*oi-no-\" one, unique" shape=box peripheries=2 margin=.3] // oinos
+oino -> { ainaGm; unusL; neoinom; oinoko; oinolo; }
+
+ainaGm  [label=<<b>Germanic</b><br/><font color="red">*aina-</font>> shape=box style="dashed,rounded" URL="oino-one1.svg"];
+unusL [label=<<b>Latin</b><br/><font color="red">ūnus</font>> shape=box style="dashed,rounded" URL="oino-one2.svg"];
+neoinom [label=<<font color="red">*ne-oinom</font>> shape=none URL="ne-oino.svg"];
+oinoko [label=<<font color="red">*oino-ko-</font>> shape=box style="dashed,rounded" URL="oino-one3.svg"];
+oinolo [label=<<font color="red">*oino-lo-</font>> shape=none URL="ne-oino.svg"];
+subgraph cluster1 {  shape=box style="dashed,rounded"; neoinom; oinolo }
+}

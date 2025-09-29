@@ -1,0 +1,46 @@
+digraph oinoko {
+/* sources: Rfh, AHD */
+node [shape=none];
+oino [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*oi-no-</font></td><td><font point-size="16">one, unique</font></td></tr></table>> tooltip="Indo-European \"*oi-no-\" one, unique" shape=rect style=dashed peripheries=1 margin=.3 URL="oino-one0.svg"] // oinos
+oino -> oinoko;
+oinoko -> { ainigaGm; unciaL; unicusL; rank=same }
+oinoko [label=<<font color="red">*oino-ko-</font>>];
+/* any */
+ainigaGm -> aenigOE -> aniME -> any;
+ainigaGm [label=<<b>Germanic</b><br/><font color="red">*ainiga-</font>>];
+aenigOE [label=<<b>Old English</b><br/><font color="red">ǣnig</font><br/><font point-size="12">one,<br/>anyone</font>>];
+aniME [label=<<b>Middle<br/>English</b><br/><font color="red">ani, eny</font>>];
+any [label=<<b>Modern<br/>English</b><br/><font color="red">any</font>>];
+/* unique */
+unicusL -> uniqueOF -> uniqueF;
+uniqueF -> unique [style=dashed];
+unicusL [label=<<b>Latin</b><br/><font color="red">ūnicus</font><br/><font point-size="12">only, unique</font>>];
+uniqueOF [label=<<b>Old French</b><br/><font color="red">unique</font>>];
+uniqueF [label=<<b>French</b><br/><font color="red">unique</font>>];
+unique [label=<<b>Modern<br/>English</b><br/><font color="red">unique</font>>];
+/* inch */
+unciaL -> ynceOE -> inchME -> inch;
+unciaL [label=<<b>Latin</b><br/><font color="red">ūncia</font><br/><font point-size="12">one twelfth<br/>of a unit</font>>];
+ynceOE [label=<<b>Old English</b><br/><font color="red">ynce</font>>];
+inchME [label=<<b>Middle<br/>English</b><br/><font color="red">inch</font>>];
+inch [label=<<b>Modern<br/>English</b><br/><font color="red">inch</font>>];
+/* ounce */
+unciaL -> unceOF;
+unceOF -> unceME [style=dashed];
+unceME -> ounce;
+unceOF [label=<<b>Old French</b><br/><font color="red">unce</font>>];
+unceME [label=<<b>Middle<br/>English</b><br/><font color="red">unce</font>>];
+ounce [label=<<b>Modern<br/>English</b><br/><font color="red">ounce</font>>];
+/* uncial */
+unciaL -> uncialesL;
+uncialesL -> uncial [style=dashed];
+uncialesL [label=<<font color="red">ūnciālēs<br/>(litterae)</font><br/><font point-size="12">inch-high<br/>(letters)</font>>];
+uncial [label=<<b>Modern<br/>English</b><br/><font color="red">uncial</font>>]; // define?
+/* quincunx */
+unciaL -> quincunxL;
+quincunxL -> quincunx [style=dashed];
+quincunxL [label=<<font color="red">quīncūnx,<br/>quīncūnc-</font><br/><font point-size="12">five twelfths</font>>];
+quincunx [label=<<b>Modern<br/>English</b><br/><font color="red">quincunx<br/>quincuncial</font>>]; // link to definition?
+{ rank=same; uncialesL; quincunxL }
+{ rank=same; any; unique; inch; ounce; uncial; quincunx; }
+}

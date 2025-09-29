@@ -1,0 +1,112 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+newo [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">newo-</font></td><td><font point-size="16">new</font></td></tr></table>> tooltip="Indo-European \"newo-\" new" shape=box peripheries=2 margin=.3]
+newyo  [label=<<font color="red">new-yo-</font>>]
+newo -> newyo [sametail=1]
+
+nu [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">nu-</font></td><td><font point-size="16">now</font></td></tr></table>> tooltip="Indo-European \"nu-\" now" shape=box peripheries=2 margin=.3]
+newo -> nu [arrowhead=none]
+
+/* add supernova by nova? omitted: novation (law), novitiate/noviciate, novercal (of a stepmother), trademarks, Nova Scotia, Nynorsk, neoteric (modern), misoneism, neoteny (biol), neologism (no etym. in AHD), Neolithic (ditto), neophilia? (not in AHD at all), aneroid (Gk "without water") */
+
+/* new */
+neujaGm [label=<<b>Germanic</b><br/><font color="red">neuja-</font>>]
+niweOE [label=<<b>Old English</b><br/><font color="red">nīwe, nēowe</font>>]
+neweME [label=<<b>Middle<br/>English</b><br/><font color="red">newe</font><br/><font point-size="12">new, new thing</font><br/><font color="red">newes</font><br/><font point-size="12">new things, tidings</font>>]
+new [label=<<b>Modern<br/>English</b><br/><font color="red">new<br/>news</font>>]
+newyo -> neujaGm [samtail=1]
+neujaGm -> niweOE -> neweME -> new
+
+/* novel, novella, omitted: novelty */
+novusL [label=<<b>Latin</b><br/><font color="red">novus, -a, -um</font>>]
+novellusL [label=<<font color="red">novellus, -a, -um</font><br/><font point-size="12">(diminutive)</font>>]
+novellaOI [label=<<b>Old Italian</b><br/><font color="red">novella</font><br/><font point-size="12">tale</font>>] // longer meaning
+novellaI [label=<<b>Italian</b><br/><font color="red">novella</font>>]
+novella [label=<<b>Modern<br/>English</b><br/><font color="red">novel </font>(book)<br/><font color="red">novella</font>>]
+newo -> novusL [sametail=1]
+novusL -> novellusL [sametail=1]
+novellusL -> novellaOI [sametail=1]
+novellaOI -> novellaI
+novellaI -> novella [style=dotted]
+novelOF [label=<<b>Old French</b><br/><font color="red">novel</font>>]
+novelME [label=<<b>Middle<br/>English</b><br/><font color="red">novel</font>>]
+novel [label=<<b>Modern<br/>English</b><br/><font color="red">novel </font>(adj.)>]
+novellusL -> novelOF [sametail=1]
+novelOF -> novelME [style=dotted]
+novelME -> novel
+
+/* nova */
+novaNL [label=<<b>New Latin</b><br/><font color="red">(stēlla) nova</font><br/><font point-size="12">new (star)</font>>]
+nova [label=<<b>Modern<br/>English</b><br/><font color="red">nova</font>>]
+novusL -> novaNL -> nova [style=dotted]
+
+/* novice, omitted: novitiate */
+noviciusL [label=<<font color="red">novīcius</font><br/><font point-size="12">recently entered<br/>into a condition,<br/>a novice</font>>]
+noviceOF [label=<<b>Old French</b><br/><font color="red">novice</font>>]
+noviceME [label=<<b>Middle<br/>English</b><br/><font color="red">novice</font>>]
+novice [label=<<b>Modern<br/>English</b><br/><font color="red">novice</font>>]
+novusL -> noviciusL [sametail=1]
+noviciusL -> noviceOF
+noviceOF -> noviceME [style=dotted]
+noviceME -> novice
+
+/* innovate, renovate */
+novareL [label=<<font color="red">novāre</font><br/><font point-size="12">to make new</font>>]
+novusL -> novareL [sametail=1 samehead=1]
+enIE [label=<<b>Indo-<br/>European</b><br/><font color="red">en</font><br/><font point-size="12">in</font>> shape=box style="dashed,rounded" URL="en-in1.svg"]
+inL [label=<<b>Latin</b><br/><font color="red">in-</font><br/><font point-size="12">(intensive)</font>>]
+enIE -> inL
+innovareL [label=<<font color="red">innovāre<br/>innovāt-</font>>]
+innoverOF [label=<<b>Old French</b><br/><font color="red">innover</font>>]
+innoverF [label=<<b>French</b><br/><font color="red">innover</font>>]
+innovate [label=<<b>Modern<br/>English</b><br/><font color="red">innovate</font>>]
+inL -> innovareL [samehead=1]
+novareL -> innovareL [sametail=1 samehead=1]
+innovareL -> innoverOF -> innoverF
+innoverF -> innovate [style=dotted]
+reL [label=<<b>Latin</b><br/><font color="red">re-</font><br/><font point-size="12">back, again</font>>]
+renovareL [label=<<font color="red">renovāre<br/>renovāt-</font>>]
+renovate [label=<<b>Modern<br/>English</b><br/><font color="red">renovate</font>>]
+reL -> renovareL [samehead=1]
+novareL -> renovareL [sametail=1 samehead=1]
+renovareL -> renovate [style=dotted]
+
+/* neo-, neon */
+newosG [label=<<b>Greek</b><br/><font color="red">newos</font>>]
+neosG [label=<<font color="red">neos, -a, -on<br/>neo-</font>>]
+neoE [label=<<b>Modern<br/>English</b><br/><font color="red">neo-<br/>neon</font>>]
+newo -> newosG [sametail=1]
+newosG -> neosG [weight=3]
+neosG -> neoE [style=dotted sametail=1]
+
+/* neonate, neonatal */
+genIE [label=<<b>Indo-<br/>European</b><br/><font color="red">gen-<br/>genə-<br/>gn̥-</font><br/><font point-size="12">to beget,<br/>give birth to,<br/>be born</font>> shape=box style="dashed,rounded" URL="gen-gnasci.svg"]
+gnesko [label=<<font color="red">gn̥ə-sko-,<br/>gnā-sko-</font>>]
+gnasciL [label=<<b>Latin</b><br/><font color="red">(g)nāscī</font><br/><font point-size="12">to be born</font><br/><font color="red">(g)nātus</font><br/><font point-size="12">born</font>>]
+genIE -> gnesko -> gnasciL
+neonate [label=<<b>Modern<br/>English</b><br/><font color="red">neonate<br/>neonatal</font>>]
+{ neoE gnasciL } -> neonate [samehead=1]
+
+/* neophyte */
+bheuIE [label=<<b>Indo-<br/>European</b><br/><font color="red">bheuə-, bheu-</font><br/><font point-size="12">to be, grow</font>> shape=box style="dashed,rounded" URL="bheu-grow2.svg"]
+phueinG [label=<<b>Greek</b><br/><font color="red">phuein</font><br/><font point-size="12">to make grow</font>>]
+phutosG [label=<<font color="red">-phutos</font><br/><font point-size="12">planted</font>>]
+bheuIE -> phueinG -> phutosG
+neophutosG [label=<<font color="red">neophutos</font>>]
+neophytusL [label=<<b>Latin</b><br/><font color="red">neophytus</font>>]
+neophyteME [label=<<b>Middle<br/>English</b><br/><font color="red">neophyte</font>>]
+neophyte [label=<<b>Modern<br/>English</b><br/><font color="red">neophyte</font>>]
+neosG -> neophutosG [sametail=1 samehead=1]
+phutosG -> neophutosG [samehead=1]
+neophutosG -> neophytusL -> neophyteME -> neophyte [style=dotted]
+
+/* now */
+nuOE [label=<<b>Old English</b><br/><font color="red">nū</font>>]
+nowME [label=<<b>Middle<br/>English</b><br/><font color="red">now</font>>]
+now [label=<<b>Modern<br/>English</b><br/><font color="red">now</font>>]
+nu -> nuOE -> nowME -> now
+
+{ rank=sink new novella novel nova novice innovate renovate neoE neonate neophyte now }
+{ rank=source newo nu genIE bheuIE enIE }
+}
