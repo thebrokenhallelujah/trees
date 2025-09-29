@@ -1,0 +1,95 @@
+strict digraph {
+/* sources: roots AHD WiS */
+node [shape=none]
+
+genIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">gen(ə)-, gon-, gn̥-</font><br/><font point-size="16">to beget, give birth, be born</font>> shape=box style="dashed,rounded" URL="gen-birth2.svg" tooltip=""]
+genIE -> geneIE -> genees
+geneIE [label=<<font color="red">genə-</font>>]
+genees [label=<<font color="red">genə-es-</font>>]
+
+genees -> genosG -> genesG
+genosG [label=<<b>Greek</b><br/><font color="red">genos, geneā</font><br/><font point-size="12">race, family</font>>]
+genesG [label=<<font color="red">genēs</font><br/><font point-size="12">-born</font>>]
+
+// gene
+genosG -> genGm -> gene [style=dashed]
+genGm [label=<<b>German</b><br/><font color="red">gen-, Gen</font>>]
+gene [label=<<b>Modern<br/>English</b><br/><font color="red">gene</font>>]
+
+// genealogy
+legIE -> logiaG
+{ genosG logiaG } -> genealogiaG
+genealogiaG -> genealogiaL [style=dashed]
+genealogiaL -> genealogieOF
+genealogieOF -> genealogieME [style=dashed]
+genealogieME -> genealogy
+legIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*leg-</font><br/><font point-size="12">to collect, speak</font>> shape=box style="dashed,rounded" URL="leg-speak4.svg"]
+logiaG [label=<<b>Greek</b><br/><font color="red">-logiā</font><br/><font point-size="12">study of</font>>]
+genealogiaG [label=<<font color="red">geneālogiā</font>>]
+genealogiaL [label=<<b>Latin</b><br/><font color="red">geneālogia</font>>]
+genealogieOF [label=<<b>Old French</b><br/><font color="red">genealogie</font>>]
+genealogieME [label=<<b>Middle<br/>English</b><br/><font color="red">genealogie</font>>]
+genealogy [label=<<b>Modern<br/>English</b><br/><font color="red">genealogy</font>>]
+
+// genocide
+genosG -> genocide [style=dashed]
+cideME -> genocide
+cideME [label=<<b>Middle<br/>English</b><br/><font color="red">-cide</font><br/><font point-size="12">killing</font>>]
+genocide [label=<<b>Modern<br/>English</b><br/><font color="red">genocide</font>>]
+
+// genotype
+{ genosG typusL } -> genotype [style=dashed]
+typusL [label=<<b>Latin</b><br/><font color="red">typus</font><br/><font point-size="12">type</font>>]
+genotype [label=<<b>Modern<br/>English</b><br/><font color="red">genotype</font>>]
+
+// allogenetic
+alIE -> allosG
+{ allosG genosG } -> allogenetic [style=dashed]
+alIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*al-</font><br/><font point-size="12">beyond</font>> shape=box style="dashed,rounded" URL="al-beyond.svg"]
+allosG [label=<<b>Greek</b><br/><font color="red">allos</font><br/><font point-size="12">other</font>>]
+allogenetic [label=<<b>Modern<br/>English</b><br/><font color="red">allogenetic</font>>]
+
+// heterogeneous
+semIE -> heterosG
+{ heterosG genosG } -> heterogenesG
+heterogenesG -> heterogeneusL -> heterogeneous [style=dashed]
+semIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*sem-</font><br/><font point-size="12">one, as one</font>> shape=box style="dashed,rounded" URL="sem-one.svg"]
+heterosG [label=<<b>Greek</b><br/><font color="red">heteros, hetero-</font><br/><font point-size="12">other</font>>]
+heterogenesG [label=<<font color="red">heterogenēs</font>>]
+heterogeneusL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">heterogeneus</font>>]
+heterogeneous [label=<<b>Modern<br/>English</b><br/><font color="red">heterogeneous</font>>]
+
+// homogeneous
+semIE -> homosG
+{ homosG genosG } -> homogenesG
+homogenesG -> homogeneusL -> homogeneous [style=dashed]
+homosG [label=<<b>Greek</b><br/><font color="red">homos, homo-</font><br/><font point-size="12">same</font>>]
+homogenesG [label=<<font color="red">homogenēs</font>>]
+homogeneusL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">homogeneus</font>>]
+homogeneous [label=<<b>Modern<br/>English</b><br/><font color="red">homogeneous</font>>]
+
+// -gen
+genesG -> geneF -> gen [style=dashed]
+geneF [label=<<b>French</b><br/><font color="red">-gène</font>>]
+gen [label=<<b>Modern<br/>English</b><br/><font color="red">-gen<br/>-gene</font>>]
+
+// -geny
+genesG -> geneiaG
+geneiaG -> geny [style=dashed]
+geneiaG [label=<<font color="red">-geneia</font>>]
+geny [label=<<b>Modern<br/>English</b><br/><font color="red">-geny</font>>]
+
+// epigene
+epiIE -> epiG
+{ epiG genesG } -> epigenesG
+epigenesG -> epigeneF -> epigene [style=dashed]
+epiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*epi</font><br/><font point-size="12">near, at, against</font>> shape=box style="dashed,rounded" URL="epi-near.svg"]
+epiG [label=<<b>Greek</b><br/><font color="red">epi, epi-</font><br/><font point-size="12">upon</font>>]
+epigenesG [label=<<font color="red">epigenēs</font><br/><font point-size="12">growing after</font>>]
+epigeneF [label=<<b>French</b><br/><font color="red">épigène</font>>]
+epigene [label=<<b>Modern<br/>English</b><br/><font color="red">epigene</font>>]
+
+
+{ rank=sink gene genealogy genocide genotype allogenetic heterogeneous homogeneous gen geny epigene }
+{ rank=same legIE alIE semIE epiIE }
+}

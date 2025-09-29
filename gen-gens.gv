@@ -1,0 +1,56 @@
+strict digraph {
+node [shape=none]
+
+genIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">gen(ə)-, gon-, gn̥-</font><br/><font point-size="16">to beget, give birth, be born</font>> shape=box style="dashed,rounded" URL="gen-birth3.svg" tooltip=""]
+
+
+// gens
+genIE -> gensL
+gensL -> gens [style=dashed]
+gensL [label=<<b>Latin</b><br/><font color="red">gēns, genti-</font><br/><font point-size="12">clan</font>>]
+gens [label=<<b>Modern<br/>English</b><br/><font color="red">gens</font>>]
+
+// gentle
+gensL -> gentilisL -> gentilOF
+gentilOF -> gentilME [style=dashed]
+gentilME -> gentle
+gentilisL [label=<<font color="red">gentīlis</font><br/><font point-size="12">belonging<br/>to a clan</font>>]
+gentilOF [label=<<b>Old French</b><br/><font color="red">gentil</font>>]
+gentilME [label=<<b>Middle<br/>English</b><br/><font color="red">gentil</font>>]
+gentle [label=<<b>Modern<br/>English</b><br/><font color="red">gentle</font>>]
+
+// genteel
+gentilOF -> gentilF
+gentilF -> genteel [style=dashed]
+gentilF [label=<<b>French</b><br/><font color="red">gentil</font><br/><font point-size="12">nice</font>>]
+genteel [label=<<b>Modern<br/>English</b><br/><font color="red">genteel</font>>]
+
+// jaunty
+gentilF -> jaunty [style=dashed]
+jaunty [label=<<b>Modern<br/>English</b><br/><font color="red">jaunty</font>>]
+
+// gentile
+// gentilisL -> gentilME [style=dashed]
+gentilME -> gentile
+// gentilME [label=<<b>Middle<br/>English</b><br/><font color="red">gentil</font>>]
+gentile [label=<<b>Modern<br/>English</b><br/><font color="red">gentile</font>>]
+
+// gentry
+gentilOF -> genterieOF
+genterieOF -> gentriME [style=dashed]
+gentriME -> gentry
+genterieOF [label=<<font color="red">genterie</font>>]
+gentriME [label=<<b>Middle<br/>English</b><br/><font color="red">gentri</font>>]
+gentry [label=<<b>Modern<br/>English</b><br/><font color="red">gentry</font>>]
+
+// gendarme
+gensL -> gentesL -> gensdarmesOF -> gendarmeOF -> gendarmeF
+gendarmeF -> gendarme [style=dashed]
+gentesL [label=<<b>Latin</b><br/><font color="red">gentēs</font>>]
+gensdarmesOF [label=<<b>Old French</b><br/><font color="red">gens d'armes</font><br/><font point-size="12">mounted soldiers</font>>]
+gendarmeOF  [label=<<font color="red">gent d'armes<br/>gendarme</font>>]
+gendarmeF [label=<<b>French</b><br/><font color="red">gendarme</font>>]
+gendarme [label=<<b>Modern<br/>English</b><br/><font color="red">gendarme</font>>]
+
+{ rank=sink gens gentle genteel gentile gentry jaunty gendarme }
+}

@@ -1,0 +1,58 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+genIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">gen(ə)-, gon-, gn̥-</font><br/><font point-size="16">to beget, give birth, be born</font>> shape=box style="dashed,rounded" URL="gen-birth1.svg" tooltip=""]
+
+
+genIE -> gon -> gonosG
+gon [label=<<font color="red">gon-, gonə-, gon-o-</font>>]
+gonosG [label=<<b>Greek</b><br/><font color="red">gonos</font><br/><font point-size="12">procreation,<br/>genitals</font>>]
+
+/* gonad */
+gonosG -> gonasL -> gonad [style=dotted]
+gonasL [label=<<b>Latin</b><br/><font color="red">gonas, gonad-</font>>]
+gonad [label=<<b>Modern<br/>English</b><br/><font color="red">gonad</font>>]
+
+/* epigone */
+epiIE -> epiG
+epiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">epi</font><br/><font point-size="12">near, at</font>> shape=box style="dashed,rounded" URL="epi-near.svg"]
+epiG [label=<<b>Greek</b><br/><font color="red">epi</font><br/><font point-size="12">upon</font><br/><font color="red">epi-</font>>]
+{ epiG gonosG } -> epigonoiG
+epigonoiG -> epigoneF -> epigone [style=dotted]
+epigonoiG [label=<<font color="red">Epigonoi</font><br/><font point-size="12">sons of the<br/>Seven against Thebes</font>>]
+epigoneF [label=<<b>French</b><br/><font color="red">épigones </font>(pl.)<br/><font color="red">épigone </font>(sing.)>]
+epigone [label=<<b>Modern<br/>English</b><br/><font color="red">epigone</font><br/><font point-size="12">second-rate<br/>imitator</font>>]
+
+gonosG -> gonoG
+gonoG -> gono [style=dotted]
+gonoG [label=<<font color="red">gono-, gon-</font>>]
+gono [label=<<b>Modern<br/>English</b><br/><font color="red">gono-<br/>gon-</font>>]
+
+gonosG -> goneiaG
+goneiaG -> goniaL -> gony [style=dotted]
+goneiaG [label=<<font color="red">-goneia</font>>]
+goniaL [label=<<b>Latin</b><br/><font color="red">-gonia</font>>]
+gony [label=<<b>Modern<br/>English</b><br/><font color="red">-gony</font>>]
+
+/* gonorrhea */
+sreuIE -> rheinG -> rhoiaG
+sreuIE [label=<<b>Indo-<br/>European</b><br/><font color="red">sreu-</font><br/><font point-size="12">to flow</font>> shape=box style="dashed,rounded" URL="sreu-flow.svg"]
+rheinG [label=<<b>Greek</b><br/><font color="red">rhein</font>>]
+rhoiaG [label=<<font color="red">rhoia, -rroia</font><br/><font point-size="12">a flowing</font>>]
+{ gonoG rhoiaG } -> gonorrhoiaG
+gonorrhoiaG -> gonorrhea [style=dotted]
+gonorrhoiaG [label=<<font color="red">gonorrhoia</font>>]
+gonorrhea [label=<<b>Modern<br/>English</b><br/><font color="red">gonorrhea</font>>]
+
+/* archegonium */
+{ arkheG gonosG } -> arkhegonosG
+arkhegonosG -> archegoniumNL -> archegonium [style=dotted]
+arkheG [label=<<b>Greek</b><br/><font color="red">arkhe-, arkhi-</font><br/><font point-size="12">primitive</font>>]
+arkhegonosG [label=<<font color="red">arkhegonos</font>>]
+archegoniumNL [label=<<b>New Latin</b><br/><font color="red">archegonium</font>>]
+archegonium [label=<<b>Modern<br/>English</b><br/><font color="red">archegonium</font>>]
+
+{ rank=sink gonad gono gony gonorrhea epigone archegonium }
+{ rank=same }
+}

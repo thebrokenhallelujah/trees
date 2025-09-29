@@ -12,62 +12,62 @@
 <g id="node1" class="node">
 <title>genIE</title>
 <g id="a_node1"><a xlink:href="gen-birth0.svg" xlink:title="&lt;font point&#45;size=&quot;24&quot;&gt;&lt;b&gt;Indo&#45;European&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font point&#45;size=&quot;18&quot; color=&quot;red&quot;&gt;gen(ə)&#45;, gon&#45;, gn̥&#45;&lt;/font&gt;&lt;br/&gt;&lt;font point&#45;size=&quot;16&quot;&gt;to beget, give birth, be born&lt;/font&gt;">
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M664,-748C664,-748 501,-748 501,-748 495,-748 489,-742 489,-736 489,-736 489,-694 489,-694 489,-688 495,-682 501,-682 501,-682 664,-682 664,-682 670,-682 676,-688 676,-694 676,-694 676,-736 676,-736 676,-742 670,-748 664,-748"/>
-<text text-anchor="start" x="504" y="-725.8" font-family="Times New Roman,serif" font-weight="bold" font-size="24.00">Indo&#45;European</text>
-<text text-anchor="start" x="519.5" y="-706.6" font-family="Times New Roman,serif" font-size="18.00" fill="red">gen(ə)&#45;, gon&#45;, gn̥&#45;</text>
-<text text-anchor="start" x="497" y="-690.2" font-family="Times New Roman,serif" font-size="16.00">to beget, give birth, be born</text>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M618,-748C618,-748 455,-748 455,-748 449,-748 443,-742 443,-736 443,-736 443,-694 443,-694 443,-688 449,-682 455,-682 455,-682 618,-682 618,-682 624,-682 630,-688 630,-694 630,-694 630,-736 630,-736 630,-742 624,-748 618,-748"/>
+<text text-anchor="start" x="458" y="-725.8" font-family="Times New Roman,serif" font-weight="bold" font-size="24.00">Indo&#45;European</text>
+<text text-anchor="start" x="473.5" y="-706.6" font-family="Times New Roman,serif" font-size="18.00" fill="red">gen(ə)&#45;, gon&#45;, gn̥&#45;</text>
+<text text-anchor="start" x="451" y="-690.2" font-family="Times New Roman,serif" font-size="16.00">to beget, give birth, be born</text>
 </a>
 </g>
 </g>
 <!-- gen -->
 <g id="node2" class="node">
 <title>gen</title>
-<text text-anchor="start" x="316" y="-618.3" font-family="Times New Roman,serif" font-size="14.00" fill="red">gen&#45;</text>
+<text text-anchor="start" x="315" y="-618.3" font-family="Times New Roman,serif" font-size="14.00" fill="red">gen&#45;</text>
 </g>
 <!-- genIE&#45;&gt;gen -->
 <g id="edge1" class="edge">
 <title>genIE&#45;&gt;gen</title>
-<path fill="none" stroke="black" d="M492.95,-681.92C449.07,-666.2 398.64,-648.13 365.32,-636.19"/>
-<polygon fill="black" stroke="black" points="366.15,-632.77 355.55,-632.69 363.79,-639.36 366.15,-632.77"/>
+<path fill="none" stroke="black" d="M462.81,-681.92C429.42,-667.38 391.43,-650.83 364.21,-638.99"/>
+<polygon fill="black" stroke="black" points="365.27,-635.63 354.71,-634.85 362.48,-642.05 365.27,-635.63"/>
 </g>
 <!-- gon -->
 <g id="node3" class="node">
 <title>gon</title>
-<text text-anchor="start" x="787.5" y="-618.3" font-family="Times New Roman,serif" font-size="14.00" fill="red">gon&#45;, gonə&#45;, gon&#45;o&#45;</text>
+<text text-anchor="start" x="692.5" y="-618.3" font-family="Times New Roman,serif" font-size="14.00" fill="red">gon&#45;, gonə&#45;, gon&#45;o&#45;</text>
 </g>
 <!-- genIE&#45;&gt;gon -->
 <g id="edge2" class="edge">
 <title>genIE&#45;&gt;gon</title>
-<path fill="none" stroke="black" d="M674.17,-681.92C710.74,-669.12 751.75,-654.76 784.14,-643.43"/>
-<polygon fill="black" stroke="black" points="785.61,-646.62 793.9,-640.01 783.3,-640.01 785.61,-646.62"/>
+<path fill="none" stroke="black" d="M610.89,-681.92C640.06,-669.34 672.7,-655.26 698.77,-644.02"/>
+<polygon fill="black" stroke="black" points="700.26,-647.19 708.06,-640.01 697.49,-640.76 700.26,-647.19"/>
 </g>
 <!-- kundizGm -->
 <g id="node4" class="node">
 <title>kundizGm</title>
-<text text-anchor="start" x="298" y="-547.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Germanic</text>
-<text text-anchor="start" x="310" y="-533.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kundiz</text>
-<text text-anchor="start" x="301" y="-519.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">ga&#45;kundiz</text>
-<text text-anchor="start" x="315" y="-507.4" font-family="Times New Roman,serif" font-size="12.00">family</text>
+<text text-anchor="start" x="297" y="-547.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Germanic</text>
+<text text-anchor="start" x="309" y="-533.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kundiz</text>
+<text text-anchor="start" x="300" y="-519.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">ga&#45;kundiz</text>
+<text text-anchor="start" x="314" y="-507.4" font-family="Times New Roman,serif" font-size="12.00">family</text>
 </g>
 <!-- gen&#45;&gt;kundizGm -->
 <g id="edge3" class="edge">
 <title>gen&#45;&gt;kundizGm</title>
-<path fill="none" stroke="black" d="M328.5,-603.84C328.5,-594.79 328.5,-583.28 328.5,-572.13"/>
-<polygon fill="black" stroke="black" points="332,-572.08 328.5,-562.08 325,-572.08 332,-572.08"/>
+<path fill="none" stroke="black" d="M327.5,-603.84C327.5,-594.79 327.5,-583.28 327.5,-572.13"/>
+<polygon fill="black" stroke="black" points="331,-572.08 327.5,-562.08 324,-572.08 331,-572.08"/>
 </g>
 <!-- kundjazGm -->
 <g id="node8" class="node">
 <title>kundjazGm</title>
-<text text-anchor="start" x="102" y="-547.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Germanic</text>
-<text text-anchor="start" x="111" y="-533.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kundjaz</text>
-<text text-anchor="start" x="102" y="-519.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">ga&#45;kundjaz</text>
-<text text-anchor="start" x="111" y="-507.4" font-family="Times New Roman,serif" font-size="12.00">true&#45;born</text>
+<text text-anchor="start" x="104" y="-547.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Germanic</text>
+<text text-anchor="start" x="113" y="-533.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kundjaz</text>
+<text text-anchor="start" x="104" y="-519.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">ga&#45;kundjaz</text>
+<text text-anchor="start" x="113" y="-507.4" font-family="Times New Roman,serif" font-size="12.00">true&#45;born</text>
 </g>
 <!-- gen&#45;&gt;kundjazGm -->
 <g id="edge7" class="edge">
 <title>gen&#45;&gt;kundjazGm</title>
-<path fill="none" stroke="black" d="M301.26,-611.27C271.73,-600.41 223.46,-581.75 183.5,-562 182.36,-561.44 181.21,-560.86 180.06,-560.27"/>
-<polygon fill="black" stroke="black" points="181.63,-557.14 171.16,-555.53 178.34,-563.32 181.63,-557.14"/>
+<path fill="none" stroke="black" d="M300.39,-611.38C271,-600.61 223.02,-582.03 183.5,-562 183.08,-561.79 182.65,-561.57 182.23,-561.35"/>
+<polygon fill="black" stroke="black" points="183.69,-558.16 173.23,-556.49 180.36,-564.32 183.69,-558.16"/>
 </g>
 <!-- kenthamGm -->
 <g id="node12" class="node">
@@ -78,49 +78,53 @@
 <!-- gen&#45;&gt;kenthamGm -->
 <g id="edge11" class="edge">
 <title>gen&#45;&gt;kenthamGm</title>
-<path fill="none" stroke="black" d="M309.8,-603.84C295.04,-590.3 274.26,-571.24 257.82,-556.15"/>
-<polygon fill="black" stroke="black" points="259.88,-553.29 250.15,-549.11 255.15,-558.45 259.88,-553.29"/>
+<path fill="none" stroke="black" d="M308.99,-603.84C294.38,-590.3 273.82,-571.24 257.55,-556.15"/>
+<polygon fill="black" stroke="black" points="259.67,-553.34 249.95,-549.11 254.91,-558.47 259.67,-553.34"/>
 </g>
 <!-- jaS -->
 <g id="node26" class="node">
 <title>jaS</title>
-<text text-anchor="start" x="393.5" y="-540.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Sanskrit</text>
-<text text-anchor="start" x="410" y="-526.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">&#45;ja&#45;</text>
-<text text-anchor="start" x="397.5" y="-514.4" font-family="Times New Roman,serif" font-size="12.00">produced</text>
+<text text-anchor="start" x="392.5" y="-540.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Sanskrit</text>
+<text text-anchor="start" x="409" y="-526.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">&#45;ja&#45;</text>
+<text text-anchor="start" x="396.5" y="-514.4" font-family="Times New Roman,serif" font-size="12.00">produced</text>
 </g>
 <!-- gen&#45;&gt;jaS -->
 <g id="edge25" class="edge">
 <title>gen&#45;&gt;jaS</title>
-<path fill="none" stroke="black" d="M346.05,-603.84C358.1,-592.05 374.42,-576.09 388.62,-562.2"/>
-<polygon fill="black" stroke="black" points="391.11,-564.66 395.81,-555.17 386.22,-559.66 391.11,-564.66"/>
+<path fill="none" stroke="black" d="M345.05,-603.84C357.1,-592.05 373.42,-576.09 387.62,-562.2"/>
+<polygon fill="black" stroke="black" points="390.11,-564.66 394.81,-555.17 385.22,-559.66 390.11,-564.66"/>
 </g>
 <!-- gonosG -->
 <g id="node40" class="node">
 <title>gonosG</title>
-<text text-anchor="start" x="880" y="-253.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Germanic</text>
-<text text-anchor="start" x="893" y="-239.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">gonos</text>
-<text text-anchor="start" x="883" y="-227.4" font-family="Times New Roman,serif" font-size="12.00">procreation,</text>
-<text text-anchor="start" x="893.5" y="-215.4" font-family="Times New Roman,serif" font-size="12.00">genitals</text>
+<g id="a_node40"><a xlink:href="gen-gonos.svg" xlink:title="&lt;b&gt;Greek&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;red&quot;&gt;gonos&lt;/font&gt;&lt;br/&gt;&lt;font point&#45;size=&quot;12&quot;&gt;procreation,&lt;br/&gt;genitals&lt;/font&gt;">
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M835,-561C835,-561 788,-561 788,-561 782,-561 776,-555 776,-549 776,-549 776,-513 776,-513 776,-507 782,-501 788,-501 788,-501 835,-501 835,-501 841,-501 847,-507 847,-513 847,-513 847,-549 847,-549 847,-555 841,-561 835,-561"/>
+<text text-anchor="start" x="791.5" y="-546.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Greek</text>
+<text text-anchor="start" x="794" y="-532.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">gonos</text>
+<text text-anchor="start" x="784" y="-520.4" font-family="Times New Roman,serif" font-size="12.00">procreation,</text>
+<text text-anchor="start" x="794.5" y="-508.4" font-family="Times New Roman,serif" font-size="12.00">genitals</text>
+</a>
+</g>
 </g>
 <!-- gon&#45;&gt;gonosG -->
 <g id="edge39" class="edge">
 <title>gon&#45;&gt;gonosG</title>
-<path fill="none" stroke="black" d="M848.68,-603.84C858.73,-575.24 878.46,-515.87 888.5,-464 900.97,-399.61 906.53,-323.41 908.89,-278.26"/>
-<polygon fill="black" stroke="black" points="912.4,-278.18 909.4,-268.02 905.41,-277.83 912.4,-278.18"/>
+<path fill="none" stroke="black" d="M759.84,-603.84C766.92,-593.99 776.1,-581.22 784.76,-569.19"/>
+<polygon fill="black" stroke="black" points="787.64,-571.18 790.63,-561.02 781.95,-567.09 787.64,-571.18"/>
 </g>
 <!-- janah -->
-<g id="node42" class="node">
+<g id="node41" class="node">
 <title>janah</title>
-<text text-anchor="start" x="816.5" y="-448.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Sanskrit</text>
-<text text-anchor="start" x="828" y="-434.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">janaḥ</text>
-<text text-anchor="start" x="821" y="-422.4" font-family="Times New Roman,serif" font-size="12.00">offspring,</text>
-<text text-anchor="start" x="813.5" y="-410.4" font-family="Times New Roman,serif" font-size="12.00">child, person</text>
+<text text-anchor="start" x="759.5" y="-253.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Sanskrit</text>
+<text text-anchor="start" x="771" y="-239.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">janaḥ</text>
+<text text-anchor="start" x="764" y="-227.4" font-family="Times New Roman,serif" font-size="12.00">offspring,</text>
+<text text-anchor="start" x="756.5" y="-215.4" font-family="Times New Roman,serif" font-size="12.00">child, person</text>
 </g>
 <!-- gon&#45;&gt;janah -->
-<g id="edge41" class="edge">
+<g id="edge40" class="edge">
 <title>gon&#45;&gt;janah</title>
-<path fill="none" stroke="black" d="M842.5,-603.74C842.5,-574.22 842.5,-513.3 842.5,-473.05"/>
-<polygon fill="black" stroke="black" points="846,-473.04 842.5,-463.04 839,-473.04 846,-473.04"/>
+<path fill="none" stroke="black" d="M749.23,-603.59C754.97,-545.91 773.46,-360.07 781.59,-278.27"/>
+<polygon fill="black" stroke="black" points="785.09,-278.43 782.6,-268.13 778.13,-277.74 785.09,-278.43"/>
 </g>
 <!-- gecynd1OE -->
 <g id="node5" class="node">
@@ -133,8 +137,8 @@
 <!-- kundizGm&#45;&gt;gecynd1OE -->
 <g id="edge4" class="edge">
 <title>kundizGm&#45;&gt;gecynd1OE</title>
-<path fill="none" stroke="black" d="M328.81,-499.89C328.9,-491.43 329,-482.11 329.09,-473.2"/>
-<polygon fill="black" stroke="black" points="332.59,-473.06 329.2,-463.02 325.59,-472.98 332.59,-473.06"/>
+<path fill="none" stroke="black" d="M328.13,-499.89C328.3,-491.43 328.5,-482.11 328.68,-473.2"/>
+<polygon fill="black" stroke="black" points="332.19,-473.09 328.9,-463.02 325.19,-472.94 332.19,-473.09"/>
 </g>
 <!-- kind1ME -->
 <g id="node6" class="node">
@@ -152,16 +156,16 @@
 <!-- kind1 -->
 <g id="node7" class="node">
 <title>kind1</title>
-<text text-anchor="start" x="303" y="-59.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Modern</text>
-<text text-anchor="start" x="304.5" y="-45.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">English</text>
-<text text-anchor="start" x="315" y="-31.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kind</text>
-<text text-anchor="start" x="317.5" y="-19.4" font-family="Times New Roman,serif" font-size="12.00">type</text>
+<text text-anchor="start" x="305" y="-59.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Modern</text>
+<text text-anchor="start" x="306.5" y="-45.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">English</text>
+<text text-anchor="start" x="317" y="-31.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kind</text>
+<text text-anchor="start" x="319.5" y="-19.4" font-family="Times New Roman,serif" font-size="12.00">type</text>
 </g>
 <!-- kind1ME&#45;&gt;kind1 -->
 <g id="edge6" class="edge">
 <title>kind1ME&#45;&gt;kind1</title>
-<path fill="none" stroke="black" d="M329.03,-121.83C328.81,-110.69 328.54,-97.16 328.29,-84.54"/>
-<polygon fill="black" stroke="black" points="331.79,-84.14 328.09,-74.21 324.79,-84.28 331.79,-84.14"/>
+<path fill="none" stroke="black" d="M329.5,-121.83C329.5,-110.69 329.5,-97.16 329.5,-84.54"/>
+<polygon fill="black" stroke="black" points="333,-84.21 329.5,-74.21 326,-84.21 333,-84.21"/>
 </g>
 <!-- gecynde2OE -->
 <g id="node9" class="node">
@@ -173,8 +177,8 @@
 <!-- kundjazGm&#45;&gt;gecynde2OE -->
 <g id="edge8" class="edge">
 <title>kundjazGm&#45;&gt;gecynde2OE</title>
-<path fill="none" stroke="black" d="M132.19,-499.89C132.08,-489.58 131.96,-477.98 131.85,-467.43"/>
-<polygon fill="black" stroke="black" points="135.35,-467.27 131.74,-457.3 128.35,-467.34 135.35,-467.27"/>
+<path fill="none" stroke="black" d="M133.56,-499.89C133.24,-489.58 132.87,-477.98 132.54,-467.43"/>
+<polygon fill="black" stroke="black" points="136.04,-467.19 132.23,-457.3 129.04,-467.41 136.04,-467.19"/>
 </g>
 <!-- kinde2ME -->
 <g id="node10" class="node">
@@ -222,27 +226,27 @@
 <!-- kintMG -->
 <g id="node14" class="node">
 <title>kintMG</title>
-<text text-anchor="start" x="192.5" y="-345.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Middle High</text>
-<text text-anchor="start" x="205" y="-331.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">German</text>
-<text text-anchor="start" x="220" y="-317.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kint</text>
+<text text-anchor="start" x="193.5" y="-345.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Middle High</text>
+<text text-anchor="start" x="206" y="-331.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">German</text>
+<text text-anchor="start" x="221" y="-317.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kint</text>
 </g>
 <!-- kindOG&#45;&gt;kintMG -->
 <g id="edge13" class="edge">
 <title>kindOG&#45;&gt;kintMG</title>
-<path fill="none" stroke="black" d="M230.5,-401.89C230.5,-391.93 230.5,-380.77 230.5,-370.51"/>
-<polygon fill="black" stroke="black" points="234,-370.23 230.5,-360.23 227,-370.23 234,-370.23"/>
+<path fill="none" stroke="black" d="M230.81,-401.89C230.92,-391.93 231.03,-380.77 231.14,-370.51"/>
+<polygon fill="black" stroke="black" points="234.64,-370.27 231.25,-360.23 227.64,-370.19 234.64,-370.27"/>
 </g>
 <!-- kindG -->
 <g id="node15" class="node">
 <title>kindG</title>
-<text text-anchor="start" x="205" y="-241.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">German</text>
-<text text-anchor="start" x="216.5" y="-227.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">Kind</text>
+<text text-anchor="start" x="206" y="-241.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">German</text>
+<text text-anchor="start" x="217.5" y="-227.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">Kind</text>
 </g>
 <!-- kintMG&#45;&gt;kindG -->
 <g id="edge14" class="edge">
 <title>kintMG&#45;&gt;kindG</title>
-<path fill="none" stroke="black" d="M230.5,-309.54C230.5,-296.35 230.5,-280.03 230.5,-266.42"/>
-<polygon fill="black" stroke="black" points="234,-266.19 230.5,-256.19 227,-266.19 234,-266.19"/>
+<path fill="none" stroke="black" d="M231.5,-309.54C231.5,-296.35 231.5,-280.03 231.5,-266.42"/>
+<polygon fill="black" stroke="black" points="235,-266.19 231.5,-256.19 228,-266.19 235,-266.19"/>
 </g>
 <!-- kindergartenG -->
 <g id="node16" class="node">
@@ -253,8 +257,8 @@
 <!-- kindG&#45;&gt;kindergartenG -->
 <g id="edge15" class="edge">
 <title>kindG&#45;&gt;kindergartenG</title>
-<path fill="none" stroke="black" d="M264.29,-221.5C295.05,-207.39 340.84,-186.38 375.59,-170.44"/>
-<polygon fill="black" stroke="black" points="377.45,-173.44 385.08,-166.08 374.53,-167.07 377.45,-173.44"/>
+<path fill="none" stroke="black" d="M265.12,-221.5C295.72,-207.39 341.27,-186.38 375.84,-170.44"/>
+<polygon fill="black" stroke="black" points="377.67,-173.45 385.28,-166.08 374.74,-167.09 377.67,-173.45"/>
 </g>
 <!-- christkindl -->
 <g id="node22" class="node">
@@ -265,8 +269,8 @@
 <!-- kindG&#45;&gt;christkindl -->
 <g id="edge21" class="edge">
 <title>kindG&#45;&gt;christkindl</title>
-<path fill="none" stroke="black" d="M230.69,-219.84C230.83,-207.28 231.03,-189.98 231.19,-175.5"/>
-<polygon fill="black" stroke="black" points="234.7,-175.15 231.31,-165.11 227.7,-175.07 234.7,-175.15"/>
+<path fill="none" stroke="black" d="M231.5,-219.84C231.5,-207.28 231.5,-189.98 231.5,-175.5"/>
+<polygon fill="black" stroke="black" points="235,-175.11 231.5,-165.11 228,-175.11 235,-175.11"/>
 </g>
 <!-- wunderkindG -->
 <g id="node24" class="node">
@@ -277,78 +281,78 @@
 <!-- kindG&#45;&gt;wunderkindG -->
 <g id="edge23" class="edge">
 <title>kindG&#45;&gt;wunderkindG</title>
-<path fill="none" stroke="black" d="M209.48,-219.84C192.67,-206.11 168.92,-186.72 150.33,-171.54"/>
-<polygon fill="black" stroke="black" points="152.41,-168.72 142.45,-165.11 147.98,-174.14 152.41,-168.72"/>
+<path fill="none" stroke="black" d="M210.29,-219.84C193.32,-206.11 169.35,-186.72 150.59,-171.54"/>
+<polygon fill="black" stroke="black" points="152.62,-168.68 142.64,-165.11 148.22,-174.12 152.62,-168.68"/>
 </g>
 <!-- kindergarten -->
 <g id="node21" class="node">
 <title>kindergarten</title>
-<text text-anchor="start" x="398" y="-60.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Modern</text>
-<text text-anchor="start" x="399.5" y="-46.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">English</text>
-<text text-anchor="start" x="388" y="-32.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kindergarten</text>
-<text text-anchor="start" x="386" y="-18.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kindergartner</text>
+<text text-anchor="start" x="400" y="-60.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Modern</text>
+<text text-anchor="start" x="401.5" y="-46.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">English</text>
+<text text-anchor="start" x="390" y="-32.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kindergarten</text>
+<text text-anchor="start" x="388" y="-18.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kindergartner</text>
 </g>
 <!-- kindergartenG&#45;&gt;kindergarten -->
 <g id="edge20" class="edge">
 <title>kindergartenG&#45;&gt;kindergarten</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M424.14,-127.76C423.91,-116.05 423.6,-100.34 423.32,-85.69"/>
-<polygon fill="black" stroke="black" points="426.81,-85.22 423.11,-75.29 419.81,-85.35 426.81,-85.22"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M424.5,-127.76C424.5,-116.05 424.5,-100.34 424.5,-85.69"/>
+<polygon fill="black" stroke="black" points="428,-85.29 424.5,-75.29 421,-85.29 428,-85.29"/>
 </g>
 <!-- gher -->
 <g id="node17" class="node">
 <title>gher</title>
 <g id="a_node17"><a xlink:href="gher-grasp1.svg" xlink:title="&lt;font color=&quot;red&quot;&gt;gher&#45;&lt;/font&gt;&lt;br/&gt;&lt;font point&#45;size=&quot;12&quot;&gt;to grasp,&lt;br/&gt;enclose&lt;/font&gt;">
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M523.5,-645C523.5,-645 491.5,-645 491.5,-645 485.5,-645 479.5,-639 479.5,-633 479.5,-633 479.5,-611 479.5,-611 479.5,-605 485.5,-599 491.5,-599 491.5,-599 523.5,-599 523.5,-599 529.5,-599 535.5,-605 535.5,-611 535.5,-611 535.5,-633 535.5,-633 535.5,-639 529.5,-645 523.5,-645"/>
-<text text-anchor="start" x="493" y="-630.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">gher&#45;</text>
-<text text-anchor="start" x="487.5" y="-618.4" font-family="Times New Roman,serif" font-size="12.00">to grasp,</text>
-<text text-anchor="start" x="490.5" y="-606.4" font-family="Times New Roman,serif" font-size="12.00">enclose</text>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M522.5,-645C522.5,-645 490.5,-645 490.5,-645 484.5,-645 478.5,-639 478.5,-633 478.5,-633 478.5,-611 478.5,-611 478.5,-605 484.5,-599 490.5,-599 490.5,-599 522.5,-599 522.5,-599 528.5,-599 534.5,-605 534.5,-611 534.5,-611 534.5,-633 534.5,-633 534.5,-639 528.5,-645 522.5,-645"/>
+<text text-anchor="start" x="492" y="-630.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">gher&#45;</text>
+<text text-anchor="start" x="486.5" y="-618.4" font-family="Times New Roman,serif" font-size="12.00">to grasp,</text>
+<text text-anchor="start" x="489.5" y="-606.4" font-family="Times New Roman,serif" font-size="12.00">enclose</text>
 </a>
 </g>
 </g>
 <!-- gartoOG -->
 <g id="node18" class="node">
 <title>gartoOG</title>
-<text text-anchor="start" x="479.5" y="-547.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Old High</text>
-<text text-anchor="start" x="482" y="-533.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">German</text>
-<text text-anchor="start" x="493" y="-519.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">garto</text>
-<text text-anchor="start" x="492" y="-507.4" font-family="Times New Roman,serif" font-size="12.00">garden</text>
+<text text-anchor="start" x="478.5" y="-547.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Old High</text>
+<text text-anchor="start" x="481" y="-533.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">German</text>
+<text text-anchor="start" x="492" y="-519.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">garto</text>
+<text text-anchor="start" x="491" y="-507.4" font-family="Times New Roman,serif" font-size="12.00">garden</text>
 </g>
 <!-- gher&#45;&gt;gartoOG -->
 <g id="edge16" class="edge">
 <title>gher&#45;&gt;gartoOG</title>
-<path fill="none" stroke="black" d="M507.5,-599C507.5,-590.92 507.5,-581.5 507.5,-572.32"/>
-<polygon fill="black" stroke="black" points="511,-572.14 507.5,-562.14 504,-572.14 511,-572.14"/>
+<path fill="none" stroke="black" d="M506.5,-599C506.5,-590.92 506.5,-581.5 506.5,-572.32"/>
+<polygon fill="black" stroke="black" points="510,-572.14 506.5,-562.14 503,-572.14 510,-572.14"/>
 </g>
 <!-- garteMG -->
 <g id="node19" class="node">
 <title>garteMG</title>
-<text text-anchor="start" x="420.5" y="-443.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Middle High</text>
-<text text-anchor="start" x="433" y="-429.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">German</text>
-<text text-anchor="start" x="444.5" y="-415.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">garte</text>
+<text text-anchor="start" x="417.5" y="-443.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Middle High</text>
+<text text-anchor="start" x="430" y="-429.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">German</text>
+<text text-anchor="start" x="441.5" y="-415.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">garte</text>
 </g>
 <!-- gartoOG&#45;&gt;garteMG -->
 <g id="edge17" class="edge">
 <title>gartoOG&#45;&gt;garteMG</title>
-<path fill="none" stroke="black" d="M492.13,-499.89C486.83,-489.51 480.87,-477.83 475.46,-467.22"/>
-<polygon fill="black" stroke="black" points="478.53,-465.55 470.87,-458.23 472.3,-468.73 478.53,-465.55"/>
+<path fill="none" stroke="black" d="M490.5,-499.89C484.99,-489.51 478.79,-477.83 473.15,-467.22"/>
+<polygon fill="black" stroke="black" points="476.16,-465.42 468.37,-458.23 469.97,-468.7 476.16,-465.42"/>
 </g>
 <!-- gartenG -->
 <g id="node20" class="node">
 <title>gartenG</title>
-<text text-anchor="start" x="411" y="-241.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">German</text>
-<text text-anchor="start" x="417.5" y="-227.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">Garten</text>
+<text text-anchor="start" x="413" y="-338.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">German</text>
+<text text-anchor="start" x="419.5" y="-324.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">Garten</text>
 </g>
 <!-- garteMG&#45;&gt;gartenG -->
 <g id="edge18" class="edge">
 <title>garteMG&#45;&gt;gartenG</title>
-<path fill="none" stroke="black" d="M455.76,-407.95C451.66,-371.99 443.95,-304.4 439.64,-266.52"/>
-<polygon fill="black" stroke="black" points="443.07,-265.77 438.46,-256.23 436.12,-266.56 443.07,-265.77"/>
+<path fill="none" stroke="black" d="M451.21,-407.78C448.81,-394.23 445.81,-377.31 443.33,-363.3"/>
+<polygon fill="black" stroke="black" points="446.75,-362.49 441.56,-353.25 439.85,-363.71 446.75,-362.49"/>
 </g>
 <!-- gartenG&#45;&gt;kindergartenG -->
 <g id="edge19" class="edge">
 <title>gartenG&#45;&gt;kindergartenG</title>
-<path fill="none" stroke="black" d="M434.19,-219.84C432.53,-207.52 430.25,-190.64 428.32,-176.34"/>
-<polygon fill="black" stroke="black" points="431.74,-175.47 426.93,-166.02 424.8,-176.4 431.74,-175.47"/>
+<path fill="none" stroke="black" d="M437.21,-316.83C434.79,-284.78 429.58,-215.51 426.64,-176.39"/>
+<polygon fill="black" stroke="black" points="430.11,-175.92 425.87,-166.22 423.13,-176.45 430.11,-175.92"/>
 </g>
 <!-- krisskringle -->
 <g id="node23" class="node">
@@ -360,7 +364,7 @@
 <!-- christkindl&#45;&gt;krisskringle -->
 <g id="edge22" class="edge">
 <title>christkindl&#45;&gt;krisskringle</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M231.5,-128.7C231.5,-114.95 231.5,-95.3 231.5,-78.38"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M231.5,-128.7C231.5,-114.95 231.5,-95.3 231.5,-78.38"/>
 <polygon fill="black" stroke="black" points="235,-78.28 231.5,-68.28 228,-78.28 235,-78.28"/>
 </g>
 <!-- wunderkind -->
@@ -373,270 +377,251 @@
 <!-- wunderkindG&#45;&gt;wunderkind -->
 <g id="edge24" class="edge">
 <title>wunderkindG&#45;&gt;wunderkind</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M122.01,-128.7C122.41,-114.95 122.99,-95.3 123.49,-78.38"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M122.01,-128.7C122.41,-114.95 122.99,-95.3 123.49,-78.38"/>
 <polygon fill="black" stroke="black" points="126.99,-78.38 123.79,-68.28 119.99,-78.17 126.99,-78.38"/>
 </g>
 <!-- krmija -->
 <g id="node27" class="node">
 <title>krmija</title>
-<text text-anchor="start" x="578" y="-441.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kṛmi&#45;ja&#45;</text>
-<text text-anchor="start" x="576.5" y="-429.4" font-family="Times New Roman,serif" font-size="12.00">&quot;(red dye)</text>
-<text text-anchor="start" x="551.5" y="-417.4" font-family="Times New Roman,serif" font-size="12.00">produced by worms&quot;</text>
+<text text-anchor="start" x="575" y="-441.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kṛmi&#45;ja&#45;</text>
+<text text-anchor="start" x="573.5" y="-429.4" font-family="Times New Roman,serif" font-size="12.00">&quot;(red dye)</text>
+<text text-anchor="start" x="548.5" y="-417.4" font-family="Times New Roman,serif" font-size="12.00">produced by worms&quot;</text>
 </g>
 <!-- jaS&#45;&gt;krmija -->
 <g id="edge26" class="edge">
 <title>jaS&#45;&gt;krmija</title>
-<path fill="none" stroke="black" d="M451.54,-506.82C455.18,-504.44 458.89,-502.11 462.5,-500 487.05,-485.64 515.21,-471.68 539.58,-460.33"/>
-<polygon fill="black" stroke="black" points="541.11,-463.47 548.72,-456.1 538.17,-457.12 541.11,-463.47"/>
+<path fill="none" stroke="black" d="M450.55,-506.85C454.19,-504.45 457.89,-502.12 461.5,-500 485.72,-485.75 513.45,-471.81 537.46,-460.44"/>
+<polygon fill="black" stroke="black" points="539.24,-463.47 546.8,-456.05 536.26,-457.13 539.24,-463.47"/>
 </g>
 <!-- qirmizA -->
 <g id="node28" class="node">
 <title>qirmizA</title>
-<text text-anchor="start" x="586.5" y="-351.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00" fill="green">Arabic</text>
-<text text-anchor="start" x="590" y="-337.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">qirmiz</text>
-<text text-anchor="start" x="583" y="-323.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">al&#45;qirmiz</text>
-<text text-anchor="start" x="576.5" y="-311.4" font-family="Times New Roman,serif" font-size="12.00">kermes insect</text>
+<text text-anchor="start" x="578.5" y="-351.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00" fill="green">Arabic</text>
+<text text-anchor="start" x="582" y="-337.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">qirmiz</text>
+<text text-anchor="start" x="575" y="-323.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">al&#45;qirmiz</text>
+<text text-anchor="start" x="568.5" y="-311.4" font-family="Times New Roman,serif" font-size="12.00">kermes insect</text>
 </g>
 <!-- krmija&#45;&gt;qirmizA -->
 <g id="edge27" class="edge">
 <title>krmija&#45;&gt;qirmizA</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M601.36,-409.73C602.18,-399.81 603.18,-387.8 604.13,-376.39"/>
-<polygon fill="black" stroke="black" points="607.65,-376.4 604.99,-366.14 600.67,-375.82 607.65,-376.4"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M597.2,-409.73C597.51,-399.81 597.88,-387.8 598.24,-376.39"/>
+<polygon fill="black" stroke="black" points="601.74,-376.25 598.56,-366.14 594.75,-376.03 601.74,-376.25"/>
 </g>
 <!-- alkermesF -->
 <g id="node29" class="node">
 <title>alkermesF</title>
-<text text-anchor="start" x="597.5" y="-248.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">French</text>
-<text text-anchor="start" x="595" y="-234.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">alkermès</text>
-<text text-anchor="start" x="599.5" y="-220.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kermès</text>
+<text text-anchor="start" x="578.5" y="-248.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">French</text>
+<text text-anchor="start" x="576" y="-234.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">alkermès</text>
+<text text-anchor="start" x="580.5" y="-220.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kermès</text>
 </g>
 <!-- qirmizA&#45;&gt;alkermesF -->
 <g id="edge28" class="edge">
 <title>qirmizA&#45;&gt;alkermesF</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M611.3,-303.94C612.53,-294.18 613.91,-283.27 615.18,-273.23"/>
-<polygon fill="black" stroke="black" points="618.67,-273.52 616.45,-263.16 611.72,-272.64 618.67,-273.52"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M599.82,-303.94C599.92,-294.18 600.03,-283.27 600.14,-273.23"/>
+<polygon fill="black" stroke="black" points="603.64,-273.19 600.25,-263.16 596.64,-273.12 603.64,-273.19"/>
 </g>
 <!-- qirmizi -->
 <g id="node33" class="node">
 <title>qirmizi</title>
-<text text-anchor="start" x="508.5" y="-234.3" font-family="Times New Roman,serif" font-size="14.00" fill="red">qirmizī</text>
+<text text-anchor="start" x="501.5" y="-234.3" font-family="Times New Roman,serif" font-size="14.00" fill="red">qirmizī</text>
 </g>
 <!-- qirmizA&#45;&gt;qirmizi -->
 <g id="edge32" class="edge">
 <title>qirmizA&#45;&gt;qirmizi</title>
-<path fill="none" stroke="black" d="M582.5,-303.94C571.85,-291.13 559.57,-276.36 549.41,-264.14"/>
-<polygon fill="black" stroke="black" points="551.85,-261.6 542.76,-256.15 546.46,-266.08 551.85,-261.6"/>
+<path fill="none" stroke="black" d="M574.82,-303.94C564.3,-291.13 552.17,-276.36 542.14,-264.14"/>
+<polygon fill="black" stroke="black" points="544.63,-261.66 535.58,-256.15 539.22,-266.1 544.63,-261.66"/>
 </g>
 <!-- carminiumL -->
 <g id="node36" class="node">
 <title>carminiumL</title>
-<text text-anchor="start" x="704" y="-241.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Latin</text>
-<text text-anchor="start" x="691.5" y="-227.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">carminium</text>
+<text text-anchor="start" x="672" y="-241.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Latin</text>
+<text text-anchor="start" x="659.5" y="-227.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">carminium</text>
 </g>
 <!-- qirmizA&#45;&gt;carminiumL -->
 <g id="edge35" class="edge">
 <title>qirmizA&#45;&gt;carminiumL</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M643.25,-303.94C659.08,-290.64 677.42,-275.22 692.26,-262.74"/>
-<polygon fill="black" stroke="black" points="694.7,-265.26 700.1,-256.15 690.2,-259.9 694.7,-265.26"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M627.66,-303.94C639.78,-291.01 653.77,-276.08 665.27,-263.79"/>
+<polygon fill="black" stroke="black" points="668.15,-265.84 672.43,-256.15 663.04,-261.05 668.15,-265.84"/>
 </g>
 <!-- kermes -->
 <g id="node30" class="node">
 <title>kermes</title>
-<text text-anchor="start" x="601" y="-71.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Modern</text>
-<text text-anchor="start" x="602.5" y="-57.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">English</text>
-<text text-anchor="start" x="605.5" y="-43.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kermes</text>
-<text text-anchor="start" x="604" y="-31.4" font-family="Times New Roman,serif" font-size="12.00">a red dye</text>
-<text text-anchor="start" x="586" y="-19.4" font-family="Times New Roman,serif" font-size="12.00">(and the insects it</text>
-<text text-anchor="start" x="576" y="-7.4" font-family="Times New Roman,serif" font-size="12.00">was once made from)</text>
+<text text-anchor="start" x="603" y="-71.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Modern</text>
+<text text-anchor="start" x="604.5" y="-57.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">English</text>
+<text text-anchor="start" x="607.5" y="-43.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kermes</text>
+<text text-anchor="start" x="606" y="-31.4" font-family="Times New Roman,serif" font-size="12.00">a red dye</text>
+<text text-anchor="start" x="588" y="-19.4" font-family="Times New Roman,serif" font-size="12.00">(and the insects it</text>
+<text text-anchor="start" x="578" y="-7.4" font-family="Times New Roman,serif" font-size="12.00">was once made from)</text>
 </g>
 <!-- alkermesF&#45;&gt;kermes -->
 <g id="edge29" class="edge">
 <title>alkermesF&#45;&gt;kermes</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M620.25,-212.95C621.15,-183.94 622.69,-134.37 623.87,-96.4"/>
-<polygon fill="black" stroke="black" points="627.38,-96.13 624.19,-86.02 620.38,-95.91 627.38,-96.13"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M603.86,-212.95C607.92,-183.94 614.86,-134.37 620.17,-96.4"/>
+<polygon fill="black" stroke="black" points="623.7,-96.41 621.62,-86.02 616.77,-95.44 623.7,-96.41"/>
 </g>
 <!-- kwrmi -->
 <g id="node31" class="node">
 <title>kwrmi</title>
 <g id="a_node31"><a xlink:href=".svg" xlink:title="&lt;font color=&quot;red&quot;&gt;kʷr̥mi&#45;&lt;/font&gt;&lt;br/&gt;&lt;font point&#45;size=&quot;12&quot;&gt;worm&lt;/font&gt;&lt;br/&gt;&lt;font point&#45;size=&quot;12&quot;&gt;see &lt;/font&gt;&lt;font color=&quot;red&quot;&gt;wr̥mi&#45;&lt;/font&gt;">
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M621.5,-646C621.5,-646 577.5,-646 577.5,-646 571.5,-646 565.5,-640 565.5,-634 565.5,-634 565.5,-610 565.5,-610 565.5,-604 571.5,-598 577.5,-598 577.5,-598 621.5,-598 621.5,-598 627.5,-598 633.5,-604 633.5,-610 633.5,-610 633.5,-634 633.5,-634 633.5,-640 627.5,-646 621.5,-646"/>
-<text text-anchor="start" x="581.5" y="-631.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kʷr̥mi&#45;</text>
-<text text-anchor="start" x="586" y="-619.4" font-family="Times New Roman,serif" font-size="12.00">worm</text>
-<text text-anchor="start" x="573.5" y="-605.8" font-family="Times New Roman,serif" font-size="12.00">see </text>
-<text text-anchor="start" x="592.5" y="-605.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">wr̥mi&#45;</text>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M618.5,-646C618.5,-646 574.5,-646 574.5,-646 568.5,-646 562.5,-640 562.5,-634 562.5,-634 562.5,-610 562.5,-610 562.5,-604 568.5,-598 574.5,-598 574.5,-598 618.5,-598 618.5,-598 624.5,-598 630.5,-604 630.5,-610 630.5,-610 630.5,-634 630.5,-634 630.5,-640 624.5,-646 618.5,-646"/>
+<text text-anchor="start" x="578.5" y="-631.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kʷr̥mi&#45;</text>
+<text text-anchor="start" x="583" y="-619.4" font-family="Times New Roman,serif" font-size="12.00">worm</text>
+<text text-anchor="start" x="570.5" y="-605.8" font-family="Times New Roman,serif" font-size="12.00">see </text>
+<text text-anchor="start" x="589.5" y="-605.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">wr̥mi&#45;</text>
 </a>
 </g>
 </g>
 <!-- krmiS -->
 <g id="node32" class="node">
 <title>krmiS</title>
-<text text-anchor="start" x="573.5" y="-534.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Sanskrit</text>
-<text text-anchor="start" x="584.5" y="-520.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kṛmi&#45;</text>
+<text text-anchor="start" x="570.5" y="-534.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Sanskrit</text>
+<text text-anchor="start" x="581.5" y="-520.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">kṛmi&#45;</text>
 </g>
 <!-- kwrmi&#45;&gt;krmiS -->
 <g id="edge30" class="edge">
 <title>kwrmi&#45;&gt;krmiS</title>
-<path fill="none" stroke="black" d="M599.5,-597.62C599.5,-585.83 599.5,-571.46 599.5,-559.18"/>
-<polygon fill="black" stroke="black" points="603,-559.04 599.5,-549.04 596,-559.04 603,-559.04"/>
+<path fill="none" stroke="black" d="M596.5,-597.62C596.5,-585.83 596.5,-571.46 596.5,-559.18"/>
+<polygon fill="black" stroke="black" points="600,-559.04 596.5,-549.04 593,-559.04 600,-559.04"/>
 </g>
 <!-- krmiS&#45;&gt;krmija -->
 <g id="edge31" class="edge">
 <title>krmiS&#45;&gt;krmija</title>
-<path fill="none" stroke="black" d="M599.5,-512.84C599.5,-499.95 599.5,-481.93 599.5,-466.37"/>
-<polygon fill="black" stroke="black" points="603,-466.08 599.5,-456.08 596,-466.08 603,-466.08"/>
+<path fill="none" stroke="black" d="M596.5,-512.84C596.5,-499.95 596.5,-481.93 596.5,-466.37"/>
+<polygon fill="black" stroke="black" points="600,-466.08 596.5,-456.08 593,-466.08 600,-466.08"/>
 </g>
 <!-- cremesinME -->
 <g id="node34" class="node">
 <title>cremesinME</title>
-<text text-anchor="start" x="504" y="-157.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Middle</text>
-<text text-anchor="start" x="502.5" y="-143.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">English</text>
-<text text-anchor="start" x="500.5" y="-129.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">cremesin</text>
+<text text-anchor="start" x="500" y="-157.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Middle</text>
+<text text-anchor="start" x="498.5" y="-143.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">English</text>
+<text text-anchor="start" x="496.5" y="-129.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">cremesin</text>
 </g>
 <!-- qirmizi&#45;&gt;cremesinME -->
 <g id="edge33" class="edge">
 <title>qirmizi&#45;&gt;cremesinME</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M527.92,-219.84C527.57,-209.26 527.1,-195.32 526.66,-182.54"/>
-<polygon fill="black" stroke="black" points="530.15,-182.05 526.31,-172.17 523.15,-182.28 530.15,-182.05"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M521.5,-219.84C521.5,-209.26 521.5,-195.32 521.5,-182.54"/>
+<polygon fill="black" stroke="black" points="525,-182.17 521.5,-172.17 518,-182.17 525,-182.17"/>
 </g>
 <!-- crimson -->
 <g id="node35" class="node">
 <title>crimson</title>
-<text text-anchor="start" x="493" y="-53.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Modern</text>
-<text text-anchor="start" x="494.5" y="-39.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">English</text>
-<text text-anchor="start" x="494.5" y="-25.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">crimson</text>
+<text text-anchor="start" x="495" y="-53.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Modern</text>
+<text text-anchor="start" x="496.5" y="-39.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">English</text>
+<text text-anchor="start" x="496.5" y="-25.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">crimson</text>
 </g>
 <!-- cremesinME&#45;&gt;crimson -->
 <g id="edge34" class="edge">
 <title>cremesinME&#45;&gt;crimson</title>
-<path fill="none" stroke="black" d="M523.6,-121.83C522.59,-108.84 521.31,-92.6 520.19,-78.33"/>
-<polygon fill="black" stroke="black" points="523.68,-78.05 519.41,-68.35 516.7,-78.6 523.68,-78.05"/>
+<path fill="none" stroke="black" d="M521.03,-121.83C520.77,-108.96 520.46,-92.92 520.18,-78.74"/>
+<polygon fill="black" stroke="black" points="523.67,-78.28 519.98,-68.35 516.67,-78.42 523.67,-78.28"/>
 </g>
 <!-- carminF -->
 <g id="node38" class="node">
 <title>carminF</title>
-<text text-anchor="start" x="705.5" y="-150.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">French</text>
-<text text-anchor="start" x="708.5" y="-136.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">carmin</text>
+<text text-anchor="start" x="690.5" y="-150.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">French</text>
+<text text-anchor="start" x="693.5" y="-136.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">carmin</text>
 </g>
 <!-- carminiumL&#45;&gt;carminF -->
 <g id="edge37" class="edge">
 <title>carminiumL&#45;&gt;carminF</title>
-<path fill="none" stroke="black" d="M721.85,-219.84C722.85,-207.16 724.22,-189.64 725.37,-175.08"/>
-<polygon fill="black" stroke="black" points="728.86,-175.35 726.15,-165.11 721.88,-174.8 728.86,-175.35"/>
+<path fill="none" stroke="black" d="M693.13,-219.84C696.55,-207.16 701.27,-189.64 705.2,-175.08"/>
+<polygon fill="black" stroke="black" points="708.66,-175.67 707.89,-165.11 701.9,-173.85 708.66,-175.67"/>
 </g>
 <!-- minium -->
 <g id="node37" class="node">
 <title>minium</title>
-<text text-anchor="start" x="704" y="-350.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Latin</text>
-<text text-anchor="start" x="700" y="-336.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">minium</text>
-<text text-anchor="start" x="701" y="-324.4" font-family="Times New Roman,serif" font-size="12.00">cinnabar</text>
-<text text-anchor="start" x="698" y="-312.4" font-family="Times New Roman,serif" font-size="12.00">(red lead)</text>
+<text text-anchor="start" x="672" y="-350.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Latin</text>
+<text text-anchor="start" x="668" y="-336.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">minium</text>
+<text text-anchor="start" x="669" y="-324.4" font-family="Times New Roman,serif" font-size="12.00">cinnabar</text>
+<text text-anchor="start" x="666" y="-312.4" font-family="Times New Roman,serif" font-size="12.00">(red lead)</text>
 </g>
 <!-- minium&#45;&gt;carminiumL -->
 <g id="edge36" class="edge">
 <title>minium&#45;&gt;carminiumL</title>
-<path fill="none" stroke="black" d="M720.5,-304.98C720.5,-292.78 720.5,-278.66 720.5,-266.61"/>
-<polygon fill="black" stroke="black" points="724,-266.25 720.5,-256.25 717,-266.25 724,-266.25"/>
+<path fill="none" stroke="black" d="M688.5,-304.98C688.5,-292.78 688.5,-278.66 688.5,-266.61"/>
+<polygon fill="black" stroke="black" points="692,-266.25 688.5,-256.25 685,-266.25 692,-266.25"/>
 </g>
 <!-- carmine -->
 <g id="node39" class="node">
 <title>carmine</title>
-<text text-anchor="start" x="709" y="-53.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Modern</text>
-<text text-anchor="start" x="710.5" y="-39.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">English</text>
-<text text-anchor="start" x="711.5" y="-25.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">carmine</text>
+<text text-anchor="start" x="711" y="-53.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Modern</text>
+<text text-anchor="start" x="712.5" y="-39.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">English</text>
+<text text-anchor="start" x="713.5" y="-25.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">carmine</text>
 </g>
 <!-- carminF&#45;&gt;carmine -->
 <g id="edge38" class="edge">
 <title>carminF&#45;&gt;carmine</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M728.52,-128.7C729.33,-114.95 730.48,-95.3 731.48,-78.38"/>
-<polygon fill="black" stroke="black" points="734.98,-78.47 732.07,-68.28 727.99,-78.06 734.98,-78.47"/>
-</g>
-<!-- gonad -->
-<g id="node41" class="node">
-<title>gonad</title>
-<g id="a_node41"><a xlink:href="gen-gonos.svg" xlink:title="&lt;font color=&quot;red&quot;&gt;gonad&lt;br/&gt;gono&#45;&lt;br/&gt;&#45;gony&lt;br/&gt;epigony&lt;br/&gt;archegonium&lt;/font&gt;">
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M943.5,-84.5C943.5,-84.5 879.5,-84.5 879.5,-84.5 873.5,-84.5 867.5,-78.5 867.5,-72.5 867.5,-72.5 867.5,-13.5 867.5,-13.5 867.5,-7.5 873.5,-1.5 879.5,-1.5 879.5,-1.5 943.5,-1.5 943.5,-1.5 949.5,-1.5 955.5,-7.5 955.5,-13.5 955.5,-13.5 955.5,-72.5 955.5,-72.5 955.5,-78.5 949.5,-84.5 943.5,-84.5"/>
-<text text-anchor="start" x="894" y="-69.3" font-family="Times New Roman,serif" font-size="14.00" fill="red">gonad</text>
-<text text-anchor="start" x="894.5" y="-54.3" font-family="Times New Roman,serif" font-size="14.00" fill="red">gono&#45;</text>
-<text text-anchor="start" x="895" y="-39.3" font-family="Times New Roman,serif" font-size="14.00" fill="red">&#45;gony</text>
-<text text-anchor="start" x="889" y="-24.3" font-family="Times New Roman,serif" font-size="14.00" fill="red">epigony</text>
-<text text-anchor="start" x="875.5" y="-9.3" font-family="Times New Roman,serif" font-size="14.00" fill="red">archegonium</text>
-</a>
-</g>
-</g>
-<!-- gonosG&#45;&gt;gonad -->
-<g id="edge40" class="edge">
-<title>gonosG&#45;&gt;gonad</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M910.65,-207.69C910.81,-177.84 911.05,-130.96 911.24,-95.01"/>
-<polygon fill="black" stroke="black" points="914.74,-94.73 911.29,-84.71 907.74,-94.69 914.74,-94.73"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M716.4,-128.7C719.5,-114.95 723.93,-95.3 727.75,-78.38"/>
+<polygon fill="black" stroke="black" points="731.24,-78.81 730.02,-68.28 724.41,-77.27 731.24,-78.81"/>
 </g>
 <!-- harijanahS -->
-<g id="node43" class="node">
+<g id="node42" class="node">
 <title>harijanahS</title>
-<text text-anchor="start" x="792" y="-343.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">harijanaḥ</text>
-<text text-anchor="start" x="784.5" y="-331.4" font-family="Times New Roman,serif" font-size="12.00">&quot;child of god,&quot;</text>
-<text text-anchor="start" x="787.5" y="-319.4" font-family="Times New Roman,serif" font-size="12.00">Untouchable</text>
+<text text-anchor="start" x="835" y="-155.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">harijanaḥ</text>
+<text text-anchor="start" x="827.5" y="-143.4" font-family="Times New Roman,serif" font-size="12.00">&quot;child of god,&quot;</text>
+<text text-anchor="start" x="830.5" y="-131.4" font-family="Times New Roman,serif" font-size="12.00">Untouchable</text>
 </g>
 <!-- janah&#45;&gt;harijanahS -->
-<g id="edge42" class="edge">
+<g id="edge41" class="edge">
 <title>janah&#45;&gt;harijanahS</title>
-<path fill="none" stroke="black" d="M834.63,-402.94C831.65,-391.95 828.25,-379.39 825.2,-368.14"/>
-<polygon fill="black" stroke="black" points="828.52,-366.99 822.53,-358.26 821.76,-368.82 828.52,-366.99"/>
+<path fill="none" stroke="black" d="M809.73,-207.86C817.7,-198.27 826.57,-187.61 834.59,-177.96"/>
+<polygon fill="black" stroke="black" points="837.38,-180.07 841.09,-170.15 832,-175.6 837.38,-180.07"/>
 </g>
 <!-- harijan -->
-<g id="node47" class="node">
+<g id="node46" class="node">
 <title>harijan</title>
-<text text-anchor="start" x="792" y="-53.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Modern</text>
-<text text-anchor="start" x="793.5" y="-39.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">English</text>
-<text text-anchor="start" x="796.5" y="-25.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">Harijan</text>
+<text text-anchor="start" x="835" y="-53.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Modern</text>
+<text text-anchor="start" x="836.5" y="-39.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">English</text>
+<text text-anchor="start" x="839.5" y="-25.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">Harijan</text>
 </g>
 <!-- harijanahS&#45;&gt;harijan -->
-<g id="edge46" class="edge">
+<g id="edge45" class="edge">
 <title>harijanahS&#45;&gt;harijan</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M816.5,-311.73C816.5,-261.43 816.5,-138.76 816.5,-78.53"/>
-<polygon fill="black" stroke="black" points="820,-78.38 816.5,-68.38 813,-78.38 820,-78.38"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M859.5,-123.87C859.5,-110.67 859.5,-93.62 859.5,-78.66"/>
+<polygon fill="black" stroke="black" points="863,-78.23 859.5,-68.23 856,-78.23 863,-78.23"/>
 </g>
 <!-- gheli -->
-<g id="node44" class="node">
+<g id="node43" class="node">
 <title>gheli</title>
-<g id="a_node44"><a xlink:href="ghel-shine1.svg" xlink:title="&lt;font color=&quot;red&quot;&gt;ghel&#45;i&#45;&lt;/font&gt;&lt;br/&gt;&lt;font point&#45;size=&quot;12&quot;&gt;to shine&lt;/font&gt;">
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M746.5,-640C746.5,-640 716.5,-640 716.5,-640 710.5,-640 704.5,-634 704.5,-628 704.5,-628 704.5,-616 704.5,-616 704.5,-610 710.5,-604 716.5,-604 716.5,-604 746.5,-604 746.5,-604 752.5,-604 758.5,-610 758.5,-616 758.5,-616 758.5,-628 758.5,-628 758.5,-634 752.5,-640 746.5,-640"/>
-<text text-anchor="start" x="714" y="-624.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">ghel&#45;i&#45;</text>
-<text text-anchor="start" x="714" y="-612.4" font-family="Times New Roman,serif" font-size="12.00">to shine</text>
+<g id="a_node43"><a xlink:href="ghel-shine2.svg" xlink:title="&lt;font color=&quot;red&quot;&gt;ghel&#45;i&#45;&lt;/font&gt;&lt;br/&gt;&lt;font point&#45;size=&quot;12&quot;&gt;to shine&lt;/font&gt;">
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M917.5,-640C917.5,-640 887.5,-640 887.5,-640 881.5,-640 875.5,-634 875.5,-628 875.5,-628 875.5,-616 875.5,-616 875.5,-610 881.5,-604 887.5,-604 887.5,-604 917.5,-604 917.5,-604 923.5,-604 929.5,-610 929.5,-616 929.5,-616 929.5,-628 929.5,-628 929.5,-634 923.5,-640 917.5,-640"/>
+<text text-anchor="start" x="885" y="-624.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">ghel&#45;i&#45;</text>
+<text text-anchor="start" x="885" y="-612.4" font-family="Times New Roman,serif" font-size="12.00">to shine</text>
 </a>
 </g>
 </g>
 <!-- hariS -->
-<g id="node45" class="node">
+<g id="node44" class="node">
 <title>hariS</title>
-<text text-anchor="start" x="705.5" y="-540.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Sanskrit</text>
-<text text-anchor="start" x="719" y="-526.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">hari&#45;</text>
-<text text-anchor="start" x="702" y="-514.4" font-family="Times New Roman,serif" font-size="12.00">yellow&#45;green</text>
+<text text-anchor="start" x="876.5" y="-540.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Sanskrit</text>
+<text text-anchor="start" x="890" y="-526.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">hari&#45;</text>
+<text text-anchor="start" x="873" y="-514.4" font-family="Times New Roman,serif" font-size="12.00">yellow&#45;green</text>
 </g>
 <!-- gheli&#45;&gt;hariS -->
-<g id="edge43" class="edge">
+<g id="edge42" class="edge">
 <title>gheli&#45;&gt;hariS</title>
-<path fill="none" stroke="black" d="M731.5,-603.84C731.5,-592.92 731.5,-578.41 731.5,-565.29"/>
-<polygon fill="black" stroke="black" points="735,-565.17 731.5,-555.17 728,-565.17 735,-565.17"/>
+<path fill="none" stroke="black" d="M902.5,-603.84C902.5,-592.92 902.5,-578.41 902.5,-565.29"/>
+<polygon fill="black" stroke="black" points="906,-565.17 902.5,-555.17 899,-565.17 906,-565.17"/>
 </g>
 <!-- harih -->
-<g id="node46" class="node">
+<g id="node45" class="node">
 <title>harih</title>
-<text text-anchor="start" x="716" y="-448.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">Hariḥ</text>
-<text text-anchor="start" x="692" y="-436.4" font-family="Times New Roman,serif" font-size="12.00">a name of Vishnu</text>
-<text text-anchor="start" x="718" y="-422.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">Hare</text>
-<text text-anchor="start" x="683.5" y="-410.4" font-family="Times New Roman,serif" font-size="12.00">(direct address form)</text>
+<text text-anchor="start" x="884" y="-253.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">Hariḥ</text>
+<text text-anchor="start" x="860" y="-241.4" font-family="Times New Roman,serif" font-size="12.00">a name of Vishnu</text>
+<text text-anchor="start" x="886" y="-227.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">Hare</text>
+<text text-anchor="start" x="851.5" y="-215.4" font-family="Times New Roman,serif" font-size="12.00">(direct address form)</text>
 </g>
 <!-- hariS&#45;&gt;harih -->
-<g id="edge44" class="edge">
+<g id="edge43" class="edge">
 <title>hariS&#45;&gt;harih</title>
-<path fill="none" stroke="black" d="M731.5,-506.76C731.5,-496.73 731.5,-484.72 731.5,-473.38"/>
-<polygon fill="black" stroke="black" points="735,-473.22 731.5,-463.22 728,-473.22 735,-473.22"/>
+<path fill="none" stroke="black" d="M902.26,-506.68C901.75,-456.96 900.54,-340.05 899.91,-278.5"/>
+<polygon fill="black" stroke="black" points="903.41,-278.36 899.8,-268.39 896.41,-278.43 903.41,-278.36"/>
 </g>
 <!-- harih&#45;&gt;harijanahS -->
-<g id="edge45" class="edge">
+<g id="edge44" class="edge">
 <title>harih&#45;&gt;harijanahS</title>
-<path fill="none" stroke="black" d="M757.23,-402.94C767.65,-391.17 779.68,-377.59 790.16,-365.75"/>
-<polygon fill="black" stroke="black" points="792.79,-368.06 796.79,-358.26 787.54,-363.42 792.79,-368.06"/>
+<path fill="none" stroke="black" d="M886.4,-207.86C882.31,-198.75 877.78,-188.67 873.62,-179.41"/>
+<polygon fill="black" stroke="black" points="876.75,-177.83 869.45,-170.15 870.36,-180.7 876.75,-177.83"/>
 </g>
 </g>
 </svg>

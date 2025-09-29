@@ -1,0 +1,101 @@
+strict digraph {
+/* sources: roots AHD WiS */
+node [shape=none]
+
+genIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">gen(ə)-, gon-, gn̥-</font><br/><font point-size="16">to beget, give birth, be born</font>> shape=box style="dashed,rounded" URL="gen-birth0.svg" tooltip=""]
+
+genIE -> { gen gon }
+gen [label=<<font color="red">gen-</font>>]
+gon [label=<<font color="red">gon-, gonə-, gon-o-</font>>]
+
+/* kind */
+gen -> kundizGm -> gecynd1OE -> kind1ME -> kind1
+gen -> kundjazGm -> gecynde2OE -> kinde2ME -> kind2
+kundizGm [label=<<b>Germanic</b><br/><font color="red">kundiz<br/>ga-kundiz</font><br/><font point-size="12">family</font>>]
+kundjazGm [label=<<b>Germanic</b><br/><font color="red">kundjaz<br/>ga-kundjaz</font><br/><font point-size="12">true-born</font>>]
+gecynd1OE [label=<<b>Old English</b><br/><font color="red">gecynd</font><br/><font point-size="12">offspring,<br/>race, kind</font>>]
+kind1ME [label=<<b>Middle<br/>English</b><br/><font color="red">kind</font>>]
+kind1 [label=<<b>Modern<br/>English</b><br/><font color="red">kind</font><br/><font point-size="12">type</font>>]
+gecynde2OE [label=<<b>Old English</b><br/><font color="red">gecynde</font><br/><font point-size="12">natural</font>>]
+kinde2ME [label=<<b>Middle<br/>English</b><br/><font color="red">kinde</font><br/><font point-size="12">natural, kind</font>>]
+kind2 [label=<<b>Modern<br/>English</b><br/><font color="red">kind</font><br/><font point-size="12">good-<br/>natured</font>>]
+/* ge- = collective prefix < kom? */
+
+/* German */
+gen -> kenthamGm -> kindOG -> kintMG -> kindG -> kindergartenG
+kenthamGm [label=<<b>Germanic</b><br/><font color="red">kentham</font>>]
+kindOG [label=<<b>Old High<br/>German</b><br/><font color="red">kind</font><br/><font point-size="12">child</font>>]
+kintMG [label=<<b>Middle High<br/>German</b><br/><font color="red">kint</font>>]
+kindG [label=<<b>German</b><br/><font color="red">Kind</font>>]
+/* kindergarten */
+gher -> gartoOG -> garteMG -> gartenG -> kindergartenG
+kindergartenG -> kindergarten [style=dashed]
+gher [label=<<font color="red">gher-</font><br/><font point-size="12">to grasp,<br/>enclose</font>> rank=source shape=box style="dashed,rounded" URL="gher-grasp1.svg"]
+gartoOG [label=<<b>Old High<br/>German</b><br/><font color="red">garto</font><br/><font point-size="12">garden</font>>]
+garteMG [label=<<b>Middle High<br/>German</b><br/><font color="red">garte</font>>]
+gartenG [label=<<b>German</b><br/><font color="red">Garten</font>>]
+kindergartenG [label=<<font color="red">Kindergarten<br/>Kindergärtner</font>>]
+kindergarten [label=<<b>Modern<br/>English</b><br/><font color="red">kindergarten<br/>kindergartner</font>>]
+/* Kriss Kringle */
+kindG -> christkindl // left out Kindl
+christkindl -> krisskringle [style=dashed]
+christkindl [label=<<font color="red">Christkindl</font><br/><font point-size="12">Christmas present</font>>] // ="Christ childling"?
+krisskringle [label=<<b>Modern<br/>English</b><br/><font color="red">Kriss Kringle</font>>]
+/* wunderkind */
+kindG -> wunderkindG
+wunderkindG -> wunderkind [style=dashed]
+wunderkindG [label=<<font color="red">Wunderkind</font><br/><font point-size="12">child prodigy</font>>]
+wunderkind [label=<<b>Modern<br/>English</b><br/><font color="red">wunderkind</font>>]
+
+/* kermes */
+gen -> jaS -> krmija
+krmija -> qirmizA -> alkermesF -> kermes [style=dashed]
+kwrmi -> krmiS -> krmija
+jaS [label=<<b>Sanskrit</b><br/><font color="red">-ja-</font><br/><font point-size="12">produced</font>>]
+krmija [label=<<font color="red">kṛmi-ja-</font><br/><font point-size="12">"(red dye)<br/>produced by worms"</font>>]
+qirmizA [label=<<font color="green"><b>Arabic</b></font><br/><font color="red">qirmiz<br/>al-qirmiz</font><br/><font point-size="12">kermes insect</font>>]
+alkermesF [label=<<b>French</b><br/><font color="red">alkermès<br/>kermès</font>>]
+kermes [label=<<b>Modern<br/>English</b><br/><font color="red">kermes</font><br/><font point-size="12">a red dye<br/>(and the insects it<br/>was once made from)</font>>]
+kwrmi [label=<<font color="red">kʷr̥mi-</font><br/><font point-size="12">worm</font><br/><font point-size="12">see </font><font color="red">wr̥mi-</font>> rank=source shape=box style="dashed,rounded" URL=".svg"] // wrmi- under wer-
+krmiS [label=<<b>Sanskrit</b><br/><font color="red">kṛmi-</font>>]
+/* crimson */
+qirmizA -> qirmizi
+qirmizi -> cremesinME [style=dashed] // possible intermediate steps
+cremesinME -> crimson
+qirmizi [label=<<font color="red">qirmizī</font>>]
+cremesinME [label=<<b>Middle<br/>English</b><br/><font color="red">cremesin</font>>]
+crimson [label=<<b>Modern<br/>English</b><br/><font color="red">crimson</font>>]
+/* carmine */
+qirmizA -> carminiumL [style=dashed]
+minium -> carminiumL -> carminF
+carminF -> carmine [style=dashed]
+minium [label=<<b>Latin</b><br/><font color="red">minium</font><br/><font point-size="12">cinnabar<br/>(red lead)</font>>]
+carminiumL [label=<<b>Latin</b><br/><font color="red">carminium</font>>]
+carminF [label=<<b>French</b><br/><font color="red">carmin</font>>]
+carmine [label=<<b>Modern<br/>English</b><br/><font color="red">carmine</font>>]
+
+/* gonad */
+gon -> gonosG
+// gonosG -> gonad [style=dashed]
+gonosG [label=<<b>Greek</b><br/><font color="red">gonos</font><br/><font point-size="12">procreation,<br/>genitals</font>> shape=box style="dashed,rounded" URL="gen-gonos.svg"]
+// gonad [label=<<font color="red">gonad<br/>gono-<br/>-gony<br/>epigone<br/>archegonium</font>> shape=box style="dashed,rounded" URL="gen-gonos.svg"]
+
+/* Harijan */
+gon -> janah -> harijanahS
+gheli -> hariS -> harih -> harijanahS
+harijanahS -> harijan [style=dashed]
+janah [label=<<b>Sanskrit</b><br/><font color="red">janaḥ</font><br/><font point-size="12">offspring,<br/>child, person</font>>]
+gheli [label=<<font color="red">ghel-i-</font><br/><font point-size="12">to shine</font>> shape=box style="dashed,rounded" URL="ghel-shine2.svg"]
+hariS [label=<<b>Sanskrit</b><br/><font color="red">hari-</font><br/><font point-size="12">yellow-green</font>>]
+harih [label=<<font color="red">Hariḥ</font><br/><font point-size="12">a name of Vishnu</font><br/><font color="red">Hare</font><br/><font point-size="12">(direct address form)</font>>]
+harijanahS [label=<<font color="red">harijanaḥ</font><br/><font point-size="12">"child of god,"<br/>Untouchable</font>>]
+/* coined by Mahatma Gandhi in 1931 */
+harijan [label=<<b>Modern<br/>English</b><br/><font color="red">Harijan</font>>]
+
+
+{ rank=sink kind1 kind2 kindergarten krisskringle wunderkind kermes crimson carmine harijan }
+{ rank=same gen gon gheli gher kwrmi }
+{ rank=same carminF harijanahS }
+{ rank=same kundjazGm kenthamGm kundizGm gonosG }
+
+}

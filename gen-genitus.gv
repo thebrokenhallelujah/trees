@@ -1,0 +1,77 @@
+strict digraph {
+/* sources: roots AHD WiS */
+node [shape=none]
+
+genIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">gen(ə)-, gon-, gn̥-</font><br/><font point-size="16">to beget, give birth, be born</font>> shape=box style="dashed,rounded" URL="gen-birth3.svg" tooltip=""]
+genIE -> gigne -> gignereL -> genitusL
+gigne [label=<<font color="red">gi-gn(ə)</font>>]
+gignereL [label=<<b>Latin</b><br/><font color="red">gignere</font><br/><font point-size="12">to beget</font>>]
+genitusL [label=<<font color="red">genitus</font>>]
+
+// genital
+genitusL -> genitalisL
+genitalisL -> genitalME [style=dashed]
+genitalME -> genital
+genitalisL [label=<<font color="red">genitālis</font>>]
+genitalME [label=<<b>Middle<br/>English</b><br/><font color="red">genital</font>>]
+genital [label=<<b>Modern<br/>English</b><br/><font color="red">genital</font>>]
+
+// genitive
+genitusL -> genetivusL
+genetivusL -> genetifME [style=dashed]
+genetifME -> genitive
+genetivusL [label=<<font color="red">genetīvus</font>>]
+genetifME [label=<<b>Middle<br/>English</b><br/><font color="red">genetif</font>>]
+genitive [label=<<b>Modern<br/>English</b><br/><font color="red">genitive</font>>]
+
+// progenitor
+perIE -> proL
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">through</font>> shape=box style="dashed,rounded" URL="per-list.svg"]
+proL [label=<<b>Latin</b><br/><font color="red">prō-</font><br/><font point-size="12">forward</font>>]
+{ proL gignereL } -> progignereL -> progenitorL
+progenitorL -> progenitor [style=dashed]
+progignereL [label=<<font color="red">prōgignere</font><br/><font point-size="12">to beget</font>>]
+progenitorL [label=<<font color="red">prōgenitus<br/>prōgenitor</font>>]
+progenitor [label=<<b>Modern<br/>English</b><br/><font color="red">progenitor</font>>]
+
+// progeny
+progignereL -> progeniesL -> progenieOF
+progenieOF -> progeniME [style=dashed]
+progeniME -> progeny
+progeniesL [label=<<font color="red">prōgeniēs</font>>]
+progenieOF [label=<<b>Old French</b><br/><font color="red">progenie</font>>]
+progeniME [label=<<b>Middle<br/>English</b><br/><font color="red">progeni</font>>]
+progeny [label=<<b>Modern<br/>English</b><br/><font color="red">progeny</font>>]
+
+// primogeniture
+perIE -> primusL -> primoL
+genitusL -> genituraL
+{ primoL genituraL } -> primogenituraL
+primogenituraL -> primogeniture [style=dashed]
+primusL [label=<<b>Latin</b><br/><font color="red">prīmus</font><br/><font point-size="12">first</font>>]
+primoL [label=<<font color="red">prīmō</font><br/><font point-size="12">at first</font>>]
+genituraL [label=<<font color="red">genitūra</font>>]
+primogenituraL [label=<<font color="red">prīmōgenitūra</font>>]
+primogeniture [label=<<b>Modern<br/>English</b><br/><font color="red">primogeniture</font>>]
+
+// congenital
+komIE -> comL
+{ comL genitusL } -> congenitusL
+congenitusL -> congenital [style=dashed]
+komIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*kom</font><br/><font point-size="12">with</font>> shape=box style="dashed,rounded" URL="kom-with.svg"]
+comL [label=<<b>Latin</b><br/><font color="red">com-</font>>]
+congenitusL [label=<<font color="red">congenitus</font>>]
+congenital [label=<<b>Modern<br/>English</b><br/><font color="red">congenital</font>>]
+
+// gingerly
+genitusL -> gentOF -> gensorOF -> gensorF
+gensorF -> gingerly [style=dashed label="?" decorate=true]
+gentOF [label=<<b>Old French</b><br/><font color="red">gent</font><br/><font point-size="12">well-born</font>>]
+gensorOF [label=<<font color="red">gensor</font><br/><font point-size="12">delicate</font>>]
+gensorF [label=<<b>French</b><br/>(obsolete)<br/><font color="red">gensor</font>>]
+gingerly [label=<<b>Modern<br/>English</b><br/><font color="red">gingerly</font>>]
+
+
+{ rank=sink genital genitive progeny progenitor primogeniture congenital gingerly }
+{ rank=same perIE komIE }
+}

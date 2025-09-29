@@ -1,0 +1,100 @@
+strict digraph {
+/* sources: roots AHD WiS */
+node [shape=none]
+
+genIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">gen(ə)-, gon-, gn̥-</font><br/><font point-size="16">to beget, give birth, be born</font>> shape=box style="dashed,rounded" URL="gen-birth0.svg" tooltip=""]
+genIE -> gne
+gne [label=<<font color="red">gn̥ə-</font>>]
+
+gne -> { gneyo gneti gigne gno gna gnesko }
+gneyo [label=<<font color="red">gn̥ə-yo-</font>>]
+// gnet [label=<<font color="red">gn̥ə-t-</font>>]
+gneti [label=<<font color="red">gn̥ə-ti-</font>>]
+gigne [label=<<font color="red">gi-gn(ə)</font>>]
+gno [label=<<font color="red">-gn-o-</font>>]
+gna [label=<<font color="red">gnā-</font>>]
+gnesko [label=<<font color="red">gn̥ə-sko-,<br/>gnā-sko-</font>>]
+
+/* kin, king */
+gneyo -> kunjamGm [label="?"] // is this the contested link? 
+kunjamGm -> cynOE -> kinME -> kin
+gneyo -> kuningazGm [label="?"] // is this the contested link? 
+kuningazGm -> cyningOE -> kingME -> king
+kunjamGm [label=<<b>Germanic</b><br/><font color="red">kunjam</font>>] // or kuningaz, family
+kuningazGm [label=<<b>Germanic</b><br/><font color="red">kuningaz</font>>]
+cynOE [label=<<b>Old English</b><br/><font color="red">cyn</font>>]
+kinME [label=<<b>Middle<br/>English</b><br/><font color="red">kin</font>>]
+kin [label=<<b>Modern<br/>English</b><br/><font color="red">kin</font>>]
+cyningOE [label=<<b>Old English</b><br/><font color="red">cyning</font>>]
+kingME [label=<<b>Middle<br/>English</b><br/><font color="red">king</font>>]
+king [label=<<b>Modern<br/>English</b><br/><font color="red">king</font>>]
+
+/* L gens */
+gneti -> gensL
+// gensL -> gensE [style=dashed]
+gensL [label=<<b>Latin</b><br/><font color="red">gēns, genti-</font><br/><font point-size="12">race, clan</font>> shape=box style="dashed,rounded" URL="gen-gens.svg"]
+// gensE [label=<<font color="red">gens<br/>gentle<br/>genteel<br/>gentile<br/>gentry<br/>jaunty<br/>gendarme</font>> shape=box style="dashed,rounded" URL="gen-gens.svg"]
+
+/* genesis: list? */
+gneti -> genesisG
+genesisG -> genesis [style=dashed]
+genesisG [label=<<b>Greek</b><br/><font color="red">genesis</font><br/><font point-size="12">origin</font>>]
+genesis [label=<<b>Modern<br/>English</b><br/><font color="red">genesis<br/>-genesis</font>>]
+
+/* genetic */
+genesisG -> genetikosG
+genetikosG -> genetic [style=dashed]
+genetikosG [label=<<font color="red">genetikos</font><br/><font point-size="12">genitive</font>>]
+genetic [label=<<b>Modern<br/>English</b><br/><font color="red">genetic<br/>genetics</font>>]
+
+/* cognition, agnostic, gnostic, prognosis, diagnosis, knowledge - not this root
+gigne -> gnosisG
+// gnosisG -> gnosis [style=dashed]
+gnosisG [label=<<b>Greek</b><br/><font color="red">gnōsis</font><br/><font point-size="12">knowledge</font>> shape=box style="dashed,rounded" URL="gen-gnosis.svg"]
+// gnosis [label=<<font color="red">cognition<br/>prognosis<br/>agnostic<br/>etc.</font>> shape=box style="dashed,rounded" URL="gen-gnosis.svg"]
+*/
+
+/* genital */
+gigne -> gignereL
+// genitusL -> genital [style=dashed]
+gignereL [label=<<b>Latin</b><br/><font color="red">gignere</font><br/><font point-size="12">to beget</font>> shape=box style="dashed,rounded" URL="gen-genitus.svg"]
+// genitusL [label=<<font color="red">genitus</font>>]
+// genital [label=<<font color="red">genital<br/>genitive<br/>progeny<br/>progenitor<br/>primogeniture<br/>congenital<br/>gingerly</font>> shape=box style="dashed,rounded" URL="gen-genitus.svg"]
+
+/* benign, malign */
+gno -> {benignusL malignusL} // add prefixes
+benignusL -> benign [style=dashed]
+malignusL -> malign [style=dashed]
+benignusL [label=<<b>Latin</b><br/><font color="red">benignus</font><br/><font point-size="12">good-<br/>natured</font>>]
+malignusL [label=<<b>Latin</b><br/><font color="red">malignus</font><br/><font point-size="12">evil-<br/>natured</font>>]
+benign [label=<<b>Modern<br/>English</b><br/><font color="red">benign</font>>]
+malign [label=<<b>Modern<br/>English</b><br/><font color="red">malign</font>>]
+
+/* pregnant, impregnate, omitted: impregnable2 (pregnable, impregnable1 < ghend-take)*/
+gna -> praegnasL -> praegnantL -> pregnantOF
+pregnantOF -> pregnantME [style=dashed]
+pregnantME -> pregnant
+praegnasL [label=<<b>Latin</b><br/><font color="red">praegnās</font><br/><font point-size="12">pregnant</font>>]
+praegnantL [label=<<font color="red">praegnāns,<br/>pragnant-</font>>]
+pregnantOF [label=<<b>Old French</b><br/><font color="red">pregnant</font>>]
+pregnantME [label=<<b>Middle<br/>English</b><br/><font color="red">pregnant</font>>]
+pregnant [label=<<b>Modern<br/>English</b><br/><font color="red">pregnant</font>>]
+praegnasL -> praegnatusL -> impraegnatusL
+impraegnatusL -> impregnate [style=dashed]
+enIE -> inL -> impraegnatusL
+praegnatusL [label=<<font color="red">praegnātus</font>>]
+impraegnatusL [label=<<font color="red">impraegnātus</font><br/><font point-size="12">pregnant</font>>]
+impregnate [label=<<b>Modern<br/>English</b><br/><font color="red">impregnate</font>>]
+enIE [label=<<font color="red">en-</font><br/><font point-size="12">in</font>> shape=box style="dashed,rounded" URL="en-in.svg"]
+inL [label=<<b>Latin</b><br/><font color="red">in-</font>>]
+
+/* native, nature, nascent, etc */
+gnesko -> gnasciL
+// gnasciL -> native [style=dashed]
+gnasciL [label=<<b>Latin</b><br/><font color="red">(g)nāscī</font><br/><font point-size="12">to be born</font><br/><font color="red">(g)nātus</font><br/><font point-size="12">born</font>> shape=box style="dashed,rounded" URL="gen-gnasci.svg"]
+// native [label=<<font color="red">native<br/>nature<br/>nascent<br/>naive<br/>nation<br/>natal<br/>née<br/>Noël<br/>adnate<br/>agnate<br/>cognate<br/>connate<br/>enate<br/>innate<br/>neonate<br/>renaissance<br/>puisne<br/>puny</font>> shape=box style="dashed,rounded" URL="gen-gnasci.svg"]
+
+
+{ rank=sink kin king genesis benign malign pregnant impregnate genetic }
+{ rank=same gneyo gneti gigne gna gno gnesko enIE }
+}

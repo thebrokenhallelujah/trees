@@ -1,0 +1,11 @@
+strict digraph {
+/* sources: roots AHD WiS */
+node [shape=none]
+genIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">gen(ə)-<br/>gon-<br/>gn̥-</font></td><td><font point-size="16">to beget,<br/>give birth to,<br/>be born</font></td></tr></table>> tooltip="Indo-European \"gen(ə)-, gon-, gn̥-\" to beget, give birth to, be born" shape=box peripheries=2 margin=.3]
+
+genIE -> { gonIE geneIE gneIE }
+gonIE [label=<<font color="red">gen-, gon-</font>> shape=box style="dashed,rounded" URL="gen-birth1.svg" tooltip="gen-, gon-"] //gon-, gonə-, gon-o-
+geneIE [label=<<font color="red">genə-</font>> shape=box style="dashed,rounded" URL="gen-birth2.svg" tooltip="genə-"]
+gneIE [label=<<font color="red">gn̥ə-</font>> shape=box style="dashed,rounded" URL="gen-birth3.svg" tooltip="gn̥ə-"]
+
+}

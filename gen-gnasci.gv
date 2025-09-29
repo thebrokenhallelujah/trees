@@ -1,0 +1,161 @@
+strict digraph {
+/* sources: roots AHD WiS */
+node [shape=none]
+
+genIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">gen(ə)-, gon-, gn̥-</font><br/><font point-size="16">to beget, give birth, be born</font>> shape=box style="dashed,rounded" URL="gen-birth3.svg" tooltip=""]
+genIE -> gnesko -> gnasciL
+gnesko [label=<<font color="red">gn̥ə-sko-,<br/>gnā-sko-</font>>]
+gnasciL [label=<<b>Latin</b><br/><font color="red">(g)nāscī</font><br/><font point-size="12">to be born</font><br/><font color="red">(g)nātus</font><br/><font point-size="12">born</font>>]
+
+// native
+gnasciL -> natusL -> nativusL -> natifOF
+natifOF -> nativeME [style=dashed]
+nativeME -> native
+natusL [label=<<font color="red">(g)nātus</font>>]
+nativusL [label=<<font color="red">nātīvus</font>>]
+natifOF [label=<<b>Old French</b><br/><font color="red">natif</font>>]
+nativeME [label=<<b>Middle<br/>English</b><br/><font color="red">native</font>>]
+native [label=<<b>Modern<br/>English</b><br/><font color="red">native</font>>]
+
+// nature
+natusL -> naturaL -> natureOF
+natureOF -> natureME [style=dashed]
+natureME -> nature
+naturaL [label=<<font color="red">nātūra</font>>]
+natureOF [label=<<b>Old French</b><br/><font color="red">nature</font>>]
+natureME [label=<<b>Middle<br/>English</b><br/><font color="red">nature</font>>]
+nature [label=<<b>Modern<br/>English</b><br/><font color="red">nature</font>>]
+
+// nascent
+gnasciL -> nascensL
+nascensL -> nascent [style=dashed]
+nascensL [label=<<font color="red">nāscēns, nāscent-</font>>]
+nascent [label=<<b>Modern<br/>English</b><br/><font color="red">nascent</font>>]
+
+// naive
+nativusL -> naifOF -> naifF
+naifF -> naive [style=dashed]
+naifOF [label=<<b>Old French</b><br/><font color="red">naif</font><br/><font point-size="12">natural, native</font>>]
+naifF [label=<<b>French</b><br/><font color="red">naïf<br/>naïve</font>>]
+naive [label=<<b>Modern<br/>English</b><br/><font color="red">naive</font>>]
+
+// nation
+natusL -> natioL -> nationOF
+nationOF -> naciounME [style=dashed]
+naciounME -> nation
+natioL [label=<<font color="red">nātiō, nātiōn-</font>>]
+nationOF [label=<<b>Old French</b><br/><font color="red">nation</font>>]
+naciounME [label=<<b>Middle<br/>English</b><br/><font color="red">nacioun</font>>]
+nation [label=<<b>Modern<br/>English</b><br/><font color="red">nation</font>>]
+
+// natal
+natusL -> natalisL 
+natalisL -> natalME [style=dashed]
+natalME -> natal
+natalisL [label=<<font color="red">nātālis</font>>]
+natalME [label=<<b>Middle<br/>English</b><br/><font color="red">natal</font>>]
+natal [label=<<b>Modern<br/>English</b><br/><font color="red">natal</font>>]
+
+// nee
+gnasciL -> naistreOF -> naitreF -> neeF
+neeF -> nee [style=dashed]
+naistreOF [label=<<b>Old French</b><br/><font color="red">naistre</font>>]
+naitreF [label=<<b>French</b><br/><font color="red">naître</font>>]
+neeF [label=<<font color="red">née</font>>]
+nee [label=<<b>Modern<br/>English</b><br/><font color="red">née</font>>]
+
+// noel
+natalisL -> naelOF
+naelOF -> noelME [style=dashed]
+noelME -> noel
+naelOF [label=<<b>Old French</b><br/><font color="red">nael<br/>noël</font>>]
+noelME [label=<<b>Middle<br/>English</b><br/><font color="red">noel</font>>]
+noel [label=<<b>Modern<br/>English</b><br/><font color="red">Noël</font>>]
+
+// agnate, adnate
+{ adL gnasciL } -> agnasciL -> agnatusL
+agnatusL -> agnate [style=dashed]
+adL [label=<<b>Latin</b><br/><font color="red">ad-</font><br/><font point-size="12">to</font>>]
+agnasciL [label=<<font color="red">agnāscī</font>>]
+agnatusL [label=<<font color="red">agnātus</font>>]
+agnate [label=<<b>Modern<br/>English</b><br/><font color="red">agnate</font>>]
+agnatusL -> adnatusL
+adnatusL -> adnate [style=dashed]
+adnatusL [label=<<font color="red">adnātus</font>>]
+adnate [label=<<b>Modern<br/>English</b><br/><font color="red">adnate</font>>]
+
+// cognate
+komIE -> comL
+{ comL natusL } -> cognatusL
+cognatusL -> cognate [style=dashed]
+komIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*kom</font><br/><font point-size="12">with</font>> shape=box style="dashed,rounded" URL="kom-with.svg"]
+comL [label=<<b>Latin</b><br/><font color="red">com-, co-</font>>]
+cognatusL [label=<<font color="red">cognātus</font>>]
+cognate [label=<<b>Modern<br/>English</b><br/><font color="red">cognate</font>>]
+
+// connate
+{ comL gnasciL } -> connasciL -> connatusL
+connatusL -> connate [style=dashed]
+connasciL [label=<<font color="red">connāscī</font><br/><font point-size="12">to be born with</font>>]
+connatusL [label=<<font color="red">connātus</font>>]
+connate [label=<<b>Modern<br/>English</b><br/><font color="red">connate</font>>]
+
+// enate
+eghsIE -> exL
+{ exL gnasciL } -> enasciL -> enatusL
+enatusL -> enate [style=dashed]
+eghsIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*eghs</font><br/><font point-size="12">out</font>> shape=box style="dashed,rounded" URL="eghs-out.svg"]
+exL [label=<<b>Latin</b><br/><font color="red">ex-, ē-</font>>]
+enasciL [label=<<font color="red">ēnāscī</font>>]
+enatusL [label=<<font color="red">ēnātus</font>>]
+enate [label=<<b>Modern<br/>English</b><br/><font color="red">enate</font>>]
+
+// innate
+enIE -> inL
+{ inL gnasciL } -> innasciL -> innatusL
+innatusL -> innatME [style=dashed]
+innatME -> innate
+enIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*en</font><br/><font point-size="12">in</font>> shape=box style="dashed,rounded" URL="en-in1.svg"]
+inL [label=<<b>Latin</b><br/><font color="red">in-</font>>]
+innasciL [label=<<font color="red">innāscī</font><br/><font point-size="12">to be born in</font>>]
+innatusL [label=<<font color="red">innātus</font>>]
+innatME [label=<<b>Middle<br/>English</b><br/><font color="red">innat</font>>]
+innate [label=<<b>Modern<br/>English</b><br/><font color="red">innate</font>>]
+
+// neonate
+newoIE -> neoL
+{ neoL natusL } -> neonate [style=dashed]
+newoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*newo-</font><br/><font point-size="12">new</font>> shape=box style="dashed,rounded" URL="newo-new.svg"]
+neoL [label=<<b>Latin</b><br/><font color="red">neo-</font>>]
+neonate [label=<<b>Modern<br/>English</b><br/><font color="red">neonate</font>>]
+
+// renaissance
+gnasciL -> renasciL -> renascereL -> renaistreOF -> renaissanceOF -> renaissanceF
+renaissanceF -> renaissance [style=dashed]
+renasciL [label=<<font color="red">renāscī</font><br/><font point-size="12">to be born again</font>>]
+renascereL [label=<<font color="red">*renāscere</font>>]
+renaistreOF [label=<<b>Old French</b><br/><font color="red">renaistre</font>>]
+renaissanceOF [label=<<font color="red">renaissance</font>>]
+renaissanceF [label=<<b>French</b><br/><font color="red">renaissance</font>>]
+renaissance [label=<<b>Modern<br/>English</b><br/><font color="red">renaissance</font>>]
+
+// puisne
+apoIE -> postL -> puisOF
+natusL -> neOF
+{ puisOF neOF } -> puisneOF
+puisneOF -> puisne [style=dashed]
+apoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*apo</font><br/><font point-size="12">off, away</font>> shape=box style="dashed,rounded" URL="apo-off.svg"]
+postL [label=<<b>Latin</b><br/><font color="red">post-</font><br/><font point-size="12">behind, after</font>>]
+puisOF [label=<<b>Old French</b><br/><font color="red">puis</font>>]
+neOF [label=<<b>Old French</b><br/><font color="red">ne</font>>]
+puisneOF [label=<<font color="red">puisne</font><br/><font point-size="12">born after</font>>]
+puisne [label=<<b>Modern<br/>English</b><br/><font color="red">puisne</font>>]
+
+// puny
+puisne -> puny
+puny [label=<<b>Modern<br/>English</b><br/><font color="red">puny</font>>]
+
+
+{ rank=sink native nature nascent naive nation natal nee noel adnate agnate cognate connate enate innate neonate renaissance puisne puny }
+{ rank=same komIE eghsIE newoIE apoIE gnesko }
+}

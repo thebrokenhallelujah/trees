@@ -1,0 +1,86 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+gen [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">genə-es-</font><br/><font point-size="16">to beget, to give birth, to be born</font>> shape=box style="dashed,rounded" URL="gen-birth2.svg" tooltip=""]
+gen -> genusL
+genusL [label=<<b>Latin</b><br/><font color="red">genus, gener-</font><br/><font point-size="12">race, kind</font>>]
+
+/* genus, general, generic */
+genusL -> genus [style=dotted]
+genus [label=<<b>Modern<br/>English</b><br/><font color="red">genus</font>>]
+genusL -> generalisL
+generalisL -> generalME [style=dotted]
+generalME -> general
+generalisL [label=<<font color="red">generālis</font>>]
+generalME [label=<<b>Middle<br/>English</b><br/><font color="red">general</font>>]
+general [label=<<b>Modern<br/>English</b><br/><font color="red">general</font>>]
+genusL -> generic [style=dotted]
+generic [label=<<b>Modern<br/>English</b><br/><font color="red">generic</font>>]
+
+/* generate */
+genusL -> generareL
+generareL -> generate [style=dotted]
+generareL [label=<<font color="red">generāre, generāt-</font><br/><font point-size="12">to produce</font>>]
+generate [label=<<b>Modern<br/>English</b><br/><font color="red">generate<br/>generation</font>>]
+
+/* generous */
+genusL -> generosusL -> genereuxF
+genereuxF -> generous [style=dotted]
+generosusL [label=<<font color="red">generōsus</font><br/><font point-size="12">of noble birth,<br/>generous</font>>]
+genereuxF [label=<<b>French</b><br/><font color="red">genereux</font>>]
+generous [label=<<b>Modern<br/>English</b><br/><font color="red">generous</font>>]
+
+/* gender */
+genusL -> gendreOF
+gendreOF -> gendreME [style=dotted]
+gendreME -> gender
+gendreOF [label=<<b>Old French</b><br/><font color="red">gendre</font><br/><font color="red">kind, gender</font>>]
+gendreME [label=<<b>Middle<br/>English</b><br/><font color="red">gendre</font>>]
+gender [label=<<b>Modern<br/>English</b><br/><font color="red">gender</font>>]
+
+/* genre */
+genusL -> genreOF -> genreF
+genreF -> genre [style=dotted]
+genreOF [label=<<b>Old French</b><br/><font color="red">genre</font><br/><font color="red">kind</font>>]
+genreF [label=<<b>French</b><br/><font color="red">genre</font>>]
+genre [label=<<b>Modern<br/>English</b><br/><font color="red">genre</font>>]
+
+/* congener */
+komIE [label=<<b>Indo-<br/>European</b><br/><font color="red">kom</font><br/><font point-size="12">beside, near, with</font>> shape=box style="dashed,rounded" URL="kom-with.svg"]
+comL [label=<<b>Latin</b><br/><font color="red">com-</font><br/><font point-size="12">with, together</font>>]
+komIE -> comL
+{ comL genusL } -> congenerL
+congenerL -> congener [style=dotted]
+congenerL [label=<<font color="red">congener</font><br/><font point-size="12">of the same race</font>>]
+congener [label=<<b>Modern<br/>English</b><br/><font color="red">congener</font>>]
+
+/* degenerate */
+deL [label=<<b>Latin</b><br/><font color="red">de-</font><br/><font point-size="12">from, off</font>>]
+{ deL genusL } -> degenerareL
+degenerareL -> degenerate [style=dotted]
+degenerareL [label=<<b>Latin</b><br/><font color="red">dēgenerāre</font><br/><font point-size="12">to depart from<br/>one's own kind,<br/>deteriorate</font><br/><font color="red">dēgenerātus</font>>]
+degenerate [label=<<b>Modern<br/>English</b><br/><font color="red">degenerate</font>>]
+
+/* engender */
+enIE [label=<<b>Indo-<br/>European</b><br/><font color="red">en</font><br/><font point-size="12">in</font>> shape=box style="dashed,rounded" URL="en-in1.svg"]
+enL [label=<<b>Latin</b><br/><font color="red">en-, in-</font>>]
+enIE -> enL
+{ enL generareL } -> ingenerareL -> engendrerOF
+engendrerOF -> engendrenME [style=dotted]
+engendrenME -> engender
+ingenerareL [label=<<b>Latin</b><br/><font color="red">ingenerāre</font>>]
+engendrerOF [label=<<b>Old French</b><br/><font color="red">engendrer</font>>]
+engendrenME [label=<<b>Middle<br/>English</b><br/><font color="red">engendren</font>>]
+engender [label=<<b>Modern<br/>English</b><br/><font color="red">engender</font>>]
+
+/* miscegenation */
+meikIE [label=<<b>Indo-<br/>European</b><br/><font color="red">meik-</font><br/><font point-size="12">to mix</font>> shape=box style="dashed,rounded" URL="meik-mix.svg"]
+meikIE -> miscereL
+miscereL [label=<<b>Latin</b><br/><font color="red">miscēre</font>>]
+{ miscereL genusL } -> miscegenation [style=dotted]
+miscegenation [label=<<b>Modern<br/>English</b><br/><font color="red">miscegenation</font>>]
+
+{ rank=sink genus general generic generate generous gender genre congener degenerate engender miscegenation }
+{ rank=same enIE komIE meikIE }
+}

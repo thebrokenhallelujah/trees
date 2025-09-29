@@ -1,0 +1,126 @@
+strict digraph {
+/* sources: roots AHD WiS */
+node [shape=none]
+
+genIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">gen(ə)-, gon-, gn̥-</font><br/><font point-size="16">to beget, give birth, be born</font>> shape=box style="dashed,rounded" URL="gen-birth0.svg" tooltip=""]
+genIE -> geneIE
+geneIE [label=<<font color="red">genə-</font>>]
+geneIE -> { genees geneyo genea genemen genewo }
+genees [label=<<font color="red">genə-es-</font>>]
+geneyo [label=<<font color="red">gen(ə)-yo-</font>>]
+genea [label=<<font color="red">genə-ā-</font>>]
+genemen [label=<<font color="red">genə-men-</font>>]
+genewo [label=<<font color="red">genə-wo-</font>>]
+
+/* genus */
+genees -> genusL
+// genusL -> genus [style=dashed]
+genusL [label=<<b>Latin</b><br/><font color="red">genus</font><br/><font point-size="12">race, kind</font>> shape=box style="dashed,rounded" URL="gen-genus.svg"]
+// genus [label=<<font color="red">genus<br/>general<br/>generate<br/>generation<br/>generic<br/>generous<br/>gender<br/>genre<br/>congener<br/>degenerate<br/>engender<br/>miscegination</font>> shape=box style="dashed,rounded" URL="gen-genus.svg"]
+
+/* -gen, gene */
+genees -> genosG
+// genesG -> geny [style=dashed]
+genosG [label=<<b>Greek</b><br/><font color="red">genos, geneā</font><br/><font point-size="12">race, family</font>> shape=box style="dashed,rounded" URL="gen-genos.svg"]
+// genesG [label=<<b>Greek</b><br/><font color="red">genēs</font><br/><font point-size="12">-born</font>>]
+// geny [label=<<font color="red">-gen, -genic<br/>-geny<br/>epigene</font>> shape=box style="dashed,rounded" URL="gen-gen.svg"]
+// genosG -> genetic [style=dashed]
+// genetic [label=<<font color="red">gene<br/>genealogy<br/>genocide<br/>genotype<br/>allogenetic<br/>heterogeneous</font>> shape=box style="dashed,rounded" URL="gen-gene.svg"]
+
+/* genius */
+geneyo -> {geniusL ingeniumL}
+geniusL -> geniusME [style=dashed]
+geniusME -> genius
+geniusL [label=<<b>Latin</b><br/><font color="red">genius</font><br/><font point-size="12">innate quality</font>>]
+/* earliest definition? */
+ingeniumL [label=<<b>Latin</b><br/><font color="red">ingenium</font><br/><font point-size="12">inborn talent</font>>]
+geniusME [label=<<b>Middle<br/>English</b><br/><font color="red">genius</font><br/><font point-size="12">guardian spirit</font>>]
+genius [label=<<b>Modern<br/>English</b><br/><font color="red">genius</font>>]
+/* genial (genius=spirit of festivity) */
+geniusL -> genialisL
+genialisL -> genial [style=dashed]
+genialisL [label=<<font color="red">geniālis</font><br/><font point-size="12">festive</font>>]
+genial [label=<<b>Modern<br/>English</b><br/><font color="red">genial</font>>]
+/* congenial (genius=personification of one's natural inclinations) */
+komIE -> comL
+comL -> comME [style=dashed]
+comME -> comE -> congenial
+geniusL -> congenial [style=dashed]
+komIE [label=<<b>Indo-<br/>European</b><br/><font color="red">kom</font><br/><font point-size="12">with, near</font>> rank=source shape=box style="dashed,rounded" URL="kom-with.svg"]
+comL [label=<<b>Latin</b><br/><font color="red">com-</font>>]
+comME [label=<<b>Middle<br/>English</b><br/><font color="red">com-</font>>]
+comE [label=<<b>Modern<br/>English</b><br/><font color="red">com-, con-</font>>]
+congenial [label=<<b>Modern<br/>English</b><br/><font color="red">congenial</font>>]
+
+/* ingenious */
+ingeniumL -> ingeniosus -> ingeniosOF
+ingeniosOF -> ingeniousME [style=dashed]
+ingeniousME -> ingenious
+ingeniumL [label=<<b>Latin</b><br/><font color="red">ingenium</font>>]
+ingeniosus [label=<<font color="red">ingeniōsus</font>>]
+ingeniosOF [label=<<b>Old French</b><br/><font color="red">ingenios</font>>]
+ingeniousME [label=<<b>Middle<br/>English</b><br/><font color="red">ingenious</font>>]
+ingenious [label=<<b>Modern<br/>English</b><br/><font color="red">ingenious</font>>]
+/* engine */
+ingeniumL -> enginOF
+enginOF -> enginME [style=dashed]
+enginME -> engine
+enginOF [label=<<b>Old French</b><br/><font color="red">engin</font><br/><font point-size="12">innate ability</font>>]
+enginME [label=<<b>Middle<br/>English</b><br/><font color="red">engin</font><br/><font point-size="12">skill, machine</font>>]
+engine [label=<<b>Modern<br/>English</b><br/><font color="red">engine</font>>]
+
+/* ingenuous, ingenuity, ingenue */
+genewo -> ingenuusL -> ingenuitasL
+ingenuusL -> ingenuous [style=dashed]
+ingenuitasL -> ingenuity [style=dashed]
+ingenuusL -> ingenuF
+ingenuF -> ingenue [style=dashed]
+ingenuusL [label=<<b>Latin</b><br/><font color="red">ingenuus</font><br/><font point-size="12">freeborn, honest</font>>]
+ingenuous [label=<<b>Modern<br/>English</b><br/><font color="red">ingenuous<br/>disingenuous</font>>]
+ingenuitasL [label=<<font color="red">ingenuitās</font><br/><font point-size="12">frankness</font>>]
+ingenuity [label=<<b>Modern<br/>English</b><br/><font color="red">ingenuity</font>>]
+ingenuF [label=<<b>French</b><br/><font color="red">ingénu,<br/>ingénue</font><br/><font point-size="12">guileless</font>>] // the second is feminine
+ingenue [label=<<b>Modern<br/>English</b><br/><font color="red">ingenue</font>>]
+/* genuine */
+ingenuusL -> genuinusL [label="?" decorate=true]
+genuinusL -> genuine
+genuinusL [label=<<font color="red">genuīnus</font><br/><font point-size="12">natural</font>>]
+genuine [label=<<b>Modern<br/>English</b><br/><font color="red">genuine</font>>]
+
+/* indigenous, omitted: indigen */
+genea -> indigenaL
+indigenaL -> indigenous [style=dashed]
+indigenaL [label=<<b>Latin</b><br/><font color="red">indigena</font><br/><font point-size="12">a native</font>>]
+indigenous [label=<<b>Modern<br/>English</b><br/><font color="red">indigenous</font>>]
+
+/* germ */
+genemen -> germenL -> germeOF
+germeOF -> germME [style=dashed]
+germME -> germ
+// germenL -> germ [style=dashed]
+germenL [label=<<b>Latin</b><br/><font color="red">germen</font><br/><font point-size="12">bud, embryo</font>>]
+// germ [label=<<font color="red">germ<br/>germane<br/>germinal<br/>germinate<br/>cousin-german</font>> shape=box style="dashed,rounded" URL="gen-gnasci.svg"]
+germeOF [label=<<b>Old French</b><br/><font color="red">germe</font>>]
+germME [label=<<b>Middle<br/>English</b><br/><font color="red">germ</font><br/><font point-size="12">bud</font>>]
+germ [label=<<b>Modern<br/>English</b><br/><font color="red">germ</font>>]
+
+// german, germane
+germenL -> germanusL -> germainOF
+germainOF -> germainME [style=dashed]
+germainME -> { german germane }
+germanusL [label=<<font color="red">germānus</font>>]
+germainOF [label=<<b>Old French</b><br/><font color="red">germain</font>>]
+germainME [label=<<b>Middle<br/>English</b><br/><font color="red">germain</font>>]
+german [label=<<b>Modern<br/>English</b><br/><font color="red">(cousin-)german</font>>]
+germane [label=<<b>Modern<br/>English</b><br/><font color="red">germane</font>>]
+
+// germinate
+germenL -> germinareL
+germinareL -> germinate [style=dashed]
+germinareL [label=<<font color="red">germināre, germināt-</font>>]
+germinate [label=<<b>Modern<br/>English</b><br/><font color="red">germinate</font>>]
+
+
+{ rank=sink genius genial congenial ingenious engine ingenuous ingenuity ingenue genuine indigenous germ germane germinate german }
+{ rank=same genemen genewo genees geneyo genea komIE }
+}
