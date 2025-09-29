@@ -1,0 +1,116 @@
+strict digraph {
+/* sources: WiS, Ayto, Barn, roots */
+node [shape=none]
+dam [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">dom-, dem-, dam-</font></td><td><font point-size="16">to build, to tame</font></td></tr></table>> tooltip="Indo-European \"dom-/dem-/dam-\" build/tame" shape=box peripheries=2 margin=.3]
+
+/* WiS: tenebrous, tenebrific (L tenebrae); timid, timorous (L timere), domable (domesticable) */
+
+/* tame */
+tamazGmc [label=<<b>Germanic</b><br/><font color="red">tamaz</font>>]
+tamOE [label=<<b>Old English</b><br/><font color="red">tam, tom</font>>]
+tameME [label=<<b>Middle<br/>English</b><br/><font color="red">tame, tom</font>>]
+tame [label=<<b>Modern<br/>English</b><br/><font color="red">tame</font>>]
+dam -> tamazGmc -> tamOE -> tameME -> tame
+
+/* timber (also Gm Zimmer, Zimmermann) */
+demrom [label=<<font color="red">demrom</font>>]
+timramGmc [label=<<b>Germanic</b><br/><font color="red">timram/temran</font><br/><font point-size="12">building</font>>]
+timberOE [label=<<b>Old English</b><br/><font color="red">timber</font>>]
+timberME [label=<<b>Middle<br/>English</b><br/><font color="red">timber</font>>]
+timber [label=<<b>Modern<br/>English</b><br/><font color="red">timber</font>>] // when did the change in meaning occur?
+dam -> demrom -> timramGmc -> timberOE -> timberME -> timber
+
+/* daunt */
+domareL [label=<<b>Latin</b><br/><font color="red">domāre<br/>domitāre</font><br/><font point-size="12">to tame</font>>]
+danterOF [label=<<b>Old French</b><br/><font color="red">danter</font>>]
+dauntenME [label=<<b>Middle<br/>English</b><br/><font color="red">daunten</font>>]
+daunt [label=<<b>Modern<br/>English</b><br/><font color="red">daunt</font>>]
+dam -> domareL -> danterOF
+danterOF -> dauntenME [style=dashed]
+dauntenME -> daunt
+
+/* indomitable (in- (same as a-), -bilis) */
+indomitabilis [label=<<font color="red">indomitābilis</font><br/><font point-size="12">untamable</font>>]
+indomitable [label=<<b>Modern<br/>English</b><br/><font color="red">indomitable</font>>]
+domareL -> indomitabilis
+indomitabilis -> indomitable [style=dashed]
+inL [label=<<b>Latin</b><br/><font color="red">in-</font><br/><font point-size="12">not</font>>]
+nIE -> inL -> indomitabilis
+
+/* ---- L domus ---- */
+
+/* domestic, also domesticate */
+// IE domo-/domu-?
+domusL [label=<<b>Latin</b><br/><font color="red">domus</font><br/><font point-size="12">house</font>>]
+domesticusL [label=<<font color="red">domesticus</font><br/><font point-size="12">belonging to<br/>the household</font>>]
+domestiqueMF [label=<<b>Middle<br/>French</b><br/><font color="red">domestique</font>>]
+domesticME [label=<<b>Middle<br/>English</b><br/><font color="red">domestic</font>>]
+domestic [label=<<b>Modern<br/>English</b><br/><font color="red">domestic</font>>]
+dam -> domusL -> domesticusL -> domestiqueMF
+domestiqueMF -> domesticME [style=dashed]
+domesticME -> domestic
+
+/* L dominus (link) */
+dominusL [label=<<font color="red">dominus</font><br/><font point-size="12">lord, master</font>>shape=box style="dashed,rounded" URL="dom-build1.svg"]
+domusL -> dominusL
+
+/* domicile */
+domocolyon [label=<<font color="red">domo-colyom</font><br/><font point-size="12">house-dwelling</font>>] // adj?
+domiciliumL [label=<<b>Latin</b><br/><font color="red">domicilium</font>>]
+domicileMF [label=<<b>Middle<br/>French</b><br/><font color="red">domicile</font>>]
+domicylieME [label=<<b>Middle<br/>English</b><br/><font color="red">domicylie</font>>]
+domicile [label=<<b>Modern<br/>English</b><br/><font color="red">domicile</font>>]
+dam -> domocolyon // ??? check
+domocolyon -> domiciliumL -> domicileMF
+domicileMF -> domicylieME [style=dashed]
+domicylieME -> domicile
+
+/* dome, 3 versions? */
+domn [label=<<font color="red">dōm-n̥</font>>]
+domaG [label=<<b>Greek</b><br/><font color="red">dōma</font><br/><font point-size="12">house</font>>]
+domaP [label=<<b>Provençal</b><br/><font color="red">doma</font><br/><font point-size="12">rounded roof</font>>]
+dome1F [label=<<b>French</b><br/><font color="red">dôme</font>>]
+dome1 [label=<<b>Modern<br/>English</b><br/><font color="red">dome</font><br/><font point-size="12">rounded roof</font>>]
+dam -> domn -> domaG
+domaG -> domaP -> dome1F -> dome1 [style=dashed] // Provençal to French is a borrowing, right?
+dome2 [label=<<b>Modern<br/>English</b><br/>(obsolete?)<br/><font color="red">dome</font><br/><font point-size="12">house</font>>]
+domusL -> dome2 [style=dashed]
+duomoI [label=<<b>Italian</b><br/><font color="red">duomo</font><br/><font point-size="12">cathedral</font>>]
+dome3F [label=<<b>French</b><br/><font color="red">dôme</font>>]
+dome3 [label=<<b>Modern<br/>English</b><br/><font color="red">dome</font><br/><font point-size="12">cathedral</font>>]
+domusL -> duomoI
+duomoI -> dome3F -> dome3 [style=dashed weight=2]
+
+/* ---- */
+
+/* adamant */
+damanG [label=<<b>Greek</b><br/><font color="red">daman</font><br/><font point-size="12">subdue,<br/>break down</font>>] // from Gk damnāsthai, to tame?
+adamasG [label=<<font color="red">adamas</font><br/><font point-size="12">unbreakable,<br/>hard substance</font>>]
+adamansL [label=<<b>Latin</b><br/><font color="red">adamāns,<br/>adamant-</font>>]
+adamauntOF [label=<<b>Old French</b><br/><font color="red">adamaunt</font><br/><font point-size="12">diamond,<br/>hard metal</font>>]
+adamantME [label=<<b>Middle<br/>English</b><br/><font color="red">adamant</font><br/><font point-size="12">hard precious gem</font>>]
+adamant [label=<<b>Modern<br/>English</b><br/><font color="red">adamant</font>>]
+dam -> damanG [label="?" decorate=true]
+damanG -> adamasG
+adamasG -> adamansL [style=dashed]
+adamansL -> adamauntOF
+adamauntOF -> adamantME [style=dashed]
+adamantME -> adamant
+/* a- */
+nIE [label=<<b>Indo-European</b><br/><font color="red">n̥-</font><br/><font point-size="12">not</font>> shape=box style="dashed,rounded" URL="ne-not3.svg"]
+anG [label=<<b>Greek</b><br/><font color="red">a-, an-</font>>]
+nIE -> anG -> adamasG
+
+/* diamond */
+diamantemL [label=<<font color="red">adimantem<br/>diamantem</font>>] // Vulgar L, Medieval L; change influenced by Gk dia-
+diamantOF [label=<<b>Old French</b><br/><font color="red">diamant</font>>]
+diamauntME [label=<<b>Middle<br/>English</b><br/><font color="red">diamaunt</font>>]
+diamond [label=<<b>Modern<br/>English</b><br/><font color="red">diamond</font>>]
+adamansL -> diamantemL -> diamantOF
+diamantOF -> diamauntME [style=dashed]
+diamauntME -> diamond
+
+{rank=same tameME timberME dauntenME domesticME dome1F dome3F domicylieME adamantME diamauntME}
+{rank=same tamazGmc timramGmc domareL domaG domusL domiciliumL damanG}
+{rank=same tame timber domestic domicile dome1 dome2 dome3 adamant diamond daunt indomitable}
+}

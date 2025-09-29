@@ -1,0 +1,100 @@
+strict digraph {
+/* sources: WiS, Ayto, Barn */
+node [shape=none]
+
+dam [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">dom-, dem-, dam-</font><br/><font point-size="16">to build/to tame</font>> shape=box style="dashed,rounded" URL="dom-build0.svg" tooltip=""]
+
+dominusL [label=<<font color="red">dominus</font><br/><font point-size="12">lord, master</font>>]
+dam -> dominusL
+
+/* domain, demesne */
+dominiumL [label=<<font color="red">dominium</font><br/><font point-size="12">property</font>>]
+demaineOF [label=<<b>Old French</b><br/><font color="red">demaine, demeine</font>>]
+domaineMF [label=<<b>Middle<br/>French</b><br/><font color="red">domaine</font>>] // consciously altered to match Latin
+domainME [label=<<b>Middle<br/>English</b><br/><font color="red">domain</font>>]
+domain [label=<<b>Modern<br/>English</b><br/><font color="red">domain</font>>]
+dominusL -> dominiumL -> demaineOF -> domaineMF // dominium -> demaine borrowing?
+domaineMF -> domainME [style=dashed]
+domainME -> domain
+demeyneME [label=<<b>Middle<br/>English</b><br/><font color="red">demeyne</font>>]
+demesne [label=<<b>Modern<br/>English</b><br/><font color="red">demesne</font>>]
+demaineOF -> demeyneME [style=dashed]
+demeyneME -> demesne
+
+/* Dominic (also Domingo) */
+dominic [label=<<b>Modern<br/>English</b><br/><font color="red">Dominic<br/>Dominican Order<br/>Dominica<br/>Dominican Republic</font>>]
+dominusL -> dominic [style=dashed]
+
+/* dominate (also domiant, dominatrix) */
+dominariL [label=<<font color="red">dominārī, domināt-</font><br/><font point-size="12">to rule</font>>] // deponent?
+dominate [label=<<b>Modern<br/>English</b><br/><font color="red">dominate</font>>]
+dominusL -> dominariL
+dominariL -> dominate [style=dashed]
+
+/* domineer */
+dominerF [label=<<b>French</b><br/><font color="red">dominer</font>>]
+dominerenD [label=<<b>Dutch</b><br/><font color="red">domineren</font>>]
+domineer [label=<<b>Modern<br/>English</b><br/><font color="red">domineer</font>>]
+dominariL -> dominerF
+dominerF -> dominerenD -> domineer [sytle=dashed weight=2]
+
+/* domino */
+dominoL [label=<<font color="red">(benedīcāmus) Dominō</font><br/><font point-size="12">(let us praise)<br/>the Lord</font>>]
+dominoF [label=<<b>French</b><br/><font color="red">domino</font><br/><font point-size="12">masquerade costume</font>>] // why?
+domino1 [label=<<b>Modern<br/>English</b><br/><font color="red">domino</font><br/><font point-size="12">costume/mask</font>>]
+domino2 [label=<<b>Modern<br/>English</b><br/><font color="red">domino</font><br/><font point-size="12">game piece</font>>] // because dots look like eye holes
+dominusL -> dominoL -> dominoF
+dominoF -> domino1 [style=dashed]
+domino1 -> domino2
+
+/* Don, Doña, Dom */
+dominaL [label=<<font color="red">domina</font><br/><font point-size="12">(fem. form)</font>>]
+donS [label=<<b>Spanish/<br/>Italian</b><br/><font color="red">Don</font>>]
+donyaS [label=<<b>Spanish</b><br/><font color="red">Doña</font>>] // or make these 1 node with table?
+don [label=<<b>Modern<br/>English</b><br/><font color="red">Don ____<br/>(college or mafia) don</font>>]
+donya [label=<<b>Modern<br/>English</b><br/><font color="red">Doña ____</font>>]
+dominusL -> donS
+dominusL -> dominaL -> donyaS
+donS -> don [style=dashed]
+donyaS -> donya [style=dashed]
+domP [label=<<b>Portuguese</b><br/><font color="red">Dom</font>>]
+dom [label=<<b>Modern<br/>English</b><br/><font color="red">Dom ____</font>>]
+dominusL -> domP
+domP -> dom [style=dashed]
+
+/* dame, Madame, madam, omitted: dam */
+dameOF [label=<<b>Old French</b><br/><font color="red">dame</font>>]
+dameME [label=<<b>Middle<br/>English</b><br/><font color="red">dame</font>>]
+dame [label=<<b>Modern<br/>English</b><br/><font color="red">dame</font>>]
+dominaL -> dameOF
+dameOF -> dameME [style=dashed]
+dameME -> dame
+madameOF [label=<<font color="red">ma dame</font><br/><font point-size="12">my lady</font>>]
+madameF [label=<<b>French</b><br/><font color="red">Madame<br/>(pl.) Mesdames</font>>]
+madame [label=<<b>Modern<br/>English</b><br/><font color="red">Madame ____</font>>]
+madameME [label=<<b>Middle<br/>English</b><br/><font color="red">madame</font>>]
+madam [label=<<b>Modern<br/>English</b><br/><font color="red">madam</font>>]
+dameOF -> madameOF -> madameF
+madameF -> madame [style=dashed]
+madameOF -> madameME [style=dashed]
+madameME -> madam
+
+/* damsel, Mademoiselle */
+dominicellaL [label=<<font color="red">dominicella</font>>] // unattested
+dameiseleOF [label=<<b>Old French</b><br/><font color="red">dameisele, damoiselle</font>>]
+damiseleME [label=<<b>Middle<br/>English</b><br/><font color="red">damisele</font>>]
+damsel [label=<<b>Modern<br/>English</b><br/><font color="red">damsel</font>>]
+dominaL -> dominicellaL -> dameiseleOF
+dameiseleOF -> damiseleME [style=dashed]
+damiseleME -> damsel
+mademoiselleOF [label=<<font color="red">ma demoiselle</font><br/><font point-size="12">my young lady</font>>]
+mademoiselleF [label=<<b>French</b><br/><font color="red">Mademoiselle<br/>(pl.) Mademoiselles,<br/>Mesdemoiselles</font>>]
+mademoiselle [label=<<b>Modern<br/>English</b><br/><font color="red">Mademoiselle ____</font>>]
+dameiseleOF -> mademoiselleOF -> mademoiselleF
+mademoiselleF -> mademoiselle [style=dashed]
+
+
+{rank=same domainME demeyneME dameME dominerenD dominoF donyaS donS domP}
+{rank=same dominiumL dominariL dominoL dominaL}
+{rank=sink domain demesne dominic dominate domineer domino1 domino2 don donya dom dame madame madam damsel mademoiselle}
+}
