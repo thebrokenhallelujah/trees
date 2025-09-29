@@ -1,0 +1,86 @@
+digraph {
+node [shape=none];
+mediusL [label=<<b>Latin</b><br/><font color="red">medius</font>> shape=box style="dashed,rounded" URL="medhyo-middle1.svg"];
+mediusL -> { medialisL; mediareL; mediumL; medieiL; mediocrisL; mediterraneusL; mediatusL; medianusL;} // also intermediusL, listed below
+/* medium */
+mediumL -> medium [style=dashed];
+mediumL [label=<<font color="red">medium,<br/>media</font>>];
+medium [label=<<b>Modern<br/>English</b><br/><font color="red">medium<br/>media</font>>];
+/* medial */
+medialisL -> medialE [style=dashed];
+medialisL [label=<<font color="red">mediālis</font>>];
+medialE [label=<<b>Modern<br/>English</b><br/><font color="red">medial</font>>];
+/* median */
+medianusL -> median [style=dashed];
+medianusL [label=<<font color="red">mediānus</font>>];
+median [label=<<b>Modern<br/>English</b><br/><font color="red">median</font>>];
+/* mediate (also mediant, music term) */
+mediareL -> mediate [style=dashed];
+mediareL [label=<<font color="red">mediāre,<br/>mediāt-</font><br/><font point-size="12">to be in the middle</font>>];
+mediate [label=<<b>Modern<br/>English</b><br/><font color="red">mediate</font>>];
+/* medieval */
+{ mediumL; aevum } -> mediumaevum;
+mediumaevum -> medieval [style=dashed];
+aevum [label=<<font color="red">aevum</font><br/><font point-size="12">age</font>> shape=box style="dashed,rounded" URL="aiw-life2.svg"]; // see aiw-
+mediumaevum [label=<<b>New Latin</b><br/><font color="red">medium aevum</font>>];
+medieval [label=<<b>Modern<br/>English</b><br/><font color="red">mediaeval,<br/>medieval</font>>];
+/* mediocre */
+ocris -> mediocrisL -> mediocreF;
+mediocreF -> mediocre [style=dashed];
+ocris [label=<<font color="red">ocris</font><br/><font point-size="12">a rugged<br/>mountain</font>> shape=box style="dashed,rounded" URL="ak-sharp.svg"]; // see ak-
+mediocrisL [label=<<font color="red">mediocris</font>>]; // does this mean mediocre?
+mediocreF [label=<<b>French</b><br/><font color="red">m&eacute;diocre</font>>];
+mediocre [label=<<b>Modern<br/>English</b><br/><font color="red">mediocre</font>>];
+/* mediterranean */
+terra -> mediterraneusL;
+mediterraneusL -> mediterranean [style=dashed];
+terra [label=<<font color="red">terra</font><br/><font point-size="12">land</font>> shape=box style="dashed,rounded" URL="ters-dry.svg"]; // see ters-
+mediterraneusL [label=<<font color="red">mediterrāneus</font><br/><font point-size="12">inland</font>>];
+mediterranean [label=<<b>Modern<br/>English</b><br/><font color="red">mediterranean<br/>Mediterranean Sea</font>>];
+/* intermediate, intermediary */
+{ inter; mediusL } -> intermediusL -> { intermediatusL; intermediaireF }
+intermediatusL -> intermediateME [style=dashed];
+intermediateME -> intermediate;
+inter [label=<<font color="red">inter-</font><br/><font point-size="12">between</font> >shape=box style="dashed,rounded" URL="en-in3.svg"]; // se en
+/* want inter, edge from medius swapped */
+intermediusL [label=<<font color="red">intermedius</font>>];
+intermediatusL [label=<<font color="red">intermediātus</font>>];
+intermediateME [label=<<b>Middle<br/>English</b><br/><font color="red">intermediate</font>>];
+intermediate [label=<<b>Modern<br/>English</b><br/><font color="red">intermediate</font>>];
+intermediaireF -> intermediary [style=dashed];
+intermediaireF [label=<<b>French</b><br/><font color="red">interm&eacute;diaire</font>>];
+intermediary [label=<<b>Modern<br/>English</b><br/><font color="red">intermediary</font>>];
+/* moiety */
+mediatusL -> meitietOF;
+meitietOF -> moiteME [style=dashed];
+moiteME -> moiety;
+mediatusL [label=<<font color="red">mediātus</font>>];
+meitietOF [label=<<b>Old French</b><br/><font color="red">meitiet<br/>moitie</font>>];
+moiteME [label=<<b>Middle<br/>English</b><br/><font color="red">moite</font>>];
+moiety [label=<<b>Modern<br/>English</b><br/><font color="red">moiety</font>>];
+/* mean, means */
+medianusL -> meienOF;
+meienOF -> meneME [style=dashed];
+meneME -> mean;
+medianusL [label=<<font color="red">mediānus</font>>];
+meienOF [label=<<b>Old<br/>French</b><br/><font color="red">meien</font>>];
+meneME [label=<<b>Middle<br/>English</b><br/><font color="red">mene</font>>];
+mean [label=<<b>Modern<br/>English</b><br/><font color="red">mean </font>(math)<br/><font color="red">means</font>>];
+/* meridian */
+{ medieiL; dieL } -> meridieL -> meridianusL -> meridianOF; // more or less detail in the Latin?
+meridianOF -> meridianME [style=dashed];
+meridianME -> meridian;
+medieiL [label=<<font color="red">mediei</font>>];
+dieL [label=<<font color="red">diēs</font><br/><font point-size="12">day</font><br/><font color="red">diē</font>> shape=box style="dashed,rounded" URL="deiwos-god.svg"]; 
+/* not sure about the format for an alternate form of a word */
+meridieL [label=<<font color="red">merīdiē </font><font point-size="12">at midday</font><br/><font color="red">merīdiēs </font><font point-size="12">midday</font>>];
+meridianusL [label=<<font color="red">merīdiānus</font><br/><font point-size="12">of midday</font>>];
+meridianOF [label=<<b>Old French</b><br/><font color="red">meridian</font>>];
+meridianME [label=<<b>Middle<br/>English</b><br/><font color="red">meridian</font>>];
+meridian [label=<<b>Modern<br/>English</b><br/><font color="red">meridian</font>>];
+{ rank=same; moiety; mean; meridian; medium; median; medialE; medieval; mediate; mediocre; mediterranean; intermediate; intermediary; }
+{ rank=same; mediocrisL; mediterraneusL; medianusL; mediatusL; medialisL; mediareL; intermediatusL }
+{ rank=same; intermediateME; meridianME; moiteME; meneME } // Middle English
+{ rank=same; meridianOF; meitietOF } // Old French
+{ rank=same; mediumL; aevum; meridianusL }
+}

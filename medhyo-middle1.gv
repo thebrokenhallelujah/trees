@@ -1,0 +1,54 @@
+digraph {
+node [shape=none];
+medhyo [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*medhyo-</font></td><td><font point-size="16">middle</font></td></tr></table>> tooltip="Indo-European \"*medhyo-\" middle" shape=box peripheries=2 margin=.3]
+medhyo -> {  mesosG; midjazGm; mediusL;rank=same } // not the usual order, but makes a cleaner tree
+/* Gm */
+midjazGm [label=<<b>Germanic</b><br/><font color="red">midjaz, midja-</font>>];
+/* mid */
+midjazGm -> middOE -> midME -> mid;
+middOE [label=<<b>Old English</b><br/><font color="red">midd(e)</font>>];
+midME [label=<<b>Middle<br/>English</b><br/><font color="red">mid</font>>];
+mid [label=<<b>Modern<br/>English</b><br/><font color="red">mid<br/>mid-</font>>];
+/* middle */
+midjazGm -> middilazGm -> middelOE -> middelME -> middle;
+middilazGm [label=<<font color="red">middilaz, middila-</font><br/><font point-size="12">(diminuative)</font>>];
+middelOE [label=<<b>Old English</b><br/><font color="red">middel</font>>];
+middelME [label=<<b>Middle<br/>English</b><br/><font color="red">middel</font>>];	
+middle [label=<<b>Modern<br/>English</b><br/><font color="red">middle</font>>];
+/* midst */
+middOE -> middesME -> midst;
+middesME [label=<<b>Middle English</b><br/><font color="red">middes, middest</font>>];
+midst [label=<<b>Modern<br/>English</b><br/><font color="red">midst</font>>];
+/* amid, amidst (adverbial suffix) */
+{ aME; midME } -> amidME -> amid;
+aME [label=<<font color="red">a-</font><br/><font point-size="12">in, on</font>>];
+amidME [label=<<b>Middle<br/>English</b><br/><font color="red">amid<br/>amidst</font>>];
+amid [label=<<b>Modern<br/>English</b><br/><font color="red">amid<br/>amidst</font>>];
+/* Midgard */
+{ midjazGm; gardaz } -> midgardGm -> midgardON;
+midgardON -> midgard [style=dashed];
+gardaz [label=<<font color="red">gardaz</font><br/><font point-size="12">enclosure</font>> shape=box style="dashed,rounded" URL="gher-grasp1.svg"];
+midgardGm [label=<<font color="red">midja-gardaz</font>>];
+midgardON [label=<<b>Old Norse</b><br/><font color="red">Midhgardhr</font>>];
+midgard [label=<<b>Modern<br/>English</b><br/><font color="red">Midgard</font>>];
+/* L medius: expanded in medhyo-middle2 */
+mediusL [label=<<b>Latin</b><br/><font color="red">medius</font>>];
+mediusL -> { miOF; mezzoI; various }
+various [label=<various<br/>derivatives> shape=box style="dashed,rounded" URL="medhyo-middle2.svg"]
+/* milieu */
+miOF -> milieuOF -> milieuF;
+milieuF -> milieu [style=dashed];
+miOF [label=<<b>Old French</b><br/><font color="red">mi</font>>];
+milieuOF [label=<<font color="red">milieu</font><br/><font point-size="12">"middle place"</font>>];
+milieuF [label=<<b>French</b><br/><font color="red">milieu</font>>];
+milieu [label=<<b>Modern<br/>English</b><br/><font color="red">milieu</font>>];
+/* mezzo-/mezza- */
+mezzoI [label=<<b>Italian</b><br/><font color="red">mezzo-, mezza-</font><br/><font point-size="12">half</font>>];
+mezzoI -> mezza [style=dashed];
+mezza [label=<<b>Modern<br/>English</b><br/><font color="red">mezza-<br/>mezzo-</font>>];
+/* meso-, meson */
+mesosG -> meson [style=dashed];
+mesosG [label=<<b>Greek</b><br/><font color="red">mesos</font>>];
+meson [label=<<b>Modern<br/>English</b><br/><font color="red">meso-<br/>meson</font>>];
+{ rank=same; mid; middle; amid; midst; midgard; milieu; mezza; meson }
+}
