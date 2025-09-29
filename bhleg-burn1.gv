@@ -1,0 +1,76 @@
+strict digraph {
+/* sources: WiS, Barnhart, Ayto */
+node [shape=none]
+bhleg [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*bhleg-</font></td><td><font point-size="16">to blaze</font></td></tr></table>> tooltip="Indo-European \"*bhleg-\" to blaze" shape=rect style=dashed peripheries=1 margin=.3 URL="bhleg-burn0.svg"] // also bhel-, bhal-, phleg-
+
+/* blaze (2 of 3) */
+blasonGm [label=<<b>Germanic</b><br/><font color="red">blasōn</font><br/><font point-size="12">torch</font>>]
+blaeseOE [label=<<b>Old English</b><br/><font color="red">blæse</font>>]
+blaseME [label=<<b>Middle<br/>English</b><br/><font color="red">blase</font><br/><font point-size="12">flame</font>>]
+blaze1 [label=<<b>Modern<br/>English</b><br/><font color="red">blaze<br/>blazer</font>>] // original blazers were bright red
+bhleg -> blasonGm -> blaeseOE -> blaseME -> blaze1
+blasseMG [label=<<b>Middle<br/>German</b><br/><font color="red">blasse, blesse</font><br/><font point-size="12">white spot</font>>] // white spot on the forehead of an animal
+/* blasse=MHG, blesse/bles=MLG. missing Old forms and probably ME */
+blaze2 [label=<<b>Modern<br/>English</b><br/><font color="red">blaze</font><br/><font point-size="12">white spot,<br/>to mark a trail</font><br/><font color="red">trailblazer</font>>]
+blasonGm -> blasseMG
+blasseMG -> blaze2 [style=dotted]
+
+/* bleak */
+bleikrON [label=<<b>Old Norse</b><br/><font color="red">bleikr</font><br/><font point-size="12">shining, white</font>>]
+bleikME [label=<<b>Middle<br/>English</b><br/><font color="red">bleik</font><br/><font point-size="12">pale</font>>]
+bleak [label=<<b>Modern<br/>English</b><br/><font color="red">bleak</font><br/><font point-size="12">bare, gloomy</font>>]
+bhleg -> bleikrON
+bleikrON -> bleikME [style=dotted]
+bleikME -> bleak
+
+/* blank, omitted: blanc fixe, blancard (linen), Blanco (trade name) */
+blankGm [label=<<b>Germanic</b><br/><font color="red">blank-</font><br/><font point-size="12">white</font>>] // or blangkaz
+blancOF [label=<<b>Old French</b><br/><font color="red">blanc, blanche</font>>] // blanche fem.
+blankME [label=<<b>Middle<br/>English</b><br/><font color="red">blank</font><br/><font point-size="12">white, having<br/>empty spaces</font>>]
+blank [label=<<b>Modern<br/>English</b><br/><font color="red">blank</font>>]
+bhleg -> blankGm
+blankGm -> blancOF -> blankME [style=dotted]
+blankME -> blank
+/* blanche */
+blanchirOF [label=<<font color="red">blanchir</font><br/><font point-size="12">to whiten</font>>]
+blaunchenME [label=<<b>Middle<br/>English</b><br/><font color="red">blaunchen</font>>]
+blanche [label=<<b>Modern<br/>English</b><br/><font color="red">blanche</font>>]
+blancOF -> blanchirOF
+blanchirOF -> blaunchenME [style=dotted]
+blaunchenME -> blanche
+/* blancmange */
+blancmangierOF [label=<<font color="red">blancmangier</font><br/><font point-size="12">white food</font>>]
+blancmangerME [label=<<b>Middle<br/>English</b><br/><font color="red">blancmanger</font>>]
+blancmange [label=<<b>Modern<br/>English</b><br/><font color="red">blancmange</font>>]
+blancOF -> blancmangierOF
+blancmangierOF -> blancmangerME [style=dotted]
+blancmangerME -> blancmange
+/* blanket */
+blanquetOF [label=<<font color="red">blanchet<br/>blanquet</font><br/><font point-size="12">unbleached cloth</font>>]
+blanketME [label=<<b>Middle<br/>English</b><br/><font color="red">blanket</font>>]
+blanket [label=<<b>Modern<br/>English</b><br/><font color="red">blanket</font>>]
+blancOF -> blanquetOF
+blanquetOF -> blanketME [style=dotted]
+blanketME -> blanket
+
+/* black (contested) */
+blaecOE [label=<<b>Old English</b><br/><font color="red">blæc</font>>] // preferred word was sweart, which died out
+blacME [label=<<b>Middle<br/>English</b><br/><font color="red">blac</font>>]
+black [label=<<b>Modern<br/>English</b><br/><font color="red">black</font>>]
+bhleg -> blaecOE [label="?" decorate=true]
+blaecOE -> blacME -> black
+
+/* bleach */
+blaikosGm [label=<<b>Germanic</b><br/><font color="red">blaikos</font><br/><font point-size="12">white</font>>]
+blaikjonGm [label=<<font color="red">blaikjōn</font><br/><font point-size="12">to whiten</font>>]
+blaecanOE [label=<<b>Old English</b><br/><font color="red">blǣcan</font>>]
+blechenME [label=<<b>Middle<br/>English</b><br/><font color="red">blechen</font>>]
+bleach [label=<<b>Modern<br/>English</b><br/><font color="red">bleach</font>>]
+bleachers [label=<<b>Modern<br/>English</b><br/><font color="red">bleachers</font><br/><font point-size="12">(because the wood<br/>bleaches in the sun)</font>>]
+bhleg -> blaikosGm -> blaikjonGm -> blaecanOE -> blechenME -> bleach -> bleachers
+
+{rank=same blaze1 blaze2 bleach bleachers bleak blank blanche blancmange blanket black}
+{rank=same blaecanOE blancOF blaecOE blaeseOE bleikrON}
+{rank=same blechenME bleikME blankME blaunchenME blancmangerME blanketME blacME blaseME blasseMG}
+{rank=same blasonGm blaikosGm blankGm}
+}

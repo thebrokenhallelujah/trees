@@ -1,0 +1,10 @@
+strict digraph {
+/* sources: WiS, Barnhart, Ayto */
+node [shape=none]
+bhleg [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*bhleg-</font></td><td><font point-size="16">to blaze</font></td></tr></table>> tooltip="Indo-European \"*bhleg-\" to blaze" shape=box peripheries=2 margin=.3] // also bhel-, bhal-, phleg-
+bhleg -> {germanic latin greek}
+germanic [label="Germanic\nderivatives" shape=box style="dashed,rounded" URL="bhleg-burn1.svg"]
+latin [label="Latin\nderivatives" shape=box style="dashed,rounded" URL="bhleg-burn2.svg"]
+greek [label="Greek\nderivatives" shape=box style="dashed,rounded" URL="bhleg-burn3.svg"]
+
+}

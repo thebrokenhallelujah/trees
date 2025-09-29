@@ -1,0 +1,101 @@
+strict digraph {
+/* sources: WiS, Barnhart, Ayto */
+node [shape=none]
+bhleg [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*bhleg-</font></td><td><font point-size="16">to blaze</font></td></tr></table>> tooltip="Indo-European \"*bhleg-\" to blaze" shape=rect style=dashed peripheries=1 margin=.3 URL="bhleg-burn0.svg"] // also bhel-, bhal-, phleg-
+
+/* ---- L flamma ---- */
+
+/* flame */
+flammaL [label=<<b>Latin</b><br/><font color="red">flamma</font><br/><font point-size="12">flame</font>>]
+flameOF [label=<<b>Old French</b><br/><font color="red">flame</font>>] // possibly from flammula
+flameME [label=<<b>Middle<br/>English</b><br/><font color="red">flame</font>>] // AN form also
+flame [label=<<b>Modern<br/>English</b><br/><font color="red">flame</font>>]
+bhleg -> flammaL -> flameOF
+flameOF -> flameME [style=dotted]
+flameME -> flame
+
+/* flambe, omitted: flambeau */
+flammulaL [label=<<font color="red">flammula, flamble</font><br/><font point-size="12">little flame</font>>]
+flambeOF [label=<<b>Old French</b><br/><font color="red">flambe</font>>]
+flamberOF [label=<<font color="red">flamber</font><br/><font point-size="12">to blaze</font>>]
+flambeF [label=<<b>French</b><br/><font color="red">flambé</font>>]
+flambe [label=<<b>Modern<br/>English</b><br/><font color="red">flambé</font>>]
+flammaL -> flammulaL -> flambeOF -> flamberOF -> flambeF
+flambeF -> flambe [style=dotted]
+/* flamboyant */
+flamboyerOF [label=<<font color="red">flamboyer</font><br/><font point-size="12">to blaze</font>>]
+flamboyantF [label=<<b>French</b><br/><font color="red">flamboyant</font><br/><font point-size="12">an architectural style</font>>]
+flamboyant [label=<<b>Modern<br/>English</b><br/><font color="red">flamboyant</font>>]
+flambeOF -> flamboyerOF -> flamboyantF
+flamboyantF -> flamboyant [style=dotted]
+
+/* flamingo */
+flamencPr [label=<<b>Provençal</b><br/><font color="red">flamenc</font><br/><font point-size="12">"of the flames,"<br/>fire-bird</font>>]
+flamengoPt [label=<<b>Portuguese</b><br/><font color="red">flamengo</font>>]
+flamingo [label=<<b>Modern<br/>English</b><br/><font color="red">flamingo</font>>]
+flammaL -> flamencPr
+flamencPr -> flamengoPt -> flamingo [style=dotted]
+
+/* ---- L flamare ---- */
+/* omitted: flammivomous (fiery hiccups) */
+
+/* flammable, inflame, inflammable */
+flammareL [label=<<font color="red">flamāre</font><br/><font point-size="12">to set on fire</font>>]
+flammable [label=<<b>Modern<br/>English</b><br/><font color="red">flammable</font>>]
+inflammareL [label=<<font color="red">inflamāre</font><br/><font point-size="12">to inflame</font>>]
+inflame [label=<<b>Modern<br/>English</b><br/><font color="red">inflame<br/>inflammable</font>>]
+flammaL -> flammareL -> inflammareL
+inflammareL -> inflame [style=dotted]
+flammareL -> flammable [style=dotted]
+/* in- */
+enIE -> inL -> inflammareL
+enIE [label=<<b>Indo-European</b><br/><font color="red">en</font><br/><font point-size="12">in, into</font>> shape=box style="dashed,rounded" URL="en-in.svg"]
+inL [label=<<b>Latin</b><br/><font color="red">in-</font>>]
+
+/* ---- L flagrare ---- */
+/* omitted: flagitious (villainous) */
+
+/* flangrant, flagrante delicto */
+flagrareL [label=<<b>Latin</b><br/><font color="red">flagrāre</font><br/><font point-size="12">to burn</font>>]
+flagransL [label=<<font color="red">flagrāns, flagrant-</font>>]
+flagrantedeL [label=<<font color="red">flagrante delicto</font><br/><font point-size="12">"with the crime<br/>still blazing"</font>>]
+flagrantede [label=<<b>Modern<br/>English</b><br/><font color="red">(in) flagrante<br/>delicto</font>>]
+flagrant [label=<<b>Modern<br/>English</b><br/><font color="red">flagrant</font><br/><font point-size="12">shamless</font>>]
+bhleg -> flagrareL -> flagransL -> flagrantedeL
+flagrantedeL -> {flagrantede flagrant} [style=dotted]
+
+/* conflagration */
+conflagrareL [label=<<font color="red">conflagrāre</font><br/><font point-size="12">to burn up</font>>]
+conflagratioL [label=<<font color="red">cōnflagrātiō,<br/>cōnflagrātiōn-</font>>]
+conflagration [label=<<b>Modern<br/>English</b><br/><font color="red">conflagration</font>>]
+flagrareL -> conflagrareL -> conflagratioL
+conflagratioL -> conflagration [style=dotted]
+/* com- kom */
+kom [label=<<b>Indo-European</b><br/><font color="red">kom</font><br/><font point-size="12">with, near</font>> shape=box style="dashed,rounded" URL="kom-with.svg"]
+comL [label=<<b>Latin</b><br/><font color="red">com-</font><br/><font point-size="12">(intensive prefix)</font>>]
+kom -> comL -> conflagrareL
+
+/* ---- L fulgere ---- */
+
+/* effulgent */
+fulgereL [label=<<b>Latin</b><br/><font color="red">fulgēre</font><br/><font point-size="12">to shine</font>>]
+effulgereL [label=<<font color="red">effulgēre</font><br/><font point-size="12">to shine out</font>>]
+effulgensL [label=<<font color="red">effulgēns,<br/>effulgent-</font>>]
+effulgent [label=<<b>Modern<br/>English</b><br/><font color="red">effulgent</font>>] // replaced ME fulgent
+bhleg -> fulgereL -> effulgereL -> effulgensL
+effulgensL -> effulgent [style=dotted]
+/* ex- eghs */
+eghs [label=<<b>Indo-European</b><br/><font color="red">eghs</font><br/><font point-size="12">out</font>> shape=box style="dashed,rounded" URL="eghs-out.svg"]
+exL [label=<<b>Latin</b><br/><font color="red">ex-</font>>]
+eghs -> exL -> effulgereL
+
+{rank=same flame flambe flamboyant flamingo flammable inflame flagrant conflagration effulgent flagrantede}
+{rank=same flammaL flagrareL fulgereL}
+{rank=same bhleg eghs kom enIE}
+{rank=same flameOF flambeOF flamencPr}
+{rank=same flameME flambeF flamboyantF flamengoPt}
+flagrareL -> flagransL [weight=2]
+flagransL -> flagrantedeL [weight=4]
+conflagrareL -> conflagratioL [weight=2]
+effulgereL -> effulgensL [weight=2]
+}

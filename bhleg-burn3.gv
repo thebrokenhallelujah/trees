@@ -1,0 +1,61 @@
+strict digraph {
+node [shape=none]
+
+bhleg [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*bhleg-</font></td><td><font point-size="16">to blaze</font></td></tr></table>> tooltip="Indo-European \"*bhleg-\" to blaze" shape=rect style=dashed peripheries=1 margin=.3 URL="bhleg-burn0.svg"]
+
+
+/* ---- G phlegein ---- */
+
+/* phlegm */
+phlegeinG [label=<<b>Greek</b><br/><font color="red">phlegein</font><br/><font point-size="12">to burn</font>>]
+phlegmaG [label=<<font color="red">phlegma, phlegmat-</font><br/><font point-size="12">heat, the humor phlegm</font>>]
+phlegmaL [label=<<b>Latin</b><br/><font color="red">phlegma, flegma</font>>]
+fleumeOF [label=<<b>Old French</b><br/><font color="red">fleume</font>>]
+fleumeME [label=<<b>Middle<br/>English</b><br/><font color="red">fleume</font>>]
+phlegm [label=<<b>Modern<br/>English</b><br/><font color="red">phlegm</font>>]
+bhleg -> phlegeinG -> phlegmaG
+phlegmaG -> phlegmaL [style=dotted]
+phlegmaL -> fleumeOF
+fleumeOF -> fleumeME [style=dotted]
+fleumeME -> phlegm
+
+/* phlegmatic */
+phlegmaticosG [label=<<font color="red">phlegmatikos</font><br/><font point-size="12">full of phlegm (the humor)</font>>]
+phlegmaticusL [label=<<b>Latin</b><br/><font color="red">phlegmaticus</font>>] // put these 2 in 1 node? but it's a borrowing
+fleumatiqueOF [label=<<b>Old French</b><br/><font color="red">fleumatique</font>>]
+fleumatikME [label=<<b>Middle<br/>English</b><br/><font color="red">fleumatik</font>>]
+phlegmatic [label=<<b>Modern<br/>English</b><br/><font color="red">phlegmatic</font><br/><font point-size="12">unemotional</font>>]
+phlegmaG -> phlegmaticosG
+phlegmaticosG -> phlegmaticusL [style=dotted]
+phlegmaticusL -> fleumatiqueOF
+fleumatiqueOF -> fleumatikME [style=dotted]
+fleumatikME -> phlegmatic
+
+/* Phlegethon, omitted L, ME */
+phlegethein [label=<<font color="red">phlegethein</font>>]
+phlegethonG [label=<<font color="red">Phlegethōn</font><br/><font point-size="12">a river of fire<br/>in the underworld</font>>]
+phlegethon [label=<<b>Modern<br/>English</b><br/><font color="red">Phlegethon</font>>] // or put def. here?
+phlegeinG -> phlegethein -> phlegethonG
+phlegethonG -> phlegethon [style=dotted]
+
+/* phlox */
+phloxG [label=<<b>Greek</b><br/><font color="red">phlox, phlog-</font><br/><font point-size="12">flame</font>>] // also a flower
+phloxL [label=<<b>Latin</b><br/><font color="red">phlox</font><br/><font point-size="12">a flower</font>>]
+phlox [label=<<b>Modern<br/>English</b><br/><font color="red">phlox</font>>] // are these 3 different flowers?
+bhleg -> phloxG -> phloxL -> phlox [style=dotted]
+
+/* phlogiston, link to story? */
+phlogizeinG [label=<<font color="red">phlogizein</font><br/><font point-size="12">to set on fire</font>>]
+phlogistosG [label=<<font color="red">phlogistos,<br/>phlogiston</font><br/><font point-size="12">able to be set on fire</font>>]
+phlogiston [label=<<b>Modern<br/>English</b><br/><font color="red">phlogiston</font>>] // does it have this meaning in Greek?
+phloxG -> phlogizeinG -> phlogistosG
+phlogistosG -> phlogiston [style=dotted]
+
+{rank=same phlegm phlegmatic phlegethon phlox phlogiston}
+{rank=same phlegeinG phloxG}
+{rank=same phlegmaL phlegmaticusL phloxL}
+{rank=same fleumeOF fleumatiqueOF}
+phlegeinG -> phlegethein -> phlegethonG [weight=2]
+phloxG -> phlogizeinG -> phlogistosG [weight=2]
+
+}
