@@ -1,0 +1,122 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+kom [label=<<table border="0"><tr><td colspan="2"><font point-size="24">Indo-European</font></td></tr><tr><td><font point-size="18" color="red">kom</font></td><td><font point-size="16">beside, near, by, with</font></td></tr></table>> tooltip="Indo-European \"kom\" beside, near, by, with" shape=rect peripheries=2 margin=.3]
+kom -> {gaGm cumL comL ko komtra komyo} [sametail=1 minlen=2]
+ko [label=<<font color="red">ko-</font><br/><font point-size="12">(collective<br/>prefix)</font>>]
+komtra [label=<<font color="red">kom-trā-</font>>]
+komyo [label=<<font color="red">kom-yo-</font>>]
+
+gherIE [label=<<b>Indo-<br/>European</b><br/><font color="red">gher</font><br/><font point-size="12">to grasp<br/>enclose</font>> shape=box style="dashed,rounded" URL="gher-grasp2.svg"]
+koghrti [label=<<font color="red">ko-ghr̥-ti-</font>>] // or with m?
+{ko gherIE} -> koghrti [samehead=1]
+
+
+/* OE ge- */
+/* omitted: gemot, witenagemot, yclept, yean (give birth) */
+gaGm [label=<<b>Germanic</b><br/><font color="red">ga-</font><br/><font point-size="12">together, with</font>>] // collective and intensive prefix
+geOE [label=<<b>Old English</b><br/><font color="red">ge-</font>>]
+/* enough */
+genogOE [label=<<font color="red">genōg</font><br/><font point-size="12">enough</font>>]
+enoghME [label=<<b>Middle<br/>English</b><br/><font color="red">enogh</font>>]
+enough [label=<<b>Modern<br/>English</b><br/><font color="red">enough</font>>]
+gaGm -> geOE -> genogOE -> enoghME -> enough
+/* handiwork */
+weorcOE [label=<<b>Old English</b><br/><font color="red">weorc</font><br/><font point-size="12">work</font>>]
+handOE [label=<<b>Old English</b><br/><font color="red">hand</font><br/><font point-size="12">hand</font>>]
+handgeweorc [label=<<font color="red">handgeweorc</font>>]
+handiwerkME [label=<<b>Middle<br/>English</b><br/><font color="red">handiwerk</font>>]
+handiwork [label=<<b>Modern<br/>English</b><br/><font color="red">handiwork</font>>]
+{handOE geOE weorcOE} -> handgeweorc [samehead=1]
+handgeweorc -> handiwerkME -> handiwork
+/* werg- */
+wergIE [label=<<b>Indo-<br/>European</b><br/><font color="red">werg-</font><br/><font point-size="12">to do</font>> shape=box style="dashed,rounded" URL="werg-do.svg"]
+wergIE -> weorcOE
+
+/* cum, omitted: cooncan (card game) */
+cumL [label=<<b>Latin</b><br/><font color="red">cum</font><br/><font point-size="12">with</font>>]
+cum [label=<<b>Modern<br/>English</b><br/><font color="red">cum</font>>] // magna/summa cum laude separate entry?
+cumL -> cum [style=dotted]
+
+/* com- (list?) */
+comL [label=<<b>Latin</b><br/><font color="red">com-</font><br/><font point-size="12">with, together</font>>] // also intensive prefix
+comME [label=<<b>Middle<br/>English</b><br/><font color="red">com-</font>>]
+com [label=<<b>Modern<br/>English</b><br/><font color="red">com-<br/>con-<br/>col-<br/>cor-</font>>]
+comL -> comME [style=dotted sametail=1]
+comME -> com
+/* co- (list?) */
+coL [label=<<font color="red">co-</font>>]
+coME [label=<<b>Middle<br/>English</b><br/><font color="red">co-</font>>]
+co [label=<<b>Modern<br/>English</b><br/><font color="red">co-</font>>]
+comL -> coL [sametail=1]
+coL -> coME [style=dotted]
+coME -> co
+
+/* contra- (list?), con */
+contraL [label=<<b>Latin</b><br/><font color="red">contrā-</font><br/><font point-size="12">against</font>>]
+contra1ME [label=<<b>Middle<br/>English</b><br/><font color="red">contra-</font>>]
+contra1 [label=<<b>Modern<br/>English</b><br/><font color="red">contra-</font><br/><font point-size="12">against,<br/>opposite</font>>]
+contra2I [label=<<b>Italian</b><br/><font color="red">contra-</font><br/><font point-size="12">lower in pitch(?)</font>>]
+contra2 [label=<<b>Modern<br/>English</b><br/><font color="red">contra-</font><br/><font point-size="12">(music)</font>>]
+con [label=<<b>Modern<br/>English</b><br/><font color="red">con</font><br/><font point-size="12">an argument<br/>against</font>>]
+komtra -> contraL
+contraL -> contra1ME [style=dotted sametail=1]
+contraL -> contra2I [sametail=1]
+contra1ME -> contra1
+contra1ME -> {contra1 con} [sametail=1]
+contra2I -> contra2 [style=dotted]
+/* contrary */
+contrariusL [label=<<font color="red">contrārius</font>>]
+contrarieAN [label=<<b>Anglo-Norman</b><br/><font color="red">contrarie</font>>]
+contrarieME [label=<<b>Middle<br/>English</b><br/><font color="red">contrarie</font>>]
+contrary [label=<<b>Modern<br/>English</b><br/><font color="red">contrary</font>>]
+contraL -> contrariusL [sametail=1]
+contrariusL -> contrarieAN
+contrarieAN -> contrarieME [style=dotted]
+contrarieME -> contrary
+/* counter- (list?) */
+contreOF [label=<<b>Old French</b><br/><font color="red">contre-<br/>contre</font>>]
+countre1ME [label=<<b>Middle<br/>English</b><br/><font color="red">countre-<br/>countre</font>>]
+counter [label=<<b>Modern<br/>English</b><br/><font color="red">counter-<br/>counter</font><br/><font point-size="12">(verb and<br/>related meanings)</font>>]
+contraL -> contreOF [sametail=1]
+contreOF -> countre1ME [style=dotted]
+countre1ME -> counter
+/* country (L TERRA) */
+contrataL [label=<<font color="red">(terra) contrāta</font><br/><font point-size="12">(land) opposite</font>>] // Vulgar
+contreeOF [label=<<b>Old French</b><br/><font color="red">contree</font>>]
+countre2ME [label=<<b>Middle<br/>English</b><br/><font color="red">countre</font>>]
+country [label=<<b>Modern<br/>English</b><br/><font color="red">country</font>>]
+contraL -> contrataL [sametail=1]
+contrataL -> contreeOF
+contreeOF -> countre2ME [style=dotted]
+countre2ME -> country
+
+/* c(o)eno-: c(o)enobite, coenocyte, coenurus (see ORS), epicene */
+/* but not -cene, Cenozoic (Gk new), cenotaph (Gk empty), cenote (Yucatec) */
+koinosG [label=<<b>Greek</b><br/><font color="red">koinos,<br/>koino-</font><br/><font point-size="12">common</font>>]
+coenoNL [label=<<b>New Latin</b><br/><font color="red">c(o)eno-</font>>]
+ceno [label=<<b>Modern<br/>English</b><br/><font color="red">c(o)enobite<br/>coenocyte<br/>coenurus<br/>epicene</font>>]
+komyo -> koinosG
+koinosG -> coenoNL [style=dotted sametail=1]
+coenoNL -> ceno [style=dotted]
+/* Koine */
+koineG [label=<<font color="red">(hē) koinē<br/>(dialektos)</font><br/><font point-size="12">(the) common<br/>(language)</font>>]
+koine [label=<<b>Modern<br/>English</b><br/><font color="red">Koine</font><br/><font point-size="12">(the Greek dialect<br/>in which the New<br/>Testament was written)</font>>]
+koinosG -> koineG [sametail=1 weight=2]
+koineG -> koine [style=dotted]
+
+/* cohort, cortege, court, courteous, courtesan, courtesy, courtier, curtilage, curtsy */
+cohorsL [label=<<b>Latin</b><br/><font color="red">cohors, cohort-</font><br/><font point-size="12">enclosed yard,<br/>company of soldiers</font>> shape=box style="dashed,rounded" URL="gher-grasp2.svg"]
+koghrti -> cohorsL
+
+{rank=same enough handiwork cum com co contra1 contra2 con contrary counter country ceno koine}
+{rank=same enoghME handiwerkME comME coME contrarieME countre1ME countre2ME contra1ME}
+{rank=same wergIE gherIE}
+{rank=same gaGm cumL comL contraL koinosG}
+{rank=same handOE -> geOE -> weorcOE [style=invis]}
+comL -> coL [weight=2]
+{rank=same komtra komyo koghrti}
+{rank=same cohorsL coL contrataL contrariusL}
+{rank=same contrarieAN contreOF contreeOF}
+geOE -> {genogOE handgeweorc} [sametail=1]
+}

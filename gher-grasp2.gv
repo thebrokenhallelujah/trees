@@ -1,0 +1,110 @@
+strict digraph {
+/* sources: roots AHD ?? */
+node [shape=none]
+
+gher [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">gher-</font><font point-size="16">to grasp, enclose</font>> shape=box style="dashed,rounded" URL="gher-grasp0.svg" tooltip="Indo-European \"gher-\" to grasp, enclose"]
+
+gher -> { ghoro koghrti } [sametail=1]
+ghoro [label=<<font color="red">ghor-o-</font>>]
+koghrti [label=<<font color="red">ko(m)-ghr̥-ti-</font>>]
+
+/* L cohors */
+/* omitted: curtesy, curtilage (legal terms) */
+cohorsL [label=<<b>Latin</b><br/><font color="red">cohors, cohort-</font><br/><font point-size="12">enclosed yard,<br/>company of soldiers,<br/>multitude</font>>]
+koghrti -> cohorsL [sametail=1 samehead=1]
+/* kom- */
+komIE [label=<<b>Indo-<br/>European</b><br/><font color="red">kom</font><br/><font point-size="12">beside, near, with</font>> shape=box style="dashed,rounded" URL="kom-with.svg"]
+{ komIE gher } -> koghrti [samehead=1]
+cohorteOF [label=<<b>Old French</b><br/><font color="red">cohorte</font>>]
+cohortME [label=<<b>Middle<br/>English</b><br/><font color="red">cohort</font>>]
+cohort [label=<<b>Modern<br/>English</b><br/><font color="red">cohort</font>>]
+cohorsL -> cohorteOF [sametail=1]
+cohorteOF -> cohortME [style=dashed]
+cohortME -> cohort
+/* court- */
+cortOF [label=<<b>Old French</b><br/><font color="red">cort</font>>]
+courtME [label=<<b>Middle<br/>English</b><br/><font color="red">court</font>>]
+court [label=<<b>Modern<br/>English</b><br/><font color="red">court</font>>]
+cohorsL -> cortOF [sametail=1]
+cortOF -> courtME [sametail=1 style=dashed]
+courtME -> court
+corteOI [label=<<b>Old Italian</b><br/><font color="red">corte</font>>]
+cortigianaOI [label=<<font color="red">cortigiano<br/>cortigiana</font><br/><font point-size="12">courtier</font>>]
+courtisaneOF [label=<<b>Old French</b><br/><font color="red">courtisane</font>>]
+courtisaneF [label=<<b>French</b><br/><font color="red">courtisane</font>>]
+courtesan [label=<<b>Modern<br/>English</b><br/><font color="red">courtisan</font>>]
+cohorsL -> corteOI [sametail=1]
+corteOI -> cortigianaOI
+cortigianaOI -> courtisaneOF [style=dashed]
+courtisaneOF -> courtisaneF
+courtisaneF -> courtesan [style=dashed]
+cortoierOF [label=<<b>Old French</b><br/><font color="red">cortoier</font><br/><font point-size="12">to be at a<br/>royal court</font>>]
+courteourAN [label=<<b>Anglo-Norman</b><br/><font color="red">courteour</font>>]
+courteourME [label=<<b>Middle<br/>English</b><br/><font color="red">courteour</font>>]
+courtier [label=<<b>Modern<br/>English</b><br/><font color="red">courtier</font>>]
+cortOF -> cortoierOF [sametail=1]
+cortoierOF -> courteourAN
+courteourAN -> courteourME [style=dashed]
+courteourME -> courtier
+corteisOF [label=<<b>Old French</b><br/><font color="red">corteis</font><br/><font point-size="12">courtly</font>>]
+corteisME [label=<<b>Middle<br/>English</b><br/><font color="red">corteis</font>>]
+courteous [label=<<b>Modern<br/>English</b><br/><font color="red">courteous</font>>] 
+cortOF -> corteisOF [sametail=1]
+corteisOF -> corteisME  [sametail=1 style=dashed]
+corteisME -> courteous
+courtesieOF[label=<<b>Old French</b><br/><font color="red">courtesie</font>>]
+courtesieME [label=<<b>Middle<br/>English</b><br/><font color="red">courtesie</font>>]
+courtesy [label=<<b>Modern<br/>English</b><br/><font color="red">courtesy<br/>curtsy/curtsey</font>>]
+corteisOF -> courtesieOF [sametail=1]
+courtesieOF -> courtesieME [style=dashed]
+courtesieME -> courtesy
+
+
+/* G khoros */
+/* omitted: chorister, -chore/-chory (botany), choragus, choric, choriamb, chorine, choripetalous (bot.), chorography (mapping) */
+khorosG [label=<<b>Greek</b><br/><font color="red">khoros</font><br/><font point-size="12">dancing ground, dance,<br/>dramatic chorus</font>>]
+chorusL [label=<<b>Latin</b><br/><font color="red">chorus</font>>]
+chorus [label=<<b>Modern<br/>English</b><br/><font color="red">chorus</font>>]
+ghoro -> khorosG
+khorosG -> chorusL [sametail=1 style=dashed]
+chorusL -> chorus [sametail=1 style=dashed]
+choralisL [label=<<font color="red">chorālis</font>>] // Med. Lat.
+choral [label=<<b>Modern<br/>English</b><br/><font color="red">choral</font>>]
+chorusL -> choralisL [sametail=1]
+choralisL -> choral [style=dashed sametail=1]
+cantuschoralis [label=<<font color="red">cantus chorālis</font><br/><font point-size="12">choral song</font>>]
+choralgesang [label=<<b>German</b><br/><font color="red">Choralgesang<br/>Choral</font>>]
+chorale [label=<<b>Modern<br/>English</b><br/><font color="red">chorale</font>>]
+choralisL -> cantuschoralis [sametail=1]
+cantuschoralis -> choralgesang [style=dashed] // partial translation
+choralgesang -> chorale [style=dashed]
+cuerOF [label=<<b>Old French</b><br/><font color="red">cuer</font>>] // < Med.Lat. chorus
+querME [label=<<b>Middle<br/>English</b><br/><font color="red">quer<br/>quire</font>>]
+choir [label=<<b>Modern<br/>English</b><br/><font color="red">choir</font>>]
+chorusL -> cuerOF [sametail=1]
+cuerOF -> querME [style=dashed]
+querME -> choir
+/* G khoreia */
+khoreiaG [label=<<font color="red">khoreia</font><br/><font point-size="12">choral dance</font>>]
+choreaL [label=<<b>Latin</b><br/><font color="red">chorēa</font>>]
+choreaNL [label=<<b>New Latin</b><br/><font color="red">chorēa (Sānctī Vitī)</font><br/><font point-size="12">(St. Vitus') dance</font>>]
+chorea [label=<<b>Modern<br/>English</b><br/><font color="red">chorea</font><br/><font point-size="12">disorder causing<br/>erratic movements</font>>]
+khorosG -> khoreiaG [sametail=1]
+khoreiaG -> choreaL [style=dashed sametail=1]
+choreaL -> choreaNL
+choreaNL -> chorea [style=dashed]
+choregraphieF [label=<<b>French</b><br/><font color="red">chorégraphy</font>>]
+choreography [label=<<b>Modern<br/>English</b><br/><font color="red">choreography</font>>]
+khoreiaG -> choregraphieF [style=dashed sametail=1]
+choregraphieF -> choreography [style=dashed]
+/* hora */
+horaT [label=<<font color="green"><b>Turkish</b></font><br/><font color="red">hora</font>>]
+horaR [label=<<b>Romanian</b><br/><font color="red">horă</font>>]
+horaH [label=<<font color="green"><b>Modern Hebrew</b></font><br/><font color="red">hōrâ</font>>]
+hora [label=<<b>Modern<br/>English</b><br/><font color="red">hora</font>>]
+khorosG -> horaT [style=dashed sametail=1]
+horaT -> horaR -> horaH -> hora [style=dashed]
+
+
+{ rank=sink cohort court courtesan courtier courteous courtesy chorus choral chorale choir chorea choreography hora }
+}

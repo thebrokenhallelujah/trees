@@ -1,0 +1,120 @@
+strict digraph {
+/* sources: roots AHD ?? */
+node [shape=none]
+
+gher [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">gher-</font><font point-size="16">to grasp, enclose</font>> shape=box style="dashed,rounded" URL="gher-grasp0.svg" tooltip="Indo-European \"gher-\" to grasp, enclose"]
+
+gher -> { ghorto ghrdh ghrdho } [sametail=1]
+ghorto [label=<<font color="red">ghor-to-, ghor-dho-</font><br/><font point-size="12">enclosure, garden,<br/>animal pen</font>>]
+ghrdh [label=<<font color="red">ghr̥-dh-</font>>]
+ghrdho [label=<<font color="red">ghr̥-dh-o-</font>>]
+
+/* Gm gardaz */
+/* yard */
+gardazGm [label=<<b>Germanic</b><br/><font color="red">gardaz</font>>]
+geardOE [label=<<b>Old English</b><br/><font color="red">geard</font><br/><font point-size="12">yard</font>>]
+yardeME [label=<<b>Middle<br/>English</b><br/><font color="red">yarde</font>>]
+yard [label=<<b>Modern<br/>English</b><br/><font color="red">yard</font>>]
+ghorto -> gardazGm [sametail=1]
+gardazGm -> geardOE [sametail=1]
+geardOE -> yardeME -> yard
+/* orchard */
+ortigardaz [label=<<font color="red">orti-gardaz</font>>]
+ortgeardOE [label=<<b>Old English</b><br/><font color="red">ortgeard</font><br/><font point-size="12">fruit garden</font>>]
+orchardME [label=<<b>Middle<br/>English</b><br/><font color="red">orchard</font>>]
+orchard [label=<<b>Modern<br/>English</b><br/><font color="red">orchard</font>>]
+gardazGm -> ortigardaz [sametail=1 samehead=1]
+hortusL -> ortigardaz [sametail=1 samehead=1 style=dashed label="?"] // hortusL below
+ortigardaz -> ortgeardOE -> orchardME -> orchard
+
+/* kindergarten */
+gartoOG [label=<<b>Old High<br/>German</b><br/><font color="red">garto</font>>]
+garteMG [label=<<b>Middle<br/>High German</b><br/><font color="red">garte</font>>]
+gartenG [label=<<b>German</b><br/><font color="red">Garten</font>>]
+genIE [label=<<b>Indo-<br/>European</b><br/><font color="red">gen-, gon-, gn̥-</font><br/><font point-size="12">to beget, give birth, be born</font>> shape=box style="dashed,rounded" URL="gen-birth1.svg"]
+kenthamGm [label=<<b>Germanic</b><br/><font color="red">kentham</font>>]
+kindOG [label=<<b>Old High<br/>German</b><br/><font color="red">kind</font><br/><font point-size="12">child</font>>]
+kintMG [label=<<b>Middle High<br/>German</b><br/><font color="red">kint</font>>]
+kindG [label=<<b>German</b><br/><font color="red">Kind</font>>]
+kindergartenG [label=<<font color="red">Kindergarten<br/>Kindergärtner</font>>]
+kindergarten [label=<<b>Modern<br/>English</b><br/><font color="red">kindergarten<br/>kindergartner</font>>]
+gardazGm -> gartoOG [sametail=1]
+gartoOG -> garteMG -> gartenG
+genIE -> kenthamGm -> kindOG -> kintMG -> kindG
+{ kindG gartenG } -> kindergartenG [samehead=1]
+kindergartenG -> kindergarten [style=dashed]
+
+/* garden */
+gardonGm [label=<<b>Germanic</b><br/><font color="red">gardon</font>>]
+gardoFk [label=<<b>Frankish</b><br/><font color="red">*gardo</font>>]
+gardoGL [label=<<b>Gallo-Latin</b><br/><font color="red">gardō, gardīnō</font>>]
+gardinOF [label=<<b>Old North<br/>French</b><br/><font color="red">gardin</font>>]
+gardinME [label=<<b>Middle<br/>English</b><br/><font color="red">gardin</font>>]
+garden [label=<<b>Modern<br/>English</b><br/><font color="red">garden</font>>]
+ghorto -> gardonGm [sametail=1]
+gardonGm -> gardoFk
+gardoFk -> gardoGL [style=dashed]
+gardoGL -> gardinOF
+gardinOF -> gardinME [style=dashed]
+gardinME -> garden
+
+/* hangar */
+haimgardazGm [label=<<font color="red">haimgardaz</font><br/><font point-size="12">"home enclosure"</font>>]
+hangardOF [label=<<b>Old French</b><br/><font color="red">hangard</font><br/><font point-size="12">shelter</font>>]
+// no Middle English?
+hangar [label=<<b>Modern<br/>English</b><br/><font color="red">hangar</font>>]
+gardazGm -> haimgardazGm [sametail=1]
+haimgardazGm -> hangardOF -> hangar [style=dashed]
+
+/* Asgard, Midgard */
+gardhrON [label=<<b>Old Norse</b><br/><font color="red">gardhr</font>>]
+asgardhr [label=<<font color="red">Āsgardhr</font><br/><font point-size="12">"zone of the gods"</font>>]
+asgard [label=<<b>Modern<br/>English</b><br/><font color="red">Asgard</font>>]
+gardazGm -> gardhrON [sametail=1]
+gardhrON -> asgardhr [sametail=1]
+asgardhr -> asgard [style=dashed]
+medhyo [label=<<b>Indo-<br/>European</b><br/><font color="red">medhyo-</font><br/><font point-size="12">middle</font>> shape=box style="dashed,rounded" URL="medhyo-middle1.svg"]
+midhgardhr [label=<<font color="red">Midhgardhr</font><br/><font point-size="12">"middle zone"</font>>]
+midgard [label=<<b>Modern<br/>English</b><br/><font color="red">Midgard</font>>]
+gardhrON -> midhgardhr [samehead=1 sametail=1]
+medhyo -> midhgardhr [samehead=1]
+midhgardhr -> midgard [style=dashed]
+
+/* horticulture */
+hortusL [label=<<b>Latin</b><br/><font color="red">hortus, ortus</font>>]
+horticulture [label=<<b>Modern<br/>English</b><br/><font color="red">horticulture</font>>]
+ghorto -> hortusL [sametail=1]
+hortusL -> horticulture [style=dashed sametail=1]
+
+/* gird/girt, girdle, girth */
+gurdjanGm [label=<<b>Germanic</b><br/><font color="red">gurdjan</font>>]
+gyrdanOE [label=<<b>Old English</b><br/><font color="red">gyrdan</font><br/><font point-size="12">to gird</font>>]
+girdenME [label=<<b>Middle<br/>English</b><br/><font color="red">girden</font>>]
+gird [label=<<b>Modern<br/>English</b><br/><font color="red">gird<br/>girt</font>>]
+ghrdh -> gurdjanGm [sametail=1]
+gurdjanGm -> gyrdanOE [sametail=1]
+gyrdanOE -> girdenME -> gird
+gyrdelOE [label=<<b>Old English</b><br/><font color="red">gyrdel</font><br/><font point-size="12">girdle</font>>]
+girdelME [label=<<b>Middle<br/>English</b><br/><font color="red">girdel</font>>]
+girdle [label=<<b>Modern<br/>English</b><br/><font color="red">girdle</font>>]
+gurdjanGm -> gyrdelOE [sametail=1]
+gyrdelOE -> girdelME -> girdle
+gjordhON [label=<<b>Old Norse</b><br/><font color="red">gjördh</font>>]
+gerthME [label=<<b>Middle<br/>English</b><br/><font color="red">gerth</font>>]
+girth [label=<<b>Modern<br/>English</b><br/><font color="red">girth</font>>]
+gurdjanGm -> gjordhON [sametail=1]
+gjordhON -> gerthME [style=dashed]
+gerthME -> girth
+
+/* gadjo */
+grhahS [label=<<b>Sanskrit</b><br/><font color="red">gṛhaḥ</font><br/><font point-size="12">home</font>>]
+gajjhaP [label=<<b>Prakrit</b><br/><font color="red">gājjha-</font><br/><font point-size="12">domestic<br/>(not itenerant)</font>>] // not a specific language
+gadjoR [label=<<b>Romani</b><br/><font color="red">gadjo</font><br/><font point-size="12">a non-Romani</font>>]
+gadjo [label=<<b>Modern<br/>English</b><br/><font color="red">gadjo</font><br/>pl.<font color="red"> gadje</font>>]
+ghrdho -> grhahS -> gajjhaP -> gadjoR
+gadjoR -> gadjo [style=dashed]
+
+
+{ rank=sink yard orchard kindergarten garden hangar asgard midgard horticulture gird girdle girth gadjo }
+{ rank=same ghorto ghrdh ghrdho genIE medhyo }
+}

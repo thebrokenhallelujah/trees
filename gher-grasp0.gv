@@ -1,0 +1,11 @@
+strict digraph {
+/* sources: roots AHD ?? */
+
+gher [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">gher-</font></td><td><font point-size="16">to grasp,<br/>enclose</font></td></tr></table>> tooltip="Indo-European \"gher-\" to grasp, enclose" shape=box peripheries=2 margin=.3]
+
+link1 [label=<<table border="0" cellpadding="5"><tr><td><font color="red">ghor-dho-</font></td></tr><tr><td><font color="red">ghr̥-dh-</font></td></tr><tr><td><font color="red">ghr̥-dh-o-</font></td></tr></table>> shape=box style="dashed,rounded" URL="gher-grasp1.svg" tooltip="ghor-dho-, ghr̥-dh-, ghr̥-dh-o-"]
+
+link2 [label=<<table border="0" cellpadding="5"><tr><td><font color="red">ghor-o-</font></td></tr><tr><td><font color="red">ko(m)-ghr̥-ti-</font></td></tr></table>> shape=box style="dashed,rounded" URL="gher-grasp2.svg" tooltip="ghor-o-, ko(m)-ghr̥-ti-"]
+
+gher -> { link1 link2 } [sametail=1]
+}
