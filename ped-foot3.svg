@@ -11,18 +11,18 @@
 <!-- ped -->
 <g id="node1" class="node">
 <title>ped</title>
-<g id="a_node1"><a xlink:href="ped-foot0.svg" xlink:title="Indo&#45;European &quot;ped&#45;&quot; foot">
+<g id="a_node1"><a xlink:href="ped-foot0.svg" xlink:title="Indo&#45;European &quot;*ped&#45;&quot; foot">
 <polygon fill="none" stroke="black" stroke-dasharray="5,2" points="697.5,-1033 486.5,-1033 486.5,-929 697.5,-929 697.5,-1033"/>
 <text text-anchor="start" x="514" y="-988.8" font-family="Times New Roman,serif" font-weight="bold" font-size="24.00">Indo&#45;European</text>
-<text text-anchor="start" x="536" y="-960.6" font-family="Times New Roman,serif" font-size="18.00" fill="red">ped&#45;</text>
-<text text-anchor="start" x="621.5" y="-961.2" font-family="Times New Roman,serif" font-size="16.00">foot</text>
+<text text-anchor="start" x="534" y="-960.6" font-family="Times New Roman,serif" font-size="18.00" fill="red">*ped&#45;</text>
+<text text-anchor="start" x="624" y="-961.2" font-family="Times New Roman,serif" font-size="16.00">foot</text>
 </a>
 </g>
 </g>
 <!-- pod -->
 <g id="node2" class="node">
 <title>pod</title>
-<text text-anchor="start" x="578" y="-870.3" font-family="Times New Roman,serif" font-size="14.00" fill="red">pod&#45;</text>
+<text text-anchor="start" x="575" y="-870.3" font-family="Times New Roman,serif" font-size="14.00" fill="red">*pod&#45;</text>
 </g>
 <!-- ped&#45;&gt;pod -->
 <g id="edge1" class="edge">
@@ -78,7 +78,7 @@
 <!-- pousG&#45;&gt;podiatry -->
 <g id="edge13" class="edge">
 <title>pousG&#45;&gt;podiatry</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M591,-723C591,-723 125,-704.38 125,-652 125,-652 125,-652 125,-159 125,-131.94 125,-101.3 125,-78.45"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M591,-723C591,-723 125,-704.38 125,-652 125,-652 125,-652 125,-159 125,-131.94 125,-101.3 125,-78.45"/>
 <polygon fill="black" stroke="black" points="128.5,-78.23 125,-68.23 121.5,-78.23 128.5,-78.23"/>
 </g>
 <!-- polupousG -->
@@ -180,7 +180,7 @@
 <!-- podionG&#45;&gt;podiumL -->
 <g id="edge4" class="edge">
 <title>podionG&#45;&gt;podiumL</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M496.47,-627.87C489.77,-608.14 479.68,-578.48 470.92,-552.7"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M496.47,-627.87C489.77,-608.14 479.68,-578.48 470.92,-552.7"/>
 <polygon fill="black" stroke="black" points="474.16,-551.37 467.63,-543.03 467.54,-553.63 474.16,-551.37"/>
 </g>
 <!-- podium -->
@@ -193,7 +193,7 @@
 <!-- podiumL&#45;&gt;podium -->
 <g id="edge5" class="edge">
 <title>podiumL&#45;&gt;podium</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M446,-454C446,-454 382,-406.77 382,-354 382,-354 382,-354 382,-159 382,-131.41 387.66,-100.64 392.95,-77.87"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M446,-454C446,-454 382,-406.77 382,-354 382,-354 382,-354 382,-159 382,-131.41 387.66,-100.64 392.95,-77.87"/>
 <polygon fill="black" stroke="black" points="396.39,-78.56 395.34,-68.02 389.58,-76.91 396.39,-78.56"/>
 </g>
 <!-- puieOF -->
@@ -220,7 +220,7 @@
 <!-- podiumL&#45;&gt;pode -->
 <g id="edge12" class="edge">
 <title>podiumL&#45;&gt;pode</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M446,-454C446,-454 524,-410.37 524,-354 524,-354 524,-354 524,-159 524,-129.7 549.34,-102.03 562.4,-89.71"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M446,-454C446,-454 524,-410.37 524,-354 524,-354 524,-354 524,-159 524,-129.7 549.34,-102.03 562.4,-89.71"/>
 <polygon fill="black" stroke="black" points="564.82,-92.24 570,-83 560.19,-86.99 564.82,-92.24"/>
 </g>
 <!-- appodiareL -->
@@ -245,7 +245,7 @@
 <!-- puieOF&#45;&gt;peweME -->
 <g id="edge7" class="edge">
 <title>puieOF&#45;&gt;peweME</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M453.94,-254.66C454.79,-238.84 456.08,-215.01 457.14,-195.35"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M453.94,-254.66C454.79,-238.84 456.08,-215.01 457.14,-195.35"/>
 <polygon fill="black" stroke="black" points="460.65,-195.4 457.69,-185.22 453.66,-195.02 460.65,-195.4"/>
 <text text-anchor="middle" x="459.5" y="-218.8" font-family="Times New Roman,serif" font-size="14.00">?</text>
 </g>
@@ -271,13 +271,13 @@
 <!-- podaG&#45;&gt;podaL -->
 <g id="edge10" class="edge">
 <title>podaG&#45;&gt;podaL</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M592,-560.78C592,-510.31 592,-362.39 592,-301.09"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M592,-560.78C592,-510.31 592,-362.39 592,-301.09"/>
 <polygon fill="black" stroke="black" points="595.5,-301.03 592,-291.03 588.5,-301.03 595.5,-301.03"/>
 </g>
 <!-- podaL&#45;&gt;pode -->
 <g id="edge11" class="edge">
 <title>podaL&#45;&gt;pode</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M590.01,-254.89C585.52,-216.37 574.75,-123.77 571.17,-93.07"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M590.01,-254.89C585.52,-216.37 574.75,-123.77 571.17,-93.07"/>
 <polygon fill="black" stroke="black" points="574.63,-92.53 570,-83 567.68,-93.34 574.63,-92.53"/>
 </g>
 <!-- polypusL -->
@@ -291,7 +291,7 @@
 <!-- polupousG&#45;&gt;polypusL -->
 <g id="edge15" class="edge">
 <title>polupousG&#45;&gt;polypusL</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M321.49,-619.65C300.55,-595.67 271.26,-562.13 249.02,-536.66"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M321.49,-619.65C300.55,-595.67 271.26,-562.13 249.02,-536.66"/>
 <polygon fill="black" stroke="black" points="251.57,-534.27 242.36,-529.04 246.3,-538.87 251.57,-534.27"/>
 </g>
 <!-- polipeOF -->
@@ -316,7 +316,7 @@
 <!-- polipeOF&#45;&gt;polipME -->
 <g id="edge17" class="edge">
 <title>polipeOF&#45;&gt;polipME</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M208,-254.66C208,-238.84 208,-215.01 208,-195.35"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M208,-254.66C208,-238.84 208,-215.01 208,-195.35"/>
 <polygon fill="black" stroke="black" points="211.5,-195.22 208,-185.22 204.5,-195.22 211.5,-195.22"/>
 </g>
 <!-- polyp -->
@@ -342,7 +342,7 @@
 <!-- oktopousG&#45;&gt;octopusL -->
 <g id="edge22" class="edge">
 <title>oktopousG&#45;&gt;octopusL</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M669.76,-619.87C673.81,-550.77 683.72,-381.27 687.99,-308.31"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M669.76,-619.87C673.81,-550.77 683.72,-381.27 687.99,-308.31"/>
 <polygon fill="black" stroke="black" points="691.49,-308.46 688.58,-298.27 684.5,-308.05 691.49,-308.46"/>
 </g>
 <!-- octopus -->
@@ -356,17 +356,17 @@
 <!-- octopusL&#45;&gt;octopus -->
 <g id="edge23" class="edge">
 <title>octopusL&#45;&gt;octopus</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M689.89,-247.6C689.72,-208.83 689.39,-132.71 689.18,-85.33"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M689.89,-247.6C689.72,-208.83 689.39,-132.71 689.18,-85.33"/>
 <polygon fill="black" stroke="black" points="692.68,-85.08 689.14,-75.1 685.68,-85.11 692.68,-85.08"/>
 </g>
 <!-- oktoIE -->
 <g id="node22" class="node">
 <title>oktoIE</title>
-<g id="a_node22"><a xlink:href="okto-eight.svg" xlink:title="&lt;b&gt;Indo&#45;&lt;br/&gt;European&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;red&quot;&gt;oktō(u)&lt;/font&gt;&lt;br/&gt;&lt;font point&#45;size=&quot;12&quot;&gt;eight&lt;/font&gt;">
+<g id="a_node22"><a xlink:href="okto-eight.svg" xlink:title="&lt;b&gt;Indo&#45;&lt;br/&gt;European&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;red&quot;&gt;*oktō(u)&lt;/font&gt;&lt;br/&gt;&lt;font point&#45;size=&quot;12&quot;&gt;eight&lt;/font&gt;">
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M783.5,-1012C783.5,-1012 730.5,-1012 730.5,-1012 724.5,-1012 718.5,-1006 718.5,-1000 718.5,-1000 718.5,-962 718.5,-962 718.5,-956 724.5,-950 730.5,-950 730.5,-950 783.5,-950 783.5,-950 789.5,-950 795.5,-956 795.5,-962 795.5,-962 795.5,-1000 795.5,-1000 795.5,-1006 789.5,-1012 783.5,-1012"/>
 <text text-anchor="start" x="740.5" y="-997.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Indo&#45;</text>
 <text text-anchor="start" x="726.5" y="-983.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">European</text>
-<text text-anchor="start" x="736" y="-969.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">oktō(u)</text>
+<text text-anchor="start" x="732.5" y="-969.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">*oktō(u)</text>
 <text text-anchor="start" x="746" y="-957.4" font-family="Times New Roman,serif" font-size="12.00">eight</text>
 </a>
 </g>
@@ -398,7 +398,7 @@
 <!-- platupousG&#45;&gt;platypusL -->
 <g id="edge25" class="edge">
 <title>platupousG&#45;&gt;platypusL</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M755.53,-388.9C762.39,-364.62 773.17,-326.47 780.41,-300.86"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M755.53,-388.9C762.39,-364.62 773.17,-326.47 780.41,-300.86"/>
 <polygon fill="black" stroke="black" points="783.83,-301.64 783.18,-291.06 777.09,-299.74 783.83,-301.64"/>
 </g>
 <!-- platypus -->
@@ -411,7 +411,7 @@
 <!-- platypusL&#45;&gt;platypus -->
 <g id="edge26" class="edge">
 <title>platypusL&#45;&gt;platypus</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M786.8,-254.86C784.17,-217.43 777.88,-127.75 774.4,-78.25"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M786.8,-254.86C784.17,-217.43 777.88,-127.75 774.4,-78.25"/>
 <polygon fill="black" stroke="black" points="777.88,-77.77 773.69,-68.04 770.9,-78.26 777.88,-77.77"/>
 </g>
 <!-- oedipusL -->
@@ -423,7 +423,7 @@
 <!-- oidipousG&#45;&gt;oedipusL -->
 <g id="edge28" class="edge">
 <title>oidipousG&#45;&gt;oedipusL</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M46,-614.83C46,-588.13 46,-551.94 46,-527.37"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M46,-614.83C46,-588.13 46,-551.94 46,-527.37"/>
 <polygon fill="black" stroke="black" points="49.5,-527.3 46,-517.3 42.5,-527.3 49.5,-527.3"/>
 </g>
 <!-- oedipus -->
@@ -436,7 +436,7 @@
 <!-- oedipusL&#45;&gt;oedipus -->
 <g id="edge29" class="edge">
 <title>oedipusL&#45;&gt;oedipus</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M45.21,-480.71C44.04,-453.69 42,-399.77 42,-354 42,-354 42,-354 42,-159 42,-131.94 42,-101.3 42,-78.45"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M45.21,-480.71C44.04,-453.69 42,-399.77 42,-354 42,-354 42,-354 42,-159 42,-131.94 42,-101.3 42,-78.45"/>
 <polygon fill="black" stroke="black" points="45.5,-78.23 42,-68.23 38.5,-78.23 45.5,-78.23"/>
 </g>
 <!-- antipodesL -->
@@ -448,7 +448,7 @@
 <!-- antipodesG&#45;&gt;antipodesL -->
 <g id="edge33" class="edge">
 <title>antipodesG&#45;&gt;antipodesL</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M854.4,-619.65C854.76,-592.68 855.29,-553.61 855.63,-527.53"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M854.4,-619.65C854.76,-592.68 855.29,-553.61 855.63,-527.53"/>
 <polygon fill="black" stroke="black" points="859.14,-527.27 855.77,-517.23 852.14,-527.18 859.14,-527.27"/>
 </g>
 <!-- antipodesME -->
@@ -463,7 +463,7 @@
 <!-- antipodesL&#45;&gt;antipodesME -->
 <g id="edge34" class="edge">
 <title>antipodesL&#45;&gt;antipodesME</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M856.41,-480.82C857.6,-430.67 861.1,-283.2 862.9,-207.3"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M856.41,-480.82C857.6,-430.67 861.1,-283.2 862.9,-207.3"/>
 <polygon fill="black" stroke="black" points="866.41,-207.16 863.14,-197.08 859.41,-207 866.41,-207.16"/>
 </g>
 <!-- antipodes -->
@@ -485,11 +485,11 @@
 <!-- antIE -->
 <g id="node34" class="node">
 <title>antIE</title>
-<g id="a_node34"><a xlink:href="ant-front.svg" xlink:title="&lt;b&gt;Indo&#45;&lt;br/&gt;European&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;red&quot;&gt;ant&#45;&lt;/font&gt;&lt;br/&gt;&lt;font point&#45;size=&quot;12&quot;&gt;front&lt;/font&gt;">
+<g id="a_node34"><a xlink:href="ant-front.svg" xlink:title="&lt;b&gt;Indo&#45;&lt;br/&gt;European&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;red&quot;&gt;*ant&#45;&lt;/font&gt;&lt;br/&gt;&lt;font point&#45;size=&quot;12&quot;&gt;front&lt;/font&gt;">
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M880.5,-1012C880.5,-1012 827.5,-1012 827.5,-1012 821.5,-1012 815.5,-1006 815.5,-1000 815.5,-1000 815.5,-962 815.5,-962 815.5,-956 821.5,-950 827.5,-950 827.5,-950 880.5,-950 880.5,-950 886.5,-950 892.5,-956 892.5,-962 892.5,-962 892.5,-1000 892.5,-1000 892.5,-1006 886.5,-1012 880.5,-1012"/>
 <text text-anchor="start" x="837.5" y="-997.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Indo&#45;</text>
 <text text-anchor="start" x="823.5" y="-983.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">European</text>
-<text text-anchor="start" x="843" y="-969.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">ant&#45;</text>
+<text text-anchor="start" x="840" y="-969.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">*ant&#45;</text>
 <text text-anchor="start" x="843" y="-957.4" font-family="Times New Roman,serif" font-size="12.00">front</text>
 </a>
 </g>
@@ -562,7 +562,7 @@
 <!-- appoggiaturaI&#45;&gt;appoggiatura -->
 <g id="edge40" class="edge">
 <title>appoggiaturaI&#45;&gt;appoggiatura</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M308.39,-141.53C307.92,-127.92 307.24,-108.36 306.61,-90.33"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M308.39,-141.53C307.92,-127.92 307.24,-108.36 306.61,-90.33"/>
 <polygon fill="black" stroke="black" points="310.11,-90.1 306.26,-80.23 303.11,-90.34 310.11,-90.1"/>
 </g>
 <!-- apusL -->
@@ -575,7 +575,7 @@
 <!-- apousG&#45;&gt;apusL -->
 <g id="edge42" class="edge">
 <title>apousG&#45;&gt;apusL</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M970,-620.72C970,-595.69 970,-559.68 970,-533.51"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M970,-620.72C970,-595.69 970,-559.68 970,-533.51"/>
 <polygon fill="black" stroke="black" points="973.5,-533.3 970,-523.3 966.5,-533.3 973.5,-533.3"/>
 </g>
 <!-- apus -->
@@ -591,17 +591,17 @@
 <!-- apusL&#45;&gt;apus -->
 <g id="edge43" class="edge">
 <title>apusL&#45;&gt;apus</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M970,-474.81C970,-446.35 970,-396.62 970,-354 970,-354 970,-354 970,-159 970,-138.43 970,-115.79 970,-96.07"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M970,-474.81C970,-446.35 970,-396.62 970,-354 970,-354 970,-354 970,-159 970,-138.43 970,-115.79 970,-96.07"/>
 <polygon fill="black" stroke="black" points="973.5,-96.06 970,-86.06 966.5,-96.06 973.5,-96.06"/>
 </g>
 <!-- neIE -->
 <g id="node44" class="node">
 <title>neIE</title>
-<g id="a_node44"><a xlink:href="ne-not.svg" xlink:title="&lt;b&gt;Indo&#45;&lt;br/&gt;European&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;red&quot;&gt;ne&lt;/font&gt;&lt;br/&gt;&lt;font point&#45;size=&quot;12&quot;&gt;not&lt;/font&gt;">
+<g id="a_node44"><a xlink:href="ne-not3.svg" xlink:title="&lt;b&gt;Indo&#45;&lt;br/&gt;European&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;red&quot;&gt;*ne&lt;/font&gt;&lt;br/&gt;&lt;font point&#45;size=&quot;12&quot;&gt;not&lt;/font&gt;">
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M996.5,-1012C996.5,-1012 943.5,-1012 943.5,-1012 937.5,-1012 931.5,-1006 931.5,-1000 931.5,-1000 931.5,-962 931.5,-962 931.5,-956 937.5,-950 943.5,-950 943.5,-950 996.5,-950 996.5,-950 1002.5,-950 1008.5,-956 1008.5,-962 1008.5,-962 1008.5,-1000 1008.5,-1000 1008.5,-1006 1002.5,-1012 996.5,-1012"/>
 <text text-anchor="start" x="953.5" y="-997.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">Indo&#45;</text>
 <text text-anchor="start" x="939.5" y="-983.8" font-family="Times New Roman,serif" font-weight="bold" font-size="14.00">European</text>
-<text text-anchor="start" x="963.5" y="-969.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">ne</text>
+<text text-anchor="start" x="960" y="-969.8" font-family="Times New Roman,serif" font-size="14.00" fill="red">*ne</text>
 <text text-anchor="start" x="962.5" y="-957.4" font-family="Times New Roman,serif" font-size="12.00">not</text>
 </a>
 </g>

@@ -1,0 +1,65 @@
+strict digraph {
+    node [shape=plaintext]
+    ors [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">ors-</font></td><td><font point-size="16">buttocks,<br/>backside</font></td></tr></table>> tooltip="Indo-European \"ors-\" buttocks, backside" shape=box peripheries=2 margin=.3]
+    ors -> { orso orsa } [sametail=1 minlen=2]
+    orso [label=<<font color="red">ors-o-</font>>]
+    orsa [label=<<font color="red">ors-ā-</font>>]
+    orso -> arsazGm
+	arsazGm -> { earsOE aersMD } [sametail=1]
+    arsazGm [label=<<b>Germanic</b><br/><font color="red">arsaz</font>>]
+    /* ass, arse omitted: wheatear */
+    earsOE [label=<<b>Old English</b><br/><font color="red">ærs, ears</font>>]
+    earsOE -> arsME -> ass
+    arsME [label=<<b>Middle<br/>English</b><br/><font color="red">ars</font>>]
+    ass [label=<<b>Modern<br/>English</b><br/><font color="red">ass<br/>arse</font>>]
+    /* dodo */
+    aersMD -> orsD
+    { dotD orsD } -> dodorsD [samehead=1] // want dot left of ors
+	orsD -> ass [style=invis]
+    dodorsD -> dodoP -> dodo [style=dashed]
+    aersMD [label=<<b>Middle Dutch</b><br/><font color="red">ærs</font><br/><font point-size="12">backside, tail</font>>]
+    dotD [label=<<b>Dutch</b><br/><font color="red">dot</font><br/><font point-size="12">tuft of feathers</font>>]
+    orsD [label=<<b>Dutch</b><br/><font color="red">ors</font><br/><font point-size="12">tail (obsolete)</font>>]
+    dodorsD [label=<<font color="red">dodors</font>>]
+    dodoP [label=<<b>Portuguese</b><br/><font color="red">dodó</font>>]
+    dodo [label=<<b>Modern<br/>English</b><br/><font color="red">dodo</font>>]
+    /* ors-a- omitted: anthurium, anuran, coenurus, dasyure, eremurus, oxyuriasis, silurid - all from taxonomy */
+	
+    orsa -> ouraG
+    ouraG [label=<<b>Greek</b><br/><font color="red">ourā</font><br/><font point-size="12">tail</font>>]
+    /* squirrel */
+    skia -> skiourosG [samehead=1]
+    ouraG -> skiourosG [samehead=1 sametail=1]
+    skia [label=<<b>Greek</b><br/><font color="red">skiā</font><br/><font point-size="12">shadow</font>>]
+    skiourosG [label=<<font color="red">skiouros</font><br/><font point-size="12">squirrel</font>>]
+    skiourosG -> sciurusL [style=dashed]
+    sciurusL [label=<<b>Latin</b><br/><font color="red">sciūrus, scūrius</font>>]
+    sciurusL -> scuriolusL -> esquirelAN
+    scuriolusL [label=<<font color="red">scūriolus</font>>]
+    esquirelAN [label=<<b>Anglo-Norman</b><br/><font color="red">esquirel</font>>]
+    esquirelAN -> squirelME [style=dashed]
+    squirelME -> squirrel
+    squirelME [label=<<b>Middle English</b><br/><font color="red">squirel</font>>]
+    squirrel [label=<<b>Modern<br/>English</b><br/><font color="red">squirrel</font>>]
+    /* cynosure */
+    kuon [label=<<b>Indo-<br/>European</b><br/><font color="red">kuōn</font><br/><font point-size="12">dog</font>> shape=box style="dashed,rounded" URL="kwon-dog1.svg"] //see kwon-dog1
+	kuon -> kunos
+	kunos [label=<<font color="red">kunos</font><br/><font point-size="12">dog's</font>>]
+    kunosouraG [label=<<font color="red">kunosoura</font><br/><font point-size="12">Ursa Minor</font>>] // no macrons on this one (?)
+	kunos -> kunosouraG [samehead=1]
+	ouraG -> kunosouraG [sametail=1 samehead=1]
+    kunosouraG -> cynosuraL [style=dashed]
+    cynosuraL [label=<<b>Latin</b><br/><font color="red">cynosūra</font>>]
+    cynosuraL -> cynosureF
+    cynosureF [label=<<b>French</b><br/><font color="red">cynosure</font>>] // want this farther right
+    cynosureF -> cynosure [style=dashed]
+    cynosure [label=<<b>Modern<br/>English</b><br/><font color="red">cynosure</font>>]
+    /* because Ursa Minor contains the North Star does French cynosure also mean cynosure or just Ursa Minor? */
+    ouraG -> ouroG [sametail=1]
+    ouroG -> uroNL -> uroE [style=dashed]
+    ouroG [label=<<font color="red">ouro-</font>>]
+    uroNL [label=<<b>New Latin</b><br/><font color="red">uro-</font>>]
+    uroE [label=<<b>Modern<br/>English</b><br/><font color="red">uro-<br/>-urous</font>>]
+    // urochord, urochordate, urodele, uropod, uropygial gland, uropygiium
+    { rank=same ass dodo squirrel cynosure uroE }
+}

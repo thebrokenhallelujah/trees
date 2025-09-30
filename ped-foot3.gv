@@ -1,0 +1,121 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+ped [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ped-</font></td><td><font point-size="16">foot</font></td></tr></table>> tooltip="Indo-European \"*ped-\" foot" shape=rect style=dashed peripheries=1 margin=.3 URL="ped-foot0.svg"]
+pod [label=<<font color="red">*pod-</font>>]
+ped -> pod
+
+/* G pous; omitted: podagra (gout), podite, polypod, sympodium (botany), lycopodium (plant, see also wlkwo), monopodium (botany), apodal, pelecypod (mollusk, "ax foot"), phalarope (wading bird), podophyllin (resin), xenopus (frog), rhizopus (fungus) */
+
+/* podium, pew */
+pousG [label=<<b>Greek</b><br/><font color="red">pous, pod-</font><br/><font point-size="12">foot</font>>]
+podionG [label=<<font color="red">podion</font><br/><font point-size="12">(diminutive)<br/>base</font>>]
+podiumL [label=<<b>Latin</b><br/><font color="red">podium<br/>-podium<br/>podia</font> (pl)<br/><font point-size="12">base, balcony,<br/>support</font>>]
+podium [label=<<b>Modern<br/>English</b><br/><font color="red">podium</font>>]
+puieOF [label=<<b>Old French</b><br/><font color="red">puie</font>>]
+peweME [label=<<b>Middle<br/>English</b><br/><font color="red">pewe</font>>]
+pew [label=<<b>Modern<br/>English</b><br/><font color="red">pew</font>>]
+pod -> pousG
+pousG -> podionG [sametail=1]
+podionG -> podiumL [style=dashed sametail=1]
+podiumL -> podium [style=dashed sametail=1]
+podiumL -> puieOF [sametail=1]
+puieOF -> peweME [style=dashed label="?"] // "prob."
+peweME -> pew
+
+/* -pod, -pode, -podous */
+podaG [label=<<font color="red">poda</font><br/><font point-size="12">(plural)</font>>]
+podaL [label=<<b>New Latin</b><br/><font color="red">-poda</font>>]
+pode [label=<<b>Modern<br/>English</b><br/><font color="red">-pod<br/>-pode<br/>-podous</font>>]
+pousG -> podaG [sametail=1]
+podaG -> podaL [style=dashed]
+podaL -> pode [style=dashed samehead=1]
+podiumL -> pode [style=dashed sametail=1 samehead=1]
+
+/* podiatry */
+podiatry  [label=<<b>Modern<br/>English</b><br/><font color="red">podiatry</font>>]
+// -iatry < G iatreia < iatros < iasthai "to heal"
+pousG -> podiatry [style=dashed sametail=1]
+
+/* polyp */
+polupousG [label=<<b>Greek</b><br/><font color="red">polupous<br/>poulupous</font><br/><font point-size="12">"many-footed"</font>>] // also cuttlefish or nasal tumor?
+polypusL [label=<<b>Latin</b><br/><font color="red">pōlypus</font><br/><font point-size="12">cuttlefish,<br/>nasal tumor</font>>]
+polipeOF [label=<<b>Old French</b><br/><font color="red">polipe</font>>]
+polipME [label=<<b>Middle<br/>English</b><br/><font color="red">polip</font>>] // only meant nasal tumor
+polyp [label=<<b>Modern<br/>English</b><br/><font color="red">polyp</font>>] // still means nasal tumor, also a kind of animal
+pousG -> polupousG [sametail=1]
+polupousG -> polypusL [style=dashed]
+polypusL -> polipeOF
+polipeOF -> polipME [style=dashed]
+polipME -> polyp
+
+/* octopus, octopod */
+oktopousG [label=<<b>Greek</b><br/><font color="red">oktōpous<br/>oktōpoda</font><br/><font point-size="12">eight-footed</font>>]
+octopusL  [label=<<b>New Latin</b><br/><font color="red">Octōpūs<br/>Oktōpoda</font>>] // genus and order names
+octopus [label=<<b>Modern<br/>English</b><br/><font color="red">octopus<br/>octopod</font>>]
+oktoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*oktō(u)</font><br/><font point-size="12">eight</font>> shape=box style="dashed,rounded" URL="okto-eight.svg"]
+oktoG [label=<<b>Greek</b><br/><font color="red">oktō</font>>]
+oktoIE -> oktoG
+oktoG -> oktopousG [samehead=1]
+pousG -> oktopousG [sametail=1 samehead=1]
+oktopousG -> octopusL -> octopus [style=dashed]
+
+/* platypus */
+platupousG [label=<<b>Greek</b><br/><font color="red">platupous</font><br/><font point-size="12">"flat-footed"</font>>]
+platypusL [label=<<b>New Latin</b><br/><font color="red">Platypūs</font>>] // former genus name
+platypus [label=<<b>Modern<br/>English</b><br/><font color="red">platypus</font>>]
+pousG -> platupousG [sametail=1]
+platupousG -> platypusL -> platypus [style=dashed]
+
+/* Oedipus */
+oidipousG [label=<<b>Greek</b><br/><font color="red">Oidipous</font><br/><font point-size="12">"swollen-footed"<br/>(because of his<br/>injured feet)</font>>] // add story?
+oedipusL [label=<<b>Latin</b><br/><font color="red">Oedipus</font>>]
+oedipus [label=<<b>Modern<br/>English</b><br/><font color="red">Oedipus</font>>]
+pousG -> oidipousG [sametail=1]
+oidipousG -> oedipusL -> oedipus [style=dashed]
+
+/* antipodes */
+antipodesG [label=<<b>Greek</b><br/><font color="red">antipous<br/>antipodes</font> (pl)<br/><font point-size="12">"with the feet opposite"</font>>]
+antipodesL [label=<<b>Latin</b><br/><font color="red">antipodes</font>>]
+antipodesME [label=<<b>Middle<br/>English</b><br/><font color="red">antipodes</font><br/><font point-size="12">"people with feet<br/>opposite ours"</font>>] // did this mean peoep
+antipodes [label=<<b>Modern<br/>English</b><br/><font color="red">antipodes</font><br/><font point-size="12">diametrically<br/>opposite places<br/>on the earth</font>>]
+antIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ant-</font><br/><font point-size="12">front</font>> shape=box style="dashed,rounded" URL="ant-front.svg"]
+antiG [label=<<b>Greek</b><br/><font color="red">anti-</font><br/><font point-size="12">against</font>>]
+antIE -> antiG
+antiG -> antipodesG [samehead=1]
+pousG -> antipodesG [samehead=1 sametail=1]
+antipodesG -> antipodesL -> antipodesME [style=dashed]
+antipodesME -> antipodes
+
+/* appoggiatura */
+appodiareL [label=<<font color="red">appodiāre</font><br/><font point-size="12">to lean on</font>>] // Vulgar
+adL [label=<<b>Latin</b><br/><font color="red">ad-</font><br/><font point-size="12">to, toward</font>>]
+appoggiatoI [label=<<b>Italian</b><br/><font color="red">appoggiare<br/>appoggiato</font>>]
+appoggiaturaI [label=<<font color="red">appoggiatura</font>>]
+appoggiatura [label=<<b>Modern<br/>English</b><br/><font color="red">appoggiatura</font><br/><font point-size="12">(music) an<br/>embellishing note</font>>]
+adL -> appodiareL [samehead=1]
+podiumL -> appodiareL [samehead=1 sametail=1]
+appodiareL -> appoggiatoI -> appoggiaturaI
+appoggiaturaI -> appoggiatura [style=dashed]
+
+/* Apus (constellation) */
+apousG [label=<<b>Greek</b><br/><font color="red">apous</font><br/><font point-size="12">without feet,<br/>sand martin</font>>]
+apusL [label=<<b>Latin</b><br/><font color="red">apūs</font><br/><font point-size="12">a kind of swallow</font>>]
+apus [label=<<b>Modern<br/>English</b><br/><font color="red">Apus</font><br/><font point-size="12">a constellation<br/>in the Southern<br/>Hemisphere</font>>]
+neIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ne</font><br/><font point-size="12">not</font>> shape=box style="dashed,rounded" URL="ne-not3.svg"]
+anG [label=<<b>Greek</b><br/><font color="red">a-, an-</font>>]
+pousG -> apousG [samehead=1 sametail=1]
+apousG -> apusL -> apus [style=dashed]
+neIE -> anG
+anG -> apousG [samehead=1]
+
+
+{ rank=same podium pew pode podiatry polyp octopus platypus oedipus antipodes appoggiatura apus }
+{ rank=same ped oktoIE antIE neIE }
+apousG -> apusL [weight=2]
+oidipousG -> oedipusL [weight=2]
+appoggiatoI -> appoggiaturaI [weight=5]
+{ rank=same peweME polipME antipodesME appoggiaturaI }
+{ rank=same podaL octopusL platypusL appoggiatoI polipeOF puieOF }
+{ rank=same oedipusL polypusL podiumL adL apusL antipodesL }
+}

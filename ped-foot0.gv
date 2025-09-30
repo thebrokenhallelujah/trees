@@ -1,0 +1,15 @@
+strict digraph {
+/* sources: AHD my? */
+node [shape=box]
+ped [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ped-</font></td><td><font point-size="16">foot</font></td></tr></table>> tooltip="Indo-European \"*ped-\" foot"  peripheries=2 margin=.3]
+
+link1 [label=<<table border="0" cellpadding="5"><tr><td><font color="red">*pōd-</font></td></tr><tr><td><font color="red">*ped-ero-</font></td></tr><tr><td><font color="red">*ped-el-</font></td></tr><tr><td><font color="red">*ped-</font><br/><font point-size="10">to walk,<br/>stumble, fall</font></td></tr></table>> style="dashed,rounded" URL="ped-foot1.svg" tooltip="*pōd-, *ped-ero-, *ped-el-, *ped- (verb)"]
+
+link2 [label=<<table border="0" cellpadding="5"><tr><td><font color="red">*ped-</font></td></tr><tr><td><font color="red">*ped-yo-</font></td></tr><tr><td><font color="red">*ped-ikā-</font></td></tr></table>> style="dashed,rounded" URL="ped-foot2.svg" tooltip="*ped- (base), *ped-yo-, *ped-ikā-"]
+
+pod [label=<<font color="red">*pod-</font>> style="dashed,rounded" URL="ped-foot3.svg" tooltip="*pod-"]
+
+link4 [label=<<table border="0" cellpadding="5"><tr><td><font color="red">*ped-ya</font></td></tr><tr><td><font color="red">*ped-o-</font></td></tr><tr><td><font color="red">*pēd-o-</font></td></tr><tr><td><font color="red">*ped-ī-</font></td></tr></table>> style="dashed,rounded" URL="ped-foot4.svg" tooltip="*ped-ya, *ped-o-, *pēd-o-, *ped-ī-"]
+
+ped -> { link1 link2 pod link4 } [sametail=1]
+}

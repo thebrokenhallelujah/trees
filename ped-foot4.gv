@@ -1,0 +1,109 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+ped [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ped-</font></td><td><font point-size="16">foot</font></td></tr></table>> tooltip="Indo-European \"*ped-\" foot" shape=rect style=dashed peripheries=1 margin=.3 URL="ped-foot0.svg"]
+pedya [label=<<font color="red">*ped-ya</font>>]
+pedo [label=<<font color="red">*ped-o-</font>>]
+peedo [label=<<font color="red">*pēd-o-</font>>]
+ped -> { pedya pedo peedo rank=same } [sametail=1]
+/* omitted: podzol (Russ, refers to ghel- but not listed there), diapedesis (bio), cyprepedium (orchid) */
+
+/* trapez- */
+pezaG [label=<<b>Greek</b><br/><font color="red">peza</font><br/><font point-size="12">foot</font>>]
+trapezaG [label=<<font color="red">trapeza</font><br/><font point-size="12">table</font><br/><font color="red">trapezion</font><br/><font point-size="12">(diminutive)</font>>]
+trapeziumL [label=<<b>Latin</b><br/><font color="red">trapezium</font><br/><font point-size="12">trapezoid</font>>]
+trapezium [label=<<b>Modern<br/>English</b><br/><font color="red">trapezium<br/>trapezius<br/>trapezoid<br/>trapeze<br/>trapezohedron</font>>]
+kwetwerIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*kʷetwer-</font><br/><font point-size="12">four</font>> shape=box style="dashed,rounded" URL="kwetwer-four3.svg"]
+traG [label=<<b>Greek</b><br/><font color="red">tra-</font>>]
+kwetwerIE -> traG
+traG -> trapezaG [samehead=1]
+pedya -> pezaG
+pezaG -> trapezaG [samehead=1]
+trapezaG -> trapeziumL -> trapezium [style=dashed]
+
+/* pedo- */
+pedonG [label=<<b>Greek</b><br/><font color="red">pedon</font><br/><font point-size="12">soil, earth</font>>]
+pedoE [label=<<b>Modern<br/>English</b><br/><font color="red">pedo-</font><br/><font point-size="12">soil</font>>]
+pedo -> pedonG [sametail=1]
+pedonG -> pedoE [style=dashed sametail=1]
+/* link to other pedo-? */
+
+/* parallelepiped */
+epiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*epi, *opi</font><br/><font point-size="12">near, at,<br/>against</font>> shape=box style="dashed,rounded" URL="epi-near.svg"]
+epiG [label=<<b>Greek</b><br/><font color="red">epi-</font><br/><font point-size="12">on, near, after</font>>]
+epipedonG [label=<<font color="red">epipedon</font><br/><font point-size="12">plane surface</font>>]
+epiIE -> epiG
+epiG -> epipedonG [samehead=1]
+pedonG -> epipedonG [samehead=1 sametail=1]
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">(various<br/>prepositions)</font>> shape=box style="dashed,rounded" URL="per-pre.svg"]
+paraG [label=<<b>Greek</b><br/><font color="red">para</font><br/><font point-size="12">beside, beyond,<br/>extra</font>>]
+perIE -> paraG
+alIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*al-</font><br/><font point-size="12">beyond</font>> shape=box style="dashed,rounded" URL="al-beyond.svg"] // not yet made
+alyoIE [label=<<font color="red">*alyo-</font><br/><font point-size="12">other of<br/>more than two</font>>]
+allosG [label=<<b>Greek</b><br/><font color="red">allos</font><br/><font point-size="12">other</font>>]
+allelonG [label=<<font color="red">allēlōn</font><br/><font point-size="12">of one another</font>>]
+alIE -> alyoIE -> allosG -> allelonG
+parallelosG [label=<<font color="red">parallēlos</font><br/><font point-size="12">parallel</font>>]
+parapedG [label=<<font color="red">parallelepiped</font>>]
+parapedE [label=<<b>Modern<br/>English</b><br/><font color="red">parallelepiped</font><br/><font point-size="12">geometric solid<br/>with parallelogram faces</font>>]
+paraG -> parallelosG [samehead=1]
+allelonG -> parallelosG [samehead=1]
+parallelosG -> parapedG [samehead=1]
+epipedonG -> parapedG [samehead=1]
+parapedG -> parapedE [style=dashed]
+
+/* pug; omitted: pie, pice (money) */
+padamS [label=<<b>Sanskrit</b><br/><font color="red">padam<br/>padakam</font><br/><font point-size="12">footstep, foot</font>>]
+pagH [label=<<b>Hindi</b><br/><font color="red">pag</font>>]
+pug [label=<<b>Modern<br/>English</b><br/><font color="red">pug</font><br/><font point-size="12">animal<br/>footprint</font>>]
+pedo -> padamS [sametail=1]
+padamS -> pagH
+pagH -> pug [style=dashed label="?"] // "prob."
+
+/* pajamas */
+padII [label=<<b>Indo-<br/>Iranian</b><br/><font color="red">*pad-</font><br/><font point-size="12">foot</font>>]
+paiMP [label=<<b>Middle<br/>Persian</b><br/><font color="red">pāī</font><br/><font point-size="12">leg</font>>] // and Pers
+paijamaH [label=<<b>Hindi</b><br/><font color="red">pāi-jāma</font><br/><font point-size="12">loose pants</font>>]
+// paejamaU [label=<<b></b><br/><font color="red">pāe-jāma</font><br/><font point-size="12">leg garment</font>>]
+pajamas [label=<<b>Modern<br/>English</b><br/><font color="red">pajamas<br/>pyjamas</font>>]
+pedo -> padII [sametail=1]
+padII -> paiMP
+paiMP -> paijamaH [style=dashed sametail=1]
+paijamaH -> pajamas [style=dashed] // or paejamaU
+// pers jāmah "garment"
+
+/* teapoy */
+treiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*trei-</font><br/><font point-size="12">three</font>> shape=box style="dashed,rounded" URL="trei-three2.svg"]
+siP [label=<<b>Persian</b><br/><font color="red">si</font><br/><font point-size="12">three</font>>]
+sipayaP [label=<<font color="red">si-payā</font>>]
+tipaiH [label=<<b>Hindi</b><br/><font color="red">tipāī</font>>]
+teapoy [label=<<b>Modern<br/>English</b><br/><font color="red">teapoy</font><br/><font point-size="12">a tea table</font>>]
+treiIE -> siP
+siP -> sipayaP [samehead=1]
+paiMP -> sipayaP [samehead=1 sametail=1]
+sipayaP -> tipaiH [style=dashed] // influenced by H tir "three"
+tipaiH -> teapoy [style=dashed] // doubtless influenced by "tea"
+
+/* pilot */
+peedonG [label=<<b>Greek</b><br/><font color="red">pēdon</font><br/><font point-size="12">oar blade<br/>rudder</font>>]
+pedotesG [label=<<font color="red">pēdōtēs</font>>] // Med.
+pedotaOI [label=<<b>Old Italian</b><br/><font color="red">pedota<br/>pilota</font>>] // helmsman?
+pilotOF [label=<<b>Old French</b><br/><font color="red">pilot</font>>]
+pilotF [label=<<b>French</b><br/>(obsolete)<br/><font color="red">pilot</font>>] // =helmsman; remove?
+pilot [label=<<b>Modern<br/>English</b><br/><font color="red">pilot</font>>]
+peedo -> peedonG [sametail=1]
+peedonG -> pedotesG
+pedotesG -> pedotaOI -> pilotOF [style=dashed]
+pilotOF -> pilotF
+pilotF -> pilot [style=dashed]
+
+{ rank=same trapezium pedoE parapedE pug pajamas teapoy pilot }
+{ rank=same ped kwetwerIE epiIE perIE alIE treiIE }
+allosG -> allelonG -> parallelosG -> parapedG [weight=2]
+{ rank=same pezaG traG pedonG paraG allosG epiG pedonG peedonG padII padamS }
+siP -> sipayaP [weight=5]
+{ rank=same pagH paijamaH tipaiH pilotF }
+pedotaOI -> pilotOF [weight=2]
+{ rank=same paraG -> allosG -> epiG -> pedonG -> padII -> padamS -> peedonG -> pezaG -> traG [style=invis] }
+//{ rank=same  [stlye=invis] }
+}

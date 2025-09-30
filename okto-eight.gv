@@ -1,0 +1,111 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+okto [label=<<table border="0"><tr><td colspan="2"><font point-size="24">Indo-European</font></td></tr><tr><td><font point-size="18" color="red">*oktō, *oktōu</font></td><td><font point-size="16">eight</font></td></tr></table>> tooltip="Indo-European \"oktō(u)\" eight" shape=rect peripheries=2 margin=.3]
+
+/* omitted: eightvo/octavo, eighteenmo/octodecimo (printing), octonary, octant, Octans (constellation), chemicals, octet, octillion, octodecillion, octad, octameter, octosyllable */
+
+/* dekm */
+dekmIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dekm̥</font><br/><font point-size="12">ten</font>> shape=box style="dashed,rounded" URL="dekm-ten0.svg"]
+tehunGm [label=<<b>Germanic</b><br/><font color="red">*tehun</font>>]
+teneOE [label=<<b>Old English</b><br/><font color="red">-tēne, -tīne, -tȳne</font>>]
+dekmIE -> tehunGm [sametail=1]
+tehunGm -> teneOE [sametail=1]
+kontaIE [label=<<font color="red">*-dkōm-tā̆, *-kontā̆</font>>]
+gintaL [label=<<b>Latin</b><br/><font color="red">-gintā</font><br/><font point-size="12">ten times</font>>]
+dekmIE -> kontaIE [sametail=1]
+kontaIE -> gintaL
+
+/* English */
+ahtoGm [label=<<b>Germanic</b><br/><font color="red">*ahtō</font>>]
+eahtaOE [label=<<b>Old English</b><br/><font color="red">eahta</font>>]
+eighteME [label=<<b>Middle<br/>English</b><br/><font color="red">eighte</font>>]
+eight [label=<<b>Modern<br/>English</b><br/><font color="red">eight</font>>]
+okto -> ahtoGm [sametail=1]
+ahtoGm -> eahtaOE [sametail=1]
+eahtaOE -> eighteME [sametail=1]
+eighteME -> eight
+eahtatigOE [label=<<font color="red">eahtatig</font><br/><font point-size="12">eighty</font>>]
+eightiME [label=<<b>Middle<br/>English</b><br/><font color="red">eighti</font>>]
+eighty [label=<<b>Modern<br/>English</b><br/><font color="red">eighty</font>>]
+eahtaOE -> eahtatigOE [sametail=1]
+eahtatigOE -> eightiME -> eighty
+eahtateneOE [label=<<font color="red">eahtatēne</font><br/><font point-size="12">eighteen</font>>]
+eighteteneME [label=<<b>Middle<br/>English</b><br/><font color="red">eightetene</font>>]
+eighteen [label=<<b>Modern<br/>English</b><br/><font color="red">eighteen</font>>]
+eahtaOE -> eahtateneOE [sametail=1 samehead=1]
+eahtateneOE -> eighteteneME -> eighteen
+teneOE -> eahtateneOE [samehead=1]
+
+
+/* Latin */
+octoL [label=<<b>Latin</b><br/><font color="red">octō<br/>octō-</font>>]
+octuplusL [label=<<font color="red">octuplus</font><br/><font point-size="12">eightfold</font>>]
+octuple [label=<<b>Modern<br/>English</b><br/><font color="red">octuple<br/>octuplet</font>>]
+okto -> octoL [sametail=1]
+octoL -> octuplusL [sametail=1]
+octuplusL -> octuple [style=dashed]
+octoberL [label=<<font color="red">Octōber</font><br/><font point-size="12">eighth month</font>>]
+octobreOF [label=<<b>Old French</b><br/><font color="red">Octobre</font>>]
+octoberOE [label=<<b>Old English</b><br/><font color="red">October</font>>]
+octobreME [label=<<b>Middle<br/>English</b><br/><font color="red">Octobre</font>>]
+october [label=<<b>Modern<br/>English</b><br/><font color="red">October</font>>]
+octoL -> octoberL [sametail=1]
+octoberL -> octobreOF [sametail=1]
+octoberL -> octoberOE [style=dashed sametail=1]
+octobreOF -> octobreME [style=dashed samehead=1]
+octoberOE -> octobreME [samehead=1]
+octobreME -> october
+octavaL [label=<<font color="red">octāva (diēs)</font><br/><font point-size="12">eighth (day)</font>>]
+octaveOF [label=<<b>Old French</b><br/><font color="red">octave</font>>]
+octaveME [label=<<b>Middle<br/>English</b><br/><font color="red">octave</font><br/><font point-size="12">eighth day after<br/>a feast day</font>>]
+octave [label=<<b>Modern<br/>English</b><br/><font color="red">octave</font>>]
+octoL -> octavaL [sametail=1]
+octavaL -> octaveOF
+octaveOF -> octaveME [style=dashed]
+octaveME -> octave
+octogintaL [label=<<font color="red">octōgintā</font><br/><font point-size="12">eighty</font>>]
+octogeniL [label=<<font color="red">octōgēnī</font><br/><font point-size="12">eighty each</font><br/><font color="red">octōgēnārius</font><br/><font point-size="12">containing eighty</font>>]
+octogenaireOF [label=<<b>Old French</b><br/><font color="red">octogénaire</font>>]
+octogenarian [label=<<b>Modern<br/>English</b><br/><font color="red">octogenarian</font>>]
+octoL -> octogintaL [sametail=1 samehead=1]
+gintaL -> octogintaL [samehead=1]
+octogintaL -> octogeniL -> octogenaireOF
+octogenaireOF -> octogenarian [style=dashed]
+
+/* Greek */
+oktoG [label=<<b>Greek</b><br/><font color="red">oktō<br/>okta-, oktō-</font>>]
+oktopousG [label=<<font color="red">oktōpous<br/>oktōpoda</font><br/><font point-size="12">eight-footed</font>>]
+octopusL  [label=<<b>New Latin</b><br/><font color="red">Octōpūs<br/>Oktōpoda</font>>] // genus and order names
+octopus [label=<<b>Modern<br/>English</b><br/><font color="red">octopus<br/>octopod</font>>]
+okto -> oktoG
+oktoG -> oktopousG [sametail=1 samehead=1]
+oktopousG -> octopusL -> octopus [style=dashed]
+pedIE [label=<<b>Indo-<br/>European</b><br/><font color="red">ped-, pod-</font><br/><font point-size="12">foot</font>> shape=box style="dashed,rounded" URL="ped-foot3.svg"]
+pousG [label=<<b>Greek</b><br/><font color="red">pous, pod-</font><br/><font point-size="12">foot</font>>]
+pedIE -> pousG
+pousG -> oktopousG [samehead=1]
+
+
+/* prefixes */
+octoE [label=<<b>Modern<br/>English</b><br/><font color="red">octo-</font>>]
+octoL -> octoE [style=dashed sametail=1 samehead=1]
+oktoG -> octoE [style=dashed sametail=1 samehead=1]
+yotE [label=<<b>Modern<br/>English</b><br/><font color="red">yotta-<br/>yocto-</font>>] // link to numerical prefix chart
+octoE -> yotE
+attON [label=<<b>Old Norse</b><br/><font color="red">āt</font>>]
+tjanON [label=<<b>Old Norse</b><br/><font color="red">tjān</font><br/><font point-size="12">ten</font>>]
+attjanON [label=<<font color="red">āttjān</font><br/><font point-size="12">eighteen</font>>]
+atto [label=<<b>Danish,<br/>Norwegian</b><br/><font color="red">atten</font>>]
+attoE [label=<<b>Modern<br/>English</b><br/><font color="red">atto-</font>>] // also NL???
+ahtoGm -> attON [sametail=1]
+tehunGm -> tjanON [sametail=1]
+{ attON tjanON } -> attjanON [samehead=1]
+attjanON -> atto
+atto -> attoE [style=dashed]
+
+{ rank=same eight eighty eighteen octopus october octave octuple octogenarian octoE yotE attoE }
+{ rank=min okto dekmIE pedIE }
+{ rank=same ahtoGm tehanGm octoL oktoG gintaL pousG }
+octoL -> octuplusL [weight=2]
+}

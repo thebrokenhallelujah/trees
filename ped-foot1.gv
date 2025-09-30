@@ -1,0 +1,133 @@
+strict digraph {
+/* sources: AHD my? */
+node [shape=none]
+ped [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ped-</font></td><td><font point-size="16">foot</font></td></tr></table>> tooltip="Indo-European \"*ped-\" foot" shape=rect style=dashed peripheries=1 margin=.3 URL="ped-foot0.svg"]
+pood [label=<<font color="red">*pōd-</font>>]
+pedero [label=<<font color="red">*ped-ero-</font>>]
+pedel [label=<<font color="red">*ped-el-</font>>]
+ped_v [label=<<font color="red">*ped-</font><br/><font point-size="12">to walk, stumble, fall</font>>]
+ped -> { pood pedero pedel ped_v } [sametail=1]
+
+/* foot */
+fotGm [label=<<b>Germanic</b><br/><font color="red">*fōt</font><br/><font point-size="12">foot</font>>]
+fotOE [label=<<b>Old English</b><br/><font color="red">fōt</font>>]
+fotME [label=<<b>Middle<br/>English</b><br/><font color="red">fot</font>>]
+foot [label=<<b>Modern<br/>English</b><br/><font color="red">foot</font>>]
+pood -> fotGm -> fotOE -> fotME -> foot
+
+/* fetter */
+feteroGm [label=<<b>Germanic</b><br/><font color="red">*feterō</font>>]
+feterOE [label=<<b>Old English</b><br/><font color="red">feter</font><br/><font point-size="12">leg iron</font>>]
+feterME [label=<<b>Middle<br/>English</b><br/><font color="red">feter</font>>]
+fetter [label=<<b>Modern<br/>English</b><br/><font color="red">fetter</font>>]
+pedero -> feteroGm -> feterOE -> feterME -> fetter
+
+/* fetlock */
+fetelGm [label=<<b>Germanic</b><br/><font color="red">*fetel-</font>>]
+vizzelach [label=<<b>Old High<br/>German</b><br/><font color="red">vizzelach</font><br/><font point-size="12">fetlock</font>>]
+fitlokME [label=<<b>Middle<br/>English</b><br/><font color="red">fitlok</font>>]
+fetlock [label=<<b>Modern<br/>English</b><br/><font color="red">fetlock</font>>] // picture?
+pedel -> fetelGm -> vizzelach
+vizzelach -> fitlokME [style=dashed] // actually not a direct borrowing
+fitlokME -> fetlock
+
+/* Latin */
+
+/* mostly Greek */
+
+/* verbal root */
+ped_v -> { pedyos pedsamo pedko rank=same } [sametail=1]
+ped_v -> fetenGm [sametail=1]
+
+/* fetch */
+fetenGm [label=<<b>Germanic</b><br/><font color="red">*fetēn</font>>]
+fecceanOE [label=<<b>Old English</b><br/><font color="red">fetian<br/>feccean</font><br/><font point-size="12">to bring back</font>>]
+fecchenME [label=<<b>Middle<br/>English</b><br/><font color="red">fecchen</font>>]
+fetch [label=<<b>Modern<br/>English</b><br/><font color="red">fetch</font>>]
+fetenGm -> fecceanOE -> fecchenME -> fetch
+
+/* pejoration */
+pedyos [label=<<font color="red">*ped-yos-</font><br/><font point-size="12">(comparative)</font>>]
+peiorL [label=<<b>Latin</b><br/><font color="red">pēior</font><br/><font point-size="12">stumbling, worse</font>>]
+peiorareL [label=<<font color="red">pēiōrāre</font><br/><font point-size="12">to worsen</font>>]
+peioratusL [label=<<font color="red">pēiōrātus</font>>]
+peioratioL [label=<<font color="red">pēiōrātiō,<br/>pēiōrātiōn-</font>>]
+pejoration [label=<<b>Modern<br/>English</b><br/><font color="red">pejoration</font>>]
+pedyos -> peiorL -> peiorareL
+peiorareL -> peioratusL [sametail=1]
+peioratusL -> peioratioL
+peioratioL -> pejoration [style=dashed]
+
+/* impair */
+impeiorareL [label=<<font color="red">impēiōrāre</font><br/><font point-size="12">to worsen?</font>>] // Vulgar; same meaning?
+empeirerOF [label=<<b>Old French</b><br/><font color="red">empeirer</font>>]
+empairenME [label=<<b>Middle<br/>English</b><br/><font color="red">empeiren</font>>]
+impair [label=<<b>Modern<br/>English</b><br/><font color="red">impair</font>>]
+enIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*en</font><br/><font point-size="12">in</font>> shape=box style="dashed,rounded" URL="en-in1.svg"]
+in2L [label=<<b>Latin</b><br/><font color="red">in-</font><br/><font point-size="12">(intensive<br/>prefix)</font>>]
+enIE -> in2L
+peiorareL -> impeiorareL [samehead=1]
+in2L -> impeiorareL [samehead=1 sametail=1]
+impeiorareL -> empeirerOF
+empeirerOF -> empairenME [style=dashed]
+empairenME -> impair
+
+/* pessimism */
+pedsamo [label=<<font color="red">*ped-samo-</font><br/><font point-size="12">(superlative)</font>>]
+pessimusL [label=<<b>Latin</b><br/><font color="red">pessimus</font><br/><font point-size="12">worst</font>>]
+pessimismeF [label=<<b>French</b><br/><font color="red">pessimisme</font><br/><font point-size="12">pessimism</font>>] // influenced by optimisme?
+pessimism [label=<<b>Modern<br/>English</b><br/><font color="red">pessimism</font>>]
+pedsamo -> pessimusL
+pessimusL -> pessimismeF -> pessimism [style=dashed] // Fr borrowed from L?
+
+/* L peccare */
+pedko [label=<<font color="red">*ped-ko-</font>>]
+peccareL [label=<<b>Latin</b><br/><font color="red">peccāre</font><br/><font point-size="12">to stumble,<br/>to sin</font>>]
+pedko -> peccareL
+peccareL -> { peccansL peccaviL peccatumL } [sametail=1 weight=2]
+
+/* peccant, peccavi */
+peccansL [label=<<font color="red">peccāns<br/>peccant-</font>>]
+peccant [label=<<b>Modern<br/>English</b><br/><font color="red">peccant</font><br/><font point-size="12">sinful, guilty</font>>]
+peccaviL [label=<<font color="red">peccavi</font><br/><font point-size="12">I have sinned</font>>]
+peccavi [label=<<b>Modern<br/>English</b><br/><font color="red">peccavi</font><br/><font point-size="12">a confession<br/>of sin</font>>]
+peccareL -> peccansL
+peccansL -> peccant [style=dashed]
+peccaviL -> peccavi [style=dashed]
+
+/* peccadillo */
+peccatumL [label=<<font color="red">peccātum</font><br/><font point-size="12">a sin (neut.)</font>>]
+peccatoI [label=<<b>Italian</b><br/><font color="red">peccato</font>>]
+peccadiglio [label=<<font color="red">peccadiglio</font><br/><font point-size="12">(diminutive)</font>>]
+pecadoS [label=<<b>Spanish</b><br/><font color="red">pecado</font>>]
+pecadilloS [label=<<font color="red">pecadillo</font><br/><font point-size="12">(diminutive)</font>>]
+peccadillo [label=<<b>Modern<br/>English</b><br/><font color="red">peccadillo</font><br/><font point-size="12">a minor fault</font>>]
+peccatumL -> { peccatoI pecadoS } [sametail=1]
+peccatoI -> peccadiglio
+pecadoS -> pecadilloS
+{ peccadiglio pecadilloS } -> peccadillo [style=dashed samehead=1]
+
+/* impeccable */
+impeccabilis [label=<<font color="red">impeccābilis</font>>]
+impeccable [label=<<b>Modern<br/>English</b><br/><font color="red">impeccable</font><br/><font point-size="12">flawless</font>>]
+neIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ne</font><br/><font point-size="12">not</font>> shape=box style="dashed,rounded" URL="ne-not3.svg"]
+in1L [label=<<b>Latin</b><br/><font color="red">in-</font>>]
+neIE -> in1L
+peccareL -> impeccabilis [sametail=1 samehead=1]
+in1L -> impeccabilis [samehead=1]
+impeccabilis -> impeccable [style=dashed]
+
+{ rank=same foot fetter fetlock fetch pejoration impair pessimism peccadillo peccant peccavi impeccable }
+{ rank=same fotGm feteroGm fetelGm fetenGm peiorL pessimusL peccareL in1L in2L }
+{ rank=same fotOE feterOE vizzelach fecceanOE impeiorareL }
+{ rank=same fotME feterME fitlokME fecchenME pessimismeF pecadilloS peccadiglio empairenME }
+peccatoI -> peccadiglio [weight=2]
+pecadoS -> pecadilloS [weight=2]
+peioratusL -> peioratioL [weight=2]
+{ rank=same peccatumL peccansL peccaviL impeccabilis peiorareL }
+{ rank=min neIE enIE }
+{ rank=same pood -> pedero -> pedel -> ped_v [style=invis] }
+{ rank=same pedyos -> pedsamo -> pedko [style=invis] }
+// { rank=same peiorL -> in2L -> pessimusL [style=invis] }
+}
+

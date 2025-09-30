@@ -1,0 +1,126 @@
+strict digraph {
+/* sources: */
+node [shape=none]
+ped [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ped-</font></td><td><font point-size="16">foot</font></td></tr></table>> tooltip="Indo-European \"*ped-\" foot" shape=rect style=dashed peripheries=1 margin=.3 URL="ped-foot0.svg"]
+pedyo [label=<<font color="red">*ped-yo-</font>>]
+pedika [label=<<font color="red">*ped-ikā-</font>>]
+ped -> { pedyo pedika rank=same } [sametail=1]
+
+/* omitted: pedate, pediculate (order name), pedicel, pedicle, pediform, pedometer, peduncle, pes/pedes, centipede, millipede */
+/* -ped, -pede */
+pesL [label=<<b>Latin</b><br/><font color="red">pēs, ped-</font>>]
+pede [label=<<b>Modern<br/>English</b><br/><font color="red">pedi-<br/>-ped<br/>-pede</font>>]
+ped -> pesL [sametail=1]
+pesL -> pede [style=dashed sametail=1]
+
+/* pedal; omitted: bipedal, tripedal, sesquipedal, trivet (prob. <tripedal) */
+pedalisL [label=<<font color="red">pedālis</font><br/><font point-size="12">one foot long</font>>]
+pedaleI [label=<<b>Italian</b><br/><font color="red">pedale</font>>]
+pedaleF [label=<<b>French</b><br/><font color="red">pédale</font>>]
+pedal [label=<<b>Modern<br/>English</b><br/><font color="red">pedal</font>>]
+pesL -> pedalisL [sametail=1 weight=2]
+pedalisL -> pedaleI
+pedaleI -> pedaleF -> pedal [style=dashed weight=2]
+
+/* pedicure */
+pedicureF [label=<<b>French</b><br/><font color="red">pédicure</font><br/><font point-size="12">"foot care"</font>>]
+pedicure [label=<<b>Modern<br/>English</b><br/><font color="red">pedicure</font>>]
+pesL -> pedicureF [sametail=1 weight=2]
+pedicureF -> pedicure [style=dashed]
+
+/* pedestrian */
+pedesL [label=<<font color="red">pedes</font><br/><font point-size="12">a pedestrian</font>>]
+pedesterL [label=<<font color="red">pedester<br/>pedestr-</font><br/><font point-size="12">going on foot</font>>]
+pedestrian [label=<<b>Modern<br/>English</b><br/><font color="red">pedestrian</font>>]
+pesL -> pedesL [sametail=1 weight=2]
+pedesL -> pedesterL [weight=2]
+pedesterL -> pedestrian [style=dashed]
+
+/* pedestal */
+piedistallo [label=<<b>Italian</b><br/><font color="red">piè di stallo</font><br/><font point-size="12">"foot of stall"</font><br/><font color="red">piedistallo</font>>]
+pedestalF [label=<<b>French</b><br/>(obsolete)<br/><font color="red">pedestal</font>>]
+pedestal [label=<<b>Modern<br/>English</b><br/><font color="red">pedestal</font>>]
+pesL -> piedistallo [sametail=1]
+piedistallo -> pedestalF -> pedestal [style=dashed]
+
+/* peon, pawn, pioneer */
+pedoL [label=<<font color="red">pedō, pedōn-</font><br/><font point-size="12">"one who has wide feet,"<br/>foot soldier</font>>] // LLat, MedLat
+peonS [label=<<b>Spanish</b><br/><font color="red">peon</font><br/><font point-size="12">day laborer</font>>]
+peon [label=<<b>Modern<br/>English</b><br/><font color="red">peon</font>>]
+pedonOF [label=<<b>Old French</b><br/><font color="red">pedon, paon</font>>]
+pawnME [label=<<b>Middle<br/>English</b><br/><font color="red">pawn</font>>]
+pawn [label=<<b>Modern<br/>English</b><br/><font color="red">pawn</font><br/><font point-size="12">chess piece</font>>]
+peonierOF [label=<<b>Old French</b><br/><font color="red">peon<br/>peonier</font>>]
+pionnierF [label=<<b>French</b><br/><font color="red">pionnier</font>>]
+pioneer [label=<<b>Modern<br/>English</b><br/><font color="red">pioneer</font>>]
+pesL -> pedoL [sametail=1 weight=2]
+pedoL -> { peonS pedonOF peonierOF } [sametail=1]
+peonS -> peon [style=dashed]
+pedonOF -> pawnME [style=dashed]
+pawnME -> pawn
+peonierOF -> pionnierF
+pionnierF -> pioneer [style=dashed]
+
+/* vamp */
+pieOF [label=<<b>Old French</b><br/><font color="red">pie</font><br/><font point-size="12">foot</font>>]
+avanpieOF [label=<<font color="red">avanpie</font>>] // sock??
+vampeME [label=<<b>Middle<br/>English</b><br/><font color="red">vampe</font><br/><font point-size="12">sock</font>>]
+vamp [label=<<b>Modern<br/>English</b><br/><font color="red">vamp</font><br/><font point-size="12">top of a shoe,<br/>to patch up,<br/>to improvise</font>>]
+pesL -> pieOF [sametail=1]
+pieOF -> avanpieOF [samehead=1]
+avanpieOF -> vampeME [style=dashed]
+vampeME -> vamp
+apoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*apo-</font><br/><font point-size="12">off, away</font>> shape=box style="dashed,rounded" URL="apo-off1.svg"]
+abL [label=<<b>Latin</b><br/><font color="red">ab-</font><br/><font point-size="12">from</font>>]
+antIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ant-</font><br/><font point-size="12">front, before</font>> shape=box style="dashed,rounded" URL="ant-front.svg"]
+anteL [label=<<b>Latin</b><br/><font color="red">ante</font><br/><font point-size="12">before</font>>]
+abanteL [label=<<font color="red">abante</font><br/><font point-size="12">from before</font>>]
+avauntOF [label=<<b>Old French</b><br/><font color="red">avaunt</font><br/><font point-size="12">before</font>>]
+apoIE -> abL
+antIE -> anteL
+{ abL anteL } -> abanteL [samehead=1]
+abanteL -> avauntOF
+avauntOF -> avanpieOF [samehead=1]
+
+/* suffixed forms */
+/* expedite */
+expedireL [label=<<font color="red">expedīre<br/>expedīt-</font><br/><font point-size="12">to free from<br/> a snare,<br/>to make ready</font>>]
+expedite [label=<<b>Modern<br/>English</b><br/><font color="red">expedite<br/>expedition</font>>]
+eghsIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*eghs</font><br/><font point-size="12">out</font>> shape=box style="dashed,rounded" URL="eghs-out.svg"]
+exL [label=<<b>Latin</b><br/><font color="red">ex-</font>>]
+eghsIE -> exL
+exL -> expedireL [samehead=1]
+pedyo -> expedireL [sametail=1 samehead=1]
+expedireL -> expedite [style=dashed]
+
+/* impede */
+impedireL [label=<<font color="red">expedīre<br/>expedīt-</font><br/><font point-size="12">to shackle,<br/>to hinder</font>>]
+impede [label=<<b>Modern<br/>English</b><br/><font color="red">impede</font>>]
+enIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*en</font><br/><font point-size="12">in</font>> shape=box style="dashed,rounded" URL="en-in1.svg"]
+inL [label=<<b>Latin</b><br/><font color="red">in-</font>>]
+enIE -> inL
+inL -> impedireL [sametail=1 samehead=1]
+pedyo -> impedireL [sametail=1 samehead=1]
+impedireL -> impede [style=dashed]
+
+/* impeach */
+pedicaL [label=<<b>Latin</b><br/><font color="red">pedica</font><br/><font point-size="12">fetter</font>>] // fetter, singular?
+impedicareL [label=<<font color="red">impedicāre</font><br/><font point-size="12">to entangle</font>>]
+empecherAN [label=<<b>Anglo-Norman</b><br/><font color="red">empecher</font>>]
+empechenME [label=<<b>Middle<br/>English</b><br/><font color="red">empechen</font><br/><font point-size="12">to impede,<br/>to accuse</font>>]
+impeach [label=<<b>Modern<br/>English</b><br/><font color="red">impeach</font>>]
+pedika -> pedicaL [sametail=1 samehead=1]
+pedicaL -> impedicareL [samehead=1]
+inL -> impedicareL [sametail=1 samehead=1]
+impedicareL -> empecherAN
+empecherAN -> empechenME [style=dashed]
+empechenME -> impeach
+
+{ rank=same pede pedal pedicure pedestrian pedestal peon pawn pioneer vamp expedite impede impeach }
+{ rank=min apoIE antIE eghsIE enIE }
+{ rank=same pedaleF pedicureF pedestalF peonS pawnME pionnierF vampeME empechenME }
+{ rank=same pedaleI piedistallo avanpieOF }
+{ rank=same pedonOF peonierOF pieOF avauntOF empecherAN }
+{ rank=same pesL abL anteL inL exL }
+{ rank=same pedalisL pedesL pedoL }
+}
