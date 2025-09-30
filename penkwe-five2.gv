@@ -1,0 +1,77 @@
+strict digraph {
+node [shape=none]
+
+penkwe [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*penkʷe </font><font point-size="16">five</font>> shape=box style="dashed,rounded" URL="penkwe-five0.svg" tooltip="Indo-European \"*penkʷe\" five"]
+penkwto [label=<<font color="red">*penkʷ-to-</font><br/><font point-size="12">fifth</font>>]
+penkwro [label=<<font color="red">*penkʷ-ro-</font><br/><font point-size="12">"one of five"</font>>]
+pnksti [label=<<font color="red">*pn̥k-sti-</font><br/><font point-size="12">"set of five"</font>>]
+penkwe -> { penkwekonta penkwto pnksti penkwro } [sametail=1]
+penkwekonta [label=<<font color="red">*penkʷe-(d)konta</font><br/><font point-size="12">five tens</font>>]
+penkwe -> penkwekonta [sametail=1 samehead=1]
+kontaIE -> penkwekonta [sametail=1 samehead=1]
+
+/* dekm */
+dekmIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dekm̥</font><br/><font point-size="12">ten</font>> shape=box style="dashed,rounded" URL="dekm-ten2.svg"]
+kontaIE [label=<<font color="red">*-dkōm-tā̆, *-kontā̆</font>>] // accents render correctly
+dekmIE -> kontaIE [sametail=1]
+
+/* quinquagenarian, Pentecost */
+quinquagintaL [label=<<b>Latin</b><br/><font color="red">quīnquāgintā</font><br/><font point-size="12">fifty</font>>]
+quinquageniL [label=<<font color="red">quīnquāgēnī</font><br/><font point-size="12">fifty each</font>>]
+quinquagenariusL [label=<<font color="red">quīnquāgēnārius</font><br/><font point-size="12">containing fifty</font>>]
+quinquagenarian [label=<<b>Modern<br/>English</b><br/><font color="red">quinquagenarian</font>>]
+penkwekonta -> quinquagintaL [sametail=1]
+quinquagintaL -> quinquageniL -> quinquagenariusL [weight=3]
+quinquagenariusL -> quinquagenarian [style=dashed]
+pentekontaG [label=<<b>Greek</b><br/><font color="red">pentēkonta</font><br/><font point-size="12">fifty</font><br/><font color="red">pentēkostos</font><br/><font point-size="12">fiftieth</font>>]
+pentekosteG [label=<<font color="red">pentēkostē (hēmera)</font><br/><font point-size="12">fiftieth (day)</font>>]
+pentecosteL [label=<<b>Latin</b><br/><font color="red">Pentēcostē</font>>] // Late Latin
+pentecostenOE [label=<<b>Old English</b><br/><font color="red">Pentecosten</font>>]
+pentecosteME [label=<<b>Middle<br/>English</b><br/><font color="red">Pentecoste</font>>]
+pentecost [label=<<b>Modern<br/>English</b><br/><font color="red">Pentecost</font>>]
+penkwekonta -> pentekontaG [sametail=1]
+pentekontaG -> pentekosteG
+pentekosteG -> pentecosteL -> pentecostenOE [style=dashed]
+pentecostenOE -> pentecosteME -> pentecost
+
+/* finger */
+fingwrazGm [label=<<b>Germanic</b><br/><font color="red">*fingwraz</font>>]
+fingerOE [label=<<b>Old English</b><br/><font color="red">finger</font>>]
+fingerME [label=<<b>Middle<br/>English</b><br/><font color="red">finger</font>>]
+finger [label=<<b>Modern<br/>English</b><br/><font color="red">finger</font>>]
+penkwro -> fingwrazGm -> fingerOE -> fingerME -> finger
+
+/* fist, foist */
+funhstizGm  [label=<<b>Germanic</b><br/><font color="red">*funhstiz</font><br/><font point-size="12">fist</font>>]
+pnksti -> funhstizGm
+fystOE [label=<<b>Old English</b><br/><font color="red">fȳst</font>>]
+fistME [label=<<b>Middle<br/>English</b><br/><font color="red">fist</font>>]
+fist [label=<<b>Modern<br/>English</b><br/><font color="red">fist</font>>]
+funhstizGm -> fystOE [sametail=1]
+fystOE -> fistME -> fist
+vuistMD [label=<<b>Middle<br/>Dutch</b><br/><font color="red">vuist</font>>]
+vuistenD [label=<<b>Dutch (dialectical)</b><br/><font color="red">vuisten</font><br/><font point-size="12">to take in hand</font>>]
+foist  [label=<<b>Modern<br/>English</b><br/><font color="red">foist</font>>]
+funhstizGm -> vuistMD [sametail=1]
+vuistMD -> vuistenD
+vuistenD -> foist [style=dashed label="?"]
+
+/* fifth, quint */
+fimftonGm [label=<<b>Germanic</b><br/><font color="red">*fimftōn-</font>>]
+fiftaOE [label=<<b>Old English</b><br/><font color="red">fīfta</font>>]
+fifthME [label=<<b>Middle<br/>English</b><br/><font color="red">fifth</font>>]
+fifth [label=<<b>Modern<br/>English</b><br/><font color="red">fifth</font>>]
+penkwto -> fimftonGm [sametail=1]
+fimftonGm -> fiftaOE -> fifthME -> fifth
+quintusL [label=<<b>Latin</b><br/><font color="red">quīntus, quīnta</font>>]
+quintE [label=<<b>Modern<br/>English</b><br/><font color="red">quint-</font>>]
+penkwto -> quintusL [sametail=1]
+quintusL -> quintE [style=dashed]
+
+{ rank=sink quinquagenarian pentecost fist foist finger fifth quintE }
+{ rank=source penkwe dekmIE }
+{ rank=same penkwekonta penkwro penkwto pnksti }
+{ rank=same fiftaOE fingerOE fystOE vuistMD pentecostenOE }
+{ rank=same quintusL quinquagintaL pentekontaG }
+{ rank=same fimftonGm fingwrazGm funhstizGm }
+}

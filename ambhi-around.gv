@@ -1,0 +1,151 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+ambhiIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ambhi, *m̥bhi</font></td><td><font point-size="16">around</font></td></tr></table>> tooltip="Indo-European \"*ambhi, *m̥bhi\" around" shape=box peripheries=2 margin=.3]
+
+antIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ant-</font><br/><font point-size="12">front, forhead</font>> shape=box style="dashed,rounded" URL="ant-front.svg"]
+antbhiIE  [label=<<font color="red">*ant-bhi</font><br/><font point-size="12">from both sides</font>>]
+{ rank=min antIE -> antbhiIE -> ambhiIE }
+
+// by
+bhiIE [label=<<font color="red">*bhi</font>>]
+biGmc [label=<<b>Germanic</b><br/><font color="red">*bi, *bi-</font>>]
+biOE [label=<<b>Old English</b><br/><font color="red">bi, bī, be</font><br/><font point-size="12">by</font>>]
+byME [label=<<b>Middle<br/>English</b><br/><font color="red">by</font>>]
+by [label=<<b>Modern<br/>English</b><br/><font color="red">by</font>>]
+ambhiIE -> bhiIE -> biGmc -> biOE -> byME -> by
+
+// but
+udIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ud-, *ūd-</font><br/><font point-size="12">up, out</font>> shape=box style="dashed,rounded" URL="ud-out.svg"]
+utGmc [label=<<b>Germanic</b><br/><font color="red">*ūt-</font><br/><font point-size="12">out</font>>]
+biutanaGmc [label=<<font color="red">*bi-ūtana</font><br/><font point-size="12">at the outside</font>>]
+butanOE [label=<<b>Old English</b><br/><font color="red">būtan</font>>]
+butME [label=<<b>Middle<br/>English</b><br/><font color="red">but</font>>]
+but [label=<<b>Modern<br/>English</b><br/><font color="red">but</font>>]
+udIE -> utGmc
+{ biGmc utGmc } -> biutanaGmc -> butanOE -> butME -> but
+
+// abaft
+apoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*apo-, *ap-</font><br/><font point-size="12">off, away</font>> shape=box style="dashed,rounded" URL="apo-off1.svg"]
+aftanGmc [label=<<b>Germanic</b><br/><font color="red">*aftan-</font>>]
+aeftanOE [label=<<b>Old English</b><br/><font color="red">æftan</font><br/><font point-size="12">behind</font>>]
+apoIE -> aftanGmc -> aeftanOE
+beaeftanOE [label=<<font color="red">beæftan</font><br/><font point-size="12">behind</font>>]
+baftME [label=<<b>Middle<br/>English</b><br/><font color="red">baft</font>>]
+onME [label=<<b>Middle<br/>English</b><br/><font color="red">on</font>>]
+onbaftME [label=<<font color="red">on baft</font>>]
+abaft [label=<<b>Modern<br/>English</b><br/><font color="red">abaft</font>>]
+{ biOE aeftanOE } -> beaeftanOE -> baftME
+{ onME baftME } -> onbaftME -> abaft
+
+// be-
+beOE [label=<<b>Old English</b><br/><font color="red">be-, bi-</font><br/><font point-size="12">on all sides</font>>]
+beME [label=<<b>Middle<br/>English</b><br/><font color="red">bi-, be-</font>>]
+be [label=<<b>Modern<br/>English</b><br/><font color="red">be-</font>>]
+biGmc -> beOE -> beME -> be
+
+// beleaguer
+bieMD [label=<<b>Middle Dutch</b><br/><font color="red">bie</font><br/><font point-size="12">by</font>>]
+beD [label=<<b>Dutch</b><br/><font color="red">be-</font><br/><font point-size="12">around</font>>]
+leghIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*legh-</font><br/><font point-size="12">to lie, lay</font>> shape=box style="dashed,rounded" URL="legh-lie.svg"]
+legrazGmc [label=<<b>Germanic</b><br/><font color="red">*legraz</font>>]
+legerMD [label=<<b>Middle Dutch</b><br/><font color="red">leger</font><br/><font point-size="12">camp</font>>]
+legerD [label=<<b>Dutch</b><br/><font color="red">leger</font>>]
+belegerenD [label=<<font color="red">belegeren</font>>]
+beleaguer [label=<<b>Modern<br/>English</b><br/><font color="red">beleaguer</font>>]
+leghIE -> legrazGmc -> legerMD -> legerD
+biGmc -> bieMD -> beD
+{ beD legerD } -> belegerenD
+belegerenD -> beleaguer [style=dashed]
+
+// bivouac
+wegIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*weg-</font><br/><font point-size="12">to be strong, lively</font>> shape=box style="dashed,rounded" URL="weg-lively.svg"]
+wakojan [label=<<b>Germanic</b><br/><font color="red">*wakōjan</font>>]
+wahtaOG [label=<<b>Old High<br/>German</b><br/><font color="red">wahta</font>>]
+wahteMG [label=<<b>Middle High<br/>German</b><br/><font color="red">wahte</font>>]
+wegIE -> wakojan -> wahtaOG -> wahteMG -> wachtGm
+biOHG [label=<<b>Old High<br/>German</b><br/><font color="red">bi</font><br/><font point-size="12">by, at</font>>]
+biMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">bi-</font>>]
+beiGm [label=<<b>German</b><br/><font color="red">bei-</font><br/><font point-size="12">beside</font>>]
+wachtGm [label=<<b>German</b><br/><font color="red">Wacht</font><br/><font point-size="12">watch, vigil</font>>]
+beiwachtGm [label=<<font color="red">beiwacht</font><br/><font point-size="12">supplementary<br/>night watch</font>>] // dialectical
+bivouacF [label=<<b>French</b><br/><font color="red">bivouac</font>>]
+bivouac [label=<<b>Modern<br/>English</b><br/><font color="red">bivouac</font>>]
+biGmc -> biOHG -> biMHG -> beiGm
+{ beiGm wachtGm } -> beiwachtGm
+beiwachtGm -> bivouacF -> bivouac [style=dashed]
+
+// Ember Day
+umbiGmc [label=<<b>Germanic</b><br/><font color="red">*umbi</font>>]
+ymbeOE [label=<<b>Old English</b><br/><font color="red">ymbe</font><br/><font point-size="12">around</font>>]
+ymbryneOE [label=<<font color="red">ymbryne</font><br/><font point-size="12">recurrance</font>>]
+ymbrendaegOE [label=<<font color="red">ymbrendæg</font>>]
+ymberdayeME [label=<<b>Middle<br/>English</b><br/><font color="red">ymber daye</font>>]
+emberday [label=<<b>Modern<br/>English</b><br/><font color="red">Ember Day</font>>]
+ambhiIE -> umbiGmc -> ymbeOE -> ymbryneOE -> ymbrendaegOE -> ymberdayeME -> emberday
+
+// ombudsman
+umON [label=<<b>Old Norse</b><br/><font color="red">um</font><br/><font point-size="12">about</font>>]
+bodhON [label=<<b>Old Norse</b><br/><font color="red">bodh</font><br/><font point-size="12">command</font>>]
+madhrON [label=<<b>Old Norse</b><br/><font color="red">madhr</font><br/><font point-size="12">man</font>>]
+umbodhON [label=<<font color="red">umbodh</font><br/><font point-size="12">commission</font>>]
+umbodhsmadhrON [label=<<font color="red">umbodhsmadhr</font><br/><font point-size="12">deputy</font>>]
+ombudsmanSw [label=<<b>Swedish</b><br/><font color="red">ombudsman</font>>]
+ombudsman [label=<<b>Modern<br/>English</b><br/><font color="red">ombudsman</font>>]
+umbiGmc -> umON
+{ umON bodhON } -> umbodhON
+{ umbodhON madhrON } -> umbodhsmadhrON -> ombudsmanSw
+ombudsmanSw -> ombudsman [style=dashed]
+
+// umlaut
+umbiOHG [label=<<b>Old High<br/>German</b><br/><font color="red">umbi</font>>]
+umbeMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">umbe, umb-</font>>]
+umGm [label=<<b>German</b><br/><font color="red">um-</font><br/><font point-size="12">around,<br/>alteration</font>>]
+kleuIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*kleu-</font><br/><font point-size="12">to hear</font>> shape=box style="dashed,rounded" URL="kleu-hear.svg"]
+hlutOHG [label=<<b>Old High<br/>German</b><br/><font color="red">hlūt</font><br/><font point-size="12">sound</font>>]
+lutMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">lūt</font>>]
+lautGm [label=<<b>German</b><br/><font color="red">Laut</font>>]
+umlautGm [label=<<font color="red">umlaut</font>>]
+umlaut [label=<<b>Modern<br/>English</b><br/><font color="red">umlaut</font>>]
+umbiGmc -> umbiOHG -> umbeMHG -> umGm
+kleuIE -> hlutOHG -> lutMHG -> lautGm
+{ umGm lautGm } -> umlautGm
+umlautGm -> umlaut [style=dashed]
+
+// ambi-
+ambiL [label=<<b>Latin</b><br/><font color="red">ambi-</font><br/><font point-size="12">around, about</font>>]
+ambi [label=<<b>Modern<br/>English</b><br/><font color="red">ambi-</font>>]
+ambhiIE -> ambiL
+ambiL -> ambi [style=dashed]
+
+// ambulareL (link)
+ambulareL [label=<<b>Latin</b><br/><font color="red">ambulāre,<br/>ambulāt-</font><br/><font point-size="12">to walk</font>> shape=box style="dashed,rounded" URL="ambhi-ambulare.svg"]
+ambhiIE -> ambulareL
+
+// amphi-
+amphiGk [label=<<b>Greek</b><br/><font color="red">amphi, amphi-</font><br/><font point-size="12">on both sides,<br/>around</font>>]
+amphiL [label=<<b>Latin</b><br/><font color="red">amphi-</font>>]
+amphi [label=<<b>Modern<br/>English</b><br/><font color="red">amphi-</font>>]
+ambhiIE -> amphiGk
+amphiGk -> amphiL -> amphi [style=dashed]
+
+// ambassador, embassage, embassy
+agIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ag-</font><br/><font point-size="12">to drive, draw, move</font>> shape=box style="dashed,rounded" URL="ag-drive.svg"]
+
+ambiC [label=<<b>Celtic</b><br/><font color="red">*ambi</font><br/><font point-size="12">around</font>>]
+ambiagtoC [label=<<font color="red">*amb(i)-ag-to-</font><br/><font point-size="12">one who goes around</font>>]
+ambactusL [label=<<b>Latin</b><br/><font color="red">ambactus</font><br/><font point-size="12">servant</font>>]
+embassy  [label=<<b>Modern<br/>English</b><br/><font color="red">ambassador<br/>embassage<br/>embassy</font>>]
+ambhiIE -> ambiC 
+{ ambiC agIE } -> ambiagtoC
+ambiagtoC -> ambactusL -> embassy [style=dashed]
+
+
+{ rank=sink by but abaft be beleaguer bivouac emberday ombudsman umlaut ambi amphi embassy }
+{ rank=same udIE apoIE leghIE kleuIE agIE bhiIE }
+{ rank=same utGmc aftanGmc biGmc ambiC amphiGk }
+{ rank=same umbiGmc ambiL }
+{ rank=same aftanGmc utGmc biGmc legrazGmc umbiGmc ambiL amphiGk ambiC }
+{ rank=same ambulareL ambiagtoC }
+}

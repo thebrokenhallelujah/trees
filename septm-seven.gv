@@ -1,0 +1,95 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+septm [label=<<table border="0"><tr><td colspan="2"><font point-size="24">Indo-European</font></td></tr><tr><td><font point-size="18" color="red">*septm̥</font></td><td><font point-size="16">seven</font></td></tr></table>> tooltip="Indo-European \"*septm̥\" seven" shape=rect peripheries=2 margin=.3]
+
+/* omitted: seventh, sennight (week), septennial, septenarius (poetry), septillion, septendecillion, septentrion (north), Septuagint, heptarchy, heptastich, Heptateuch, heptathlon, hebdomad (week) */
+/* maybe: septet */
+
+/* dekm */
+dekmIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dekm̥</font><br/><font point-size="12">ten</font>> shape=box style="dashed,rounded" URL="dekm-ten0.svg"]
+tehunGm [label=<<b>Germanic</b><br/><font color="red">*tehun</font>>]
+tyneOE [label=<<b>Old English</b><br/><font color="red">-tēne, -tīne, -tȳne</font>>]
+dekmIE -> tehunGm [sametail=1]
+tehunGm -> tyneOE
+kontaIE [label=<<font color="red">*-dkōm-tā̆, *-kontā̆</font>>]
+gintaL [label=<<b>Latin</b><br/><font color="red">-gintā</font><br/><font point-size="12">ten times</font>>]
+dekmIE -> kontaIE [sametail=1]
+kontaIE -> gintaL
+
+/* Germanic */
+sebunGm [label=<<b>Germanic</b><br/><font color="red">*sebun</font>>]
+seofonOE [label=<<b>Old English</b><br/><font color="red">seofon</font>>]
+sevenME [label=<<b>Middle<br/>English</b><br/><font color="red">seven</font>>]
+seven [label=<<b>Modern<br/>English</b><br/><font color="red">seven</font>>]
+septm -> sebunGm [sametail=1]
+sebunGm -> seofonOE
+seofonOE -> sevenME [sametail=1]
+sevenME -> seven
+seofontigOE [label=<<font color="red">(hund)seofontig</font><br/><font point-size="12">seventy</font>>]
+seventyME [label=<<b>Middle<br/>English</b><br/><font color="red">seventy</font>>]
+seventy [label=<<b>Modern<br/>English</b><br/><font color="red">seventy</font>>]
+seofonOE -> seofontigOE [sametail=1]
+seofontigOE -> seventyME -> seventy
+seofontineOE [label=<<font color="red">seofontīne</font><br/><font point-size="12">seventeen</font>>]
+seventeneME [label=<<b>Middle<br/>English</b><br/><font color="red">seventene</font>>]
+seventeen [label=<<b>Modern<br/>English</b><br/><font color="red">seventeen</font>>]
+seofonOE -> seofontineOE [sametail=1]
+seofontineOE -> seventeneME -> seventeen
+tyneOE -> seofontineOE [sametail=1]
+
+/* Latin */
+septemL [label=<<b>Latin</b><br/><font color="red">septem</font>>]
+septemberL [label=<<font color="red">September</font><br/><font point-size="12">seventh month</font>>]
+septembreOF [label=<<b>Old French</b><br/><font color="red">Septembre</font>>]
+septembreME [label=<<b>Middle<br/>English</b><br/><font color="red">Septembre</font>>]
+september [label=<<b>Modern<br/>English</b><br/><font color="red">September</font>>]
+septm -> septemL [sametail=1]
+septemL -> septemberL [sametail=1]
+septemberL -> septembreOF
+septembreOF -> septembreME [style=dashed]
+septembreME -> september
+septuagintaL [label=<<font color="red">septuāgintā</font><br/><font point-size="12">seventy</font>>]
+septuageniL [label=<<font color="red">septuāgenī</font><br/><font point-size="12">seventy each</font>>]
+//septuagenariusL [label=<<font color="red">septuāgenārius</font><br/><font point-size="12">of the number seventy</font>>]
+septuagenarian [label=<<b>Modern<br/>English</b><br/><font color="red">septuagenarian</font>>]
+septemL -> septuagintaL [sametail=1 samehead=1]
+septuagintaL -> septuageniL
+septuageniL -> septuagenarian [style=dashed]
+gintaL -> septuagintaL [samehead=1]
+septuplusL [label=<<font color="red">septuplus</font><br/><font point-size="12">sevenfold</font>>]
+septuple [label=<<b>Modern<br/>English</b><br/><font color="red">septuple<br/>septuplet</font>>]
+septemL -> septuplusL [sametail=1]
+septuplusL -> septuple [style=dashed]
+
+/* Greek */
+heptaG [label=<<b>Greek</b><br/><font color="red">hepta, hepta-</font>>]
+heptaE [label=<<b>Modern<br/>English</b><br/><font color="red">hept(a)-</font>>]
+septm -> heptaG [sametail=1]
+heptaG -> heptaE [style=dashed sametail=1]
+heptasG [label=<<font color="red">heptas<br/>heptad-</font><br/><font point-size="12">the number<br/>seven</font>>] // how is this different from "seven"?
+heptad [label=<<b>Modern<br/>English</b><br/><font color="red">heptad</font>>]
+heptaG -> heptasG [sametail=1]
+heptasG -> heptad [style=dashed]
+heptagonosG [label=<<font color="red">heptagōnos</font><br/><font point-size="12">seven-sided</font>>]
+heptagonumL [label=<<b>Latin</b><br/><font color="red">heptagōnum</font>>]
+heptagon [label=<<b>Modern<br/>English</b><br/><font color="red">heptagon</font>>]
+heptaG -> heptagonosG [sametail=1 samehead=1]
+heptagonosG -> heptagonumL -> heptagon [style=dashed]
+genuIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*genu-</font><br/><font point-size="12">knee</font>> shape=box style="dashed,rounded" URL="genu-knee.svg"]
+goniaG [label=<<b>Greek</b><br/><font color="red">gōniā</font><br/><font point-size="12">angle</font><br/><font color="red">gōnos</font><br/><font point-size="12">angled</font>>]
+genuIE -> goniaG
+goniaG -> heptagonosG [samehead=1]
+
+/* SI prefixes: link? */
+zepE [label=<<b>Modern<br/>English</b><br/><font color="red">zetta-<br/>zepto-</font>>]
+septemL -> zepE [style=dashed sametail=1]
+
+{ rank=same seven seventy seventeen september septuagenarian septuple heptaE heptad heptagon zepE }
+{ rank=same septm dekmIE genuIE }
+{ rank=same sebunGm tehunGm septemL gintaL heptaG goniaG }
+tehunGm -> sebunGm -> gintaL -> septemL [style=invis]
+heptaG -> heptasG [weight=2]
+septuagintaL -> septuageniL [weight=2]
+septemL -> septuplusL [weight=2]
+}

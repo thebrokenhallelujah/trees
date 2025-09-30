@@ -1,0 +1,134 @@
+strict digraph {
+node [shape=none]
+
+penkwe [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*penkʷe </font><font point-size="16">five</font>> shape=box style="dashed,rounded" URL="penkwe-five0.svg" tooltip="Indo-European \"*penkʷe\" five"]
+pempe [label=<<font color="red">*pempe</font>>] // assimilated
+kwenkwe [label=<<font color="red">*kʷenkʷe</font>>] // assimilated
+penkwe -> { pempe kwenkwe } [sametail=1]
+
+/* dekm */
+dekmIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dekm̥</font><br/><font point-size="12">ten</font>> shape=box style="dashed,rounded" URL="dekm-ten1.svg"]
+tehunGm [label=<<b>Germanic</b><br/><font color="red">*tehun</font>>]
+teneOE [label=<<b>Old English</b><br/><font color="red">-tēne, -tīne, -tȳne</font>>]
+dekmIE -> tehunGm [sametail=1]
+tehunGm -> teneOE [sametail=1]
+
+/* English */
+fimfGm [label=<<b>Germanic</b><br/><font color="red">*fimf</font>>]
+fifOE [label=<<b>Old English</b><br/><font color="red">fīf</font>>]
+fyfME [label=<<b>Middle<br/>English</b><br/><font color="red">fyf, five</font>>] // roots, AHD
+five [label=<<b>Modern<br/>English</b><br/><font color="red">five</font>>]
+pempe -> fimfGm [sametail=1]
+fimfGm -> fifOE [sametail=1]
+fifOE -> fyfME [sametail=1]
+fyfME -> five
+fiftigOE [label=<<font color="red">fīftig</font><br/><font point-size="12">fifty</font>>]
+fiftiME [label=<<b>Middle<br/>English</b><br/><font color="red">fifti</font>>]
+fifty [label=<<b>Modern<br/>English</b><br/><font color="red">fifty</font>>]
+fifOE -> fiftigOE [sametail=1]
+fiftigOE -> fiftiME -> fifty
+fifteneOE [label=<<font color="red">fīftēne</font><br/><font point-size="12">fifteen</font>>]
+fifteneME [label=<<b>Middle<br/>English</b><br/><font color="red">fiftene</font>>]
+fifteen [label=<<b>Modern<br/>English</b><br/><font color="red">fifteen</font>>]
+fifOE -> fifteneOE [sametail=1 samehead=1]
+fifteneOE -> fifteneME -> fifteen
+fifteneME -> fifteen
+teneOE -> fifteneOE [sametail=1 samehead=1]
+// fimftehunGm -> fimfteneOE instead?
+
+/* femto- */
+fimftehunGm [label=<<font color="red">*fimftehun</font><br/><font point-size="12">fifteen</font>>]
+fimfGm -> fimftehunGm [sametail=1 samehead=1]
+tehunGm -> fimftehunGm [sametail=1 samehead=1]
+fimmtanON [label=<<b>Old Norse</b><br/><font color="red">fimmtān</font><br/><font point-size="12">fifteen</font>>] // ON tjān
+femto [label=<<b>Danish,<br/>Norwegian</b><br/><font color="red">femto</font>>]
+femtoE [label=<<b>Modern<br/>English</b><br/><font color="red">femto-</font>>]
+fimftehunGm -> fimmtanON [sametail=1]
+fimmtanON -> femto
+femto -> femtoE [style=dashed]
+
+/* fin (slang) */
+funfOHG [label=<<b>Old High<br/>German</b><br/><font color="red">funf, finf</font>>]
+finfY [label=<<b>Yiddish</b><br/><font color="red">finf</font>>]
+fin [label=<<b>Modern<br/>English</b><br/><font color="red">fin</font><br/><font point-size="12">five-dollar bill</font>>]
+fimfGm -> funfOHG [sametail=1]
+funfOHG -> finfY
+finfY -> fin [style=dashed]
+
+/* Latin quinque */
+quinqueL [label=<<b>Latin</b><br/><font color="red">quīnque</font>>]
+quinqueE [label=<<b>Modern<br/>English</b><br/><font color="red">quinque-</font>>]
+kwenkwe -> quinqueL [sametail=1]
+quinqueL -> quinqueE [style=dashed sametail=1]
+/* quinquagenarian, quinquennial, quinquennium, quinquevalent, quindecillion, quindecennial, cinquain (poetry), cinquefoil (plant, architecture), cinque (5 in cards or dice) */
+
+/* cinquecento */
+cinqueI [label=<<b>Italian</b><br/><font color="red">cinque</font>>]
+dekm2 [label=<<b>Indo-<br/>European</b><br/><font color="red">*dekm̥</font><br/><font point-size="12">ten</font>> shape=box style="dashed,rounded" URL="dekm-ten3.svg"]
+centumL [label=<<b>Latin</b><br/><font color="red">centum</font><br/><font point-size="12">hundred</font>>]
+centoI [label=<<b>Italian</b><br/><font color="red">cento</font>>]
+cinquecentoI [label=<<font color="red">(mil) cinquecento</font><br/><font point-size="12">(one thousand)<br/>five hundred</font>>]
+cinquecento [label=<<b>Modern<br/>English</b><br/><font color="red">cinquecento</font>>]
+dekm2 -> centumL -> centoI
+quinqueL -> cinqueI
+{ cinqueI centoI } -> cinquecentoI
+cinquecentoI -> cinquecento [style=dashed]
+
+/* quincunx */
+oinoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*oi-no-</font><br/><font point-size="12">one</font>> shape=box style="dashed,rounded" URL="oino-one3.svg"]
+oinoko [label=<<font color="red">*oino-ko-</font>>]
+unciaL [label=<<b>Latin</b><br/><font color="red">ūncia</font><br/><font point-size="12">one-twelfth<br/>of a unit</font>>]
+quincunxL [label=<<font color="red">quīncūnx<br/>quīncūnc-</font><br/><font point-size="12">five twelfths</font>>]
+quincunx [label=<
+<table border="0"><tr><td><b>Modern<br/>English</b><br/><font color="red">quincunx</font><br/><font point-size="12">this arrangement<br/>of five objects:</font></td></tr>
+<tr><td align="center"><img src="quincunx.png"></img></td></tr></table>>] // not sure how to center
+// smaller image, put side-by-side with definition?
+oinoIE -> oinoko -> unciaL
+unciaL -> quincunxL [samehead=1]
+quinqueL -> quincunxL [sametail=1 samehead=1]
+quincunxL -> quincunx [style=dashed]
+
+/* keno, quinate */
+quiniL [label=<<font color="red">quīnī</font><br/><font point-size="12">five each</font>>]
+quineF [label=<<b>French</b><br/><font color="red">quine</font>>]
+keno [label=<<b>Modern<br/>English</b><br/><font color="red">keno</font>>]
+quinqueL -> quiniL [sametail=1]
+quiniL -> quineF [sametail=1] // borrowing?
+quineF -> keno [style=dashed] // -o as in lotto
+quinate [label=<<b>Modern<br/>English</b><br/><font color="red">quinate</font>>] // -ate ending >Lat
+quiniL -> quinate [style=dashed sametail=1]
+
+/* G pente */
+penteG [label=<<b>Greek</b><br/><font color="red">pente</font>>]
+pentaE [label=<<b>Modern<br/>English</b><br/><font color="red">penta-<br/>pent-</font>>]
+penkwe -> penteG [sametail=1]
+penteG -> pentaE [style=dashed]
+/* pentad, pentacle, pentagon, pentagram, pentahedron, pentadactyl, pentatonic, pentameter, pentastich, pentarchy, pentathon, Pentateuch, pentavalent, pentaploid, pentangular, pentamerous, penstemon (plant) */
+
+/* punch */
+pancaII [label=<<b>Indo-Iranian</b><br/><font color="red">*panca</font>>]
+pancaSk [label=<<b>Sanskrit</b><br/><font color="red">pañca</font>>]
+pancH [label=<<b>Hindi</b><br/><font color="red">pañc</font>>]
+punch [label=<<b>Modern<br/>English</b><br/><font color="red">punch</font><br/><font point-size="12">a drink originally<br/>made from five<br/>ingredients</font>>]
+penkwe -> pancaII [sametail=1]
+pancaII -> pancaSk -> pancH
+pancH -> punch [style=dashed]
+
+/* pachisi, Parcheesi */
+wikmtiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*wīkm̥tī-</font><br/><font point-size="12">twenty</font>> shape=box style="dashed,rounded" URL="wikmti-twenty.svg"]
+vimsatihSk [label=<<b>Sanskrit</b><br/><font color="red">viṁśatiḥ</font><br/><font point-size="12">twenty</font>>]
+pacisH [label=<<b>Hindi</b><br/><font color="red">pacīs</font><br/><font point-size="12">twenty-five</font>>]
+pacisiH [label=<<font color="red">pacīsī</font><br/><font point-size="12">(a game)</font>>]
+pachisi [label=<<b>Modern<br/>English</b><br/><font color="red">pachisi<br/>Parcheesi</font>>]
+wikmtiIE -> vimsatihSk
+vimsatihSk -> pacisH [samehead=1]
+pancaSk -> pacisH [sametail=1 samehead=1]
+pacisH -> pacisiH
+pacisiH -> pachisi [style=dashed]
+
+
+{ rank=sink five fifty fifteen femtoE fin quinqueE quincunx keno quinate pentaE punch pachisi cinquecento }
+{ rank=source penkwe dekmIE oinoIE wikmtiIE dekm2 }
+{ rank=same pempe kwenkwe oinoko }
+{ rank=same fimfGm tehunGm pancaII quinqueL penteG unciaL }
+}

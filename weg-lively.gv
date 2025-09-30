@@ -1,0 +1,77 @@
+digraph {
+    node [shape=plaintext];
+    weg [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*weg-</font></td><td><font point-size="16">to be strong, lively</font></td></tr></table>> tooltip="Indo-European \"*weg-\" to be strong, lively" shape=box peripheries=2 margin=.3]
+    weg -> { wakojan; wakhtan }
+    { rank=same; wakojan; wakhtan }
+    wakojan [label=<<b>Germanic</b><br/><font color="red">*wakōjan</font>>];
+    wakhtan [label=<<b>Germanic</b><br/><font color="red">*wa(k)htan</font>>];
+    wakojan -> { woeccan; wacan; wacian; wahtaOG }
+    woeccan [label=<<b>Old English</b><br/><font color="red">wœccan</font>>];
+    woeccan -> wacchen [weight=2];
+    wacchen [label=<<b>Middle<br/>English</b><br/><font color="red">wacchen</font>>];
+    wacchen -> watch;
+    watch [label=<<b>Modern<br/>English</b><br/><font color="red">watch</font>>];
+    wacan [label=<<b>Old English</b><br/><font color="red">wacan</font><br/><font point-size="12">to awake</font>>];
+    wacian [label=<<b>Old English</b><br/><font color="red">wacian</font><br/><font point-size="12">to be awake</font>>];
+    wacan -> waken;
+    waken [label=<<b>Middle<br/>English</b><br/><font color="red">waken</font>>];
+    wacan -> awacan;
+    awacan [label=<<font color="red">awacan</font>>];
+    awacan -> awaken;
+    awaken [label=<<b>Middle<br/>English</b><br/><font color="red">awaken</font>>];
+    wacian -> wakien;
+    wakien [label=<<b>Middle<br/>English</b><br/><font color="red">wakien, waken</font>>];
+    wacian -> awacian;
+    awacian [label=<<font color="red">awacian</font>>];
+    awacian -> awakien;
+    awakien [label=<<b>Middle<br/>English</b><br/><font color="red">awakien</font>>];
+    { rank=same; waken; awaken; wakien; awakien }
+    { waken; wakien } -> wake;
+    { awaken; awakien } -> awake;
+    wake [label=<<b>Modern<br/>English</b><br/><font color="red">wake</font>>];
+    awake [label=<<b>Modern<br/>English</b><br/><font color="red">awake</font>>];
+    wahtaOG [label=<<b>Old High<br/>German</b><br/><font color="red">wahta</font>>];
+    wahtaOG -> wahteMG;
+    wahteMG [label=<<b>Middle High<br/>German</b><br/><font color="red">wahte</font>>];
+    wahteMG -> wacht;
+    wacht [label=<<b>German</b><br/><font color="red">Wacht</font><br/><font point-size="12">watch, vigil</font>>];
+    bei -> beiwacht;
+    wacht -> beiwacht [weight=5]; /* can I swap bei, wacht? */
+	bhiIE [label=<<font color="red">*bhi</font>>]
+	biGmc [label=<<b>Germanic</b><br/><font color="red">*bi, *bi-</font>>]
+    biOHG [label=<<b>Old High<br/>German</b><br/><font color="red">bi</font><br/><font point-size="12">by, at</font>>]
+	biMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">bi-</font>>]
+	bei [label=<<b>German</b><br/><font color="red">bei-</font><br/><font point-size="12">beside</font>>];
+	ambhiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ambhi, *m̥bhi</font><br/><font point-size="12">around</font>> shape=box style="dashed,rounded" URL="ambhi-around.svg"]
+	ambhiIE -> bhiIE -> biGmc -> biOHG -> biMHG -> bei
+    beiwacht [label=<<font color="red">beiwacht</font><br/><font point-size="12">supplementary<br/>night watch</font>>];
+    beiwacht -> bivouacF [style=dashed];
+    bivouacF [label=<<b>French</b><br/><font color="red">bivouac</font>>];
+    bivouacF -> bivouac [style=dashed];
+    bivouac [label=<<b>Modern<br/>English</b><br/><font color="red">bivouac</font>>];
+    wakhtan -> wachten;
+    wakhtan -> watier [style=dashed];
+    wachten [label=<<b>Middle<br/>Dutch</b><br/><font color="red">wachten</font><br/><font point-size="12">to watch, guard</font>>];
+    wachten -> waughten [style=dashed];
+    waughten [label=<<b>Middle<br/>English</b><br/><font color="red">waughten</font><br/><font point-size="12">to guard, convey</font>>];
+    waughten -> waft;
+    waft [label=<<b>Modern<br/>English</b><br/><font color="red">waft</font>>];
+    watier [label=<<b>Old North<br/>French</b><br/><font color="red">watier</font><br/><font point-size="12">to watch</font>>];
+    watier -> waitME [style=dashed];
+    waitME [label=<<b>Middle<br/>English</b><br/><font color="red">wait</font>>];wait
+    watier -> awaitier;
+    awaitier [label=<<font color="red">awaitier</font>>];
+    awaitier -> awaitME [style=dashed];
+    awaitME [label=<<b>Middle<br/>English</b><br/><font color="red">await</font>>];
+    { rank=same; waitME; awaitME; waughten }
+    waitME -> wait;
+    awaitME -> await;
+    wait [label=<<b>Modern<br/>English</b><br/><font color="red">wait</font>>];
+    await [label=<<b>Modern<br/>English</b><br/><font color="red">await</font>>];
+    waft [label=<<b>Modern<br/>English</b><br/><font color="red">waft</font>>];
+    { rank=same; watch; wake; awake; bivouac; wait; await; waft }
+    { rank=same; wacian; wacan; wahtaOG; woeccan; watier } // Old English
+    { rank=same; wacchen; awakien; wakien; awaken; waken; beiwacht; waughten; awaitME; waitME } // Middle English
+    { rank=same; wahteMG; wachten; awacian; awacan; } // Middle High German, Middle Dutch, 2nd Old English
+	{ rank=same ambhiIE weg }
+}

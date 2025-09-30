@@ -1,0 +1,78 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+ambhiIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ambhi, *m̥bhi</font></td><td><font point-size="16">around</font></td></tr></table>> tooltip="Indo-European \"*ambhi, *m̥bhi\" around" shape=rect style=dashed peripheries=1 margin=.3 URL="ambhi-around.svg"]
+
+
+// ambulate
+ambulareL [label=<<b>Latin</b><br/><font color="red">ambulāre, ambulāt-</font><br/><font point-size="12">to walk</font>>]
+ambulate [label=<<b>Modern<br/>English</b><br/><font color="red">ambulate</font>>]
+ambhiIE -> ambulareL
+ambulareL -> ambulate [style=dashed]
+
+// ambulance
+ambulansL [label=<<font color="red">ambulāns, ambulant-</font>>]
+ambulantF [label=<<b>French</b><br/><font color="red">(hôpital) ambulant</font><br/><font point-size="12">mobile (hospital)</font>>]
+ambulance [label=<<b>Modern<br/>English</b><br/><font color="red">ambulance</font>>]
+ambulareL -> ambulansL -> ambulantF
+ambulantF -> ambulance [style=dashed]
+
+// alley
+allerOF [label=<<b>Old French</b><br/><font color="red">aller</font>>]
+aleeOF [label=<<font color="red">alee</font>>]
+aleiME [label=<<b>Middle<br/>English</b><br/><font color="red">alei</font>>]
+alley [label=<<b>Modern<br/>English</b><br/><font color="red">alley</font>>]
+ambulareL -> allerOF -> aleeOF
+aleeOF -> aleiME [style=dashed]
+aleiME -> alley
+
+// alley-oop
+allezF [label=<<b>French</b><br/><font color="red">aller,<br/>allez</font>>]
+allezoopF [label=<<font color="red">allez-oop</font><br/><font point-size="12">(cry of circus acrobat<br/>about to leap)</font>>]
+alleyoop [label=<<b>Modern<br/>English</b><br/><font color="red">alley-oop</font>>]
+allerOF -> allezF -> allezoopF
+allezoopF -> alleyoop [style=dashed]
+
+// andante
+andareI [label=<<b>Italian</b><br/><font color="red">andare</font>>]
+andanteI [label=<<font color="red">andante</font>>]
+andante [label=<<b>Modern<br/>English</b><br/><font color="red">andante</font>>]
+ambulareL -> andareI [label="?" decorate=true]
+andareI -> andanteI
+andanteI -> andante [style=dashed]
+
+// funambulist
+funisL [label=<<b>Latin</b><br/><font color="red">fūnis</font><br/><font point-size="12">rope</font>>]
+funambulusL [label=<<font color="red">fūnambulus</font><br/><font point-size="12">tightrope walker</font>>]
+funambulist [label=<<b>Modern<br/>English</b><br/><font color="red">funambulist</font>>]
+{ funisL ambulareL } -> funambulusL
+funambulusL -> funambulist [style=dashed]
+
+// perambulate
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">(various<br/>prepositions)</font>>]
+perL [label=<<b>Latin</b><br/><font color="red">per, per-</font><br/><font point-size="12">through</font>> shape=box style="dashed,rounded" URL="per-peri.svg"]
+perambulareL [label=<<font color="red">perambulāre, perambulāt-</font>>]
+perambulate [label=<<b>Modern<br/>English</b><br/><font color="red">perambulate</font>>]
+perIE -> perL
+{ perL ambulareL } -> perambulareL
+perambulareL -> perambulate [style=dashed]
+
+// preamble
+praeL [label=<<b>Latin</b><br/><font color="red">prae-</font><br/><font point-size="12">before</font>> shape=box style="dashed,rounded" URL="per-prai1.svg"]
+praeambulumL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">praeambulum</font><br/><font point-size="12">walking in front</font>>]
+preambuleOF [label=<<b>Old French</b><br/><font color="red">preambule</font>>]
+preambleME [label=<<b>Middle<br/>English</b><br/><font color="red">preamble</font>>]
+preamble [label=<<b>Modern<br/>English</b><br/><font color="red">preamble</font>>]
+perIE -> praeL
+{ praeL ambulareL } -> praeambulumL -> preambuleOF
+preambuleOF -> preambleME [style=dashed]
+preambleME -> preamble
+
+// perambulator, pram
+perambulator [label=<<b>Modern<br/>English</b><br/><font color="red">perambulator</font>>]
+pram [label=<<b>Modern<br/>English</b><br/><font color="red">pram</font>>]
+perambulate -> perambulator -> pram
+
+{ rank=sink ambulate ambulance alley alleyoop andante funambulist perambulate preamble perambulator pram}
+
+}

@@ -1,0 +1,122 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+sweks [label=<<table border="0"><tr><td colspan="2"><font point-size="24">Indo-European</font></td></tr><tr><td><font point-size="18" color="red">*s(w)eks</font></td><td><font point-size="16">six</font></td></tr></table>> tooltip="Indo-European \"s(w)eks\" six" shape=rect peripheries=2 margin=.3]
+sexto [label=<<font color="red">*seks-to-</font>>]
+sweks -> sexto [sametail=1]
+
+/* omitted: sextodecimo (printing), sext (eccl), senary, sexagesimal, sextile (astronomy), seicento (17th C, in art), hexapod, hexamerous, chemicals, hexameter, hexad */
+
+/* dekm */
+dekmIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dekm̥</font><br/><font point-size="12">ten</font>> shape=box style="dashed,rounded" URL="dekm-ten1.svg"]
+tehunGm [label=<<b>Germanic</b><br/><font color="red">*tehun</font>>]
+tyneOE [label=<<b>Old English</b><br/><font color="red">-tēne, -tīne, -tȳne</font>>]
+dekmIE -> tehunGm [sametail=1]
+tehunGm -> tyneOE
+kontaIE [label=<<font color="red">*-dkōm-tā̆, *-kontā̆</font>>]
+gintaL [label=<<b>Latin</b><br/><font color="red">-gintā</font><br/><font point-size="12">ten times</font>>]
+dekmIE -> kontaIE [sametail=1]
+kontaIE -> gintaL
+
+/* English (< seks) */
+seksGm [label=<<b>Germanic</b><br/><font color="red">*seks</font>>]
+sixOE [label=<<b>Old English</b><br/><font color="red">sex, siex, six</font>>]
+sixME [label=<<b>Middle<br/>English</b><br/><font color="red">six</font>>]
+six [label=<<b>Modern<br/>English</b><br/><font color="red">six</font>>]
+sweks -> seksGm [sametail=1]
+seksGm -> sixOE
+sixOE -> sixME [sametail=1]
+sixME -> six
+sixtigOE [label=<<font color="red">sixtig</font>>]
+sixtyME [label=<<b>Middle<br/>English</b><br/><font color="red">sixty</font>>]
+sixty [label=<<b>Modern<br/>English</b><br/><font color="red">sixty</font>>]
+sixOE -> sixtigOE [sametail=1]
+sixtigOE -> sixtyME -> sixty
+sixtyneOE [label=<<font color="red">sixtȳne</font>>]
+sixteneME [label=<<b>Middle<br/>English</b><br/><font color="red">sixtene</font>>]
+sixteen [label=<<b>Modern<br/>English</b><br/><font color="red">sixteen</font>>]
+sixOE -> sixtyneOE [sametail=1 samehead=1]
+sixtyneOE -> sixteneME -> sixteen
+tyneOE -> sixtyneOE [samehead=1]
+
+/* Latin < sex */
+sexL [label=<<b>Latin</b><br/><font color="red">sex, sē-</font>>]
+sexE [label=<<b>Modern<br/>English</b><br/><font color="red">sex-</font>>]
+sweks -> sexL [sametail=1]
+sexL -> sexE [style=dashed sametail=1]
+sexagintaL [label=<<font color="red">sexāgintā</font><br/><font point-size="12">sixty</font>>]
+sexageniL [label=<<font color="red">sexāgēnī</font><br/><font point-size="12">sixty each</font>>]
+sexagenary [label=<<b>Modern<br/>English</b><br/><font color="red">sexagenary<br/>sexagenarian</font>>]
+sexL -> sexagintaL [sametail=1 samehead=1]
+gintaL -> sexagintaL [samehead=1]
+sexagintaL -> sexageniL
+sexageniL -> sexagenary [style=dashed]
+semestrisL [label=<<font color="red">(cursus) sēmēnstris<br/>(cursus) sēmēstris</font><br/><font point-size="12">(course) of six months</font>>]
+semesterGer [label=<<b>German</b><br/><font color="red">Semester</font>>]
+semester [label=<<b>Modern<br/>English</b><br/><font color="red">semester</font>>]
+sexL -> semestrisL [sametail=1]
+semestrisL -> semesterGer -> semester [style=dashed]
+
+/* Latin < sexto */
+sextusL [label=<<b>Latin</b><br/><font color="red">sextus</font><br/><font point-size="12">sixth</font>>]
+sextansL [label=<<font color="red">sextāns, sextant-</font><br/><font point-size="12">sixth part</font>>]
+sextantNL [label=<<b>New Latin</b><br/><font color="red">sextant</font><br/><font point-size="12">astronomical<br/>instrument</font>>]
+sextant [label=<<b>Modern<br/>English</b><br/><font color="red">sextant</font>>] // picture, explanation?
+sexto -> sextusL
+sextusL -> sextansL [sametail=1]
+sextansL -> sextantNL -> sextant [style=dashed]
+sextuplusL [label=<<font color="red">sextuplus</font><br/><font point-size="12">sixfold</font>>]
+sextuple [label=<<b>Modern<br/>English</b><br/><font color="red">sextuple<br/>sextuplet</font>>]
+sextusL -> sextuplusL [sametail=1]
+sextuplusL -> sextuple [style=dashed]
+/* sextillion?, sestet/sextet? */
+sextaL [label=<<font color="red">sexta (hōra)</font><br/><font point-size="12">sixth (hour),<br/>midday</font>>] // explanation
+siestaS [label=<<b>Spanish</b><br/><font color="red">siesta</font><br/><font point-size="12">midday nap</font>>]
+siesta [label=<<b>Modern<br/>English</b><br/><font color="red">siesta</font>>]
+sextusL -> sextaL [sametail=1]
+sextaL -> siestaS
+siestaS -> siesta [style=dashed]
+sixtusL [label=<<font color="red">Sixtus</font><br/><font point-size="12">(the name of<br/>several popes)</font>>] // Med.
+sixtinusL [label=<<font color="red">sixtīnus</font>>] // NewL
+sistinoI [label=<<b>Italian</b><br/><font color="red">sistino</font>>]
+sistine [label=<<b>Modern<br/>English</b><br/><font color="red">Sistine<br/>(Chapel)</font>>]
+sextusL -> sixtusL [sametail=1]
+sixtusL -> sixtinusL -> sistinoI
+sistinoI -> sistine [style=dashed]
+
+/* Greek hex */
+hexG [label=<<b>Greek</b><br/><font color="red">hex<br/>hex(a)-</font>>]
+hexaE [label=<<b>Modern<br/>English</b><br/><font color="red">hex(a)-</font>>]
+sweks -> hexG [sametail=1]
+hexG -> hexaE [style=dashed sametail=1]
+exaE [label=<<b>Modern<br/>English</b><br/><font color="red">exa-</font>>]
+hexaE -> exaE
+hexagonosG [label=<<font color="red">hexagōnos</font><br/><font point-size="12">having six angles</font>>]
+hexagonumL [label=<<b>Latin</b><br/><font color="red">hexagōnum</font>>]
+hexagon [label=<<b>Modern<br/>English</b><br/><font color="red">hexagon<br/>hexagonal</font>>]
+hexG -> hexagonosG [sametail=1 samehead=1]
+hexagonosG -> hexagonumL -> hexagon [style=dashed]
+genuIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*genu-</font><br/><font point-size="12">knee</font>> shape=box style="dashed,rounded" URL="genu-knee.svg"] 
+goniaG [label=<<b>Greek</b><br/><font color="red">gōniā</font><br/><font point-size="12">angle</font><br/><font color="red">gōnos</font><br/><font point-size="12">angled</font>>]
+genuIE -> goniaG
+goniaG -> hexagonosG [samehead=1]
+hexaedronG [label=<<font color="red">hexaedron</font><br/><font point-size="12">having six sides</font>>] // hexahedros, dict. form
+hexahedron [label=<<b>Modern<br/>English</b><br/><font color="red">hexahedron</font>>]
+hexG -> hexaedronG [sametail=1 samehead=1]
+hexaedronG -> hexahedron [style=dashed]
+sedIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*sed-</font><br/><font point-size="12">to sit</font>> shape=box style="dashed,rounded" URL="sed-sit.svg"] // not made
+sedraIE [label=<<font color="red">*sed-rā-</font>>]
+hedraG [label=<<b>Greek</b><br/><font color="red">hedrā</font><br/><font point-size="12">seat, face of a<br/>geometric solid</font><br/><font color="red">-edros, -edron</font><br/><font point-size="12">-sided</font>>]
+sedIE -> sedraIE -> hedraG
+hedraG -> hexaedronG [samehead=1]
+
+{ rank=same six sixty sixteen sexE sexagenary semester sextant sextuple siesta sistine hexaE exaE hexagon hexahedron }
+{ rank=same sweks genuIE dekmIE sedIE }
+{ rank=same seksGm tehunGm sexL sextusL gintaL hexG goniaG hedraG }
+{ rank=same sixME sixtyME sixteneME semesterGer siestaS sistinoI }
+sextusL -> { sextansL sextuplusL sextaL } [weight=2]
+sexL -> semestrisL [weight=2]
+sexagintaL -> sexageniL [weight=2]
+hexagonosG -> hexagonumL [weight=2]
+seksGm -> tehunGm -> sexL -> gintaL [style=invis]
+}

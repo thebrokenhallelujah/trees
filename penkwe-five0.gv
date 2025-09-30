@@ -1,0 +1,12 @@
+strict digraph {
+/* sources: AHD, roots */
+node [shape=none]
+penkwe [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*penkʷe</font></td><td><font point-size="16">five</font></td></tr></table>> tooltip="Indo-European \"*penkʷe\" five" shape=box peripheries=2 margin=.3]
+
+/* omitted: pinxter (flower) */
+
+link1 [label=<basic form> shape=box style="dashed,rounded" URL="penkwe-five1.svg" tooltip="penkʷe, basic form"]
+link2 [label=<derived forms> shape=box style="dashed,rounded" URL="penkwe-five2.svg" tooltip="penkʷe, derived forms"]
+penkwe -> { link1 link2 } [minlen=2 sametail=1]
+
+}
