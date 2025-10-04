@@ -1,0 +1,25 @@
+strict digraph {
+/* sources: AHD */
+	node [shape=none]
+	dwo [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">dwo-</font></td><td><font point-size="16">two</font></td></tr></table>> tooltip="Indo-European \"dwo-\" two" shape=box peripheries=2 margin=.3]
+	link1 [label=<<table border="0" cellpadding="5">
+<tr><td><font color="red">*duwo-</font></td></tr>
+<tr><td><font color="red">*duwō</font></td></tr>
+</table>> shape=box style="dashed,rounded" URL="dwo-two1.svg" tooltip=""]
+	link2  [label=<<table border="0" cellpadding="5">
+<tr><td><font color="red">*du-</font></td></tr>
+<tr><td><font color="red">*dwis-</font></td></tr>
+</table>> shape=box style="dashed,rounded" URL="dwo-two2.svg" tooltip=""]
+	link3  [label=<<table border="0" cellpadding="5">
+<tr><td><font color="red">*dwi-</font></td></tr>
+</table>> shape=box style="dashed,rounded" URL="dwo-two3.svg" tooltip=""]
+
+
+/* ---------
+	link1 [label="two\ntwain\ntwayblade\ntwelve\ntwelfth\nduad/dyad\ndozen\nduo-\ndual\nduo/duet\ndeuce" fontcolor=red shape=box style="dashed,rounded" URL="dwo-two1.svg"] 
+	link2 [label="twist\ntwin\nbiscuit\nbiscotto/i\nbezel\nduplex\nduplicate\nduplicity\nduple/double\ndoublet\ndoubloon\ndubious\ndoubt\nredoubtable\ndubitable" fontcolor=red shape=box style="dashed,rounded" URL="dwo-two2.svg"]
+	link3 [label="twenty\nbetween\ntwice\ntwine\ntwig\ntwilight\ntwill\nzwitterion\nzwieback\nbalance\nbarouche\nbi(n)-\ndiplo-\ndiploma\ndiplomatic\ndich(o)-" fontcolor=red shape=box style="dashed,rounded" URL="dwo-two3.svg"]
+---------- */
+	dwo -> { link1 link2 link3 } [sametail=1 minlen=2]
+
+}

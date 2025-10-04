@@ -1,0 +1,80 @@
+strict digraph {
+node [shape=none]
+enIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*en </font><font point-size="16">in</font>> shape=box style="dashed,rounded" URL="en-in0.svg" tooltip="Indo-European \"en\" in"]
+
+/* Gmc, omitted: tsimmes, ben */
+inGm [label=<<b>Germanic</b><br/><font color="red">*in</font>>]
+enIE -> inGm 
+
+/* in, into */
+inOE [label=<<b>Old English</b><br/><font color="red">in</font><br/><font point-size="12">(prep.)</font>>]
+inneOE [label=<<b>Old English</b><br/><font color="red">inn</font><br/><font point-size="12">into</font><br/><font color="red">inne</font><br/><font point-size="12">inside</font>>]
+inME [label=<<b>Middle<br/>English</b><br/><font color="red">in</font>>]
+in [label=<<b>Modern<br/>English</b><br/><font color="red">in</font>>]
+inGm -> {inOE inneOE}
+{inOE inneOE} -> inME
+inME -> in
+inntoOE [label=<<br/><font color="red">inn tō</font>>]
+// intoME [label=<<b>Middle<br/>English</b><br/><font color="red">into / in to ?</font>>]
+into [label=<<b>Modern<br/>English</b><br/><font color="red">into</font>>]
+inneOE -> inntoOE -> into
+
+/* inn */
+innOE [label=<<b>Old English</b><br/><font color="red">inn</font><br/><font point-size="12">habitation, inn</font>>]
+innME [label=<<b>Middle<br/>English</b><br/><font color="red">inn</font>>]
+inn [label=<<b>Modern<br/>English</b><br/><font color="red">inn</font>>]
+inGm -> innOE
+innOE -> innME -> inn
+
+/* inner */
+inneraGm [label=<<b>Germanic</b><br/><font color="red">inn(e)ra</font>>] // comparative ="farther in?"
+inneraOE [label=<<b>Old English</b><br/><font color="red">innera</font>>]
+innerME [label=<<b>Middle<br/>English</b><br/><font color="red">inner</font>>]
+inner [label=<<b>Modern<br/>English</b><br/><font color="red">inner</font>>]
+enIE -> inneraGm
+inneraGm -> inneraOE -> innerME -> inner
+
+/* inward, innards */
+inweardOE [label=<<font color="red">inweard</font><br/><font point-size="12">inward</font>>]
+inwardME [label=<<b>Middle<br/>English</b><br/><font color="red">inward<br/>inwards</font>>]
+inward [label=<<b>Modern<br/>English</b><br/><font color="red">inward(s)<br/>innards</font>>]
+inOE -> inweardOE -> inwardME -> inward
+
+/* L in-, en- */
+inL [label=<<b>Latin</b><br/><font color="red">in</font>>]
+p_inL [label=<<font color="red">in-</font>>]
+p_inOF [label=<<b>Old French</b><br/><font color="red">in-</font><br/><font color="red">en-</font>>]
+p_inOE [label=<<font color="red">in-</font>>]
+p_inME [label=<<b>Middle<br/>English</b><br/><font color="red">in-</font><br/><font color="red">en-</font>>]
+p_in [label=<<b>Modern<br/>English</b><br/><font color="red">in-</font><br/><font color="red">en-</font>>]
+enIE -> inL -> p_inL -> p_inOF
+inOE -> p_inOE
+p_inOF -> p_inOE [style=dashed]
+p_inOE -> p_inME -> p_in
+
+/* G en-, omitted: enkephalin, parenchyma*/
+enG [label=<<b>Greek</b><br/><font color="red">en</font>>]
+p_enG [label=<<font color="red">en-</font>>]
+p_enL [label=<<b>Latin</b><br/><font color="red">en-</font>>]
+p_enME [label=<<b>Middle<br/>English</b><br/><font color="red">en-</font>>]
+p_en [label=<<b>Modern<br/>English</b><br/><font color="red">en-</font>>]
+enIE -> enG -> p_enG
+p_enG -> p_enL -> p_enME [style=dashed]
+p_enME -> p_en
+
+/* parenthesis */
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">(various prepositions)</font>> shape=box style="dashed,rounded" URL="per-prea.svg"]
+paraG [label=<<b>Greek</b><br/><font color="red">para-</font><br/><font point-size="12">beside, beyond, extra</font>>]
+perIE -> paraG
+dheIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dhē-</font><br/><font point-size="12">to put</font>> shape=box style="dashed,rounded" URL="dhe-put.svg"]
+tithenai [label=<<b>Greek</b><br/><font color="red">tithenai</font>>]
+dheIE -> tithenai
+parentithenai [label=<<font color="red">parentithenai</font><br/><font point-size="12">to insert</font><br/><font color="red">parenthesis</font>>]
+parenthesisL [label=<<b>Latin</b><br/><font color="red">parenthesis</font><br/><font point-size="12">insertion of a<br/>letter or syllable<br/>in a word</font>>]
+parenthesis [label=<<b>Modern<br/>English</b><br/><font color="red">parenthesis<br/>parentheses</font>>]
+{paraG p_enG tithenai} -> parentithenai
+parentithenai -> parenthesisL -> parenthesis [style=dashed]
+
+
+{rank=same in into inn inner inward p_in p_en parenthesis}
+}

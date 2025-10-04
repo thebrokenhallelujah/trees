@@ -1,0 +1,93 @@
+strict digraph {
+node [shape=none]
+
+enIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*en </font><font point-size="16">in</font>> shape=box style="dashed,rounded" URL="en-in0.svg" tooltip="Indo-European \"en\" in"]
+
+enterIE [label=<<font color="red">*en-ter</font>>]
+enmoIE [label=<<font color="red">*en-mo</font><br/><font point-size="12">innermost</font>>]
+endoIE [label=<<font color="red">*en-do</font>>]
+enIE -> { enterIE enmoIE endoIE }
+
+// inter-
+interL [label=<<b>Latin</b><br/><font color="red">inter<br/>inter-</font><br/><font point-size="12">between, among</font>>]
+entreOF [label=<<b>Old French</b><br/><font color="red">entre-</font>>]
+entreME [label=<<b>Middle<br/>English</b><br/><font color="red">entre-<br/>inter-</font>>]
+inter [label=<<b>Modern<br/>English</b><br/><font color="red">inter-</font>>]
+enterIE -> interL -> entreOF
+entreOF -> entreME [style=dashed]
+entreME -> inter
+
+// entrails
+interaneusL [label=<<font color="red">interāneus</font><br/><font point-size="12">internal</font>>]
+interaneaL [label=<<font color="red">interānea</font>>]
+intraliaL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">intrālia</font>>]
+entrailleOF [label=<<b>Old French</b><br/><font color="red">entraille</font>>]
+entrailleME [label=<<b>Middle<br/>English</b><br/><font color="red">entraille</font>>]
+entrails [label=<<b>Modern<br/>English</b><br/><font color="red">entrails</font>>]
+interL -> interaneusL -> interaneaL -> intraliaL -> entrailleOF
+entrailleOF -> entrailleME [style=dashed]
+entrailleME -> entrails
+
+// interior
+interiorL [label=<<font color="red">interior</font>>]
+interior [label=<<b>Modern<br/>English</b><br/><font color="red">interior</font>>]
+interL -> interiorL
+interiorL -> interior [style=dashed]
+
+// intern, internal
+internusL [label=<<font color="red">internus</font>>]
+interneF [label=<<b>French</b><br/><font color="red">interne</font>>]
+intern [label=<<b>Modern<br/>English</b><br/><font color="red">intern</font>>]
+interL -> internusL -> interneF
+interneF -> intern [style=dashed]
+internalisL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">internālis</font>>]
+internelOF [label=<<b>Old French</b><br/><font color="red">internel</font>>]
+internallME [label=<<b>Middle<br/>English</b><br/><font color="red">internall</font>>]
+internal [label=<<b>Modern<br/>English</b><br/><font color="red">internal</font>>]
+internusL -> internalisL -> internelOF
+internelOF -> internallME [style=dashed]
+internallME -> internal
+
+// intima, intimate
+intimusL [label=<<b>Latin</b><br/><font color="red">intimus</font>>]
+intimaL [label=<<font color="red">intima</font>>]
+intima [label=<<b>Modern<br/>English</b><br/><font color="red">intima</font>>]
+enmoIE -> intimusL -> intimaL
+intimaL -> intima [style=dashed]
+intimareL [label=<<font color="red">intimāre, intimāt-</font><br/><font point-size="12">to make known</font>>]
+intimate [label=<<b>Modern<br/>English</b><br/><font color="red">intimate</font>>]
+intimusL -> intimareL
+intimareL -> intimate [style=dashed]
+
+// industry
+induL [label=<<b>Latin</b><br/><font color="red">indu-</font><br/><font point-size="12">within</font>>]
+struL [label=<<b>Latin</b><br/><font color="red">*stru-</font><br/><font point-size="12">to construct</font>>]
+industriusL [label=<<font color="red">industrius</font><br/><font point-size="12">diligent</font>>]
+industriaL [label=<<font color="red">industria</font><br/><font point-size="12">diligence</font>>]
+industrieOF [label=<<b>Old French</b><br/><font color="red">industrie</font>>]
+industrieME [label=<<b>Middle<br/>English</b><br/><font color="red">industrie</font>>]
+industry [label=<<b>Modern<br/>English</b><br/><font color="red">industry</font>>]
+endoIE -> induL
+{ induL struL } -> industriusL -> industriaL -> industrieOF
+industrieOF -> industrieME [style=dashed]
+industrieME -> industry
+
+// indigent
+indigereL [label=<<font color="red">indigēre</font><br/><font point-size="12">to need</font>>]
+indigensL [label=<<font color="red">indigēns, indigent-</font>>]
+indigentOF [label=<<b>Old French</b><br/><font color="red">indigent</font>>]
+indigentME [label=<<b>Middle<br/>English</b><br/><font color="red">indigent</font>>]
+indigent [label=<<b>Modern<br/>English</b><br/><font color="red">indigent</font>>]
+induL -> indigereL -> indigensL -> indigentOF 
+indigentOF -> indigentME [style=dashed]
+indigentME -> indigent
+
+// endo-
+endonG [label=<<b>Greek</b><br/><font color="red">endon, endo-</font><br/><font point-size="12">within</font>>]
+endo [label=<<b>Modern<br/>English</b><br/><font color="red">endo-<br/>end-</font>>]
+endoIE -> endonG
+endonG -> endo [style=dashed]
+
+{ rank=sink inter entrails interior intern internal intima intimate industry indigent endo }
+{ rank=same interL intimusL induL endonG }
+}

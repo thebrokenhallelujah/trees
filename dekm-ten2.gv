@@ -1,0 +1,173 @@
+strict digraph {
+node [shape=none]
+
+dekmIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*dekm̥ </font><font point-size="16">ten</font>> shape=box style="dashed,rounded" URL="dekm-ten0.svg" tooltip="Indo-European \"*dekm̥\" ten"]
+
+
+kontaIE [label=<<font color="red">-dkōm-tā̆, -kontā̆</font>>]
+gintaL [label=<<b>Latin</b><br/><font color="red">-gintā</font><br/><font point-size="12">times ten</font>>]
+dekmIE -> kontaIE [sametail=1]
+kontaIE -> gintaL [sametail=1]
+
+decemL [label=<<b>Latin</b><br/><font color="red">decem</font>>]
+
+/* dozen */
+dwoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dwo-</font><br/><font point-size="12">two</font>> shape=box style="dashed,rounded" URL="dwo-two1.svg"]
+duoL [label=<<b>Latin</b><br/><font color="red">duo</font>>]
+duodecimL [label=<<font color="red">duodecim</font><br/><font point-size="12">twelve</font>>]
+dozeOF [label=<<b>Old French</b><br/><font color="red">doze<br/>dozaine</font>>]
+dozeineME [label=<<b>Middle<br/>English</b><br/><font color="red">dozeine</font>>]
+dozen [label=<<b>Modern<br/>English</b><br/><font color="red">dozen</font>>]
+dwoIE -> duoL
+duoL -> duodecimL [samehead=1]
+decemL -> duodecimL [sametail=1 samehead=1]
+duodecimL -> dozeOF [sametail=1]
+dozeOF -> dozeineME [style=dashed]
+dozeineME -> dozen
+
+/* tredecillion */
+treiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*trei-</font><br/><font point-size="12">three</font>> shape=box style="dashed,rounded" URL="trei-three1.svg"]
+tresL [label=<<b>Latin</b><br/><font color="red">trēs</font>>]
+tredecimL [label=<<font color="red">tredecim</font><br/><font point-size="12">thirteen</font>>]
+tredecillion [label=<<b>Modern<br/>English</b><br/><font color="red">tredecillion</font>>]
+treiIE -> tresL
+tresL -> tredecimL [samehead=1]
+decemL -> tredecimL [sametail=1 samehead=1]
+tredecimL -> tredecillion [style=dashed]
+
+
+/* quattuordecillion */
+kwetwerIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*kʷetwer-</font><br/><font point-size="12">four</font>> shape=box style="dashed,rounded" URL="kwetwer-four1.svg"]
+quattuorL [label=<<b>Latin</b><br/><font color="red">quattuor</font>>]
+quattuordecimL [label=<<font color="red">quattuordecim</font><br/><font point-size="12">fourteen</font>>]
+quattuordecillion [label=<<b>Modern<br/>English</b><br/><font color="red">quattuordecillion</font>>]
+kwetwerIE -> quattuorL
+quattuorL -> quattuordecimL [samehead=1]
+decemL -> quattuordecimL [sametail=1 samehead=1]
+quattuordecimL -> quattuordecillion [style=dashed]
+
+/* Pentecost */
+penkweIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*penkʷe</font><br/><font point-size="12">five</font>> shape=box style="dashed,rounded" URL="penkwe-five2.svg"]
+penteG [label=<<b>Greek</b><br/><font color="red">pente</font><br/><font point-size="12">five</font>>]
+kontaG [label=<<b>Greek</b><br/><font color="red">-konta</font><br/><font point-size="12">times ten</font>>]
+pentekontaG [label=<<font color="red">pentēkonta</font><br/><font point-size="12">fifty</font>>]
+pentekostosG [label=<<font color="red">pentēkostos</font><br/><font point-size="12">fiftieth</font>>]
+pentekosteG [label=<<font color="red">pentēkostē (hēmera)</font><br/><font point-size="12">fiftieth (day)</font>>]
+pentecosteL [label=<<b>Late Latin</b><br/><font color="red">Pentēcostē</font>>]
+pentecostenOE [label=<<b>Old English</b><br/><font color="red">Pentecosten</font>>]
+pentecosteME [label=<<b>Middle<br/>English</b><br/><font color="red">pentecoste</font>>]
+pentecost [label=<<b>Modern<br/>English</b><br/><font color="red">Pentecost<br/>Pentecostal</font>>]
+kontaIE -> kontaG [sametail=1]
+penkweIE -> penteG
+penteG -> pentekontaG [samehead=1]
+kontaG -> pentekontaG [samehead=1 sametail=1]
+pentekontaG -> pentekostosG -> pentekosteG
+pentekosteG -> pentecosteL -> pentecostenOE [style=dashed]
+pentecostenOE -> pentecosteME -> pentecost
+
+
+/* sexagenarian/sexagenary, sexagesimal, sextodecimo */
+sweksIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*s(w)eks</font><br/><font point-size="12">six</font>> shape=box style="dashed,rounded" URL="sweks-six.svg"]
+sexL [label=<<b>Latin</b><br/><font color="red">sex, sextus</font>>]
+sexagintaL [label=<<font color="red">sexāgintā</font><br/><font point-size="12">sixty</font>>]
+sexageniL [label=<<font color="red">sexāgēnī</font><br/><font point-size="12">sixty each</font>>]
+sexagenariusL [label=<<font color="red">sexāgēnārius</font>>]
+sexagenarian [label=<<b>Modern<br/>English</b><br/><font color="red">sexagenarian<br/>sexagenary</font>>]
+sweksIE -> sexL
+sexL -> sexagintaL [sametail=1 samehead=1]
+gintaL -> sexagintaL [sametail=1 samehead=1]
+sexagintaL -> sexageniL -> sexagenariusL
+sexagenariusL -> sexagenarian [style=dashed]
+sexagesimusL [label=<<font color="red">sexāgēsimus</font><br/><font point-size="12">sixtieth</font>>]
+sexagesimal [label=<<b>Modern<br/>English</b><br/><font color="red">sexagesimal</font>>]
+sexagintaL -> sexagesimusL
+sexagesimusL -> sexagesimal [style=dashed]
+sextusdecimusL [label=<<font color="red">sextusdecimus</font><br/><font point-size="12">one sixteenth</font>>]
+sextodecimoL [label=<<font color="red">(in) sextōdecimō</font><br/><font point-size="12">(in) a sixteenth</font>>]
+sextodecimo [label=<<b>Modern<br/>English</b><br/><font color="red">sextodecimo</font>>]
+sexL -> sextusdecimusL [sametail=1 samehead=1]
+decemL -> sextusdecimusL [sametail=1 samehead=1]
+sextusdecimusL -> sextodecimoL
+sextodecimoL -> sextodecimo [style=dashed]
+
+/* Septuagint, septuagenarian, septendicillion */
+septmIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*septm̥</font><br/><font point-size="12">seven</font>> shape=box style="dashed,rounded" URL="septm-seven.svg"]
+septemL [label=<<b>Latin</b><br/><font color="red">septem</font>>]
+septuagintaL [label=<<font color="red">septuāgintā</font><br/><font point-size="12">seventy</font>>]
+septuagint [label=<<b>Modern<br/>English</b><br/><font color="red">Septuagint</font>>]
+septmIE -> septemL
+septemL -> septuagintaL [sametail=1 samehead=1]
+gintaL -> septuagintaL [sametail=1 samehead=1]
+septuagintaL -> septuagint [style=dashed sametail=1]
+septuageniL [label=<<font color="red">septuāgēnī</font><br/><font point-size="12">seventy each</font>>]
+septuagenariusL [label=<<font color="red">septuāgēnārius</font><br/><font point-size="12">of the number seventy</font>>]
+septuagenarian [label=<<b>Modern<br/>English</b><br/><font color="red">septuagenarian</font>>]
+septuagintaL -> septuageniL -> septuagenariusL
+septuagenariusL -> septuagenarian [style=dashed]
+septendecimL [label=<<font color="red">septendecim</font><br/><font point-size="12">seventeen</font>>]
+septendecillion [label=<<b>Modern<br/>English</b><br/><font color="red">septendecillion</font>>]
+septemL -> septendecimL [sametail=1 samehead=1]
+decemL -> septendecimL [sametail=1 samehead=1]
+septendecimL -> septendecillion [style=dashed]
+
+/* octogenarian, octodecillion, octodecimo */
+oktoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*oktō(u)</font><br/><font point-size="12">eight</font>> shape=box style="dashed,rounded" URL="okto-eight.svg"]
+octoL [label=<<b>Latin</b><br/><font color="red">octō</font>>]
+octogintaL [label=<<font color="red">octōgintā</font><br/><font point-size="12">eighty</font>>]
+octogeniL [label=<<font color="red">octōgēnī</font><br/><font point-size="12">eighty each</font>>]
+octogenariusL [label=<<font color="red">octōgēnārius</font><br/><font point-size="12">of the number eighty</font>>]
+octogenaireF [label=<<b>French</b><br/><font color="red">octogénaire</font>>]
+octogenarian [label=<<b>Modern<br/>English</b><br/><font color="red">octogenarian</font>>]
+oktoIE -> octoL
+octoL -> octogintaL [sametail=1 samehead=1]
+gintaL -> octogintaL [sametail=1 samehead=1]
+octogintaL -> octogeniL -> octogenariusL -> octogenaireF
+octogenaireF -> octogenarian [style=dashed]
+octodecimL [label=<<font color="red">octōdecim</font><br/><font point-size="12">eighteen</font>>]
+octodecillion [label=<<b>Modern<br/>English</b><br/><font color="red">octodecillion</font>>]
+octoL -> octodecimL [sametail=1 samehead=1]
+decemL -> octodecimL [sametail=1 samehead=1]
+octodecimL -> octodecillion [style=dashed]
+octodecimusL [label=<<font color="red">octōdecimus</font><br/><font point-size="12">one eighteenth</font>>]
+octodecimoL [label=<<font color="red">(in) octōdecimō</font><br/><font point-size="12">(in) an eighteenth</font>>]
+octodecimo [label=<<b>Modern<br/>English</b><br/><font color="red">octodecimo</font>>]
+octodecimL -> octodecimusL [sametail=1]
+octodecimusL -> octodecimoL
+octodecimoL -> octodecimo [style=dashed]
+
+/* nonagenarian */
+newnIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*newn̥</font><br/><font point-size="12">nine</font>> shape=box style="dashed,rounded" URL="newn-nine.svg"]
+nonusL [label=<<b>Latin</b><br/><font color="red">nōnus</font><br/><font point-size="12">ninth</font>>]
+nonagintaL [label=<<font color="red">nōnāgintā</font><br/><font point-size="12">ninety</font>>]
+nonageniL [label=<<font color="red">nōnāgēnī</font><br/><font point-size="12">ninety each</font>>]
+nonagenariusL [label=<<font color="red">nōnāgēnārius</font>>]
+nonagenarian [label=<<b>Modern<br/>English</b><br/><font color="red">nonagenarian</font>>]
+newnIE -> nonusL
+nonusL -> nonagintaL [samehead=1]
+gintaL -> nonagintaL [sametail=1 samehead=1]
+nonagintaL -> nonageniL -> nonagenariusL
+nonagenariusL -> nonagenarian [style=dashed]
+
+/* duodecillion, duodecimal, duodecimo, duodenum */
+duodecimusL [label=<<font color="red">duodecimus</font><br/><font point-size="12">one twelfth</font>>]
+duodecimal [label=<<b>Modern<br/>English</b><br/><font color="red">duodecimal</font>>]
+duodecimL -> duodecimusL [sametail=1]
+duodecimusL -> duodecimal [style=dashed sametail=1]
+duodecillion [label=<<b>Modern<br/>English</b><br/><font color="red">duodecillion</font>>]
+duodecimL -> duodecillion [style=dashed sametail=1]
+duodecimoL [label=<<font color="red">duodecimō</font><br/><font point-size="12">(in) a twelfth</font>>]
+duodecimo [label=<<b>Modern<br/>English</b><br/><font color="red">duodecimo</font>>]
+duodecimusL -> duodecimoL [sametail=1]
+duodecimoL -> duodecimo [style=dashed]
+duodeniL [label=<<font color="red">duodēnī</font><br/><font point-size="12">twelve each</font>>]
+duodenumL [label=<<font color="red">intestīnum<br/>duodēnum digitōrum</font><br/><font point-size="12">intestines of twelve<br/>finger-widths (in length)</font>>]
+duodenumME [label=<<b>Middle<br/>English</b><br/><font color="red">duodenum</font>>]
+duodenum [label=<<b>Modern<br/>English</b><br/><font color="red">duodenum</font>>]
+duodecimL -> duodeniL [sametail=1]
+duodeniL -> duodenumL 
+duodenumL -> duodenumME [style=dashed]
+duodenumME -> duodenum
+
+{ rank=sink sexagenarian sexagesimal sextodecimo septuagint septuagenarian septendecillion octogenarian octodecillion octodecimo nonagenarian pentecost duodecillion duodecimal duodecimo duodenum dozen quattuordecillion tredecillion }
+{ rank=min dwoIE treiIE kwetwerIE penkweIE sweksIE septmIE oktoIE newnIE }
+}

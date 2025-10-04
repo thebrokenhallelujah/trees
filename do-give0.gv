@@ -1,0 +1,187 @@
+strict digraph {
+/* sources: AHD WiS Barn */
+node [shape=none]
+doIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*dō</font></td><td><font point-size="16">to give</font></td></tr></table>> tooltip="Indo-European \"*dō\" to give" shape=box peripheries=2 margin=.3] // origionally doə?
+doIE -> {deIE dono doti doro dido rank=same}
+deIE [label=<<font color="red">də-</font>>] // de-ti?
+dono [label=<<font color="red">dō-no-</font>>]
+doti [label=<<font color="red">dō-t(i)-</font>>]
+doro [label=<<font color="red">dō-ro-</font>>]
+dido [label=<<font color="red">di-dō</font>>]
+
+/* ---- L donum ---- */
+/* donation */
+donumL [label=<<b>Latin</b><br/><font color="red">dōnum</font><br/><font point-size="12">gift</font>>]
+donareL [label=<<font color="red">dōnāre</font><br/><font point-size="12">to give</font>>] // also forgive
+donatioL [label=<<font color="red">dōnātiō, dōnātiōn-</font>>]
+donaciounOF [label=<<b>Old French</b><br/><font color="red">donacioun</font><br/><font point-size="12">gift</font>>]
+donaciounME [label=<<b>Middle<br/>English</b><br/><font color="red">donacioun</font>>]
+donation [label=<<b>Modern<br/>English</b><br/><font color="red">donation<br/>donate</font>>]
+dono -> donumL -> donareL -> donatioL -> donaciounOF
+donaciounOF -> donaciounME [style=dashed]
+donaciounME -> donation
+
+/* donor */
+donatorL [label=<<font color="red">dōnātor</font>>]
+donourAN [label=<<b>Anglo-Norman</b><br/><font color="red">donour</font>>]
+donorME [label=<<b>Middle<br/>English</b><br/><font color="red">donor</font>>]
+donor [label=<<b>Modern<br/>English</b><br/><font color="red">donor</font>>]
+donareL -> donatorL -> donourAN 
+donourAN -> donorME [style=dashed]
+donorME -> donor
+
+/* condone */
+condonareL [label=<<font color="red">condōnāre</font>>]
+condone [label=<<b>Modern<br/>English</b><br/><font color="red">condone</font>>]
+donareL -> condonareL
+condonareL -> condone [style=dashed]
+/* com- (link to kom) */
+kom [label=<<font color="red">kom</font><br/><font point-size="12">with</font>> shape=box style="dashed,rounded" URL="kom-with.svg"]
+comL [label=<<b>Latin</b><br/><font color="red">com-</font>>]
+kom -> comL -> condonareL
+
+/* pardon */
+perdonareL [label=<<font color="red">perdōnāre</font><br/><font point-size="12">to give<br/>wholeheartedly</font>>] // Vulgar
+pardonerOF [label=<<b>Old French</b><br/><font color="red">pardoner</font>>]
+pardonenME [label=<<b>Middle<br/>English</b><br/><font color="red">pardonen</font>>]
+pardon [label=<<b>Modern<br/>English</b><br/><font color="red">pardon</font>>]
+donareL -> perdonareL -> pardonerOF
+pardonerOF -> pardonenME [style=dashed]
+pardonenME -> pardon
+/* per- (link to per) */
+perIE [label=<<font color="red">per</font><br/><font point-size="12">through</font>> shape=box style="dashed,rounded" URL="per-peri.svg"]
+perL [label=<<b>Latin</b><br/><font color="red">per-</font><br/><font point-size="12">(intensive<br/>prefix)</font>>]
+perIE -> perL -> perdonareL
+
+/* L dare (link) */
+dareL [label=<<b>Latin</b><br/><font color="red">dare</font><br/><font point-size="12">to give</font>> shape=box style="dashed,rounded" URL="do-give1.svg"]
+deIE -> dareL
+
+/* ---- L dos ---- */
+/* dower, omitted: dot */
+dosL [label=<<b>Latin</b><br/><font color="red">dōs, dōt-</font><br/><font point-size="12">dowry</font>>]
+dotariumL [label=<<font color="red">dōtārium<br/>dōārium</font>>]
+douaireOF [label=<<b>Old French</b><br/><font color="red">douaire</font>>]
+douereME [label=<<b>Middle<br/>English</b><br/><font color="red">douere</font>>]
+dower [label=<<b>Modern<br/>English</b><br/><font color="red">dower</font>>]
+doti -> dosL -> dotariumL -> douaireOF
+douaireOF -> douereME [style=dashed]
+douereME -> dower
+
+/* dowry */
+dowarieAN [label=<<b>Anglo-Norman</b><br/><font color="red">dowarie</font>>]
+dowaryeME [label=<<b>Middle<br/>English</b><br/><font color="red">dowarye</font>>]
+dowry [label=<<b>Modern<br/>English</b><br/><font color="red">dowry</font>>]
+douaireOF -> dowarieAN
+dowarieAN -> dowaryeME [style=dashed]
+dowaryeME -> dowry
+
+/* dowager */
+dotareL [label=<<b>Latin</b><br/><font color="red">dōtāre</font>>]
+douerMF [label=<<b>Middle<br/>French</b><br/><font color="red">douer</font><br/><font point-size="12">to endow</font>>]
+douagereMF [label=<<font color="red">douagere</font><br/><font point-size="12">dowager</font>>] // douage, dower omitted
+dowager [label=<<b>Modern<br/>English</b><br/><font color="red">dowager</font>>]
+dosL -> dotareL -> douerMF -> douagereMF
+douagereMF -> dowager [style=dashed]
+
+/* endow */
+endouerAN[label=<<b>Anglo-Norman</b><br/><font color="red">endouer</font>>]
+endouwenME [label=<<b>Middle<br/>English</b><br/><font color="red">endouwen</font>>]
+endow [label=<<b>Modern<br/>English</b><br/><font color="red">endow</font>>]
+douerMF -> endouerAN
+endouerAN -> endouwenME [style=dashed]
+endouwenME -> endow
+
+/* ---- Russian ---- */
+/* dacha */
+datjaSl [label=<<b>Slavic</b><br/><font color="red">datja</font>>] // proto language
+dachaR [label=<<b>Russian</b><br/><font color="red">dacha</font><br/><font point-size="12">gift, land,<br/>country house</font>>]
+dacha [label=<<b>Modern<br/>English</b><br/><font color="red">dacha</font>>]
+doti -> datjaSl -> dachaR
+dachaR -> dacha [style=dashed]
+
+/* samizdat */
+datR [label=<<b>Russian</b><br/><font color="red">dat'</font><br/><font point-size="12">to give</font>>]
+izdatR [label=<<font color="red">izdat'</font><br/><font point-size="12">to publish</font>>] // omitted: izdatel'stvo
+samizdatR [label=<<font color="red">samizdat</font><br/><font point-size="12">underground press</font>>]
+samizdat [label=<<b>Modern<br/>English</b><br/><font color="red">samizdat</font>>]
+doti -> datR -> izdatR -> samizdatR
+samizdatR -> samizdat [style=dashed]
+/* iz (link to eghs) */
+eghs [label=<<font color="red">eghs</font><br/><font point-size="12">out of, from</font>> shape=box style="dashed,rounded" URL="eghs-out.svg"]
+izR [label=<<b>Russian</b><br/><font color="red">iz</font>>]
+eghs -> izR -> izdatR
+/* sam (link to sem-) */
+sem [label=<<font color="red">sem</font><br/><font point-size="12">one, as one</font>> shape=box style="dashed,rounded" URL="sem-one.svg"]
+samR [label=<<b>Russian</b><br/><font color="red">sam</font><br/><font point-size="12">self</font>>]
+sem -> samR -> samizdatR
+
+/* ---- Gk doron ---- */
+/* Pandora */
+doronG [label=<<b>Greek</b><br/><font color="red">dōron</font><br/><font point-size="12">gift</font>>]
+pandoraG [label=<<font color="red">Pandōrā</font><br/><font point-size="12">"having all the gifts"</font>>]
+pandora [label=<<b>Modern<br/>English</b><br/><font color="red">Pandora<br/>Pandora's box</font>>]
+doro -> doronG -> pandoraG
+pandoraG -> pandora [style=dashed]
+panG [label=<<font color="red">pan-</font><br/><font point-size="12">all</font>>]
+panG -> pandoraG
+
+/* Dorothy(?), doll, omitted: Theodore */
+theosG [label=<<font color="red">theos</font><br/><font point-size="12">god</font>>]
+dorothy [label=<<b>English</b><br/><font color="red">Dorothy</font><br/><font point-size="12">"gift of God"</font><br/><font color="red">Doll</font><br/><font point-size="12">(nickname)</font>>] // r -> l was common in 16th-C nicknames
+doll [label=<<b>Modern<br/>English</b><br/><font color="red">doll</font>>]
+{doronG theosG} -> dorothy [style=dashed]
+dorothy -> doll
+
+/* lobster thermidor? */
+
+/* ---- Gk didonai ---- */
+/* omitted: apodosis (grammar), epidote (mineral) */
+/* dose */
+didonaiG [label=<<b>Greek</b><br/><font color="red">didonai</font><br/><font point-size="12">to give</font>>]
+dosisG [label=<<font color="red">dosis</font><br/><font point-size="12">something given</font>>]
+dosisL [label=<<b>Latin</b><br/><font color="red">dosis</font>>]
+doseMF [label=<<b>Middle<br/>French</b><br/><font color="red">dose</font>>]
+doseME [label=<<b>Middle<br/>English</b><br/><font color="red">dose</font>>]
+dose [label=<<b>Modern<br/>English</b><br/><font color="red">dose</font>>]
+dido -> didonaiG -> dosisG
+dosisG -> dosisL [style=dashed]
+dosisL -> doseMF
+doseMF -> doseME [style=dashed]
+doseME -> dose
+
+/* anecdote */
+ekdidonai [label=<<font color="red">ekdidonai</font><br/><font point-size="12">to publish</font>>]
+//ekdotaG [label=<<font color="red">ekdota</font><br/><font point-size="12">published</font>>]
+anekdotaG [label=<<font color="red">anekdota</font><br/><font point-size="12">unpublished<br/>items</font>>]
+anecdoteF [label=<<b>French</b><br/><font color="red">anecdote</font>>]
+anecdote [label=<<b>Modern<br/>English</b><br/><font color="red">anecdote</font>>]
+didonaiG -> ekdidonai -> anekdotaG
+anekdotaG -> anecdoteF -> anecdote [style=dashed]
+/* ek- (link to eghs) */
+ekG [label=<<b>Greek</b><br/><font color="red">ek-</font>>]
+eghs -> ekG -> ekdidonai
+/* an- (link to ne) */
+neIE [label=<<font color="red">ne-</font><br/><font point-size="12">not</font>> shape=box style="dashed,rounded" URL="ne-not.svg"]
+anG [label=<<b>Greek</b><br/><font color="red">an-, a-</font>>]
+neIE -> anG -> anekdotaG
+/* antidote */
+antididonai [label=<<font color="red">antididonai</font><br/><font point-size="12">to give as a<br/>remedy against</font>>]
+antidotonG [label=<<font color="red">antidoton</font>>]
+antidotumL [label=<<b>Latin</b><br/><font color="red">antidotum</font>>]
+antidoteME [label=<<b>Middle<br/>English</b><br/><font color="red">antidote</font>>]
+antidote [label=<<b>Modern<br/>English</b><br/><font color="red">antidote</font>>]
+didonaiG -> antididonai -> antidotonG
+antidotonG -> antidotumL -> antidoteME [style=dashed]
+antidoteME -> antidote
+/* anti- link to (ant-) */
+antIE [label=<<font color="red">ant-</font><br/><font point-size="12">front</font>> shape=box style="dashed,rounded" URL="ant-front.svg"]
+antiG [label=<<b>Greek</b><br/><font color="red">anti-</font><br/><font point-size="12">against</font>>]
+antIE -> antiG -> antididonai
+
+/* ---- Gk dosis? ---- */
+// deti -> dosisG
+
+{rank=same donation donor condone pardon dower dowry dowager endow dacha samizdat pandora doll dose anecdote antidote}
+{rank=same dono dido kom perIE sem eghs neIE antIE}
+}

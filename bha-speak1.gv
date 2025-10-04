@@ -1,0 +1,77 @@
+digraph 2 { /* Gmc ban-wan, Gk phanai */
+    node [shape=plaintext];
+    bha [label=<<b>Indo-European</b><br/><font color="red">bhā</font><br/><font point-size="12">to speak</font>> shape=box style="dashed,rounded" URL="bha-speak0.svg"];
+    bha -> { banwan; phanai }
+    banwan [label=<<b>Germanic</b><br/><font color="red">ban-wan, bannan</font><br/><font point-size="12">to speak publicly</font>>];
+    banwan -> { bannanOE; bannaON };
+    banwan -> { banOF; bandonOF; banir; bannus; bandire } [style=dotted];
+    phanai [label=<<b>Greek</b><br/><font color="red">phanai</font>>];
+    /* ban */
+    bannanOE [label=<<b>Old English</b><br/><font color="red">bannan</font><br/><font point-size="12">to summon</font>>];
+    bannaON [label=<<b>Old Norse</b><br/><font color="red">banna</font><br/><font point-size="12">to prohibit,<br/>curse</font>>];
+    bannanOE -> bannenME;
+    bannaON -> bannenME [style=dotted];
+    bannenME [label=<<b>Middle English</b><br/><font color="red">bannen</font><br/><font point-size="12">to shummon,<br/>prohibit, curse</font>>];
+    bannenME -> ban;
+    ban [label=<<b>Modern English</b><br/><font color="red">ban</font>>];
+    /* banal */
+    banOF [label=<<b>Old French</b><br/><font color="red">ban</font><br/><font point-size="12">summons to<br/>military service,<br/>feudal jurisdiction</font>>];
+    banOF -> banalF;
+    banalF [label=<<b>French</b><br/><font color="red">banal</font>>];
+    banalF -> banal [style=dotted];
+    banal [label=<<b>Modern English</b><br/><font color="red">banal</font>>];
+    /* abandon */
+    bandonOF [label=<<b>Old French</b><br/><font color="red">bandon</font><br/><font point-size="12">control</font><br/><font color="red">a bandon,<br/>abaondoner</font>>]; // break into 2?
+    bandonOF -> abandounen [style=dotted];
+    abandounen [label=<<b>Middle English</b><br/><font color="red">abandounen</font>>];
+    abandounen -> abandon;
+    abandon [label=<<b>Modern English</b><br/><font color="red">abandon</font>>];
+    /* banish */
+    banir [label=<<b>Old French</b><br/><font color="red">banir, baniss-</font>>];
+    banir -> banishen [style=dotted];
+    banishen [label=<<b>Middle English</b><br/><font color="red">banishen</font>>];
+    banishen -> banish;
+    banish [label=<<b>Modern English</b><br/><font color="red">banish</font>>];
+    /* contraband */
+    bannus [label=<<b>Latin</b><br/><font color="red">bannus, bannum</font><br/><font point-size="12">proclamtion</font>>];
+    bannus -> bandoI;
+    bandoI [label=<<b>Italian</b><br/><font color="red">bando</font><br/><font point-size="12">legal<br/>proclamatin</font>>];
+    { contra; bandoI } -> contrabandoI;
+    contra [label=<<font color="red">contra-</font><br/><font point-size="12">against</font>>]; // see kom
+    contrabandoI [label=<<font color="red">contrabando</font>>];
+    contrabandoI -> contraband [style=dotted];
+    contraband [label=<<b>Modern English</b><br/><font color="red">contraband</font>>];
+    /* bandit */
+    bandire [label=<<b>Italian</b><br/><font color="red">bandire</font><br/><font point-size="12">to have been summoned,<br/>to band together</font>>];
+    bandire -> banditoI;
+    banditoI [label=<<font color="red">bandito</font>>];
+    banditoI -> bandit [style=dotted];
+    bandit [label=<<b>Modern English</b><br/><font color="red">bandit</font>>];
+    /* -phasia, omitted: apophasis */
+    phanai -> phasisG -> phasiaG;
+    phasiaG -> phasiaE [style=dotted];
+    phasisG [label=<<font color="red">phasis</font><br/><font point-size="12">utterance</font>>];
+    phasiaG [label=<<font color="red">-phasiā</font><br/><font point-size="12">speech</font>>];
+    phasiaE [label=<<b>Modern<br/>English</b><br/><font color="red">-phasia</font>>];
+    /* prophet */
+    phanai -> phetesG -> prophetesG;
+    prophetesG -> prophetaL [style=dotted];
+    prophetaL -> propheteOF;
+    propheteOF -> propheteME [style=dotted];
+    propheteME -> prophet;
+    phetesG [label=<<font color="red">-phētēs</font><br/><font point-size="12">speaker</font>>];
+    prophetesG [label=<<font color="red">prophētēs</font>>];
+    prophetaL [label=<<b>Latin</b><br/><font color="red">prophēta</font>>];
+    propheteOF [label=<<b>Old French</b><br/><font color="red">prophete</font>>];
+    propheteME [label=<<b>Middle<br/>English</b><br/><font color="red">prophete</font>>];
+    prophet [label=<<b>Modern<br/>English</b><br/><font color="red">prophet</font>>];
+    per -> proG -> prophetesG;
+    per [label=<<font color="red">per</font><br/><font point-size="12">forth</font>> shape=box style="dashed,rounded" URL="per-pro2.svg"];
+    proG [label=<<b>Greek</b><br/><font color="red">pro-</font>>];
+    { rank=same; ban; banal; abandon; banish; contraband; bandit; phasiaE; prophet; }
+    { rank=same; banwan; phanai; }
+    { rank=same; bannenME; banalF; abandounen; banishen; bandoI; bandire; propheteME }
+    { rank=same; bannanOE; banOF; bandonOF; banir; propheteOF; }
+    { rank=same; phetesG; prophetesG }
+    { rank=same; bannaON; phasiaG; bannus; prophetaL }
+}

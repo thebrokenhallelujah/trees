@@ -1,0 +1,82 @@
+strict digraph {
+node [shape=none]
+dok [label=<<table border="0"><tr><td colspan="2"><font point-size="24">Indo-European</font></td></tr><tr><td><font point-size="18" color="red">dok-</font></td><td><font point-size="16">to teach?</font></td></tr></table>> tooltip="Indo-European \"dok-, dek-\" to learn" shape=rect peripheries=2 margin=.3 URL="dok-learn0.svg"]
+dok -> {dicereL docereL} [sametail=1 minlen=3]
+
+/* ---- L dicere ---- */
+/* dictum */
+dicereL [label=<<b>Latin</b><br/><font color="red">dīcere</font><br/><font point-size="12">to say</font>>]
+dictumL [label=<<font color="red">dictum</font><br/><font point-size="12">thing said</font>>]
+dictum [label=<<b>Modern<br/>English</b><br/><font color="red">dictum</font>>]
+dok -> dicereL -> dictumL
+dictumL -> dictum [style=dotted]
+
+/* diction */
+dictioL [label=<<font color="red">dictiō,<br/>dictiōn-</font><br/><font point-size="12">word</font>>]
+dictionMF [label=<<b>Middle<br/>French</b><br/><font color="red">diction</font>>]
+diction [label=<<b>Modern<br/>English</b><br/><font color="red">diction</font>>]
+dicereL -> dictioL -> dictionMF
+dictionMF -> diction [style=dotted]
+
+/* dictionary */
+dictionarium [label=<<font color="red">dictionarium</font><br/><font point-size="12">collection of words</font>>]
+dictionary [label=<<b>Modern<br/>English</b><br/><font color="red">dictionary</font>>]
+dictioL -> dictionarium
+dictionarium -> dictionary [style=dotted]
+
+/* dictate */
+dictareL [label=<<font color="red">dictāre</font><br/><font point-size="12">to say often</font>>]
+dictatusL [label=<<font color="red">dictātus</font>>] // past part.
+dictate [label=<<b>Modern<br/>English</b><br/><font color="red">dictate</font>>]
+dicereL -> dictareL -> dictatusL
+dictatusL -> dictate [style=dotted]
+
+/* ---- L docere ---- */
+// decere -> docere ??
+/* doctor */
+docereL [label=<<b>Latin</b><br/><font color="red">docēre</font><br/><font point-size="12">to teach</font>>]
+//? doctusL [label=<<font color="red">doctus</font><br/><font point-size="12">learned</font>>]
+doctorL [label=<<font color="red">doctor</font><br/><font point-size="12">teacher</font>>]
+doctourOF [label=<<b>Old French</b><br/><font color="red">doctour</font>>]
+doctorME [label=<<b>Middle<br/>English</b><br/><font color="red">doctor</font>>]
+doctor [label=<<b>Modern<br/>English</b><br/><font color="red">doctor</font>>]
+dok -> docereL -> doctorL -> doctourOF
+doctourOF -> doctorME [style=dotted]
+doctorME -> doctor
+
+/* doctrine */
+doctrinaL [label=<<font color="red">doctrīna</font><br/><font point-size="12">teaching</font>>]
+doctrine [label=<<b>Modern<br/>English</b><br/><font color="red">doctrine</font>>]
+doctorL -> doctrinaL
+doctrinaL -> doctrine [style=dotted]
+
+/* document */
+documentum [label=<<font color="red">documentum</font><br/><font point-size="12">?</font>>] // lesson; written instruction; official paper
+document [label=<<b>Modern<br/>English</b><br/><font color="red">document</font>>]
+docereL -> documentum
+documentum -> document [style=dotted]
+
+/* docile */
+docilisL [label=<<font color="red">docilis</font><br/><font point-size="12">easily taught</font>>]
+docileI [label=<<b>Italian</b><br/><font color="red">docile</font>>]
+docile [label=<<b>Modern<br/>English</b><br/><font color="red">docile</font>>]
+docereL -> docilisL -> docileI
+docileI -> docile [style=dotted]
+
+/* docent */
+docensL [label=<<font color="red">docēns,<br/>docent-</font>>]
+dozentGr [label=<<b>German</b><br/><font color="red">Dozent</font>>]
+docent [label=<<b>Modern<br/>English</b><br/><font color="red">docent</font>>]
+docereL -> docensL
+docensL -> dozentGr -> docent [style=dotted]
+
+{rank=same dictum diction dictionary dictate doctor doctrine document docile docent}
+dicereL -> {dictumL dictioL dictareL rank=same} [sametail=1]
+docereL -> {doctorL documentum docilisL docensL rank=same} [sametail=1]
+dictioL -> dictionarium [weight=2 sametail=1]
+dictioL -> dictionMF [minlen=2 sametail=1]
+{rank=same dictionMF doctorME docileI dozentGr}
+doctorL -> doctrinaL [weight=2 sametail=1]
+dictareL -> dictatusL [weight=2]
+doctorL -> doctourOF [minlen=2 sametail=1]
+}

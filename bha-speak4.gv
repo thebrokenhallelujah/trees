@@ -1,0 +1,44 @@
+digraph 4 { /* Latin fama */
+    node [shape=plaintext];
+    famaL [label=<<b>Latin</b><br/><font color="red">fāma</font><br/><font point-size="12">talk, fame,<br/>reputation</font>> shape=box style="dashed,rounded" URL="bha-speak3.svg"];
+    famaL -> { fameOF; famosusL; infamisL; diffamare }
+    fameOF [label=<<b>Old French</b><br/><font color="red">fame</font>>];
+    fameOF -> fameME [style=dotted];
+    fameME [label=<<b>Middle English</b><br/><font color="red">fame</font>>];
+    fameME -> fame;
+    fame [label=<<b>Modern English</b><br/><font color="red">fame</font>>];
+    famosusL [label=<<font color="red">fāmōsus</font>>];
+    famosusL -> famousAN;
+    famousAN [label=<<b>Anglo-Norman</b><br/><font color="red">famous</font>>];
+    famousAN -> famousME [style=dotted];
+    famousME [label=<<b>Middle English</b><br/><font color="red">famous</font>>];
+    famousME -> famous;
+    famous [label=<<b>Modern English</b><br/><font color="red">famous</font>>];
+    in -> infamisL;
+    in [label=<<font color="red">in-</font><br/><font point-size="12">not</font>>]; // see ne
+    infamisL [label=<<font color="red">īnfāmis</font>>];
+    infamisL -> infamisME [style=dotted];
+    infamisME [label=<<b>Middle English</b><br/><font color="red">infamis</font>>];
+    infamisME -> infamous;
+    infamous [label=<<b>Modern English</b><br/><font color="red">infamous</font>>];
+    infamisL -> infamiaL;
+    infamiaL [label=<<font color="red">īnfāmia</font>>];
+    infamiaL -> infamieOF;
+    infamieOF [label=<<b>Old French</b><br/><font color="red">infamie</font>>];
+    infamieOF -> infamieME [style=dotted];
+    infamieME [label=<<b>Middle English</b><br/><font color="red">infamie</font><br/><font point-size="12">dishonor</font>>];
+    infamieME -> infamy;
+    infamy [label=<<b>Modern English</b><br/><font color="red">infamy</font>>];
+    dis -> diffamare;
+    dis [label=<<font color="red">dis-</font><br/><font point-size="12">apart</font>>];
+    diffamare [label=<<font color="red">diffāmāre,<br/>dēfāmāre</font><br/><font point-size="12">to spread news<br/>of slander</font>>];
+    diffamare -> defamerOF;
+    defamerOF [label=<<b>Old French</b><br/><font color="red">defamer</font>>];
+    defamerOF -> defamenME [style=dotted];
+    defamenME [label=<<b>Middle English</b><br/><font color="red">defamen</font>>];
+    defamenME -> defame;
+    defame [label=<<b>Modern English</b><br/><font color="red">defame</font>>];
+    { rank=same; fameOF; famousAN; infamieOF; defamerOF }
+    { rank=same; fameME; famousME; infamieME; infamisME; defamenME; }
+    
+}

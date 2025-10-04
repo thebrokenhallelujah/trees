@@ -1,0 +1,160 @@
+strict digraph {
+node [shape=none]
+
+dekmIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*dekm̥ </font><font point-size="16">ten</font>> shape=box style="dashed,rounded" URL="dekm-ten0.svg" tooltip="Indo-European \"*dekm̥\" ten"]
+
+/* ten, teen */
+tehunGm [label=<<b>Germanic</b><br/><font color="red">*tehun</font>>]
+tienOE [label=<<b>Old English</b><br/><font color="red">tīen</font>>]
+tenME [label=<<b>Middle<br/>English</b><br/><font color="red">ten</font>>]
+ten [label=<<b>Modern<br/>English</b><br/><font color="red">ten</font>>]
+dekmIE -> tehunGm [sametail=1]
+tehunGm -> tienOE [sametail=1]
+tienOE -> tenME -> ten
+teneOE [label=<<b>Old English</b><br/><font color="red">-tēne, -tīne, -tȳne</font>>]
+teneME [label=<<b>Middle<br/>English</b><br/><font color="red">-tene</font>>]
+teen [label=<<b>Modern<br/>English</b><br/><font color="red">-teen<br/>teen</font>>]
+tehunGm -> teneOE [sametail=1]
+teneOE -> teneME -> teen
+
+/* tenth, tithe */
+dekmtoIE [label=<<font color="red">*dekm̥to-</font><br/><font point-size="12">tenth</font>>]
+tegunthaGm [label=<<b>Germanic</b><br/><font color="red">*teguntha-</font>>]
+teothaOE [label=<<b>Old English</b><br/><font color="red">tēotha</font>>]
+tetheME [label=<<b>Middle<br/>English</b><br/><font color="red">tethe, tenthe</font>>]
+tenth [label=<<b>Modern<br/>English</b><br/><font color="red">tenth</font>>]
+dekmIE -> dekmtoIE [sametail=1]
+dekmtoIE -> tegunthaGm -> teothaOE
+teothaOE -> tetheME [sametail=1]
+tetheME -> tenth
+titheME [label=<<b>Middle<br/>English</b><br/><font color="red">tithe</font>>]
+tithe [label=<<b>Modern<br/>English</b><br/><font color="red">tithe</font>>]
+teothaOE -> titheME [sametail=1]
+titheME -> tithe
+
+/* deci-, decimal, decuple, decemvir */
+decemL [label=<<b>Latin</b><br/><font color="red">decem</font>>]
+decimusL [label=<<font color="red">decimus</font><br/><font point-size="12">tenth</font>>]
+deciF [label=<<b>French</b><br/><font color="red">déci-</font>>]
+deci [label=<<b>Modern<br/>English</b><br/><font color="red">deci-</font>>]
+dekmIE -> decemL [sametail=1]
+decemL -> decimusL [sametail=1]
+decimusL -> deciF [sametail=1]
+deciF -> deci [style=dashed]
+decimalisNL [label=<<b>New Latin</b><br/><font color="red">decimalis</font><br/><font point-size="12">based on ten</font>>]
+decimal [label=<<b>Modern<br/>English</b><br/><font color="red">decimal</font>>]
+decimusL -> decimalisNL [style=dashed sametail=1]
+decimalisNL -> decimal [style=dashed]
+decuplusL [label=<<b>Late Latin</b><br/><font color="red">decuplus</font><br/><font point-size="12">ten-fold</font>>]
+decupleOF [label=<<b>Old French</b><br/><font color="red">decuple</font>>]
+decupleME [label=<<b>Middle<br/>English</b><br/><font color="red">decuple</font>>]
+decuple [label=<<b>Modern<br/>English</b><br/><font color="red">decuple</font>>]
+decemL -> decuplusL [sametail=1]
+decuplusL -> decupleOF
+decupleOF -> decupleME [style=dashed]
+decupleME -> decuple
+wiroIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*wī-ro-</font><br/><font point-size="12">man</font>> shape=box style="dashed,rounded" URL="wiro-man.svg"]
+virL [label=<<b>Latin</b><br/><font color="red">vir</font>>]
+decemviriL [label=<<font color="red">decemvirī</font><br/><font point-size="12">commission of ten men</font>>]
+decemvir [label=<<b>Modern<br/>English</b><br/><font color="red">decemvir</font>>]
+wiroIE -> virL
+decemL -> decemviriL [sametail=1 samehead=1]
+virL -> decemviriL [samehead=1]
+decemviriL -> decemvir [style=dashed]
+
+/* decennary, decennial, decennium */
+annusL [label=<<b>Latin</b><br/><font color="red">annus</font><br/><font point-size="12">year</font>>]
+decennisL [label=<<font color="red">decennis</font><br/><font point-size="12">lasting for ten years</font>>]
+decenniumL [label=<<font color="red">decennium</font>>]
+decennium [label=<<b>Modern<br/>English</b><br/><font color="red">decennium</font>>]
+annusL -> decennisL [samehead=1]
+decemL -> decennisL [sametail=1 samehead=1]
+decennisL -> decenniumL [sametail=1]
+decenniumL -> decennium [style=dashed sametail=1]
+decennary [label=<<b>Modern<br/>English</b><br/><font color="red">decennary</font>>]
+decennisL -> decennary [sametail=1 style=dashed]
+decennial [label=<<b>Modern<br/>English</b><br/><font color="red">decennial</font>>]
+decenniumL -> decennial [sametail=1 style=dashed]
+
+
+
+/* dime */
+decimaL [label=<<font color="red">decima (pars)</font><br/><font point-size="12">tenth (part)</font>>]
+dismeOF [label=<<b>Old French</b><br/><font color="red">disme</font>>]
+dimeME [label=<<b>Middle<br/>English</b><br/><font color="red">dime</font>>]
+dime [label=<<b>Modern<br/>English</b><br/><font color="red">dime</font>>]
+decemL -> decimaL [sametail=1]
+decimaL -> dismeOF
+dismeOF -> dimeME [style=dashed]
+dimeME -> dime
+
+/* December (shortened, see AHD) */
+decemberL [label=<<font color="red">December</font><br/><font point-size="12">tenth month</font>>]
+decembreME [label=<<b>Middle<br/>English</b><br/><font color="red">Decembre</font>>]
+december [label=<<b>Modern<br/>English</b><br/><font color="red">December</font>>]
+decemL -> decemberL [sametail=1]
+decemberL -> decembreME [style=dashed]
+decembreME -> december
+
+/* deca-, decade */
+dekaG [label=<<b>Greek</b><br/><font color="red">deka</font>>]
+deca [label=<<b>Modern<br/>English</b><br/><font color="red">deca-</font>>]
+dekmIE -> dekaG [sametail=1]
+dekaG -> deca [style=dashed sametail=1]
+dekasG [label=<<font color="red">dekas</font><br/><font point-size="12">group of ten</font>>]
+decasL [label=<<b>Late Latin</b><br/><font color="red">decas, decad-</font>>]
+decadeOF [label=<<b>Old French</b><br/><font color="red">decade</font>>]
+decadeME [label=<<b>Middle<br/>English</b><br/><font color="red">decade</font>>]
+decade [label=<<b>Modern<br/>English</b><br/><font color="red">decade</font>>]
+dekaG -> dekasG [sametail=1]
+dekasG -> decasL [style=dashed]
+decasL -> decadeOF
+decadeOF -> decadeME [style=dashed]
+decadeME -> decade
+
+/* Decalogue/Decalog, decapod */
+legIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*leg-</font><br/><font point-size="12">collect, speak</font>> shape=box style="dashed,rounded" URL="leg-speak4.svg"]
+logosG [label=<<b>Greek</b><br/><font color="red">logos</font><br/><font point-size="12">word, pronouncement</font>>]
+dekalogosG [label=<<font color="red">dekalogos</font>>]
+decalogusL [label=<<b>Late Latin</b><br/><font color="red">decalogus</font>>]
+decalogME [label=<<b>Middle<br/>English</b><br/><font color="red">decalog</font>>]
+decalogue [label=<<b>Modern<br/>English</b><br/><font color="red">Decalogue<br/>Decalog</font>>]
+legIE -> logosG
+logosG -> dekalogosG [samehead=1]
+dekaG -> dekalogosG [sametail=1 samehead=1]
+dekalogosG -> decalogusL -> decalogME [style=dashed]
+decalogME -> decalogue
+pedIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ped-, *pod-</font><br/><font point-size="12">foot</font>> shape=box style="dashed,rounded" URL="ped-foot3.svg"]
+pousG [label=<<b>Greek</b><br/><font color="red">pous, pod-</font>>]
+podaL [label=<<b>New Latin</b><br/><font color="red">-poda</font>>]
+decapodaL [label=<<font color="red">Decapoda</font>>]
+decapod [label=<<b>Modern<br/>English</b><br/><font color="red">decapod</font>>]
+pedIE -> pousG
+pousG -> podaL [style=dashed]
+dekaG -> decapodaL [style=dashed samehead=1 sametail=1]
+podaL -> decapodaL [samehead=1]
+decapodaL -> decapod [style=dashed]
+
+/* dean, doyen, doyenne */
+decanusL [label=<<b>Late Latin</b><br/><font color="red">decānus</font><br/><font point-size="12">chief of ten</font>>]
+dekanosG [label=<<b>Greek</b><br/><font color="red">dekānos</font><br/><font point-size="12">chief of ten</font>>]
+deienOF [label=<<b>Old French</b><br/><font color="red">deien</font>>]
+deenME [label=<<b>Middle<br/>English</b><br/><font color="red">deen</font>>]
+dean [label=<<b>Modern<br/>English</b><br/><font color="red">dean</font>>]
+decemL -> decanusL [sametail=1]
+dekaG -> dekanosG [sametail=1]
+decanusL -> deienOF [samehead=1]
+dekanosG -> deienOF [samehead=1 style=dashed]
+deienOF -> deenME [style=dashed]
+deenME -> dean
+doienOF [label=<<b>Old French</b><br/><font color="red">doien</font>>]
+doyenF [label=<<b>French</b><br/><font color="red">doyen<br/>doyenne</font>>]
+doyen [label=<<b>Modern<br/>English</b><br/><font color="red">doyen<br/>doyenne</font>>]
+decanusL -> doienOF [sametail=1]
+doienOF -> doyenF
+doyenF -> doyen [style=dashed]
+
+
+{ rank=sink ten teen tenth tithe deci decimal december decuple decemvir decennium decennary decennial dime deca decade decalogue decapod dean doyen }
+{ rank=min legIE pedIE wiroIE }
+}

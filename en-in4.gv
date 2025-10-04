@@ -1,0 +1,120 @@
+strict digraph {
+node [shape=none]
+
+enIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*en </font><font point-size="16">in</font>> shape=box style="dashed,rounded" URL="en-in0.svg" tooltip="Indo-European \"en\" in"]
+
+entosIE [label=<<font color="red">*en-tos</font>>]
+enteroIE [label=<<font color="red">*en-tero-</font>>]
+ensIE [label=<<font color="red">*ens</font>>]
+ensoIE [label=<<font color="red">*ens-ō</font>>]
+enIE -> { entosIE enteroIE ensIE }
+ensIE -> ensoIE 
+
+// intestine
+intusL [label=<<b>Latin</b><br/><font color="red">intus</font>>]
+intestinusL [label=<<font color="red">intestīnus</font><br/><font point-size="12">internal</font>>]
+intestinaL [label=<<font color="red">intestīna</font><br/><font point-size="12">intestines</font>>]
+intestinOF [label=<<b>Old French</b><br/><font color="red">intestin</font>>]
+intestineME [label=<<b>Middle<br/>English</b><br/><font color="red">intestine</font>>]
+intestine [label=<<b>Modern<br/>English</b><br/><font color="red">intestine</font>>]
+entosIE -> intusL -> intestinusL -> intestinaL -> intestinOF
+intestinOF -> intestineME [style=dashed]
+intestineME -> intestine
+
+// ento-
+entosG [label=<<b>Greek</b><br/><font color="red">entos</font>>]
+entoNL [label=<<b>New Latin</b><br/><font color="red">ento-</font>>]
+ento [label=<<b>Modern<br/>English</b><br/><font color="red">ento-<br/>ent-</font>>]
+entosIE -> entosG
+entosG -> entoNL -> ento [style=dashed]
+
+// entero-, enteron
+enteronG [label=<<b>Greek</b><br/><font color="red">enteron</font><br/><font point-size="12">intestine</font>>]
+enteroNL [label=<<b>New Latin</b><br/><font color="red">entero-</font>>]
+entero [label=<<b>Modern<br/>English</b><br/><font color="red">entero-<br/>enter-</font>>]
+enteroIE -> enteronG
+enteronG -> enteroNL -> entero [style=dashed]
+enteron [label=<<b>Modern<br/>English</b><br/><font color="red">enteron</font>>]
+enteronG -> enteron [style=dashed]
+
+// dysentery
+dusG [label=<<b>Greek</b><br/><font color="red">dus-</font><br/><font point-size="12">bad, abnormal</font>>]
+dusenteriaG [label=<<font color="red">dusenteriā</font>>]
+dysenteriaL [label=<<b>Latin</b><br/><font color="red">dysenteria</font>>]
+disenterieOF [label=<<b>Old French</b><br/><font color="red">disenterie</font>>]
+disenterieME [label=<<b>Middle<br/>English</b><br/><font color="red">disenterie</font>>]
+dysentery [label=<<b>Modern<br/>English</b><br/><font color="red">dysentery</font>>]
+{ dusG enteronG } -> dusenteriaG
+dusenteriaG -> dysenteriaL [style=dashed]
+dysenteriaL -> disenterieOF
+disenterieOF -> disenterieME [style=dashed]
+disenterieME -> dysentery
+
+// exenterate
+eghsIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*eghs</font><br/><font point-size="12">out</font>> shape=box style="dashed,rounded" URL="eghs-out.svg"]
+exL [label=<<b>Latin</b><br/><font color="red">ex-</font>>]
+exenterareL [label=<<b>Latin</b><br/><font color="red">exenterāre, exenterāt-</font><br/><font point-size="12">to disembowel</font>>]
+exenterate [label=<<b>Modern<br/>English</b><br/><font color="red">exenterate</font>>]
+eghsIE -> exL -> exenterareL
+enteronG -> exenterareL -> exenterate [style=dashed]
+
+// mesentery
+medhyoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*medhyo-</font><br/><font point-size="12">middle</font>> shape=box style="dashed,rounded" URL="medhyo-middle.svg"]
+mesoG [label=<<b>Greek</b><br/><font color="red">meso-</font>>]
+enterionG [label=<<font color="red">enterion</font><br/><font point-size="12">(diminutive)</font>>]
+mesenterionG [label=<<font color="red">mesenterion</font>>]
+mesenteriumL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">mesenterium</font>>]
+mesenterieME [label=<<b>Middle<br/>English</b><br/><font color="red">mesenterie</font>>]
+mesentery [label=<<b>Modern<br/>English</b><br/><font color="red">mesentery</font>>]
+medhyoIE -> mesoG
+enteronG -> enterionG
+{ mesoG enterionG } -> mesenterionG
+mesenterionG -> mesenteriumL -> mesenterieME [style=dashed]
+mesenterieME -> mesentery
+
+// atoll
+antaraS [label=<<b>Sanskrit</b><br/><font color="red">antara-<br/>antala-</font><br/><font point-size="12">interior</font>>]
+atulSin [label=<<b>Sinhalese</b><br/><font color="red">ātul</font>>]
+atoluM [label=<<b>Maldivian</b><br/><font color="red">atolu</font>>]
+atoll [label=<<b>Modern<br/>English</b><br/><font color="red">atoll</font>>]
+enteroIE -> antaraS
+antaraS -> atulSin [label="?" decorate=true]
+atulSin -> atoluM [style=dashed label="?" decorate=true]
+atoluM -> atoll [style=dashed]
+
+// episode
+eisG [label=<<b>Greek</b><br/><font color="red">eis</font><br/><font point-size="12">into</font>>]
+hodosG [label=<<b>Greek</b><br/><font color="red">hodos</font><br/><font point-size="12">way, journey</font>>]
+epiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*epi</font><br/><font point-size="12">near, at, against</font>> shape=box style="dashed,rounded" URL="epi-near.svg"]
+epiG [label=<<b>Greek</b><br/><font color="red">epi-</font><br/><font point-size="12">upon</font>>]
+eisodiosG [label=<<font color="red">eisodios</font><br/><font point-size="12">entering</font>>]
+epeisodiosG [label=<<font color="red">epeisodios</font><br/><font point-size="12">coming in besides</font>>]
+epeisodionG [label=<<font color="red">epeisodion</font><br/><font point-size="12">parenthetic narrative</font>>]
+episodeF [label=<<b>French</b><br/><font color="red">épisode</font>>]
+episode [label=<<b>Modern<br/>English</b><br/><font color="red">episode</font>>]
+ensIE -> eisG
+{ eisG hodosG } -> eisodiosG
+epiIE -> epiG
+{ epiG eisodiosG } -> epeisodiosG -> epeisodionG
+epeisodionG -> episodeF -> episode [style=dashed]
+
+// esoteric
+esoG [label=<<b>Greek</b><br/><font color="red">esō</font><br/><font point-size="12">within</font>>]
+esoteroG [label=<<font color="red">esōterō</font>>]
+esoterikosG [label=<<font color="red">esōterikos</font>>]
+esoteric [label=<<b>Modern<br/>English</b><br/><font color="red">esoteric</font>>]
+ensoIE -> esoG -> esoteroG -> esoterikosG
+esoterikosG -> esoteric [style=dashed]
+
+// and
+ndhaIE [label=<<font color="red">n̥-dha</font>>]
+andaGm [label=<<b>Germanic</b><br/><font color="red">*anda, *unda</font><br/><font point-size="12">and</font>>]
+andOE [label=<<b>Old English</b><br/><font color="red">and</font>>]
+andME [label=<<b>Middle<br/>English</b><br/><font color="red">and</font>>]
+and [label=<<b>Modern<br/>English</b><br/><font color="red">and</font>>]
+enIE -> ndhaIE [label="?" decorate=true]
+ndhaIE -> andaGm -> andOE -> andME -> and
+
+{ rank=sink intestine ento enteron entero dysentery exenterate mesentery atoll episode esoteric and }
+{ rank=same medhyoIE eghsIE epiIE entosIE enteroIE ensIE ndhaIE }
+}

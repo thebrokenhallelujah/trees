@@ -1,0 +1,128 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+eiIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ei-</font></td><td><font point-size="16">to go</font></td></tr></table>> tooltip="Indo-European \"*ei-\" to go" shape=rect style=dashed peripheries=1 margin=.3 URL="ei-go0.svg"]
+
+// ambient, ambition
+ireL [label=<<b>Latin</b><br/><font color="red">īre</font><br/><font point-size="12">to go</font>>]
+ambiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ambi, *m̥bhi</font><br/><font point-size="12">around</font>> shape=box style="dashed,rounded" URL="ambi-around.svg"]
+ambiL [label=<<b>Latin</b><br/><font color="red">ambi-</font>>]
+ambireL [label=<<font color="red">ambīre</font><br/><font point-size="12">to surround</font>>]
+ambientL [label=<<font color="red">anbient-<br/>ambitiōn-</font>>]
+ambient [label=<<b>Modern<br/>English</b><br/><font color="red">ambient<br/>ambition</font>>]
+eiIE -> ireL
+ambiIE -> ambiL
+{ ambiL ireL } -> ambireL -> ambientL
+ambientL -> ambient [style=dashed]
+
+// circuit
+circumireL [label=<<font color="red">circumīre</font><br/><font point-size="12">to go around</font>>]
+circuitusL [label=<<font color="red">circuitus</font><br/><font point-size="12">a going around</font>>]
+circuitOF [label=<<b>Old French</b><br/><font color="red">circuit</font>>]
+circuitME [label=<<b>Middle<br/>English</b><br/><font color="red">circuit</font>>]
+circuit [label=<<b>Modern<br/>English</b><br/><font color="red">circuit</font>>]
+ireL -> circumireL -> circuitusL -> circuitOF 
+circuitOF -> circuitME [style=dashed]
+circuitME -> circuit
+
+// coitus
+komIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*kom</font><br/><font point-size="12">near, with</font>> shape=box style="dashed,rounded" URL="kom-with.svg"]
+coL [label=<<b>Latin</b><br/><font color="red">com-, co-</font><br/><font point-size="12">together, with</font>>]
+coireL [label=<<font color="red">coīre</font><br/><font point-size="12">to copulate</font>>]
+coitusL [label=<<font color="red">coitus</font>>]
+coitus [label=<<b>Modern<br/>English</b><br/><font color="red">coitus</font>>]
+komIE -> coL
+{ coL ireL } -> coireL -> coitusL
+coitusL -> coitus [style=dashed]
+
+// exit
+eghsIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*eghs</font><br/><font point-size="12">out</font>> shape=box style="dashed,rounded" URL="eghs-out.svg"]
+exL [label=<<b>Latin</b><br/><font color="red">ex-</font>>]
+exireL [label=<<font color="red">exīre</font><br/><font point-size="12">to go out</font>>]
+exitL [label=<<font color="red">exit</font>>]
+exit [label=<<b>Modern<br/>English</b><br/><font color="red">exit</font>>]
+eghsIE -> exL
+{ exL ireL } -> exireL -> exitL
+exitL -> exit [style=dashed]
+
+// issue
+exutaL [label=<<font color="red">exūta</font>>]
+issueOF [label=<<b>Old French</b><br/><font color="red">eissue<br/>issue</font>>]
+issueME [label=<<b>Middle<br/>English</b><br/><font color="red">issue</font>>]
+issue [label=<<b>Modern<br/>English</b><br/><font color="red">issue</font>>]
+exireL -> exutaL -> issueOF 
+issueOF -> issueME [style=dashed]
+issueME -> issue
+
+// obituary
+epiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*epi, *opi</font><br/><font point-size="12">near, at, against</font>> shape=box style="dashed,rounded" URL="epi-near.svg"]
+obL [label=<<b>Latin</b><br/><font color="red">ob-</font><br/><font point-size="12">toward</font>>]
+obireL [label=<<font color="red">obīre</font><br/><font point-size="12">to meet one's death</font>>]
+obitusL [label=<<font color="red">obitus</font><br/><font point-size="12">death</font>>]
+obituarisL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">obitūaris</font><br/><font point-size="12">of death</font>>]
+obituary [label=<<b>Modern<br/>English</b><br/><font color="red">obituary</font>>]
+epiIE -> obL 
+{ obL ireL } -> obireL -> obitusL -> obituarisL
+obituarisL -> obituary [style=dashed]
+
+// perish
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">forward, through</font>> shape=box style="dashed,rounded" URL="per-peri.svg"]
+perL [label=<<b>Latin</b><br/><font color="red">per-</font><br/><font point-size="12">through</font>>]
+perireL [label=<<font color="red">perīre</font><br/><font point-size="12">to perish</font>>]
+perirOF [label=<<b>Old French</b><br/><font color="red">perir, periss-</font>>]
+perishenME [label=<<b>Middle<br/>English</b><br/><font color="red">perishen</font>>]
+perish [label=<<b>Modern<br/>English</b><br/><font color="red">perish</font>>]
+perIE -> perL
+{ perL ireL } -> perireL -> perirOF
+perirOF -> perishenME [style=dashed]
+perishenME -> perish
+
+// sudden
+upoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*upo</font><br/><font point-size="12">under</font>> shape=box style="dashed,rounded" URL="upo-under.svg"]
+subL [label=<<b>Latin</b><br/><font color="red">sub-</font>>]
+subireL [label=<<font color="red">subīre</font><br/><font point-size="12">to approach<br/>stealthily</font>>]
+subitusL [label=<<font color="red">subitus<br/>subitāneus<br/>*subitānus</font>>]
+sodainOF [label=<<b>Old French</b><br/><font color="red">sodain</font><br/><font point-size="12">sudden</font>>]
+sodainME [label=<<b>Middle<br/>English</b><br/><font color="red">sodain</font>>]
+sudden [label=<<b>Modern<br/>English</b><br/><font color="red">sudden</font>>]
+upoIE -> subL 
+{ subL ireL } -> subireL -> subitusL -> sodainOF
+sodainOF -> sodainME [style=dashed]
+sodainME -> sudden
+
+// subito
+subitoI [label=<<b>Italian</b><br/><font color="red">subito</font><br/><font point-size="12">sudden</font>>]
+subito [label=<<b>Modern<br/>English</b><br/><font color="red">subito</font>>]
+subitusL -> subitoI
+subitoI -> subito [style=dashed]
+
+// trance, transient, transit
+tereIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*terə-</font><br/><font point-size="12">to cross over</font>> shape=box style="dashed,rounded" URL="tere-cross.svg"]
+transL [label=<<b>Latin</b><br/><font color="red">trans-</font><br/><font point-size="12">across</font>>]
+transireL [label=<<font color="red">transīre</font><br/><font point-size="12">to go over</font>>]
+trance [label=<<b>Modern<br/>English</b><br/><font color="red">trance<br/>transient<br/>transit</font>>]
+tereIE -> transL 
+{ transL ireL } -> transireL 
+transireL -> trance [style=dashed]
+
+// adit
+adireL [label=<<font color="red">adīre</font><br/><font point-size="12">to approach</font>>]
+adit [label=<<b>Modern<br/>English</b><br/><font color="red">adit</font>>]
+ireL -> adireL
+adireL -> adit [style=dashed]
+
+// sedition
+itioL [label=<<font color="red">itiō</font><br/><font point-size="12">act of going</font>>]
+sweIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*s(w)e-</font><br/><font point-size="12">self</font>> shape=box style="dashed,rounded" URL="swe-self.svg"]
+sedL [label=<<b>Latin</b><br/><font color="red">sēd-, sē-</font><br/><font point-size="12">apart</font>>]
+seditioL [label=<<font color="red">sēditiō, sēditiōn-</font><br/><font point-size="12">party strife</font>>]
+sedition [label=<<b>Modern<br/>English</b><br/><font color="red">sedition</font>>]
+ireL -> itioL
+sweIE -> sedL
+{ sedL itioL } -> seditioL
+seditioL -> sedition [style=dashed]
+
+{ rank=sink ambient circuit coitus exit issue obituary perish sudden trance adit sedition subito }
+{ rank=same ambiIE komIE eghsIE epiIE perIE upoIE tereIE sweIE }
+}

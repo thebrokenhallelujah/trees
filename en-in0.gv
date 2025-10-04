@@ -1,0 +1,13 @@
+strict digraph {
+/* sources: AHD, roots */
+node [shape=none]
+enIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24">Indo-European</font></td></tr><tr><td><font point-size="18" color="red">en</font></td><td><font point-size="16">in</font></td></tr></table>> tooltip="Indo-European \"en\" in" shape=rect peripheries=2 margin=.3]
+
+en1 [label=<basic form> shape=box style="dashed,rounded" URL="en-in1.svg" tooltip=""]
+en2 [label=<<font color="red">*en-t(e)ro-</font>> shape=box style="dashed,rounded" URL="en-in2.svg" tooltip=""]
+en3 [label=<<font color="red">*en-ter<br/>*en-mo<br/>*en-do</font>> shape=box style="dashed,rounded" URL="en-in3.svg" tooltip=""]
+en4 [label=<<font color="red">*en-tos<br/>*en-tero-<br/>*ens<br/>n̥-dha</font>> shape=box style="dashed,rounded" URL="en-in4.svg" tooltip=""]
+
+enIE -> { en1 en2 en3 en4 }
+
+}

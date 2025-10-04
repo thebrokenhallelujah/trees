@@ -1,0 +1,132 @@
+strict digraph {
+node [shape=plaintext]
+bheu [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">bheuə-, bheu-</font><font point-size="16">to be, exist, grow</font>> shape=box style="dashed,rounded" URL="bheu-grow0.svg" tooltip=""]
+bheu -> bhu
+/* bhu- */
+bhu [label=<<font color="red">bhu-</font>>]
+bhu -> { buthlamGm phueinG phusisG bhutu } // omitted: eisteddfodd
+bhutu [label=<<font color="red">bhu-tu-</font>>]
+bhutu -> futurusL
+/* build, boodle */
+buthlamGm [label=<<b>Germanic</b><br/><font color="red">buthlam, bōthlam</font>>]
+buthlamGm -> { boldOE bodelMD }
+boldOE [label=<<b>Old English</b><br/><font color="red">bold</font><br/><font point-size="12">dwelling</font>>]
+boldOE -> byldanOE [weight=2]
+byldanOE [label=<<font color="red">byldan</font><br/><font point-size="12">to build</font>>]
+byldanOE -> bildenME
+bildenME [label=<<b>Middle<br/>English</b><br/><font color="red">bilden</font>>]
+bildenME -> build
+build [label=<<b>Modern<br/>English</b><br/><font color="red">build</font>>]
+bodelMD [label=<<b>Middle<br/>Dutch</b><br/><font color="red">bōdel</font><br/><font point-size="12">riches, property</font>>]
+bodelMD -> boedelD
+boedelD [label=<<b>Dutch</b><br/><font color="red">boedel</font><br/><font point-size="12">estate</font>>]
+boedelD -> boodle [style=dashed]
+boodle [label=<<b>Modern<br/>English</b><br/><font color="red">boodle<br/>caboodle</font>>]
+/* Gk phuein, phutos, phuton, phusis */
+/* omitted: euphuism, periphyton, tracheophyte, Monophysite (Christianity) */
+phueinG [label=<<b>Greek</b><br/><font color="red">phuein</font><br/><font point-size="12">to make grow</font>>]
+phueinG -> { phutonG phutosG rank=same }
+phutonG [label=<<font color="red">phuton</font><br/><font point-size="12">plant</font>>]
+phusisG [label=<<b>Greek</b><br/><font color="red">phusis</font><br/><font point-size="12">nature</font>>]
+phusisG -> { phusioG phusikosG }
+phusioG [label=<<font color="red">phusio-</font>>]
+phusikosG [label=<<font color="red">phusikos</font><br/><font point-size="12">of nature</font>>]
+phusikosG -> { phusikaG phusikeG rank=same }
+/* G en- (en) */
+enIE [label=<<b>Indo-<br/>European</b><br/><font color="red">en</font><br/><font point-size="12">in</font>> shape=box style="dashed,rounded" URL="en-in1.svg"]
+enG [label=<<b>Greek</b><br/><font color="red">en-</font>>]
+enIE -> enG
+emphueinG [label=<<font color="red">emphuein</font><br/><font point-size="12">to implant</font><br/><font color="red">emphutos</font><br/><font point-size="12">grafted</font>>]
+{ enG phueinG } -> emphueinG
+impotusL [label=<<b>Latin</b><br/><font color="red">impotus</font><br/><font point-size="12">graft</font>>]
+impianOE [label=<<b>Old English</b><br/><font color="red">impian</font><br/><font point-size="12">to graft</font><br/><font color="red">impa</font><br/><font point-size="12">young shoot</font>>]
+emphueinG -> impotusL -> impianOE [style=dashed]
+impeME [label=<<b>Middle<br/>English</b><br/><font color="red">impe</font><br/><font point-size="12">offspring</font>>]
+imp [label=<<b>Modern<br/>English</b><br/><font color="red">imp</font>>]
+impianOE -> impeME -> imp
+/* physio-, physiognomy */
+phusioG -> physioE [style=dashed]
+physioE [label=<<b>Modern<br/>English</b><br/><font color="red">physio-</font>>]
+gnoIE -> gnomonG
+{ phusioG gnomonG } -> phusiognomiaG
+gnoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*gnō-</font><br/><font point-size="12">to know</font>> shape=box style="dashed,rounded" URL="gno-know2.svg"]
+gnomonG [label=<<font color="red">gnōmōn, gnōmon-</font><br/><font point-size="12">interpreter</font>>]
+phusiognomiaG [label=<<font color="red">phusiognōmonia,<br/>phusiognōmoniā</font>>]
+phusiognomiaG -> physiognomiaL [style=dashed]
+physiognomiaL [label=<<b>Latin</b><br/><font color="red">physiognōmia</font>>]
+physiognomiaL -> physiognomy [style=dashed] // may be intermediate steps
+physiognomy [label=<<b>Modern English</b><br/><font color="red">physiognomy</font>>]
+/* physique */
+phusikosG -> physicusL [style=dashed]
+physicusL [label=<<b>Latin</b><br/><font color="red">physicus</font>>]
+physicusL -> physiqueF
+physiqueF [label=<<b>French</b><br/><font color="red">physique</font>>]
+physiqueF -> physique [style=dashed]
+physique [label=<<b>Modern<br/>English</b><br/><font color="red">physique</font>>]
+/* physics, physical */
+phusikaG [label=<<font color="red">(ta) phusika</font><br/><font point-size="12">(the things) of nature</font>>]
+phusikaG -> physicaL [style=dashed]
+physicaL [label=<<b>Latin</b><br/><font color="red">physica</font>>]
+physicaL -> physics [style=dashed]
+physics [label=<<b>Modern<br/>English</b><br/><font color="red">physics</font>>]
+physicaL -> physicalisL [weight=2]
+physicalisL [label=<<font color="red">physicālis</font>>]
+physicalisL -> phisicalME [style=dashed]
+phisicalME [label=<<b>Middle<br/>English</b><br/><font color="red">phisical</font><br/><font point-size="12">medical</font>>]
+phisicalME -> physical
+physical [label=<<b>Modern<br/>English</b><br/><font color="red">physical</font>>]
+/* physic, physician */
+phusikeG [label=<<font color="red">phusikē</font>>]
+phusikeG -> physiceL [style=dashed]
+physiceL [label=<<b>Latin</b><br/><font color="red">physice</font>>] // spelling?
+physiceL -> fisiqueOF
+fisiqueOF [label=<<b>Old French</b><br/><font color="red">fisique</font>>]
+fisiqueOF -> { phisikME fisicienME } [style=dashed]
+phisikME [label=<<b>Middle<br/>English</b><br/><font color="red">phisik</font>>]
+phisikME -> physic
+physic [label=<<b>Modern<br/>English</b><br/><font color="red">physic</font><br/><font point-size="12">medicine, to heal</font>>]
+fisicienME [label=<<b>Middle<br/>English</b><br/><font color="red">fisicien</font>>] // < OFr ?fisicien?
+fisicienME -> physician
+physician [label=<<b>Modern<br/>English</b><br/><font color="red">physician</font>>]
+/* -phyte, phyto-, phyton */
+phutonG -> phytonNL [style=dashed]
+phytonNL [label=<<b>New Latin</b><br/><font color="red">phyton<br/>phyto-<br/>-phyte</font>>]
+phytonNL -> phyton [style=dashed]
+phyton [label=<<b>Modern English</b><br/><font color="red">phyton<br/>phyto-<br/>-phyte</font>>]
+/* diphyodont */
+{ diphuesG phueinG odousG } -> diphyodont [style=dashed]
+diphuesG [label=<<font color="red">diphuēs</font><br/><font point-size="12">double</font>>] // see dwo-
+odousG [label=<<font color="red">odous, odont-</font><br/><font point-size="12">tooth</font>>] // see dent-
+diphyodont [label=<<b>Modern English</b><br/><font color="red">diphyodont</font><br/><font point-size="12">having two successive<br/>sets of teeth</font>>]
+/* neophyte */
+phutosG [label=<<font color="red">phutos</font><br/><font point-size="12">planted</font>>]
+{ neoG phutosG } -> neophutosG
+neoG [label=<<font color="red">neo-</font><br/><font point-size="12">new</font>>]
+neophutosG [label=<<font color="red">neophutos</font>>]
+neophutosG -> neophytusL [style=dashed]
+neophytusL [label=<<b>Latin</b><br/><font color="red">neophytus</font>>]
+neophytusL -> neophyteME [style=dashed]
+neophyteME [label=<<b>Middle<br/>English</b><br/><font color="red">neophyte</font>>]
+neophyteME -> neophyte
+neophyte [label=<<b>Modern<br/>English</b><br/><font color="red">neophyte</font>>]
+/* -physis */
+phusisG [label=<<b>Greek</b><br/><font color="red">phusis</font><br/><font point-size="12">growth, nature</font>>]
+phusisG -> physisE [style=dashed]
+physisE [label=<<b>Modern<br/>English</b><br/><font color="red">apophysis<br/>diaphysis<br/>epiphysis<br/>hypophysis<br/>symphysis</font>>]
+/* future */
+futurusL [label=<<b>Latin</b><br/><font color="red">futūrus</font><br/><font point-size="12">that is to be</font>>]
+futurusL -> futurOF
+futurOF [label=<<b>Old French</b><br/><font color="red">futur</font>>]
+futurOF -> futureME [style=dashed]
+futureME [label=<<b>Middle<br/>English</b><br/><font color="red">future</font>>]
+futureME -> future
+future [label=<<b>Modern<br/>English</b><br/><font color="red">future</font>>]
+{ rank=same build boodle future physioE physic physics physical physiognomy physician physique phyton physisE neophyte diphyodont imp }
+{ rank=same bildenME boedelD neophyteME phisicalME phisikME fisicienME physiqueF futureME } // Middle English
+{ rank=same buthlamGm phueinG phusisG futurusL enG } // top level
+{ rank=same physicaL physiceL physicusL physiognomiaL neophytusL } // Latin from Greek
+{ rank=same diphuesG odousG neophutosG }
+{ rank=same bhu enIE gnoIE }
+build -> boodle [style=invis]
+build -> boodle [style=invis]
+}

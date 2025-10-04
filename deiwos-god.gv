@@ -1,0 +1,166 @@
+strict digraph {
+/* sources: roots, AHD */
+node [shape=none]
+
+deiwosIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*deiwos, *dyeus</font></td><td><font point-size="16">god, sky</font></td></tr></table>> tooltip="Indo-European \"*deiwos, *dyeus\" god, sky" shape=box peripheries=2 margin=.3]
+
+/* Tuesday */
+tiwazGm [label=<<b>Germanic</b><br/><font color="red">*Tīwaz</font><br/><font point-size="12">god of the<br/>sky and war</font>>]
+tiwOE [label=<<b>Old English</b><br/><font color="red">Tīw</font><br/><font point-size="12">god of war</font>>]
+daegOE [label=<<b>Old English</b><br/><font color="red">dæg</font><br/><font point-size="12">day</font>>]
+tiwesdaegOE [label=<<font color="red">Tīwes-dæg</font>>]
+tiwesdayME [label=<<b>Middle<br/>English</b><br/><font color="red">Tiwesday</font>>]
+tuesday [label=<<b>Modern<br/>English</b><br/><font color="red">Tuesday</font>>]
+deiwosIE -> tiwazGm -> tiwOE
+{ tiwOE daegOE } -> tiwesdaegOE -> tiwesdayME -> tuesday
+
+/* divine */
+divusL [label=<<b>Latin</b><br/><font color="red">dīvus</font>>]
+divinusL [label=<<font color="red">dīvīnus</font>>]
+divinOF [label=<<b>Old French</b><br/><font color="red">divin</font>>]
+divinME [label=<<b>Middle<br/>English</b><br/><font color="red">divin</font>>]
+divine [label=<<b>Modern<br/>English</b><br/><font color="red">divine</font>>]
+deiwosIE -> divusL -> divinusL -> divinOF
+divinOF -> divinME [style=dashed]
+divinME -> divine
+
+/* deity */
+deusL [label=<<b>Latin</b><br/><font color="red">deus</font>>]
+deitasL [label=<<font color="red">deitās</font>>]
+deiteOF [label=<<b>Old French</b><br/><font color="red">deite</font>>]
+deiteME [label=<<b>Middle<br/>English</b><br/><font color="red">deite</font>>]
+deity [label=<<b>Modern<br/>English</b><br/><font color="red">deity</font>>]
+deiwosIE -> deusL -> deitasL -> deiteOF
+deiteOF -> deiteME [style=dashed]
+deiteME -> deity
+
+/* Zeus */
+zeusG [label=<<b>Greek</b><br/><font color="red">Zeus</font>>]
+zeus [label=<<b>Modern<br/>English</b><br/><font color="red">Zeus</font>>]
+deiwosIE -> zeusG
+zeusG -> zeus [style=dashed]
+
+/* Jupiter */
+peterIE [label=<<b>Indo-<br/>European</b><br/><font color="red">pəter</font><br/><font point-size="12">father</font>> shape=box style="dashed,rounded" URL="peter-father.svg"]
+dyeupeterIE [label=<<font color="red">Dyeu-pəter</font>>]
+jupiterL [label=<<b>Latin</b><br/><font color="red">Juppiter<br/>Jūpiter</font>>]
+jupiter [label=<<b>Modern<br/>English</b><br/><font color="red">Jupiter</font>>]
+{ deiwosIE peterIE } -> dyeupeterIE -> jupiterL
+jupiterL -> jupiter [style=dashed]
+
+/* July */
+juliusL [label=<<b>Latin</b><br/><font color="red">Jūlius (Caesar)</font><br/><font point-size="12">"descended from<br/>Jupiter"<br/></font>>]
+july [label=<<b>Modern<br/>English</b><br/><font color="red">July</font>>]
+deiwosIE -> juliusL
+juliusL -> july [style=dashed]
+
+/* Jove, jovial */
+jovL [label=<<font color="red">Jov-</font>>]
+jove [label=<<b>Modern<br/>English</b><br/><font color="red">Jove</font>>]
+jupiterL -> jovL
+jovL -> jove [style=dashed]
+jovialisL [label=<<b>Late Latin</b><br/><font color="red">Joviālis</font><br/><font point-size="12">of Jupiter<br/>(the source of<br/>happiness)</font>>]
+giovaleI [label=<<b>Italian</b><br/><font color="red">giovale</font>>]
+jovialF [label=<<b>French</b><br/><font color="red">jovial</font>>]
+jovial [label=<<b>Modern<br/>English</b><br/><font color="red">jovial</font>>]
+jovL -> jovialisL -> giovaleI
+giovaleI -> jovialF -> jovial [style=dashed]
+
+/* adieu, adios */
+adieuOF [label=<<b>Old French</b><br/><font color="red">a dieu</font><br/><font point-size="12">(I commend<br/>you) to God</font>>]
+adieuME [label=<<b>Middle<br/>English</b><br/><font color="red">adieu</font>>]
+adieu [label=<<b>Modern<br/>English</b><br/><font color="red">adieu</font>>]
+deusL -> adieuOF
+adieuOF -> adieuME [style=dashed]
+adieuME -> adieu
+adiosS [label=<<b>Spanish</b><br/><font color="red">adiós</font>>]
+adios [label=<<b>Modern<br/>English</b><br/><font color="red">adios</font>>]
+deusL -> adiosS
+adieuOF -> adiosS [style=dotted arrowhead=onormal label="transl" decorate=true]
+adiosS -> adios [style=dashed]
+
+// dial
+diesL [label=<<b>Latin</b><br/><font color="red">diēs</font><br/><font point-size="12">day</font>>]
+dialeL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">diāle</font><br/><font point-size="12">daily</font>>]
+dyalOF [label=<<b>Old French</b><br/><font color="red">dyal</font>>]
+dialME [label=<<b>Middle<br/>English</b><br/><font color="red">dial</font><br/><font point-size="12">sundial, clock</font>>]
+dial [label=<<b>Modern<br/>English</b><br/><font color="red">dial</font>>]
+deiwosIE -> diesL -> dialeL -> dyalOF
+dyalOF -> dialME [style=dashed]
+dialME -> dial
+
+// diary
+diariumL [label=<<font color="red">diārium</font><br/><font point-size="12">daily allowance,<br/>daily journal</font>>]
+diary [label=<<b>Modern<br/>English</b><br/><font color="red">diary</font>>]
+diesL -> diariumL
+diariumL -> diary [style=dashed]
+
+// dismal
+melIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*mel-</font><br/><font point-size="12">false, bad, wrong</font>> shape=box style="dashed,rounded" URL="mel-bad.svg"]
+malusL [label=<<b>Latin</b><br/><font color="red">malus</font><br/><font point-size="12">evil</font>>]
+diesmaliL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">diēs malī</font>>]
+dismalAN [label=<<b>Anglo-Norman</b><br/><font color="red">dismal</font><br/><font point-size="12">unlucky days</font>>]
+dismalME [label=<<b>Middle<br/>English</b><br/><font color="red">dismal</font>>]
+dismal [label=<<b>Modern<br/>English</b><br/><font color="red">dismal</font>>]
+melIE -> malusL
+{ diesL malusL } -> diesmaliL -> dismalAN
+dismalAN -> dismalME [style=dashed]
+dismalME -> dismal
+
+// diurnal
+diurnusL [label=<<font color="red">diurnus<br/>diurnālis</font>>]
+diurnalME [label=<<b>Middle<br/>English</b><br/><font color="red">diurnal</font>>]
+diurnal [label=<<b>Modern<br/>English</b><br/><font color="red">diurnal</font>>]
+diesL -> diurnusL
+diurnusL -> diurnalME [style=dashed]
+diurnalME -> diurnal
+
+// journal
+journalOF [label=<<b>Old French</b><br/><font color="red">journal</font>>]
+journalME [label=<<b>Middle<br/>English</b><br/><font color="red">journal</font>>]
+journal [label=<<b>Modern<br/>English</b><br/><font color="red">journal</font>>]
+diurnusL -> journalOF
+journalOF -> journalME [style=dashed]
+journalME -> journal
+
+// journey
+diurnataL [label=<<font color="red">*diurnāta</font>>]
+jorneeOF [label=<<b>Old French</b><br/><font color="red">jornee</font>>]
+journeiME [label=<<b>Middle<br/>English</b><br/><font color="red">journei</font><br/><font point-size="12">day's travel</font>>]
+journey [label=<<b>Modern<br/>English</b><br/><font color="red">journey</font>>]
+diurnusL -> diurnataL -> jorneeOF
+jorneeOF -> journeiME [style=dashed]
+journeiME -> journey
+
+// circadian
+circaL [label=<<b>Latin</b><br/><font color="red">circā</font><br/><font point-size="12">around</font>>]
+circadian [label=<<b>Modern<br/>English</b><br/><font color="red">circadian</font>>]
+{ circaL diesL } -> circadian [style=dashed]
+
+// meridian
+medhyoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*medhyo-</font><br/><font point-size="12">middle</font>> shape=box style="dashed,rounded" URL="medhyo-middle2.svg"]
+mediusL [label=<<b>Latin</b><br/><font color="red">medius</font>>]
+meridiesL [label=<<font color="red">merīdiēs</font><br/><font point-size="12">midday</font>>]
+meridianusL [label=<<font color="red">merīdiānus</font>>]
+meridianOF [label=<<b>Old French</b><br/><font color="red">meridian</font>>]
+meridianME [label=<<b>Middle<br/>English</b><br/><font color="red">meridian</font>>]
+meridian [label=<<b>Modern<br/>English</b><br/><font color="red">meridian</font>>]
+medhyoIE -> mediusL
+{ mediusL diesL } -> meridiesL -> meridianusL -> meridianOF
+meridianOF -> meridianME [style=dashed]
+meridianME -> meridian
+
+// psychedelic
+delosG [label=<<b>Greek</b><br/><font color="red">dēlos</font><br/><font point-size="12">clear</font>>]
+delounG [label=<<font color="red">dēloun</font><br/><font point-size="12">to make visible</font>>]
+psukheG [label=<<b>Greek</b><br/><font color="red">psukhe</font><br/><font point-size="12">soul</font>>]
+psycheL [label=<<b>Latin</b><br/><font color="red">psȳchē</font>>]
+psychedelic [label=<<b>Modern<br/>English</b><br/><font color="red">psychedelic</font>>]
+deiwosIE -> delosG -> delounG
+psukheG -> psycheL [style=dashed]
+{ psycheL delounG } -> psychedelic [style=dashed]
+
+{ rank=sink tuesday divine deity zeus jupiter july jove jovial adieu adios dial diary dismal diurnal journal journey circadian meridian psychedelic }
+{ rank=source deiwosIE peterIE melIE medhyoIE }
+{ rank=same }
+}

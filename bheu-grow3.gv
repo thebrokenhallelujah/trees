@@ -1,0 +1,84 @@
+strict digraph {
+node [shape=plaintext]
+bheu [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">bheuə-, bheu-</font><font point-size="16">to be, exist, grow</font>> shape=box style="dashed,rounded" URL="bheu-grow0.svg" tooltip=""]
+bheu -> bhue
+/* bhue- */
+bhue [label=<<font color="red">bhuə-, bhū-</font>>]
+bhue -> { buramGm buwiGm bhulo } // omitted: byer
+buramGm [label=<<b>Germanic</b><br/><font color="red">būram</font><br/><font point-size="12">dweller, farmer</font>>]
+buramGm -> { burOE gheboerMD }
+/* bower, neighbor */
+burOE [label=<<b>Old English</b><br/><font color="red">būr</font><br/><font point-size="12">"dwelling space,"<br/>bower, room</font>>]
+{ geOE burOE } -> geburOE
+geOE [label=<<font color="red">ge-</font><br/><font point-size="12">together?</font>>] // see kom-
+burOE -> bourME
+bourME [label=<<b>Middle<br/>English</b><br/><font color="red">bour</font>>]
+bourME -> bower
+bower [label=<<b>Modern<br/>English</b><br/><font color="red">bower</font>>]
+geburOE [label=<<b>Old English</b><br/><font color="red">gebūr</font><br/><font point-size="12">dweller</font>>]
+{ neahOE geburOE } -> neahgeburOE
+neahOE [label=<<font color="red">nēah</font><br/><font point-size="12">near</font>>]
+neahgeburOE [label=<<font color="red">nēahgebūr</font>>]
+neahgeburOE -> neigheborME
+neigheborME [label=<<b>Middle<br/>English</b><br/><font color="red">neighebor</font>>]
+neigheborME -> neighbor
+neighbor [label=<<b>Modern<br/>English</b><br/><font color="red">neighbor</font>>]
+/* boor, Boer */
+gheboerMD [label=<<b>Middle<br/>Dutch</b><br/><font color="red">gheboer, ghebuer</font><br/><font point-size="12">peasant</font>>]
+gheboerMD -> boerD
+boerD [label=<<b>Dutch</b><br/><font color="red">boer</font>>]
+boerD -> boor [style=dashed]
+boor [label=<<b>Modern<br/>English</b><br/><font color="red">boor</font>>]
+boerD -> boerA
+boerA [label=<<b>Afrikaans</b><br/><font color="red">Boer</font>>]
+boerA -> boerE [style=dashed]
+boerE [label=<<b>Modern<br/>English</b><br/><font color="red">Boer</font>>]
+/* bylaw */
+buwiGm [label=<<b>Germanic</b><br/><font color="red">būwi-</font>>]
+buwiGm -> byrON
+byrON [label=<<b>Old Norse</b><br/><font color="red">bȳr</font><br/><font point-size="12">settlement</font>>]
+{ byrON laguON } -> bylagD
+laguON [label=<<font color="red">lagu</font><br/><font point-size="12">law</font>>]
+bylagD [label=<<b>Danish</b><br/><font color="red">by-lag</font><br/><font point-size="12">township ordinance</font>>]
+bylagD -> bilaweME [style=dashed]  // not the exact root
+bilaweME [label=<<b>Middle<br/>English</b><br/><font color="red">bilawe</font>>]
+bilaweME -> bylaw
+bylaw [label=<<b>Modern<br/>English</b><br/><font color="red">bylaw</font>>]
+/* phylum, phylogeny omitted: phyletic, phyle */
+bhulo [label=<<font color="red">bhū-lo-</font>>]
+bhulo -> phulonG
+phulonG [label=<<b>Greek</b><br/><font color="red">phūlon</font><br/><font point-size="12">race, class</font>>]
+phulonG -> { phylumNL phylogeny } [style=dashed]
+phylumNL [label=<<b>New Latin</b><br/><font color="red">phȳlum</font>>]
+phylumNL -> phylum [stlye=dashed]
+phylum [label=<<b>Modern<br/>English</b><br/><font color="red">phylum</font>>]
+genyE -> phylogeny
+genyE [label=<<b>English</b><br/><font color="red">-geny</font><br/><font point-size="12">origin</font>>]
+phylogeny [label=<<b>Modern<br/>English</b><br/><font color="red">phylogeny</font>>]
+/* Gm baumaz/bagmaz */
+bheu -> baumazGm [label="?"]
+baumazGm [label=<<b>Germanic</b><br/><font color="red">baumaz, bagmaz</font><br/><font point-size="12">tree</font>>]
+baumazGm -> { beamOE boomMD boomFl }
+/* beam */
+beamOE [label=<<b>Old English</b><br/><font color="red">bēam</font><br/><font point-size="12">tree, beam</font>>]
+beamOE -> bemME
+bemME [label=<<b>Middle<br/>English</b><br/><font color="red">bem</font>>]
+bemME -> beam
+beam [label=<<b>Modern<br/>English</b><br/><font color="red">beam</font>>]
+/* boom */
+boomMD [label=<<b>Middle<br/>Dutch</b><br/><font color="red">boom</font>>]
+boomMD -> boomD
+boomD [label=<<b>Dutch</b><br/><font color="red">boom</font><br/><font point-size="12">tree, pole</font>>]
+boomD -> boom [style=dashed]
+boom [label=<<b>Modern English</b><br/><font color="red">boom</font><br/><font point-size="12">pole</font>>]
+/* bumpkin */
+boomFl [label=<<b>Flemish</b><br/><font color="red">boom</font>>]
+boomFl -> boomkenFl
+boomkenFl [label=<<font color="red">boomken</font><br/><font point-size="12">shrub</font>>]
+boomkenFl -> { bumpkin1 bumpkin2 } [style=dashed label="?"]
+bumpkin1 [label=<<b>Modern<br/>English</b><br/><font color="red">bumpkin</font><br/><font point-size="12">yokel</font>>]
+bumpkin2 [label=<<b>Modern<br/>English</b><br/><font color="red">bumpkin</font><br/><font point-size="12">a spar on a ship</font>>]
+{ rank=same bower neighbor boor boerE bylaw phylum phylogeny beam boom bumpkin1 bumpkin2 }
+{ rank=same phulonG buramGm buwiGm baumazGm }
+
+}

@@ -1,0 +1,95 @@
+strict digraph {
+node [shape=plaintext]
+bheu [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">bheuə-, bheu-</font><font point-size="16">to be, exist, grow</font>> shape=box style="dashed,rounded" URL="bheu-grow0.svg" tooltip=""]
+bheu -> { bhwi bhow rank=same }
+/* bhwiyo-, bhwi- */
+bhwi [label=<<font color="red">bhwiy(o)-, bhwī-</font>>]
+bhwi -> { bijuGm fieriL } // possibly also L filius
+/* be, forebear */
+bijuGm [label=<<b>Germanic</b><br/><font color="red">biju</font><br/><font point-size="12">I am, will be</font>>]
+bijuGm -> beonOE
+beonOE [label=<<b>Old English</b><br/><font color="red">bēon</font><br/><font point-size="12">to be</font>>]
+beonOE -> benME
+benME [label=<<b>Middle<br/>English</b><br/><font color="red">ben</font>>]
+benME -> { be beerME }
+be [label=<<b>Modern<br/>English</b><br/><font color="red">be</font>>]
+beerME [label=<<font color="red">beer</font><br/><font point-size="12">one who is</font>>]
+{ fore beerME } -> forbearME
+fore [label=<<font color="red">fore-</font><br/><font point-size="12">before</font>>]
+forbearME [label=<<font color="red">forbear</font>>]
+forbearME -> forebear
+forebear [label=<<b>Modern English</b><br/><font color="red">forebear, forbear</font>>]
+/* fiat */
+fieriL [label=<<b>Latin</b><br/><font color="red">fierī</font><br/><font point-size="12">to become</font>>]
+fieriL -> fiatL
+fiatL [label=<<font color="red">fiat</font><br/><font point-size="12">let it be done</font>>]
+fiatL -> fiat [style=dashed]
+fiat [label=<<b>Modern<br/>English</b><br/><font color="red">fiat</font>>]
+/* bhow- */
+bhow [label=<<font color="red">bhōw-</font>>]
+bhow -> bowanGm
+bowanGm [label=<<b>Germanic</b><br/><font color="red">bōwan</font>>]
+bowanGm -> { buaON buanOG bothOD rank=same }
+/* bondage, bound, bustle, husband */
+buaON [label=<<b>Old Norse</b><br/><font color="red">būa</font><br/><font point-size="12">to live, prepare</font>>]
+buaON -> { bondiON buinnON buaskON }
+buaskON [label=<<font color="red">būask</font><br/><font point-size="12">to make oneself ready</font>>] // see s(w)e-
+/* bondage, husband, husbandry */
+bondiON [label=<<font color="red">būandi, bōndi</font><br/><font point-size="12">householder</font>>]
+bondiON -> bondaOE [style=dashed]
+bondaOE [label=<<b>Old English</b><br/><font color="red">bōnda</font><br/><font point-size="12">husbandman</font>>]
+bondaOE -> bondeME
+bondeME [label=<<b>Middle<br/>English</b><br/><font color="red">bonde</font><br/><font point-size="12">serf</font>>]
+bondeME -> bondageME // with a detour through Anglo-Norman
+bondageME [label=<<font color="red">bondage</font>>]
+bondageME -> bondage
+bondage [label=<<b>Modern<br/>English</b><br/><font color="red">bondage</font>>]
+{ husON bondiON } -> husbondiON
+husON [label=<<font color="red">hūs</font><br/><font point-size="12">house</font>>]
+husbondiON [label=<<font color="red">hūsbōndi</font>>]
+husbondiON -> husbondaOE [style=dashed]
+husbondaOE [label=<<b>Old English</b><br/><font color="red">hūsbōnda</font>>]
+husbondaOE -> husebandME
+husebandME [label=<<b>Middle English</b><br/><font color="red">huseband</font>>]
+husebandME -> { husband husbondriME }
+husband [label=<<b>Modern<br/>English</b><br/><font color="red">husband</font>>]
+husbondriME [label=<<font color="red">husbondri</font>>]
+husbondriME -> husbandry
+husbandry [label=<<b>Modern<br/>English</b><br/><font color="red">husbandry</font>>]
+/* bound */
+buinnON [label=<<font color="red">būinn</font>>]
+buinnON -> bounME [style=dashed]
+bounME [label=<<b>Middle English</b><br/><font color="red">boun</font><br/><font point-size="12">ready</font>>]
+bounME -> bound
+bound [label=<<b>Modern<br/>English</b><br/><font color="red">bound</font><br/><font point-size="12">headed toward</font>>]
+/* bustle */
+buaskON -> buskE [style=dashed]
+buskE [label=<<b>Modern? English</b><br/><font color="red">busk</font><br/><font point-size="12">to prepare oneself</font>>]
+buskE -> buskleE [weight=2]
+buskleE [label=<<font color="red">buskle</font>>]
+buskleE -> bustle [weight=2] // possible
+bustle [label=<<font color="red">bustle</font><br/><font point-size="12">to move busily</font>>]
+/* Bauhaus */
+buanOG [label=<<b>Old High<br/>German</b><br/><font color="red">būan</font><br/><font point-size="12">to dwell</font>>]
+buanOG -> buOG
+buOG [label=<<font color="red">bū</font><br/><font point-size="12">building</font>>]
+buOG -> buMG
+buMG [label=<<b>Middle High<br/>German</b><br/><font color="red">bū</font>>]
+buMG -> bauG
+bauG [label=<<b>German</b><br/><font color="red">Bau</font><br/><font point-size="12">construction,<br/>architecture</font>>]
+{ bauG hausG } -> bauhausG
+hausG [label=<<font color="red">Haus</font><br/><font point-size="12">house</font>>]
+bauhausG [label=<<font color="red">Bauhaus</font><br/><font point-size="12">an architectural school</font>>]
+bauhausG -> bauhaus [style=dashed weight=2]
+bauhaus [label=<<b>Modern English</b><br/><font color="red">Bauhaus</font>>]
+/* booth */
+bothOD [label=<<b>Old Danish</b><br/><font color="red">bōth</font><br/><font point-size="12">dwelling, stall</font>>]
+bothOD -> botheME [style=dashed] // not the exact source
+botheME [label=<<b>Middle<br/>English</b><br/><font color="red">bothe</font>>]
+botheME -> booth
+booth [label=<<b>Modern<br/>English</b><br/><font color="red">booth</font>>]
+{ rank=same be forebear fiat bondage bound bustle husband husbandry bauhaus booth }
+{ rank=same beonOE bondaOE husbondaOE } // OE
+{ rank=same bijuGm bowanGm fieriL } // top level
+{ rank=same benME bondeME husebandME bounME botheME buMG } // ME
+}

@@ -1,0 +1,24 @@
+strict digraph {
+node [shape=none]
+kwetwer [label=<<b>Indo-<br/>European</b><br/><font color="red">kʷetwer-</font><br/><font point-size="12">four</font>> shape=box style="dashed,rounded" URL="kwetwer-four1.svg"]
+cathwaroOI [label=<<b>Old Iranian</b><br/><font color="red">cathwārō</font>>]
+taqAr [label=<<font color="green"><b>Arabic</b></font><br/><font color="red">ṭāq</font><br/><font point-size="12">arch</font>>]
+taqP [label=<<b>Persian</b><br/><font color="red">ṭāq</font><br/><font point-size="12">vault</font>>]
+chaharP [label=<<b>Persian</b><br/><font color="red">chahār</font>>]
+chahartaqP [label=<<font color="red">chahār ṭāq</font><br/><font point-size="12">4-cornered<br/>vault</font>>]
+chartaqP [label=<<font color="red">chār ṭāq</font>>]
+cardakT [label=<<font color="green"><b>Turkish</b></font><br/><font color="red">çardak</font><br/><font point-size="12">hut, trellis</font>>]
+cardakSC [label=<<b>Serbo-Croatian</b><br/><font color="red">čardāk</font><br/><font point-size="12">watchtower</font>>]
+csardaH [label=<<font color="green"><b>Hungarian</b></font><br/><font color="red">csárda</font><br/><font point-size="12">wayside tavern</font>>]
+csardasH [label=<<font color="red">csárdás</font><br/><font point-size="12">style of dance<br/>and music</font>>]
+czardas [label=<<b>Modern<br/>English</b><br/><font color="red">czardas</font>>]
+kwetwer -> cathwaroOI
+cathwaroOI -> chaharP
+taqAr -> taqP [style=dashed]
+{ chaharP taqP } -> chahartaqP [samehead=1]
+chahartaqP -> chartaqP
+chartaqP -> cardakT -> cardakSC -> csardaH [style=dashed]
+csardaH -> csardasH
+csardasH -> czardas [style=dashed]
+{ rank=same cathwaroOI -> taqAr [style=invis] }
+}

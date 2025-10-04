@@ -1,0 +1,13 @@
+strict digraph {
+/* sources: roots, AHD */
+node [shape=none]
+
+
+dekmIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*dekm̥</font></td><td><font point-size="16">ten</font></td></tr></table>> tooltip="Indo-European \"*dekm̥\" ten" shape=box peripheries=2 margin=.3]
+
+dekm1 [label=<ten> shape=box style="dashed,rounded" URL="dekm-ten1.svg" tooltip=""]
+dekm2 [label=<compound numbers> shape=box style="dashed,rounded" URL="dekm-ten2.svg" tooltip=""]
+dekm3 [label=<hundred> shape=box style="dashed,rounded" URL="dekm-ten3.svg" tooltip=""]
+
+dekmIE -> { dekm1 dekm2 dekm3 } [sametail=1]
+}

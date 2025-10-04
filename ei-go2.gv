@@ -1,0 +1,141 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+eiIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ei-</font></td><td><font point-size="16">to go</font></td></tr></table>> tooltip="Indo-European \"*ei-\" to go" shape=rect style=dashed peripheries=1 margin=.3 URL="ei-go0.svg"]
+
+// initial, initiate
+itIE [label=<<font color="red">i-t-</font>>]
+ityoIE [label=<<font color="red">i-t-yo-</font>>]
+initiumL [label=<<b>Latin</b><br/><font color="red">initium</font><br/><font point-size="12">beginning</font>>]
+initial [label=<<b>Modern<br/>English</b><br/><font color="red">initial<br/>initiate</font>>]
+eiIE -> itIE -> ityoIE -> initiumL
+initiumL -> initial [style=dashed]
+
+// commence
+komIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*kom</font><br/><font point-size="12">near, with</font>> shape=box style="dashed,rounded" URL="kom-with.svg"]
+comL [label=<<b>Latin</b><br/><font color="red">com-, co-</font><br/><font point-size="12">together, with</font>>]
+initiareL [label=<<font color="red">initiāre</font><br/><font point-size="12">to begin</font>>]
+cominitiareL [label=<<font color="red">cominitiāre</font>>]
+comencierOF [label=<<b>Old French</b><br/><font color="red">comencier</font>>]
+commencenME [label=<<b>Middle<br/>English</b><br/><font color="red">commencen</font>>]
+commence [label=<<b>Modern<br/>English</b><br/><font color="red">commence</font>>]
+komIE -> comL
+initiumL -> initiareL
+{ comL initiareL } -> cominitiareL -> comencierOF
+comencierOF -> commencenME [style=dashed]
+commencenME -> commence
+
+// count, county
+comesL [label=<<b>Latin</b><br/><font color="red">comes, comit-</font><br/><font point-size="12">companion,<br/>officer</font>>]
+conteOF [label=<<b>Old French</b><br/><font color="red">conte</font>>]
+counteME [label=<<b>Middle<br/>English</b><br/><font color="red">counte</font>>]
+count [label=<<b>Modern<br/>English</b><br/><font color="red">count</font><br/><font point-size="12">noble</font><br/><font color="red">county</font>>]
+{ comL itIE } -> comesL -> conteOF
+conteOF -> counteME [style=dashed]
+counteME -> count
+
+// viscount
+vicecomesL [label=<<font color="red">vicescomes,<br/>vicecomit-</font>>]
+visconteOF [label=<<b>Old French</b><br/><font color="red">visconte</font>>]
+viscountME [label=<<b>Middle<br/>English</b><br/><font color="red">viscount</font>>]
+viscount [label=<<b>Modern<br/>English</b><br/><font color="red">viscount</font>>]
+comesL -> vicecomesL -> visconteOF
+visconteOF -> viscountME [style=dashed]
+viscountME -> viscount
+
+// constable
+comesstabuliL [label=<<font color="red">comes stabulī</font><br/><font point-size="12">officer of the stable</font>>]
+conestableOF [label=<<b>Old French</b><br/><font color="red">conestable</font>>]
+constableME [label=<<b>Middle<br/>English</b><br/><font color="red">constable</font>>]
+constable [label=<<b>Modern<br/>English</b><br/><font color="red">constable</font>>]
+comesL -> comesstabuliL -> conestableOF
+conestableOF -> constableME [style=dashed]
+constableME -> constable
+
+// itinerant, itinerary
+iterIE [label=<<font color="red">i-ter-</font>>]
+iterL [label=<<b>Latin</b><br/><font color="red">iter</font><br/><font point-size="12">journey</font>>]
+itinerariusL [label=<<font color="red">itinerārius</font><br/><font point-size="12">of traveling</font>>]
+itinerant [label=<<b>Modern<br/>English</b><br/><font color="red">itinerant<br/>itinerary</font>>]
+itIE -> iterIE -> iterL -> itinerariusL
+itinerariusL -> itinerant [style=dashed]
+
+// errant
+iterareL [label=<<font color="red">iterāre</font><br/><font point-size="12">to travel about</font>>]
+errerOF [label=<<b>Old French</b><br/><font color="red">errer</font>>]
+errauntME [label=<<b>Middle<br/>English</b><br/><font color="red">erraunt</font>>]
+errant [label=<<b>Modern<br/>English</b><br/><font color="red">errant</font>>]
+iterL -> iterareL -> errerOF
+errerOF -> errauntME [style=dashed]
+errauntME -> errant
+
+// Janus
+yaIE [label=<<font color="red">yā-</font>>]
+yanuIE [label=<<font color="red">yā-no, yā-nu</font>>]
+janusL [label=<<b>Latin</b><br/><font color="red">jānus</font><br/><font point-size="12">archway</font><br/><font color="red">Jānus</font><br/><font point-size="12">god of gates</font>>]
+janus [label=<<b>Modern<br/>English</b><br/><font color="red">Janus</font>>]
+eiIE -> yaIE -> yanuIE -> janusL
+janusL -> janus [style=dashed]
+
+// January
+januariusL [label=<<font color="red">Jānuārius</font><br/><font point-size="12">of Janus</font>>]
+january [label=<<b>Modern<br/>English</b><br/><font color="red">January</font>>]
+janusL -> januariusL
+januariusL -> january [style=dashed]
+
+// janitor
+januaL [label=<<font color="red">jānua</font><br/><font point-size="12">door</font>>]
+janitorL [label=<<font color="red">jānitor</font><br/><font point-size="12">doorkeeper</font>>]
+janitor [label=<<b>Modern<br/>English</b><br/><font color="red">janitor</font>>]
+janusL -> januaL -> janitorL
+janitorL -> janitor [style=dashed]
+
+// Hinayana, Mahayana
+yanamSk [label=<<b>Sanskrit</b><br/><font color="red">yānam</font><br/><font point-size="12">way, vehicle</font>>]
+gheIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ghē-</font><br/><font point-size="12">to release</font>> shape=box style="dashed,rounded" URL="ghe-release.svg"]
+hinaSk [label=<<b>Sanskrit</b><br/><font color="red">hīna-</font><br/><font point-size="12">inferior</font>>]
+hinayanamSk [label=<<font color="red">Hīnayānam</font><br/><font point-size="12">lesser vehicle</font>>]
+hinayana [label=<<b>Modern<br/>English</b><br/><font color="red">Hinayana</font>>]
+yanuIE -> yanamSk
+gheIE -> hinaSk
+{ hinaSk yanamSk } -> hinayanamSk
+hinayanamSk -> hinayana [style=dashed]
+megIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*meg-</font><br/><font point-size="12">great</font>> shape=box style="dashed,rounded" URL="meg-great.svg"]
+mahaSk [label=<<b>Sanskrit</b><br/><font color="red">mahā-</font><br/><font point-size="12">great</font>>]
+mahayanamSk [label=<<font color="red">Mahāyānam</font><br/><font point-size="12">greater vehicle</font>>]
+mahayana [label=<<b>Modern<br/>English</b><br/><font color="red">Mahayana</font>>]
+megIE -> mahaSk
+{ mahaSk yanamSk } -> mahayanamSk
+mahayanamSk -> mahayana [style=dashed]
+
+// ion
+ienaiGk [label=<<b>Greek</b><br/><font color="red">ienai</font><br/><font point-size="12">to go</font>>]
+ionGk [label=<<font color="red">ion</font><br/><font point-size="12">something<br/>that goes</font>>]
+ion [label=<<b>Modern<br/>English</b><br/><font color="red">ion<br/>anion<br/>cation</font>>]
+eiIE -> ienaiGk -> ionGk
+ionGk -> ion [style=dashed]
+
+// dysprosium
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">forward, through</font>> shape=box style="dashed,rounded" URL="per-pre.svg"]
+prosGk [label=<<b>Greek</b><br/><font color="red">pros-</font><br/><font point-size="12">toward</font>>]
+prosienaiGk [label=<<font color="red">prosienai</font><br/><font point-size="12">to approach</font>>]
+prositosGk [label=<<font color="red">prositos</font><br/><font point-size="12">approachable</font>>]
+dusprositosGk [label=<<font color="red">dusprositos</font><br/><font point-size="12">difficult<br/>to approach</font>>]
+dysprosium [label=<<b>Modern<br/>English</b><br/><font color="red">dysprosium</font>>]
+perIE -> prosGk
+{ prosGk ienaiGk } -> prosienaiGk -> prositosGk -> dusprositosGk
+dusprositosGk -> dysprosium [style=dashed]
+
+// Ramayana
+aitiII [label=<<b>Indo-Iranian</b><br/><font color="red">*ai-ti</font>>]
+etiSk [label=<<b>Sanskrit</b><br/><font color="red">eti, ay-</font><br/><font point-size="12">he goes</font>>]
+ayanamSk [label=<<font color="red">ayanam</font><br/><font point-size="12">a going, a way</font>>]
+ramayanamSk [label=<<font color="red">Rāmāyaṇam</font><br/><font point-size="12">the going of Rama</font>>]
+ramayana [label=<<b>Modern<br/>English</b><br/><font color="red">Ramayana</font>>]
+eiIE -> aitiII -> etiSk -> ayanamSk -> ramayanamSk
+ramayanamSk -> ramayana
+
+{ rank=sink initial initial commence count viscount constable itinerant errant janus january janitor hinayana mahayana ion dysprosium ramayana }
+{ rank=same komIE gheIE megIE perIE }
+}

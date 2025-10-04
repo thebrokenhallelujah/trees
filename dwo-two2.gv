@@ -1,0 +1,137 @@
+strict digraph {
+/* sources: AHD */
+	node [shape=none]
+	dwo  [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*dwo-</font><br/><font point-size="16">two</font>> shape=box style="dashed,rounded" URL="dwo-two0.svg" tooltip=""]
+
+	du [label=<<font color="red">*du</font>>]
+	dwis [label=<<font color="red">*dwis</font><br/><font point-size="12">twice</font>>]
+	dwo -> { du dwis } [sametail=1]
+
+	duplo [label=<<font color="red">*du-plo-</font><br/><font point-size="12">twofold</font>>]
+	duplusL [label=<<b>Latin</b><br/><font color="red">duplus, dupla</font>>]
+	duple [label=<<b>Modern<br/>English</b><br/><font color="red">duple</font>>]
+	du -> duplo [sametail=1]
+	duplo -> duplusL [sametail=1]
+	duplusL -> duple [sametail=1 style=dashed]
+	
+	doubleOF [label=<<b>Old French</b><br/><font color="red">double</font>>]
+	doubleME [label=<<b>Middle<br/>English</b><br/><font color="red">double</font>>]
+	double [label=<<b>Modern<br/>English</b><br/><font color="red">double</font>>]
+	doubletOF [label=<<font color="red">doublet</font><br/><font point-size="12">(diminutive)</font>>]
+	doubletME [label=<<b>Middle<br/>English</b><br/><font color="red">doublet</font>>]
+	doublet [label=<<b>Modern<br/>English</b><br/><font color="red">doublet</font>>]
+	duplusL -> doubleOF
+	doubleOF -> doubleME [sametail=1 style=dashed]
+	doubleME -> double
+	doubleOF -> doubletOF [sametail=1]
+	doubletOF -> doubletME [style=dashed]
+	doubletME -> doublet
+	doblaS [label=<<b>Spanish</b><br/><font color="red">dobla</font><br/><font point-size="12">a coin</font>>]
+	doblonS [label=<<font color="red">doblón</font><br/><font point-size="12">(augmentative)</font>>] // what's that mean?
+	doubloon [label=<<b>Modern<br/>English</b><br/><font color="red">doubloon</font>>]
+	duplusL -> doblaS -> doblonS
+	doblonS -> doubloon [style=dashed]
+	
+	plek [label=<<b>Indo-<br/>European</b><br/><font color="red">*plek-</font><br/><font point-size="12">to pleat</font>> shape=box style="dashed,rounded" URL=".svg"] // not made
+	duplek [label=<<font color="red">*du-plek-</font><br/><font point-size="12">twofold</font>>]
+	duplexL [label=<<b>Latin</b><br/><font color="red">duplex, duplic-</font>>]
+	duplex [label=<<b>Modern<br/>English</b><br/><font color="red">duplex</font>>]
+	du -> duplek [sametail=1 samehead=1]
+	plek -> duplek [samehead=1]
+	duplek -> duplexL
+	duplexL -> duplex [style=dashed sametail=1]
+	duplicareL [label=<<font color="red">duplicāre</font><br/><font point-size="12">to double</font><br/><font color="red">duplicātus</font><br/><font point-size="12">doubled</font>>]
+	duplicateME [label=<<b>Middle<br/>English</b><br/><font color="red">duplicate</font>>]
+	duplicate [label=<<b>Modern<br/>English</b><br/><font color="red">duplicate</font>>]
+	duplexL -> duplicareL [sametail=1]
+	duplicareL -> duplicateME [style=dashed]
+	duplicateME -> duplicate
+	duplicitasL [label=<<font color="red">duplicitās</font><br/><font point-size="12">doubleness</font>>]
+	dupliciteOF [label=<<b>Old French</b><br/><font color="red">duplicite</font>>]
+	dupliciteME [label=<<b>Middle<br/>English</b><br/><font color="red">duplicite</font>>]
+	duplicity [label=<<b>Modern<br/>English</b><br/><font color="red">duplicity</font>>]
+	duplexL -> duplicitasL [sametail=1]
+	duplicitasL -> dupliciteOF
+	dupliciteOF -> dupliciteME [style=dashed]
+	dupliciteME -> duplicity
+/* omitted: conduplicate (botany) */
+	
+	bheu [label=<<b>Indo-<br/>European</b><br/><font color="red">*bheu(ə)-</font><br/><font point-size="12">to be, grow</font>> shape=box style="dashed,rounded" URL="bheu-grow4.svg"]
+	bhw [label=<<font color="red">*-bhw-</font><br/><font point-size="12">being</font>>]
+	dubhwio [label=<<font color="red">*du-bhw-io-</font><br/><font point-size="12">"hesitating between<br/>two alternatives"</font>>] // AHD gives this as a def for the Latin
+	dubiusL [label=<<b>Latin</b><br/><font color="red">dubius</font><br/><font point-size="12">doubtful</font>>]
+	du -> dubhwio [sametail=1 samehead=1]
+	bheu -> bhw
+	bhw -> dubhwio [samehead=1]
+	dubhwio -> dubiusL
+	dubious [label=<<b>Modern<br/>English</b><br/><font color="red">dubious</font>>]
+	dubiusL -> dubious [style=dashed sametail=1]
+	
+	dubitareL [label=<<font color="red">dubitāre</font><br/><font point-size="12">to be in doubt</font>>]
+	douterOF [label=<<b>Old French</b><br/><font color="red">douter</font>>]
+	doutenME [label=<<b>Middle<br/>English</b><br/><font color="red">douten</font>>]
+	doubt [label=<<b>Modern<br/>English</b><br/><font color="red">doubt</font>>]
+	dubiusL -> dubitareL [sametail=1]
+	dubitareL -> douterOF [sametail=1]
+	douterOF -> doutenME [style=dashed sametail=1]
+	doutenME -> doubt
+	dubitabilisL [label=<<font color="red">dubitābilis</font>>]
+	dubitable [label=<<b>Modern<br/>English</b><br/><font color="red">dubitable</font>>]
+	dubitareL -> dubitabilisL [sametail=1]
+	dubitabilisL -> dubitable [style=dashed]
+	
+	redouterOF [label=<<font color="red">redouter</font><br/><font point-size="12">to dread</font><br/><font color="red">redoutable</font>>] // intensive prefix?
+	redoubtabelME [label=<<b>Middle<br/>English</b><br/><font color="red">redoubtabel</font>>]
+	redoubtable [label=<<b>Modern<br/>English</b><br/><font color="red">redoubtable</font>>]
+	douterOF -> redouterOF [sametail=1]
+	redouterOF -> redoubtabelME [style=dashed]
+	redoubtabelME -> redoubtable	
+		
+/* twist */
+	twisGm [label=<<b>Germanic</b><br/><font color="red">*twis</font>>]
+	twistOE [label=<<b>Old English</b><br/><font color="red">-twist</font><br/><font point-size="12">divided object,<br/>fork, rope</font>>]
+	twistenME [label=<<b>Middle<br/>English</b><br/><font color="red">twisten</font><br/><font point-size="12">to squeeze,<br/>be divided</font>>]
+	twist [label=<<b>Modern<br/>English</b><br/><font color="red">twist</font>>]
+	dwis -> twisGm [sametail=1]
+	twisGm -> twistOE -> twistenME -> twist	
+
+/* twin */	
+	dwisno [label=<<font color="red">*dwis-no-</font>>]
+	twisnazGm [label=<<b>Germanic</b><br/><font color="red">*twisnaz</font><br/><font point-size="12">double</font>>]
+	twinnOE [label=<<b>Old English</b><br/><font color="red">twinn</font>>]
+	twinME [label=<<b>Middle<br/>English</b><br/><font color="red">twin</font><br/><font point-size="12">twin</font>>]
+	twin [label=<<b>Modern<br/>English</b><br/><font color="red">twin</font>>]
+	dwis -> dwisno [sametail=1]
+	dwisno -> twisnazGm -> twinnOE -> twinME -> twin
+	
+/* bezel, biscuit, biscotto/i */
+/* omitted: bis (music), bistort (plant) */
+	bisL [label=<<b>Latin</b><br/><font color="red">bis</font>>]
+	biseauF [label=<<b>French</b><br/>dial. form of<br/><font color="red">biseau</font>>]
+	bezel [label=<<b>Modern<br/>English</b><br/><font color="red">bezel</font>>]
+	dwis -> bisL [sametail=1]
+	bisL -> biseauF [sametail=1]
+	biseauF -> bezel [style=dashed weight=3]
+	coctusL [label=<<b>Latin</b><br/><font color="red">coquere</font><br/><font point-size="12">to cook</font><br/><font color="red">coctus</font><br/><font point-size="12">cooked</font>> shape=box style="dashed,rounded" URL=".svg" tooltip="PIE *pekʷ-, to cook or ripen"] // pekw-
+	biscoctusL [label=<<font color="red">bis coctus</font>>]
+	biscuitOF [label=<<b>Old French</b><br/><font color="red">biscuit</font>>]
+	bisquitME [label=<<b>Middle<br/>English</b><br/><font color="red">bisquit</font>>]
+	biscuit [label=<<b>Modern<br/>English</b><br/><font color="red">biscuit</font>>]
+	bisL -> biscoctusL [sametail=1 samehead=1]
+	coctusL -> biscoctusL [samehead=1]
+	biscoctusL -> biscuitOF [sametail=1]
+	biscuitOF -> bisquitME [style=dashed sametail=1]
+	bisquitME -> biscuit
+	biscottoI [label=<<b>Italian</b><br/><font color="red">biscotto<br/>biscotti </font>(pl.)>]
+	biscotto [label=<<b>Modern<br/>English</b><br/><font color="red">biscotto<br/>biscotti </font>(pl.)>]
+	biscoctusL -> biscottoI [sametail=1]
+	biscottoI -> biscotto [style=dashed]
+
+	{ rank=sink duple double doublet doubloon duplex duplicate duplicity  doubt dubious dubitable redoubtable twist twin bezel biscuit biscotto }
+	{ rank=same duplek duplo dubhwio }
+	doblaS -> doblonS -> doubloon [weight=2]
+	dubitareL -> dubitabilisL [weight=2]
+	biscottoI -> biscotto [weight=2]
+	{ rank=same twisnazGm twisGm }
+	{ rank=same bisL coctusL duplexL duplusL dubiusL }
+}

@@ -1,0 +1,178 @@
+strict digraph {
+node [shape=none]
+//edge [samehead=1 sametail=1]
+//graph [splines=false]
+doIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*dō</font></td><td><font point-size="16">to give</font></td></tr></table>> tooltip="Indo-European \"*dō\" to give" shape=rect style=dashed peripheries=1 margin=.3 URL=".svg"]
+deIE [label=<<font color="red">də-</font>>]
+doIE -> deIE
+
+/* ---- L dare ---- */
+/* omitted: dado, */
+/* data */
+dareL [label=<<b>Latin</b><br/><font color="red">dare</font><br/><font point-size="12">to give</font>>] // also to play (make a move in a game)
+datumL [label=<<font color="red">datus, data, datum</font><br/><font point-size="12">something given</font>>]
+data [label=<<b>Modern<br/>English</b><br/><font color="red">datum, data</font>>]
+deIE -> dareL -> datumL
+datumL -> data [style=dashed]
+
+/* date */
+dataL [label=<<font color="red">data (Romae)</font><br/><font point-size="12">issued (at Rome)<br/>(on a certain day)</font>>]
+dateOF [label=<<b>Old French</b><br/><font color="red">date</font>>]
+dateME [label=<<b>Middle<br/>English</b><br/><font color="red">date</font>>]
+date [label=<<b>Modern<br/>English</b><br/><font color="red">date</font><br/><font point-size="12">particular day,<br/>appointment</font>>]
+datumL -> dataL -> dateOF
+dateOF -> dateME [style=dashed]
+dateME -> date
+
+/* dative */
+dativusL [label=<<font color="red">(cāsus) datīvus</font><br/><font point-size="12">(case of) giving</font>>] // translation of Greek
+datifME [label=<<b>Middle<br/>English</b><br/><font color="red">datif</font>>]
+dative [label=<<b>Modern<br/>English</b><br/><font color="red">dative</font><br/><font point-size="12">(grammar)</font>>]
+datumL -> dativusL
+dativusL -> datifME [style=dashed]
+datifME -> dative
+
+/* die (both) - extended definition of dare */
+deOF [label=<<b>Old French</b><br/><font color="red">de, dez</font><br/><font point-size="12">gaming die</font>>]
+deME [label=<<b>Middle<br/>English</b><br/><font color="red">de, deys</font>>]
+dice [label=<<b>Modern<br/>English</b><br/><font color="red">die, dice</font>>]
+die [label=<<b>Modern<br/>English</b><br/><font color="red">die</font><br/><font point-size="12">cutting device</font>>]
+datumL -> deOF
+deOF -> deME [style=dashed]
+deME -> dice -> die
+
+/* add */
+addereL [label=<<font color="red">addere</font><br/><font point-size="12">to add</font>>]
+addenME [label=<<b>Middle<br/>English</b><br/><font color="red">adden</font>>]
+add [label=<<b>Modern<br/>English</b><br/><font color="red">add</font>>]
+dareL -> addereL
+addereL -> addenME [style=dashed]
+addenME -> add
+adL [label=<<b>Latin</b><br/><font color="red">ad-</font><br/><font point-size="12">to, toward</font>>]
+adL -> addereL
+
+/* tradition */
+tradereL [label=<<font color="red">trādere</font><br/><font point-size="12">to hand over</font>>]
+traditioL [label=<<font color="red">trāditiō, trāditiōn-</font>>]
+tradition [label=<<b>Modern<br/>English</b><br/><font color="red">tradition</font>>]
+dareL -> tradereL -> traditioL
+traditioL -> tradition [style=dashed] // "ultimately"
+/* trans- (link to tere-cross) */
+tere [label=<<font color="red">terə-</font><br/><font point-size="12">cross over</font>> shape=box style="dashed,rounded" URL="tere-cross.svg"]
+transL [label=<<b>Latin</b><br/><font color="red">trāns-</font><br/><font point-size="12">across,<br/>beyond,<br/>through</font>>]
+tere -> transL -> tradereL
+
+/* treason */
+tresonAN [label=<<b>Anglo-Norman</b><br/><font color="red">treson</font>>]
+treasonME [label=<<b>Middle<br/>English</b><br/><font color="red">treason</font>>]
+treason [label=<<b>Modern<br/>English</b><br/><font color="red">treason</font>>]
+traditioL -> tresonAN
+tresonAN -> treasonME [style=dashed]
+treasonME -> treason
+
+/* traitor */
+traditorL [label=<<font color="red">trāditor</font>>]
+traitorOF [label=<<b>Old French</b><br/><font color="red">traitor</font>>]
+traitorME [label=<<b>Middle<br/>English</b><br/><font color="red">traitor</font>>]
+traitor [label=<<b>Modern<br/>English</b><br/><font color="red">traitor</font>>]
+tradereL -> traditorL -> traitorOF
+traitorOF -> traitorME [style=dashed]
+traitorME -> traitor
+
+/* betray */
+trairOF [label=<<b>Old French</b><br/><font color="red">trair</font>>]
+trayenME [label=<<b>Middle<br/>English</b><br/><font color="red">trayen</font><br/><font point-size="12">to betray</font>>]
+bitrayenME [label=<<font color="red">bitrayen</font>>]
+betray [label=<<b>Modern<br/>English</b><br/><font color="red">betray</font>>]
+tradereL -> trairOF
+trairOF -> trayenME [style=dashed]
+trayenME -> bitrayenME -> betray
+/* be- (link to ambhi (special case of ant-)) */
+ambhi [label=<<font color="red">ambhi</font><br/><font point-size="12">around</font>> shape=box style="dashed,rounded" URL="ambhi-around.svg"]
+beOE [label=<<b>Old English</b><br/><font color="red">be-, bi-</font>>]
+beME [label=<<b>Middle<br/>English</b><br/><font color="red">be-, bi-</font><br/><font point-size="12">(intensive<br/>prefix)</font>>]
+ambhi -> beOE -> beME -> bitrayenME
+
+/* edit, editor, edition */
+edereL [label=<<font color="red">ēdere, ēditus</font><br/><font point-size="12">to publish</font>>]
+//editerF [label=<<b>French</b><br/><font color="red">editer</font>>]
+editorL [label=<<font color="red">ēditor</font>>]
+edit [label=<<b>Modern<br/>English</b><br/><font color="red">editor<br/>edit<br/>edition</font>>]
+dareL -> edereL -> editorL
+editorL -> edit [style=dashed]
+/* ex- (link to eghs) */
+eghs [label=<<font color="red">eghs</font><br/><font point-size="12">out of, from</font>> shape=box style="dashed,rounded" URL="eghs-out.svg"]
+exL [label=<<b>Latin</b><br/><font color="red">ex-, ē-</font>>]
+eghs -> exL -> edereL
+
+/* perdition */
+/* omitted: perdu */
+perdereL [label=<<font color="red">perdere</font><br/><font point-size="12">to lose</font>>]
+perditioL [label=<<font color="red">perditiō,<br/>perditiōn-</font>>]
+perdicionOF [label=<<b>Old French</b><br/><font color="red">perdicion</font>>]
+perdicionME [label=<<b>Middle<br/>English</b><br/><font color="red">perdicion</font>>]
+perdition [label=<<b>Modern<br/>English</b><br/><font color="red">perdition</font>>]
+dareL -> perdereL -> perditioL -> perdicionOF
+perdicionOF -> perdicionME [style=dashed]
+perdicionME -> perdition
+/* per- (link to per) */
+perIE [label=<<font color="red">per</font><br/><font point-size="12">through</font>> shape=box style="dashed,rounded" URL="per-peri.svg"]
+perL [label=<<b>Latin</b><br/><font color="red">per-</font><br/><font point-size="12">(intensive<br/>prefix)</font>>]
+perIE -> perL -> perdereL
+
+/* render */
+reddereL [label=<<font color="red">reddere<br/>rendere</font><br/><font point-size="12">to give back</font>>] // latter Vulgar
+rendreOF [label=<<b>Old French</b><br/><font color="red">rendre</font>>]
+rendrenME [label=<<b>Middle<br/>English</b><br/><font color="red">rendren</font>>]
+render [label=<<b>Modern<br/>English</b><br/><font color="red">render</font>>]
+dareL -> reddereL -> rendreOF
+rendreOF -> rendrenME [style=dashed]
+rendrenME -> render
+/* add re-? */
+
+/* surrender */
+surrendreOF [label=<<font color="red">surrendre</font><br/><font point-size="12">to give up</font>>]
+surrenderenME [label=<<b>Middle<br/>English</b><br/><font color="red">surrenderen</font>>]
+surrender [label=<<b>Modern<br/>English</b><br/><font color="red">surrender</font>>]
+rendreOF -> surrendreOF
+surrendreOF -> surrenderenME [style=dashed]
+surrenderenME -> surrender
+/* sur- (link to uper) */
+uper [label=<<font color="red">uper</font><br/><font point-size="12">over, above</font>> shape=box style="dashed,rounded" URL="uper-over.svg"]
+superL [label=<<b>Latin</b><br/><font color="red">super-</font>>]
+surOF [label=<<b>Old French</b><br/><font color="red">sur-</font>>]
+uper -> superL -> surOF -> surrendreOF
+
+/* rent */
+renditaL [label=<<font color="red">rendita</font>>]
+renteOF [label=<<b>Old French</b><br/><font color="red">rente</font>>]
+renteME [label=<<b>Middle<br/>English</b><br/><font color="red">rente</font>>]
+rent [label=<<b>Modern<br/>English</b><br/><font color="red">rent</font><br/><font point-size="12">(payment)</font>>]
+reddereL -> renditaL -> renteOF
+renteOF -> renteME [style=dashed]
+renteME -> rent
+
+/* vend */
+vendereL [label=<<font color="red">vēnumdare<br/>vēndere</font><br/><font point-size="12">to sell</font>>]
+vend [label=<<b>Modern<br/>English</b><br/><font color="red">vend</font>>]
+dareL -> vendereL
+vendereL -> vend [style=dashed]
+/* venum (link to wes-buy) */
+wesIE [label=<<font color="red">wes-</font><br/><font point-size="12">to buy, sell</font>> shape=box style="dashed,rounded" URL="wes-buy.svg"]
+venumL [label=<<b>Latin</b><br/><font color="red">vēnum</font><br/><font point-size="12">sale</font>>]
+wesIE -> venumL -> vendereL
+
+{rank=same data date dative dice die add tradition treason traitor betray edit perdition render surrender rent vend}
+{rank=same deIE tere ambhi eghs perIE uper wesIE}
+{rank=same beOE trairOF tresonAN traitorOF renteOF rendreOF deOF dateOF perdicionOF surOF}
+{rank=same addenME treasonME traitorME trayenME beME renteME rendrenME dateME datifME deME surrenderenME perdicionME}
+dareL -> {addereL tradereL reddereL datumL edereL perdereL vendereL rank=same} [minlen=3]
+addereL -> tradereL -> reddereL -> datumL -> edereL -> perdereL -> vendereL [style=invis]
+{rank=same dataL dativusL}
+{rank=same adL transL perL exL venumL dareL}
+trairOF -> beOE [style=invis]
+betray -> rent [style=invis]
+// render -> surrender -> perdition [weight=10 style=invis]
+rendreOF -> surrendreOF [weight=5]
+edereL -> editorL [weight=2]
+}

@@ -1,0 +1,18 @@
+digraph bha_top {
+/* sources: AHD */
+bha [label=<<b>Indo-European</b><br/><font color="red">bhaə-, bhā-</font><br/><font point-size="12">to speak</font>> shape=box];
+bha -> { banwan; fari; suff }
+banwan [label=<<b>Germanic</b><br/><font color="red">ban-wan, bannan</font><br/><font point-size="12">to speak publicly</font>> shape=box, style="dashed,rounded" URL="bha-speak1.svg"];
+fari [label=<<b>Latin</b><br/><font color="red">fārī</font>> shape=box style="dashed,rounded" URL="bha-speak2.svg"];
+suff [label=<various<br/>suffixed<br/>forms> shape=box style="dashed,rounded" URL="bha-speak3.svg"];
+/*
+subgraph suff {
+shape=box style="dashed,rounded";
+bhani [label=<<font color="red">bhā-ni-</font>> shape=none URL="bha-speak3.svg"];
+bhama [label=<<font color="red">bhā-mā-</font>> shape=none URL="bha-speak3.svg"];
+bhona [label=<<font color="red">bhō-nā-</font>> shape=none URL="bha-speak3.svg"];
+bheto [label=<<font color="red">bh&#601;-to-</font>> shape=none URL="bha-speak3.svg"];
+mlsbhamo [label=<<font color="red">ml̥s-bhā-mo-</font><br/><font point-size="12">"speaking evil"</font>> shape=none URL="bha-speak3.svg"];
+}
+*/
+}

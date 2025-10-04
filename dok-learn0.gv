@@ -1,0 +1,46 @@
+strict digraph {
+/* sources: WiS Ayto Barn */
+/* this has L dicere, which belongs in deik-show */
+node [shape=none]
+graph [compound=true]
+// not centered
+dok [label=<<table border="0"><tr><td colspan="2"><font point-size="24">Indo-European</font></td></tr><tr><td><font point-size="18" color="red">dok-</font></td><td><font point-size="16">to teach?</font></td></tr></table>> tooltip="Indo-European \"dok-, dek-\" to learn" shape=rect peripheries=2 margin=.3]
+
+//dok [label=<<b><font point-size="24" align="center">Indo-European</font></b><br/><font color="red" point-size="18">dok-, dek-</font><font point-size="18">   to learn?</font>> tooltip="Indo-European \"dok-, dek-\" to learn" shape=rect peripheries=2 margin=.5]
+// do- + dik- ?
+
+dok -> docereL [lhead=cluster_L1 minlen=4 sametail=1 tooltip="\"dok-\" -> Latin roots 1"]
+dok -> decusL [lhead=cluster_L2 minlen=4 sametail=1 tooltip="\"dok-\" -> Latin roots 2"]
+dok -> didaskeinG [lhead=cluster_G minlen=4 sametail=1 tooltip="\"dok-\" -> Greek roots"]
+
+subgraph cluster_L1 {
+label=<<b>Latin</b>>
+style="dashed,rounded"
+URL="dok-learn1.svg"
+tooltip="Latin decendants of \"dok-\""
+docereL [label=<<font color="red">docēre</font><br/><font point-size="12">to teach</font>> URL="dok-learn1.svg" tooltip="Latin \"docere\" to teach"]
+dicereL [label=<<font color="red">dīcere</font><br/><font point-size="12">to say</font>> URL="dok-learn1.svg" tooltip="Latin \"dicere\" to say"]
+{ rank=same docereL -> dicereL [style=invis] }
+}
+
+subgraph cluster_L2 {
+label=<<b>Latin</b>>
+style="dashed,rounded"
+URL="dok-learn2.svg"
+tooltip="Latin decendants of \"dok-\""
+decereL [label=<<font color="red">decēre</font><br/><font point-size="12">to be fitting</font>> URL="dok-learn2.svg" tooltip="Latin \"decere\" to be fitting"]
+decusL [label=<<font color="red">decus, decor-</font><br/><font point-size="12">seemliness</font>> URL="dok-learn2.svg" tooltip="Latin \"decus\" seemliness"]
+dignusL [label=<<font color="red">dignus</font><br/><font point-size="12">worthy</font>> URL="dok-learn2.svg" tooltip="Latin \"dignus\" worthy"]
+{ rank=same decereL -> decusL -> dignusL [style=invis] }
+}
+
+subgraph cluster_G {
+label=<<b>Greek</b>>
+style="dashed,rounded"
+URL="dok-learn3.svg"
+tooltip="Greek descendants of \"dok-\""
+dokeinG [label=<<font color="red">dokein</font><br/><font point-size="12">to think, seem</font>> URL="dok-learn3.svg" tooltip="Greek \"dokein\" to think, seem"]
+didaskeinG [label=<<font color="red">didaskein</font><br/><font point-size="12">to teach</font>> URL="dok-learn3.svg" tooltip="Greek \"didaskein\" to teach"]
+{ rank=same dokeinG -> didaskeinG [style=invis] }
+}
+}

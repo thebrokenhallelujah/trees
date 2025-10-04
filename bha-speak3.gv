@@ -1,0 +1,115 @@
+digraph 3 { /* suffixed forms */
+    node [shape=plaintext];
+    bha [label=<<b>Indo-European</b><br/><font color="red">bhā</font><br/><font point-size="12">to speak</font>> shape=box style="dashed,rounded" URL="bha-speak0.svg"];
+    bha -> { bhani; bhama; bhona; bheto; mlsbhamo; rank=same };
+    /* bha-ma- */
+    bhama [label=<<font color="red">bhā-mā-</font>>];
+    bhama -> { famaL; phemeG }
+    famaL [label=<<b>Latin</b><br/><font color="red">fāma</font><br/><font point-size="12">talk, fame,<br/>reputation</font>> shape=box style="dashed,rounded" URL="bha-speak4.svg"];
+    /* bho-na- */
+    bhona [label=<<font color="red">bhō-nā-</font>>];
+    bhona -> phoneG;
+    phoneG [label=<<b>Greek</b><br/><font color="red">phōnē</font><br/><font point-size="12">voice, sound</font><br/><font color="red">phōnein</font><br/><font point-size="12">to speak</font>> shape=box style="dashed,rounded" URL="bha-speak5.svg"];
+    /* bha-ni */
+    bhani [label=<<font color="red">bhā-ni-</font>>];
+    bhani -> boniGm;
+    boniGm [label=<<b>Germanic</b><br/><font color="red">bōni</font>>]; // needs to be moved up; rank=same rearranges everything else
+    boniGm -> { bonON; benOE }
+    /* boon */
+    bonON [label=<<b>Old Norse</b><br/><font color="red">bōn</font><br/><font point-size="12">prayer</font>>];
+    bonON -> boneME [style=dotted];
+    boneME [label=<<b>Middle<br/>English</b><br/><font color="red">bone</font>>];
+    boneME -> boon;
+    boon [label=<<b>Modern<br/>English</b><br/><font color="red">boon</font><br/><font point-size="12">blessing</font>>];
+    /* bee */
+    benOE [label=<<b>Old<br/>English</b><br/><font color="red">bēn</font><br/><font point-size="12">prayer</font>>];
+    benOE -> beneME;
+    beneME [label=<<b>Middle<br/>English</b><br/><font color="red">bene</font><br/><font point-size="12">extra service<br/>by a tenant</font>>];
+    beneME -> beanE;
+    beanE [label=<<b>Modern<br/>English</b><br/>(dialectical)<br/><font color="red">bean</font><br/><font point-size="12">neighborly help<br/>to a farmer</font>>]; // obsolete also?
+    beanE -> bee;
+    bee [label=<<font color="red">bee</font><br/><font point-size="12">gathering</font>>];
+    /* euphemism; omitted: Polyphemus */
+    phemeG [label=<<b>Greek</b><br/><font color="red">phēmē</font><br/><font point-size="12">saying, speech</font>>];
+    { phemeG; eu } -> euphemiaG;
+    eu [label=<<font color="red">eu-</font><br/><font point-size="12">good, true</font>>];
+    euphemiaG [label=<<font color="red">euphēmiā</font><br/><font point-size="12">use of auspicious words</font>>];
+    euphemiaG -> euphemizeinG;
+    euphemizeinG [label=<<font color="red">euphēmizein</font><br/><font point-size="12">to use auspicious words</font>>];
+    euphemizeinG -> euphemismosG [weight=2];
+    euphemismosG [label=<<font color="red">euphēmismos</font>>];
+    euphemismosG -> euphemism [style=dotted];
+    euphemism [label=<<b>Modern<br/>English</b><br/><font color="red">euphemism</font>>];
+    /* bhe-to */
+    bheto [label=<<font color="red">bh&#601;-to-</font>>];
+    bheto -> fateriL;
+    fateriL [label=<<b>Latin</b><br/><font color="red">fatērī</font><br/><font point-size="12">to acknowledge</font>>];
+    /* confess */
+    { com; fateriL } -> confiteriL;
+    com [label=<<font color="red">com-</font><br/><font point-size="12">together</font>>]; // see kom-
+    confiteriL [label=<<font color="red">cōnfitērī,<br/>cōnfess-</font>>];
+    confiteriL -> confessareL;
+    confessareL [label=<<font color="red">cōnfessāre</font>>];
+    confessareL -> confesserOF;
+    confesserOF [label=<<b>Old French</b><br/><font color="red">confesser</font>>];
+    confesserOF -> confessenME [style=dotted];
+    confessenME [label=<<b>Middle<br/>English</b><br/><font color="red">confessen</font>>];
+    confessenME -> confess;
+    confess [label=<<b>Modern<br/>English</b><br/><font color="red">confess</font>>];
+    /* profess */
+    { pro; fateriL } -> profiteriL;
+    pro [label=<<font color="red">pro-</font><br/><font point-size="12">forth</font>>]; // see per-
+    profiteriL [label=<<font color="red">profitērī</font><br/><font point-size="12">to affirm openly</font>>];
+    profiteriL -> professusL;
+    professusL [label=<<font color="red">professus</font>>];
+    professusL -> { professareL; professorL }
+    professareL [label=<<font color="red">professāre</font><br/><font point-size="12">to administer a vow</font>>];
+    professareL -> profesOF;
+    profesOF [label=<<b>Old French</b><br/><font color="red">profes</font><br/><font point-size="12">that has taken<br/>a religious vow</font>>];
+    profesOF -> professenME [style=dotted];
+    professenME [label=<<b>Middle<br/>English</b><br/><font color="red">professen</font><br/><font point-size="12">to take vows</font>>];
+    professenME -> profess;
+    profess [label=<<b>Modern<br/>English</b><br/><font color="red">profess</font>>];
+    professorL [label=<<font color="red">professor</font>>];
+    professorL -> professeurOF;
+    professeurOF [label=<<b>Old French</b><br/><font color="red">professeur</font>>];
+    professeurOF -> professourME [style=dotted];
+    professourME [label=<<b>Middle<br/>English</b><br/><font color="red">professour</font>>];
+    professourME -> professor;
+    professor [label=<<b>Modern<br/>English</b><br/><font color="red">professor</font>>];
+    /* mls-bha-mo- */
+    mlsbhamo [label=<<font color="red">ml̥s-bhā-mo-</font><br/><font point-size="12">"speaking evil"</font>>]; // see mel-
+    mlsbhamo -> blasphemosG [label="?"];
+    blasphemosG [label=<<b>Greek</b><br/><font color="red">blasphēmos</font><br/><font point-size="12">evil-speaking,<br/>blasphemous</font>>];
+    blasphemosG -> blasphemeinG;
+    blasphemeinG [label=<<font color="red">blasphēmein</font>>];
+    /* blasphemy */
+    blasphemeinG -> blasphemiaG;
+    blasphemiaG [label=<<font color="red">blasphēmiā</font>>];
+    blasphemiaG -> blasphemiaL [style=dotted];
+    blasphemiaL [label=<<b>Latin</b><br/><font color="red">blasphēmia</font>>];
+    blasphemiaL -> blasfemieME [style=dotted];
+    blasfemieME [label=<<b>Middle<br/>English</b><br/><font color="red">blasfemie</font>>];
+    blasfemieME -> blasphemy;
+    blasphemy [label=<<b>Modern<br/>English</b><br/><font color="red">blasphemy</font>>];
+    /* blaspheme */
+    blasphemeinG -> blasphemareL [style=dotted];
+    blasphemareL [label=<<b>Latin</b><br/><font color="red">blasphēmāre</font><br/><font point-size="12">to reproach</font>>];
+    blasphemareL -> { blasfemerOF; blastemareL }
+    blasfemerOF [label=<<b>Old French</b><br/><font color="red">blasfemer</font>>];
+    blasfemerOF -> blasfemenME [style=dotted];
+    blasfemenME [label=<<b>Middle<br/>English</b><br/><font color="red">blasfemen</font>>];
+    blasfemenME -> blaspheme;
+    blaspheme [label=<<b>Modern<br/>English</b><br/><font color="red">blaspheme</font>>];
+    /* blame */
+    blastemareL [label=<<font color="red">blastēmāre</font>>];
+    blastemareL -> blasmerOF;
+    blasmerOF [label=<<b>Old French</b><br/><font color="red">blasmer,<br/>blamer</font>>];
+    blasmerOF -> blamenME [style=dotted];
+    blamenME [label=<<b>Middle<br/>English</b><br/><font color="red">blamen</font>>];
+    blamenME -> blame;
+    blame [label=<<b>Modern<br/>English</b><br/><font color="red">blame</font>>];
+    { rank=same; boon; bee; euphemism; confess; profess; professor; blaspheme; blasphemy; blame; }
+    { rank=same; beneME; boneME; professenME; professourME; confessenME; blasfemieME; blamenME; blasfemenME }
+    { rank=same; benOE; bonON; professeurOF; profesOF; confesserOF; blasfemerOF; blasmerOF }
+}

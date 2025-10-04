@@ -1,0 +1,79 @@
+strict digraph {
+node [shape=none]
+dok [label=<<table border="0"><tr><td colspan="2"><font point-size="24">Indo-European</font></td></tr><tr><td><font point-size="18" color="red">dok-</font></td><td><font point-size="16">to teach?</font></td></tr></table>> tooltip="Indo-European \"dok-, dek-\" to learn" shape=rect peripheries=2 margin=.3 URL="dok-learn0.svg"]
+
+dok -> {dokeinG didaskeinG} [minlen=3 sametail=1]
+
+/* ---- Gk dokein ---- */
+/* dogma */
+dokeinG [label=<<b>Greek</b><br/><font color="red">dokein</font><br/><font point-size="12">to think, seem</font>>]
+dogmaG [label=<<font color="red">dogma, dogmat-</font><br/><font point-size="12">opinion</font>>]
+dogma [label=<<b>Modern<br/>English</b><br/><font color="red">dogma<br/>dogmatic</font>>]
+dok -> dokeinG -> dogmaG
+dogmaG -> dogma [style=dotted]
+
+/* paradox */
+doxaG [label=<<font color="red">doxa</font><br/><font point-size="12">opinion, praise</font>>]
+paradoxonG [label=<<font color="red">paradoxon</font><br/><font point-size="12">contrary to expectation</font>>]
+paradoxumL [label=<<b>Latin</b><br/><font color="red">paradoxum</font>>]
+paradoxeMF [label=<<b>Middle<br/>French</b><br/><font color="red">paradoxe</font>>]
+paradox [label=<<b>Modern<br/>English</b><br/><font color="red">paradox</font>>]
+dokeinG -> doxaG -> paradoxonG
+paradoxonG -> paradoxumL [style=dotted]
+paradoxumL -> paradoxeMF
+paradoxeMF -> paradox [style=dotted]
+/* para- (link to per) */
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">per</font><br/><font point-size="12">by, near</font>> shape=box style="dashed,rounded" URL="per.svg"]
+paraG [label=<<b>Greek</b><br/><font color="red">para</font>>]
+perIE -> paraG -> paradoxonG
+
+/* orthodox */
+orthodoxosG [label=<<font color="red">orthodoxos</font><br/><font point-size="12">having the right opinion</font>>]
+orthodoxusL [label=<<b>Latin</b><br/><font color="red">orthodoxus</font>>]
+orthodoxeMF [label=<<b>Middle<br/>French</b><br/><font color="red">orthodoxe</font>>]
+orthodox [label=<<b>Modern<br/>English</b><br/><font color="red">orthodox</font>>]
+doxaG -> orthodoxosG
+orthodoxosG -> orthodoxusL [style=dotted]
+orthodoxusL -> orthodoxeMF
+orthodoxeMF -> orthodox [style=dotted]
+/* ortho-? */
+
+/* heterodox */
+heterodoxosG [label=<<font color="red">heterodoxos</font>>]
+heterodox [label=<<b>Modern<br/>English</b><br/><font color="red">heterodox</font>>]
+doxaG -> heterodoxosG
+heterodoxosG -> heterodox [style=dotted]
+/* hetero- (link to sem-) */
+semIE [label=<<b>Indo-<br/>European</b><br/><font color="red">sem-</font><br/><font point-size="12">one, as one</font>> shape=box style="dashed,rounded" URL="sem-one.svg"]
+heterosG [label=<<b>Greek</b><br/><font color="red">heteros,<br/>hetero-</font><br/><font point-size="12">other</font>>]
+semIE -> heterosG -> heterodoxosG
+
+/* doxology */
+doxologosG [label=<<font color="red">doxologos</font><br/><font point-size="12">praising</font><br/><font color="red">doxologiā</font>>]
+doxologiaL [label=<<b>Latin</b><br/><font color="red">doxologia</font>>]
+doxology [label=<<b>Modern<br/>English</b><br/><font color="red">doxology</font>>]
+doxaG -> doxologosG
+doxologosG -> doxologiaL -> doxology [style=dotted] // or through Fr
+/* -logy */
+legIE [label=<<b>Indo-<br/>European</b><br/><font color="red">leg-</font><br/><font point-size="12">to speak</font>> shape=box style="dashed,rounded" URL="leg-speak.svg"]
+logosG [label=<<b>Greek</b><br/><font color="red">logos</font><br/><font point-size="12">word, saying</font>>]
+legIE -> logosG -> doxologosG
+
+/* ---- Gk didaskein ---- */
+/* didactic */
+didaskeinG [label=<<b>Greek</b><br/><font color="red">didaskein</font><br/><font point-size="12">to teach</font>>]
+didaktosG [label=<<font color="red">didaktos</font><br/><font point-size="12">taught</font><br/><font color="red">didaktikos</font><br/><font point-size="12">apt at teaching</font>>]
+didactic [label=<<b>Modern<br/>English</b><br/><font color="red">didactic</font>>]
+dok -> didaskeinG -> didaktosG
+didaktosG -> didactic [style=dotted] // or thru F didactique?
+
+{rank=same dogma orthodox paradox heterodox doxology didactic}
+didaskeinG -> didaktosG [weight=3]
+dokeinG -> {dogmaG doxaG rank=same} [sametail=1]
+doxaG -> {paradoxonG orthodoxosG heterodoxosG doxologosG} [sametail=1]
+{paraG doxaG} -> paradoxonG [samehead=1]
+{heterosG doxaG} -> heterodoxosG [samehead=1]
+{doxaG logosG} -> doxologosG [samehead=1]
+{rank=same dokeinG paraG heterosG logosG didaskeinG}
+doxologosG -> doxologiaL [weight=2]
+}

@@ -1,0 +1,99 @@
+strict digraph {
+node [shape=none]
+dok [label=<<table border="0"><tr><td colspan="2"><font point-size="24">Indo-European</font></td></tr><tr><td><font point-size="18" color="red">dok-</font></td><td><font point-size="16">to teach?</font></td></tr></table>> tooltip="Indo-European \"dok-, dek-\" to learn" shape=rect peripheries=2 margin=.3 URL="dok-learn0.svg"]
+dok -> {decereL decusL dignusL rank=same} [sametail=1 minlen=3]
+
+/* ---- L decere ---- */
+/* decent */
+decereL [label=<<b>Latin</b><br/><font color="red">decēre</font><br/><font point-size="12">to be fitting</font>>]
+decensL [label=<<font color="red">decēns, decent-</font>>]
+decentMF [label=<<b>Middle<br/>French</b><br/><font color="red">décent</font>>]
+decent [label=<<b>Modern<br/>English</b><br/><font color="red">decent</font>>]
+dok -> decereL -> decensL -> decentMF
+decentMF -> decent [style=dotted]
+
+/* ---- L decus ---- */
+/* decorum */
+decusL [label=<<b>Latin</b><br/><font color="red">decus,<br/>decor-</font><br/><font point-size="12">beauty,<br/>seemliness</font>>] // related to decere
+decorumL [label=<<font color="red">decōrum</font><br/><font point-size="12">that which<br/>is seemly</font>>]
+decorum [label=<<b>Modern<br/>English</b><br/><font color="red">decorum</font>>]
+dok -> decusL -> decorumL
+decorumL -> decorum [style=dotted]
+
+/* decorate */
+decorareL [label=<<font color="red">decorāre</font><br/><font point-size="12">to ornament</font><br/><font color="red">decorātus</font>>]
+decoratME [label=<<b>Middle<br/>English</b><br/><font color="red">decorat</font>>]
+decorate [label=<<b>Modern<br/>English</b><br/><font color="red">decorate</font>>]
+decusL -> decorareL
+decorareL -> decoratME [style=dotted]
+decoratME -> decorate
+
+/* decor */
+decorerF [label=<<b>French</b><br/><font color="red">décorer</font>>]
+decorF [label=<<font color="red">décor</font>>]
+decor [label=<<b>Modern<br/>English</b><br/><font color="red">decor</font>>]
+decorareL -> decorerF -> decorF
+decorF -> decor [style=dotted]
+
+/* ---- L dignus ---- */
+/* dignity */
+dignusL [label=<<b>Latin</b><br/><font color="red">dignus</font><br/><font point-size="12">worthy</font>>]
+dignitas [label=<<font color="red">dignitās,<br/>dignitāt-</font>>] // borrowing
+digneteOF [label=<<b>Old French</b><br/><font color="red">digneté</font>>]
+digneteME [label=<<b>Middle<br/>English</b><br/><font color="red">dignete</font>>]
+dignity [label=<<b>Modern<br/>English</b><br/><font color="red">dignity</font>>]
+dok -> dignusL -> dignitas
+dignitas -> digneteOF -> digneteME [style=dotted]
+digneteME -> dignity
+
+/* dignify */
+dignificare [label=<<font color="red">dignificāre</font><br/><font point-size="12">to make worthy</font>>]
+dignifierMF [label=<<b>Middle<br/>French</b><br/><font color="red">dignifier</font>>]
+dignifienME [label=<<b>Middle<br/>English</b><br/><font color="red">dignifien</font>>]
+dignify [label=<<b>Modern<br/>English</b><br/><font color="red">dignify</font>>]
+dignusL -> dignificare -> dignifierMF
+dignifierMF -> dignifienME [style=dotted]
+dignifienME -> dignify
+
+/* dainty */
+daintieOF [label=<<b>Old French</b><br/><font color="red">daintie</font><br/><font point-size="12">value</font>>] // descendant of dignitas
+dainteAN [label=<<b>Anglo-Norman</b><br/><font color="red">dainte, deinte</font>>]
+deinteME [label=<<b>Middle<br/>English</b><br/><font color="red">deinte</font><br/><font point-size="12">pleasing</font>>]
+dainty [label=<<b>Modern<br/>English</b><br/><font color="red">dainty</font>>]
+dignitas -> daintieOF -> dainteAN
+dainteAN -> deinteME [style=dotted]
+deinteME -> dainty
+
+/* indignation */
+indignariL [label=<<font color="red">indignārī</font><br/><font point-size="12">regard as unworthy,<br/>be displeased at</font>>] // eliminate in favor of dignari?
+indignatioL [label=<<font color="red">indignātiō,<br/>indignātiōn-</font>>]
+indignaciounME [label=<<b>Middle<br/>English</b><br/><font color="red">indignacioun</font>>]
+indignation [label=<<b>Modern<br/>English</b><br/><font color="red">indignation</font>>]
+dignusL -> indignariL -> indignatioL // omitted: indignus, poss. OF intermediary
+indignatioL -> indignaciounME [style=dotted]
+indignaciounME -> indignation
+/* in- (link to ne) */
+neIE [label=<<b>Indo-<br/>European</b><br/><font color="red">ne</font><br/><font point-size="12">not</font>> shape=box style="dashed,rounded" URL="ne-not.svg"]
+inL [label=<<b>Latin</b><br/><font color="red">in-</font>>]
+neIE -> inL -> indignariL
+
+/* deign */
+dignariL [label=<<font color="red">dignārī</font><br/><font point-size="12">regard as worthy</font>>]
+deignierOF [label=<<b>Old French</b><br/><font color="red">deignier</font>>]
+deignenME [label=<<b>Middle<br/>English</b><br/><font color="red">deignen, deinen</font>>]
+deign [label=<<b>Modern<br/>English</b><br/><font color="red">deign</font>>]
+dignusL -> dignariL -> deignierOF
+deignierOF -> deignenME [style=dotted]
+deignenME -> deign
+
+{rank=same decent decorum decorate decor dignity dainty dignify indignation deign}
+//{rank=same dok neIE}
+
+{rank=same decereL decusL dignusL}
+{rank=same digneteOF daintieOF deignierOF}
+{rank=same dainteAN dignifierMF decentMF}
+{rank=same decoratME decorerF digneteME dignifienME indignaciounME deignenME}
+dignusL -> {dignariL dignificare dignitas indignariL} [sametail=1]
+{rank=same decensL decorareL decorumL dignificare dignitas dignariL indignariL}
+{dignusL inL} -> indignariL [samehead=1]
+}

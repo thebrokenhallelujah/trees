@@ -1,0 +1,85 @@
+digraph 2 { /* Latin fari */
+    node [shape=plaintext];
+    bha [label=<<b>Indo-European</b><br/><font color="red">bhā</font><br/><font point-size="12">to speak</font>> shape=box style="dashed,rounded" URL="bha-speak0.svg"];
+    bha -> fari;
+    fari [label=<<b>Latin</b><br/><font color="red">fārī</font>>]; // deponent verb
+    fari -> { fabula; fatum; affari; effari; infans; praefari; rank=same }
+    /* fable, fabulous */
+    fabula [label=<<font color="red">fābula</font><br/><font point-size="12">fable</font>>];
+    fabula -> fableOF;
+    fableOF [label=<<b>Old French</b><br/><font color="red">fable</font>>];
+    fableOF -> fableME [style=dotted];
+    fableME [label=<<b>Middle English</b><br/><font color="red">fable</font>>];
+    fableME -> fable;
+    fable [label=<<b>Modern English</b><br/><font color="red">fable</font>>];
+    /* fate, fairy, fay */
+    fatum [label=<<font color="red">fātum</font><br/><font point-size="12">fate, prophecy</font>>];
+    fatum -> { fatOF; fata }
+    fatOF [label=<<b>Old French</b><br/><font color="red">fat</font>>];
+    fatOF -> fateME [style=dotted];
+    fateME [label=<<b>Middle English</b><br/><font color="red">fate</font>>];
+    fateME -> fate;
+    fate [label=<<b>Modern English</b><br/><font color="red">fate</font>>];
+    fata [label=<<font color="red">Fāta</font><br/><font point-size="12">goddess of fate</font>>];
+    fata -> faeOF;
+    faeOF [label=<<b>Old French</b><br/><font color="red">fae<br/>faerie</font>>];
+    faeOF -> { fairieME; faieME }
+    fairieME [label=<<b>Middle English</b><br/><font color="red">fairie</font>>];
+    fairieME -> fairy;
+    fairy [label=<<b>Modern English</b><br/><font color="red">fairy</font>>];
+    faieME [label=<<b>Middle English</b><br/><font color="red">faie</font>>];
+    faieME -> fay;
+    fay [label=<<b>Modern English</b><br/><font color="red">fay</font><br/><font point-size="12">fairy, elf</font>>];
+    /* affable */
+    affari [label=<<font color="red">affārī</font><br/><font point-size="12">to speak to</font>>];
+    ad -> affari;
+    ad [label=<<font color="red">ad-</font><br/><font point-size="12">to</font>>];
+    affari -> affabilis;
+    affabilis [label=<<font color="red">affabilis</font>>];
+    affabilis -> affableOF;
+    affableOF [label=<<b>Old French</b><br/><font color="red">affable</font>>];
+    affableOF -> affabil [style=dotted];
+    affabil [label=<<b>Middle English</b><br/><font color="red">affabil</font>>];
+    affabil -> affable;
+    affable [label=<<b>Modern English</b><br/><font color="red">affable</font>>];
+    /* ineffable */
+    effari [label=<<font color="red">effārī</font><br/><font point-size="12">to utter</font>>];
+    ex -> effari;
+    ex [label=<<font color="red">ex-</font><br/><font point-size="12">out</font>>]; // see eghs
+    { in; effari } -> ineffabilis;
+    in [label=<<font color="red">in-</font><br/><font point-size="12">not</font>>];
+    ineffabilis [label=<<font color="red">ineffābilis</font><br/><font point-size="12">unutterable</font>>];
+    ineffabilis -> ineffableOF;
+    ineffableOF [label=<<b>Old French</b><br/><font color="red">ineffable</font>>];
+    ineffableOF -> ineffableME [stlye=dotted];
+    ineffableME [label=<<b>Middle English</b><br/><font color="red">eneffable</font>>];
+    ineffableME -> ineffable;
+    ineffable [label=<<b>Modern English</b><br/><font color="red">ineffable</font>>];
+    /* infant, infantry */
+    infans [label=<<font color="red">īnfāns, īnfant-</font><br/><font point-size="12">not able to<br/>speak, young</font>>];
+    infans -> { enfantOF; infanteOI }
+    enfantOF [label=<<b>Old French</b><br/><font color="red">enfant</font>>];
+    enfantOF -> infantME [style=dotted];
+    infantME [label=<<b>Middle English</b><br/><font color="red">infant</font>>];
+    infantME -> infant;
+    infant [label=<<b>Modern English</b><br/><font color="red">infant</font>>];
+    infanteOI [label=<<b>Old Italian</b><br/><font color="red">infante</font><br/><font point-size="12">young man,<br/>foot soldier</font><br/><font color="red">infanteria</font>>];
+    infanteOI -> infanterie [style=dotted];
+    infanterie [label=<<b>Old French</b><br/><font color="red">infanterie</font>>];
+    infanterie -> infantryF;
+    infantryF [label=<<b>French</b><br/><font color="red">infantry</font>>];
+    infantryF -> infantry [style=dotted];
+    infantry [label=<<b>Modern English</b><br/><font color="red">infantry</font>>];
+    /* preface */
+    praefari [label=<<font color="red">praefārī</font><br/><font point-size="12">to say before</font>>];
+    prae -> praefari;
+    prae [label=<<font color="red">prae-</font><br/><font point-size="12">before</font>>]; // see per1
+    praefari -> praefatus;
+    praefatus [label=<<font color="red">praefātus</font>>];
+    praefatus -> prefaceOF;
+    prefaceOF [label=<<b>Old French</b><br/><font color="red">preface</font>>];
+    prefaceOF -> preface [style=dotted];
+    preface [label=<<b>Modern English</b><br/><font color="red">preface</font>>];
+    { rank=same; fable; fate; fairy; fay; affable; ineffable; infant; infantry; preface }
+    { rank=same; fableOF; fatOF; faeOF; affableOF; ineffableOF; enfantOF; infanterie; prefaceOF } // Old French
+}

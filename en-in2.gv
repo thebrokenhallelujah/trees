@@ -1,0 +1,93 @@
+strict digraph {
+node [shape=none]
+
+enIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*en </font><font point-size="16">in</font>> shape=box style="dashed,rounded" URL="en-in0.svg" tooltip="Indo-European \"en\" in"]
+
+entroIE [label=<<font color="red">en-t(e)ro-</font>>]
+enIE -> entroIE
+
+
+// intro-
+introL [label=<<b>Latin</b><br/><font color="red">intrō</font><br/><font point-size="12">to the inside</font><br/><font color="red">intrō-</font>>]
+introE [label=<<b>Modern<br/>English</b><br/><font color="red">intro-</font>>]
+entroIE -> introL
+introL -> introE [style=dashed]
+
+// introduce
+deukIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*deuk-</font><br/><font point-size="12">to lead</font>> shape=box style="dashed,rounded" URL="deuk-lead.svg"]
+ducereL [label=<<b>Latin</b><br/><font color="red">dūcere</font>>]
+introducereL [label=<<font color="red">intrōdūcere</font>>]
+deukIE -> ducereL
+{ introL ducereL } -> introducereL
+introducenME [label=<<b>Middle<br/>French</b><br/><font color="red">introducen</font>>]
+introduce [label=<<b>Modern<br/>English</b><br/><font color="red">introduce</font>>]
+introducereL -> introducenME [style=dashed]
+introducenME -> introduce
+
+// introit
+eiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ei-</font><br/><font point-size="12">to go</font>> shape=box style="dashed,rounded" URL="ei-go.svg"]
+ireL [label=<<b>Latin</b><br/><font color="red">īre</font>>]
+introireL [label=<<font color="red">intrōīre</font>>]
+introitusL [label=<<font color="red">introitus</font><br/><font point-size="12">entrance</font>>]
+introit [label=<<b>Modern<br/>English</b><br/><font color="red">introit</font>>]
+eiIE -> ireL
+{ introL ireL } -> introireL -> introitusL
+introitusL -> introit [style=dashed]
+
+// introrse
+werIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*wer-</font><br/><font point-size="12">to turn</font>> shape=box style="dashed,rounded" URL="wer-turn.svg"]
+vertereL [label=<<b>Latin</b><br/><font color="red">vertere</font>>]
+versusL [label=<<font color="red">versus</font>>]
+introversusL [label=<<font color="red">intrōversus</font><br/><font point-size="12">inwards</font>>]
+introrsusL [label=<<font color="red">intrōrsus</font>>]
+introrse [label=<<b>Modern<br/>English</b><br/><font color="red">introrse</font>>]
+werIE -> vertereL -> versusL
+{ introL versusL } -> introversusL -> introrsusL
+introrsusL -> introrse [style=dashed]
+
+// introspect
+spekIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*spek-</font><br/><font point-size="12">to observe</font>> shape=box style="dashed,rounded" URL="spek-see.svg"]
+specereL [label=<<b>Latin</b><br/><font color="red">specere</font><br/><font point-size="12">to look at</font>>]
+introspectL [label=<<font color="red">introspicere<br/>introspect-</font><br/><font point-size="12">to look into</font>>]
+introspect [label=<<b>Modern<br/>English</b><br/><font color="red">introspect</font>>]
+spekIE -> specereL
+{ introL specereL } -> introspectL
+introspectL -> introspect [style=dashed]
+
+// enter, intra-
+// omitted intrados (architecture)
+intraL [label=<<b>Latin</b><br/><font color="red">intrā</font><br/><font point-size="12">inside, within</font><br/><font color="red">intrā-</font>>]
+intraE [label=<<b>Modern<br/>English</b><br/><font color="red">intra-</font>>]
+entroIE -> intraL
+intraL -> intraE [style=dashed]
+intrareL [label=<<b>Latin</b><br/><font color="red">intrāre</font><br/><font point-size="12">to enter</font>>] // double-check meaning
+entrerOF [label=<<b>Old French</b><br/><font color="red">entrer</font>>]
+entrenME [label=<<b>Middle<br/>English</b><br/><font color="red">entren</font>>]
+enter [label=<<b>Modern<br/>English</b><br/><font color="red">enter</font>>]
+intraL -> intrareL
+intrareL -> entrerOF
+entrerOF -> entrenME [style=dashed]
+entrenME -> enter
+
+// interim, intrinsic
+interimL [label=<<b>Latin</b><br/><font color="red">interim</font><br/><font point-size="12">meanwhile</font>>]
+interim [label=<<b>Modern<br/>English</b><br/><font color="red">interim</font>>]
+entroIE -> interimL
+interimL -> interim
+sekwIE [label=<<b>Indo-<br/>European</b><br/><font color="red">sekʷ-</font><br/><font point-size="12">to follow</font>> shape=box style="dashed,rounded" URL="sekw-follow.svg"]
+secusL [label=<<b>Latin</b><br/><font color="red">secus</font><br/><font point-size="12">along</font>>]
+intrinsicusL [label=<<b>Latin</b><br/><font color="red">intrīnsicus</font><br/><font point-size="12">inwardly, inwardly</font>>]
+intrinsequeOF [label=<<b>Old French</b><br/><font color="red">intrinseque</font>>]
+intrinsiqueME [label=<<b>Middle<br/>English</b><br/><font color="red">intrinsique</font>>]
+intrinsic [label=<<b>Modern<br/>English</b><br/><font color="red">intrinsic</font>>]
+sekwIE -> secusL
+secusL -> intrinsicusL 
+interimL -> intrinsicusL 
+intrinsicusL -> intrinsequeOF
+intrinsequeOF -> intrinsiqueME [style=dashed]
+intrinsiqueME -> intrinsic
+
+{rank=same introE enter intraE intrinsic interim introduce introit introrse introspect }
+}
+
+

@@ -1,0 +1,195 @@
+strict digraph {
+node [shape=none]
+
+/* omitted: centum, satem (both linguistics words) */
+
+dekmIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*dekm̥ </font><font point-size="16">ten</font>> shape=box style="dashed,rounded" URL="dekm-ten0.svg" tooltip="Indo-European \"*dekm̥\" ten"]
+
+/* hundred, thousand */
+kmtomIE [label=<<font color="red">*dkm̥-tom, *km̥tom</font><br/><font point-size="12">hundred</font>>]
+hundanGm [label=<<b>Germanic</b><br/><font color="red">*hundan</font>>]
+hundredOE [label=<<b>Old English</b><br/><font color="red">hundred</font>>]
+hundredME [label=<<b>Middle<br/>English</b><br/><font color="red">hundred</font>>]
+hundred [label=<<b>Modern<br/>English</b><br/><font color="red">hundred</font>>]
+dekmIE -> kmtomIE [sametail=1]
+kmtomIE -> hundanGm [sametail=1]
+hundanGm -> hundredOE [sametail=1]
+hundredOE -> hundredME -> hundred
+thushundiGm [label=<<font color="red">*thūs-hundi</font><br/><font point-size="12">"swollen hundred,"<br/>thousand</font>>]
+thusendOE  [label=<<b>Old English</b><br/><font color="red">thūsend</font>>]
+thousandeME [label=<<b>Middle<br/>English</b><br/><font color="red">thousande</font>>]
+thousand [label=<<b>Modern<br/>English</b><br/><font color="red">thousand</font>>]
+hundanGm -> thushundiGm [sametail=1]
+thushundiGm -> thusendOE -> thousandeME -> thousand
+
+/* cent, centi- */
+centumL [label=<<b>Latin</b><br/><font color="red">centum</font>>]
+centOF [label=<<b>Old French</b><br/><font color="red">cent</font>>]
+centME [label=<<b>Middle<br/>English</b><br/><font color="red">cent</font>>]
+cent [label=<<b>Modern<br/>English</b><br/><font color="red">cent</font>>]
+kmtomIE -> centumL [sametail=1]
+centumL -> centOF [sametail=1]
+centOF -> centME [style=dashed]
+centME -> cent
+centiL [label=<<font color="red">centi-</font>>]
+centiF [label=<<b>French</b><br/><font color="red">centi-</font>>]
+centi [label=<<b>Modern<br/>English</b><br/><font color="red">centi-</font>>]
+centumL -> centiL [sametail=1]
+centiL -> centiF [sametail=1]
+centiF -> centi [style=dashed sametail=1]
+
+/* century, centurion */
+centuriaL [label=<<font color="red">centuria</font><br/><font point-size="12">a group of a hundred</font>>]
+century [label=<<b>Modern<br/>English</b><br/><font color="red">century</font>>]
+centumL -> centuriaL [sametail=1]
+centuriaL -> century [style=dashed sametail=1]
+centurioL [label=<<font color="red">centuriō, centuriōn-</font>>]
+centurionOF [label=<<b>Old French</b><br/><font color="red">centurion</font>>]
+centurionME [label=<<b>Middle<br/>English</b><br/><font color="red">centurion</font>>]
+centurion [label=<<b>Modern<br/>English</b><br/><font color="red">centurion</font>>]
+centuriaL -> centurioL [sametail=1]
+centurioL -> centurionOF
+centurionOF -> centurionME [style=dashed]
+centurionME -> centurion
+
+/* centenary, centenarian, centennial */
+centenariusL [label=<<font color="red">centēnārius</font><br/><font point-size="12">of a hundred</font>>]
+centenary [label=<<b>Modern<br/>English</b><br/><font color="red">centenary<br/>centenarian</font>>]
+centumL -> centenariusL [sametail=1]
+centenariusL -> centenary [style=dashed]
+centennial [label=<<b>Modern<br/>English</b><br/><font color="red">centennial</font>>]
+centumL -> centennial [style=dashed sametail=1]
+
+
+/* centesimal, centillion */
+centesimusL [label=<<font color="red">centēsimus</font>>]
+centesimal [label=<<b>Modern<br/>English</b><br/><font color="red">centesimal</font>>]
+centumL -> centesimusL [sametail=1]
+centesimusL -> centesimal [style=dashed sametail=1]
+centillion [label=<<b>Modern<br/>English</b><br/><font color="red">centillion</font>>]
+centumL -> centillion [style=dashed sametail=1]
+
+/* centavo, centime, centimo */
+centavoS [label=<<b>Spanish</b><br/><font color="red">centavo</font>>]
+centavo [label=<<b>Modern<br/>English</b><br/><font color="red">centavo</font>>]
+centumL -> centavoS [sametail=1]
+centavoS -> centavo [style=dashed]
+centismeOF [label=<<b>Old French</b><br/><font color="red">centisme</font>>]
+centimeF [label=<<b>French</b><br/><font color="red">centime</font>>]
+centime [label=<<b>Modern<br/>English</b><br/><font color="red">centime</font>>]
+centesimusL -> centismeOF [sametail=1]
+centismeOF -> centimeF
+centimeF -> centime [style=dashed sametail=1]
+centimoS [label=<<b>Spanish</b><br/><font color="red">céntimo</font>>]
+centimo [label=<<b>Modern<br/>English</b><br/><font color="red">centimo</font>>]
+centimeF -> centimoS [style=dashed sametail=1]
+centimoS -> centimo [style=dashed]
+
+/* centipede */
+pedIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ped-, *pod-</font><br/><font point-size="12">foot</font>> shape=box style="dashed,rounded" URL="ped-foot2.svg"]
+pesL  [label=<<b>Latin</b><br/><font color="red">pēs, ped-</font>>]
+centipedaL [label=<<font color="red">centipeda</font>>]
+centipede [label=<<b>Modern<br/>English</b><br/><font color="red">centipede</font>>]
+pedIE -> pesL
+pesL -> centipedaL [samehead=1]
+centiL -> centipedaL [samehead=1 sametail=1]
+centipedaL -> centipede [style=dashed]
+
+/* centigrade */
+ghredhIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ghredh-</font><br/><font point-size="12">to walk, go</font>> shape=box style="dashed,rounded" URL="ghredh-go.svg"]
+gradusL [label=<<b>Latin</b><br/><font color="red">gradus</font><br/><font point-size="12">step</font>>]
+gradoI [label=<<b>Italian</b><br/><font color="red">grado</font><br/><font point-size="12">rank, degree</font>>]
+gradeF [label=<<b>French</b><br/><font color="red">grade</font>>]
+centigradeF [label=<<font color="red">centigrade</font>>]
+centigrade [label=<<b>Modern<br/>English</b><br/><font color="red">centigrade</font>>]
+ghredhIE -> gradusL -> gradoI
+gradoI -> gradeF [style=dashed]
+gradeF -> centigradeF [samehead=1]
+centiF -> centigradeF [sametail=1 samehead=1]
+centigradeF -> centigrade [style=dashed]
+
+/* percent */
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">forward, through</font>> shape=box style="dashed,rounded" URL="per-peri.svg"]
+perL [label=<<b>Latin</b><br/><font color="red">per</font>>]
+percentumL [label=<<font color="red">per centum<br/>per cent.</font>>]
+percent [label=<<b>Modern<br/>English</b><br/><font color="red">percent</font>>]
+perIE -> perL 
+perL -> percentumL [samehead=1]
+centumL -> percentumL [sametail=1 samehead=1]
+percentumL -> percent [style=dashed]
+
+/* trecento */
+treiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*trei-</font><br/><font point-size="12">three</font>> shape=box style="dashed,rounded" URL="trei-three1.svg"]
+tresL [label=<<b>Latin</b><br/><font color="red">trēs</font>>]
+treI [label=<<b>Italian</b><br/><font color="red">tre</font>>]
+trecentoI [label=<<font color="red">(mille)<br/>trecento</font><br/><font point-size="12">(one thousand)<br/>three hundred</font>>]
+trecento [label=<<b>Modern<br/>English</b><br/><font color="red">trecento</font>>]
+treiIE -> tresL -> treI
+treI -> trecentoI [samehead=1]
+centoI -> trecentoI [sametail=1 samehead=1]
+trecentoI -> trecento [style=dashed]
+
+/* quattrocento */
+kwetwerIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*kʷetwer-</font><br/><font point-size="12">four</font>> shape=box style="dashed,rounded" URL="kwetwer-four1.svg"]
+quattuorL [label=<<b>Latin</b><br/><font color="red">quattuor</font>>]
+quattroI [label=<<b>Italian</b><br/><font color="red">quattro</font>>]
+centoI [label=<<b>Italian</b><br/><font color="red">cento</font>>]
+quattrocentoI [label=<<font color="red">(mille)<br/>quattrocento</font><br/><font point-size="12">(one thousand)<br/>four hundred</font>>]
+quattrocento [label=<<b>Modern<br/>English</b><br/><font color="red">quattrocento</font>>]
+kwetwerIE -> quattuorL -> quattroI
+centumL -> centoI [sametail=1]
+quattroI -> quattrocentoI [samehead=1]
+centoI -> quattrocentoI [sametail=1 samehead=1]
+quattrocentoI -> quattrocento [style=dashed]
+
+/* cinquecento */
+penkweIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*penkʷe</font><br/><font point-size="12">five</font>> shape=box style="dashed,rounded" URL="penkwe-five.svg"]
+quinqueL [label=<<b>Latin</b><br/><font color="red">quīnque</font>>]
+cinqueI [label=<<b>Italian</b><br/><font color="red">cinque</font>>]
+cinquecentoI [label=<<font color="red">(mille)<br/>cinquecento</font><br/><font point-size="12">(one thousand)<br/>five hundred</font>>]
+cinquecento [label=<<b>Modern<br/>English</b><br/><font color="red">cinquecento</font>>]
+penkweIE -> quinqueL -> cinqueI
+cinqueI -> cinquecentoI [samehead=1]
+centoI -> cinquecentoI [sametail=1 samehead=1]
+cinquecentoI -> cinquecento [style=dashed]
+
+/* seicento */
+sweksIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*s(w)eks</font><br/><font point-size="12">six</font>> shape=box style="dashed,rounded" URL="sweks-six.svg"]
+sexL [label=<<b>Latin</b><br/><font color="red">sex</font>>]
+seiI [label=<<b>Italian</b><br/><font color="red">sei</font>>]
+seicentoI [label=<<font color="red">(mille)<br/>seicento</font><br/><font point-size="12">(one thousand)<br/>six hundred</font>>]
+seicento [label=<<b>Modern<br/>English</b><br/><font color="red">seicento</font>>]
+sweksIE -> sexL -> seiI
+seiI -> seicentoI [samehead=1]
+centoI -> seicentoI [sametail=1 samehead=1]
+seicentoI -> seicento [style=dashed]
+
+/* sexcentenary */
+centeniL [label=<<font color="red">centēnī</font><br/><font point-size="12">a hundred each</font>>]
+sexcenteniL [label=<<font color="red">sexcentēnī</font><br/><font point-size="12">six hundred each</font>>]
+sexcentenary [label=<<b>Modern<br/>English</b><br/><font color="red">sexcentenary</font>>]
+centumL -> centeniL [sametail=1]
+sexL -> sexcenteniL [sametail=1 samehead=1]
+centeniL -> sexcenteniL [samehead=1]
+sexcenteniL -> sexcentenary [style=dashed]
+
+/* hecto-, hecatomb */
+hekatonG [label=<<b>Greek</b><br/><font color="red">hekaton</font>>]
+hectoF [label=<<b>French</b><br/><font color="red">hecto-</font>>]
+hecto [label=<<b>Modern<br/>English</b><br/><font color="red">hecto-</font>>]
+kmtomIE -> hekatonG [sametail=1]
+hekatonG -> hectoF [style=dashed sametail=1]
+hectoF -> hecto [style=dashed]
+gwouIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*gʷou-</font><br/><font point-size="12">ox, cow, bull</font>> shape=box style="dashed,rounded" URL="gwou-ox.svg"]
+beG [label=<<b>Greek</b><br/><font color="red">-bē</font><br/><font point-size="12">ox</font>>]
+hekatombeG [label=<<font color="red">hekatombē</font><br/><font point-size="12">sacrifice of 100 oxen</font>>]
+hecatombeL [label=<<b>Latin</b><br/><font color="red">hecatombē</font>>]
+hecatomb [label=<<b>Modern<br/>English</b><br/><font color="red">hecatomb</font>>]
+gwouIE -> beG
+hekatonG -> hekatombeG [sametail=1 samehead=1]
+beG -> hekatombeG [samehead=1]
+hekatombeG -> hecatombeL -> hecatomb [style=dashed]
+
+{ rank=sink hundred thousand cent centi century centurion centenary centennial centesimal centavo centime centimo centipede centigrade percent trecento quattrocento cinquecento seicento sexcentenary hecto hecatomb }
+{ rank=min pedIE perIE treiIE kwetwerIE penkweIE sweksIE gwouIE ghredhIE }
+}

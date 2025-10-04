@@ -1,0 +1,60 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+epiIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24">Indo-European</font></td></tr><tr><td><font point-size="18" color="red">epi, opi</font></td><td><font point-size="16">near, at,<br/>against</font></td></tr></table>> tooltip="Indo-European \"epi, opi\" near, at, against" shape=rect peripheries=2 margin=.3]
+opweryo [label=<<font color="red">op-wer-yo-</font><br/><font point-size="12">"cover over"</font>>]
+
+/* omitted: Gk opistho-, piezo-, opsonin, Russ oblast */
+
+/* ob-: lists? */
+obL [label=<<b>Latin</b><br/><font color="red">ob-</font><br/><font point-size="12">toward, against</font>>]
+obE1 [label=<<b>Modern<br/>English</b><br/><font color="red">ob-</font><br/><font point-size="12">toward, against</font>>]
+epiIE -> obL
+obL -> obE1 [style=dotted]
+obvertere [label=<<font color="red">obvertere</font><br/><font point-size="12">to turn toward</font><br/><font color="red">obversus</font>>]
+obNL [label=<<b>New Latin</b><br/><font color="red">obversē</font><br/><font point-size="12">obversely</font><br/><font color="red">ob-</font>>]
+obE2 [label=<<b>Modern<br/>English</b><br/><font color="red">ob-</font><br/><font point-size="12">inverse</font>>]
+obL -> obvertere [weight=2]
+obvertere -> obNL // is New Latin descended or borrowed?
+obNL -> obE2 [style=dotted]
+
+/* epi-: list? */
+epiG [label=<<b>Greek</b><br/><font color="red">epi</font><br/><font point-size="12">upon</font><br/><font color="red">epi-</font>>]
+epiE [label=<<b>Modern<br/>English</b><br/><font color="red">epi-</font>>]
+epiIE -> epiG
+epiG -> epiE [style=dotted]
+
+/* cover, omitted: operculum */
+operireL [label=<<b>Latin</b><br/><font color="red">operīre</font><br/><font point-size="12">to cover</font>>]
+komIE [label=<<b>Indo-<br/>European</b><br/><font color="red">kom</font><br/><font point-size="12">beside, near, with</font>> shape=box style="dashed,rounded" URL="kom-with.svg"]
+comL [label=<<b>Latin</b><br/><font color="red">com-, co-</font><br/><font point-size="12">with, together</font>>]
+cooperire [label=<<font color="red">cooperīre</font><br/><font point-size="12">to cover<br/>completely</font>>]
+covrirOF [label=<<b>Old French</b><br/><font color="red">covrir</font>>]
+coverenME [label=<<b>Middle<br/>English</b><br/><font color="red">coveren</font>>]
+cover [label=<<b>Modern<br/>English</b><br/><font color="red">cover</font>>]
+komIE -> comL -> cooperire
+epiIE -> opweryo -> operireL -> cooperire -> covrirOF
+covrirOF -> coverenME [style=dotted]
+coverenME -> cover
+
+/* kerchief (ME < OF & AN), handkerchief */
+couvrechef [label=<<font color="red">couvrechef</font>>]
+curchefME [label=<<b>Middle<br/>English</b><br/><font color="red">coverchef,<br/>curchef</font>>]
+kerchief [label=<<b>Modern<br/>English</b><br/><font color="red">kerchief<br/>handkerchief</font>>]
+kaputIE [label=<<b>Indo-<br/>European</b><br/><font color="red">kaput-</font><br/><font point-size="12">head</font>> shape=box style="dashed,rounded" URL="kaput-head.svg"]
+caputL [label=<<b>Latin</b><br/><font color="red">caput</font>>]
+chefOF [label=<<b>Old French</b><br/><font color="red">chef</font>>]
+kaputIE -> caputL -> chefOF -> couvrechef
+covrirOF -> couvrechef
+couvrechef -> curchefME [style=dotted]
+curchefME -> kerchief
+
+{rank=same obE1 obE2 epiE cover kerchief}
+{rank=same covrirOF chefOF}
+{rank=same coverenME curchefME obNL}
+{rank=same obL operireL comL caputL epiG}
+epiIE -> {obL epiG opweryo} [sametail=1]
+obL -> {obE1 obvertere} [sametail=1]
+{operireL comL} -> cooperire [samehead=1]
+{covrirOF chefOF} -> couvrechef [samehead=1]
+}

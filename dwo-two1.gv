@@ -1,0 +1,110 @@
+strict digraph {
+/* sources: AHD */
+	node [shape=none]
+	dwo  [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*dwo-</font><br/><font point-size="16">two</font>> shape=box style="dashed,rounded" URL="dwo-two0.svg" tooltip=""]
+	dwo -> { duwo duwoo } [sametail=1 minlen=2]
+	duwo [label=<<font color="red">*duwo</font>>]
+	duwoo [label=<<font color="red">*duwō</font>>]
+
+	
+	twaGm [label=<<b>Germanic</b><br/><font color="red">*twa</font>>]
+	twaOE [label=<<b>Old English</b><br/><font color="red">twā</font>>]
+	twoME [label=<<b>Middle<br/>English</b><br/><font color="red">two</font>>]
+	two [label=<<b>Modern<br/>English</b><br/><font color="red">two</font>>]
+	duwo -> twaGm [sametail=1]
+	twaGm -> twaOE [sametail=1]
+	twaOE -> twoME -> two
+	
+	twegenOE [label=<<b>Old English</b><br/><font color="red">twēgen</font>>]
+	tweienME [label=<<b>Middle<br/>English</b><br/><font color="red">tweien<br/>twaine</font>>]
+	twain [label=<<b>Modern<br/>English</b><br/><font color="red">twain</font>>]
+	twaGm -> twegenOE [sametail=1]
+	twegenOE -> tweienME
+	tweienME -> twain [sametail=1]
+	tway [label=<<b>Modern<br/>English</b><br/><font color="red">tway</font>>]
+	twayblade [label=<<font color="red">twayblade</font><br/><font point-size="12">type of orchid</font>>]
+	biL [label=<<b>Latin</b><br/><font color="red">bi-</font>> shape=box style="dashed,rounded" URL="dwo-two3.svg"]
+	bifoliumL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">bifolium</font><br/><font point-size="12">"two-leaf"</font>>]
+	tweienME -> tway [sametail=1]
+	tway -> twayblade [samehead=1]
+	biL -> bifoliumL
+	bifoliumL -> twayblade [samehead=1 style=dotted arrowhead=onormal label="transl." minlen=2]
+
+	twalifGm [label=<<font color="red">*twa-lif-</font><br/><font point-size="12">"two left" (after ten)<br/>twelve</font>>]
+	leikw [label=<<b>Indo-<br/>European</b><br/><font color="red">*leikʷ-</font><br/><font point-size="12">to leave</font>> shape=box style="dashed,rounded" URL="leikw-leave.svg"]
+	lifGm [label=<<b>Germanic</b><br/><font color="red">*-lif-</font><br/><font point-size="12">left (over)</font>>]
+	twaGm -> twalifGm [sametail=1 samehead=1]
+	leikw -> lifGm
+	lifGm -> twalifGm [samehead=1]
+	twelfOE [label=<<b>Old English</b><br/><font color="red">twelf</font>>]
+	twelveME [label=<<b>Middle<br/>English</b><br/><font color="red">twelve</font>>]
+	twelve [label=<<b>Modern<br/>English</b><br/><font color="red">twelve</font>>]
+	twelftaOE [label=<<b>Old English</b><br/><font color="red">twelfta</font>>]
+	twelftheME [label=<<b>Middle<br/>English</b><br/><font color="red">twelfthe</font>>]
+	twelfth [label=<<b>Modern<br/>English</b><br/><font color="red">twelfth</font>>]
+	twalifGm -> { twelfOE twelftaOE } [samehead=1]
+	twelfOE -> twelveME -> twelve
+	twelftaOE -> twelftheME -> twelfth
+	
+	duoL [label=<<b>Latin</b><br/><font color="red">duo</font>>]
+	duoE [label=<<b>Modern<br/>English</b><br/><font color="red">duo-</font>>]
+	duoL -> duoE [sametail=1 style=dashed]
+	
+	duosL [label=<<font color="red">duōs</font>>]
+	deuceOF [label=<<b>Old French</b><br/><font color="red">deuce</font>>]
+	deusME [label=<<b>Middle<br/>English</b><br/><font color="red">deus</font>>]
+	deuce [label=<<b>Modern<br/>English</b><br/><font color="red">deuce</font>>]
+	duwoo -> duoL [sametail=1]
+	duoL -> duosL [sametail=1]
+	duosL -> deuceOF
+	deuceOF -> deusME [style= dashed]
+	deusME -> deuce
+	/* deuce (devil) prob. from same source, via a different route */
+	
+	dekm [label=<<b>Indo-<br/>European</b><br/><font color="red">*dekm̥</font><br/><font point-size="12">ten</font>> shape=box style="dashed,rounded" URL="dekm-ten.svg"]
+	decemL [label=<<b>Latin</b><br/><font color="red">decem</font>>]
+	duodecimL [label=<<font color="red">duodecim</font><br/><font point-size="12">twelve</font>>]
+	dozeOF [label=<<b>Old French</b><br/><font color="red">doze<br/>dozaine</font>>]
+	dozeineME [label=<<b>Middle<br/>English</b><br/><font color="red">dozeine</font>>]
+	dozen [label=<<b>Modern<br/>English</b><br/><font color="red">dozen</font>>]
+	dekm -> decemL
+	decemL -> duodecimL [samehead=1]
+	duoL -> duodecimL [sametail=1 samehead=1]
+	duodecimL -> dozeOF // missing steps
+	dozeOF -> dozeineME [style=dashed]
+	dozeineME -> dozen
+	
+	dualisL [label=<<font color="red">duālis</font>>]
+	dual [label=<<b>Modern<br/>English</b><br/><font color="red">dual</font>>]
+	duoL -> dualisL [sametail=1]
+	dualisL -> dual [style=dashed]
+	
+	duoI [label=<<b>Italian</b><br/><font color="red">duo</font>>]
+	duettoI [label=<<font color="red">duetto</font><br/><font point-size="12">(diminutive)</font>>]
+	duet [label=<<b>Modern<br/>English</b><br/><font color="red">duet</font>>]
+	duoL -> duoI [sametail=1]
+	duoI -> duettoI [sametail=1]
+	duettoI -> duet [style=dashed]
+	duo [label=<<b>Modern<br/>English</b><br/><font color="red">duo</font>>]
+	duoI -> duo [sametail=1 style=dashed]
+/* omitted: duodecimal + its derivatives, duumvir(ate) */
+	
+	duoG [label=<<b>Greek</b><br/><font color="red">duo, duō</font>>]
+	duasG [label=<<font color="red">duas, duad-</font>>]
+	duad [label=<<b>Modern<br/>English</b><br/><font color="red">duad<br/>dyad</font>>]
+	duwoo -> duoG [sametail=1]
+	duoG -> duasG
+	duasG -> duad [style=dashed]
+	
+/* omitted: dodeca- */	
+	
+	
+	{ rank=sink two twain twayblade twelve twelfth deuce dozen dual duet duad duo duoE }
+
+//	{ rank=same duplexL duoL duoG duplusL dubiusL decemL biL }
+//	{ rank=same leikw dekm bheu plek }
+//	{ rank=same twaGm lifGm }
+	duoL -> dualisL [weight=2]
+	duoG -> duasG [weight=2]
+
+}

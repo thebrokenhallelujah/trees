@@ -1,0 +1,143 @@
+strict digraph {
+node [shape=none]
+deik [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*deik-, *deig- </font><font point-size="16">to show</font>> shape=box style="dashed,rounded" URL="deik-show0.svg" tooltip="Indo-European \"*deik-, *deig-\" to show"]
+deik -> dicereL [minlen=2]
+
+/* L dicere - some of these are in dok-learn and shouldn't be(?) */
+/* omitted: herb bennet, fatidic (prophetic), veridical (truthful/predictive) */
+
+/* dictum */
+dicereL [label=<<b>Latin</b><br/><font color="red">dīcere</font><br/><font point-size="12">to say</font>>]
+dictumL [label=<<font color="red">dictum</font><br/><font point-size="12">thing said</font>>]
+dictum [label=<<b>Modern<br/>English</b><br/><font color="red">dictum</font>>]
+dicereL -> dictumL
+dictumL -> dictum [style=dashed]
+
+/* diction */
+dictioL [label=<<font color="red">dictiō,<br/>dictiōn-</font><br/><font point-size="12">word</font>>]
+dictionMF [label=<<b>Middle<br/>French</b><br/><font color="red">diction</font>>]
+diction [label=<<b>Modern<br/>English</b><br/><font color="red">diction</font>>]
+dicereL -> dictioL -> dictionMF
+dictionMF -> diction [style=dashed]
+
+/* dictionary */
+dictionarium [label=<<font color="red">dictionarium</font><br/><font point-size="12">collection of words</font>>]
+dictionary [label=<<b>Modern<br/>English</b><br/><font color="red">dictionary</font>>]
+dictioL -> dictionarium [weight=1]
+dictionarium -> dictionary [style=dashed]
+
+/* ditto */
+direI [label=<<b>Italian</b><br/><font color="red">dire</font>>]
+dittoI [label=<(dialectical)<br/><font color="red">ditto</font><br/><font point-size="12">aforementioned</font>>]
+ditto [label=<<b>Modern<br/>English</b><br/><font color="red">ditto</font>>]
+dicereL -> direI
+direI -> dittoI [weight=1]
+dittoI -> ditto [style=dashed weight=1]
+
+/* verdict */
+ditAN [label=<<b>Anglo-<br/>Norman</b><br/><font color="red">dit</font><br/><font point-size="12">speech</font>>]
+verditME [label=<<b>Middle<br/>English</b><br/><font color="red">verdit</font>>]
+verdict [label=<<b>Modern<br/>English</b><br/><font color="red">verdict</font>>] // probably influenced by L
+dictumL -> ditAN
+/* were-o- */
+wereo [label=<<b>Indo-<br/>European</b><br/><font color="red">*wērə-o-</font><br/><font point-size="12">true</font>> shape=box style="dashed,rounded" URL="wereo-true.svg"] // not made
+verusL [label=<<b>Latin</b><br/><font color="red">vērus</font>>]
+verAN [label=<<b>Anglo-<br/>Norman</b><br/><font color="red">ver</font><br/><font point-size="12">true</font>>]
+wereo -> verusL
+verusL -> verAN [sametail=1] // intermediate OF?
+{verAN ditAN} -> verditME [style=dashed samehead=1]
+verditME -> verdict
+
+/* voir dire */
+direAN [label=<<b>Anglo-<br/>Norman</b><br/><font color="red">dire</font><br/><font point-size="12">to speak</font>>]
+voirAN [label=<<b>Anglo-<br/>Norman</b><br/><font color="red">voir</font><br/><font point-size="12">the truth</font>>]
+voirdireAN [label=<<font color="red">voir dire</font>>]
+voirdire [label=<<b>Modern<br/>English</b><br/><font color="red">voir dire</font>>]
+verusL -> voirAN [sametail=1]
+dicereL -> direAN [sametail=1]
+{voirAN direAN} -> voirdireAN [samehead=1]
+voirdireAN -> voirdire [style=dashed]
+{ rank=same voirAN -> direAN [style=invis] }
+
+/* jurisdiction */
+iurisdictioL [label=<<font color="red">iūrisdictiō,<br/>iūrisdictiōn-</font><br/><font point-size="12">declaration<br/>of the law</font>>] // i=j
+jurisdicionOF [label=<<b>Old French</b><br/><font color="red">jurisdicion</font>>]
+jurisdicciounME [label=<<b>Middle<br/>English</b><br/><font color="red">jurisdiccioun</font>>]
+jurisdiction [label=<<b>Modern<br/>English</b><br/><font color="red">jurisdiction</font>>]
+dictioL -> iurisdictioL -> jurisdicionOF
+jurisdicionOF -> jurisdicciounME [style=dashed]
+jurisdicciounME -> jurisdiction
+
+/* bene (deu-) */
+deuIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*deu-</font><br/><font point-size="12">to do</font>> shape=box style="dashed,rounded" URL="deu-do.svg"]
+beneL [label=<<b>Latin</b><br/><font color="red">bene</font><br/><font point-size="12">well</font>>]
+deuIE -> beneL
+/* benediction (omitted: Benedict) */
+benedicereL [label=<<font color="red">benedīcere</font><br/><font point-size="12">to bless</font>>]
+benedictioL [label=<<font color="red">benedictiō,<br/>benedictiōn-</font>>]
+benedicionOF [label=<<b>Old French</b><br/><font color="red">benedicion</font>>]
+benedicciounME [label=<<b>Middle<br/>English</b><br/><font color="red">benediccioun</font>>]
+benediction [label=<<b>Modern<br/>English</b><br/><font color="red">benediction</font>>]
+{beneL dicereL} -> benedicereL [samehead=1]
+benedicereL -> benedictioL -> benedicionOF
+benedicionOF -> benedicciounME [style=dashed]
+benedicciounME -> benediction
+
+/* male (mel-) */
+melIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*mel-</font><br/><font point-size="12">bad</font>> shape=box style="dashed,rounded" URL="mel-bad.svg"]
+maleL [label=<<b>Latin</b><br/><font color="red">male</font><br/><font point-size="12">ill (adv.)</font>>]
+/* maledict, omitted: malison */
+maledicereL [label=<<font color="red">maledīcere</font><br/><font point-size="12">to curse</font>>]
+maledictusL [label=<<font color="red">maledīctus</font>>]
+maledicteME [label=<<b>Middle<br/>English</b><br/><font color="red">maledicte</font>>]
+maledict [label=<<b>Modern<br/>English</b><br/><font color="red">maledict</font>>]
+melIE -> maleL
+{maleL dicereL } -> maledicereL [samehead=1]
+maledicereL -> maledictusL
+maledictusL -> maledicteME [style=dashed]
+maledicteME -> maledict
+
+/* valediction */
+valedicereL [label=<<font color="red">valedīcere</font><br/><font point-size="12">to say goodbye</font>>]
+valedictusL [label=<<font color="red">valedictus</font>>]
+valediction [label=<<b>Modern<br/>English</b><br/><font color="red">valediction<br/>valedictory<br/>valedictorian</font>>]
+dicereL -> valedicereL -> valedictusL [weight=1]
+valedictusL -> valediction [style=dashed]
+
+/* ---- dictare ---- */
+/* dictate */
+dictareL [label=<<font color="red">dictāre</font><br/><font point-size="12">to say often</font>>]
+dictatusL [label=<<font color="red">dictātus</font>>] // past part.
+dictate [label=<<b>Modern<br/>English</b><br/><font color="red">dictate</font>>]
+dicereL -> dictareL -> dictatusL
+dictatusL -> dictate [style=dashed]
+
+/* ditty */
+diteOF [label=<<b>Old French</b><br/><font color="red">dite</font>>]
+diteME [label=<<b>Middle<br/>English</b><br/><font color="red">dite</font><br/><font point-size="12">literary<br/>composition</font>>]
+ditty [label=<<b>Modern<br/>English</b><br/><font color="red">ditty</font>>]
+dictatusL -> diteOF
+diteOF -> diteME [style=dashed]
+diteME -> ditty
+
+/* indite, indict */
+indictareL [label=<<font color="red">indictāre</font><br/><font point-size="12">?</font>>] // Vulgar
+enditerOF [label=<<b>Old French</b><br/><font color="red">enditer</font>>]
+enditenME [label=<<b>Middle<br/>English</b><br/><font color="red">enditen</font>>]
+indite [label=<<b>Modern<br/>English</b><br/><font color="red">indite</font>>]
+indict [label=<<b>Modern<br/>English</b><br/><font color="red">indict</font>>]
+dictareL -> indictareL -> enditerOF
+enditerOF -> enditenME [style=dashed]
+enditenME -> {indite indict}
+/* in- (en) */
+enIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*en</font><br/><font point-size="12">in</font>> shape=box style="dashed,rounded" URL="en-in1.svg"]
+inL [label=<<b>Latin</b><br/><font color="red">in-</font>>]
+enIE -> inL -> indictareL
+
+
+
+{ rank=same dictum diction dictionary dictate ditty ditto indict indite verdict benediction  jurisdiction maledict valediction voirdire }
+{ rank=same enIE wereo deuIE }
+{ rank=same voirAN -> direAN -> verAN -> ditAN [style=invis] }
+direI -> dittoI -> ditto [weight=3]
+}

@@ -1,0 +1,121 @@
+strict digraph {
+node [shape=none]
+deik [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*deik-, *deig- </font><font point-size="16">to show</font>> shape=box style="dashed,rounded" URL="deik-show0.svg" tooltip="Indo-European \"*deik-, *deig-\" to show"]
+
+deik -> { dik dig } [sametail=1 minlen=2]
+dik [label=<<font color="red">*-dik-</font>>] // agental suffix
+dig [label=<<font color="red">*dig-</font>>]
+
+/* digit (ME but no OE?), digital */
+digitusL [label=<<b>Latin</b><br/><font color="red">digitus</font><br/><font point-size="12">finger<br/>("pointer")</font>>]
+digit [label=<<b>Modern<br/>English</b><br/><font color="red">digit</font>>]
+digitalisL [label=<<font color="red">digitālis</font><br/><font point-size="12">of a finger</font>>]
+digital [label=<<b>Modern<br/>English</b><br/><font color="red">digital</font>>] // computers because they're operated with the fingers, but also means foxglove
+dig -> digitusL -> digitalisL
+digitusL -> digit [style=dashed]
+digitalisL -> digital [style=dashed]
+
+/* ---- index ---- */
+/* index */
+indexL [label=<<b>Latin</b><br/><font color="red">index</font><br/><font point-size="12">indicator,<br/>forefinger</font>>]
+indexME [label=<<b>Middle<br/>English</b><br/><font color="red">index</font>>]
+index [label=<<b>Modern<br/>English</b><br/><font color="red">index</font>>]
+dik -> indexL [sametail=1]
+indexL -> indexME [style=dashed]
+indexME -> index
+
+/* indicate */
+indicareL [label=<<font color="red">indicāre,<br/>indicāt-</font><br/><font point-size="12">to show</font>>]
+indicate [label=<<b>Modern<br/>English</b><br/><font color="red">indicate</font>>]
+indexL -> indicareL
+indicareL -> indicate [style=dashed]
+/* indicare from index, not dicare */
+
+/* ---- judex ---- */
+/* judge */
+iudexL [label=<<b>Latin</b><br/><font color="red">iūdex, iūdic-</font><br/><font point-size="12">judge</font>>]
+iudicareL [label=<<font color="red">iūdicāre</font>>]
+jugerAN [label=<<b>Anglo-Norman</b><br/><font color="red">juger</font>>]
+jugenME [label=<<b>Middle<br/>English</b><br/><font color="red">jugen</font>>]
+judge [label=<<b>Modern<br/>English</b><br/><font color="red">judge</font>>]
+dik -> iudexL [sametail=1]
+iudexL -> iudicareL [sametail=1]
+iudicareL -> jugerAN
+jugerAN -> jugenME [style=dashed]
+jugenME -> judge
+/* judicial */
+iudicalisL [label=<<font color="red">iūdicālis</font>>]
+judicialAN [label=<<b>Anglo-Norman</b><br/><font color="red">judicial</font>>]
+judicialME [label=<<b>Middle<br/>English</b><br/><font color="red">judicial</font>>]
+judicial [label=<<b>Modern<br/>English</b><br/><font color="red">judicial</font>>]
+iudicareL -> iudicalisL -> judicialAN
+judicialAN -> judicialME [style=dashed]
+judicialME -> judicial
+/* prejudice */
+iudiciumL [label=<<b>Latin</b><br/><font color="red">iūdicium</font><br/><font point-size="12">judgment</font>>]
+praeiudicium [label=<<font color="red">praeiūdicium</font>>]
+prejudiceOF [label=<<b>Old French</b><br/><font color="red">prejudice</font>>]
+prejudiceME [label=<<b>Middle<br/>English</b><br/><font color="red">prejudice</font>>]
+prejudice [label=<<b>Modern<br/>English</b><br/><font color="red">prejudice</font>>]
+iudexL -> iudiciumL [sametail=1]
+{praeL iudiciumL} -> praeiudicium [samehead=1]
+praeiudicium -> prejudiceOF
+prejudiceOF -> prejudiceME [style=dashed]
+prejudiceME -> prejudice
+/* prae- (per) */
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">(various<br/>prepositions)</font>> shape=box style="dashed,rounded" URL="per-prai1.svg"]
+praeL [label=<<b>Latin</b><br/><font color="red">prae-</font><br/><font point-size="12">before</font>>]
+perIE -> praeL
+
+/* ---- vindex ---- */
+/* vindicate */
+vindexL [label=<<b>Latin</b><br/><font color="red">vindex, vindic-</font><br/><font point-size="12">surety, avenger</font>>] // ?
+vindicareL [label=<<font color="red">vindicāre,<br/>vindicāt-</font>>]
+vindicate [label=<<b>Modern<br/>English</b><br/><font color="red">vindicate</font>>]
+dik -> vindexL [sametail=1]
+vindexL -> vindicareL
+vindicareL -> vindicate [style=dashed]
+/* vindictive */
+vindictaL [label=<<font color="red">vindicta</font><br/><font point-size="12">vengence</font>>]
+vindictive [label=<<b>Modern<br/>English</b><br/><font color="red">vindictive</font>>]
+vindexL -> vindictaL
+vindictaL -> vindictive [style=dashed]
+/* vendetta */
+vendettaI [label=<<b>Italian</b><br/><font color="red">vendetta</font>>]
+vendetta [label=<<b>Modern<br/>English</b><br/><font color="red">vendetta</font>>]
+vindictaL -> vendettaI
+vendettaI -> vendetta [style=dashed]
+/* vengeance */
+vengierOF [label=<<b>Old French</b><br/><font color="red">vengier</font><br/><font point-size="12">to vindicate</font>>]
+vengeanceOF [label=<<font color="red">vengeance</font>>]
+vengeanceME [label=<<b>Middle<br/>English</b><br/><font color="red">vengeance</font>>]
+vengeance [label=<<b>Modern<br/>English</b><br/><font color="red">vengeance</font>>]
+vindicareL -> vengierOF -> vengeanceOF
+vengeanceOF -> vengeanceME [style=dashed]
+vengeanceME -> vengeance
+/* avenge */
+avengierOF [label=<<font color="red">avengier</font>>]
+avengenME [label=<<b>Middle<br/>English</b><br/><font color="red">avengen</font>>]
+avenge [label=<<b>Modern<br/>English</b><br/><font color="red">avenge</font>>]
+vengierOF -> avengierOF // OF a- < L ad-
+avengierOF -> avengenME [style=dashed]
+avengenME -> avenge
+/* revenge */
+revengierOF [label=<<font color="red">revengier</font>>]
+revengenME [label=<<b>Middle<br/>English</b><br/><font color="red">revengen</font>>]
+revenge [label=<<b>Modern<br/>English</b><br/><font color="red">revenge</font>>]
+vengierOF -> revengierOF
+revengierOF -> revengenME [style=dashed]
+revengenME -> revenge
+
+{rank=same index indicate judge judicial prejudice vindicate avenge vendetta vengeance avenge revenge vindictive digit digital}
+{ rank=same dik dig perIE }
+// dik -> {indexL iudexL vindexL rank=same} [minlen=2 sametail=1]
+// {rank=same prejudiceOF preechierOF predicamentOF vengierOF}
+// {rank=same prejudiceME indexME judicialME jugenME vendettaI}
+// {rank=same digitusL}
+// digitusL -> digitalisL [weight=2]
+// vindexL -> vindictaL [weight=2]
+// indexL -> indicareL [weight=2]
+// {rank=same judicialAN jugerAN}
+}

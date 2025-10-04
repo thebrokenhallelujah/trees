@@ -1,0 +1,11 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+eiIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ei-</font></td><td><font point-size="16">to go</font></td></tr></table>> tooltip="Indo-European \"*ei-\" to go" shape=box peripheries=2 margin=.3]
+
+ei1 [label=<Latin <font color="red">īre</font>> shape=box style="dashed,rounded" URL="ei-go1.svg" tooltip="Latin īre"]
+ei2 [label=<everything else> shape=box style="dashed,rounded" URL="ei-go2.svg" tooltip="everything else"]
+eiIE -> { ei1 ei2 }
+
+}

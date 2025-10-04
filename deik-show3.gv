@@ -1,0 +1,130 @@
+strict digraph {
+node [shape=none]
+deik [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*deik-, *deig- </font><font point-size="16">to show</font>> shape=box style="dashed,rounded" URL="deik-show0.svg" tooltip="Indo-European \"*deik-, *deig-\" to show"]
+
+deik -> dikaa [sametail=1]
+dikaa [label=<<font color="red">*dik-ā-</font>>]
+
+deik -> dicereL [sametail=1 minlen=2]
+
+/* ---- dicere prefixed forms ---- */
+dicereL [label=<<b>Latin</b><br/><font color="red">dīcere</font><br/><font point-size="12">to say</font>>]
+dicereL -> {addicereL edicereL contradicere praedicere interdicere condicereL} [sametail=1]
+/* addict */
+addicereL [label=<<font color="red">addīcere,<br/>addict-</font><br/><font point-size="12">to sentence</font>>]
+addict [label=<<b>Modern<br/>English</b><br/><font color="red">addict</font>>]
+addicereL -> addict [style=dashed]
+/* ad-? */
+adL [label=<<b>Latin</b><br/><font color="red">ad-</font><br/><font point-size="12">to, toward</font>>]
+adL -> addicereL
+
+/* edict */
+edicereL [label=<<font color="red">ēdīcere</font><br/><font point-size="12">to declare</font>>]
+edictumL [label=<<font color="red">ēdictum</font>>]
+edict [label=<<b>Modern<br/>English</b><br/><font color="red">edict</font>>]
+edicereL -> edictumL [weight=1]
+edictumL -> edict [style=dashed]
+/* ex- (eghs) */
+eghs [label=<<b>Indo-<br/>European</b><br/><font color="red">*eghs</font><br/><font point-size="12">out of, from</font>> shape=box style="dashed,rounded" URL="eghs-out.svg"]
+exL [label=<<b>Latin</b><br/><font color="red">ex-, ē-</font>>]
+eghs -> exL -> edicereL
+
+/* contradict */
+contradicere [label=<<font color="red">contrādīcere,<br/>contrādict-</font><br/><font point-size="12">to speak against</font>>]
+contradict [label=<<b>Modern<br/>English</b><br/><font color="red">contradict</font>>]
+contradicere -> contradict [style=dashed]
+/* contra- (kom) */
+kom [label=<<b>Indo-<br/>European</b><br/><font color="red">*kom</font><br/><font point-size="12">with</font>> shape=box style="dashed,rounded" URL="kom-with.svg"]
+contraL [label=<<b>Latin</b><br/><font color="red">contra-</font><br/><font point-size="12">against</font>>]
+kom -> contraL
+contraL -> contradicere [samehead=1]
+
+/* predict */
+praedicere [label=<<font color="red">praedīcere,<br/>praedict-</font>>]
+predict [label=<<b>Modern<br/>English</b><br/><font color="red">predict</font>>]
+praedicere -> predict [style=dashed]
+/* prae- (per) */
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">(various<br/>prepositions)</font>> shape=box style="dashed,rounded" URL="per-prai1.svg"]
+praeL [label=<<b>Latin</b><br/><font color="red">prae-</font><br/><font point-size="12">before</font>>]
+perIE -> praeL
+praeL -> praedicere [sametail=1 samehead=1]
+
+/* interdict */
+interdicere [label=<<font color="red">interdīcere,<br/>interdict-</font><br/><font point-size="12">to forbid</font>>]
+interdict [label=<<b>Modern<br/>English</b><br/><font color="red">interdict</font>>]
+interdicere -> interdict [style=dashed]
+/* inter- (en) */
+enIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*en</font><br/><font point-size="12">in</font>> shape=box style="dashed,rounded" URL="en-in3.svg"]
+interL [label=<<b>Latin</b><br/><font color="red">inter-</font><br/><font point-size="12">between</font>>]
+enIE -> interL
+interL -> interdicere [samehead=1]
+
+/* condition */
+condicereL [label=<<font color="red">condīcere</font><br/><font point-size="12">to agree</font>>]
+conditioL [label=<<font color="red">conditiō,<br/>conditiōn-</font>>]
+condicionOF [label=<<b>Old French</b><br/><font color="red">condicion</font>>]
+condiciounME [label=<<b>Middle<br/>English</b><br/><font color="red">condicioun</font>>]
+condition [label=<<b>Modern<br/>English</b><br/><font color="red">condition</font>>]
+condicereL -> conditioL -> condicionOF
+condicionOF -> condiciounME [style=dashed]
+condiciounME -> condition
+/* con- */
+conL [label=<<b>Latin</b><br/><font color="red">com-, con-</font><br/><font point-size="12">with, together</font>>]
+kom -> conL -> condicereL
+
+/* ---- dicare ---- */
+/* predicate */
+dicareL [label=<<b>Latin</b><br/><font color="red">dicāre</font><br/><font point-size="12">to proclaim</font>>]
+praedicareL [label=<<font color="red">praedicāre,<br/>praedicāt-</font>>]
+predicate [label=<<b>Modern<br/>English</b><br/><font color="red">predicate</font>>]
+dikaa -> dicareL
+praeL -> praedicareL [sametail=1 samehead=1]
+dicareL -> praedicareL [sametail=1 samehead=1]
+praedicareL -> predicate [style=dashed]
+
+/* preach */
+preechierOF [label=<<b>Old French</b><br/><font color="red">preechier</font>>]
+prechenME [label=<<b>Middle<br/>English</b><br/><font color="red">prechen</font>>]
+preach [label=<<b>Modern<br/>English</b><br/><font color="red">preach</font>>]
+praedicareL -> preechierOF
+preechierOF -> prechenME [style=dashed]
+prechenME -> preach
+/* predicament (L translation of G category) */
+praedicamentum [label=<<font color="red">praedicāmentum</font><br/><font point-size="12">?</font>>] // "speak against publicly
+predicamentOF [label=<<b>Old French</b><br/><font color="red">predicament</font>>]
+predicamentME [label=<<b>Middle<br/>English</b><br/><font color="red">predicament</font><br/><font point-size="12">category</font>>] // where did the current meaning come from?
+predicament [label=<<b>Modern<br/>English</b><br/><font color="red">predicament</font>>]
+praedicareL -> praedicamentum -> predicamentOF
+predicamentOF -> predicamentME [style=dashed]
+predicamentME -> predicament
+
+/* abdicate */
+abdicareL [label=<<font color="red">abdīcāre,<br/>abdīcāt-</font><br/><font point-size="12">to disclaim</font>>] // why long i?
+abdicate [label=<<b>Modern<br/>English</b><br/><font color="red">abdicate</font>>]
+{abL dicareL} -> abdicareL [samehead=1]
+abdicareL -> abdicate [style=dashed]
+/* ab- (apo) */
+apoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*apo</font><br/><font point-size="12">off, from</font>> shape=box style="dashed,rounded" URL="apo-off1.svg"]
+abL [label=<<b>Latin</b><br/><font color="red">ab-</font><br/><font point-size="12">away from</font>>]
+apoIE -> abL
+
+/* dedicate */
+dedicareL [label=<<font color="red">dēdīcāre,<br/>dēdīcāt-</font><br/><font point-size="12">to set apart</font>>]
+dedicatenME [label=<<b>Middle<br/>English</b><br/><font color="red">dedicaten</font>>]
+dedicate [label=<<b>Modern<br/>English</b><br/><font color="red">dedicate</font>>]
+{deL dicareL} -> dedicareL [samehead=1]
+dedicareL -> dedicatenME [style=dashed]
+dedicatenME -> dedicate
+/* de- (not in AHD) */
+deIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*de-</font><br/><font point-size="12">off, from</font>> shape=box style="dashed,rounded" URL="de.svg"] // not made, requires a source
+deL [label=<<b>Latin</b><br/><font color="red">de-</font><br/><font point-size="12">out of</font>>]
+deIE -> deL
+
+
+{ rank=same predicate preach predicament abdicate dedicate condition contradict predict interdict edict addict }
+{ rank=same perIE apoIE deIE eghs kom }
+dicareL -> {praedicareL abdicareL dedicareL} [sametail=1]
+// {rank=same prejudiceOF preechierOF predicamentOF vengierOF}
+// {rank=same prejudiceME prechenME predicamentME dedicatenME indexME judicialME jugenME vendettaI}
+// {rank=same dicareL digitusL}
+}

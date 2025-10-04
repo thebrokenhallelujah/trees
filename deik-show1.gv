@@ -1,0 +1,107 @@
+strict digraph {
+/* sources: */
+node [shape=none]
+deik [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*deik-, *deig- </font><font point-size="16">to show</font>> shape=box style="dashed,rounded" URL="deik-show0.svg" tooltip="Indo-European \"*deik-, *deig-\" to show"]
+
+deik -> {doig doik dikskos dika rank=same} [sametail=1]
+doig [label=<<font color="red">*doig-</font>>]
+doik [label=<<font color="red">*doik-</font>>]
+dika [label=<<font color="red">*dikā-</font>>]
+dikskos [label=<<font color="red">*dik-skos</font>>]
+
+/* ---- Germanic ---- */
+
+/* teach */
+taikjan [label=<<b>Germanic</b><br/><font color="red">*taikjan</font><br/><font point-size="12">to show</font>>]
+taecanOE [label=<<b>Old English</b><br/><font color="red">tǣcan</font>>]
+techenME [label=<<b>Middle<br/>English</b><br/><font color="red">techen</font>>]
+teach [label=<<b>Modern<br/>English</b><br/><font color="red">teach</font>>]
+doig -> taikjan -> taecanOE -> techenME -> teach
+
+/* token */
+taiknam [label=<<b>Germanic</b><br/><font color="red">*taiknam</font>>]
+tacenOE [label=<<b>Old English</b><br/><font color="red">tācen</font>>]
+tokenME [label=<<b>Middle<br/>English</b><br/><font color="red">token</font>>]
+token [label=<<b>Modern<br/>English</b><br/><font color="red">token</font>>]
+doig -> taiknam -> tacenOE -> tokenME -> token
+
+/* betoken */
+tacnianOE [label=<<b>Old English</b><br/><font color="red">tācnian</font><br/><font point-size="12">to signify</font>>]
+toknenME [label=<<b>Middle<br/>English</b><br/><font color="red">toknen</font>>]
+bitoknenME [label=<<font color="red">bitoknen</font>>]
+betoken [label=<<b>Modern<br/>English</b><br/><font color="red">betoken</font>>]
+taiknam -> tacnianOE -> toknenME -> bitoknenME -> betoken
+
+/* toe */
+taihwo [label=<<b>Germanic</b><br/><font color="red">*taihwō</font>>]
+taheOE [label=<<b>Old English</b><br/><font color="red">tā, tahe</font><br/><font point-size="12">toe</font>>]
+toeME [label=<<b>Middle<br/>English</b><br/><font color="red">toe</font>>]
+toe [label=<<b>Modern<br/>English</b><br/><font color="red">toe</font>>]
+doik -> taihwo [label="?" decorate=true]
+taihwo -> taheOE -> toeME -> toe
+
+/* ---- Greek ---- */
+
+/* paradigm */
+deiknunaiG [label=<<b>Greek</b><br/><font color="red">deiknunai</font><br/><font point-size="12">to show</font>>]
+paradeiknunai [label=<<font color="red">paradeiknunai</font><br/><font point-size="12">to compare</font>>]
+paradeigmaG [label=<<font color="red">paradeigma</font>>]
+paradigmaL [label=<<b>Latin</b><br/><font color="red">paradīgma</font>>]
+paradigm [label=<<b>Modern<br/>English</b><br/><font color="red">paradigm</font>>]
+deik -> deiknunaiG [sametail=1 minlen=3]
+deiknunaiG -> paradeiknunai -> paradeigmaG 
+paradeigmaG -> paradigmaL -> paradigm [style=dashed]
+/* para- (link) */
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">(various<br/>prepositions)</font>> shape=box style="dashed,rounded" URL="per-pre.svg"]
+paraG [label=<<b>Greek</b><br/><font color="red">para-</font><br/><font point-size="12">beside</font>>]
+perIE -> paraG -> paradeiknunai
+
+/* policy (insurance) */
+apodeiknunai [label=<<font color="red">apodeiknunai</font><br/><font point-size="12">to prove</font>>]
+apodeixisG [label=<<font color="red">apodeixis</font><br/><font point-size="12">proof</font>>]
+apodixaL [label=<<b>Latin</b><br/><font color="red">apodixa</font><br/><font point-size="12">receipt</font>>]
+polizzaOI [label=<<b>Old Italian</b><br/><font color="red">polizza</font>>]
+policeF [label=<<b>French</b><br/><font color="red">police</font><br/><font point-size="12">contract</font>>]
+policy [label=<<b>Modern<br/>English</b><br/><font color="red">policy</font><br/><font point-size="12">(insurance)</font>>]
+deiknunaiG -> apodeiknunai -> apodeixisG
+apodeixisG -> apodixaL [style=dashed]
+apodixaL -> polizzaOI
+polizzaOI -> policeF -> policy [style=dashed]
+/* apo- (link) */
+apoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*apo</font><br/><font point-size="12">off</font>> shape=box style="dashed,rounded" URL="apo-off1.svg"]
+apoG [label=<<b>Greek</b><br/><font color="red">apo-</font><br/><font point-size="12">(intensive<br/>prefix)</font>>]
+apoIE -> apoG -> apodeiknunai
+
+/* disk/disc (dikskos -> dikein -> diskos?) */
+dikeinG [label=<<b>Greek</b><br/><font color="red">dikein</font><br/><font point-size="12">to throw</font>>]
+diskosG [label=<<font color="red">diskos</font>>] // def?
+discusL [label=<<b>Latin</b><br/><font color="red">discus</font>>]
+disc [label=<<b>Modern<br/>English</b><br/><font color="red">disc, disk<br/>discus<br/>disco-</font>>]
+dikskos -> dikeinG -> diskosG
+diskosG -> discusL -> disc [style=dashed]
+
+/* syndic, details omitted (sun < ksun) */
+dikeG [label=<<b>Greek</b><br/><font color="red">dikē</font><br/><font point-size="12">justice</font>>]
+sundikosG [label=<<font color="red">sundikos</font><br/><font point-size="12">public<br/>advocate</font>>]
+syndicusL [label=<<b>Latin</b><br/><font color="red">syndicus</font>>]
+syndic [label=<<b>Modern<br/>English</b><br/><font color="red">syndic<br/>syndicate</font>>]
+dika -> dikeG -> sundikosG
+sundikosG -> syndicusL -> syndic [style=dashed]
+/* syn- (ksun) */
+ksunIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ksun</font><br/><font point-size="12">with</font>> shape=box style="dashed,rounded" URL="ksun-with.svg"]
+sunG [label=<<b>Greek</b><br/><font color="red">sun-</font><br/><font point-size="12">with, together</font>>]
+ksunIE -> sunG -> sundikosG
+
+{rank=same teach token betoken toe paradigm disc syndic policy}
+tacnianOE -> toknenME -> bitoknenME -> betoken [weight=3] // I don't think this works
+{rank=same taecanOE tacnianOE tacenOE taheOE}
+{rank=same techenME tokenME toknenME toeME}
+{rank=same bitoknenME policeF}
+{rank=same discusL syndicusL paradigmaL apodixaL}
+doig -> {taikjan taiknam} [sametail=1]
+{rank=same perIE apoIE ksunIE}
+{rank=same taikjan taiknam taihwo dikeG deiknunaiG dikeinG}
+dikeinG -> diskosG [weight=2]
+paradeiknunai -> paradeigmaG [weight=2]
+apodeiknunai -> apodeixisG [weight=2]
+}

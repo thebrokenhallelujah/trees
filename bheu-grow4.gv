@@ -1,0 +1,150 @@
+strict digraph {
+node [shape=plaintext]
+bheu [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">bheuə-, bheu-</font><font point-size="16">to be, exist, grow</font>> shape=box style="dashed,rounded" URL="bheu-grow0.svg" tooltip=""]
+bheu -> bhw
+/* -bhw- */
+bhw [label=<<font color="red">-bhw-</font>>]
+bhw -> { dubhwio probhwo superbhwo rank=same }
+
+/* dubious, doubt, dubitable, redoubtable */
+dubhwio [label=<<font color="red">du-bhw-io-</font>>] // see dwo-
+dubhwio -> { dubiusL dubitareL }
+dubiusL [label=<<b>Latin</b><br/><font color="red">dubius</font>>]
+dubiusL -> dubious [style=dashed]
+dubious[label=<<b>Modern<br/>English</b><br/><font color="red">dubious</font>>]
+dubitareL [label=<<b>Latin</b><br/><font color="red">dubitāre</font><br/><font point-size="12">to waver, doubt</font>>]
+dubitareL -> { dubitabilisL douterOF }
+dubitabilisL [label=<<font color="red">dubitābilis</font>>]
+dubitabilisL -> dubitable [style=dashed]
+dubitable [label=<<b>Modern<br/>English</b><br/><font color="red">dubitable<br/>indubitable</font>>]
+douterOF [label=<<b>Old French</b><br/><font color="red">douter</font>>]
+douterOF -> doutenME [style=dashed]
+doutenME [label=<<b>Middle<br/>English</b><br/><font color="red">douten</font>>]
+doutenME -> doubt
+doubt [label=<<b>Modern<br/>English</b><br/><font color="red">doubt</font>>]
+re1 [label=<<b>Latin</b><br/><font color="red">re-</font><br/><font point-size="12">(intensive prefix)</font>>]
+reOF [label=<<b>Old French</b><br/><font color="red">re-</font>>]
+re1 -> reOF
+{ reOF douterOF } -> redouterOF
+redouterOF [label=<<font color="red">redouter</font><br/><font point-size="12">to dread, fear</font>>]
+redouterOF -> redoutableOF
+redoutableOF [label=<<font color="red">redoutable</font>>]
+redoutableOF -> redoubtabelME [style=dashed]
+redoubtabelME [label=<<b>Middle<br/>English</b><br/><font color="red">redoubtabel</font>>]
+redoubtabelME -> redoubtable
+redoubtable [label=<<b>Modern<br/>English</b><br/><font color="red">redoubtable</font>>]
+
+/* L probus*/
+probhwo [label=<<font color="red">pro-bhw-o-</font><br/><font point-size="12">growing well<br/>or straight</font>>] // see per1
+probhwo -> probusL
+probusL [label=<<b>Latin</b><br/><font color="red">probus</font><br/><font point-size="12">upright, good</font>>]
+probusL -> { probareL probitasL }
+probareL [label=<<font color="red">probāre</font><br/><font point-size="12">to test</font>>]
+probareL -> { probaL probatioL probatumL probabilisL rank=same }
+/* prove */
+probareL -> proverOF
+proverOF [label=<<b>Old French</b><br/><font color="red">prover</font>>]
+proverOF -> provenME [style=dashed]
+provenME [label=<<b>Middle<br/>English</b><br/><font color="red">proven</font>>]
+provenME -> prove
+prove [label=<<b>Modern<br/>English</b><br/><font color="red">prove</font>>]
+/* probe */
+probaL [label=<<font color="red">proba</font><br/><font point-size="12">proof</font>>]
+probaL -> probeME [style=dashed]
+probeME [label=<<b>Middle<br/>English</b><br/><font color="red">probe</font>>]
+probeME -> probe
+probe [label=<<b>Modern<br/>English</b><br/><font color="red">probe</font>>]
+
+/* proof */
+probaL -> { proveAN prueveOF }
+proveAN [label=<<b>Anglo-<br/>Norman</b><br/><font color="red">prove</font>>]
+prueveOF [label=<<b>Old<br/>French</b><br/><font color="red">prueve</font>>]
+prueveOF [label=<<b>Old<br/>French</b><br/><font color="red">prueve</font>>]
+{ proveAN prueveOF } -> proveME [style=dashed]
+proveME [label=<<b>Middle<br/>English</b><br/><font color="red">prove, preve</font>>]
+proveME -> proof
+proof [label=<<b>Modern<br/>English</b><br/><font color="red">proof</font>>]
+
+/* approve, approbate */
+{ ad probareL } -> approbareL
+ad [label=<<b>Latin</b><br/><font color="red">ad-</font><br/><font point-size="12">toward</font>>]
+approbareL [label=<<font color="red">approbāre</font><br/><font point-size="12">approve, justify</font>>]
+approbareL -> aproverOF
+aproverOF [label=<<b>Old French</b><br/><font color="red">aprover</font>>]
+aproverOF -> approvenME [style=dashed]
+approvenME [label=<<b>Middle<br/>English</b><br/><font color="red">approven</font>>]
+approvenME -> approve
+approve [label=<<b>Modern<br/>English</b><br/><font color="red">aprove</font>>]
+approbareL -> approbatenME [style=dashed]
+approbatenME [label=<<b>Middle<br/>English</b><br/><font color="red">approbaten</font>>]
+approbatenME -> approbate
+approbate [label=<<b>Modern<br/>English</b><br/><font color="red">approbate</font>>]
+
+/* reprove, reprobate, reproof */
+{ re2 probareL } -> reprobareL
+re2 [label=<<b>Latin</b><br/><font color="red">re-</font><br/><font point-size="12">opposite</font>>]
+reprobareL [label=<<font color="red">reprobāre</font><br/><font point-size="12">to reprove</font>>]
+reprobareL -> { reprobatusL reproverOF }
+reprobatusL [label=<<font color="red">reprobātus</font>>]
+reprobatusL -> reprobateME [style=dashed]
+reprobateME [label=<<b>Middle<br/>English</b><br/><font color="red">reprobate</font><br/><font point-size="12">condemned</font>>]
+reprobateME -> reprobate
+reprobate [label=<<b>Modern<br/>English</b><br/><font color="red">reprobate</font>>]
+reproverOF [label=<<b>Old French</b><br/><font color="red">reprover, reprueve</font>>]
+reproverOF -> repruverAN
+repruverAN [label=<<b>Anglo-Norman</b><br/><font color="red">repruver</font>>]
+repruverAN -> reprovenME [style=dashed]
+reprovenME [label=<<b>Middle<br/>English</b><br/><font color="red">reproven</font>>]
+reprovenME -> reprove
+reprove [label=<<b>Modern<br/>English</b><br/><font color="red">reprove</font>>]
+reproverOF -> reproveME [style=dashed]
+reproveME [label=<<b>Middle<br/>English</b><br/><font color="red">reprove, repreve</font>>]
+reproveME -> reprofME
+reprofME [label=<<font color="red">reprof</font>>]
+reprofME -> reproof
+reproof [label=<<b>Modern<br/>English</b><br/><font color="red">reproof</font>>]
+
+/* probation */
+probatioL [label=<<font color="red">probātiō,<br/>probātiōn-</font><br/><font point-size="12">a testing</font>>]
+probatioL -> probationOF
+probationOF [label=<<b>Old French</b><br/><font color="red">probation</font>>]
+probationOF -> probacionME [style=dashed]
+probacionME [label=<<b>Middle<br/>English</b><br/><font color="red">probacion</font>>]
+probacionME -> probation
+probation [label=<<b>Modern<br/>English</b><br/><font color="red">probation</font>>]
+/* probate */
+probatumL [label=<<font color="red">probātum</font>>]
+probatumL -> probatME [style=dashed]
+probatME [label=<<b>Middle<br/>English</b><br/><font color="red">probat</font>>]
+probatME -> probate
+probate [label=<<b>Modern<br/>English</b><br/><font color="red">probate</font>>]
+
+/* probable */
+probabilisL [label=<<font color="red">probābilis</font>>]
+probabilisL -> probableOF
+probableOF [label=<<b>Old French</b><br/><font color="red">probable</font>>]
+probableOF -> probableME [stlye=dashed]
+probableME [label=<<b>Middle<br/>English</b><br/><font color="red">probable</font>>]
+probableME -> probable
+probable [label=<<b>Modern<br/>English</b><br/><font color="red">probable</font>>]
+/* probity */
+probitasL [label=<<font color="red">probitās</font><br/><font point-size="12">uprightness, honesty</font>>]
+probitasL -> probiteOF
+probiteOF [label=<<b>Old French</b><br/><font color="red">probite</font>>]
+probiteOF -> probiteME [style=dashed]
+probiteME [label=<<b>Middle<br/>English</b><br/><font color="red">probite</font>>]
+probiteME -> probity
+probity [label=<<b>Modern<br/>English</b><br/><font color="red">probity</font>>]
+
+/* super-bhw-o- */
+superbhwo [label=<<font color="red">super-bhw-o-</font><br/><font point-size="12">"being above"</font>>]
+superbhwo -> superbusL
+superbusL [label=<<b>Latin</b><br/><font color="red">superbus</font><br/><font point-size="12">excellent</font>>]
+superbusL -> superb [style=dashed]
+superb [label=<<b>Modern<br/>English</b><br/><font color="red">superb</font>>]
+{ rank=same dubious dubitable doubt redoubtable probe proof prove probation probity probate probable approve approbate reprobate reproof reprove superb }
+{ rank=same redoutableOF proveAN prueveOF probationOF probableOF proverOF aproverOF probiteOF } // Old French
+{ rank=same doutenME redoubtabelME reprobateME reprovenME probeME proveME probacionME probatME probableME provenME approbatenME approvenME probiteME }
+{ rank=same dubitareL dubiusL superbusL }
+{ rank=same approbareL reprobatusL }
+}

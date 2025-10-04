@@ -1,0 +1,160 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+eghsIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*eghs</font></td><td><font point-size="16">out</font></td></tr></table>> tooltip="Indo-European \"eghs\" out" shape=box peripheries=2 margin=.3]
+
+// ex, ex-
+eksIE [label=<<font color="red">*eks</font>>]
+exL [label=<<b>Latin</b><br/><font color="red">ex, ex-</font><br/><font point-size="12">out of, away from</font>>]
+exG  [label=<<b>Greek</b><br/><font color="red">ex, ek</font><br/><font point-size="12">out of, from</font>>]
+ex [label=<<b>Modern<br/>English</b><br/><font color="red">ex<br/>ex-</font>>]
+eghsIE -> eksIE -> { exL exG }
+{ exL exG } -> ex [style=dashed]
+
+// ex(o)-, ecto
+exoG [label=<<font color="red">exō</font><br/><font point-size="12">outside</font>>]
+exo [label=<<b>Modern<br/>English</b><br/><font color="red">exo-</font>>]
+exG -> exoG
+exoG -> exo [style=dashed]
+ektosG [label=<<b>Greek</b><br/><font color="red">ektos<br/>ekto-</font><br/><font point-size="12">outside</font>>]
+ecto [label=<<b>Modern<br/>English</b><br/><font color="red">ecto-</font>>]
+exG -> ektosG
+ektosG -> ecto [style=dashed]
+
+// exoteric
+exoteroG [label=<<font color="red">exōterō</font>>]
+exoterikosG [label=<<font color="red">exōterikos</font><br/><font point-size="12">external</font>>]
+exotericusL [label=<<b>Latin</b><br/><font color="red">exōtericus</font>>]
+exoteric [label=<<b>Modern<br/>English</b><br/><font color="red">exoteric</font>>]
+exoG -> exoteroG -> exoterikosG
+exoterikosG -> exotericusL -> exoteric [style=dashed]
+
+// exotic
+exotikosG [label=<<font color="red">exōtikos</font>>]
+exoticusL [label=<<b>Latin</b><br/><font color="red">exōticus</font>>]
+exotic [label=<<b>Modern<br/>English</b><br/><font color="red">exotic</font>>]
+exoG -> exotikosG
+exotikosG -> exoticusL -> exotic [style=dashed]
+
+// electuary
+leighIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*leigh-</font><br/><font point-size="12">to lick</font>> shape=box style="dashed,rounded" URL="leigh-lick.svg"]
+leikheinG [label=<<b>Greek</b><br/><font color="red">leikhein</font>>]
+ekleikheinG [label=<<font color="red">ekleikhein</font><br/><font point-size="12">to lick up</font>>]
+ekleiktonG [label=<<font color="red">ekleikton</font>>]
+electuariumL [label=<<b>Late Latin</b><br/><font color="red">ēlēctuārium</font>>]
+electuarieME [label=<<b>Middle<br/>French</b><br/><font color="red">electuarie</font>>]
+electuary [label=<<b>Modern<br/>English</b><br/><font color="red">electuary</font>>]
+leighIE -> leikheinG
+{ exG leikheinG } -> ekleikheinG -> ekleiktonG
+ekleiktonG -> electuariumL [style=dashed label="?" decorate=true]
+electuariumL -> electuarieME [style=dashed]
+electuarieME -> electuary
+
+// lekvar (see lekvar.svg)
+lekvar [label=<<b>Modern<br/>English</b><br/><font color="red">lekvar</font>> shape=box style="dashed,rounded" URL="lekvar.svg"]
+electuariumL -> lekvar [style=dashed]
+
+// synecdoche
+dekhesthaiG [label=<<b>Greek</b><br/><font color="red">dekhesthai</font><br/><font point-size="12">to take</font>>]
+ekdekhesthaiG [label=<<font color="red">ekdekhesthai</font><br/><font point-size="12">to understand</font>>]
+ksunIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ksun</font><br/><font point-size="12">with</font>> shape=box style="dashed,rounded" URL="ksun-with.svg"]
+sunG [label=<<b>Greek</b><br/><font color="red">sun-</font>>]
+sunekdekhesthaiG [label=<<font color="red">sunekdekhesthai</font><br/><font point-size="12">to take on a share of</font>>]
+sunekdokheG [label=<<font color="red">sunekdokhē</font>>]
+synecdocheL [label=<<b>Latin</b><br/><font color="red">synecdochē</font>>]
+synecdoche [label=<<b>Modern<br/>English</b><br/><font color="red">synecdoche</font>>]
+{ exG dekhesthaiG } -> ekdekhesthaiG
+ksunIE -> sunG
+{ sunG ekdekhesthaiG } -> sunekdekhesthaiG -> sunekdokheG
+sunekdokheG -> synecdocheL -> synecdoche [style=dashed]
+
+// exterior
+eksteroIE [label=<<font color="red">*eks-tero-</font>>]
+exterL [label=<<b>Latin</b><br/><font color="red">exter</font><br/><font point-size="12">outward</font>>]
+exteriorL [label=<<font color="red">exterior</font><br/><font point-size="12">farther out</font>>]
+exterior [label=<<b>Modern<br/>English</b><br/><font color="red">exterior</font>>]
+eksIE -> eksteroIE -> exterL -> exteriorL
+exteriorL -> exterior [style=dashed]
+
+// external
+externusL [label=<<font color="red">externus</font>>]
+externalME [label=<<b>Middle<br/>French</b><br/><font color="red">external</font>>]
+external [label=<<b>Modern<br/>English</b><br/><font color="red">external</font>>]
+exterL -> externusL
+externusL -> externalME [style=dashed]
+externalME -> external
+
+// extra-
+extraL [label=<<font color="red">extrā<br/>extrā-</font><br/><font point-size="12">on the outside</font>>]
+extra [label=<<b>Modern<br/>English</b><br/><font color="red">extra-</font>>]
+exterL -> extraL
+extraL -> extra [style=dashed]
+
+// extraneous
+extraneusL [label=<<font color="red">extrāneus</font><br/><font point-size="12">foreign</font>>]
+extraneous [label=<<b>Modern<br/>English</b><br/><font color="red">extraneous</font>>]
+extraL -> extraneusL
+extraneusL -> extraneous
+
+// strange
+estrangeOF [label=<<b>Old French</b><br/><font color="red">estrange</font>>]
+strangeME [label=<<b>Middle<br/>English</b><br/><font color="red">strange</font>>]
+strange [label=<<b>Modern<br/>English</b><br/><font color="red">strange</font>>]
+extraneusL -> estrangeOF
+estrangeOF -> strangeME [style=dashed]
+strangeME -> strange
+
+// estrange
+extraneareL  [label=<<font color="red">extrāneāre</font><br/><font point-size="12">to treat as a stranger</font>>]
+estrangierOF [label=<<b>Old French</b><br/><font color="red">estrangier</font>>]
+estraungenME [label=<<b>Middle<br/>English</b><br/><font color="red">estraungen</font>>]
+estrange [label=<<b>Modern<br/>English</b><br/><font color="red">estrange</font>>]
+extraneusL -> extraneareL -> estrangierOF
+estrangierOF -> estraungenME [style=dashed]
+estraungenME -> estrange
+
+// extreme
+ekstremoIE [label=<<font color="red">*eks-t(e)r-ēmo-</font>>]
+extremusL [label=<<b>Latin</b><br/><font color="red">extrēmus</font><br/><font point-size="12">outermost</font>>]
+extremeOF [label=<<b>Old French</b><br/><font color="red">extreme</font>>]
+extremeME [label=<<b>Middle<br/>English</b><br/><font color="red">extreme</font>>]
+extreme [label=<<b>Modern<br/>English</b><br/><font color="red">extreme</font>>]
+eksIE -> ekstremoIE -> extremusL -> extremeOF
+extremeOF -> extremeME [style=dashed]
+extremeME -> extreme
+
+// eschatology
+eghskoIE [label=<<font color="red">*eghs-ko-</font>>]
+eskhatosG [label=<<b>Greek</b><br/><font color="red">eskhatos</font><br/><font point-size="12">outermost, last</font>>]
+legIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*leg-</font><br/><font point-size="12">to speak</font>> shape=box style="dashed,rounded" URL="leg-speak4.svg"]
+logy [label=<<b>Modern<br/>English</b><br/><font color="red">-logy</font><br/><font point-size="12">study of</font>>]
+eschatology [label=<<b>Modern<br/>English</b><br/><font color="red">eschatology</font>>]
+eghsIE -> eghskoIE -> eskhatosG
+legIE -> logy -> eschatology
+eskhatosG -> logy [style=dashed]
+
+// samizdat
+izBS [label=<<b>Balto-Slavic</b><br/><font color="red">*iz</font>>]
+izR [label=<<b>Russian</b><br/><font color="red">iz</font>>]
+doIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dō-</font><br/><font point-size="12">to give</font>> shape=box style="dashed,rounded" URL="do-give0.svg"]
+datR [label=<<b>Russian</b><br/><font color="red">dat'</font>>]
+izdatR [label=<<font color="red">izdat'</font><br/><font point-size="12">to publish</font>>]
+semIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*sem-</font><br/><font point-size="12">one, as one</font>> shape=box style="dashed,rounded" URL="sem-one.svg"]
+samR [label=<<b>Russian</b><br/><font color="red">sam</font><br/><font point-size="12">self</font>>]
+samizdatR [label=<<font color="red">samizdat</font>>]
+samizdat [label=<<b>Modern<br/>English</b><br/><font color="red">samizdat</font>>]
+eghsIE -> izBS -> izR
+doIE -> datR
+{ izR datR } -> izdatR
+semIE -> samR
+{ samR izdatR } -> samizdatR
+samizdatR -> samizdat [style=dashed]
+
+
+
+{ rank=sink ex exo ecto exoteric exotic electuary lekvar synecdoche estrange exterior external extra strange extraneous extreme eschatology samizdat }
+{ rank=same leighIE ksunIE legIE doIE semIE }
+{ rank=same exL exG dekhesthaiG sunG exterL extremusL leikheinG eskhatosG izBS }
+{ rank=same izR datR samR }
+}

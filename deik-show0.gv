@@ -1,0 +1,49 @@
+strict digraph {
+/* sources: AHD WiS Ayto Barn */
+node [shape=none]
+deik [label=<<table border="0"><tr><td colspan="2"><font point-size="24">Indo-European</font></td></tr><tr><td><font point-size="18" color="red">*deik-, *deig-</font></td><td><font point-size="16">to show</font></td></tr></table>> tooltip="Indo-European \"*deik-, *deig-\" to show" shape=rect peripheries=2 margin=.3]
+
+gmcgk [label=<various Germanic and<br/>Greek derivatives> shape=box style="dashed,rounded" URL="deik-show1.svg"]
+dicereL [label=<<b>Latin</b><br/><font color="red">dīcere</font>> shape=box style="dashed,rounded" URL="deik-show2.svg"]
+dicareL [label=<<b>Latin</b><br/><font color="red">dīcere, dicāre</font>> shape=box style="dashed,rounded" URL="deik-show3.svg"]
+other [label=<all other Latin<br/>derivatives> shape=box style="dashed,rounded" URL="deik-show4.svg"]
+
+
+deik -> { gmcgk dicereL dicareL other } [sametail=1]
+
+/*
+deik -> {dikaa dik doig doik dig dikskos dika rank=same} [sametail=1]
+
+dikaa [label=<<font color="red">dik-ā-</font>>]
+dik [label=<<font color="red">-dik-</font>>] // agental suffix
+doig [label=<<font color="red">doig-</font>>]
+doik [label=<<font color="red">doik-</font>>]
+dig [label=<<font color="red">dig-</font>>]
+dika [label=<<font color="red">dikā-</font>>]
+dikskos [label=<<font color="red">dik-skos</font>>]
+
+{deik doig doik dikskos dika} -> gmcgk [samehead=1]
+deik -> dicereL [sametail=1]
+{dikaa dik dig} -> other [samehead=1]
+*/
+
+/* omitted: tetchy, tachism(e), dictyosome, dicast, theodicy, deixis/deictic (ling) */
+
+
+/* L dicare, index, iudex, vindex
+// <tr><td colspan="4"><b>Latin</b></td></tr>
+latin [label=<<table border="0"><tr><td port="dicare"><font color="red">dicāre</font></td><td port="index"><font color="red">index</font></td><td port="judex"><font color="red">iūdex</font></td><td port="vindex"><font color="red">vindex</font></td></tr><tr><td>to proclaim</td><td>indicator</td><td>judge</td><td>avenger</td></tr></table>> shape=box style="dashed,rounded" URL="deik-show2.svg"]
+dikaa -> latin:dicare
+dik -> {latin:index latin:judex latin:vindex}
+// in-
+enIE [label=<<font color="red">en</font>> shape=box style="dashed,rounded" URL="en-in.svg"]
+inL [label=<<b>Latin</b><br/><font color="red">in-</font>>]
+enIE -> inL -> latin:index
+// jus
+jusL [label=<<b>Latin</b><br/><font color="red">iūs</font><br/><font point-size="12">law</font>>]
+jusL -> latin:judex
+{rank=same dikeinG dicereL dikeG digitusL jusL deiknunaiG}
+{rank=same taihwo taikjan taiknam}
+*/
+
+}

@@ -1,0 +1,185 @@
+strict digraph {
+/* sources: AHD */
+	node [shape=none]
+	dwo  [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*dwo-</font><br/><font point-size="16">two</font>> shape=box style="dashed,rounded" URL="dwo-two0.svg" tooltip=""]
+
+	dwi [label=<<font color="red">*dwi-</font><br/><font point-size="12">twice</font>>] 	
+	dwo -> { dwi } [sametail=1]
+	dwi -> { dwiplo dwigha dwiko } [weight=2]
+
+
+/* 	twilight, twill */
+	twiGm [label=<<b>Germanic</b><br/><font color="red">*twi-</font>>]
+	twiOE [label=<<b>Old<br/>English</b><br/><font color="red">twi-</font>>]
+	dwi -> twiGm [minlen=2]
+	twiGm -> twiOE [sametail=1 samehead=1]
+/* ------------	
+	twibillOE [label=<<font color="red">twibill</font>>]
+	twibillME [label=<<b>Middle<br/>English</b><br/><font color="red">twibill</font>>]
+	twibill [label=<<b>Modern<br/>English</b><br/><font color="red">twibill</font><br/><font point-size="12">double-bladed axe</font>>]
+	twiOE -> twibillOE [samehead=1 sametail=1]
+	twibillOE -> twibillME -> twibill
+------------ */
+	lihtOE [label=<<b>Old<br/>English</b><br/><font color="red">līht</font>> shape=box style="dashed,rounded" URL="leuk-light.svg" tooltip="PIE *leuk-, light"]
+	twilightME [label=<<font color="red">twilight</font>>]
+	twilight [label=<<b>Modern<br/>English</b><br/><font color="red">twilight</font>>]
+	twiOE -> twilightME [sametail=1 samehead=1]
+	lihtOE -> twilightME [samehead=1]
+	twilightME -> twilight
+	twilicOE [label=<<font color="red">twilīc</font><br/><font point-size="12">[adj?]</font>>]
+	twileME [label=<<b>Middle<br/>English</b><br/><font color="red">twile</font>>]
+	twill [label=<<b>Modern<br/>English</b><br/><font color="red">twill</font>>]
+	bilixL [label=<<font color="red">bilīx</font><br/><font point-size="12">woven of<br/>double thread</font>>]
+	twiOE -> twilicOE [sametail=1 samehead=1]
+	biL -> bilixL [sametail=1]
+	bilixL -> twilicOE [samehead=1 style=dotted arrowhead=onormal label="part.\ntransl." decorate=true]
+	twilicOE -> twileME -> twill
+	
+/* zwieback, zwitterion */
+	zwiOHG [label=<<b>Old High<br/>German</b><br/><font color="red">zwi-</font><br/><font point-size="12">twice</font>>]
+	zwieG [label=<<b>German</b><br/><font color="red">zwie</font>>]
+	zwiebackG [label=<<font color="red">Zwieback</font><br/><font point-size="12">twice-baked<br/>(bread)</font>>]
+	zwieback [label=<<b>Modern<br/>English</b><br/><font color="red">zwieback</font>>]
+	twiGm -> zwiOHG [sametail=1]
+	zwiOHG -> zwieG [sametail=1]
+	zwieG-> zwiebackG
+	zwiebackG -> zwieback [style=dashed]
+	zwitarnOHG [label=<<font color="red">zwitarn</font><br/><font point-size="12">hybrid</font>>]
+	zwitterG [label=<<b>German</b><br/><font color="red">Zwitter</font>>]
+	zwitterion [label=<<b>Modern<br/>English</b><br/><font color="red">zwitterion</font><br/><font point-size="12">molecule with<br/>+ and - charges</font>>]
+//	ionG [label=<<b>Greek</b><br/><font color="red">ion</font><br/><font point-size="12">something<br/>that goes</font>> shape=box style="dashed,rounded" URL="ei-go.svg"]
+	ion [label=<<b>Modern<br/>English</b><br/><font color="red">ion</font>> shape=box style="dashed,rounded" URL="ei-go.svg" tooltip="PIE *ei-, to go"]
+	zwiOHG -> zwitarnOHG [sametail=1]
+	zwitarnOHG -> zwitterG
+//	ionG -> ion
+	{ zwitterG ion } -> zwitterion [style=dashed samehead=1]
+/* OMG omitted on both for space */
+
+	
+/* twenty */	
+//	dekm [label=<<b>Indo-<br/>European</b><br/><font color="red">*dekm̥</font><br/><font point-size="12">ten</font>> shape=box style="dashed,rounded" URL="dekm-ten.svg"]
+//	deku [label=<<font color="red">*deku-</font>>]
+	tigGm [label=<<b>Germanic</b><br/><font color="red">*-tig</font>> shape=box style="dashed,rounded" URL="dekm-ten.svg" tooltip="PIE *dekm̥, ten"]
+	twegentigGm [label=<<b>Germanic</b><br/><font color="red">*twēgentig</font><br/><font point-size="12">"twice ten"</font>>]
+//	dekm -> deku [label="?" decorate=true]
+//	deku -> tigGm [label="?" decorate=true]
+	tigGm -> twegentigGm [samehead=1]
+	dwi -> twegentigGm [samehead=1 minlen=2]
+	twentigOE [label=<<b>Old English</b><br/><font color="red">twēntig</font>>]
+	twentyME [label=<<b>Middle<br/>English</b><br/><font color="red">twenty</font>>]
+	twenty [label=<<b>Modern<br/>English</b><br/><font color="red">twenty</font>>]
+	twegentigGm -> twentigOE -> twentyME -> twenty
+
+/* twine */	
+	twiznazGm [label=<<b>Germanic</b><br/><font color="red">*twiznaz</font><br/><font point-size="12">double thread</font>>]
+	twinOE [label=<<b>Old English</b><br/><font color="red">twīn</font>>]
+	twineME [label=<<b>Middle<br/>English</b><br/><font color="red">twin</font><br/><font point-size="12">twine</font><br/><font color="red">twinen</font>>] // name changed to be unique
+	twine [label=<<b>Modern<br/>English</b><br/><font color="red">twine</font>>]
+	dwi -> twiznazGm [minlen=2]
+	twiznazGm -> twinOE -> twineME -> twine
+	
+/* between, betwixt */
+//	ambhi [label=<<b>Indo-<br/>European</b><br/><font color="red">*ambhi</font><br/><font point-size="12">around</font>> shape=box style="dashed,rounded" URL="ambhi-around.svg"]
+	biGm [label=<<b>Germanic</b><br/><font color="red">*bi-</font><br/><font point-size="12">(intensive)</font>> shape=box style="dashed,rounded" URL="ambhi-around.svg" tooltip="PIE *ambhi, around"]
+//	ambhi -> biGm
+	
+	bitwGm [label=<<b>Germanic</b><br/><font color="red">*bi-twīhna<br/>*bi-twisk</font><br/><font point-size="12">"at the middle<br/>point of two"</font>>]
+	betwOE [label=<<b>Old English</b><br/><font color="red">betwēonum<br/>betwix</font>>]
+	betwME [label=<<b>Middle<br/>English</b><br/><font color="red">bitwene<br/>bitwixt</font>>]
+	betw [label=<<b>Modern<br/>English</b><br/><font color="red">between<br/>betwixt</font>>]
+	biGm -> bitwGm [sametail=1 samehead=1]
+	dwi -> bitwGm [samehead=1 minlen=2]
+	bitwGm -> betwOE -> betwME -> betw
+
+
+/* bi- (Latin), di- (Greek) */	
+	biL [label=<<b>Latin</b><br/><font color="red">bi-</font>> shape=box style="dashed,rounded" URL="dwo-two3.svg" tooltip="Latin bi-"] // ??
+	diG [label=<<b>Greek</b><br/><font color="red">di-</font>> shape=box style="dashed,rounded" URL="dwo-two4.svg" tooltip="Greek di-"] // ??
+	dwi -> biL [minlen=2]
+	dwi -> diG [minlen=2]
+
+/* twice, twig */	
+	twiyesGm [label=<<b>Germanic</b><br/><font color="red">*twiyes</font>>]
+	twigeOE [label=<<b>Old English</b><br/><font color="red">twige, twiga</font>>]
+	twiceME [label=<<b>Middle<br/>English</b><br/><font color="red">twice</font>>]
+	twice [label=<<b>Modern<br/>English</b><br/><font color="red">twice</font>>]
+	dwi -> twiyesGm [minlen=2] // ?
+	twiyesGm -> twigeOE -> twiceME -> twice
+	dwiko [label=<<font color="red">*dwi-ko-</font>>]
+	twigaGm [label=<<b>Germanic</b><br/><font color="red">*twiga, *twigga</font><br/><font point-size="12">a fork</font>>]
+	twiggeOE [label=<<b>Old English</b><br/><font color="red">twigge</font><br/><font point-size="12">a branch</font>>]
+	twigME [label=<<b>Middle<br/>English</b><br/><font color="red">twig</font>>]
+	twig [label=<<b>Modern<br/>English</b><br/><font color="red">twig</font>>]
+	dwiko -> twigaGm -> twiggeOE -> twigME -> twig
+
+	
+	biL [label=<<b>Latin</b><br/><font color="red">bi-</font><br/><font point-size="12">two</font>>]
+	biL -> { bilanxL birotusL  } [sametail=1]
+	
+	bilanxL [label=<<font color="red">bilānx</font><br/><font point-size="12">having two<br/>scale pans</font><br/><font color="red">*bilancia</font>>]
+	balaunceOF [label=<<b>Old French</b><br/><font color="red">balaunce</font>>]
+	balaunceME [label=<<b>Middle<br/>English</b><br/><font color="red">balaunce</font>>]
+	balance [label=<<b>Modern<br/>English</b><br/><font color="red">balance</font>>]
+	bilanxL -> balaunceOF
+	balaunceOF -> balaunceME [style=dashed]
+	balaunceME -> balance
+	
+	birotusL [label=<<b>Late Latin</b><br/><font color="red">birotus</font><br/><font point-size="12">two-wheeled</font><br/><font color="red">*birotium</font>>]
+	biroccioI [label=<<b>Italian</b><br/><font color="red">biroccio</font>>]
+	barutscheG [label=<<b>German</b><br/><font color="red">Barutsche</font>>]
+	barouche [label=<<b>Modern<br/>English</b><br/><font color="red">barouche</font><br/><font point-size="12">type of<br/>carriage</font>>]
+	birotusL -> biroccioI
+	biroccioI -> barutscheG -> barouche // didn't go through French??
+	
+	biniL [label=<<b>Latin</b><br/><font color="red">bīnī</font><br/><font point-size="12">two by two</font>>]
+	bin [label=<<b>Modern<br/>English</b><br/><font color="red">bi(n)-</font>>]
+	dwi -> biniL [minlen=2]
+	biniL -> bin [sametail=1 samehead=1 style=dashed]
+	biL -> bin [style=dashed sametail=1 samehead=1]
+	
+
+	
+/* diplo-, diploid, diploma, diplodicus */
+	dwiplo [label=<<font color="red">*dwi-plo-</font><br/><font point-size="12">twofold</font>>]
+	diploosG [label=<<b>Greek</b><br/><font color="red">diploos, diplo-</font>>]
+	diplo [label=<<b>Modern<br/>English</b><br/><font color="red">diplo-<br/>diploid</font>>]
+	dwiplo -> diploosG
+	diploosG -> diplo [sametail=1 style=dashed]
+/* omitted: anadipliosis (rhetoric), diploe (anat) */
+	diplomaG [label=<<font color="red">diplōma</font><br/><font point-size="12">folded paper,<br/>document</font>>]
+	diplomaL [label=<<b>Latin</b><br/><font color="red">diplōma, diplōmat-</font><br/><font point-size="12">letter of<br/>introduction</font>>]
+	diploma [label=<<b>Modern<br/>English</b><br/><font color="red">diploma</font>>]
+	{ rank=same diploosG -> diplomaG } [sametail=1]
+	diplomaG -> diplomaL [style=dashed sametail=1]
+	diplomaL -> diploma [style=dashed sametail=1]
+	diplomaticusNL [label=<<b>New Latin</b><br/><font color="red">diplōmaticus</font>>]
+	diplomatiqueF [label=<<b>French</b><br/><font color="red">diplomatique</font>>]
+	diplomatic [label=<<b>Modern<br/>English</b><br/><font color="red">diplomatic</font>>] // diplomat backformed in French
+	diplomaL -> diplomaticusNL [style=dashed sametail=1]
+	diplomaticusNL -> diplomatiqueF -> diplomatic [style=dashed]
+	diplodocusNL [label=<<b>New Latin</b><br/><font color="red">Diplodocus</font><br/><font point-size="12">"double-beam"</font>>]
+	diplodocus [label=<<b>Modern<br/>English</b><br/><font color="red">diplodocus</font>>]
+	diploosG -> diplodocusNL [sametail=1 style=dashed]
+	diplodocusNL -> diplodocus [style=dashed]
+/* -----------	
+	dwidumo [label=<<font color="red">*dwi-du-mo-</font>>]
+	didumosG [label=<<b>Greek</b><br/><font color="red">didumos</font><br/><font point-size="12">double, twin</font><br/><font color="red">didumoi</font><br/><font point-size="12">twins, testicles</font>>]
+	didymous [label=<<b>Modern<br/>English</b><br/><font color="red">didymous<br/>didymium</font>>]
+	dwidumo -> didumosG [weight=2]
+	didumosG -> didymous [style=dashed sametail=1]
+	epiG [label=<<b>Greek</b><br/><font color="red">epi-</font><br/><font point-size="12">upon</font>> shape=box style="dashed,rounded" URL="epi-near.svg"]
+	epididumisG [label=<<font color="red">epididumis</font>>]
+	epididymis [label=<<b>Modern<br/>English</b><br/><font color="red">epididymis</font>>]
+	didumosG -> epididumisG [sametail=1 samehead=1 weight=3]
+	epiG -> epididumisG [samehead=1]
+	epididumisG -> epididymis [style=dashed]
+----------- */
+	
+	dwigha [label=<<font color="red">*dwi-gha</font>>]
+	dikhaG [label=<<b>Greek</b><br/><font color="red">dikha, dikho-</font><br/><font point-size="12">in two</font>>] // check transliteration kh or ch?
+	dicho [label=<<b>Modern<br/>English</b><br/><font color="red">dich(o)-</font>>]
+	dwigha -> dikhaG [weight=2]
+	dikhaG -> dicho [style=dashed]
+	
+	{ rank=sink twilight twill twice zwieback zwitterion twenty twine betw twig balance barouche bin diplo diploma diplomatic diplodocus dicho }
+}

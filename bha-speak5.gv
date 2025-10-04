@@ -1,0 +1,48 @@
+digraph 5 { /* Greek phone */
+    node [shape=plaintext];
+    phoneG [label=<<b>Greek</b><br/><font color="red">phōnē</font><br/><font point-size="12">voice, sound</font><br/><font color="red">phōnein</font><br/><font point-size="12">to speak</font>> shape=box style="dashed,rounded" URL="bha-speak3.svg"]; // move closer to middle
+    phoneG -> { phonemaG; phonetosG; phonoG; phoniaG; rank=same } 
+    phoneG -> { phoneE; phone; } [style=dotted]
+    phoneE [label=<<b>Modern<br/>English</b><br/><font color="red">-phone</font>>]; // add list
+    phone [label=<<b>Modern<br/>English</b><br/><font color="red">phone</font><br/><font point-size="12">(linguistics)</font>>];
+    phonoG [label=<<font color="red">phōno-</font>>];
+    phonoG -> { phonoE; phonon } [style=dotted];
+    phonoE [label=<<b>Modern<br/>English</b><br/><font color="red">phono-</font>>];
+    phonon [label=<<b>Modern<br/>English</b><br/><font color="red">phonon</font><br/><font point-size="12">(quantum physics)</font>>];
+    phoniaG [label=<<font color="red">-phōniā</font>>];
+    phoniaG -> phonyE [style=dotted];
+    phonyE [label=<<b>Modern<br/>English</b><br/><font color="red">-phony</font>>]; // list: cacophony, euphony, symphony, telephony
+    /* phoneme */
+    phonemaG [label=<<font color="red">phōnēma, phōnēmat-</font><br/><font point-size="12">utterance, sound</font>>];
+    phonemaG -> phonemeF [style=dotted];
+    phonemeF [label=<<b>French</b><br/><font color="red">phonème</font>>];
+    phonemeF -> phoneme [style=dotted];
+    phoneme [label=<<b>Modern<br/>English</b><br/><font color="red">phoneme</font><br/><font point-size="12">(linguistics)</font>>];
+    /* phonetic */
+    phonetosG [label=<<font color="red">phōnētos</font><br/><font point-size="12">to be spoken</font>>];
+    phonetosG -> phonetikosG;
+    phonetikosG [label=<<font color="red">phōnētikos</font><br/><font point-size="12">vocal</font>>];
+    phonetikosG -> phoneticusNL [style=dotted; weight=2];
+    phoneticusNL [label=<<b>New Latin</b><br/><font color="red">phōnēticus</font><br/><font point-size="12">representing<br/>speech sounds</font>>];
+    phoneticusNL -> phonetic [style=dotted];
+    phonetic [label=<<b>Modern<br/>English</b><br/><font color="red">phonetic</font>>];
+    /* anthem, antiphon */
+    { anti; phoneG } -> antiphonosG [weight=3];
+    anti [label=<<font color="red">anti-</font><br/><font point-size="12">in return</font>>]; // see ant-
+    antiphonosG [label=<<font color="red">antiphōnos</font><br/><font point-size="12">sounding in answer</font>>];
+    { rank=same; antiphonosG; phonoG; }
+    antiphonosG -> antiphonaG;
+    antiphonaG [label=<<font color="red">antiphōna</font>>];
+    antiphonaG -> antiphonaL [style=dotted];
+    antiphonaL [label=<<b>Latin</b><br/><font color="red">antiphōna</font>>];
+    antiphonaL ->  { antefnOE; antiphon } [style=dotted]
+    antefnOE [label=<<b>Old English</b><br/><font color="red">antefn</font>>];
+    antefnOE -> antemeME;
+    antemeME [label=<<b>Middle English</b><br/><font color="red">anteme</font>>];
+    antemeME -> anthem;
+    anthem [label=<<b>Modern<br/>English</b><br/><font color="red">anthem</font>>];
+    antiphon [label=<<b>Modern<br/>English</b><br/><font color="red">antiphon</font>>];
+
+    { rank=same; phoneE; phone; phoneme; phonetic; phonoE; phonyE; anthem; antiphon; phonon; }
+    /* omitted: aphonia */
+} 
