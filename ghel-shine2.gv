@@ -1,0 +1,124 @@
+strict digraph {
+node [shape=none];
+ghel [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*ghel- </font><font point-size="16">to shine, bright, yellow</font>> shape=box style="dashed,rounded" URL="ghel-shine0.svg" tooltip=""]
+
+ghel -> {rank=same ghelwo ghlto gholno gholto ghola ghloro ghelno gheli}
+/* omitted: chloasma, podzol, griseofulvin, gowan, felon2 () */
+ghelwo [label=<<font color="red">*ghel-wo-</font>>];
+ghlto [label=<<font color="red">*ghl̥-to-</font>>];
+gholno [label=<<font color="red">*ghol-no-</font>>];
+gholto [label=<<font color="red">*ghol-to-</font>>];
+ghola [label=<<font color="red">*ghol-ā-</font>>];
+ghloro [label=<<font color="red">*ghlō-ro-</font>>];
+ghelno [label=<<font color="red">*ghel-no-</font>>];
+gheli [label=<<font color="red">*ghel-i-</font>>];
+
+/* yellow, yolk */
+ghelwo -> gelwaGm -> geoluOE -> yelowME -> yellow;
+geoluOE -> geolcaOE -> yolkeME -> yolk;
+gelwaGm [label=<<b>Germanic</b><br/><font color="red">*gelwa-</font><br/><font point-size="12">yellow</font>>];
+geoluOE [label=<<b>Old English</b><br/><font color="red">geolu</font>>];
+geolcaOE [label=<<font color="red">geolca</font><br/><font point-size="12">yolk</font>>];
+yelowME [label=<<b>Middle<br/>English</b><br/><font color="red">yelow</font>>];
+yellow [label=<<b>Modern<br/>English</b><br/><font color="red">yellow</font>>];
+yolkeME [label=<<b>Middle<br/>English</b><br/><font color="red">yolke</font>>];
+yolk [label=<<b>Modern<br/>English</b><br/><font color="red">yolk</font>>];
+
+/* gold, gild, guilder */
+ghlto -> gulthGm -> {goldOE gyldanOE guldenMD}
+goldOE -> goldME -> gold
+gyldanOE -> gildenME -> gild
+guldenMD -> guilder [style=dotted]
+gulthGm [label=<<b>Germanic</b><br/><font color="red">*gulth-</font>>];
+goldOE [label=<<b>Old English</b><br/><font color="red">gold</font>>];
+goldME [label=<<b>Middle<br/>English</b><br/><font color="red">gold<br/>golden</font>>];
+gold [label=<<b>Modern<br/>English</b><br/><font color="red">gold<br/>golden</font>>];
+/* golden replaced earlier gilden */
+gyldanOE [label=<<b>Old English</b><br/><font color="red">gyldan</font>>];
+gildenME [label=<<b>Middle<br/>English</b><br/><font color="red">gilden</font>>];
+gild [label=<<b>Modern<br/>English</b><br/><font color="red">gild</font>>];
+guldenMD [label=<<b>Middle Dutch</b><br/><font color="red">gulden (florijn)</font><br/><font point-size="12">golden (florin)</font>>];
+guilder [label=<<b>Modern<br/>English</b><br/><font color="red">gulden<br/>guilder</font>>];
+
+/* gall */
+gholno -> gallonGm -> geallaOE -> gallME -> gall
+gallonGm [label=<<b>Germanic</b><br/><font color="red">*gallōn-</font><br/><font point-size="12">bile</font>>];
+geallaOE [label=<<b>Old English</b><br/><font color="red">gealla, galla</font>>];
+gallME [label=<<b>Middle<br/>English</b><br/><font color="red">gall</font>>];
+gall [label=<<b>Modern<br/>English</b><br/><font color="red">gall<br/>gall bladder</font>>];
+
+/* zloty */
+gholto -> zlotoP [label="?" decorate=true]
+zlotoP -> zlotyP [weight=2]
+zlotyP -> zloty [style=dotted weight=2]
+zlotoP [label=<<b>Polish</b><br/><font color="red">złoto</font><br/><font point-size="12">gold</font>>];
+zlotyP [label=<<font color="red">złoty</font><br/><font point-size="12">golden, zloty</font>>];
+zloty [label=<<b>Modern<br/>English</b><br/><font color="red">zloty</font>>];
+
+/* choler, etc., omitted: acholia */
+ghola -> kholeG -> melankholiaG
+kholeG -> choler [style=dotted]
+melasG -> melankholiaG
+melankholiaG -> melancholiaL [style=dotted]
+melancholiaL -> melancholiaOF
+melancholiaOF -> melancolieME [style=dotted]
+melancolieME -> melancholy
+kholeG [label=<<b>Greek</b><br/><font color="red">kholē</font><br/><font point-size="12">bile</font>>];
+melasG [label=<<font color="red">melās, melan-</font><br/><font point-size="12">black</font>>];
+melankholiaG [label=<<font color="red">melankholiā</font>>];
+melancholiaL [label=<<b>Latin</b><br/><font color="red">melancholia</font>>];
+melancholiaOF [label=<<b>Old French</b><br/><font color="red">melancholia</font>>];
+melancolieME [label=<<b>Middle<br/>English</b><br/><font color="red">melancolie</font>>];
+melancholy [label=<<b>Modern<br/>English</b><br/><font color="red">melancholy</font>>];
+choler [label=<<b>Modern<br/>English</b><br/><font color="red">choler<br/>cholera<br/>cholesterol</font>>];
+
+/* chlorine */
+ghloro -> khlorosG -> chlorine;
+khlorosG [label=<<b>Greek</b><br/><font color="red">khlōros</font><br/><font point-size="12">greenish yellow</font>>];
+chlorine [label=<<b>Modern<br/>English</b><br/><font color="red">chloro-<br/>chlorine</font>>];
+/* chlorophyll < khloros; chloroform < chlorine */
+
+/* arsenic, v1 */
+ghelno -> zarnaOI -> zarnikMI -> zarnikaSy 
+zarnikaSy -> arsenikonG -> arsenicumL [style=dotted]
+arsenicumL -> arsenikOF
+arsenikOF -> arsenikME [style=dotted]
+arsenikME -> arsenic
+zarnaOI [label=<<b>Old Iranian</b><br/><font color="red">zarna-</font><br/><font point-size="12">golden</font>>];
+zarnikMI [label=<<b>Middle<br/>Iranian</b><br/><font color="red">zarnik-</font>>];
+zarnikaSy [label=<<b>Syriac</b><br/><font color="red">zarnīkā</font><br/><font point-size="12">arsenic trisulphide</font>>];
+/* means "orpiment," a yellow pigment containing arsenic; orpiment < L aurum */
+arsenikonG [label=<<b>Greek</b><br/><font color="red">arsenikon</font>>];
+arsenicumL [label=<<b>Latin</b><br/><font color="red">arsenicum</font>>];
+arsenikOF [label=<<b>Old French</b><br/><font color="red">arsenik</font>>];
+arsenikME [label=<<b>Middle<br/>English</b><br/><font color="red">arsenik</font>>];
+arsenic [label=<<b>Modern<br/>English</b><br/><font color="red">arsenic</font>>];
+/* arsenic v2 */
+ghel -> zarP [label="?" decorate=true]
+zarP -> zarnikP
+zarnikP -> zernikhA -> arrenikonG -> arsenicumL [style=dotted]
+/* z became r from association with Gk "arrēn" (male, virile) */
+/* element isolated and named early 19th C */
+zarP [label=<<b>Persian</b><br/><font color="red">zar</font><br/><font point-size="12">gold (color?)</font>>];
+zarnikP [label=<<font color="red">Persian</font><br/><font point-size="12">zarnīk</font>>];
+zernikhA [label=<<font color="green"><b>Arabic</b></font><br/><font color="red">zernīkh</font><br/><font point-size="12">arsenic trisulphide</font><br/><font color="red">azzernīkh</font><br/><font point-size="12">the arsenic trisulfide</font>>];
+arrenikonG [label=<<b>Greek</b><br/><font color="red">arrenikon<br/>arsenikon</font>>];
+
+/* Hare Krishna, Harijan */
+gheli -> hariS -> harih -> {harekrishnaS harijanS}
+harekrishnaS -> harekrishna [style=dotted]
+harijanS -> harijan [style=dotted]
+hariS [label=<<b>Sanskrit</b><br/><font color="red">hari-</font><br/><font point-size="12">yellow-green</font>>];
+harih [label=<<font color="red">Hariḥ</font><br/><font point-size="12">a name of Vishnu</font><br/><font color="red">Hare</font><br/><font point-size="12">(direct address form)</font>>];
+harekrishnaS [label=<<font color="red">Hare Krishna</font><br/><font point-size="12">a chant to the god Vishnu<br/>(Krishna is one of his avatars)</font>>]; // Krishna=black
+harekrishna [label=<<b>Modern<br/>English</b><br/><font color="red">Hare Krishna</font><br/><font point-size="12">(religious group)</font>>];
+harijanS [label=<<font color="red">harijanaḥ</font><br/><font point-size="12">"child of god,"<br/>Untouchable</font>>];
+/* coined by Mahatma Gandhi in 1931 */
+harijan [label=<<b>Modern<br/>English</b><br/><font color="red">Harijan</font>>];
+gene -> janahS -> harijanS
+gene [label=<<b>Indo-<br/>European</b><br/><font color="red">*genə-</font><br/><font point-size="12">to give birth, beget</font>> shape=box style="dashed,rounded" URL="gen-birth1.svg"]
+janahS [label=<<b>Sanskrit</b><br/><font color="red">janaḥ</font><br/><font point-size="12">offspring</font>>]
+
+
+subgraph Eng {rank=sink yellow yolk gold gild guilder zloty gall chlorine choler melancholy arsenic harekrishna harijan}
+}

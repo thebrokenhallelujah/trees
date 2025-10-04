@@ -1,0 +1,137 @@
+strict digraph {
+/* sources: */
+node [shape=none]
+
+kwetwer [label=<<font point-size="24"><b>Indo-<br/>European</b></font><br/><font color="red" point-size="18">kʷetwer-</font><br/><font point-size="16">four</font>> shape=box style="dashed,rounded" URL="kwetwer-four0.svg" tooltip=""]
+kwetwor [label=<<font color="red">kʷetwor-</font>>]
+kweturto [label=<<font color="red">kʷetur-to-</font><br/><font point-size="12">fourth</font>>]
+kwetwer -> { kwetwor kweturto } [sametail=1]
+kwetwor -> cathwaroOI [sametail=1]
+
+
+/* dekm */
+dekmIE [label=<<b>Indo-<br/>European</b><br/><font color="red">dekm̥</font><br/><font point-size="12">ten</font>> shape=box style="dashed,rounded" URL="dekm-ten.svg"] // not made
+tehunGm [label=<<b>Germanic</b><br/><font color="red">tehun</font>>]
+teneOE [label=<<b>Old English</b><br/><font color="red">-tēne, -tīne, -tȳne</font>>]
+dekmIE -> tehunGm [sametail=1]
+tehunGm -> teneOE [sametail=1]
+kmtomIE [label=<<font color="red">dkm̥-tom, km̥tom</font><br/><font point-size="12">hundred</font>>]
+centumL [label=<<b>Latin</b><br/><font color="red">centum</font>>]
+centoI [label=<<b>Italian</b><br/><font color="red">cento</font>>]
+dekmIE -> kmtomIE [sametail=1]
+kmtomIE -> centumL -> centoI
+// kontaIE [label=<<font color="red">-dkōm-tā̆, -kontā̆</font>>]
+// gintaL [label=<<b>Latin</b><br/><font color="red">-gintā</font><br/><font point-size="12">ten times</font>>]
+// dekmIE -> kontaIE [sametail=1]
+// kontaIE -> gintaL
+
+/* English */
+fimfGm [label=<<b>Germanic</b><br/><font color="red">fimf</font><br/><font point-size="12">five</font>>]
+fedworGm [label=<<b>Germanic</b><br/><font color="red">fe(d)wor-</font>>]
+feowerOE [label=<<b>Old English</b><br/><font color="red">fēower</font>>]
+fourME [label=<<b>Middle<br/>English</b><br/><font color="red">four</font>>]
+four [label=<<b>Modern<br/>English</b><br/><font color="red">four</font>>]
+kwetwor -> fedworGm [sametail=1 samehead=1]
+fimfGm -> fedworGm [samehead=1 arrowhead=onormal style=dotted]
+fedworGm -> feowerOE [sametail=1]
+feowerOE -> fourME [sametail=1]
+fourME -> four
+feowertigOE [label=<<font color="red">fēowertig</font><br/><font point-size="12">forty</font>>]
+fortyME [label=<<b>Middle<br/>English</b><br/><font color="red">forty</font>>]
+forty [label=<<b>Modern<br/>English</b><br/><font color="red">forty</font>>]
+feowerOE -> feowertigOE [sametail=1]
+feowertigOE -> fortyME -> forty
+feowerteneOE [label=<<font color="red">fēowertēne</font><br/><font point-size="12">fourteen</font>>]
+fourteneME [label=<<b>Middle<br/>English</b><br/><font color="red">fourtene</font>>]
+fourteen [label=<<b>Modern<br/>English</b><br/><font color="red">fourteen</font>>]
+feowerOE -> feowerteneOE [sametail=1 samehead=1]
+teneOE -> feowerteneOE [samehead=1]
+feowerteneOE -> fourteneME
+fourteneME -> fourteen [sametail=1]
+fourtenenight [label=<<font color="red">fourtene night</font><br/><font point-size="12">fourteen nights</font>>]
+fortnight [label=<<b>Modern<br/>English</b><br/><font color="red">fortnight</font>>]
+fourteneME -> fourtenenight [sametail=1]
+fourtenenight -> fortnight
+
+/* Latin */
+quattuorL [label=<<b>Latin</b><br/><font color="red">quattuor</font>>]
+quatreOF [label=<<b>Old French</b><br/><font color="red">quatre<br/>catre</font>>]
+quatrainF [label=<<b>French</b><br/><font color="red">quatrain</font><br/><font point-size="12">four-line poem</font>>]
+quatrain [label=<<b>Modern<br/>English</b><br/><font color="red">quatrain</font>>]
+kwetwor -> quattuorL [sametail=1]
+quattuorL -> quatreOF [sametail=1]
+quatreOF -> quatrainF [sametail=1]
+quatrainF -> quatrain [style=dashed]
+/* omitted: quattrocento (art period), quattuordecillion, quatrefoil */
+caterME [label=<<b>Middle<br/>English</b><br/><font color="red">cater</font><br/><font point-size="12">four at dice</font>>]
+/* survived into ModE but obsolete */
+catercorner [label=<<b>Modern<br/>English</b><br/><font color="red">catercorner(ed)<br/>cattycorner(ed)<br/>kittycorner(ed)</font>>]
+quatreOF -> caterME [style=dashed sametail=1]
+caterME -> catercorner
+quattroI [label=<<b>Italian</b><br/><font color="red">quattro</font>>]
+milquattrocento [label=<<font color="red">mil quattrocento</font><br/><font point-size="12">1400</font>>]
+quattrocento [label=<<b>Modern<br/>English</b><br/><font color="red">quattrocento</font><br/><font point-size="12">15th C in Italian<br/>art and literature</font>>]
+quattuorL -> quattroI [sametail=1]
+{ quattroI centoI } -> milquattrocento [samehead=1]
+milquattrocento -> quattrocento [style=dashed]
+
+/* czardas */
+subgraph cluster_cz {
+style="rounded,dashed"
+node [URL="czardas.svg"]
+cathwaroOI [label=<<b>Old Iranian</b><br/><font color="red">cathwārō</font>> URL="czardas.svg"] // not sure why this didn't inherit the URL
+taqAr [label=<<font color="green"><b>Arabic</b></font><br/><font color="red">ṭāq</font><br/><font point-size="12">arch</font>>]
+chartaqP [label=<<b>Persian</b><br/><font color="red">chahār ṭāq<br/>chār ṭāq</font>>]
+cardakT [label=<<font color="green"><b>Turkish</b></font><br/><font color="red">çardak</font><br/><font point-size="12">hut, trellis</font>>]
+cardakSC [label=<<b>Serbo-Croatian</b><br/><font color="red">čardāk</font><br/><font point-size="12">watchtower</font>>]
+csardasH [label=<<font color="green"><b>Hungarian</b></font><br/><font color="red">csárdás</font><br/><font point-size="12">style of dance<br/>and music</font>>]
+czardas [label=<<b>Modern<br/>English</b><br/><font color="red">czardas</font>>]
+cathwaroOI -> chartaqP [samehead=1]
+taqAr -> chartaqP [style=dashed samehead=1]
+chartaqP -> cardakT -> cardakSC -> csardasH -> czardas [style=dashed]
+{ rank=same cathwaroOI -> taqAr [style=invis] }
+{ rank=sink czardas }
+}
+
+/*
+/* fourth, farthing */
+// omitted: firkin (unit, Du)
+fedworthonGm [label=<<b>Germanic</b><br/><font color="red">fe(d)worthōn-</font>>]
+feorthaOE [label=<<b>Old English</b><br/><font color="red">fēortha</font>>]
+fourtheME [label=<<b>Middle<br/>English</b><br/><font color="red">fourthe</font>>]
+fourth [label=<<b>Modern<br/>English</b><br/><font color="red">fourth</font>>]
+kweturto -> fedworthonGm 
+fedworthonGm -> feorthaOE [sametail=1]
+feorthaOE -> fourtheME -> fourth
+feorthungOE [label=<<b>Old English</b><br/><font color="red">fēorthung</font>>]
+ferthingME [label=<<b>Middle<br/>English</b><br/><font color="red">ferthing</font>>]
+farthing [label=<<b>Modern<br/>English</b><br/><font color="red">farthing</font>>]
+fedworthonGm -> feorthungOE [sametail=1]
+feorthungOE -> ferthingME -> farthing
+
+/* quartus */
+// omitted: quadrille (cards), quadroon, quartan (fever), quarto (page)
+quartusL [label=<<b>Latin</b><br/><font color="red">quārtus, quārta</font>>]
+kweturto -> quartusL
+quarteOF [label=<<b>Old French</b><br/><font color="red">quarte</font>>]
+quartME [label=<<b>Middle<br/>English</b><br/><font color="red">quart</font>>]
+quart [label=<<b>Modern<br/>English</b><br/><font color="red">quart</font>>]
+quartusL -> quarteOF [sametail=1]
+quarteOF -> quartME [style=dashed]
+quartME -> quart
+quartariusL [label=<<b>Latin</b><br/><font color="red">quārtārius</font>>]
+quartierOF [label=<<b>Old French</b><br/><font color="red">quartier</font>>]
+quarterME [label=<<b>Middle<br/>English</b><br/><font color="red">quarter</font>>]
+quarter [label=<<b>Modern<br/>English</b><br/><font color="red">quarter</font>>]
+quartusL -> quartariusL [sametail=1]
+quartariusL -> quartierOF
+quartierOF -> quarterME [style=dashed]
+quarterME -> quarter
+/*
+ 
+{ rank=sink four forty fourteen fortnight quatrain catercorner quattrocento } // fourth farthing quart quarter }
+{ rank=source kwetwer dekmIE }
+{ rank=same fourteneME fortyME fourME caterME quattroI centoI }
+{ rank=same fedworGm tehunGm centumL quattuorL fedworthonGm }
+
+}

@@ -1,0 +1,53 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+gwen [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*gʷen-</font></td><td><font point-size="16">woman</font></td></tr></table>> tooltip="Indo-European \"*gʷen-\" woman" shape=box peripheries=2 margin=.3]
+
+// quean
+gwena [label=<<font color="red">*gʷen-ā-</font>>]
+kwenonGc [label=<<b>Germanic</b><br/><font color="red">*kwenōn-</font>>]
+cweneOE [label=<<b>Old English</b><br/><font color="red">cwene</font><br/><font point-size="12">woman, wife,<br/>prostitute</font>>]
+quene1ME [label=<<b>Middle<br/>English</b><br/><font color="red">quene</font>>]
+quean [label=<<b>Modern<br/>English</b><br/><font color="red">quean</font>>]
+gwen -> gwena -> kwenonGc -> cweneOE -> quene1ME -> quean
+
+// queen
+gweni [label=<<font color="red">*gʷēn-i-</font>>]
+kwenizGc [label=<<b>Germanic</b><br/><font color="red">*kwēniz</font>>]
+cwenOE [label=<<b>Old English</b><br/><font color="red">cwēn</font><br/><font point-size="12">woman, wife,<br/>queen</font>>]
+quene2ME [label=<<b>Middle<br/>English</b><br/><font color="red">quene</font>>]
+queen [label=<<b>Modern<br/>English</b><br/><font color="red">queen</font>>]
+gwen -> gweni -> kwenizGc -> cwenOE -> quene2ME -> queen
+
+// banshee
+benOI [label=<<b>Old Irish</b><br/><font color="red">ben</font>>]
+beanI [label=<<b>Irish Gaelic</b><br/><font color="red">bean</font>>]
+sedIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*sed-</font><br/><font point-size="12">to sit</font>> shape=box style="dashed,rounded" URL="sed-sit.svg"]
+sideOI [label=<<b>Old Irish</b><br/><font color="red">síde</font><br/><font point-size="12">fairy mound</font>>]
+sidheI [label=<<b>Irish Gaelic</b><br/><font color="red">sídhe</font><br/><font point-size="12">fairy</font>>]
+beansidheI [label=<<font color="red">bean sídhe</font><br/><font point-size="12">"woman of the<br/>fairies," banshee</font>>]
+banshee [label=<<b>Modern<br/>English</b><br/><font color="red">banshee</font>>]
+gwena -> benOI -> beanI
+sedIE -> sideOI -> sidheI
+{ beanI sidheI } -> beansidheI
+beansidheI -> banshee [style=dashed]
+
+// zenana
+zanP [label=<<b>Persian</b><br/><font color="red">zan</font>>]
+zenanaP [label=<<font color="red">zenāna</font>>]
+zenanaH [label=<<b>Hindi</b><br/><font color="red">zenāna</font>>]
+zenana [label=<<b>Modern<br/>English</b><br/><font color="red">zenana</font>>]
+gwena -> zanP -> zenanaP
+zenanaP -> zenanaH -> zenana [style=dashed]
+
+// -gyne, gyneco-, gyno-, -gynous, -gyny
+gwna [label=<<font color="red">*gʷn̥-ā-</font>>]
+guneGk [label=<<b>Greek</b><br/><font color="red">gunē, gunaik-</font>>]
+gyne [label=<<b>Modern<br/>English</b><br/><font color="red">-gyne<br/>gyneco-<br/>gyno-<br/>-gynous<br/>-gyny</font>>]
+gwen -> gwna -> guneGk
+guneGk -> gyne [style=dashed]
+
+{ rank=sink quean queen banshee zenana gyne }
+{ rank=same sedIE gwena gweni gwna }
+}

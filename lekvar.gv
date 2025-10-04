@@ -1,0 +1,16 @@
+strict digraph {
+node [shape=none]
+
+eghsIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*eghs </font><font point-size="16">out</font>> shape=box style="dashed,rounded" URL="eghs-out.svg" tooltip="Indo-European \"*eghs\" out"]
+leighIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*leigh- </font><font point-size="16">to lick</font>> shape=box style="dashed,rounded" URL="leigh-lick.svg" tooltip="Indo-European \"*leigh-\" to lick"]
+electuariumL [label=<<b>Late Latin</b><br/><font color="red">ēlēctuārium</font><br/><font point-size="12">electuary</font>>]
+{ eghsIE leighIE } -> electuariumL
+
+leituaireOF [label=<<b>Old French</b><br/><font color="red">leituaire</font>>]
+lactwarjeMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">lactwārje, latwērge</font>>]
+lektvarCz [label=<<b>Czech</b><br/><font color="red">lektvar</font>>]
+lekvarSl [label=<<b>Slovak</b><br/><font color="red">lékvar</font><br/><font point-size="12">jam</font>>]
+lekvarH [label=<<font color="green"><b>Hungarian</b></font><br/><font color="red">lékvar</font>>]
+lekvar [label=<<b>Modern<br/>English</b><br/><font color="red">lekvar</font>>]
+electuariumL -> leituaireOF -> lactwarjeMHG -> lektvarCz -> lekvarSl -> lekvarH -> lekvar [style=dashed]
+}

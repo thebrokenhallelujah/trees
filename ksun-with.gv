@@ -1,0 +1,37 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+ksun [label=<<table border="0"><tr><td colspan="2"><font point-size="24">Indo-European</font></td></tr><tr><td><font point-size="18" color="red">ksun</font></td><td><font point-size="16">with</font><br/><font point-size="12">(preposition<br/>and preverb)</font></td></tr></table>> tooltip="Indo-European \"ksun\" with" shape=rect peripheries=2 margin=.3]
+// not satisfied with that label
+ksun -> sunIE
+sunIE [label=<<font color="red">su(n)-</font>>]
+pent [label=<<b>Indo-<br/>European</b><br/><font color="red">pent-</font><br/><font point-size="12">to tread, go</font>> shape=box style="dashed,rounded" URL="pent-tread.svg"]
+
+/* syn- (prefix in Gk?): list */
+sunG [label=<<b>Greek</b><br/><font color="red">sun, xun</font><br/><font point-size="12">with, together</font><br/><font color="red">sun-</font>>]
+synE [label=<<b>Modern<br/>English</b><br/><font color="red">syn-, sym-</font>>]
+ksun -> sunG
+sunG -> synE [style=dotted]
+
+/* soviet, sputnik */
+sunOR [label=<<b>Old Russian</b><br/><font color="red">sŭ(n)-</font><br/><font point-size="12">with, together</font>>]
+suvetuOR [label=<<font color="red">sŭvětŭ</font><br/><font point-size="12">council</font>>]
+sovetR [label=<<b>Russian</b><br/><font color="red">sovet</font>>]
+soviet [label=<<b>Modern<br/>English</b><br/><font color="red">Soviet</font>>]
+sunIE -> sunOR -> suvetuOR -> sovetR
+sovetR -> soviet [style=dotted]
+soR [label=<<b>Russian</b><br/><font color="red">s(o)-</font>>]
+putR [label=<<b>Russian</b><br/><font color="red">put’</font><br/><font point-size="12">path, way</font>>]
+sputnikR [label=<<font color="red">sputnik (zemli)</font><br/><font point-size="12">fellow traveler<br/>(of Earth)</font>>]
+sputnik [label=<<b>Modern<br/>English</b><br/><font color="red">Sputnik</font>>]
+sunOR -> soR -> sputnikR
+pent -> putR // [len=3]
+putR -> sputnikR
+sputnikR -> sputnik [style=dotted]
+
+{rank=same synE soviet sputnik}
+{rank=same sunG sunOR}
+{rank=same sovetR soR putR}
+{rank=same sunIE pent}
+}
+

@@ -1,0 +1,84 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+gno [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*gnō- </font><font point-size="16">to know</font>> shape=box style="dashed,rounded" URL="gno-know0.svg" tooltip="Indo-European \"*gnō-\" to know"]
+
+
+// know
+gnee [label=<<font color="red">*gnē-</font>>]
+knewGc [label=<<b>Germanic</b><br/><font color="red">*knē(w)-</font>>]
+cnawanOE [label=<<b>Old English</b><br/><font color="red">cnāwan</font>>]
+knouenME [label=<<b>Middle<br/>English</b><br/><font color="red">knouen</font>>]
+know [label=<<b>Modern<br/>English</b><br/><font color="red">know</font>>]
+gno -> gnee -> knewGc -> cnawanOE -> knouenME -> know
+
+// knowledge
+knoulechME [label=<<font color="red">knoulech</font>>]
+knowledge [label=<<b>Modern<br/>English</b><br/><font color="red">knowledge</font>>]
+knouenME -> knoulechME -> knowledge
+
+// acknowledge
+oncnawanOE [label=<<font color="red">oncnāwan</font>>]
+aknouenME [label=<<b>Middle<br/>English</b><br/><font color="red">aknouen</font><br/><font point-size="12">to recognize</font>>]
+knowlechenME [label=<<font color="red">knowlechen</font><br/><font point-size="12">to acknowledge</font>>]
+acknowledge [label=<<b>Modern<br/>English</b><br/><font color="red">acknowledge</font>>]
+cnawanOE -> oncnawanOE -> aknouenME
+knouenME -> knowlechenME
+{ aknouenME knowlechenME } -> acknowledge
+
+// can (be able)
+gne [label=<<font color="red">*gn̥ə-</font>>]
+kunnanGc [label=<<b>Germanic</b><br/><font color="red">*kunnan</font>>]
+cunnanOE[label=<<b>Old English</b><br/><font color="red">cunnan</font><br/><font point-size="12">to know how</font>>]
+connenME [label=<<b>Middle<br/>English</b><br/><font color="red">connen</font>>]
+canME [label=<<font color="red">can</font>>]
+can [label=<<b>Modern<br/>English</b><br/><font color="red">can</font><br/><font point-size="12">be able</font>>]
+gno -> gne -> kunnanGc -> cunnanOE -> connenME -> canME -> can
+
+// con
+con [label=<<b>Modern<br/>English</b><br/><font color="red">con</font><br/><font point-size="12">to study, learn</font>>]
+connenME -> con
+
+// cunning
+cunningME [label=<<font color="red">cunning</font><br/><font point-size="12">knowing</font>>]
+cunning [label=<<b>Modern<br/>English</b><br/><font color="red">cunning</font>>]
+connenME -> cunningME -> cunning
+
+// ken
+kannjanGc [label=<<b>Germanic</b><br/><font color="red">*kannjan</font><br/><font point-size="12">to make known</font>>]
+cennanOE [label=<<b>Old English</b><br/><font color="red">cennan</font><br/><font point-size="12">to declare</font>>]
+kennenME [label=<<b>Middle<br/>English</b><br/><font color="red">kennen</font>>]
+ken [label=<<b>Modern<br/>English</b><br/><font color="red">ken</font>>]
+gne -> kannjanGc -> cennanOE -> kennenME -> ken
+
+// kenning
+kennaON [label=<<b>Old Norse</b><br/><font color="red">kenna</font>>]
+kenningON [label=<<font color="red">kenning</font>>]
+kenning [label=<<b>Modern<br/>English</b><br/><font color="red">kenning</font>>]
+kannjanGc -> kennaON -> kenningON
+kenningON -> kenning [style=dashed]
+
+// uncouth, couth
+kunthaGc [label=<<b>Germanic</b><br/><font color="red">*kuntha-</font>>]
+cuthOE [label=<<b>Old English</b><br/><font color="red">cūth</font><br/><font point-size="12">known, familiar</font>>]
+neIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ne</font><br/><font point-size="12">not</font>> shape=box style="dashed,rounded" URL="ne-not3.svg"]
+unOE [label=<<b>Old English</b><br/><font color="red">un-</font>>]
+uncuthOE [label=<<font color="red">uncūth</font>>]
+uncouthME [label=<<b>Middle<br/>English</b><br/><font color="red">uncouth</font>>]
+uncouth [label=<<b>Modern<br/>English</b><br/><font color="red">uncouth</font>>]
+couth [label=<<b>Modern<br/>English</b><br/><font color="red">couth</font>>]
+gne -> kunthaGc -> cuthOE
+neIE -> unOE 
+{ unOE cuthOE } -> uncuthOE -> uncouthME -> uncouth -> couth
+
+// kith and kin
+kunthithoGc [label=<<b>Germanic</b><br/><font color="red">*kunthithō</font>>]
+cythOE [label=<<b>Old English</b><br/><font color="red">cȳth(the), cȳththu</font><br/><font point-size="12">knowledge, acquaintance,<br/>friendship, kinsfolk</font>>]
+kithME [label=<<b>Middle<br/>English</b><br/><font color="red">kith</font>>]
+kith [label=<<b>Modern<br/>English</b><br/><font color="red">kith (and kin)</font>>]
+gne -> kunthithoGc -> cythOE -> kithME -> kith
+
+{ rank=sink know knowledge acknowledge can con cunning ken kenning uncouth couth kith }
+{ rank=same gnee gne neIE}
+}

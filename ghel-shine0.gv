@@ -1,0 +1,10 @@
+strict digraph {
+node [shape=none]
+
+ghel [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ghel-</font></td><td><font point-size="16">to shine, (something) bright, yellow</font></td></tr></table>> tooltip="Indo-European \"*ghel-\" shine, bright, yellow" shape=box peripheries=2 margin=.3]
+
+gl [label=<<font color="red">*gl-</font>> shape=box style="dashed,rounded" URL="ghel-shine1.svg" tooltip=""]
+ghol [label=<suffixed forms> shape=box style="dashed,rounded" URL="ghel-shine2.svg" tooltip=""]
+ghel -> { gl ghol }
+
+}

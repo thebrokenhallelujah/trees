@@ -1,0 +1,126 @@
+strict digraph {
+/* sources: */
+node [shape=none]
+
+kwetwer [label=<<font point-size="24"><b>Indo-<br/>European</b></font><br/><font color="red" point-size="18">kʷetwer-</font><br/><font point-size="16">four</font>> shape=box style="dashed,rounded" URL="kwetwer-four0.svg" tooltip=""]
+kweturs [label=<<font color="red">kʷeturs, kʷetrus<br/>kʷetur-, kʷetru-</font>>]
+kwetwer -> kweturs
+
+// omitted: quadrille (square dance), escadrille, quadricentenary [related to L centum?]
+
+
+/* dekm */
+dekmIE [label=<<b>Indo-<br/>European</b><br/><font color="red">dekm̥</font><br/><font point-size="12">ten</font>> shape=box style="dashed,rounded" URL="dekm-ten.svg"] // not made
+kontaIE [label=<<font color="red">-dkōm-tā̆, -kontā̆</font>>]
+gintaL [label=<<b>Latin</b><br/><font color="red">-gintā</font><br/><font point-size="12">ten times</font>>]
+dekmIE -> kontaIE [sametail=1]
+kontaIE -> gintaL
+
+/* quadri-, quadr-, quadra-, quadru- */
+quadriL [label=<<b>Latin</b><br/><font color="red">quadri-</font>>]
+quadri [label=<<b>Modern<br/>English</b><br/><font color="red">quadr(i)-</font>>]
+kweturs -> quadriL [sametail=1]
+quadriL -> quadri [sametail=1 style=dashed]
+
+/* quarry, quarrel */
+quadrumL [label=<<b>Latin</b><br/><font color="red">quadrum<br/>quadrus</font><br/><font point-size="12">square</font>>] // why masc & neut?
+quarreOF [label=<<b>Old French</b><br/><font color="red">quarre</font><br/><font point-size="12">cut stone</font>>] // Vulgar
+quarriereOF [label=<<font color="red">quarriere</font>>] // quarry?
+quareiaL [label=<<b>Latin</b><br/><font color="red">quareria<br/>quareia</font>>]
+quareyME [label=<<b>Middle<br/>English</b><br/><font color="red">quarey</font>>]
+quarry [label=<<b>Modern<br/>English</b><br/><font color="red">quarry</font><br/><font point-size="12">stone pit</font>>]
+kweturs -> quadrumL [sametail=1]
+quadrumL -> quarreOF [sametail=1]
+quarreOF -> quarriereOF
+quarriereOF -> quareiaL -> quareyME [style=dashed]
+quareyME -> quarry
+quadrellusL [label=<<font color="red">quadrellus</font>>] // Vulgar
+quarelOF [label=<<b>Old French</b><br/><font color="red">quarel</font>>]
+quarelME [label=<<b>Middle<br/>English</b><br/><font color="red">quarel</font>>]
+quarrel [label=<<b>Modern<br/>English</b><br/><font color="red">quarrel</font><br/><font point-size="12">crossbow bolt</font>>]
+quadrumL -> quadrellusL [sametail=1]
+quadrellusL -> quarelOF
+quarelOF -> quarelME [style=dashed]
+quarelME -> quarrel
+
+/* quadrate, quadrat */
+quadrareL [label=<<font color="red">quadrāre</font><br/><font point-size="12">to make square</font><br/><font color="red">quadrātum</font>>]
+quadratME [label=<<b>Middle<br/>English</b><br/><font color="red">quadrat</font>>]
+quadrate [label=<<b>Modern<br/>English</b><br/><font color="red">quadrate<br/>quadrat</font>>]
+quadrumL -> quadrareL [sametail=1]
+quadrareL -> quadratME [style=dashed sametail=1]
+quadratME -> quadrate
+
+/* cadre */
+quadroI [label=<<b>Italian</b><br/><font color="red">quadro</font><br/><font point-size="12">frame</font>>]
+cadreF [label=<<b>French</b><br/><font color="red">cadre</font>>]
+cadre [label=<<b>Modern<br/>English</b><br/><font color="red">cadre</font>>] 
+quadrumL -> quadroI [sametail=1]
+quadroI -> cadreF -> cadre [style=dashed weight=2]
+
+/* square, squad */
+eghsIE [label=<<b>Indo-<br/>European</b><br/><font color="red">eghs</font><br/><font point-size="12">out</font>> shape=box style="dashed,rounded" URL="eghs-out.svg"]
+exL [label=<<b>Latin</b><br/><font color="red">ex-</font><br/><font point-size="12">out of,<br/>away from</font>>]
+eghsIE -> exL
+exquadraL  [label=<<font color="red">exquadrāre</font><br/><font point-size="12">to square</font><br/><font color="red">exquadra</font><br/><font point-size="12">a square</font>>] // check defs? both unattested
+exL -> exquadraL [samehead=1]
+quadrareL -> exquadraL [sametail=1 samehead=1]
+esquarreOF [label=<<b>Old French</b><br/><font color="red">esquarre</font>>]
+squareME [label=<<b>Middle<br/>English</b><br/><font color="red">square</font>>]
+square [label=<<b>Modern<br/>English</b><br/><font color="red">square</font>>]
+exquadraL -> esquarreOF [sametail=1]
+esquarreOF -> squareME [style=dashed]
+squareME -> square
+escuadraOS [label=<<b>Old Spanish</b><br/><font color="red">escuadra</font>>] // also Old Italian "squadra" (add if there's room for a diamond)
+escadreOF [label=<<b>Old French</b><br/><font color="red">escadre</font>>]
+esquadeF [label=<<b>French</b><br/>(obsolete)<br/><font color="red">esquade</font>>]
+squad [label=<<b>Modern<br/>English</b><br/><font color="red">squad</font>>]
+exquadraL -> escuadraOS
+escuadraOS -> escadreOF [style=dashed]
+escadreOF -> esquadeF
+esquadeF -> squad [style=dashed]
+
+/* trocar */
+treiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">trei-</font><br/><font point-size="12">three</font>> shape=box style="dashed,rounded" URL="trei-three.svg"]
+tresL [label=<<b>Latin</b><br/><font color="red">trēs</font>>]
+troisOF [label=<<b>Old French</b><br/><font color="red">trois</font>>]
+troisF [label=<<b>French</b><br/><font color="red">trois</font>>]
+treiIE -> tresL -> troisOF -> troisF
+carrerOF [label=<<b>Old French</b><br/><font color="red">carrer</font>>]
+carreF [label=<<b>French</b><br/><font color="red">carre</font><br/><font point-size="12">side of an<br/>instrument</font>>]
+quadrareL -> carrerOF [sametail=1]
+carrerOF -> carreF
+trocartF [label=<<font color="red">trocart</font>>]
+trocar [label=<<b>Modern<br/>English</b><br/><font color="red">trocar</font><br/><font point-size="12">a surgical<br/>instrument</font>>]
+{ troisF carreF } -> trocartF [samehead=1]
+trocartF -> trocar [style=dashed]
+
+/* quadrant */
+quadransL [label=<<b>Latin</b><br/><font color="red">quadrāns, quadrant-</font>>] // "a fourth part"
+quadrantME [label=<<b>Middle<br/>English</b><br/><font color="red">quadrant</font><br/><font point-size="12">quarter of a day</font>>]
+quadrant [label=<<b>Modern<br/>English</b><br/><font color="red">quadrant</font>>]
+kweturs -> quadransL [sametail=1]
+quadransL -> quadrantME [style=dashed]
+quadrantME -> quadrant [weight=2]
+
+/* quarantine */
+quadragintaL [label=<<font color="red">quadrāgintā</font><br/><font point-size="12">forty</font>>]
+quadriL -> quadragintaL [sametail=1 samehead=1] // quadri-?
+gintaL -> quadragintaL [samehead=1]
+quarantaI [label=<<b>Italian</b><br/><font color="red">quaranta giorni</font><br/><font point-size="12">forty days</font>>]
+quarantinaI [label=<<font color="red">quarantina</font>>]
+quarantine [label=<<b>Modern<br/>English</b><br/><font color="red">quarantine</font>>]
+quadragintaL -> quarantaI -> quarantinaI
+quarantinaI -> quarantine [style=dashed]
+
+{ rank=sink quadri quarry quarrel quadrate quadrant cadre square squad quarantine trocar }
+{ rank=source eghsIE treiIE kwetwer dekmIE }
+{ rank=same quarantaI quadroI }
+{ rank=same troisF -> carreF [style=invis] }
+// dekmIE -> kwetwer [style=invis]
+eghsIE -> treiIE -> kwetwer -> dekmIE [style=invis]
+{ rank=same quarelOF esquarreOF troisOF carrerOF quarreOF }
+{ rank=same gintaL quadriL quadrumL tresL exL quadransL }
+// quadransL -> quadrumL [style=invis]
+troisOF -> carrerOF [style=invis]
+}

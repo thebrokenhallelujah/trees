@@ -1,0 +1,142 @@
+strict digraph {
+/* sources: AHD, roots */
+node [shape=none]
+
+neIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*ne </font><font point-size="16">not</font>> shape=box style="dashed,rounded" URL="ne-not0.svg" tooltip=""]
+
+neL [label=<<b>Latin</b><br/><font color="red">ne-</font>>]
+neIE -> neL
+// link to ne-oino.svg
+
+/* nescience */
+scireL [label=<<b>Latin</b><br/><font color="red">scīre</font><br/><font point-size="12">to know</font>>]
+nescireL [label=<<font color="red">nescīre</font><br/><font point-size="12">to be ignorant</font>>]
+nesciensL [label=<<font color="red">nesciēns,<br/>nescient-</font>>]
+nescientiaL [label=<<b>Late Latin</b><br/><font color="red">nescientia</font>>]
+nescience [label=<<b>Modern<br/>English</b><br/><font color="red">nescience</font>>]
+{ neL scireL } -> nescireL -> nesciensL -> nescientiaL
+nescientiaL -> nescience [style=dotted]
+
+/* nice */
+nesciusL [label=<<font color="red">nescius</font><br/><font point-size="12">ignorant</font>>]
+niceOF [label=<<b>Old French</b><br/><font color="red">nice</font>>]
+niceME [label=<<b>Middle<br/>English</b><br/><font color="red">nice</font><br/><font point-size="12">foolish</font>>]
+nice [label=<<b>Modern<br/>English</b><br/><font color="red">nice</font>>]
+nescireL -> nesciusL -> niceOF
+niceOF -> niceME [style=dotted]
+niceME -> nice
+
+/* nefarious */
+dheIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dhē-</font><br/><font point-size="12">to set, put</font>> shape=box style="dashed,rounded" URL="dhe-put.svg"]
+fasL [label=<<b>Latin</b><br/><font color="red">fās</font><br/><font point-size="12">divine law</font>>]
+nefasL [label=<<font color="red">nefās</font><br/><font point-size="12">crime</font>>]
+nefariusL [label=<<font color="red">nefārius</font>>]
+nefarious [label=<<b>Modern<br/>English</b><br/><font color="red">nefarious</font>>]
+dheIE -> fasL
+{ neL fasL } -> nefasL -> nefariusL
+nefariusL -> nefarious [style=dotted]
+
+/* neuter, neutral */
+kwoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*kʷo-</font><br/><font point-size="12">who, what, which</font>> shape=box style="dashed,rounded" URL="kwo-who.svg"]
+uterL [label=<<b>Latin</b><br/><font color="red">uter</font><br/><font point-size="12">either</font>>]
+kwoIE -> uterL
+neuterL [label=<<font color="red">neuter</font>>]
+neutreOF [label=<<b>Old French</b><br/><font color="red">neutre</font>>]
+neutreME [label=<<b>Middle<br/>English</b><br/><font color="red">neutre</font>>]
+neuter [label=<<b>Modern<br/>English</b><br/><font color="red">neuter</font>>]
+{ neL uterL } -> neuterL -> neutreOF
+neutreOF -> neutreME [style=dotted]
+neutreME -> neuter
+neutralisL [label=<<font color="red">neutrālis</font>>]
+neutralOF [label=<<b>Old French</b><br/><font color="red">neutral</font>>]
+neuteralME [label=<<b>Middle<br/>English</b><br/><font color="red">neuteral</font>>]
+neutral [label=<<b>Modern<br/>English</b><br/><font color="red">neutral</font>>]
+neuterL -> neutralisL -> neutralOF
+neutralOF -> neuteralME [style=dotted]
+neuteralME -> neutral
+
+/* nil, nihilism, annihilate */
+nihilL [label=<<font color="red">nihilum<br/>nihil<br/>nīl</font><br/><font point-size="12">nothing</font>>]
+nil [label=<<b>Modern<br/>English</b><br/><font color="red">nil</font>>]
+nihilism [label=<<b>Modern<br/>English</b><br/><font color="red">nihilism</font>>]
+neL -> nihilL
+nihilL -> { nil nihilism } [style=dotted]
+adL [label=<<b>Latin</b><br/><font color="red">ad, ad-</font><br/><font point-size="12">to</font>>]
+annihilareL [label=<<font color="red">annihilāre<br/>annihilāt-</font>>]
+annihilate [label=<<b>Modern<br/>English</b><br/><font color="red">annihilate</font>>]
+{ adL nihilL } -> annihilareL
+annihilareL -> annihilate [style=dotted]
+
+/* neglect */
+nekI [label=<<b>Italic</b><br/><font color="red">*nek</font>>]
+negL [label=<<b>Latin</b><br/><font color="red">neg-</font>>]
+legIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*leg-</font><br/><font point-size="12">to collect</font>> shape=box style="dashed,rounded" URL="leg-speak1.svg"]
+legereL [label=<<b>Latin</b><br/><font color="red">legere</font><br/><font point-size="12">to choose</font>>]
+neglegereL [label=<<font color="red">neglegere<br/>neglēct-</font>>]
+neglect [label=<<b>Modern<br/>English</b><br/><font color="red">neglect</font>>]
+neIE -> nekI -> negL
+legIE -> legereL
+{ negL legereL } -> neglegereL
+neglegereL -> neglect [style=dotted]
+
+/* negligee */
+negligerF [label=<<b>French</b><br/><font color="red">négliger</font><br/><font point-size="12">to neglect</font><br/><font color="red">négligée</font>>]
+negligee [label=<<b>Modern<br/>English</b><br/><font color="red">negligee</font>>]
+neglegereL -> negligerF
+negligerF -> negligee [style=dotted]
+
+/* negotiate */
+otiumL [label=<<b>Latin</b><br/><font color="red">ōtium</font><br/><font point-size="12">leisure</font>>]
+negotiumL [label=<<font color="red">negōtium</font><br/><font point-size="12">business</font>>]
+negotiariL [label=<<font color="red">negōtiārī<br/>negōtiāt-</font><br/><font point-size="12">to do business</font>>]
+negotiate [label=<<b>Modern<br/>English</b><br/><font color="red">negotiate</font>>]
+{ negL otiumL } -> negotiumL -> negotiariL
+negotiariL -> negotiate [style=dotted]
+
+/* negate, negative */
+negareL [label=<<b>Latin</b><br/><font color="red">negāre<br/>negāt-</font><br/><font point-size="12">to deny</font>>]
+negate [label=<<b>Modern<br/>English</b><br/><font color="red">negate</font>>]
+nekI -> negareL
+negareL -> negate [style=dotted]
+negatusL [label=<<font color="red">negātus</font>>]
+negativusL [label=<<font color="red">negātīvus</font>>]
+negatifOF [label=<<b>Old French</b><br/><font color="red">negatif</font>>]
+negativeME [label=<<b>Middle<br/>English</b><br/><font color="red">negative</font>>]
+negative [label=<<b>Modern<br/>English</b><br/><font color="red">negative</font>>]
+negareL -> negatusL -> negativusL -> negatifOF
+negatifOF -> negativeME [style=dotted]
+negativeME -> negative
+
+/* abnegate */
+apoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*apo-</font><br/><font point-size="12">off, away</font>> shape=box style="dashed,rounded" URL="apo-off.svg"]
+abL [label=<<b>Latin</b><br/><font color="red">ab-</font>>]
+abnegareL [label=<<font color="red">abnegāre<br/>abnegāt-</font><br/><font point-size="12">to refuse</font>>]
+abnegate [label=<<b>Modern<br/>English</b><br/><font color="red">abnegate</font>>]
+apoIE -> abL
+{ abL negareL } -> abnegareL
+abnegareL -> abnegate [style=dotted]
+
+/* deny */
+deL [label=<<b>Latin</b><br/><font color="red">dē-</font><br/><font point-size="12">from, away</font>>]
+denegareL [label=<<font color="red">dēnegāre</font>>]
+denierOF [label=<<b>Old French</b><br/><font color="red">denier</font>>]
+denienME [label=<<b>Middle<br/>English</b><br/><font color="red">denien</font>>]
+deny [label=<<b>Modern<br/>English</b><br/><font color="red">deny</font>>]
+{ deL negareL } -> denegareL -> denierOF
+denierOF -> denienME [style=dotted]
+denienME -> deny
+
+/* renegade, renege */
+reL [label=<<b>Latin</b><br/><font color="red">re-</font><br/><font point-size="12">again, back</font>>]
+renegareL [label=<<font color="red">renegāre<br/>renegāt-</font>>]
+renegadoS [label=<<b>Spanish</b><br/><font color="red">renegado</font>>]
+renegade [label=<<b>Modern<br/>English</b><br/><font color="red">renegade</font>>]
+renege [label=<<b>Modern<br/>English</b><br/><font color="red">renege</font>>]
+{ reL negareL } -> renegareL -> renegadoS
+renegadoS -> renegade [style=dotted]
+renegareL -> renege [style=dotted]
+
+{ rank=sink nescience nice nefarious neuter neutral nil nihilism annihilate neglect negligee negotiate abnegate deny renegade renege negate negative }
+{ rank=source }
+{ rank=same dheIE kwoIE legIE apoIE }
+}

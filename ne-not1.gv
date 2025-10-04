@@ -1,0 +1,105 @@
+strict digraph {
+/* sources: AHD, roots */
+node [shape=none]
+
+neIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*ne </font><font point-size="16">not</font>> shape=box style="dashed,rounded" URL="ne-not0.svg" tooltip=""]
+
+/* no */
+aiwIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*aiw-, *ayu-</font><br/><font point-size="12">life, eternity</font>> shape=box style="dashed,rounded" URL="aiw-life.svg"]
+aiwiGm [label=<<b>Germanic</b><br/><font color="red">*aiwi-</font>>]
+aOE [label=<<b>Old English</b><br/><font color="red">ā</font><br/><font point-size="12">ever</font>>]
+aiwIE -> aiwiGm -> aOE
+neGm [label=<<b>Germanic</b><br/><font color="red">*ne-, *na-</font>>]
+neOE [label=<<b>Old English</b><br/><font color="red">ne</font>>]
+neIE -> neGm -> neOE
+naOE [label=<<font color="red">nā</font>>]
+noME [label=<<b>Middle<br/>English</b><br/><font color="red">no</font>>]
+no1 [label=<<b>Modern<br/>English</b><br/><font color="red">no</font><br/><font point-size="12">(adv., interj.)</font>>]
+{ neOE aOE } -> naOE
+naOE -> noME -> no1
+oinoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*oi-no-</font><br/><font point-size="12">one</font>> shape=box style="dashed,rounded" URL="oino-one0.svg"]
+ainaGm [label=<<b>Germanic</b><br/><font color="red">*aina-</font>>]
+anOE [label=<<b>Old English</b><br/><font color="red">ān</font>>]
+oinoIE -> ainaGm -> anOE
+nanOE [label=<<font color="red">nān</font>>]
+nonME [label=<<b>Middle<br/>English</b><br/><font color="red">non, no</font>>]
+no2 [label=<<b>Modern<br/>English</b><br/><font color="red">no</font><br/><font point-size="12">(adj.)</font>>]
+{ neOE anOE } -> nanOE
+nanOE -> nonME -> no2
+
+/* never */
+aefreOE [label=<<b>Germanic</b><br/><font color="red">æfre</font><br/><font point-size="12">ever</font>>]
+naefreOE [label=<<font color="red">næfre</font>>]
+neverME [label=<<b>Middle<br/>English</b><br/><font color="red">never</font>>]
+never [label=<<b>Modern<br/>English</b><br/><font color="red">never</font>>]
+aiwiGm -> aefreOE 
+{ neOE aefreOE } -> naefreOE -> neverME -> never
+
+/* none */
+noneME [label=<<b>Middle<br/>English</b><br/><font color="red">none</font>>]
+none [label=<<b>Modern<br/>English</b><br/><font color="red">none</font>>]
+nanOE -> noneME -> none
+
+/* naught, not, naughty */
+wihtOE [label=<<b>Old English</b><br/><font color="red">wiht</font><br/><font point-size="12">thing</font>>]
+nawihtOE [label=<<font color="red">nāwiht</font>>]
+naughtME [label=<<b>Middle<br/>English</b><br/><font color="red">naught<br/>nought</font><br/><font point-size="12">nothing, evil</font>>]
+naught [label=<<b>Modern<br/>English</b><br/><font color="red">naught<br/>nought</font>>]
+{ naOE wihtOE } -> nawihtOE
+nawihtOE -> naughtME -> naught
+notME [label=<<b>Middle<br/>English</b><br/><font color="red">not</font>>]
+not [label=<<b>Modern<br/>English</b><br/><font color="red">not</font>>]
+naughtME -> notME -> not
+noughtiME [label=<<font color="red">noughti</font><br/><font point-size="12">wicked</font>>]
+naughty [label=<<b>Modern<br/>English</b><br/><font color="red">naughty</font>>]
+naughtME -> noughtiME -> naughty
+
+/* nor */
+orME [label=<<b>Middle<br/>English</b><br/><font color="red">or</font><br/><font point-size="12">or</font>>]
+norME [label=<<font color="red">nor</font>>]
+nor [label=<<b>Modern<br/>English</b><br/><font color="red">nor</font>>]
+{ noME orME } -> norME -> nor
+
+/* nothing */
+thingOE [label=<<b>Old English</b><br/><font color="red">thing</font>>]
+nathingOE [label=<<font color="red">nāthing</font>>]
+nothingME [label=<<b>Middle<br/>English</b><br/><font color="red">nothing</font>>]
+nothing [label=<<b>Modern<br/>English</b><br/><font color="red">nothing</font>>]
+{ naOE thingOE } -> nathingOE -> nothingME -> nothing
+
+/* neither */
+kwoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*kʷo-</font><br/><font point-size="12">who, what, which</font>> shape=box style="dashed,rounded" URL="kwo-who.svg"]
+hwatharazGm [label=<<b>Germanic</b><br/><font color="red">*hwatharaz</font>>]
+hwaetherOE [label=<<b>Old English</b><br/><font color="red">hwæther</font><br/><font point-size="12">which of two</font>>]
+nawtherOE [label=<<font color="red">nāhwæther<br/>nāwther</font>>]
+neitherME [label=<<b>Middle<br/>English</b><br/><font color="red">neither</font>>]
+neither [label=<<b>Modern<br/>English</b><br/><font color="red">neither</font>>]
+kwoIE -> hwatharazGm -> hwaetherOE
+{ naOE hwaetherOE } -> nawtherOE -> neitherME -> neither
+
+/* nay */
+eiON [label=<<b>Old Norse</b><br/><font color="red">ei</font>>]
+aiwiGm -> eiON
+neON [label=<<b>Old Norse</b><br/><font color="red">ne</font>>]
+neiON [label=<<font color="red">nei</font>>]
+nayME [label=<<b>Middle<br/>English</b><br/><font color="red">nay</font>>]
+nay [label=<<b>Modern<br/>English</b><br/><font color="red">nay</font>>]
+{ neON eiON } -> neiON
+neiON -> nayME [style=dotted]
+nayME -> nay
+
+/* nix */
+wihtOHG [label=<<b>Old High<br/>German</b><br/><font color="red">wiht</font><br/><font point-size="12">thing</font>>]
+niOHG [label=<<b>Old High<br/>German</b><br/><font color="red">ni</font><br/><font point-size="12">not, no</font>>]
+niwihtOHG [label=<<font color="red">niwiht</font>>]
+nihtesMHG [label=<<b>Middle<br/>High German</b><br/><font color="red">niht<br/>nihtes</font>>]
+nixG [label=<<b>German<br/>dialectical</b><br/><font color="red">nix</font>>]
+nix [label=<<b>Modern<br/>English</b><br/><font color="red">nix</font>>]
+neGm -> niOHG
+{ niOHG wihtOHG } -> niwihtOHG -> nihtesMHG -> nixG 
+nixG -> nix [style=dotted]
+
+
+{ rank=sink no1 no2 never none naught not naughty nor nothing neither nay nix }
+{ rank=same aiwIE kwoIE oinoIE }
+}

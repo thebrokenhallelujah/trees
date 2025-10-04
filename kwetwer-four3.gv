@@ -1,0 +1,126 @@
+strict digraph {
+/* sources: */
+node [shape=none]
+/* omitted: quire (printing) */
+
+kwetwer [label=<<font point-size="24"><b>Indo-<br/>European</b></font><br/><font color="red" point-size="18">kʷetwer-</font><br/><font point-size="16">four</font>> shape=box style="dashed,rounded" URL="kwetwer-four0.svg" tooltip=""]
+kweturto [label=<<font color="red">kʷetur-to-</font><br/><font point-size="12">fourth</font>>]
+kwetwr [label=<<font color="red">kʷet(w)r̥</font>>] // AHD has this under kweturs, etc.
+kwetwer -> { kweturto kwetwr} [sametail=1]
+
+/* fourth, farthing (omitted: firkin) */
+fedworthonGm [label=<<b>Germanic</b><br/><font color="red">fe(d)worthōn-</font>>]
+feorthaOE [label=<<b>Old English</b><br/><font color="red">fēortha</font>>]
+fourtheME [label=<<b>Middle<br/>English</b><br/><font color="red">fourthe</font>>]
+fourth [label=<<b>Modern<br/>English</b><br/><font color="red">fourth</font>>]
+kweturto -> fedworthonGm [sametail=1]
+fedworthonGm -> feorthaOE [sametail=1]
+feorthaOE -> fourtheME -> fourth
+feorthungOE [label=<<b>Old English</b><br/><font color="red">fēorthung</font>>]
+ferthingME [label=<<b>Middle<br/>English</b><br/><font color="red">ferthing</font>>]
+farthing [label=<<b>Modern<br/>English</b><br/><font color="red">farthing</font>>]
+fedworthonGm -> feorthungOE [sametail=1]
+feorthungOE -> ferthingME -> farthing
+
+/* L quartus */
+// omitted: quartan (fever), quartern (measurement), quadrille (card game), quardroon, quartic, quartile
+quartusL [label=<<b>Latin</b><br/><font color="red">quārtus<br/>quārta</font>>]
+quarteOF [label=<<b>Old French</b><br/><font color="red">quarte</font>>]
+quartME [label=<<b>Middle<br/>English</b><br/><font color="red">quart</font>>]
+quart [label=<<b>Modern<br/>English</b><br/><font color="red">quart</font>>]
+kweturto -> quartusL [sametail=1]
+quartusL -> quarteOF  [sametail=1]
+quarteOF -> quartME [style=dashed]
+quartME -> quart
+quartariusL [label=<<font color="red">quārtārius</font>>]
+quartierOF [label=<<b>Old French</b><br/><font color="red">quartier</font>>]
+quarterME [label=<<b>Middle<br/>English</b><br/><font color="red">quarter</font>>]
+quarter [label=<<b>Modern<br/>English</b><br/><font color="red">quarter</font>>]
+quartusL -> quartariusL [sametail=1]
+quartariusL -> quartierOF
+quartierOF -> quarterME [style=dashed]
+quarterME -> quarter
+quartoL [label=<<font color="red">in quārtō</font><br/><font point-size="12">in the fourth part</font>>] // Medieval
+quartoME [label=<<b>Middle<br/>English</b><br/><font color="red">quarto</font>>]
+quarto [label=<<b>Modern<br/>English</b><br/><font color="red">quarto</font><br/><font point-size="12">page size<br/>in printing</font>>]
+quartusL -> quartoL [sametail=1]
+quartoL -> quartoME [style=dashed sametail=1]
+quartoME -> quarto
+quartoI [label=<<b>Italian</b><br/><font color="red">quarto<br/>quartetto</font>>] // diminutive
+quartetteF [label=<<b>French</b><br/><font color="red">quartette</font>>]
+quartet [label=<<b>Modern<br/>English</b><br/><font color="red">quartet</font>>]
+quartusL -> quartoI [sametail=1]
+quartoI -> quartetteF -> quartet [style=dashed]
+
+/* tetra- */
+// tetra (fish), tetragon, tetrahedron, tetrameter, tetralogy, tetrad?
+tetraG [label=<<b>Greek</b><br/><font color="red">tetra-</font>>]
+tetra [label=<<b>Modern<br/>English</b><br/><font color="red">tetr(a)-</font>>]
+kwetwr -> tetraG [sametail=1]
+tetraG -> tetra [style=dashed]
+
+tetrasG [label=<<b>Greek</b><br/><font color="red">tetras<br/>tetrad-</font><br/><font point-size="12">group of four</font>>]
+tetrad [label=<<b>Modern<br/>English</b><br/><font color="red">tetrad</font>>]
+kwetwr -> tetrasG [sametail=1]
+tetrasG -> tetrad [style=dashed]
+
+/* tessera, tesselate, tesseract */
+// omitted: diatessaron (Christianity)
+tesseresG [label=<<b>Greek</b><br/><font color="red">tesseres<br/>tessera</font>>] // var. of tessares
+tesseraL [label=<<b>Latin</b><br/><font color="red">tessera</font><br/><font point-size="12">square</font>>]
+tessera  [label=<<b>Modern<br/>English</b><br/><font color="red">tessera</font><br/><font point-size="12">mosaic stone</font>>]
+kwetwr -> tesseresG [sametail=1]
+tesseresG -> tesseraL [sametail=1]
+tesseraL -> tessera [style=dashed]
+aktisG [label=<<b>Greek</b><br/><font color="red">aktīs, aktīn-</font><br/><font point-size="12">ray of light</font>>]
+tesseract [label=<<b>Modern<br/>English</b><br/><font color="red">tesseract</font><br/><font point-size="12">4D cube</font>>] // link to picture/explanation?
+tesseresG -> tesseract [style=dashed sametail=1 samehead=1]
+aktisG -> tesseract [style=dashed samehead=1]
+tessellaL [label=<<font color="red">tessella</font><br/><font point-size="12">small cube</font><br/><font color="red">tessellātus</font>>] // adj
+tessellate [label=<<b>Modern<br/>English</b><br/><font color="red">tessellate</font>>]
+tesseraL -> tessellaL [sametail=1]
+tessellaL -> tessellate [style=dashed]
+
+diaG [label=<<b>Greek</b><br/><font color="red">dia</font><br/><font point-size="12">through, according to</font>>]
+diatessaronG [label=<<font color="red">dia tessarōn</font><br/><font point-size="12">out of four</font>>]
+diatessaronL [label=<<b>Latin</b><br/><font color="red">diatessarōn</font><br/><font point-size="12">made of four</font>>]
+diatessaronME [label=<<b>Middle<br/>English</b><br/><font color="red">diatessaron</font><br/><font point-size="12">interval of a fourth</font>>]
+diatessaron [label=<<b>Modern<br/>English</b><br/><font color="red">diatessaron</font><br/><font point-size="12">the four Gospels<br/>combined into one narrative</font>>]
+diaG -> diatessaronG [samehead=1]
+tesseresG -> diatessaronG [sametail=1 samehead=1]
+diatessaronG -> diatessaronL -> diatessaronME [style=dashed]
+diatessaronME -> diatessaron
+
+/* trapezium (trapezius, trapezoid, trapeze, trapezohedron??) */
+traG [label=<<b>Greek</b><br/><font color="red">tra-</font>>]
+kwetwr -> traG
+ped [label=<<b>Indo-<br/>European</b><br/><font color="red">ped-</font><br/><font point-size="12">foot</font>> shape=box style="dashed,rounded" URL="ped-foot0.svg"]
+pezaG [label=<<b>Greek</b><br/><font color="red">peza</font>>]
+trapezaG [label=<<font color="red">trapeza</font><br/><font point-size="12">table</font><br/><font color="red">trapezion</font><br/><font point-size="12">(diminutive)</font>>]
+trapeziumL [label=<<b>Late<br/>Latin</b><br/><font color="red">trapezium</font><br/><font point-size="12">trapezoid</font>>]
+ped -> pezaG
+{ traG pezaG } -> trapezaG [samehead=1]
+trapezaG -> trapeziumL [sametail=1 samehead=1 style=dashed]
+trapezium [label=<<b>Modern<br/>English</b><br/><font color="red">trapezium</font>>]
+trapeziumL -> trapezium [style=dashed sametail=1]
+trapeziusL [label=<<b>New<br/>Latin</b><br/><font color="red">trapezius</font>>]
+trapezius [label=<<b>Modern<br/>English</b><br/><font color="red">trapezius</font>>]
+trapeziumL -> trapeziusL
+trapeziusL -> trapezius [style=dashed]
+trapezeF [label=<<b>French</b><br/><font color="red">trapè</font>>]
+trapeze [label=<<b>Modern<br/>English</b><br/><font color="red">trapeze</font>>]
+trapeziumL -> trapezeF
+trapezeF -> trapeze [style=dashed]
+trapezoeidesG [label=<<font color="red">trapezoeidēs</font><br/><font point-size="12">trapezium-shaped</font>>]
+trapezoidesL [label=<<b>New Latin</b><br/><font color="red">trapezoīdēs</font>>]
+trapezoid [label=<<b>Modern<br/>English</b><br/><font color="red">trapezoid</font>>]
+trapezaG -> trapezoeidesG [sametail=1]
+trapezoeidesG -> trapezoidesL
+trapezoidesL -> trapezoid [style=dashed]
+// trapezohedron [label=<<b>Modern<br/>English</b><br/><font color="red">trapezohedron</font>>]
+
+
+
+{ rank=sink fourth farthing quart quarter quarto quartet tetra tetrad tessera tesseract tessellate diatessaron trapezium trapezius trapezoid trapeze }
+{ rank=same tesseresG aktisG }
+}

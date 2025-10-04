@@ -1,0 +1,93 @@
+strict digraph {
+/* sources: AHD, roots */
+node [shape=none]
+
+neIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*ne </font><font point-size="16">not</font>> shape=box style="dashed,rounded" URL="ne-not0.svg" tooltip=""]
+
+// nepenthe
+neG [label=<<b>Greek</b><br/><font color="red">nē-</font>>]
+penthosG [label=<<b>Greek</b><br/><font color="red">penthos</font><br/><font point-size="12">grief</font>>]
+nepenthesG [label=<<font color="red">nēpenthes (pharmakon)</font><br/><font point-size="12">grief-banishing (drug)</font>>]
+nepenthesL [label=<<b>Latin</b><br/><font color="red">nēpenthes</font>>]
+nepenthe [label=<<b>Modern<br/>English</b><br/><font color="red">nepenthe</font>>]
+neIE -> neG
+{ neG penthosG } -> nepenthesG
+nepenthesG -> nepenthesL -> nepenthe [style=dashed]
+
+// un-
+nIE [label=<<font color="red">n̥</font>>]
+unGm [label=<<b>Germanic</b><br/><font color="red">*un-</font>>]
+unOE [label=<<b>Old English</b><br/><font color="red">un-</font>>]
+unME [label=<<b>Middle<br/>English</b><br/><font color="red">un-</font>>]
+un [label=<<b>Modern<br/>English</b><br/><font color="red">un-</font><br/><font point-size="12">not, opposite</font>>]
+neIE -> nIE -> unGm -> unOE -> unME -> un
+
+// Zugunruhe
+deukIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*deuk-</font><br/><font point-size="12">to lead</font>> shape=box style="dashed,rounded" URL="deuk-lead.svg"]
+ziohanOHG [label=<<b>Old High<br/>German</b><br/><font color="red">ziohan</font><br/><font point-size="12">to pull</font>>]
+zucMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">zuc</font><br/><font point-size="12">a pull</font>>]
+zugG [label=<<b>German</b><br/><font color="red">Zug</font><br/><font point-size="12">a pull, move, migration</font>>]
+unOHG [label=<<b>Old High<br/>German</b><br/><font color="red">un-</font>>]
+ruowaOHG [label=<<b>Old High<br/>German</b><br/><font color="red">ruowa</font><br/><font point-size="12">rest</font>>]
+unruoweMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">unruowe</font><br/><font point-size="12">restlessness</font>>]
+unruheG [label=<<b>German</b><br/><font color="red">Unruhe</font>>]
+zugunruheG [label=<<font color="red">Zugunruhe</font>>]
+zugunruhe [label=<<b>Modern<br/>English</b><br/><font color="red">Zugunruhe</font>>]
+deukIE -> ziohanOHG -> zucMHG -> zugG
+unGm -> unOHG
+{ unOHG ruowaOHG } -> unruoweMHG
+unruoweMHG -> unruheG
+{ zugG unruheG } -> zugunruheG
+zugunruheG -> zugunruhe [style=dashed]
+
+// in-
+inL [label=<<b>Latin</b><br/><font color="red">in-</font>>]
+inOF [label=<<b>Old French</b><br/><font color="red">in-</font>>]
+inME [label=<<b>Middle<br/>English</b><br/><font color="red">in-</font>>]
+in [label=<<b>Modern<br/>English</b><br/><font color="red">in-</font>>]
+nIE -> inL -> inOF
+inOF -> inME [style=dashed]
+inME -> in
+
+// an-
+anG [label=<<b>Greek</b><br/><font color="red">a-, an-</font>>]
+an [label=<<b>Modern<br/>English</b><br/><font color="red">a-, an-</font>>]
+nIE -> anG
+anG -> an [style=dashed]
+
+// ahimsa
+aS [label=<<b>Sanskrit</b><br/><font color="red">a-</font>>]
+himsaS [label=<<b>Sanskrit</b><br/><font color="red">hiṁsā</font>>]
+ahimsaS [label=<<font color="red">ahiṁsā</font>>]
+ahimsa [label=<<b>Modern<br/>English</b><br/><font color="red">ahimsa</font>>]
+nIE -> aS
+{ aS himsaS } -> ahimsaS
+ahimsaS -> ahimsa [style=dashed]
+
+// immortal
+merIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*mer-</font><br/><font point-size="12">to harm</font>> shape=box style="dashed,rounded" URL="mer-harm.svg"]
+nmrtoIE [label=<<font color="red">n̥-mr̥-to-</font><br/><font point-size="12">undying</font>>]
+immortalisL [label=<<b>Latin</b><br/><font color="red">immortālis</font>>]
+immortelOF [label=<<b>Old French</b><br/><font color="red">immortel</font>>]
+immortalME [label=<<b>Middle<br/>English</b><br/><font color="red">immortal</font>>]
+immortal [label=<<b>Modern<br/>English</b><br/><font color="red">immortal</font>>]
+{ nIE merIE } -> nmrtoIE -> immortalisL -> immortelOF 
+immortelOF -> immortalME [style=dashed]
+immortalME -> immortal
+
+// ambrosia
+ambrotosG [label=<<b>Greek</b><br/><font color="red">ambrotos</font>>]
+ambrosiaG [label=<<font color="red">ambrosiā</font>>]
+ambrosiaL [label=<<b>Latin</b><br/><font color="red">ambrosia</font>>]
+ambrosia [label=<<b>Modern<br/>English</b><br/><font color="red">ambrosia</font>>]
+nmrtoIE -> ambrotosG -> ambrosiaG
+ambrosiaG -> ambrosiaL -> ambrosia [style=dashed]
+
+// amrita
+amrtamS [label=<<b>Sanskrit</b><br/><font color="red">amṛtam</font><br/><font point-size="12">immortality</font>>]
+amrita [label=<<b>Modern<br/>English</b><br/><font color="red">amrita</font>>]
+nmrtoIE -> amrtamS
+amrtamS -> amrita [style=dashed]
+
+{ rank=sink nepenthe un zugunruhe in an ahimsa immortal ambrosia amrita }
+}

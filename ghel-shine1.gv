@@ -1,0 +1,75 @@
+strict digraph {
+/* sources: AHD, Barnhart, Ayto */
+node [shape=none];
+ghel [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*ghel- </font><font point-size="16">to shine, bright, yellow</font>> shape=box style="dashed,rounded" URL="ghel-shine0.svg" tooltip=""]
+
+ghel -> glGm
+/* omitted: glede (bird), gleed (ember), gleg (Scot), glister, gloaming (dusk), glogg (drink) */
+/* glad, glade, related: glabrous? */
+glGm -> gladdaGm -> glaedOE -> gladME -> glad
+gladME -> gladeME [label="?" decorate=true]
+gladeME -> glade
+glGm [label=<<b>Germanic</b><br/><font color="red">*gl-</font>>]
+gladdaGm [label=<<font color="red">*glathaz, *gladda-</font>>]; // are these related?
+glaedOE [label=<<b>Old English</b><br/><font color="red">glæd</font><br/><font point-size="12">shining, joyful</font>>];
+gladME [label=<<b>Middle<br/>English</b><br/><font color="red">glad</font>>];
+glad [label=<<b>Modern<br/>English</b><br/><font color="red">glad</font>>];
+gladeME [label=<<b>Middle<br/>English</b><br/><font color="red">glade</font><br/><font point-size="12">bright spot<br/>in a wood,<br/>clearing</font>>];
+glade [label=<<b>Modern<br/>English</b><br/><font color="red">glade<br/>everglades</font>>];
+/* glass, glaze */
+glGm -> glasamGm -> glaesOE -> glasME -> glass
+glasME -> glasenME -> glaze
+glasamGm [label=<<b>West<br/>Germanic</b><br/><font color="red">*glasam</font><br/><font point-size="12">blue/green?</font>>];
+glaesOE [label=<<b>Old English</b><br/><font color="red">glæs</font>>];
+glasME [label=<<b>Middle<br/>English</b><br/><font color="red">glas</font>>];
+glass [label=<<b>Modern<br/>English</b><br/><font color="red">glass</font><br/><font color="red">(eye)glasses</font>>];
+glasenME [label=<<font color="red">glasen</font>>];
+glaze [label=<<b>Modern<br/>English</b><br/><font color="red">glaze</font>>];
+/* glasam also meant shine? whence glare */
+
+/*  gleam, glimmer, glimpse */
+glGm -> glaimGm -> glaemOE -> glemME -> gleam
+glaemOE -> glimerenME -> glimmer
+glaimGm -> glimsianOE -> glymsenME -> glimpse
+glaimGm [label=<<font color="red">*glaim-, *glim-</font>>];
+glaemOE [label=<<b>Old English</b><br/><font color="red">glǣm</font><br/><font point-size="12">brightness</font>>];
+glemME [label=<<b>Middle<br/>English</b><br/><font color="red">glem</font>>];
+gleam [label=<<b>Modern<br/>English</b><br/><font color="red">gleam</font>>];
+glimerenME [label=<<b>Middle<br/>English</b><br/><font color="red">glimeren</font>>];
+glimmer [label=<<b>Modern<br/>English</b><br/><font color="red">glimmer</font>>];
+glimsianOE [label=<<b>Old English</b><br/><font color="red">glimsian</font>>];
+glymsenME [label=<<b>Middle<br/>English</b><br/><font color="red">glymsen</font><br/><font point-size="12">to shine faintly<br/>to look quickly</font>>];
+glimpse [label=<<b>Modern<br/>English</b><br/><font color="red">glimpse</font>>];
+/* glisten */
+glGm -> glisnianOE // no Gm form?
+glisnianOE -> glisnenME -> glisten
+glisnianOE [label=<<b>Old English</b><br/><font color="red">glisnian</font>>];
+glisnenME [label=<<b>Middle<br/>English</b><br/><font color="red">glisnen</font>>];
+glisten [label=<<b>Modern<br/>English</b><br/><font color="red">glisten</font>>];
+
+/* glee */
+glGm -> gliujamGm -> gleoOE -> gleME -> glee
+gliujamGm [label=<<font color="red">*gliujam</font>>]; // or gleujam
+gleoOE [label=<<b>Old English</b><br/><font color="red">glēo</font><br/><font point-size="12">entertainment</font>>];
+gleME [label=<<b>Middle<br/>English</b><br/><font color="red">gle</font>>];
+glee [label=<<b>Modern<br/>English</b><br/><font color="red">glee</font>>];
+
+/* glare */
+glGm -> glazGm -> glarenMG
+glarenMG -> glarenME [style=dotted]
+glarenME -> glare
+glazGm [label=<<font color="red">*glaz-</font>>]; // meaning?
+glarenMG [label=<<b>Middle<br/>Low German</b><br/>(or similar<br/>source)<br/><font color="red">glaren</font><br/><font point-size="12">to gleam</font>>];
+glarenME [label=<<b>Middle<br/>English</b><br/><font color="red">glaren</font><br/><font point-size="12">shine brightly,<br/>stare angrily</font>>];
+glare [label=<<b>Modern<br/>English</b><br/><font color="red">glare</font>>];
+
+/* glint, glitter, gloat?, gloss(y), glow, glower */
+
+/* not listed in any sources so far: glaucous, glaucoma, glauconite */
+ghel -> glaukosG [label="???" decorate=true]
+glaukosG -> glaucous [style=dotted] // details omitted
+glaukosG [label=<<b>Greek</b><br/><font color="red">glaukos</font><br/><font point-size="12">shining, gray</font>>];
+glaucous [label=<<b>Modern<br/>English</b><br/><font color="red">glaucous<br/>glaucoma<br/>glauconite</font>>];
+
+subgraph Eng {rank=sink glad glade glass glaze gleam glimmer glimpse glisten glee glare glaucous}
+}

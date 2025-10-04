@@ -1,0 +1,92 @@
+strict digraph {
+node [shape=plaintext]
+kwon [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">kwon </font><font point-size="16">dog</font>> shape=box style="dashed,rounded" URL="kwon-dog0.svg" tooltip=""]
+kwon -> { hundaz kun kuon } [minlen=2 sametail=1]
+{ rank=same hundaz kun kuon }
+
+/* Gmc hundaz */
+hundaz [label=<<b>Germanic</b><br/><font color="red">hundaz</font>>]
+hundaz -> { hundOE huntOHG hondMD } [sametail=1]
+hundOE [label=<<b>Old English</b><br/><font color="red">hund</font>>]
+hundOE -> hundME
+hundME [label=<<b>Middle English</b><br/><font color="red">hund</font>>]
+hundME -> hound
+hound [label=<<b>Modern<br/>English</b><br/><font color="red">hound</font>>]
+huntOHG [label=<<b>Old High<br/>German</b><br/><font color="red">Hunt</font>>]
+huntOHG -> hundG
+hundG [label=<<b>German</b><br/><font color="red">Hund</font>>]
+{ dachs hundG } -> dachshundG [samehead=1]
+{ rank=same dachs -> hundG [style=invis] }
+dachshundG [label=<<font color="red">Dachshund</font>>]
+dachs [label=<<b>German</b><br/><font color="red">Dachs</font><br/><font point-size="12">badger</font>>]
+dachshundG -> dachshund [style=dashed]
+dachshund [label=<<b>Modern<br/>English</b><br/><font color="red">dachshund</font>>]
+hondMD [label=<<b>Middle<br/>Dutch</b><br/><font color="red">hond</font>>]
+hondMD -> keeshondD
+keeshondD [label=<<b>Dutch</b><br/><font color="red">keeshond</font>>]
+keeshondD -> keeshond [style=dashed]
+keeshond [label=<<b>Modern<br/>English</b><br/><font color="red">keeshond</font>>]
+/* corgi */
+kun [label=<<b>Celtic</b><br/><font color="red">kun-</font>>]
+kun -> ci
+ci [label=<<b>Welsh</b><br/><font color="red">ci</font>>]
+{ ci cor } -> corgiW [samehead=1]
+{ rank=same cor -> ci [style=invis] }
+cor [label=<<b>Welsh</b><br/><font color="red">cor</font><br/><font point-size="12">dwarf</font>>]
+corgiW [label=<<font color="red">corgi</font>>]
+corgiW -> corgi [style=dashed]
+corgi [label=<<b>Modern<br/>English</b><br/><font color="red">corgi</font>>]
+kuon [label=<<b>Greek</b><br/><font color="red">kuōn, kun-</font>>]
+kuon -> kunikos [sametail=1]
+kunikos [label=<<font color="red">kunicos</font><br/><font point-size="12">Cynic philospher</font>>]
+kunikos -> cynicus [style=dashed]
+cynicus [label=<<b>Latin</b><br/><font color="red">cynicus</font>>]
+cynicus -> cynic [style=dashed]
+cynic [label=<<b>Modern<br/>English</b><br/><font color="red">cynic</font>>]
+kuon -> kunos [sametail=1]
+kunos [label=<<font color="red">kunos</font><br/><font point-size="12">dog's</font>>]
+ors [label=<<b>Indo-<br/>European</b><br/><font color="red">ourā</font><br/><font point-size="12">tail</font>> shape=box style="dashed,rounded" URL="ors-butt.svg"]
+oura [label=<<b>Greek</b><br/><font color="red">ourā</font><br/><font point-size="12">tail</font>>]
+ors -> oura
+{ kunos oura } -> kunosoura [samehead=1]
+kunosoura [label=<<font color="red">kunosoura</font><br/><font point-size="12">Ursa Minor</font>>] // no macrons on this one
+kunosoura -> cynosuraL [style=dashed]
+cynosuraL [label=<<b>Latin</b><br/><font color="red">cynosūra</font>>]
+cynosuraL -> cynosureF
+cynosureF [label=<<b>French</b><br/><font color="red">cynosure</font>>]
+cynosureF -> cynosure [style=dashed]
+cynosure [label=<<b>Modern<br/>English</b><br/><font color="red">cynosure</font>>]
+/* because Ursa Minor contains the North Star does French cynosure also mean cynosure or just Ursa Minor? */
+
+/* quinsy */
+kunankhe [label=<<font color="red">kunankhē</font><br/><font point-size="12">dog collar,<br/>quinsy in dogs</font>>]
+ankhein [label=<<b>Greek</b><br/><font color="red">ankhein</font><br/><font point-size="12">to squeeze</font>>]
+ankhein -> kunankhe [samehead=1]
+kuon -> kunankhe [sametail=1 samehead=1]
+quinanciaL [label=<<b>Latin</b><br/><font color="red">quinancia</font>>]
+quinancieOF [label=<<b>Old French</b><br/><font color="red">quinancie</font>>]
+kunankhe -> { quinanciaL quinancieOF } [style=dashed samehead=1]
+quinsyME [label=<<b>Middle<br/>English</b><br/><font color="red">quinsy</font>>]
+{ quinanciaL quinancieOF } -> quinsyME [style=dashed sametail=1]
+quinsy [label=<<b>Modern<br/>English</b><br/><font color="red">quinsy</font><br/><font point-size="12">tonsil infection</font>>]
+quinsyME -> quinsy
+
+/* G pro- (per) */
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">per</font><br/><font point-size="12">(various prepositions)</font>> shape=box style="dashed,rounded" URL="per-pro2.svg"]
+proG [label=<<b>Greek</b><br/><font color="red">pro, pro-</font><br/><font point-size="12">before, in front, forward</font>>]
+perIE -> proG
+/* Procyon (star) */
+prokuon [label=<<font color="red">Prokuōn</font>>]
+proG -> prokuon [samehead=1]
+kuon -> prokuon [sametail=1 samehead=1]
+procyonL [label=<<b>Latin</b><br/><font color="red">Procyōn</font>>]
+procyon [label=<<b>Modern<br/>English</b><br/><font color="red">Procyon</font><br/><font point-size="12">a binary star<br/>in Canis Minor</font>>]
+prokuon -> procyonL -> procyon [style=dashed]
+
+{ rank=same hound dachshund keeshond corgi cynic cynosure quinsy procyon } // ModE
+{ rank=same hundG keeshondD ci cynosureF } // modern languages
+{ rank=same hundME hondMD } // middle 
+{ rank=same hundOE huntOHG } // old
+{ rank=same cynicus cynosuraL } // Latin
+{ rank=source kwon perIE ors }
+}

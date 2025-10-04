@@ -1,0 +1,193 @@
+strict digraph {
+node [shape=none]
+
+legIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*leg- </font><font point-size="16">to collect, to speak</font>> shape=box style="dashed,rounded" URL="leg-speak0.svg" tooltip="Indo-European \"*leg-\" to collect, to speak"]
+
+// lectern
+legereL [label=<<b>Latin</b><br/><font color="red">legere</font><br/><font point-size="12">to gather, to choose, to read</font>>]
+lectusL [label=<<b>Latin</b><br/><font color="red">lēctus</font>>]
+lectrumL [label=<<font color="red">lēctrum</font>>] // Late Latin
+lectrinumL [label=<<font color="red">lēctrīnum</font>>] // Med. Latin
+lettrunOF [label=<<b>Old French</b><br/><font color="red">lettrun</font>>]
+lectornME [label=<<b>Middle<br/>English</b><br/><font color="red">lectorn</font>>]
+lectern [label=<<b>Modern<br/>English</b><br/><font color="red">lectern</font>>]
+legIE -> legereL -> lectusL -> lectrumL -> lectrinumL -> lettrunOF
+lettrunOF -> lectornME [style=dashed]
+lectornME -> lectern
+
+// lectionary
+lectioL [label=<<font color="red">lēctiō, lēctiōn-</font><br/><font point-size="12">a reading</font>>]
+lectionariumL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">lēctiōnārium</font>>]
+lectionary [label=<<b>Modern<br/>English</b><br/><font color="red">lectionary</font>>]
+lectusL -> lectioL
+lectioL -> lectionariumL 
+lectionariumL -> lectionary [style=dashed]
+
+/*
+// lection
+lection [label=<<b>Modern<br/>English</b><br/><font color="red">lection</font>>]
+lectioL -> lection [style=dashed]
+
+// lector
+lectorL [label=<<font color="red">lēctor</font><br/><font point-size="12">reader</font>>]
+lectorME [label=<<b>Middle<br/>French</b><br/><font color="red">lector</font>>]
+lector [label=<<b>Modern<br/>English</b><br/><font color="red">lector</font>>]
+lectusL -> lectorL
+lectorL -> lectorME [style=dashed]
+lectorME -> lector
+*/
+
+// lecture 
+lecturaL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">lēctūra</font><br/><font point-size="12">a reading</font>>]
+lectureOF [label=<<b>Old French</b><br/><font color="red">lecture</font>>]
+lectureME [label=<<b>Middle<br/>English</b><br/><font color="red">lecture</font>>]
+lecture [label=<<b>Modern<br/>English</b><br/><font color="red">lecture</font>>]
+lectusL -> lecturaL -> lectureOF
+lectureOF -> lectureME [style=dashed]
+lectureME -> lecture
+
+// lesson
+lesonOF [label=<<b>Old French</b><br/><font color="red">leson</font>>]
+lessounME [label=<<b>Middle<br/>English</b><br/><font color="red">lessoun</font>>]
+lesson [label=<<b>Modern<br/>English</b><br/><font color="red">lesson</font>>]
+lectioL -> lesonOF
+lesonOF -> lessounME [style=dashed]
+lessounME -> lesson
+
+// legend
+legendaL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">(lēctiō) legenda</font><br/><font point-size="12">(lesson) to be read</font>>]
+legendeOF [label=<<b>Old French</b><br/><font color="red">legende</font>>]
+legendME [label=<<b>Middle<br/>English</b><br/><font color="red">legend</font>>]
+legend [label=<<b>Modern<br/>English</b><br/><font color="red">legend</font>>]
+legereL -> legendaL -> legendeOF
+legendeOF -> legendME [style=dashed]
+legendME -> legend
+
+// legible
+legibilisL [label=<<b>Late Latin</b><br/><font color="red">legibilis</font>>]
+legibleME [label=<<b>Middle<br/>English</b><br/><font color="red">legible</font>>]
+legible [label=<<b>Modern<br/>English</b><br/><font color="red">legible</font>>]
+legereL -> legibilisL
+legibilisL -> legibleME [style=dashed]
+legibleME -> legible
+
+// collect
+komIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*kom</font><br/><font point-size="12">with</font>> shape=box style="dashed,rounded" URL="kom-with.svg"]
+comL [label=<<b>Latin</b><br/><font color="red">com-</font><br/><font point-size="12">together, with</font>>]
+colligereL [label=<<font color="red">colligere,<br/>collēct-</font>>]
+collectenME [label=<<b>Middle<br/>English</b><br/><font color="red">collecten</font>>]
+collect [label=<<b>Modern<br/>English</b><br/><font color="red">collect</font>>]
+komIE -> comL
+{ comL legereL } -> colligereL
+colligereL -> collectenME [style=dashed]
+collectenME -> collect
+
+// coil
+coillirOF [label=<<b>French</b><br/>(obsolete)<br/><font color="red">coillir</font><br/><font point-size="12">to gather</font>>]
+coil [label=<<b>Modern<br/>English</b><br/><font color="red">coil</font>>]
+colligereL -> coillirOF
+coillirOF -> coil [style=dashed label="?" decorate=true]
+
+// diligent
+disL [label=<<b>Latin</b><br/><font color="red">dī-, dis-</font><br/><font point-size="12">apart</font>>]
+diligereL [label=<<font color="red">dīligere</font><br/><font point-size="12">to esteem, love</font>>]
+diligensL [label=<<font color="red">dīligēns,<br/>dīligent-</font>>]
+diligentOF [label=<<b>Old French</b><br/><font color="red">diligent</font>>]
+diligentME [label=<<b>Middle<br/>English</b><br/><font color="red">diligent</font>>]
+diligent [label=<<b>Modern<br/>English</b><br/><font color="red">diligent</font>>]
+{ disL legereL } -> diligereL -> diligensL -> diligentOF
+diligentOF -> diligentME [style=dashed]
+diligentME -> diligent
+
+// elect
+eghsIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*eghs</font><br/><font point-size="12">out</font>> shape=box style="dashed,rounded" URL="eghs-out.svg"]
+exL [label=<<b>Latin</b><br/><font color="red">ē-, ex-</font><br/><font point-size="12">out of</font>>]
+eligereL [label=<<font color="red">ēligere, ēlēct-</font><br/><font point-size="12">to select</font>>]
+electenME [label=<<b>Middle<br/>French</b><br/><font color="red">electen</font>>]
+elect [label=<<b>Modern<br/>English</b><br/><font color="red">elect</font>>]
+eghsIE -> exL -> eligereL
+legereL -> eligereL
+eligereL -> electenME [style=dashed]
+electenME -> elect
+
+// florilegium
+flosL [label=<<b>Latin</b><br/><font color="red">flōs, flōr-</font><br/><font point-size="12">flower</font>>]
+florilegusL [label=<<font color="red">flōrilegus</font>>]
+florilegiumL [label=<<font color="red">flōrilegium</font>>]
+florilegium [label=<<b>Modern<br/>English</b><br/><font color="red">florilegium</font>>]
+flosL -> florilegusL
+legereL -> florilegusL
+florilegusL -> florilegiumL
+florilegiumL -> florilegium
+
+// intelligent
+enIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*en</font><br/><font point-size="12">in</font>> shape=box style="dashed,rounded" URL="en-in3.svg"]
+interL [label=<<b>Latin</b><br/><font color="red">inter-</font><br/><font point-size="12">between</font>>]
+intelligereL [label=<<font color="red">intelligere</font><br/><font point-size="12">to perceive</font>>]
+intelligensL [label=<<font color="red">intelligēns,<br/>intelligent-</font>>]
+intelligent [label=<<b>Modern<br/>English</b><br/><font color="red">intelligent</font>>]
+enIE -> interL
+{ interL legereL } -> intelligereL
+intelligereL -> intelligensL
+intelligensL -> intelligent [style=dashed]
+
+// neglect, negligee
+neIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ne</font><br/><font point-size="12">not</font>> shape=box style="dashed,rounded" URL="ne-not2.svg"]
+negL [label=<<b>Latin</b><br/><font color="red">neg-</font>>]
+neglegereL [label=<<font color="red">neglegere,<br/>neglēct-</font>>]
+neglect [label=<<b>Modern<br/>English</b><br/><font color="red">neglect</font>>]
+neIE -> negL -> neglegereL
+legereL -> neglegereL
+neglegereL -> neglect [style=dashed]
+negligerF [label=<<b>French</b><br/><font color="red">négliger</font><br/><font point-size="12">to neglect</font><br/><font color="red">négligée</font>>]
+negligee [label=<<b>Modern<br/>English</b><br/><font color="red">negligee</font>>]
+neglegereL -> negligerF
+negligerF -> negligee [style=dashed]
+
+// prelect
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">through</font>> shape=box style="dashed,rounded" URL="per-prai1.svg"]
+praeL [label=<<b>Latin</b><br/><font color="red">prae-</font><br/><font point-size="12">in front of</font>>]
+praelegereL [label=<<font color="red">praelegere,<br/>praelēct-</font>>]
+prelect [label=<<b>Modern<br/>English</b><br/><font color="red">prelect</font>>]
+perIE -> praeL
+{ praeL legereL } -> praelegereL
+praelegereL -> prelect [style=dashed]
+
+// sacrilege
+sakIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*sak-</font><br/><font point-size="12">sanctify</font>> shape=box style="dashed,rounded" URL="sak-sanctify.svg"]
+sacerL [label=<<b>Latin</b><br/><font color="red">sacer, sacr-</font><br/><font point-size="12">sacred</font>>]
+sacrilegusL [label=<<font color="red">sacrilegus</font><br/><font point-size="12">one who steals<br/>sacred things</font>>]
+sacrilegiumL [label=<<b>Latin</b><br/><font color="red">sacrilegium</font>>]
+sacrilegeOF [label=<<b>Old French</b><br/><font color="red">sacrilege</font>>]
+sacrilegeME [label=<<b>Middle<br/>English</b><br/><font color="red">sacrilege</font>>]
+sacrilege [label=<<b>Modern<br/>English</b><br/><font color="red">sacrilege</font>>]
+sakIE -> sacerL
+{ sacerL legereL } -> sacrilegusL -> sacrilegiumL -> sacrilegeOF
+sacrilegeOF -> sacrilegeME [style=dashed]
+sacrilegeME -> sacrilege
+
+// select
+sweIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*s(w)e-</font><br/><font point-size="12">one (pronoun), self</font>> shape=box style="dashed,rounded" URL="swe-self.svg"]
+seL [label=<<b>Latin</b><br/><font color="red">sē-</font><br/><font point-size="12">apart (on one's own)</font>>]
+seligereL [label=<<font color="red">sēligere, sēlēct-</font>>]
+select [label=<<b>Modern<br/>English</b><br/><font color="red">select</font>>]
+sweIE -> seL
+{ seL legereL } -> seligereL
+seligereL -> select [style=dashed]
+
+// sortilege
+sorsL [label=<<b>Latin</b><br/><font color="red">sors, sort-</font><br/><font point-size="12">lots</font>>]
+sortilegusL [label=<<font color="red">sortilegus</font><br/><font point-size="12">diviner</font>>]
+sortilegiumL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">sortilegium</font>>]
+sortilegeOF [label=<<b>Old French</b><br/><font color="red">sortilege</font>>]
+sortilegeME [label=<<b>Middle<br/>English</b><br/><font color="red">sortilege</font>>]
+sortilege [label=<<b>Modern<br/>English</b><br/><font color="red">sortilege</font>>]
+{ sorsL legereL } -> sortilegusL
+sortilegusL -> sortilegiumL -> sortilegeOF
+sortilegeOF -> sortilegeME [style=dashed]
+sortilegeME -> sortilege
+
+
+{ rank=sink lectern lectionary lecture lesson legend legible coil collect diligent elect florilegium intelligent neglect negligee prelect sacrilege select sortilege }
+{ rank=source legIE neIE sakIE sweIE eghsIE komIE perIE enIE }
+}

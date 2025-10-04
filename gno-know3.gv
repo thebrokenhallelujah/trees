@@ -1,0 +1,130 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+gno [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*gnō- </font><font point-size="16">to know</font>> shape=box style="dashed,rounded" URL="gno-know0.svg" tooltip="Indo-European \"*gnō-\" to know"]
+
+gnosko [label=<<font color="red">*gnō-sko-</font>>]
+gnoscereL [label=<<b>Latin</b><br/><font color="red">(g)nōscere</font><br/><font point-size="12">to get to know</font>>]
+gno -> gnosko -> gnoscereL
+
+// notice
+notusL [label=<<font color="red">nōtus</font><br/><font point-size="12">known</font>>]
+notitiaL [label=<<font color="red">nōtitia</font>>]
+noticeOF [label=<<b>Old French</b><br/><font color="red">notice</font>>]
+noticeME [label=<<b>Middle<br/>English</b><br/><font color="red">notice</font>>]
+notice [label=<<b>Modern<br/>English</b><br/><font color="red">notice</font>>]
+gnoscereL -> notusL -> notitiaL  -> noticeOF
+noticeOF -> noticeME [style=dashed]
+noticeME -> notice
+
+// notify
+notificareL [label=<<font color="red">nōtificāre</font><br/><font point-size="12">to make known</font>>]
+notifierOF [label=<<b>Old French</b><br/><font color="red">notifier</font>>]
+notifenME [label=<<b>Middle<br/>English</b><br/><font color="red">notifen</font>>]
+notify [label=<<b>Modern<br/>English</b><br/><font color="red">notify</font>>]
+notusL -> notificareL -> notifierOF
+notifierOF -> notifenME [style=dashed]
+notifenME -> notify
+
+// notion
+notioL [label=<<font color="red">nōtiō, nōtiōn-</font>>]
+nociounME [label=<<b>Middle<br/>English</b><br/><font color="red">nocioun</font><br/><font point-size="12">concept</font>>]
+notion [label=<<b>Modern<br/>English</b><br/><font color="red">notion</font>>]
+notusL -> notioL
+notioL -> nociounME [style=dashed]
+nociounME -> notion
+
+// notorious
+notoriusL [label=<<b>Medieval Latin</b><br/><font color="red">nōtōrius</font><br/><font point-size="12">well-known</font>>]
+notorious [label=<<b>Modern<br/>English</b><br/><font color="red">notorious</font>>]
+notusL -> notoriusL
+notoriusL -> notorious [style=dashed]
+
+// cognition
+komIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*kom</font><br/><font point-size="12">with</font>> shape=box style="dashed,rounded" URL="kom-with.svg"]
+coL [label=<<b>Latin</b><br/><font color="red">com-, co-</font><br/><font point-size="12">(intensive prefix)</font>>]
+cognoscereL [label=<<font color="red">cognōscere</font><br/><font point-size="12">to learn</font>>]
+cognitusL [label=<<font color="red">cognitus</font><br/><font point-size="12">learned</font>>]
+cognitioL [label=<<font color="red">cognitiō, cognitiōn-</font>>]
+cogniciounME [label=<<b>Middle<br/>English</b><br/><font color="red">cognicioun</font>>]
+cognition [label=<<b>Modern<br/>English</b><br/><font color="red">cognition</font>>]
+komIE -> coL
+{ coL gnoscereL } -> cognoscereL -> cognitusL -> cognitioL
+cognitioL -> cogniciounME [style=dashed]
+cogniciounME -> cognition
+
+// cognizance
+connoistreOF [label=<<b>Old French</b><br/><font color="red">connoistre</font><br/><font point-size="12">to know</font>>]
+conoissanceOF [label=<<font color="red">conoissance</font>>]
+conissaunceME [label=<<b>Middle<br/>English</b><br/><font color="red">conissaunce</font>>]
+cognizance [label=<<b>Modern<br/>English</b><br/><font color="red">cognizance</font>>]
+cognoscereL -> connoistreOF -> conoissanceOF
+conoissanceOF -> conissaunceME [style=dashed]
+conissaunceME -> cognizance
+
+// connoisseur
+connoisseorOF [label=<<font color="red">connoisseor</font>>]
+connoisseurF [label=<<b>French</b><br/><font color="red">connoisseur</font><br/><font point-size="12">(obsolete)</font>>]
+connoisseur [label=<<b>Modern<br/>English</b><br/><font color="red">connoisseur</font>>]
+connoistreOF -> connoisseorOF -> connoisseurF
+connoisseurF -> connoisseur [style=dashed]
+
+// acquaint
+adL [label=<<b>Latin</b><br/><font color="red">ad-</font><br/><font point-size="12">(intensive prefix)</font>>]
+accognoscereL [label=<<font color="red">accognōscere</font><br/><font point-size="12">to know perfectly</font>>]
+accognitusL [label=<<font color="red">accognitus</font><br/><font point-size="12">perfectly known</font>>]
+accognitareL [label=<<b>Medieval Latin</b><br/><font color="red">accognitāre</font>>]
+acointierOF [label=<<b>Old French</b><br/><font color="red">acointier</font>>]
+aqueintenME [label=<<b>Middle<br/>English</b><br/><font color="red">aqueinten</font>>]
+acquaint [label=<<b>Modern<br/>English</b><br/><font color="red">acquaint</font>>]
+{ adL cognoscereL } -> accognoscereL -> accognitusL -> accognitareL -> acointierOF
+acointierOF -> aqueintenME [style=dashed]
+aqueintenME -> acquaint
+
+// incognito
+neIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ne</font><br/><font point-size="12">not</font>> shape=box style="dashed,rounded" URL="ne-not3.svg"]
+inL [label=<<b>Latin</b><br/><font color="red">in-</font>>]
+incognitusL [label=<<font color="red">incognitus</font>>]
+incognitoI [label=<<b>Italian</b><br/><font color="red">incognito<br/>incognita</font>>]
+incognito [label=<<b>Modern<br/>English</b><br/><font color="red">incognito<br/>incognita</font>>]
+neIE -> inL
+{ inL cognitusL } -> incognitusL -> incognitoI
+incognitoI -> incognito [style=dashed]
+
+// quaint
+cointeOF [label=<<b>Old French</b><br/><font color="red">cointe, queinte</font>>]
+quaintME [label=<<b>Middle<br/>English</b><br/><font color="red">quaint</font><br/><font point-size="12">cunning, peculiar</font>>]
+quaint [label=<<b>Modern<br/>English</b><br/><font color="red">quaint</font>>]
+cognitusL -> cointeOF 
+cointeOF -> quaintME [style=dashed]
+quaintME -> quaint
+
+// recognize
+reL [label=<<b>Latin</b><br/><font color="red">re-</font><br/><font point-size="12">again</font>>]
+recognoscereL [label=<<font color="red">recognōscere</font>>]
+reconoistreOF [label=<<b>Old French</b><br/><font color="red">reonoistre, reconoiss-</font>>]
+recognisenME [label=<<b>Middle<br/>English</b><br/><font color="red">recognisen</font>>]
+recognize [label=<<b>Modern<br/>English</b><br/><font color="red">recognize</font>>]
+recognizareL [label=<<b>Medieval Latin</b><br/><font color="red">recognizāre</font><br/><font point-size="12">ro recognize</font>>]
+{ reL cognoscereL } -> recognoscereL -> reconoistreOF
+reconoistreOF -> recognisenME [style=dashed]
+recognizareL -> recognisenME [style=dotted arrowhead=onormal]
+recognisenME -> recognize
+
+// reconnaissance
+reconoissanceOF [label=<<font color="red">reconoissance</font><br/><font point-size="12">recognition</font>>]
+reconnaissanceF [label=<<b>French</b><br/><font color="red">reconnaissance</font>>]
+reconnaissance [label=<<b>Modern<br/>English</b><br/><font color="red">reconnaissance</font>>]
+reconoistreOF -> reconoissanceOF -> reconnaissanceF
+reconnaissanceF -> reconnaissance [style=dashed]
+
+// reconnoiter
+reconnoitreF [label=<<b>French</b><br/><font color="red">reconnoître</font><br/><font point-size="12">(obsolete)</font>>]
+reconnoiter [label=<<b>Modern<br/>English</b><br/><font color="red">reconnoiter</font>>]
+reconoistreOF -> reconnoitreF
+reconnoitreF -> reconnoiter [style=dashed]
+
+{ rank=sink notice notify notion notorious acquaint cognition cognizance connoisseur incognito quaint recognize reconnaissance reconnoiter }
+{ rank=same komIE neIE gnosko }
+}

@@ -1,0 +1,9 @@
+digraph {
+/* sources: roots, AHD */
+kwon [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">kwon</font></td><td><font point-size="16">dog</font></td></tr></table>> tooltip="Indo-European \"kwon\" dog" shape=box peripheries=2 margin=.3]
+
+link2 [label=<Latin<br/><font color="red">canis</font>> shape=box style="dashed,rounded" URL="kwon-dog2.svg" tooltip="Latin \"canis\""]
+link1 [label=<all other<br/>derivatives> shape=box style="dashed,rounded" URL="kwon-dog1.svg" tooltip="all other derivatives"]
+kwon -> { link2 link1 } [sametail=1 minlen=2]
+
+}

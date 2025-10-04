@@ -1,0 +1,12 @@
+strict digraph {
+/* sources: AHD, roots */
+node [shape=none]
+
+neIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">ne</font></td><td><font point-size="16">not</font></td></tr></table>> tooltip="Indo-European \"ne\" not" shape=box peripheries=2 margin=.3]
+
+neGm [label=<<b>Germanic</b><br/><font color="red">ne-</font>> shape=box style="dashed,rounded" URL="ne-not1.svg" tooltip="Germanic"]
+neL [label=<<b>Latin</b><br/><font color="red">ne-</font>> shape=box style="dashed, rounded" URL="ne-not2.svg" tooltip="Latin"]
+other [label=<other derivatives> shape=box style="dashed,rounded" URL="ne-not3.svg" tooltip="other derivatives"]
+neIE -> { neGm neL other }
+
+}

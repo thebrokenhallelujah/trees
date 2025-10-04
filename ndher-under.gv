@@ -1,0 +1,56 @@
+strict digraph {
+	node [shape=none]
+// source: AHD
+	
+	ndherIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*n̥der-</font></td><td><font point-size="16">under</font></td></tr></table>> tooltip="Indo-European \"*n̥dher-\" under" shape=box peripheries=2 margin=.3]
+	
+// under, under-
+	underGmc [label=<<b>Germanic</b><br/><font color="red">*under-</font>>]
+	underOE [label=<<b>Old English</b><br/><font color="red">under<br/>under-</font>>]
+	underME [label=<<b>Middle<br/>English</b><br/><font color="red">under<br/>under-</font>>]
+	under [label=<<b>Modern<br/>English</b><br/><font color="red">under<br/>under-</font>>]
+	ndherIE -> underGmc -> underOE -> underME -> under
+	
+// U-boat
+	unterOHG [label=<<b>Old High<br/>German</b><br/><font color="red">unter</font>>]
+	unterMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">unter</font>>]
+	unterGm [label=<<b>German</b><br/><font color="red">unter</font>>]
+	unterseebootGm [label=<<font color="red">Unterseeboot</font><br/><font point-size="12">"under sea boat"</font>>]
+	ubootGm [label=<<font color="red">U-Boot</font>>]
+	uboat [label=<<b>Modern<br/>English</b><br/><font color="red">U-boat</font>>]
+	underGmc -> unterOHG -> unterMHG -> unterGm -> unterseebootGm -> ubootGm
+	ubootGm -> uboat [style=dashed label="transl."]
+	
+// inferior
+	inferusL [label=<<b>Latin</b><br/><font color="red">īnferus</font><br/><font point-size="12">low</font>>]
+	inferiorL [label=<<font color="red">īnferior</font><br/><font point-size="12">lower</font>>]
+	inferiorME [label=<<b>Middle<br/>English</b><br/><font color="red">inferior</font>>]
+	inferior [label=<<b>Modern<br/>English</b><br/><font color="red">inferior</font>>]
+	ndherIE -> inferusL -> inferiorL
+	inferiorL -> inferiorME [style=dashed]
+	inferiorME -> inferior
+	
+// infernal
+	infernusL [label=<<b>Latin</b><br/><font color="red">īnfernus</font><br/><font point-size="12">lower, hell</font>>]
+	infernalisL [label=<<font color="red">īnfernālis</font><br/>>]
+	infernalOF [label=<<b>Old French</b><br/><font color="red">infernal</font>>]
+	infernalME [label=<<b>Middle<br/>English</b><br/><font color="red">infernal</font>>]
+	infernal [label=<<b>Modern<br/>English</b><br/><font color="red">infernal</font>>]
+	ndherIE -> infernusL -> infernalisL -> infernalOF
+	infernalOF -> infernalME [style=dashed]
+	infernalME -> infernal
+	
+// inferno
+	infernoI [label=<<b>Italian</b><br/><font color="red">inferno</font>>]
+	inferno [label=<<b>Modern<br/>English</b><br/><font color="red">inferno</font>>]
+	infernusL -> infernoI
+	infernoI -> inferno [style=dashed]
+	
+// infra
+	infraL [label=<<b>Latin</b><br/><font color="red">īnfrā</font><br/><font point-size="12">below</font>>]
+	infra [label=<<b>Modern<br/>English</b><br/><font color="red">infra-</font>>]
+	ndherIE -> infraL
+	infraL -> infra [style=dashed]
+	
+	{ rank=sink under uboat inferior infernal inferno infra }
+}

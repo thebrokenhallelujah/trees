@@ -1,0 +1,14 @@
+strict digraph {
+/* sources: */
+
+
+kwetwer [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">kʷetwer-</font></td><td><font point-size="16">four</font></td></tr></table>> tooltip="Indo-European \"kʷetwer-\" four" shape=box peripheries=2 margin=.3]
+
+kwetwer -> { kwetwor kweturs kwetr }
+kwetwor [label=<<font color="red">kʷwetwor-</font>> shape=box style="dashed,rounded" URL="kwetwer-four1.svg" tooltip=""]
+kweturs [label=<<font color="red">kʷeturs, kʷetrus<br/>kʷetur-, kʷetru-</font>> shape=box style="dashed,rounded" URL="kwetwer-four2.svg" tooltip=""]
+
+kwetr [label=<<table border="0"><tr><td><font color="red">kʷetur-to-</font><br/><font point-size="12">fourth</font></td>
+<td><font color="red">kʷet(w)r̥</font></td></tr></table>> shape=box style="rounded,dashed" URL="kwetwer-four3.svg" tooltip=""]
+
+}

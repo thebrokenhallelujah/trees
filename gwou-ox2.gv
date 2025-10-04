@@ -1,0 +1,72 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+gwou [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*gʷou- </font><font point-size="16">ox, cow, bull</font>> shape=box style="dashed,rounded" URL="gwou-ox0.svg" tooltip="Indo-European \"*gʷou-\" ox, cow, bull"]
+
+// buccinator
+kanIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*kan-</font><br/><font point-size="12">to sing</font>> shape=box style="dashed,rounded" URL="kan-sing.svg"]
+kanaIE [label=<<font color="red">*kan-ā-</font><br/><font point-size="12">singer</font>>]
+boukana [label=<<b>Latin</b><br/><font color="red">*bou-kanā-</font><br/><font point-size="12">bellower</font>>]
+buccinaL [label=<<font color="red">būcina, buccina</font><br/><font point-size="12">horn, trumpeet</font>>]
+buccinareL [label=<<font color="red">buccināre</font><br/><font point-size="12">to blow a horn</font><br/><font color="red">buccinātus</font>>]
+buccinatorL [label=<<font color="red">buccinatōr</font>>]
+buccinator [label=<<b>Modern<br/>English</b><br/><font color="red">buccinator</font><br/><font point-size="12">cheek muscle</font>>]
+kanIE -> kanaIE 
+{ gwou kanaIE } -> boukana -> buccinaL -> buccinareL -> buccinatorL
+buccinatorL -> buccinator [style=dashed]
+
+// gayal
+gauhSk [label=<<b>Sanskrit</b><br/><font color="red">gauḥ</font>>]
+gayalB [label=<<b>Bengali</b><br/><font color="red">gayāl</font>>]
+gayal [label=<<b>Modern<br/>English</b><br/><font color="red">gayal</font>>]
+gwou -> gauhSk -> gayalB
+gayalB -> gayal [style=dashed]
+
+// guar
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">to lead, pass over</font>> shape=box style="dashed,rounded" URL="per-lead1.svg"]
+parayatiSk [label=<<b>Sanskrit</b><br/><font color="red">pārayati, pālayati</font><br/><font point-size="12">he brings across safely, protects</font>>]
+gopalahSk [label=<<font color="red">gopālaḥ</font><br/><font point-size="12">cowherd</font>>]
+gopalakarkatiSk [label=<<font color="red">gopālakarkaṭī, gopālī</font><br/><font point-size="12">a type of cucumber</font>>]
+guarH [label=<<b>Hindi</b><br/><font color="red">guār</font>>]
+guar [label=<<b>Modern<br/>English</b><br/><font color="red">guar</font>>]
+perIE -> parayatiSk
+{ gauhSk parayatiSk } -> gopalahSk -> gopalakarkatiSk -> guarH
+guarH -> guar [style=dashed]
+
+// nilgai
+nilaSk [label=<<b>Sanskrit</b><br/><font color="red">nīla-</font><br/><font point-size="12">dark blue</font>>]
+nilaH [label=<<b>Hindi</b><br/><font color="red">nīla-</font>>]
+gawH [label=<<b>Hindi</b><br/><font color="red">gāw</font>>]
+nilgaiH [label=<<font color="red">nīlgāw, nīlgāī</font>>]
+nilgai [label=<<b>Modern<br/>English</b><br/><font color="red">nilgai</font>>]
+nilaSk -> nilaH
+gauhSk -> gawH
+{ nilaH gawH } -> nilgaiH
+nilgaiH -> nilgai [style=dashed]
+
+// gaur
+gwouro [label=<<font color="red">*gʷōu-ro-</font>>]
+gaurahSk [label=<<b>Sanskrit</b><br/><font color="red">gauraḥ</font><br/><font point-size="12">wild ox</font>>]
+gaurH [label=<<b>Hindi</b><br/><font color="red">gaur</font>>]
+gaur [label=<<b>Modern<br/>English</b><br/><font color="red">gaur</font>>]
+gwou -> gwouro -> gaurahSk -> gaurH
+gaurH -> gaur [style=dashed]
+
+// hecatomb
+gwwa [label=<<font color="red">gʷw-ā-</font>>]
+beGk [label=<<b>Greek</b><br/><font color="red">-bē</font><br/><font point-size="12">oxen</font>>]
+dekmIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dekm̥</font><br/><font point-size="12">ten</font>> shape=box style="dashed,rounded" URL="dekm-ten3.svg"]
+dkmtomIE [label=<<font color="red">*(d)km̥-tom</font><br/><font point-size="12">hundred</font>>]
+hekatonGk [label=<<b>Greek</b><br/><font color="red">hekaton</font><br/><font point-size="12">hundred</font>>]
+hekatombeGk [label=<<font color="red">hekatombē</font>>]
+hecatombeL [label=<<b>Latin</b><br/><font color="red">hecatombē</font>>]
+hecatomb [label=<<b>Modern<br/>English</b><br/><font color="red">hecatomb</font>>]
+gwou -> gwwa -> beGk
+dekmIE -> dkmtomIE -> hekatonGk
+{ hekatonGk beGk } -> hekatombeGk 
+hekatombeGk -> hecatombeL -> hecatomb [style=dashed]
+
+{ rank=sink buccinator gayal guar nilgai gaur hecatomb }
+{ rank=same kanIE perIE dekmIE gwou }
+}

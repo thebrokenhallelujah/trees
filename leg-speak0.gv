@@ -1,0 +1,15 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+legIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*leg-</font></td><td><font point-size="16">to collect, to speak</font></td></tr></table>> tooltip="Indo-European \"*leg-\" to collect, to speak" shape=box peripheries=2 margin=.3]
+
+leg1 [label=<Latin <font color="red">legere</font>> shape=box style="dashed,rounded" URL="leg-speak1.svg" tooltip=""]
+leg2 [label=<other Latin derivatives> shape=box style="dashed,rounded" URL="leg-speak2.svg" tooltip=""]
+leg3 [label=<Greek <font color="red">legein</font>> shape=box style="dashed,rounded" URL="leg-speak3.svg" tooltip=""]
+leg4 [label=<Greek <font color="red">logos</font>> shape=box style="dashed,rounded" URL="leg-speak4.svg" tooltip=""]
+
+
+legIE -> { leg1 leg2 leg3 leg4 }
+
+}

@@ -1,0 +1,113 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+man [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*man-, *mon-</font></td><td><font point-size="16">man</font></td></tr></table>> tooltip="Indo-European \"*man-, *mon-\" man" shape=box peripheries=2 margin=.3]
+
+// man
+manu [label=<<font color="red">*manu-, *manw-</font>>]
+mannaGc [label=<<b>Germanic</b><br/><font color="red">*manna-</font>>]
+mannOE [label=<<b>Old English</b><br/><font color="red">man(n)</font>>]
+manME [label=<<b>Middle<br/>English</b><br/><font color="red">man</font>>]
+manE [label=<<b>Modern<br/>English</b><br/><font color="red">man</font>>]
+man -> manu -> mannaGc -> mannOE -> manME -> manE
+
+// fugleman
+manOHG [label=<<b>Old High<br/>German</b><br/><font color="red">man</font>>]
+manMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">man</font>>]
+mannG [label=<<b>German</b><br/><font color="red">Mann</font>>]
+pleuIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*pleu-</font><br/><font point-size="12">to flow</font>> shape=box style="dashed,rounded" URL="pleu-flow2.svg"]
+flugilazGc [label=<<b>Germanic</b><br/><font color="red">*flugilaz</font><br/><font point-size="12">??</font>>]
+vlugelMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">vlügel</font><br/><font point-size="12">wing</font>>]
+flugelG [label=<<b>German</b><br/><font color="red">Flügel</font>>]
+flugelmannG [label=<<font color="red">Flügelmann</font><br/><font point-size="12">file leader</font>>]
+fugleman [label=<<b>Modern<br/>English</b><br/><font color="red">fugleman</font>>]
+mannaGc -> manOHG -> manMHG -> mannG
+pleuIE -> flugilazGc -> vlugelMHG -> flugelG
+{ flugelG mannG } -> flugelmannG
+flugelmannG -> fugleman [style=dashed]
+
+// landsman
+lantOHG [label=<<b>Old High<br/>German</b><br/><font color="red">lant</font><br/><font point-size="12">land</font>>]
+lantMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">lant</font>>]
+lantsmanMHG [label=<<font color="red">lantsman</font><br/><font point-size="12">countryman</font>>]
+landsmanY [label=<<b>Yiddish</b><br/><font color="red">landsman</font>>]
+landsman [label=<<b>Modern<br/>English</b><br/><font color="red">landsman</font>>]
+lantOHG -> lantMHG
+{ lantMHG manMHG } -> lantsmanMHG -> landsmanY
+landsmanY -> landsman [style=dashed]
+
+// manikin
+manMD [label=<<b>Middle<br/>Dutch</b><br/><font color="red">man</font>>]
+mannekijnMD [label=<<font color="red">mannekijn</font><br/><font point-size="12">little man</font>>]
+mannekijnD [label=<<b>Dutch</b><br/><font color="red">mannekijn</font>>]
+manikin [label=<<b>Modern<br/>English</b><br/><font color="red">manikin<br/>mannikin</font>>]
+mannaGc -> manMD -> mannekijnMD -> mannekijnD
+mannekijnD -> manikin [style=dashed]
+
+// mannequin
+mannequinOF [label=<<b>Old French</b><br/><font color="red">mannequin</font><br/><font point-size="12">little man, figuruine</font>>]
+mannequinF [label=<<b>French</b><br/><font color="red">mannequin</font>>]
+mannequin [label=<<b>Modern<br/>English</b><br/><font color="red">mannequin</font>>]
+mannekijnMD -> mannequinOF [style=dashed]
+mannequinOF -> mannequinF
+mannequinF -> mannequin [style=dashed]
+
+// yeoman
+manOF [label=<<b>Old Frisian</b><br/><font color="red">man</font>>]
+gaOF [label=<<b>Old Frisian</b><br/><font color="red">gā</font><br/><font point-size="12">region, district</font>>]
+gamanOF [label=<<font color="red">gāman</font><br/><font point-size="12">villager</font>>]
+geamanOE [label=<<b>Old English</b><br/><font color="red">*gēaman</font>>]
+yomanME [label=<<b>Middle<br/>English</b><br/><font color="red">yoman</font>>]
+yeoman [label=<<b>Modern<br/>English</b><br/><font color="red">yeoman</font>>]
+mannaGc -> manOF
+{ gaOF manOF } -> gamanOF
+gamanOF -> geamanOE [style=dashed]
+geamanOE -> yomanME [label="?"]
+yomanME -> yeoman
+
+// ombudsman
+ambhiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ambhi, *m̥bhi</font><br/><font point-size="12">around</font>> shape=box style="dashed,rounded" URL="ambhi-around.svg"]
+umON [label=<<b>Old Norse</b><br/><font color="red">um</font><br/><font point-size="12">about</font>>]
+bheudhIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*bheudh-</font><br/><font point-size="12">to be aware,<br/>to make aware</font>> shape=box style="dashed,rounded" URL="bheudh-aware.svg"]
+bodhON [label=<<b>Old Norse</b><br/><font color="red">bodh</font><br/><font point-size="12">command</font>>]
+madhrON [label=<<b>Old Norse</b><br/><font color="red">madhr</font>>]
+umbodhON [label=<<font color="red">umbodh</font><br/><font point-size="12">commission</font>>]
+umbodhsmadhrON [label=<<font color="red">unbodhsmadhr</font><br/><font point-size="12">deputy</font>>]
+ombudsmanS [label=<<b>Swedish</b><br/><font color="red">ombudsman</font>>]
+ombudsman [label=<<b>Modern<br/>English</b><br/><font color="red">ombudsman</font>>]
+ambhiIE -> umON
+bheudhIE -> bodhON
+mannaGc -> madhrON
+{ umON bodhON } -> umbodhON
+{ umbodhON madhrON } -> umbodhsmadhrON -> ombudsmanS
+ombudsmanS -> ombudsman [style=dashed]
+
+// manu
+manuII [label=<<b>Indo-Iranian</b><br/><font color="red">*manu-</font>>]
+manuhSk [label=<<b>Sanskrit</b><br/><font color="red">manuḥ,<br/>Manuḥ</font>>]
+manuE [label=<<b>Modern<br/>English</b><br/><font color="red">Manu</font>>]
+man -> manuII -> manuhSk 
+manuhSk -> manuE [style=dashed]
+
+// mensch
+manniskaGc [label=<<font color="red">*manniska-</font><br/><font point-size="12">human (adj.)</font>>]
+menniscoOHG [label=<<b>Old High<br/>German</b><br/><font color="red">mennisco</font><br/><font point-size="12">humanbeing</font>>]
+menschMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">mensch</font>>]
+menschY [label=<<b>Yiddish</b><br/><font color="red">mensch</font>>]
+mensch [label=<<b>Modern<br/>English</b><br/><font color="red">mensch</font>>]
+mannaGc -> manniskaGc -> menniscoOHG -> menschMHG -> menschY
+menschY -> mensch [style=dashed]
+
+// muzhik
+mongyoSl [label=<<b>Slavic</b><br/><font color="red">*mon-gyo-</font>>]
+muzhR [label=<<b>Russian</b><br/><font color="red">muzh</font>>]
+muzhikR [label=<<font color="red">muzhik</font><br/><font point-size="12">peasant</font>>]
+muzhik [label=<<b>Modern<br/>English</b><br/><font color="red">muzhik</font>>]
+man -> mongyoSl -> muzhR -> muzhikR
+muzhikR -> muzhik [style=dashed]
+
+{ rank=sink manE fugleman landsman manikin mannequin yeoman ombudsman manuE mensch muzhik }
+{ rank=same pleuIE manu }
+{ rank=same manuII mannaGc mongyoSl }
+}

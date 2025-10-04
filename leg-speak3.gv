@@ -1,0 +1,144 @@
+strict digraph {
+node [shape=none]
+
+legIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*leg- </font><font point-size="16">to collect, to speak</font>> shape=box style="dashed,rounded" URL="leg-speak0.svg" tooltip="Indo-European \"*leg-\" to collect, to speak"]
+
+// omitted: eclogite (rock), eclogue (poem)
+
+// lexicon
+legeinG [label=<<b>Greek</b><br/><font color="red">legein</font><br/><font point-size="12">to gather, to speak</font>>]
+lexisG [label=<<font color="red">lexis</font><br/><font point-size="12">word</font>>]
+lexikonG [label=<<font color="red">lexikon (biblion)</font><br/><font point-size="12">(book) of words</font>>]
+lexiconL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">lexicon</font>>]
+lexicon [label=<<b>Modern<br/>English</b><br/><font color="red">lexicon</font>>]
+legIE -> legeinG -> lexisG -> lexikonG
+lexikonG -> lexiconL -> lexicon [style=dashed]
+
+// logion
+logionG [label=<<font color="red">logion</font><br/><font point-size="12">oracle</font>>]
+logion [label=<<b>Modern<br/>English</b><br/><font color="red">logion</font><br/><font point-size="12">a saying attributed<br/>to Jesus</font>>]
+legeinG -> logionG
+logionG -> logion [style=dashed]
+
+// -logue/-log
+logosG [label=<<font color="red">-logos</font>>]
+logueF [label=<<b>French</b><br/><font color="red">-logue</font>>]
+logue [label=<<b>Modern<br/>English</b><br/><font color="red">-logue<br/>-log</font>>]
+legeinG -> logosG
+logosG -> logueF -> logue [style=dashed]
+
+// alexia
+neIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ne</font><br/><font point-size="12">not</font>> shape=box style="dashed,rounded" URL="ne-not3.svg"]
+aG [label=<<b>Greek</b><br/><font color="red">a-</font>>]
+alexia [label=<<b>Modern<br/>English</b><br/><font color="red">alexia</font><br/><font point-size="12">loss of the ability<br/>to read</font>>]
+neIE -> aG
+{ aG lexisG } -> alexia [style=dashed]
+
+// analects
+anaG [label=<<b>Greek</b><br/><font color="red">ana-</font><br/><font point-size="12">up</font>>]
+analegeinG [label=<<b>Greek</b><br/><font color="red">analegein</font>>]
+analektosG [label=<<font color="red">analektos</font><br/><font point-size="12">gathered together</font>>]
+analektaG [label=<<font color="red">analekta</font><br/><font point-size="12">selected things</font>>]
+analects [label=<<b>Modern<br/>English</b><br/><font color="red">analects</font>>]
+{ anaG legeinG } -> analegeinG -> analektosG -> analektaG
+analektaG -> analects [style=dashed]
+
+// anthology
+anthologeinG [label=<<font color="red">anthologein</font><br/><font point-size="12">to gather flowers</font>>]
+anthologiaG [label=<<font color="red">anthologiā</font><br/><font point-size="12">flower gathering,<br/>collection of epigrams</font>>]
+anthology [label=<<b>Modern<br/>English</b><br/><font color="red">anthology</font>>]
+legeinG -> anthologeinG -> anthologiaG
+anthologiaG -> anthology [style=dashed]
+
+// catalog/catalogue
+kataG [label=<<b>Greek</b><br/><font color="red">kata-</font><br/><font point-size="12">down, off</font>>]
+katalegeinG [label=<<font color="red">katalegein</font><br/><font point-size="12">to list</font>>]
+katalogosG [label=<<font color="red">katalogos</font>>]
+catalogusL [label=<<b>Late Latin</b><br/><font color="red">catalogus</font>>]
+catalogueOF [label=<<b>Old French</b><br/><font color="red">catalogue</font>>]
+cathalogeME [label=<<b>Middle<br/>English</b><br/><font color="red">cathaloge</font><br/><font point-size="12">list, register</font>>]
+catalog [label=<<b>Modern<br/>English</b><br/><font color="red">catalog<br/>catalogue</font>>]
+{ kataG legeinG } -> katalegeinG -> katalogosG
+katalogosG -> catalogusL [style=dashed]
+catalogusL -> catalogueOF
+catalogueOF -> cathalogeME [style=dashed]
+cathalogeME -> catalog
+
+// dialect
+legesthaiG [label=<<font color="red">legesthai</font>>]
+dialegesthaiG [label=<<font color="red">dialegesthai</font><br/><font point-size="12">to discourse</font>>]
+dialektosG [label=<<font color="red">dialektos</font><br/><font point-size="12">speech</font>>]
+dialectusL [label=<<b>Latin</b><br/><font color="red">dialectus</font><br/><font point-size="12">form of speech</font>>]
+dialecteOF [label=<<b>Old French</b><br/><font color="red">dialecte</font>>]
+dialecteME [label=<<b>Middle<br/>English</b><br/><font color="red">dialecte</font>>]
+dialect [label=<<b>Modern<br/>English</b><br/><font color="red">dialect</font>>]
+legeinG -> legesthaiG -> dialegesthaiG -> dialektosG
+dialektosG -> dialectusL [style=dashed]
+dialectusL -> dialecteOF
+dialecteOF -> dialecteME [style=dashed]
+dialecteME -> dialect
+
+// dialog/dialogue
+dialogosG [label=<<font color="red">dialogos</font><br/><font point-size="12">conversation</font>>]
+dialogusL [label=<<b>Latin</b><br/><font color="red">dialogus</font>>]
+dialogueOF [label=<<b>Old French</b><br/><font color="red">dialogue</font>>]
+dialogME [label=<<b>Middle<br/>English</b><br/><font color="red">dialog</font>>]
+dialogue [label=<<b>Modern<br/>English</b><br/><font color="red">dialog<br/>dialogue</font>>]
+dialegesthaiG -> dialogosG
+dialogosG -> dialogusL [style=dashed]
+dialogusL -> dialogueOF
+dialogueOF -> dialogME [style=dashed]
+dialogME -> dialogue
+
+// dyslexia
+dusG [label=<<b>Greek</b><br/><font color="red">dus-</font><br/><font point-size="12">bad</font>>]
+dysL [label=<<b>New Latin</b><br/><font color="red">dys-</font>>] 
+dyslexia [label=<<b>Modern<br/>English</b><br/><font color="red">dyslexia</font>>]
+dusG -> dysL
+{ dysL lexisG } -> dyslexia [style=dashed]
+
+// eclectic
+eghsIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*eghs</font><br/><font point-size="12">out</font>> shape=box style="dashed,rounded" URL="eghs-out.svg"]
+ekG [label=<<b>Greek</b><br/><font color="red">ek-</font>>]
+eklegeinG [label=<<font color="red">eklegein</font><br/><font point-size="12">to select</font>>]
+eklektosG [label=<<font color="red">eklektos</font><br/><font point-size="12">selected</font>>]
+eklektikosG [label=<<font color="red">eklektikos</font><br/><font point-size="12">selective</font>>]
+eclectic [label=<<b>Modern<br/>English</b><br/><font color="red">eclectic</font>>]
+eghsIE -> ekG
+{ ekG legeinG } -> eklegeinG -> eklektosG -> eklektikosG
+eklektikosG -> eclectic [style=dashed]
+
+// horologe
+yerIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*yēr-</font><br/><font point-size="12">year</font>> shape=box style="dashed,rounded" URL="yer-year.svg"]
+horaG [label=<<b>Greek</b><br/><font color="red">hōrā</font><br/><font point-size="12">hour, season</font>>]
+horologionG [label=<<font color="red">hōrologion</font>>]
+horologiumL [label=<<b>Latin</b><br/><font color="red">hōrologium</font>>]
+orlogeOF [label=<<b>Old French</b><br/><font color="red">orloge</font>>]
+orlogeME [label=<<b>Middle<br/>English</b><br/><font color="red">orlogue</font>>]
+horologe [label=<<b>Modern<br/>English</b><br/><font color="red">horologe</font><br/><font point-size="12">timepiece</font>>]
+yerIE -> horaG
+{ horaG logionG } -> horologionG
+horologionG -> horologiumL [style=dashed]
+horologiumL -> orlogeOF
+orlogeOF -> orlogeME [style=dashed]
+orlogeME -> horologe
+
+// lectotype
+lektosG [label=<<font color="red">lektos</font><br/><font point-size="12">chosen</font>>]
+lectotype [label=<<b>Modern<br/>English</b><br/><font color="red">lectotype</font>>]
+legeinG -> lektosG
+lektosG -> lectotype
+
+// prolegomenon
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">forward</font>> shape=box style="dashed,rounded" URL="per-pro2.svg"]
+proG [label=<<b>Latin</b><br/><font color="red">pro-</font>>]
+prolegeinG [label=<<font color="red">prolegein</font><br/><font point-size="12">to say beforehand</font>>]
+prolegomenonG [label=<<font color="red">prolegomenon</font>>]
+prolegomenon [label=<<b>Modern<br/>English</b><br/><font color="red">prolegomenon</font>>]
+perIE -> proG
+{ proG legeinG } -> prolegeinG -> prolegomenonG
+prolegomenonG -> prolegomenon [style=dashed]
+
+{ rank=sink lexicon logion logue alexia analects anthology catalog dialect dialogue dyslexia eclectic horologe lectotype prolegomenon }
+{ rank=source legIE eghsIE yerIE perIE neIE }
+}

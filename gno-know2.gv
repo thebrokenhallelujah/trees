@@ -1,0 +1,128 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+gno [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*gnō- </font><font point-size="16">to know</font>> shape=box style="dashed,rounded" URL="gno-know0.svg" tooltip="Indo-European \"*gnō-\" to know"]
+
+gnosko [label=<<font color="red">*gnō-sko-</font>>]
+gnoro [label=<<font color="red">*gnō-ro-</font>>]
+gnodhli [label=<<font color="red">*gnō-dhli</font>>]
+gignosko [label=<<font color="red">*gi-gnō-sko-</font>>]
+gnero [label=<<font color="red">*gn̥ə-ro-</font>>]
+// gneti [label=<<font color="red">*gn̥ə-ti-</font>>]  Zend-Avesta
+
+gno -> { gnosko gnoro gnodhli gignosko gnero }
+
+// page 3: L (g)nōscere
+gnoscereL [label=<<b>Latin</b><br/><font color="red">(g)nōscere</font><br/><font point-size="12">to get to know</font>> shape=box style="dashed,rounded" URL="gno-know3.svg" tooltip="(g)nōscere"]
+gnosko -> gnoscereL
+
+// ignore
+neIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ne</font><br/><font point-size="12">not</font>> shape=box style="dashed,rounded" URL="ne-not3.svg"]
+inL [label=<<b>Latin</b><br/><font color="red">in-, i-</font>>]
+ignorareL [label=<<b>Latin</b><br/><font color="red">ignōrāre</font><br/><font point-size="12">not to know</font>>]
+ignorerOF [label=<<b>Old French</b><br/><font color="red">ignorer</font>>]
+ignorerF [label=<<b>French</b><br/><font color="red">ignorer</font>>]
+ignore [label=<<b>Modern<br/>English</b><br/><font color="red">ignore</font>>]
+neIE -> inL
+{ gnoro inL } -> ignorareL -> ignorerOF -> ignorerF
+ignorerF -> ignore [style=dashed]
+
+// ignorant
+ignoransL [label=<<b>Latin</b><br/><font color="red">ignōrāns, ignōrant-</font><br/><font point-size="12">unknowing</font>>]
+ignorantOF [label=<<b>Old French</b><br/><font color="red">ignorant</font>>]
+ignorauntME [label=<<b>Middle<br/>English</b><br/><font color="red">ignoraunt</font>>]
+ignorant [label=<<b>Modern<br/>English</b><br/><font color="red">ignorant</font>>]
+ignorareL -> ignoransL -> ignorantOF
+ignorantOF -> ignorauntME [style=dashed]
+ignorauntME -> ignorant
+
+// noble
+nobilisL [label=<<b>Latin</b><br/><font color="red">nōbilis</font><br/><font point-size="12">famous, noble</font>>]
+nobleOF[label=<<b>Old French</b><br/><font color="red">noble</font>>]
+nobleME [label=<<b>Middle<br/>English</b><br/><font color="red">noble</font>>]
+noble [label=<<b>Modern<br/>English</b><br/><font color="red">noble</font>>]
+gnodhli -> nobilisL -> nobleOF
+nobleOF -> nobleME [style=dashed]
+nobleME -> noble
+
+// ignoble
+ignobilisL [label=<<b>Latin</b><br/><font color="red">ignōbilis</font>>]
+ignobleOF [label=<<b>Old French</b><br/><font color="red">ignoble</font>>]
+ignobleME [label=<<b>Middle<br/>English</b><br/><font color="red">ignoble</font>>]
+ignoble [label=<<b>Modern<br/>English</b><br/><font color="red">ignoble</font>>]
+{ inL nobilisL } -> ignobilisL
+ignobilisL -> ignobleOF 
+ignobleOF -> ignobleME [style=dashed]
+ignobleME -> ignoble
+
+// narrate
+gnarusL [label=<<b>Latin</b><br/><font color="red">gnārus</font><br/><font point-size="12">knowing, expert</font>>]
+narrareL [label=<<font color="red">narrāre, narrāt-</font><br/><font point-size="12">to tell</font>>]
+narrate [label=<<b>Modern<br/>English</b><br/><font color="red">narrate</font>>]
+gnero -> gnarusL -> narrareL
+narrareL -> narrate [style=dashed]
+
+// gnome (maxim)
+gignoskeinGk [label=<<b>Greek</b><br/><font color="red">gignōskein</font>>]
+gnomeGk [label=<<font color="red">gnōmē</font>>]
+gnome [label=<<b>Modern<br/>English</b><br/><font color="red">gnome</font><br/><font point-size="12">maxim</font>>]
+gignosko -> gignoskeinGk -> gnomeGk
+gnomeGk -> gnome [style=dashed]
+
+// gnomon
+gnomonGk [label=<<font color="red">gnōmōn</font><br/><font point-size="12">interpreter</font>>]
+gnomonL [label=<<b>Latin</b><br/><font color="red">gnōmōn</font>>]
+gnomon [label=<<b>Modern<br/>English</b><br/><font color="red">gnomon</font>>]
+gignoskeinGk -> gnomonGk
+gnomonGk -> gnomonL -> gnomon [style=dashed]
+
+// Gnostic
+gnosisGk [label=<<b>Greek</b><br/><font color="red">gnōsis</font><br/><font point-size="12">knowledge</font>>]
+gnostikosGk [label=<<font color="red">gnōstikos</font><br/><font point-size="12">concerning knowledge</font>>]
+gnostikos2Gk [label=<<b>Late Greek</b><br/><font color="red">Gnōstikos</font><br/><font point-size="12">a Gnostic</font>>]
+gnosticusL [label=<<b>Latin</b><br/><font color="red">Gnōsticus</font>>]
+gnostic [label=<<b>Modern<br/>English</b><br/><font color="red">Gnostic</font>>]
+gignoskeinGk -> gnosisGk -> gnostikosGk -> gnostikos2Gk
+gnostikos2Gk -> gnosticusL -> gnostic [style=dashed]
+
+// agnosia
+aGk [label=<<b>Greek</b><br/><font color="red">a-</font><br/><font point-size="12">without</font>>]
+agnosiaGk [label=<<font color="red">agnōsiā</font><br/><font point-size="12">ignorance</font>>]
+agnosia [label=<<b>Modern<br/>English</b><br/><font color="red">agnosia</font>>]
+neIE -> aGk 
+{ aGk gnosisGk } -> agnosiaGk
+agnosiaGk -> agnosia [style=dashed]
+
+// diagnosis
+diaGk [label=<<b>Greek</b><br/><font color="red">dia-</font><br/><font point-size="12">apart</font>>]
+diagignoskeinGk [label=<<font color="red">diagignōskein</font><br/><font point-size="12">to distinguish</font>>]
+diagnosisGk [label=<<font color="red">diagnōsis</font><br/><font point-size="12">discernment</font>>]
+diagnosis [label=<<b>Modern<br/>English</b><br/><font color="red">diagnosis</font>>]
+{ diaGk gignoskeinGk } -> diagignoskeinGk -> diagnosisGk
+diagnosisGk -> diagnosis [style=dashed]
+
+// physiognomy
+bheuIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*bheu(ə)-</font><br/><font point-size="12">to be, exist, grow</font>> shape=box style="dashed,rounded" URL="bheu-grow2.svg"]
+phusioGk [label=<<b>Greek</b><br/><font color="red">phusio-</font><br/><font point-size="12">physical</font>>]
+phusiognomiaGk [label=<<font color="red">phusiognōmonia,<br/>phusiognōmiā</font>>]
+physiognomiaL [label=<<b>Late Latin</b><br/><font color="red">physiognōmia</font>>]
+physiognomy [label=<<b>Modern<br/>English</b><br/><font color="red">physiognomy</font>>]
+bheuIE -> phusioGk
+{ phusioGk gnomonGk } -> phusiognomiaGk
+phusiognomiaGk -> physiognomiaL -> physiognomy [style=dashed]
+
+// prognosis
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">(various<br/>prepositions)</font>> shape=box style="dashed,rounded" URL="per-pro2.svg"]
+proGk [label=<<b>Greek</b><br/><font color="red">pro-</font><br/><font point-size="12">before</font>>]
+progignoskeinGk [label=<<font color="red">progignōskein</font>>]
+prognosisGk [label=<<font color="red">prognōsis</font>>]
+prognosisL [label=<<b>Latin</b><br/><font color="red">prognōsis</font>>]
+prognosis [label=<<b>Modern<br/>English</b><br/><font color="red">prognosis</font>>]
+perIE -> proGk
+{ proGk gignoskeinGk } -> progignoskeinGk -> prognosisGk
+prognosisGk -> prognosisL -> prognosis [style=dashed]
+
+{ rank=sink ignore ignorant noble ignoble narrate gnome gnomon gnostic agnosia diagnosis physiognomy prognosis }
+{ rank=same neIE bheuIE perIE }
+}

@@ -1,0 +1,100 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+gwou [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*gʷou- </font><font point-size="16">ox, cow, bull</font>> shape=box style="dashed,rounded" URL="gwou-ox0.svg" tooltip="Indo-European \"*gʷou-\" ox, cow, bull"]
+
+// cow
+gwous [label=<<font color="red">*gʷōu-s-</font>>]
+kouzGc [label=<<b>Germanic</b><br/><font color="red">*kōuz</font>>]
+cuOE [label=<<b>Old English</b><br/><font color="red">cū</font><br/><font point-size="12">cow</font>>]
+couME [label=<<b>Middle<br/>English</b><br/><font color="red">cou</font>>]
+cow [label=<<b>Modern<br/>English</b><br/><font color="red">cow</font><br/><font point-size="12">cattle</font>>]
+gwou -> gwous -> kouzGc -> cuOE -> couME -> cow
+
+// kine
+cynaOE [label=<<b>Old English</b><br/><font color="red">cȳna</font><br/><font point-size="12">cows'</font>>]
+kynME [label=<<b>Middle<br/>English</b><br/><font color="red">kyn</font>>]
+kine [label=<<b>Modern<br/>English</b><br/><font color="red">kine</font><br/><font point-size="12">(archaic plural<br/>of cow)</font>>]
+cuOE -> cynaOE -> kynME -> kine
+
+// bovine
+bosL [label=<<b>Latin</b><br/><font color="red">bōs, bov-</font>>]
+bovinusL [label=<<b>Late Latin</b><br/><font color="red">bovīnus</font>>]
+bovine [label=<<b>Modern<br/>English</b><br/><font color="red">bovine</font>>]
+gwous -> bosL -> bovinusL
+bovinusL -> bovine [style=dashed]
+
+// beef
+buefOF [label=<<b>Old French</b><br/><font color="red">buef</font>>]
+beefME [label=<<b>Middle<br/>English</b><br/><font color="red">beef</font>>]
+beef [label=<<b>Modern<br/>English</b><br/><font color="red">beef</font>>]
+bosL -> buefOF
+buefOF -> beefME [style=dashed]
+beefME -> beef
+
+// bugle
+buculusL [label=<<font color="red">būculus</font><br/><font point-size="12">steer</font>>]
+bugleOF [label=<<b>Old French</b><br/><font color="red">bugle</font>>]
+bugleME [label=<<b>Middle<br/>English</b><br/><font color="red">bugle</font>>]
+bugle [label=<<b>Modern<br/>English</b><br/><font color="red">bugle</font>>]
+bosL -> buculusL -> bugleOF
+bugleOF -> bugleME [style=dashed]
+bugleME -> bugle
+
+// bucolic
+bousGk [label=<<b>Greek</b><br/><font color="red">bous</font>>]
+boukolosGk [label=<<font color="red">boukolos</font><br/><font point-size="12">cowherd</font><br/><font color="red">boukolikos</font><br/><font point-size="12">pastoral</font>>]
+bucolicusL [label=<<b>Latin</b><br/><font color="red">būcolicus</font>>]
+bucolic [label=<<b>Modern<br/>English</b><br/><font color="red">bucolic</font>>]
+gwous -> bousGk -> boukolosGk
+boukolosGk -> bucolicusL -> bucolic [style=dashed]
+
+// Boötes (constellation)
+booteinGk [label=<<font color="red">boōtein</font><br/><font point-size="12">to plow</font>>]
+bootesGk [label=<<font color="red">boōtes</font><br/><font point-size="12">plowman</font>>]
+bootesL [label=<<b>Latin</b><br/><font color="red">Boōtes</font>>]
+bootes [label=<<b>Modern<br/>English</b><br/><font color="red">Boötes</font>>]
+bousGk -> booteinGk -> bootesGk
+bootesGk -> bootesL -> bootes [style=dashed]
+
+// boustrophedon
+stropheGk [label=<<b>Greek</b><br/><font color="red">strophē</font><br/><font point-size="12">a turning</font>>]
+boustrophedonGk [label=<<font color="red">boustrophēdon</font>>]
+boustrophedon [label=<<b>Modern<br/>English</b><br/><font color="red">boustrophedon</font>>]
+{ bousGk stropheGk } -> boustrophedonGk
+boustrophedonGk -> boustrophedon [style=dashed]
+
+// bulimia
+limosGk [label=<<b>Greek</b><br/><font color="red">līmos</font><br/><font point-size="12">hunger</font>>]
+boulimiaGk [label=<<font color="red">boulīmiā</font>>]
+bulimiaNL [label=<<b>New Latin</b><br/><font color="red">būlīmia</font>>]
+bulimia [label=<<b>Modern<br/>English</b><br/><font color="red">bulimia</font>>]
+{ bousGk limosGk } -> boulimiaGk
+boulimiaGk  -> bulimiaNL -> bulimia [style=dashed]
+
+// butter
+bouturonGk [label=<<font color="red">boutūron</font>>]
+butyrumL [label=<<b>Latin</b><br/><font color="red">būtȳrum</font>>]
+butereOE [label=<<b>Old English</b><br/><font color="red">butere</font>>]
+butereME [label=<<b>Middle<br/>English</b><br/><font color="red">butere</font>>]
+butter [label=<<b>Modern<br/>English</b><br/><font color="red">butter</font>>]
+bousGk -> bouturonGk
+bouturonGk -> butyrumL -> butereOE [style=dashed]
+butereOE -> butereME -> butter
+
+// buffalo
+boubalosGk [label=<<font color="red">boubalos</font><br/><font point-size="12">antelope, buffalo</font>>]
+bubalusL [label=<<b>Latin</b><br/><font color="red">būbalus</font>>]
+bufalusL [label=<<b>Late Latin</b><br/><font color="red">būfalus</font>>]
+bufaloI [label=<<b>Italian</b><br/><font color="red">bufalo</font>>]
+bufaloP [label=<<b>Portuguese</b><br/><font color="red">búfalo</font>>]
+bufaloS [label=<<b>Spanish</b><br/><font color="red">búfalo</font>>]
+buffalo [label=<<b>Modern<br/>English</b><br/><font color="red">buffalo</font>>]
+bousGk -> boubalosGk [label="?" decorate=true]
+boubalosGk -> bubalusL [style=dashed]
+bubalusL -> bufalusL -> { bufaloI bufaloP bufaloS }
+{ bufaloI bufaloP bufaloS } -> buffalo [style=dashed]
+
+{ rank=sink cow kine beef bovine bugle bucolic bootes boustrophedon bulimia butter buffalo }
+}

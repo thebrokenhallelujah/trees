@@ -1,0 +1,10 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+gwou [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*gʷou-</font></td><td><font point-size="16">ox, bull, cow</font></td></tr></table>> tooltip="Indo-European \"*gʷou-\" ox, bull, cow" shape=box peripheries=2 margin=.3]
+
+gwous [label=<<font color="red">*gʷōu-s-</font>> shape=box style="dashed,rounded" URL="gwou-ox1.svg" tooltip="*gʷōu-s-"]
+other [label=<other derivatives> shape=box style="dashed,rounded" URL="gwou-ox2.svg" tooltip="other derivatives"]
+
+}

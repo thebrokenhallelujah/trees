@@ -1,0 +1,145 @@
+strict digraph {
+node [shape=none]
+
+legIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*leg- </font><font point-size="16">to collect, to speak</font>> shape=box style="dashed,rounded" URL="leg-speak0.svg" tooltip="Indo-European \"*leg-\" to collect, to speak"]
+
+// ligneous, ligni-
+legnoIE [label=<<font color="red">*leg-no-</font>>]
+lignumL [label=<<b>Latin</b><br/><font color="red">lignum</font><br/><font point-size="12">wood, firewood<br/>("that which is gathered")</font>>]
+ligneusL [label=<<font color="red">ligneus</font>>]
+ligneous [label=<<b>Modern<br/>English</b><br/><font color="red">ligneous</font>>]
+legIE -> legnoIE -> lignumL -> ligneusL
+ligneusL -> ligneous [style=dashed]
+ligni [label=<<b>Modern<br/>English</b><br/><font color="red">ligni-</font>>]
+lignumL -> ligni [style=dashed]
+
+// lex
+leegIE [label=<<font color="red">*lēg-</font>>]
+lexL [label=<<b>Latin</b><br/><font color="red">lēx, lēg-</font><br/><font point-size="12">law ("collection<br/>of rules"?)</font>>]
+lex [label=<<b>Modern<br/>English</b><br/><font color="red">lex</font>>]
+legIE -> leegIE
+leegIE -> lexL [label="?" decorate=true]
+lexL -> lex [style=dashed]
+
+// legal
+legalisL [label=<<b>Latin</b><br/><font color="red">lēgālis</font>>]
+legalOF [label=<<b>Old French</b><br/><font color="red">legal</font>>]
+legalME [label=<<b>Middle<br/>English</b><br/><font color="red">legal</font>>]
+legal [label=<<b>Modern<br/>English</b><br/><font color="red">legal</font>>]
+lexL -> legalisL -> legalOF
+legalOF -> legalME [style=dashed]
+legalME -> legal
+
+// legist
+legistaL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">lēgista</font>>]
+legisteOF [label=<<b>Old French</b><br/><font color="red">legiste</font>>]
+legisteME [label=<<b>Middle<br/>English</b><br/><font color="red">legiste</font>>]
+legist [label=<<b>Modern<br/>English</b><br/><font color="red">legist</font>>] 
+lexL -> legistaL -> legisteOF
+legisteOF -> legisteME [style=dashed]
+legisteME -> legist
+
+// legitimate
+legitimusL [label=<<font color="red">lēgitimus</font><br/><font point-size="12">legitimate</font>>]
+legitimareL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">lēgitimāre</font><br/><font point-size="12">to make lawful</font>>]
+legitimatusL [label=<<font color="red">lēgitimātus</font>>]
+legitimatME [label=<<b>Middle<br/>English</b><br/><font color="red">legitimat</font><br/><font point-size="12">born in wedlock</font>>]
+legitimate [label=<<b>Modern<br/>English</b><br/><font color="red">legitimate</font>>]
+lexL -> legitimusL -> legitimareL -> legitimatusL
+legitimatusL -> legitimatME [style=dashed]
+legitimatME -> legitimate
+
+// loyal
+leialOF [label=<<b>Old French</b><br/><font color="red">leial, loial</font>>]
+loyalF [label=<<b>French</b><br/><font color="red">loyal</font>>]
+loyal [label=<<b>Modern<br/>English</b><br/><font color="red">loyal</font>>]
+legalisL -> leialOF -> loyalF
+loyalF -> loyal [style=dashed]
+
+// legislator
+teleIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*telə-</font><br/><font point-size="12">to lift, to weigh</font>> shape=box style="dashed,rounded" URL="tele-lift.svg"]
+latusL [label=<<b>Latin</b><br/><font color="red">lātus</font><br/><font point-size="12">carried</font>>]
+latorL [label=<<font color="red">lātor</font><br/><font point-size="12">proposer, bearer</font>>]
+teleIE -> latusL -> latorL
+legisL [label=<<font color="red">lēgis lātor</font>>]
+legislatorL [label=<<font color="red">lēgis</font>>]
+legislateurOF [label=<<b>Old French</b><br/><font color="red">législateur</font>>]
+legislateurF [label=<<b>French</b><br/><font color="red">législateur</font>>]
+legislator [label=<<b>Modern<br/>English</b><br/><font color="red">legislator</font>>]
+lexL -> legisL
+{ legisL latorL } -> legislatorL -> legislateurOF -> legislateurF
+legislateurF -> legislator [style=dashed]
+
+// privilege
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">forward, through</font>> shape=box style="dashed,rounded" URL="per-prai1.svg"]
+preiwoIE [label=<<font color="red">*prei-wo-</font>>]
+privusL [label=<<b>Latin</b><br/><font color="red">prīvus</font><br/><font point-size="12">single, alone<br/>("standing in front")</font>>]
+privilegiumL [label=<<font color="red">prīvilēgium</font><br/><font point-size="12">a law affecting one</font>>]
+privilegeOF [label=<<b>Old French</b><br/><font color="red">privilege</font>>]
+privilegeME [label=<<b>Middle<br/>English</b><br/><font color="red">privilege</font>>]
+privilege [label=<<b>Modern<br/>English</b><br/><font color="red">privilege</font>>]
+perIE -> preiwoIE -> privusL
+{ privusL lexL } -> privilegiumL -> privilegeOF
+privilegeOF -> privilegeME [style=dashed]
+privilegeME -> privilege
+
+// legacy
+legareL [label=<<b>Latin</b><br/><font color="red">lēgāre</font><br/><font point-size="12">to depute<br/>("to engage by contract")</font>>]
+legatusL [label=<<font color="red">lēgātus</font>>]
+legatiaL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">lēgātia</font>>]
+legacieOF [label=<<b>Old French</b><br/><font color="red">legacie</font><br/><font point-size="12">office of a deputy</font>>]
+legacieME [label=<<b>Middle<br/>English</b><br/><font color="red">legacie</font>>]
+legacy [label=<<b>Modern<br/>English</b><br/><font color="red">legacy</font>>]
+leegIE -> legareL -> legatusL -> legatiaL -> legacieOF
+legacieOF -> legacieME [style=dashed]
+legacieME -> legacy
+
+// legate
+legatOF [label=<<b>Old French</b><br/><font color="red">legat</font>>]
+legateME [label=<<b>Middle<br/>English</b><br/><font color="red">legate</font>>]
+legate [label=<<b>Modern<br/>English</b><br/><font color="red">legate</font>>]
+legatusL -> legatOF
+legatOF -> legateME [style=dashed]
+legateME -> legate
+
+// colleague
+komIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*kom</font><br/><font point-size="12">beside, near, by, with</font>> shape=box style="dashed,rounded" URL="kom-with.svg"]
+comL [label=<<b>Latin</b><br/><font color="red">com-</font><br/><font point-size="12">together, with</font>>]
+collegaL [label=<<font color="red">collēga</font>>]
+collegueF [label=<<b>French</b><br/><font color="red">collègue</font>>]
+colleague [label=<<b>Modern<br/>English</b><br/><font color="red">colleague</font>>]
+komIE -> comL
+{ comL legareL } -> collegaL -> collegueF
+collegueF -> colleague [style=dashed]
+
+// college
+collegiumL [label=<<font color="red">collēgium</font><br/><font point-size="12">association</font>>]
+collegeOF [label=<<b>Old French</b><br/><font color="red">college</font>>]
+collegeME [label=<<b>Middle<br/>English</b><br/><font color="red">college</font>>]
+college [label=<<b>Modern<br/>English</b><br/><font color="red">college</font>>]
+collegaL -> collegiumL -> collegeOF
+collegeOF -> collegeME [style=dashed]
+collegeME -> college
+
+// delegate
+deL [label=<<b>Latin</b><br/><font color="red">dē-</font><br/><font point-size="12">out of</font>>]
+delegareL [label=<<font color="red">dēlēgāre</font><br/><font point-size="12">to dispatch</font>>]
+delagatusL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">dēlēgātus</font>>]
+delegatME [label=<<b>Middle<br/>English</b><br/><font color="red">delegat</font>>]
+delegate [label=<<b>Modern<br/>English</b><br/><font color="red">delegate</font>>]
+{ deL legareL } -> delegareL -> delagatusL
+delagatusL -> delegatME [style=dashed]
+delegatME -> delegate
+
+// relegate
+reL [label=<<b>Latin</b><br/><font color="red">re-</font><br/><font point-size="12">back</font>>]
+relegareL [label=<<font color="red">relēgāre, relēgāt-</font><br/><font point-size="12">to banish</font>>]
+relegatenME [label=<<b>Middle<br/>English</b><br/><font color="red">relegaten</font>>]
+relegate [label=<<b>Modern<br/>English</b><br/><font color="red">relegate</font>>]
+{ reL legareL } -> relegareL
+relegareL -> relegatenME [style=dashed]
+relegatenME -> relegate
+
+{ rank=sink ligneous ligni lex legal legist legitimate loyal legislator privilege legacy legate colleague college delegate relegate }
+{ rank=source legIE teleIE perIE komIE }
+}

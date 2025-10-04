@@ -1,0 +1,60 @@
+strict digraph {
+node [shape=plaintext]
+kwon [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">kwon </font><font point-size="16">dog</font>> shape=box style="dashed,rounded" URL="kwon-dog0.svg" tooltip=""]
+
+/* to add: explain dog days */
+
+/* Latin canis */
+kwon -> canis
+canis [label=<<b>Latin</b><br/><font color="red">canis</font>>]
+canis -> { caninus canarius canileL canicula } [sametail=1]
+{ rank=same caninus canarius canileL canicula }
+caninus [label=<<font color="red">canīnus</font><br/><font point-size="12">relating to dogs</font>>]
+caninus -> canine [style=dashed]
+canine [label=<<b>Modern<br/>English</b><br/><font color="red">canine</font>>]
+canarius [label=<<font color="red">canārius</font><br/><font point-size="12">canine</font>>]
+canarius -> canariae
+canariae [label=<<font color="red">Canāriae (Insulae)</font><br/><font point-size="12">(islands) of dogs</font>>]
+canariae -> canarias
+canarias [label=<<b>Spanish</b><br/><font color="red">(Islas) Canarias</font><br/><font point-size="12">Canary (Islands)</font>>]
+canarias -> canarioS
+canarioS [label=<<font color="red">canario</font><br/><font point-size="12">of the Canary Islands</font>>]
+canarioS -> canariF [style=dashed]
+canariF [label=<<b>French</b><br/><font color="red">canari</font>>]
+canariF -> canary [style=dashed]
+canary [label=<<b>Modern<br/>English</b><br/><font color="red">canary</font>>]
+canileL [label=<<font color="red">canīle</font><br/><font point-size="12">shelter for dogs</font>>]
+canileL -> kenilNF
+kenilNF [label=<<b>Norman French</b><br/><font color="red">kenil</font>>]
+kenilNF -> kenelME [style=dashed]
+kenelME [label=<<b>Middle English</b><br/><font color="red">kenel</font>>]
+kenelME -> kennel
+kennel [label=<<b>Modern<br/>English</b><br/><font color="red">kennel</font>>]
+canicula [label=<<font color="red">canīcula</font><br/><font point-size="12">little dog</font><br/><font color="red">Canīcula</font><br/><font point-size="12">Sirius</font>>]
+canicula -> chenilleF [sametail=1]
+chenilleF [label=<<b>French</b><br/><font color="red">chenille</font><br/><font point-size="12">caterpillar, chenille</font>>]
+chenilleF -> chenille [style=dashed weight=2]
+chenille [label=<<b>Modern<br/>English</b><br/><font color="red">chenille</font>>]
+
+canis -> canisE [style=dashed weight=2 sametail=1]
+canisE [label=<<b>Modern<br/>English</b><br/><font color="red">Canis Major<br/>Canis Minor</font>>]
+canidae [label=<<b>New Latin</b><br/><font color="red">Canis</font><br/><font point-size="12">genus name</font><br/><font color="red">Canidae</font><br/><font point-size="12">family name</font>>]
+canis -> canidae [sametail=1]
+canid [label=<<b>Modern<br/>English</b><br/><font color="red">canid</font>>]
+canidae -> canid [style=dashed]
+canicularis [label=<<font color="red">canīculāris</font><br/><font point-size="12">of Sirius</font>>] // Late Latin
+canicula -> canicularis [sametail=1 weight=2]
+canicular [label=<<b>Modern<br/>English</b><br/><font color="red">canicular</font><br/><font point-size="12">relating to<br/>Sirius or Procyon<br/>or the dog days</font>>]
+canicularis -> canicular [style=dashed]
+
+caneI [label=<<b>Italian</b><br/><font color="red">cane</font>>]
+canis -> caneI [sametail=1]
+canaglia [label=<<font color="red">canaglia</font><br/><font point-size="12">a pack of dogs,<br/>rabble</font>>]
+caneI -> canaglia
+canailleF [label=<<b>French</b><br/><font color="red">canaille</font>>]
+canaille [label=<<b>Modern<br/>English</b><br/><font color="red">canaille</font><br/><font point-size="12">rabble,<br/>the proletariat</font>>]
+canaglia -> canailleF -> canaille [style=dashed]
+
+{ rank=same canine canary kennel chenille canisE canid canicular canid canaille } // ModE
+{ rank=same canarias caneI }
+}

@@ -1,0 +1,15 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+gno [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*gnō-</font></td><td><font point-size="16">to know</font></td></tr></table>> tooltip="Indo-European \"*gnō-\" to know" shape=box peripheries=2 margin=.3]
+
+gne [label=<<table border="0" cellpadding="5">
+<tr><td><font color="red">*gnē-</font></td></tr>
+<tr><td><font color="red">*gn̥ə-</font></td></tr>
+</table>> shape=box style="dashed,rounded" URL="gno-know1.svg" tooltip="*gnē-, *gn̥ə-"]
+
+suff [label=<suffixed forms> shape=box style="dashed,rounded" URL="gno-know2.svg" tooltip=""]
+gno -> { gne suff }
+
+}

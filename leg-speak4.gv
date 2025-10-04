@@ -1,0 +1,154 @@
+strict digraph {
+node [shape=none]
+
+legIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*leg- </font><font point-size="16">to collect, to speak</font>> shape=box style="dashed,rounded" URL="leg-speak0.svg" tooltip="Indo-European \"*leg-\" to collect, to speak"]
+
+// omitted: logistic
+
+// Logos
+logoIE [label=<<font color="red">*log-o-</font>>]
+logosG [label=<<b>Greek</b><br/><font color="red">logos</font><br/><font point-size="12">speech, word, reason,<br/>proportion</font>>]
+logos [label=<<b>Modern<br/>English</b><br/><font color="red">Logos<br/>logo-</font>>]
+legIE -> logoIE -> logosG
+logosG -> logos [style=dashed]
+
+// -logy/-ology
+logiaG [label=<<font color="red">-logiā</font>>]
+logiaL [label=<<b>Latin</b><br/><font color="red">-logia</font>>]
+logieOF [label=<<b>Old French</b><br/><font color="red">logie</font>>]
+logieME [label=<<b>Middle<br/>English</b><br/><font color="red">logie</font>>]
+logy [label=<<b>Modern<br/>English</b><br/><font color="red">-logy<br/>-ology</font>>]
+logosG -> logiaG
+logiaG -> logiaL [style=dashed]
+logiaL -> logieOF
+logieOF -> logieME [style=dashed]
+logieME -> logy
+
+// logic
+logikeG [label=<<font color="red">logikē (tekhnē)</font><br/><font point-size="12">(art) of reasoning</font>>]
+logicaL [label=<<b>Latin</b><br/><font color="red">logica</font>>]
+logiqueOF [label=<<b>Old French</b><br/><font color="red">logique</font>>]
+logicME [label=<<b>Middle<br/>English</b><br/><font color="red">logic</font>>]
+logic [label=<<b>Modern<br/>English</b><br/><font color="red">logic</font>>]
+logosG  -> logikeG
+logikeG -> logicaL [style=dashed]
+logicaL -> logiqueOF
+logiqueOF -> logicME [style=dashed]
+logicME -> logic
+
+// analogous
+analogosG [label=<<font color="red">analogos</font><br/><font point-size="12">proportionate</font>>]
+analogusL [label=<<b>Latin</b><br/><font color="red">analagus</font>>]
+analogous [label=<<b>Modern<br/>English</b><br/><font color="red">analogous</font>>]
+logosG -> analogosG
+analogosG -> analogusL -> analogous [style=dashed]
+
+// apologue
+apoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*apo-</font><br/><font point-size="12">off, away</font>> shape=box style="dashed,rounded" URL="apo-off.svg"]
+apoG [label=<<b>Greek</b><br/><font color="red">apo-</font><br/><font point-size="12">away from</font>>]
+apologosG [label=<<font color="red">apologos</font>>]
+apologusL [label=<<b>Latin</b><br/><font color="red">apologus</font>>]
+apologueF [label=<<b>French</b><br/><font color="red">apologue</font>>]
+apologue [label=<<b>Modern<br/>English</b><br/><font color="red">apologue</font><br/><font point-size="12">a moral fable</font>>]
+apoIE -> apoG -> apologosG
+logosG -> apologosG
+apologosG -> apologusL [style=dashed]
+apologusL -> apologueF
+apologueF -> apologue [style=dashed]
+
+// apology
+apologiaG [label=<<font color="red">apologiā</font>>]
+apologiaL [label=<<b>Latin</b><br/><font color="red">apologia</font>>]
+apology [label=<<b>Modern<br/>English</b><br/><font color="red">apology</font>>]
+{ apoG logosG } -> apologiaG
+apologiaG -> apologiaL -> apology [style=dashed]
+
+// Decalogue
+dekmIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dekm̥</font><br/><font point-size="12">ten</font>> shape=box style="dashed,rounded" URL="dekm-ten1.svg"]
+dekaG [label=<<b>Greek</b><br/><font color="red">deka-</font>>]
+dekalogosG [label=<<font color="red">dekalogos</font>>]
+decalogusL [label=<<b>Late Latin</b><br/><font color="red">decalogus</font>>]
+decalogME [label=<<b>Middle<br/>English</b><br/><font color="red">decalog</font>>]
+decalogue [label=<<b>Modern<br/>English</b><br/><font color="red">Decalogue<br/>Decalog</font>>]
+dekmIE -> dekaG
+{ dekaG logosG } -> dekalogosG
+dekalogosG -> decalogusL -> decalogME [style=dashed]
+decalogME -> decalogue
+
+// epilogue
+epiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*epi</font><br/><font point-size="12">near, at, against</font>> shape=box style="dashed,rounded" URL="epi-near.svg"]
+epiG [label=<<b>Greek</b><br/><font color="red">epi-</font><br/><font point-size="12">after</font>>]
+epiIE -> epiG
+epilogosG [label=<<font color="red">epilogos</font><br/><font point-size="12">conclusion of a speech</font>>]
+epilogusL [label=<<b>Latin</b><br/><font color="red">epilogus</font>>]
+epilogueOF [label=<<b>Old French</b><br/><font color="red">epilogue</font>>]
+epilogeME [label=<<b>Middle<br/>English</b><br/><font color="red">epiloge</font>>]
+epilogue [label=<<b>Modern<br/>English</b><br/><font color="red">epilogue<br/>epilog</font>>]
+{ epiG logosG } -> epilogosG
+epilogosG -> epilogusL [style=dashed]
+epilogusL -> epilogueOF
+epilogueOF -> epilogeME [style=dashed]
+epilogeME -> epilogue
+
+// homologous
+semIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*sem-</font><br/><font point-size="12">one, as one</font>> shape=box style="dashed,rounded" URL="sem-one.svg"]
+homoG [label=<<b>Greek</b><br/><font color="red">homo-</font><br/><font point-size="12">same</font>>]
+homologosG [label=<<font color="red">homologos</font><br/><font point-size="12">agreeing</font>>]
+homologous [label=<<b>Modern<br/>English</b><br/><font color="red">homologous</font>>]
+semIE -> homoG
+{ homoG logosG } -> homologosG
+homologosG -> homologous [style=dashed]
+
+// logarithm
+arithmosG [label=<<b>Greek</b><br/><font color="red">arithmos</font><br/><font point-size="12">number</font>>]
+logarithmusL [label=<<b>New Latin</b><br/><font color="red">logarithmus</font>>]
+logarithm [label=<<b>Latin</b><br/><font color="red">logarithm</font>>]
+{ logosG arithmosG } -> logarithmusL -> logarithm [style=dashed]
+
+// paralogism
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">forward</font>> shape=box style="dashed,rounded" URL="per-list.svg"]
+paraG [label=<<b>Greek</b><br/><font color="red">para-</font><br/><font point-size="12">beyond</font>>]
+paralogosG [label=<<font color="red">paralogos</font><br/><font point-size="12">unreasonable</font>>]
+paralogismosG [label=<<font color="red">paralogismos</font>>]
+paralogismusL [label=<<b>Latin</b><br/><font color="red">paralogismus</font>>]
+paralogism [label=<<b>Modern<br/>English</b><br/><font color="red">paralogism</font><br/><font point-size="12">a fallacious argument</font>>]
+perIE -> paraG
+{ paraG logosG } -> paralogosG -> paralogismosG
+paralogismosG -> paralogismusL -> paralogism [style=dashed]
+
+// prologue
+proG [label=<<b>Greek</b><br/><font color="red">pro-</font><br/><font point-size="12">before</font>>]
+prologosG [label=<<font color="red">prologos</font>>]
+prologusL [label=<<b>Latin</b><br/><font color="red">prologus</font>>]
+prologueOF [label=<<b>Old French</b><br/><font color="red">prologue</font>>]
+prologME [label=<<b>Middle<br/>English</b><br/><font color="red">prolog</font>>]
+prologue [label=<<b>Modern<br/>English</b><br/><font color="red">prologue<br/>prolog</font>>]
+perIE -> proG
+{ proG logosG } -> prologosG
+prologosG -> prologusL [style=dashed]
+prologusL -> prologueOF
+prologueOF -> prologME [style=dashed]
+prologME -> prologue
+
+// syllogism
+ksunIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ksun</font><br/><font point-size="12">with</font>> shape=box style="dashed,rounded" URL="ksun-with.svg"]
+sunG [label=<<b>Greek</b><br/><font color="red">sun-</font>>]
+logizesthaiG [label=<<font color="red">logizesthai</font><br/><font point-size="12">to count, reckon</font>>]
+sullogizesthaiG [label=<<font color="red">sullogizesthai</font><br/><font point-size="12">to infer</font>>]
+sullogismosG [label=<<font color="red">sullogismos</font>>]
+syllogismusL [label=<<b>Latin</b><br/><font color="red">syllogismus</font>>]
+silogismeOF [label=<<b>Old French</b><br/><font color="red">silogisme</font>>]
+silogismeME [label=<<b>Middle<br/>English</b><br/><font color="red">silogisme</font>>]
+syllogism [label=<<b>Modern<br/>English</b><br/><font color="red">syllogism</font>>]
+ksunIE -> sunG
+logosG -> logizesthaiG
+{ sunG logizesthaiG } -> sullogizesthaiG -> sullogismosG
+sullogismosG -> syllogismusL [style=dashed]
+syllogismusL -> silogismeOF
+silogismeOF -> silogismeME [style=dashed]
+silogismeME -> syllogism
+
+
+{ rank=sink logos logy logic analogous apologue apology decalogue epilogue homologous logarithm paralogism prologue syllogism }
+{ rank=source legIE apoIE dekmIE epiIE semIE perIE ksunIE }
+}
