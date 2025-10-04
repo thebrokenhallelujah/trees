@@ -1,0 +1,90 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+apoIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*apo-, *ap-</font></td><td><font point-size="16">off, away</font></td></tr></table>> tooltip="Indo-European \"*apo-, *ap-\" off, away" shape=rect style=dashed peripheries=1 margin=.3 URL="apo-off0.svg"]
+
+// after
+apoteroIE [label=<<font color="red">*ap(o)-tero-</font>>]
+aftarGmc [label=<<b>Germanic</b><br/><font color="red">*aftar-</font>>]
+aefterOE [label=<<b>Old English</b><br/><font color="red">æfter</font><br/><font point-size="12">after, behind</font>>]
+afterME [label=<<b>Middle<br/>English</b><br/><font color="red">after</font>>]
+after [label=<<b>Modern<br/>English</b><br/><font color="red">after</font>>]
+apoIE -> apoteroIE -> aftarGmc -> aefterOE -> afterME -> after
+
+// awkward
+apukoIE [label=<<font color="red">*apu-ko-</font>>]
+afugaGmc [label=<<b>Germanic</b><br/><font color="red">*afuga-</font>>]
+ofugrON [label=<<b>Old Norse</b><br/><font color="red">öfugr</font><br/><font point-size="12">turned backward</font>>]
+awkeME [label=<<b>Middle<br/>English</b><br/><font color="red">awke</font><br/><font point-size="12">wrong</font>>]
+werIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*wer-</font><br/><font point-size="12">to turn, bend</font>> shape=box style="dashed,rounded" URL="wer-turn.svg"]
+warthGmc [label=<<b>Germanic</b><br/><font color="red">*warth</font>>]
+weardOE  [label=<<b>Old English</b><br/><font color="red">-weard</font><br/><font point-size="12">toward</font>>]
+wardME [label=<<b>Middle<br/>English</b><br/><font color="red">-ward</font>>]
+awkewardME [label=<<b>Middle<br/>English</b><br/><font color="red">awkeward</font><br/><font point-size="12">in the wrong way</font>>]
+awkward [label=<<b>Modern<br/>English</b><br/><font color="red">awkward</font>>]
+apoIE -> apukoIE -> afugaGmc -> ofugrON
+ofugrON -> awkeME [style=dashed]
+werIE -> warthGmc -> weardOE -> wardME
+{ awkeME wardME } -> awkewardME -> awkward
+
+// pogram
+posIE [label=<<font color="red">*po(s)</font><br/><font point-size="12">on, in</font>>]
+poR [label=<<b>Russian</b><br/><font color="red">po, po-</font>>]
+gromR [label=<<b>Russian</b><br/><font color="red">grom</font><br/><font point-size="12">thunder</font>>]
+gromitR [label=<<font color="red">gromit'</font><br/><font point-size="12">to wreak havoc</font>>]
+pogromitR [label=<<font color="red">pogromit'</font>>]
+pogromR [label=<<font color="red">pogrom</font><br/><font point-size="12">outrage, havoc</font>>]
+pogrom [label=<<b>Modern<br/>English</b><br/><font color="red">pogrom</font>>]
+apoIE -> posIE [label="?" decorate=true]
+posIE -> poR
+gromR -> gromitR
+{ poR gromitR } -> pogromitR -> pogromR
+pogromR -> pogrom [style=dashed]
+
+// post-
+postL [label=<<b>Latin</b><br/><font color="red">post, post-</font><br/><font point-size="12">behind, after</font>>]
+post [label=<<b>Modern<br/>English</b><br/><font color="red">post-</font>>]
+posIE -> postL
+postL -> post [style=dashed]
+
+// posterior
+posterusL [label=<<font color="red">posterus</font><br/><font point-size="12">coming after</font>>]
+posteriorL [label=<<font color="red">posterior</font>>]
+posterior [label=<<b>Modern<br/>English</b><br/><font color="red">posterior</font>>]
+postL -> posterusL -> posteriorL
+posteriorL -> posterior [style=dashed]
+
+// preposterous
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">(various<br/>prepositions)</font>> shape=box style="dashed,rounded" URL="per-prai1.svg"]
+praeL [label=<<b>Latin</b><br/><font color="red">prae-</font><br/><font point-size="12">before, in front</font>>]
+praeposterusL [label=<<font color="red">praeposterus</font><br/><font point-size="12">inverted, unseasonable</font>>]
+preposterous [label=<<b>Modern<br/>English</b><br/><font color="red">preposterous</font>>]
+perIE -> praeL
+{ praeL posterusL } -> praeposterusL
+praeposterusL -> preposterous [style=dashed]
+
+// puisne
+genIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*gen(ə)-, *gon-, *gn̥-</font><br/><font point-size="12">to be born</font>> shape=box style="dashed,rounded" URL="gen-gnasci.svg"]
+nasciL [label=<<b>Latin</b><br/><font color="red">nāscī</font>>]
+natusL [label=<<font color="red">nātus</font>>]
+puisOF [label=<<b>Old French</b><br/><font color="red">puis</font>>]
+neOF [label=<<b>Old French</b><br/><font color="red">ne</font>>]
+puisneOF [label=<<font color="red">puisne</font><br/><font point-size="12">born after</font>>]
+puisne [label=<<b>Modern<br/>English</b><br/><font color="red">puisne</font>>]
+genIE -> nasciL -> natusL -> neOF
+postL -> puisOF
+{ puisOF neOF } -> puisneOF
+puisneOF -> puisne [style=dashed]
+
+// puny
+puny [label=<<b>Modern<br/>English</b><br/><font color="red">puny</font>>]
+puisne -> puny
+
+// L ponere (link)
+ponereL [label=<<b>Latin</b><br/><font color="red">pōnere</font><br/><font point-size="12">to put, place</font>> shape=box style="dashed,rounded" URL="apo-ponere.svg"]
+posIE -> ponereL
+
+{ rank=sink after awkward pogrom post posterior preposterous puisne puny }
+{ rank=same werIE genIE perIE }
+}

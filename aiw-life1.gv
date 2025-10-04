@@ -1,0 +1,89 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+aiwIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*aiw-, *ayu-</font></td><td><font point-size="16">vital force, life, eternity</font></td></tr></table>> tooltip="Indo-European \"*aiw-, *ayu-\" vital force, life, eternity" shape=rect style=dashed peripheries=1 margin=.3 URL="aiw-life0.svg"]
+
+// aught, ought
+aiwiGmc [label=<<b>Germanic</b><br/><font color="red">*aiwi</font>>]
+aiwiwithi [label=<<font color="red">*aiwi *withi</font><br/><font point-size="12">anything</font>>]
+awihtOE [label=<<b>Old English</b><br/><font color="red">āwiht, āuht</font>>]
+aughtME [label=<<b>Middle<br/>English</b><br/><font color="red">aught, ought</font>>]
+aught [label=<<b>Modern<br/>English</b><br/><font color="red">aught<br/>ought</font><br/><font point-size="12">anything</font>>]
+aiwIE -> aiwiGmc -> aiwiwithi -> awihtOE -> aughtME -> aught
+
+// naught/nought, naughty, not
+wihtOE [label=<<b>Old English</b><br/><font color="red">wiht</font><br/><font point-size="12">thing</font>>]
+nawihtOE [label=<<font color="red">nāwiht</font>>]
+naughtME [label=<<b>Middle<br/>English</b><br/><font color="red">naught<br/>nought</font><br/><font point-size="12">nothing, evil</font>>]
+naught [label=<<b>Modern<br/>English</b><br/><font color="red">naught<br/>nought</font>>]
+{ neaOE wihtOE } -> nawihtOE
+nawihtOE -> naughtME -> naught
+notME [label=<<b>Middle<br/>English</b><br/><font color="red">not</font>>]
+not [label=<<b>Modern<br/>English</b><br/><font color="red">not</font>>]
+naughtME -> notME -> not
+noughtiME [label=<<font color="red">noughti</font><br/><font point-size="12">wicked</font>>]
+naughty [label=<<b>Modern<br/>English</b><br/><font color="red">naughty</font>>]
+naughtME -> noughtiME -> naughty
+
+// no
+neIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ne</font><br/><font point-size="12">not</font>> shape=box style="dashed,rounded" URL="ne-not1.svg"]
+neGmc [label=<<b>Germanic</b><br/><font color="red">*ne-, *na-</font>>]
+aOE [label=<<b>Old English</b><br/><font color="red">ā</font><br/><font point-size="12">ever</font>>]
+neaOE [label=<<font color="red">ne ā, nā</font>>]
+noME [label=<<b>Middle<br/>English</b><br/><font color="red">no</font>>]
+no [label=<<b>Modern<br/>English</b><br/><font color="red">no</font><br/><font point-size="12">(interj, adv)</font>>]
+aiwiGmc -> aOE
+neIE -> neGmc
+{ neGmc aOE } -> neaOE -> noME -> no
+
+// nor
+orME [label=<<b>Middle<br/>English</b><br/><font color="red">or</font><br/><font point-size="12">or</font>>]
+norME [label=<<font color="red">nor</font>>]
+nor [label=<<b>Modern<br/>English</b><br/><font color="red">nor</font>>]
+{ noME orME } -> norME -> nor
+
+// ever
+aefreOE [label=<<b>Old English</b><br/><font color="red">ǣfre</font><br/><font point-size="12">ever</font>>]
+everME [label=<<b>Middle<br/>English</b><br/><font color="red">ever</font>>]
+ever [label=<<b>Modern<br/>English</b><br/><font color="red">ever</font>>]
+aiwiGmc -> aefreOE -> everME -> ever
+
+// every
+aefreaelcOE [label=<<font color="red">ǣfre ǣlc</font>>]
+everichME [label=<<b>Middle<br/>English</b><br/><font color="red">everich, everi</font>>]
+every [label=<<b>Modern<br/>English</b><br/><font color="red">every</font>>]
+aefreOE -> aefreaelcOE -> everichME -> every
+
+// never
+naefreOE [label=<<b>Old English</b><br/><font color="red">ne ǣfre, nǣfre</font>>]
+neverME [label=<<b>Middle<br/>English</b><br/><font color="red">never</font>>]
+never [label=<<b>Modern<br/>English</b><br/><font color="red">never</font>>]
+{ neGmc aefreOE } -> naefreOE -> neverME -> never
+
+// aye
+eiON [label=<<b>Old Norse</b><br/><font color="red">ei</font><br/><font point-size="12">ever</font>>]
+aiME [label=<<b>Middle<br/>English</b><br/><font color="red">ai</font>>]
+aye [label=<<b>Modern<br/>English</b><br/><font color="red">aye</font><br/><font point-size="12">ever</font>>]
+aiwiGmc -> eiON
+eiON -> aiME [style=dashed]
+aiME -> aye
+
+// nay
+neiON [label=<<b>Old Norse</b><br/><font color="red">ne ei, nei</font>>]
+nayME [label=<<b>Middle<br/>English</b><br/><font color="red">nay</font>>]
+nay [label=<<b>Modern<br/>English</b><br/><font color="red">nay</font>>]
+aiwiGmc -> eiON
+{ neGmc eiON } -> neiON
+neiON -> nayME [style=dashed]
+nayME -> nay
+
+// nothing
+thingOE [label=<<b>Old English</b><br/><font color="red">thing</font>>]
+nathingOE [label=<<font color="red">nāthing</font>>]
+nothingME [label=<<b>Middle<br/>English</b><br/><font color="red">nothing</font>>]
+nothing [label=<<b>Modern<br/>English</b><br/><font color="red">nothing</font>>]
+{ neaOE thingOE } -> nathingOE -> nothingME -> nothing
+
+{ rank=sink aught no nor ever never every aye nay naught naughty not nothing }
+}

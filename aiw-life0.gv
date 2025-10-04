@@ -1,0 +1,13 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+aiwIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*aiw-, ayu-</font></td><td><font point-size="16">vital force, life, eternity</font></td></tr></table>> tooltip="Indo-European \"*aiw-, ayu-\" vital force, life, eternity" shape=box peripheries=2 margin=.3]
+
+aiw1 [label=<basic form> shape=box style="dashed,rounded" URL="aiw-life1.svg" tooltip=""]
+aiw2 [label=<derivative forms> shape=box style="dashed,rounded" URL="aiw-life2.svg" tooltip=""]
+
+yeuIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*yeu-</font><br/><font point-size="12">vital force,<br/>youthful vigor</font>> shape=box style="dashed,rounded" URL="yeu-youth.svg"]
+aiwIE -> { yeuIE aiw1 aiw2 }
+
+}

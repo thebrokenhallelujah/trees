@@ -1,0 +1,79 @@
+strict digraph {
+/* sources: AHD, roots*/
+node [shape=none]
+
+agrosIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*agros</font></td><td><font point-size="16">field</font></td></tr></table>> tooltip="Indo-European \"agros\" field" shape=box peripheries=2 margin=.3]
+
+/* derived from ag-move */
+
+/* acre */
+akrazGm [label=<<b>Germanic</b><br/><font color="red">*akraz</font>>]
+aecerOE [label=<<b>Old English</b><br/><font color="red">æcer</font>>]
+akerME [label=<<b>Middle<br/>English</b><br/><font color="red">aker</font><br/><font point-size="12">acre</font>>]
+acre [label=<<b>Modern<br/>English</b><br/><font color="red">acre</font>>]
+agrosIE -> akrazGm -> aecerOE -> akerME -> acre
+
+/* agrarian */
+agerL [label=<<b>Latin</b><br/><font color="red">ager, agr-</font>>]
+agrariusL [label=<<font color="red">agrārius</font><br/><font point-size="12">relating<br/>to land</font>>]
+agrarian [label=<<b>Modern<br/>English</b><br/><font color="red">agrarian</font>>]
+agrosIE -> agerL -> agrariusL
+agrariusL -> agrarian [style=dotted]
+
+/* agriculture */
+agriculturaL [label=<<font color="red">agrīcultūra</font><br/><font point-size="12">cultivation<br/>of land</font>>]
+agriculture [label=<<b>Modern<br/>English</b><br/><font color="red">agriculture</font>>]
+kwelIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*kʷel-</font><br/><font point-size="12">to turn?</font>> shape=box style="dashed,rounded" URL="kwel-turn.svg"]
+colereL [label=<<b>Latin</b><br/><font color="red">colere</font><br/><font point-size="12">to till</font>>]
+culturaL [label=<<font color="red">cultūra</font>>]
+kwelIE -> colereL -> culturaL
+{ agerL culturaL } -> agriculturaL
+agriculturaL -> agriculture [style=dotted]
+
+/* peregrine, peregrinate */
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">per</font><br/><font point-size="12">(various prepositions)</font>> shape=box style="dashed,rounded" URL="per-peri.svg"]
+perL [label=<<b>Latin</b><br/><font color="red">per-</font><br/><font point-size="12">through</font>>]
+perIE -> perL
+peregerL [label=<<font color="red">pereger</font><br/><font point-size="12">being abroad</font>>]
+peregrinusL [label=<<font color="red">peregīnus</font><br/><font point-size="12">foreigner</font>>]
+peregrineOF [label=<<b>Old French</b><br/><font color="red">peregrine</font>>]
+peregrineME [label=<<b>Middle<br/>English</b><br/><font color="red">peregrine</font>>]
+peregrine [label=<<b>Modern<br/>English</b><br/><font color="red">peregrine</font>>]
+{ perL agerL } -> peregerL -> peregrinusL -> peregrineOF
+peregrineOF -> peregrineME [style=dotted]
+peregrineME -> peregrine
+peregrinariL [label=<<font color="red">peregrīnārī,<br/>peregrīnāt-</font>>]
+peregrinate [label=<<b>Modern<br/>English</b><br/><font color="red">peregrinate</font>>]
+peregrinusL -> peregrinariL
+peregrinariL -> peregrinate [style=dotted]
+
+/* pilgrim */
+pelegrinusL [label=<<b>Late Latin</b><br/><font color="red">pelegrīnus</font>>]
+peligrinOF  [label=<<b>Old French</b><br/><font color="red">peligrin</font>>]
+pilgrimME [label=<<b>Middle<br/>English</b><br/><font color="red">pilgrim</font>>]
+pilgrim [label=<<b>Modern<br/>English</b><br/><font color="red">pilgrim</font>>]
+peregrinusL -> pelegrinusL -> peligrinOF
+peligrinOF -> pilgrimME [style=dotted]
+pilgrimME -> pilgrim 
+
+/* agro- */
+agrosG [label=<<b>Greek</b><br/><font color="red">agros</font><br/><font point-size="12">field</font>>]
+agro [label=<<b>Modern<br/>English</b><br/><font color="red">agro-<br/>agri-<br/>agr-</font>>]
+agrosIE -> agrosG
+{ agerL agrosG } -> agro [style=dotted]
+
+/* onager */
+agriosG [label=<<b>Greek</b><br/><font color="red">agrios</font><br/><font point-size="12">wild</font>>]
+onosG [label=<<b>Greek</b><br/><font color="red">onos</font><br/><font point-size="12">ass</font>>]
+onagrosG [label=<<font color="red">onagros</font>>]
+onagerL [label=<<b>Latin</b><br/><font color="red">onager</font>>]
+onager [label=<<b>Modern<br/>English</b><br/><font color="red">onager</font>>]
+agrosIE -> agriosG
+{ onosG agriosG } -> onagrosG
+onagrosG -> onagerL -> onager [style=dotted]
+
+
+{ rank=sink acre agrarian agriculture peregrine peregrinate pilgrim agro onager }
+{ rank=source }
+{ rank=same kwelIE perIE }
+}

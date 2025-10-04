@@ -1,0 +1,10 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+apoIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*apo-, *ap-</font></td><td><font point-size="16">off, away</font></td></tr></table>> tooltip="Indo-European \"*apo-, *ap-\" off, away" shape=box peripheries=2 margin=.3]
+
+apo1 [label=<base form> shape=box style="dashed,rounded" URL="apo-off1.svg" tooltip="base form"]
+apo2 [label=<derivatives> shape=box style="dashed,rounded" URL="apo-off2.svg" tooltip="derivatives"]
+apoIE -> { apo1 apo2 }
+}

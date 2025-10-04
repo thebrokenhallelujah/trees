@@ -1,0 +1,117 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+aiwIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*aiw-, *ayu-</font></td><td><font point-size="16">vital force, life, eternity</font></td></tr></table>> tooltip="Indo-European \"*aiw-, *ayu-\" vital force, life, eternity" shape=rect style=dashed peripheries=1 margin=.3 URL="aiw-life0.svg"]
+
+// coeval
+komIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*kom</font><br/><font point-size="12">beside, near,<br/>by, with</font>> shape=box style="dashed,rounded" URL="kom-with.svg"]
+coL [label=<<b>Latin</b><br/><font color="red">com-, co-</font><br/><font point-size="12">together, with</font>>]
+aiwoIE [label=<<font color="red">aiw-o-</font>>]
+aevumL [label=<<b>Latin</b><br/><font color="red">aevum</font><br/><font point-size="12">age</font>>]
+coaevusL [label=<<font color="red">coaevus</font>>]
+coeval [label=<<b>Modern<br/>English</b><br/><font color="red">coeval</font>>]
+komIE -> coL
+aiwIE -> aiwoIE -> aevumL
+{ coL aevumL } -> coaevusL
+coaevusL -> coeval [style=dashed]
+
+// medieval
+medhyoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*medhyo-</font><br/><font point-size="12">middle</font>> shape=box style="dashed,rounded" URL="medhyo-middle2.svg"]
+mediusL [label=<<b>Latin</b><br/><font color="red">medius</font>>]
+mediumaevumL [label=<<font color="red">medium aevum</font>>]
+medieval [label=<<b>Modern<br/>English</b><br/><font color="red">medieval</font>>]
+medhyoIE -> mediusL
+{ mediusL aevumL } -> mediumaevumL
+mediumaevumL -> medieval [style=dashed]
+
+// primeval
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">forward,<br/>through</font>> shape=box style="dashed,rounded" URL="per-prai2.svg"]
+primusL [label=<<b>Latin</b><br/><font color="red">prīmus</font><br/><font point-size="12">first</font>>]
+primaevusL [label=<<font color="red">prīmaevus</font><br/><font point-size="12">early in life</font>>]
+primeval [label=<<b>Modern<br/>English</b><br/><font color="red">primeval</font>>]
+perIE -> primusL
+{ primusL aevumL } -> primaevusL
+primaevusL -> primeval [style=dashed]
+
+// longevity
+delIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*del-</font><br/><font point-size="12">long</font>> shape=box style="dashed,rounded" URL="del-long.svg"]
+longusL [label=<<b>Latin</b><br/><font color="red">longus</font>>]
+longaevusL [label=<<font color="red">longaevus</font><br/><font point-size="12">ancient</font>>]
+longaevitasL [label=<<font color="red">longaevitās</font>>]
+longevity [label=<<b>Modern<br/>English</b><br/><font color="red">longevity</font>>]
+delIE -> longusL
+{ longusL aevumL } -> longaevusL -> longaevitasL
+longaevitasL -> longevity [style=dashed]
+
+// eternal, eternity
+aeternusL [label=<<b>Latin</b><br/><font color="red">aeternus</font><br/><font point-size="12">eternal</font>>]
+eternal [label=<<b>Modern<br/>English</b><br/><font color="red">eternal<br/>eternity</font>>]
+aiwoIE -> aeternusL 
+aeternusL -> eternal [style=dashed]
+
+// sempiternal
+semIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*sem-</font><br/><font point-size="12">one, as one</font>> shape=box style="dashed,rounded" URL="sem-one1.svg"]
+semperL [label=<<b>Latin</b><br/><font color="red">semper</font><br/><font point-size="12">always</font>>]
+sempiternusL [label=<<font color="red">sempiternus</font>>]
+sempiternalisL [label=<<b>Late Latin</b><br/><font color="red">sempiternālis</font>>]
+sempiternal [label=<<b>Modern<br/>English</b><br/><font color="red">sempiternal</font>>]
+{ semIE perIE } -> semperL 
+{ semperL aeternusL } -> sempiternusL -> sempiternalisL
+sempiternalisL -> sempiternal [style=dashed]
+
+// age
+aetasL [label=<<b>Latin</b><br/><font color="red">aetās, aetāt-</font><br/><font point-size="12">age</font>>]
+aetaticumL [label=<<font color="red">*aetāticum</font>>]
+aageOF [label=<<b>Old French</b><br/><font color="red">aage</font>>]
+ageME [label=<<b>Middle<br/>English</b><br/><font color="red">age</font>>]
+age [label=<<b>Modern<br/>English</b><br/><font color="red">age</font>>]
+aiwoIE -> aetasL -> aetaticumL -> aageOF
+aageOF -> ageME [style=dashed]
+ageME -> age
+
+// eon
+aiwenIE [label=<<font color="red">aiw-en-</font>>]
+aionGk [label=<<b>Greek</b><br/><font color="red">aiōn</font><br/><font point-size="12">age, vital force</font>>]
+aeonL [label=<<b>Latin</b><br/><font color="red">aeōn</font>>]
+eon [label=<<b>Modern<br/>English</b><br/><font color="red">aeon<br/>eon</font>>]
+aiwIE -> aiwenIE -> aionGk
+aionGk -> aeonL -> eon [style=dashed]
+
+// hygiene
+yuIE [label=<<font color="red">əyu-, yu-</font>>]
+yugwiees [label=<<font color="red">yu-gʷiə-es-</font><br/><font point-size="12">having a<br/>vigorous life</font>>]
+hugiesGk [label=<<b>Greek</b><br/><font color="red">hugiēs</font><br/><font point-size="12">healthy</font>>]
+hugieineGk [label=<<font color="red">hugieinē (tekhnē)</font><br/><font point-size="12">(art) of health</font>>]
+hygieneF [label=<<b>French</b><br/><font color="red">hygiene</font>>]
+hygieinaNL [label=<<b>New Latin</b><br/><font color="red">hygieina</font>>]
+hygiene [label=<<b>Modern<br/>English</b><br/><font color="red">hygiene</font>>]
+aiwIE -> yuIE -> yugwiees -> hugiesGk -> hugieineGk
+hugieineGk -> { hygieneF hygieinaNL } -> hygiene [style=dashed]
+
+// utopia
+oyuIE [label=<<font color="red">oyu-</font>>]
+neoyukwid [label=<<font color="red">(ne) oyu (kʷid)</font><br/><font point-size="12">(not on your) life</font>>]
+ouGk [label=<<b>Greek</b><br/><font color="red">ouk, ou</font><br/><font point-size="12">not</font>>]
+toposGk [label=<<b>Greek</b><br/><font color="red">topos</font><br/><font point-size="12">place</font>>]
+utopiaNL [label=<<b>New Latin</b><br/><font color="red">Ūtopia</font>>]
+utopia [label=<<b>Modern<br/>English</b><br/><font color="red">utopia</font>>]
+aiwIE -> oyuIE -> neoyukwid -> ouGk
+{ ouGk toposGk } -> utopiaNL -> utopia [style=dashed]
+
+// Ayurveda
+oyusIE [label=<<font color="red">oyu-s-</font>>]
+ayuhSk [label=<<b>Sanskrit</b><br/><font color="red">āyuḥ</font><br/><font point-size="12">life, health</font>>]
+weidIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*weid-</font><br/><font point-size="12">to see</font>> shape=box style="dashed,rounded" URL="weid-see1.svg"]
+vedahSk [label=<<b>Sanskrit</b><br/><font color="red">vedaḥ</font><br/><font point-size="12">knowledge, lore</font>>]
+ayurvedahSk [label=<<font color="red">āyurvedaḥ</font>>]
+ayurveda [label=<<b>Modern<br/>English</b><br/><font color="red">Ayurveda</font>>]
+oyuIE -> oyusIE -> ayuhSk
+weidIE -> vedahSk
+{ ayuhSk vedahSk } -> ayurvedahSk
+ayurvedahSk -> ayurveda [style=dashed]
+
+{ rank=sink coeval medieval primeval longevity eternal sempiternal age eon hygiene utopia ayurveda }
+{ rank=same komIE medhyoIE perIE delIE weidIE aiwIE semIE }
+}
+

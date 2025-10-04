@@ -1,0 +1,78 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+apoIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*apo-, *ap-</font></td><td><font point-size="16">off, away</font></td></tr></table>> tooltip="Indo-European \"*apo-, *ap-\" off, away" shape=rect style=dashed peripheries=1 margin=.3 URL="apo-off0.svg"]
+
+// of
+afGmc [label=<<b>Germanic</b><br/><font color="red">*af</font>>]
+ofOE [label=<<b>Old English</b><br/><font color="red">of</font><br/><font point-size="12">off</font>>]
+ofME [label=<<b>Middle<br/>English</b><br/><font color="red">of</font>>]
+of [label=<<b>Modern<br/>English</b><br/><font color="red">of</font>>]
+apoIE -> afGmc -> ofOE -> ofME -> of
+
+// off
+offME [label=<<font color="red">off</font>>]
+off [label=<<b>Modern<br/>English</b><br/><font color="red">off</font>>]
+ofME -> offME -> off
+
+// offal
+falME [label=<<b>Middle<br/>English</b><br/><font color="red">fal</font><br/><font point-size="12">fall</font>>]
+offalME [label=<<font color="red">offal</font>>]
+offal [label=<<b>Modern<br/>English</b><br/><font color="red">offal</font>>]
+{ ofME falME } -> offalME -> offal
+
+// ebb
+ebbaOE [label=<<b>Old English</b><br/><font color="red">ebba</font><br/><font point-size="12">low tide</font>>]
+ebbeME [label=<<b>Middle<br/>English</b><br/><font color="red">ebbe</font>>]
+ebb [label=<<b>Modern<br/>English</b><br/><font color="red">ebb</font>>]
+afGmc -> ebbaOE -> ebbeME -> ebb
+
+// ablaut
+abaOHG [label=<<b>Old High<br/>German</b><br/><font color="red">aba</font>>]
+abMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">ab</font>>]
+abGm [label=<<b>German</b><br/><font color="red">ab</font>>]
+kleuIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*kleu-</font><br/><font point-size="12">to hear</font>> shape=box style="dashed,rounded" URL="kleu-hear.svg"]
+hlutOHG [label=<<b>Old High<br/>German</b><br/><font color="red">hlūt</font><br/><font point-size="12">sound</font>>]
+lutMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">lūt</font>>]
+lautGm [label=<<b>German</b><br/><font color="red">Laut</font>>]
+ablautGm [label=<<font color="red">ablaut</font>>]
+ablaut [label=<<b>Modern<br/>English</b><br/><font color="red">ablaut</font>>]
+afGmc -> abaOHG -> abMHG -> abGm
+kleuIE -> hlutOHG -> lutMHG -> lautGm
+{ abGm lautGm } -> ablautGm
+ablautGm -> ablaut [style=dashed]
+
+// aft
+aeftanOE [label=<<b>Old English</b><br/><font color="red">æftan</font><br/><font point-size="12">behindæftan</font>>]
+afteME [label=<<b>Middle<br/>English</b><br/><font color="red">afte</font><br/><font point-size="12">back</font>>]
+aft [label=<<b>Modern<br/>English</b><br/><font color="red">aft</font>>]
+afGmc -> aeftanOE -> afteME -> aft
+
+// abaft
+ambhiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ambhi, *m̥bhi</font><br/><font point-size="12">around</font>> shape=box style="dashed,rounded" URL="ambhi-around.svg"]
+beOE [label=<<b>Old English</b><br/><font color="red">be</font><br/><font point-size="12">by, at</font>>]
+beaeftanOE [label=<<font color="red">beæftan</font><br/><font point-size="12">behind</font>>]
+baftME [label=<<b>Middle<br/>English</b><br/><font color="red">baft</font><br/><font point-size="12">to the rear</font>>]
+onME [label=<<b>Middle<br/>English</b><br/><font color="red">on</font><br/><font point-size="12">at</font>>]
+onbaftME [label=<<font color="red">on baft</font>>]
+abaft [label=<<b>Modern<br/>English</b><br/><font color="red">abaft</font>>]
+ambhiIE -> beOE
+{ beOE aeftanOE } -> beaeftanOE -> baftME
+{ onME baftME } -> onbaftME -> abaft
+
+// ab-
+abL [label=<<b>Latin</b><br/><font color="red">ab, ab-</font><br/><font point-size="12">away from</font>>]
+ab [label=<<b>Modern<br/>English</b><br/><font color="red">ab-</font>>]
+apoIE -> abL
+abL -> ab [style=dashed]
+
+// apo-
+apoG [label=<<b>Greek</b><br/><font color="red">apo, apo-</font><br/><font point-size="12">away from</font>>]
+apo [label=<<b>Modern<br/>English</b><br/><font color="red">apo-</font>>]
+apoIE -> apoG
+apoG -> apo [style=dashed]
+
+{ rank=sink of off offal ebb ablaut aft abaft ab apo }
+{ rank=same kleuIE ambhiIE }
+}

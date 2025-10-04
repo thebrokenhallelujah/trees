@@ -1,0 +1,82 @@
+strict digraph {
+/* sources: */
+node [shape=none]
+
+ausIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*aus-</font></td><td><font point-size="16">to shine, dawn</font></td></tr></table>> tooltip="Indo-European \"*aus-\" to shine, dawn" shape=box peripheries=2 margin=.3]
+
+/* east */
+austGm [label=<<b>Germanic</b><br/><font color="red">*aust-</font><br/><font point-size="12">dawn, east</font>>]
+eastOE [label=<<b>Old English</b><br/><font color="red">ēast</font>>]
+eastME [label=<<b>Middle<br/>English</b><br/><font color="red">east</font>>]
+east [label=<<b>Modern<br/>English</b><br/><font color="red">east</font>>]
+ausIE -> austGm -> eastOE -> eastME -> east
+
+/* eastern */
+austraGm [label=<<b>Germanic</b><br/><font color="red">*austra-</font>>]
+easterneOE [label=<<b>Old English</b><br/><font color="red">ēasterne</font>>]
+esternME [label=<<b>Middle<br/>English</b><br/><font color="red">estern</font>>]
+eastern [label=<<b>Modern<br/>English</b><br/><font color="red">eastern</font>>]
+ausIE -> austraGm -> easterneOE -> esternME -> eastern
+
+/* Ostrogoth */
+ostroL [label=<<b>Latin</b><br/><font color="red">ostro-</font><br/><font point-size="12">eastern</font>>]
+gothiL [label=<<b>Latin</b><br/><font color="red">Gothī</font><br/><font point-size="12">Goths</font>>]
+ostrogothiL [label=<<font color="red">Ostrogothī</font>>]
+ostrogotesME [label=<<b>Middle<br/>English</b><br/><font color="red">Ostrogotes</font>>]
+ostrogoth [label=<<b>Modern<br/>English</b><br/><font color="red">Ostrogoth</font>>]
+austraGm -> ostroL
+{ ostroL gothiL } -> ostrogothiL
+ostrogothiL -> ostrogotesME [style=dashed]
+ostrogotesME -> ostrogoth
+
+/* Easter */
+austronGm [label=<<b>Germanic</b><br/><font color="red">*Austrōn-</font><br/><font point-size="12">dawn,<br/>goddess<br/>of the dawn</font>>]
+eastreOE [label=<<b>Old English</b><br/><font color="red">Ēastre</font><br/><font point-size="12">Easter</font>>]
+esterME [label=<<b>Middle<br/>English</b><br/><font color="red">Ester</font>>]
+easter [label=<<b>Modern<br/>English</b><br/><font color="red">Easter</font>>]
+ausIE -> austronGm -> eastreOE -> esterME -> easter
+
+/* aurora */
+auroraL [label=<<b>Latin</b><br/><font color="red">Aurōra</font><br/><font point-size="12">dawn,<br/>goddess<br/>of the dawn</font>>]
+auroraME [label=<<b>Middle<br/>English</b><br/><font color="red">aurora</font>>]
+aurora [label=<<b>Modern<br/>English</b><br/><font color="red">aurora<br/>Aurora</font>>]
+ausIE -> auroraL
+auroraL -> auroraME [style=dashed]
+auroraME -> aurora
+
+/* eo- */
+eosG [label=<<b>Greek</b><br/><font color="red">ēōs</font><br/><font point-size="12">dawn</font><br/><font color="red">Ēōs</font><br/><font point-size="12">goddess of the dawn</font>>]
+eo [label=<<b>Modern<br/>English</b><br/><font color="red">eo-</font><br/><font point-size="12">earliest</font>>]
+ausIE -> eosG
+eosG -> eo [style=dashed]
+
+/* Eos */
+eos [label=<<b>Modern<br/>English</b><br/><font color="red">Eos</font>>]
+eosG -> eos [style=dashed]
+
+/* austro- */
+austerL [label=<<b>Latin</b><br/><font color="red">auster, austr-</font><br/><font point-size="12">south wind</font>>]
+austro [label=<<b>Modern<br/>English</b><br/><font color="red">Austro-</font><br/><font point-size="12">southern</font>>]
+ausIE -> austerL
+austerL -> austro [style=dashed]
+
+/* ostmark */
+ostanOHG [label=<<b>Old High<br/>German</b><br/><font color="red">ōstan</font>>]
+ostMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">ōsten, ōst</font>>]
+ostG [label=<<b>German</b><br/><font color="red">Ost</font>>]
+mergIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*merg-</font><br/><font point-size="12">boundary, border</font>> shape=box style="dashed,rounded" URL="merg-border.svg"]
+markGm [label=<<b>Germanic</b><br/><font color="red">*mark-</font><br/><font point-size="12">mark, unit of currency</font>>]
+markeMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">marke, marc</font>>]
+markG [label=<<b>German</b><br/><font color="red">Mark</font>>]
+ostmarkG [label=<<font color="red">Ostmark</font>>]
+ostmark [label=<<b>Modern<br/>English</b><br/><font color="red">ostmark</font>>]
+austGm -> ostanOHG -> ostMHG -> ostG
+mergIE -> markGm -> markeMHG -> markG
+{ ostG markG } -> ostmarkG
+ostmarkG -> ostmark [style=dashed]
+
+
+{ rank=sink east easter aurora eo eos austro ostmark ostrogoth eastern }
+{ rank=source }
+{ rank=same }
+}

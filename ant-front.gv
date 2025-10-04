@@ -1,0 +1,159 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+antIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ant-</font></td><td><font point-size="16">front, forehead</font></td></tr></table>> tooltip="Indo-European \"*ant-\" front, forehead" shape=box peripheries=2 margin=.3]
+
+antiIE [label=<<font color="red">*anti</font><br/><font point-size="12">against</font>>]
+antIE -> antiIE
+
+// omitted: avaunt, enantiomer, enantiomorph (both chemistry)
+
+// un
+andiGmc [label=<<b>Germanic</b><br/><font color="red">*andi-, *anda-</font>>]
+andOE [label=<<b>Old English</b><br/><font color="red">ond-, and-, an-, on-</font>>]
+unME [label=<<b>Middle<br/>English</b><br/><font color="red">un-</font>>]
+un [label=<<b>Modern<br/>English</b><br/><font color="red">un-</font><br/><font point-size="12">to reverse<br/>or remove</font>>]
+antiIE -> andiGmc -> andOE -> unME -> un
+
+// along
+delIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*del-</font><br/><font point-size="12">long</font>> shape=box style="dashed,rounded" URL="del-long.svg"]
+dlongho [label=<<font color="red">*dlon-gho-</font>>]
+langOE [label=<<b>Old English</b><br/><font color="red">lang</font>>]
+delIE -> dlongho -> langOE
+andlangOE [label=<<font color="red">andlang</font><br/><font point-size="12">extending<br/>opposite</font>>]
+alongME [label=<<b>Middle<br/>English</b><br/><font color="red">along</font>>]
+along [label=<<b>Modern<br/>English</b><br/><font color="red">along</font>>]
+{ andOE langOE } -> andlangOE -> alongME -> along
+
+// end
+andjazGmc [label=<<b>Germanic</b><br/><font color="red">*andjaz</font>>]
+endeOE [label=<<b>Old English</b><br/><font color="red">ende</font>>]
+endeME [label=<<b>Middle<br/>English</b><br/><font color="red">ende</font>>]
+end [label=<<b>Modern<br/>English</b><br/><font color="red">end</font>>]
+antiIE -> andjazGmc -> endeOE -> endeME -> end
+
+// ante, ante-
+anteL [label=<<b>Latin</b><br/><font color="red">ante</font><br/><font point-size="12">before,<br/>in front of,<br/>against</font>>]
+ante [label=<<b>Modern<br/>English</b><br/><font color="red">ante<br/>ante-</font>>]
+antiIE -> anteL
+anteL -> ante [style=dashed]
+
+// ancient
+anteanusL [label=<<font color="red">*anteānus</font>>]
+auncienOF [label=<<b>Old French</b><br/><font color="red">auncien</font>>]
+auncienME [label=<<b>Middle<br/>English</b><br/><font color="red">auncien</font>>]
+ancient [label=<<b>Modern<br/>English</b><br/><font color="red">ancient</font>>]
+anteL -> anteanusL -> auncienOF
+auncienOF -> auncienME [style=dashed]
+auncienME -> ancient
+
+// anterior
+anteriorL [label=<<font color="red">anterior</font>>]
+anterior [label=<<b>Modern<br/>English</b><br/><font color="red">anterior</font>>]
+anteL -> anteriorL
+anteriorL -> anterior [style=dashed]
+
+// advance
+apoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*apo-, *ap-</font><br/><font point-size="12">off, away</font>> shape=box style="dashed,rounded" URL="apo-off1.svg"]
+abL [label=<<b>Latin</b><br/><font color="red">ab-</font><br/><font point-size="12">away from</font>>]
+abanteL [label=<<b>Latin</b><br/><font color="red">abante</font><br/><font point-size="12">from before</font>>]
+abantiareL [label=<<font color="red">*abantiāre</font>>]
+avauncerOF [label=<<b>Old French</b><br/><font color="red">avauncer</font>>]
+avauncenME [label=<<b>Middle<br/>English</b><br/><font color="red">avauncen</font>>]
+advance [label=<<b>Modern<br/>English</b><br/><font color="red">advance</font>>]
+apoIE -> abL
+{ abL anteL } -> abanteL -> abantiareL -> avauncerOF
+avauncerOF -> avauncenME [style=dashed]
+avauncenME -> advance
+
+// advantage
+avantOF [label=<<b>Old French</b><br/><font color="red">avant, avaunt</font><br/><font point-size="12">before</font>>]
+avantageOF [label=<<font color="red">avantage</font>>]
+avantageME [label=<<b>Middle<br/>English</b><br/><font color="red">avantage</font>>]
+advantage [label=<<b>Modern<br/>English</b><br/><font color="red">advantage</font>>]
+abanteL -> avantOF -> avantageOF
+avantageOF -> avantageME [style=dashed]
+avantageME -> advantage
+
+// vanguard
+gardeOF [label=<<b>Old French</b><br/><font color="red">garde</font><br/><font point-size="12">guard</font>>]
+avauntgardeOF [label=<<font color="red">avaunt garde</font><br/><font point-size="12">vanguard</font>>]
+vandgardME [label=<<b>Middle<br/>English</b><br/><font color="red">avaunt garde<br/>vandgard</font>>]
+vanguard [label=<<b>Modern<br/>English</b><br/><font color="red">vanguard</font>>]
+{ avantOF gardeOF } -> avauntgardeOF 
+avauntgardeOF -> vandgardME [style=dashed]
+vandgardME -> vanguard
+
+// avant-garde
+avantgardeF [label=<<b>French</b><br/><font color="red">avant-garde</font>>]
+avantgarde [label=<<b>Modern<br/>English</b><br/><font color="red">avant-garde</font>>]
+avauntgardeOF -> avantgardeF
+avantgardeF -> avantgarde [style=dashed]
+
+// anti-
+antiGk [label=<<b>Greek</b><br/><font color="red">anti, anti-</font><br/><font point-size="12">opposite</font>>]
+anti [label=<<b>Modern<br/>English</b><br/><font color="red">ant(i)-<br/>anti</font>>]
+antiIE -> antiGk
+antiGk -> anti [style=dashed]
+
+// antic, antique
+okwIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*okʷ-</font><br/><font point-size="12">to see</font>> shape=box style="dashed,rounded" URL="okw-see.svg"]
+antiekwo [label=<<font color="red">*anti-əkʷo-</font><br/><font point-size="12">appearing before</font>>]
+{ antiIE okwIE } -> antiekwo
+antiquusL [label=<<b>Latin</b><br/><font color="red">antīquus</font><br/><font point-size="12">former, old</font>>]
+antiqueF [label=<<b>French</b><br/><font color="red">antique</font>>]
+antique [label=<<b>Modern<br/>English</b><br/><font color="red">antique</font>>]
+antiekwo -> antiquusL -> antiqueF
+antiqueF -> antique [style=dashed]
+anticoI [label=<<b>Italian</b><br/><font color="red">antico</font><br/><font point-size="12">ancient (used of<br/>grotesque<br/>Roman artifacts)</font>>]
+antic [label=<<b>Modern<br/>English</b><br/><font color="red">antic</font>>]
+antiquusL -> anticoI
+anticoI -> antic [style=dashed]
+
+// until, unto
+ntiIE [label=<<font color="red">*n̥ti-</font>>]
+undGmc [label=<<b>Germanic</b><br/><font color="red">*und-</font>>]
+undON [label=<<b>Old Norse</b><br/><font color="red">und</font><br/><font point-size="12">until, unto</font>>]
+unME [label=<<b>Middle<br/>English</b><br/><font color="red">un-</font><br/><font point-size="12">up to</font>>]
+tilME [label=<<b>Middle<br/>English</b><br/><font color="red">til</font><br/><font point-size="12">until</font>>]
+untilME [label=<<font color="red">until</font>>]
+until [label=<<b>Modern<br/>English</b><br/><font color="red">until</font>>]
+antiIE -> ntiIE -> undGmc -> undON -> unME
+{ unME tilME } -> untilME -> until
+toME [label=<<b>Middle<br/>English</b><br/><font color="red">to</font><br/><font point-size="12">to</font>>]
+untoME [label=<<font color="red">unto</font>>]
+unto [label=<<b>Modern<br/>English</b><br/><font color="red">unto</font>>]
+{ unME toME } -> untoME -> unto
+
+// elope
+ontMD [label=<<b>Middle<br/>Dutch</b><br/><font color="red">ont-</font><br/><font point-size="12">away from</font>>]
+lopenMD [label=<<b>Middle<br/>Dutch</b><br/><font color="red">lopen</font><br/><font point-size="12">to run</font>>]
+ontlopenMD [label=<<font color="red">ontlopen</font><br/><font point-size="12">to run away</font>>]
+aloperAN [label=<<b>Anglo-Norman</b><br/><font color="red">aloper</font>>]
+elope [label=<<b>Modern<br/>English</b><br/><font color="red">elope</font>>]
+undGmc -> ontMD
+{ ontMD lopenMD } -> ontlopenMD
+ontlopenMD -> aloperAN [style=dashed]
+aloperAN -> elope [style=dashed label="?" decorate=true]
+
+// Vedanta
+antoIE [label=<<font color="red">*anto-</font>>]
+weidIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*weid-</font><br/><font point-size="12">to see</font>> shape=box style="dashed,rounded" URL="weid-see.svg"]
+vedahSk [label=<<b>Sanskrit</b><br/><font color="red">vedaḥ</font><br/><font point-size="12">knowledge, Veda</font>>]
+antahSk [label=<<b>Sanskrit</b><br/><font color="red">antaḥ</font><br/><font point-size="12">end</font>>]
+vedantahSk [label=<<font color="red">vedāntaḥ</font><br/><font point-size="12">complete knowledge<br/>of the Veda</font>>]
+vedanta [label=<<b>Modern<br/>English</b><br/><font color="red">Vedanta</font>>]
+weidIE -> vedahSk
+antiIE -> antoIE -> antahSk
+{ vedahSk antahSk } -> vedantahSk
+vedantahSk -> vedanta [style=dashed]
+
+// ambhi- (root)
+antbhiIE [label=<<font color="red">*ant-bhi</font><br/><font point-size="12">from both sides</font>>]
+ambhiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ambhi</font><br/><font point-size="12">around</font>> shape=box style="dashed,rounded" URL="ambhi-around.svg"]
+antIE -> antbhiIE -> ambhiIE
+
+{ rank=sink un along end ante ancient anterior advance advantage vanguard avantgarde anti antic antique until unto elope vedanta }
+{ rank=same delIE apoIE okwIE weidIE }
+}

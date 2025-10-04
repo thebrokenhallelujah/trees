@@ -1,0 +1,65 @@
+strict digraph {
+/* sources: WiS AHD */
+node [shape=none]
+
+arg [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*arg-</font></td><td><font point-size="16">to shine, white, silver</font></td></tr></table>> tooltip="Indo-European \"*arg-\" to shine, white, silver" shape=box peripheries=2 margin=.3]
+arg -> {argentIE argilIE arguIE argro}
+argentIE [label=<<font color="red">arg-ent-</font>>]
+argilIE [label=<<font color="red">arg-i-l(l)-</font>>] // what does a double letter mean?
+arguIE [label=<<font color="red">arg-u-</font><br/><font point-size="12">brilliant, clear</font>>]
+argro [label=<<font color="red">ər̥g-ro-, arg-ro-</font>>]
+
+/* omitted: arginine/arginase, litharge (PbO, used in batteries?), pyrargyrite (ore, also <pur), argema (eye disease), agrimony */
+
+/* argent, what do I do with Ag? */
+/* also argentic, argenteous, argental, argentite, argentry (silver jewelry), argentify, argentific (producing silver), argentiferous (same), argentometer */
+argentIE [label=<<font color="red">arg-ent-</font>>]
+argentumL [label=<<b>Latin</b><br/><font color="red">argentum</font><br/><font point-size="12">silver</font>>]
+argentE [label=<<b>Modern<br/>English</b><br/><font color="red">argent<br/>argentine<br/>Argentina</font>>]
+agE [label=<<b>Modern<br/>English</b><br/><font color="red">Ag </font><font point-size="12">(chemical<br/>symbol for silver)</font>>]
+argentIE -> argentumL
+argentumL -> {argentE agE} [style=dashed]
+
+
+/* argue, argument,omitted: argute (perceptive), argutation (quibbling about minutiae) */
+argutusL [label=<<b>Latin</b><br/><font color="red">argutus</font><br/><font point-size="12">transparent</font>>] // ancestor or parallel?
+arguereL [label=<<font color="red">arguere</font><br/><font point-size="12">to make clear</font>>]
+//argutareL [label=<<font color="red">argūtāre</font><br/><font point-size="12">to babble</font>>] // frequentive
+// argute, argutaion?
+arguerOF [label=<<b>Old French</b><br/><font color="red">arguer</font>>]
+arguenME [label=<<b>Middle<br/>English</b><br/><font color="red">arguen</font>>]
+argue [label=<<b>Modern<br/>English</b><br/><font color="red">argue</font>>]
+arguIE -> argutusL -> arguereL -> arguerOF
+arguerOF -> arguenME [style=dashed]
+arguenME -> argue
+argumentumL [label=<<font color="red">argūmentum</font>>]
+argumentOF [label=<<b>Old French</b><br/><font color="red">argument</font>>]
+argumentME [label=<<b>Middle<br/>English</b><br/><font color="red">argument</font>>]
+argument [label=<<b>Modern<br/>English</b><br/><font color="red">argument</font>>]
+arguereL -> argumentumL -> argumentOF
+argumentOF -> argumentME [style=dashed]
+argumentME -> argument
+
+/* argil (clay) */
+argillosG [label=<<b>Greek</b><br/><font color="red">argillos</font><br/><font point-size="12">white clay</font>>]
+argillaL [label=<<b>Latin</b><br/><font color="red">argilla</font>>] // L argilla from G argillos??
+argillaME [label=<<b>Middle<br/>English</b><br/><font color="red">argilla</font>>]
+argil [label=<<b>Modern<br/>English</b><br/><font color="red">argil<br/>argillaceous<br/>argillite</font>>]
+argilIE -> argillosG
+argillosG -> argillaL -> argillaME [style=dashed]
+argillaME -> argil
+
+/* Gk myths, omitted: poss. agrimony (plant) */
+argosG [label=<<b>Greek</b><br/><font color="red">argos</font><br/><font point-size="12">white, shining</font>>]
+argosE [label=<<font color="red">Argos, Argo</font>>]
+/* Argos, 100-headed creature, whose eyes are now on peacock feathers (Greeks believed our eyes shine on what we see) */
+/* Argo ("shining" ship?), Argonauts, Argosy */
+/* presumably also Argos, city sacred to Juno */
+argro -> argosG
+argosG -> argosE [style=dashed]
+
+{rank=same argentE agE argue argument argil argosE}
+{rank=same arguerOF argumentOF}
+{rank=same argillaME arguenME argumentME}
+{rank=same argentumL argutusL argillosG argosG}
+}

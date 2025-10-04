@@ -1,0 +1,76 @@
+strict digraph {
+/* sources: WiS, Barnhart, Ayto */
+/* could use more on intermediate forms and their definitions */
+node [shape=none tooltip=" "]
+edge [tooltip=" "]
+
+ank [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">ank-, angg-</font></td><td><font point-size="16">to bend</font></td></tr></table>> tooltip="Indo-European \"ank-, angg-\" to bend" shape=box peripheries=2 margin=.3]
+
+/* angle (fishing) */
+anggGm [label=<<b>Germanic</b><br/><font color="red">angg-</font><br/><font point-size="12">fishhook</font>>]
+angel1OE [label=<<b>Old English</b><br/><font color="red">angel</font>>]
+angle1ME [label=<<b>Middle<br/>English</b><br/><font color="red">angle</font>>]
+angle1 [label=<<b>Modern<br/>English</b><br/><font color="red">angle</font><br/><font point-size="12">(to fish, and<br/>related metaphorical uses)</font>>]
+ank -> anggGm [label="?" decorate=true tooltip=" "]
+anggGm -> angel1OE-> angle1ME -> angle1 [tooltip=" "]
+
+/* Anglo-: link to history? maybe map? */
+angulGm [label=<<b>Germanic</b><br/><font color="red">Angul</font><br/><font point-size="12">Angeln<br/>(fishhook-shaped<br/>region of modern Germany)</font>>]
+angliL [label=<<b>Latin</b><br/><font color="red">Anglī, Anglo-</font><br/><font point-size="12">Angles,<br/>the people from there</font>>]
+angloOE [label=<<b>Old English</b><br/><font color="red">Engle<br/>Anglo-</font>>]
+angloME [label=<<b>Middle<br/>English</b><br/><font color="red">Angle<br/>Anglo-</font>>]
+anglo [label=<<b>Modern<br/>English</b><br/><font color="red">Angle<br/>Anglo-</font>>]
+ank -> angulGm
+angulGm -> angliL -> angloOE [style=dotted tooltip=" "]
+angloOE -> angloME -> anglo
+
+/* Anglicize, Anglican */
+anglicusL [label=<<font color="red">Anglicus</font><br/><font point-size="12">of the English people</font>>]
+anglicize [label=<<b>Modern<br/>English</b><br/><font color="red">Anglicize<br/>Anglican</font>>]
+angliL -> anglicusL
+anglicusL -> anglicize [style=dotted]
+
+/* English, omitted: England */
+engliscOE [label=<<font color="red">Englisc</font><br/><font point-size="12">(nationality<br/>and language)</font>>]
+englishME [label=<<b>Middle<br/>English</b><br/><font color="red">English</font>>]
+english [label=<<b>Modern<br/>English</b><br/><font color="red">English</font>>]
+angloOE -> engliscOE -> englishME -> english
+
+/* angle (geometry) */
+angusL [label=<<b>Latin</b><br/><font color="red">angus</font><br/><font point-size="12">?</font>>] // unattested
+angulusL [label=<<font color="red">angulus</font><br/><font point-size="12">corner</font>>] // dim.
+angle2OF [label=<<b>Old French</b><br/><font color="red">angle</font>>]
+angle2ME [label=<<b>Middle<br/>English</b><br/><font color="red">angle</font>>]
+angle2 [label=<<b>Modern<br/>English</b><br/><font color="red">angle</font><br/><font point-size="12">(geometry)</font>>]
+ank -> angusL -> angulusL -> angle2OF
+angle2OF -> angle2ME [style=dotted]
+angle2ME -> angle2
+
+/* anchor */
+ankuraG [label=<<b>Greek</b><br/><font color="red">ankūra</font><br/><font point-size="12">anchor</font>>]
+ancoraL [label=<<b>Latin</b><br/><font color="red">ancora</font>>] // later corrupted form anchora
+ancorOE [label=<<b>Old English</b><br/><font color="red">ancor</font>>]
+ancreME [label=<<b>Middle<br/>English</b><br/><font color="red">ancre, anker</font>>]
+anchor [label=<<b>Modern<br/>English</b><br/><font color="red">anchor</font>>]
+ank -> ankuraG
+ankuraG -> ancoraL -> ancorOE [style=dotted]
+ancorOE -> ancreME -> anchor
+
+/* ankle */
+ankulaON [label=<<b>Old Norse</b><br/><font color="red">ankula</font>>] // =ankle?
+ancleME [label=<<b>Middle<br/>English</b><br/><font color="red">ancle</font>>] // displaced OE onclēow
+ankle [label=<<b>Modern<br/>English</b><br/><font color="red">ankle</font>>]
+ank -> ankulaON
+ankulaON -> ancleME [style=dotted]
+ancleME -> ankle
+
+/* anguine, anuineous =snakelike, anguilliform =eel-like */
+/* also anguelle (falcon worms), anguillule French eel dish */
+
+{rank=same angle1 angle2 anglo anchor ankle english anglicize}
+{rank=same angel1OE angloOE ancorOE angle2OF}
+{rank=same angle1ME angloME englishME ancreME angle2ME ancleME}
+angliL -> anglicusL [weight=2]
+angusL -> angulusL [weight=2]
+{rank=same anggGm angulGm ankulaON angusL ankuraG}
+}

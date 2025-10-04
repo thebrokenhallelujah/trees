@@ -1,0 +1,148 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+akwaIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*akʷ-ā-</font></td><td><font point-size="16">water</font></td></tr></table>> tooltip="Indo-European \"*akʷ-ā-\" water" shape=box peripheries=2 margin=.3]
+
+// island
+agwjoGm [label=<<b>Germanic</b><br/><font color="red">*agwjō</font>>]
+aujoGm [label=<<font color="red">*aujō</font><br/><font point-size="12">"thing on the water"</font>>]
+iegOE [label=<<b>Old English</b><br/><font color="red">īg, īeg</font><br/><font point-size="12">island</font>>]
+ieglandOE [label=<<font color="red">īegland</font>>]
+ilondME [label=<<b>Middle<br/>English</b><br/><font color="red">ilond</font>>]
+island [label=<<b>Modern<br/>English</b><br/><font color="red">island</font>>]
+akwaIE -> agwjoGm -> aujoGm -> iegOE -> ieglandOE -> ilondME -> island
+insulaL [label=<<b>Latin</b><br/><font color="red">īnsula</font>>]
+isleOF [label=<<b>Old French</b><br/><font color="red">isle</font>>]
+ileME [label=<<b>Middle<br/>English</b><br/><font color="red">ile</font>>]
+isle [label=<<b>Modern<br/>English</b><br/><font color="red">isle</font>>]
+insulaL -> isleOF
+isleOF -> ileME [style=dashed]
+ileME -> isle
+isle -> island [style=dotted]
+
+// ait
+igethOE [label=<<font color="red">īgeth</font><br/><font point-size="12">small island</font>>]
+eitME [label=<<b>Middle<br/>English</b><br/><font color="red">eit</font>>]
+ait [label=<<b>Modern<br/>English</b><br/><font color="red">ait</font>>]
+iegOE -> igethOE -> eitME -> ait
+
+// aqua
+aquaL [label=<<b>Latin</b><br/><font color="red">aqua</font>>]
+aquaME [label=<<b>Middle<br/>English</b><br/><font color="red">aqua</font>>]
+aqua [label=<<b>Modern<br/>English</b><br/><font color="red">aqua</font>>]
+akwaIE -> aquaL
+aquaL -> aquaME [style=dashed]
+aquaME -> aqua
+
+// aqua-, aqui-
+aqui [label=<<b>Modern<br/>English</b><br/><font color="red">aqua-<br/>aqui-</font>>]
+aquaL -> aqui [style=dashed]
+
+// aquamarine
+moriIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*mori-</font><br/><font point-size="12">body of water</font>> shape=box style="dashed,rounded" URL="mori-lake.svg"]
+mareL [label=<<b>Latin</b><br/><font color="red">mare</font><br/><font point-size="12">sea</font>>]
+marinaL [label=<<font color="red">marīna</font>>]
+aquamarinaL [label=<<font color="red">aqua marīna</font><br/><font point-size="12">seawater</font>>]
+aquamarine [label=<<b>Modern<br/>English</b><br/><font color="red">aquamarine</font>>]
+moriIE -> mareL -> marinaL
+{ aquaL marinaL } -> aquamarinaL
+aquamarinaL -> aquamarine [style=dashed]
+
+// aquarelle
+acquaI [label=<<b>Italian</b><br/><font color="red">acqua</font>>]
+acquarellaI [label=<(obsolete)<br/><font color="red">acquarella</font>>]
+aquarelleF [label=<<b>French</b><br/><font color="red">aquarelle</font>>]
+aquarelle [label=<<b>Modern<br/>English</b><br/><font color="red">aquarelle</font>>]
+aquaL -> acquaI -> acquarellaI
+acquarellaI -> aquarelleF -> aquarelle [style=dashed]
+
+// aquarium, Aquarius
+aquariumL [label=<<font color="red">aquārium</font><br/><font point-size="12">source of water</font>>]
+aquarium [label=<<b>Modern<br/>English</b><br/><font color="red">aquarium</font>>]
+aquariusL [label=<<font color="red">Aquārius</font><br/><font point-size="12">water carrier</font>>]
+aquarius [label=<<b>Modern<br/>English</b><br/><font color="red">Aquarius</font>>]
+aquaL -> { aquariumL aquariusL }
+aquariumL -> aquarium [style=dashed]
+aquariusL -> aquarius [style=dashed]
+
+// aquatint
+acquatintaI [label=<<font color="red">acquatinta</font><br/><font point-size="12">tinted water</font>>]
+aquatinteF [label=<<b>French</b><br/><font color="red">aquatinte</font>>]
+aquatint [label=<<b>Modern<br/>English</b><br/><font color="red">aquatint</font>>]
+acquaI -> acquatintaI
+acquatintaI -> aquatinteF -> aquatint [style=dashed]
+
+// aqua vitae
+aquavitaeL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">aqua vītae</font><br/><font point-size="12">"water of life,"<br/>highly distilled spirits</font>>]
+aquavitaeME [label=<<b>Middle<br/>English</b><br/><font color="red">aqua vitae</font>>]
+aquavitae [label=<<b>Modern<br/>English</b><br/><font color="red">aqua vitae</font>>]
+aquaL -> aquavitaeL
+aquavitaeL -> aquavitaeME [style=dashed]
+aquavitaeME -> aquavitae
+
+// aquavit
+akvavitSc [label=<<b>Swedish,<br/>Danish,<br/>Norwegian</b><br/><font color="red">akvavit</font>>]
+aquavit [label=<<b>Modern<br/>English</b><br/><font color="red">aquavit</font>>]
+aquavitaeL -> akvavitSc -> aquavit [style=dashed]
+
+// aquatic 
+aquaticusL [label=<<font color="red">aquāticus</font>>]
+aquatiqueOF [label=<<b>Old French</b><br/><font color="red">aquatique</font>>]
+aquatiqueME [label=<<b>Middle<br/>English</b><br/><font color="red">aquatique</font>>]
+aquatic [label=<<b>Modern<br/>English</b><br/><font color="red">aquatic</font>>]
+aquaL -> aquaticusL -> aquatiqueOF 
+aquatiqueOF -> aquatiqueME [style=dashed]
+aquatiqueME -> aquatic
+
+// aqueous
+aqueusL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">aqueus</font>>]
+aqueous [label=<<b>Modern<br/>English</b><br/><font color="red">aqueous</font>>]
+aquaL -> aqueusL
+aqueusL -> aqueous [style=dashed]
+
+// aqueduct
+deukIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*deuk-</font><br/><font point-size="12">to lead</font>> shape=box style="dashed,rounded" URL="deuk-lead.svg"]
+ducereL [label=<<b>Latin</b><br/><font color="red">dūcere</font>>]
+ductusL [label=<<font color="red">ductus</font><br/><font point-size="12">a leading</font>>]
+aquaeductusL [label=<<font color="red">aquaeductus</font>>]
+aqueduct [label=<<b>Modern<br/>English</b><br/><font color="red">aqueduct</font>>]
+deukIE -> ducereL -> ductusL
+{ aquaL ductusL } -> aquaeductusL
+aquaeductusL -> aqueduct [style=dashed]
+
+// ewer
+aquariaL [label=<<font color="red">*aquāria</font>>]
+euerAN [label=<<b>Anglo-Norman</b><br/><font color="red">euer</font>>]
+euerME [label=<<b>Middle<br/>English</b><br/><font color="red">euer</font>>]
+ewer [label=<<b>Modern<br/>English</b><br/><font color="red">ewer</font>>]
+aquaL -> aquariaL -> euerAN
+euerAN -> euerME [style=dashed]
+euerME -> ewer
+
+// sewer
+eghsIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*eghs</font><br/><font point-size="12">out</font>> shape=box style="dashed,rounded" URL="eghs-out.svg"]
+exL [label=<<b>Latin</b><br/><font color="red">ex-</font>>]
+aquariaL [label=<<font color="red">aquāria</font><br/><font point-size="12">pertaining to water</font>>]
+exaquariaL [label=<<font color="red">*exaquāria</font>>]
+sewereAN [label=<<b>Anglo-Norman</b><br/><font color="red">sewere</font>>]
+sewerME [label=<<b>Middle<br/>English</b><br/><font color="red">sewer</font>>]
+sewer [label=<<b>Modern<br/>English</b><br/><font color="red">sewer</font>>]
+eghsIE -> exL
+{ exL aquariaL } -> exaquariaL -> sewereAN
+aquaL -> aquariaL
+sewereAN -> sewerME [style=dashed]
+sewerME -> sewer
+
+// gouache
+aquariL [label=<<font color="red">aquārī</font><br/><font point-size="12">to fetch water</font>>]
+aquatioL [label=<<font color="red">aquātiō</font><br/><font point-size="12">watering</font>>]
+guazzoI [label=<<b>Italian</b><br/><font color="red">guazzo</font>>]
+gouacheF [label=<<b>French</b><br/><font color="red">gouache</font>>]
+gouache [label=<<b>Modern<br/>English</b><br/><font color="red">gouache</font>>]
+aquaL -> aquariL -> aquatioL -> guazzoI
+guazzoI -> gouacheF -> gouache [style=dashed]
+
+{ rank=sink island ait aqua aqui aquamarine aquarelle aquarium aquarius aquatint aquavitae aquavit aquatic aqueduct ewer gouache sewer aqueous }
+{ rank=source akwaIE eghsIE moriIE deukIE }
+}

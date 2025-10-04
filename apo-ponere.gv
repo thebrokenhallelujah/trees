@@ -1,0 +1,128 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+apoIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*apo-, *ap-</font></td><td><font point-size="16">off, away</font></td></tr></table>> tooltip="Indo-European \"*apo-, *ap-\" off, away" shape=rect style=dashed peripheries=1 margin=.3 URL="apo-off2.svg"]
+
+posIE [label=<<font color="red">*po(s)</font><br/><font point-size="12">on, in</font>>]
+ponereL [label=<<b>Latin</b><br/><font color="red">pōnere</font><br/><font point-size="12">to put, place</font>>]
+apoIE -> posIE -> ponereL
+
+// position, positive, post, post, posture, punt
+post [label=<<b>Modern<br/>English</b><br/><font color="red">position<br/>positive<br/>post </font><font point-size="12">(base)</font><br/><font color="red">post </font><font point-size="12">(mail)</font><br/><font color="red">posture<br/>punt </font><font point-size="12">(gamble)</font>>]
+ponereL -> post [style=dashed]
+
+// apposite, apposition, postiche
+apponereL [label=<<font color="red">appōnere</font><br/><font point-size="12">to put near</font>>]
+apposite [label=<<b>Modern<br/>English</b><br/><font color="red">apposite<br/>apposition<br/>postiche</font>>]
+ponereL -> apponereL
+apponereL -> apposite [style=dashed]
+
+// component, compose, composite, compost, compote, compound
+komIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*kom</font><br/><font point-size="12">with</font>> shape=box style="dashed,rounded" URL="kom-with.svg"]
+comL [label=<<b>Latin</b><br/><font color="red">com-</font>>]
+componereL [label=<<font color="red">compōnere</font><br/><font point-size="12">to put together</font>>]
+component [label=<<b>Modern<br/>English</b><br/><font color="red">component<br/>compose<br/>composite<br/>compost<br/>compote<br/>compound</font>>]
+komIE -> comL
+{ comL ponereL } -> componereL
+componereL -> component [style=dashed]
+
+// contrapposto
+contraL [label=<<b>Latin</b><br/><font color="red">contrā-</font><br/><font point-size="12">against</font>>]
+contraponereL [label=<<font color="red">contrāpōnere</font><br/><font point-size="12">to set opposite</font>>]
+contrapposto [label=<<b>Modern<br/>English</b><br/><font color="red">contrapposto</font>>]
+komIE -> contraL
+{ contraL ponereL } -> contraponereL
+contraponereL -> contrapposto [style=dashed]
+
+// depone, deponent, depose, deposit, depot
+deponereL [label=<<font color="red">dēpōnere</font><br/><font point-size="12">to put down</font>>]
+deposit [label=<<b>Modern<br/>English</b><br/><font color="red">depone<br/>deponent<br/>depose<br/>deposit<br/>depot</font>>]
+ponereL -> deponereL
+deponereL -> deposit [style=dashed]
+
+// dispose, disposition
+disponereL [label=<<font color="red">dispōnere</font><br/><font point-size="12">to arrange</font>>]
+dispose [label=<<b>Modern<br/>English</b><br/><font color="red">dispose<br/>disposition</font>>]
+ponereL -> disponereL
+disponereL -> dispose [style=dashed]
+
+// exponent, expose, exposition, expound
+eghsIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*eghs</font><br/><font point-size="12">out</font>> shape=box style="dashed,rounded" URL="eghs-out.svg"]
+exL [label=<<b>Latin</b><br/><font color="red">ex-</font>>]
+exponereL [label=<<font color="red">expōnere</font><br/><font point-size="12">to expound</font>>]
+expound [label=<<b>Modern<br/>English</b><br/><font color="red">exponent<br/>expose<br/>exposition<br/>expound</font>>]
+eghsIE -> exL
+{ exL ponereL } -> exponereL 
+exponereL -> expound [style=dashed]
+
+// impose, impost, imposter
+enIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*en</font><br/><font point-size="12">in</font>>]
+inL [label=<<b>Latin</b><br/><font color="red">in-</font>> shape=box style="dashed,rounded" URL="en-in1.svg"]
+imponereL [label=<<font color="red">impōnere</font><br/><font point-size="12">to place upon</font>>]
+impose [label=<<b>Modern<br/>English</b><br/><font color="red">impose<br/>impost<br/>imposter</font>>]
+enIE -> inL
+{ inL ponereL } -> imponereL
+imponereL -> impose [style=dashed]
+
+// interpose
+interL [label=<<b>Latin</b><br/><font color="red">inter-</font><br/><font point-size="12">between</font>> shape=box style="dashed,rounded" URL="en-in3.svg"]
+interponereL [label=<<font color="red">interpōnere</font><br/><font point-size="12">to put between</font>>]
+interpose [label=<<b>Modern<br/>English</b><br/><font color="red">interpose</font>>]
+enIE -> interL
+{ interL ponereL } -> interponereL
+interponereL -> interpose [style=dashed]
+
+// oppose, opposite
+epiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*epi, *opi</font><br/><font point-size="12">near, at,<br/>against</font>> shape=box style="dashed,rounded" URL="epi-near.svg"]
+obL [label=<<b>Latin</b><br/><font color="red">ob-</font><br/><font point-size="12">toward,<br/>against</font>>]
+opponereL [label=<<font color="red">oppōnere</font><br/><font point-size="12">to oppose</font>>]
+oppose [label=<<b>Modern<br/>English</b><br/><font color="red">oppose<br/>opposite</font>>]
+epiIE -> obL
+{ obL ponereL } -> opponereL
+opponereL -> oppose [style=dashed]
+
+// preposition, prepositive, provost
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">(various<br/>prepositions)</font>>]
+praeL [label=<<b>Latin</b><br/><font color="red">prae-</font><br/><font point-size="12">before</font>> shape=box style="dashed,rounded" URL="per-prai1.svg"]
+praeponereL [label=<<font color="red">praepōnere</font><br/><font point-size="12">to put in front</font>>]
+preposition [label=<<b>Modern<br/>English</b><br/><font color="red">preposition<br/>prepositive<br/>provost</font>>]
+perIE -> praeL
+{ praeL ponereL } -> praeponereL
+praeponereL -> preposition [style=dashed]
+
+// propose, proponent, proposition, propound
+proL [label=<<b>Latin</b><br/><font color="red">prō-</font><br/><font point-size="12">in front of</font>> shape=box style="dashed,rounded" URL="per-pro2.svg"]
+proponereL [label=<<font color="red">prōpōnere</font><br/><font point-size="12">to set forth</font>>]
+propound [label=<<b>Modern<br/>English</b><br/><font color="red">propose<br/>proponent<br/>proposition<br/>propound</font>>]
+perIE -> proL
+{ proL ponereL } -> proponereL
+proponereL -> propound [style=dashed]
+
+// reposit
+reponereL [label=<<font color="red">repōnere</font><br/><font point-size="12">to put back</font>>]
+reposit [label=<<b>Modern<br/>English</b><br/><font color="red">reposit</font>>]
+ponereL -> reponereL
+reponereL -> reposit [style=dashed]
+
+// suppose
+upoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*upo</font><br/><font point-size="12">under</font>> shape=box style="dashed,rounded" URL="upo-under.svg"]
+subL [label=<<b>Latin</b><br/><font color="red">sub-</font>>]
+supponereL [label=<<font color="red">suppōnere</font><br/><font point-size="12">to put under</font>>]
+suppose [label=<<b>Modern<br/>English</b><br/><font color="red">suppose</font>>]
+upoIE -> subL
+{ subL ponereL } -> supponereL
+supponereL -> suppose [style=dashed]
+
+// transpose
+tereIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*terə-</font><br/><font point-size="12">to cross over</font>> shape=box style="dashed,rounded" URL="tere-cross.svg"]
+transL [label=<<b>Latin</b><br/><font color="red">trāns-</font><br/><font point-size="12">across</font>>]
+transponereL [label=<<font color="red">trānspōnere</font><br/><font point-size="12">to transfer</font>>]
+transpose [label=<<b>Modern<br/>English</b><br/><font color="red">transpose</font>>]
+tereIE -> transL
+{ transL ponereL } -> transponereL
+transponereL -> transpose [style=dashed]
+
+{ rank=sink post apposite component contrapposto deposit dispose expound impose interpose oppose preposition propound reposit suppose transpose }
+{ rank=same komIE eghsIE enIE epiIE perIE upoIE tereIE }
+}

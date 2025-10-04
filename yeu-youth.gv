@@ -1,0 +1,77 @@
+strict digraph {
+/* sources: AHD, ? */
+node [shape=none]
+
+aiw [label=<<b>Indo-<br/>European</b><br/><font color="red">aiw-</font><br/><font point-size="12">vital force,<br/>life, eternity</font>> shape=box style="dashed,rounded" URL="aiw-life0.svg"]
+yeu [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">yeu-</font></td><td><font point-size="16">vital force,<br/>youthful vigor</font></td></tr></table>> tooltip="Indo-European \"yeu-\" vital force, youthful vigor" shape=box peripheries=2 margin=.3]
+aiw -> yeu
+
+/* omitted: Junker, younker */
+
+jugunthoGm [label=<<b>Germanic</b><br/><font color="red">jugunthō</font>>]
+geoguthOE [label=<<b>Old English</b><br/><font color="red">geoguth</font><br/><font point-size="12">youth</font>>]
+youtheME [label=<<b>Middle<br/>English</b><br/><font color="red">youthe</font>>]
+youth [label=<<b>Modern<br/>English</b><br/><font color="red">youth</font>>]
+yeu -> jugunthoGm [sametail=1 minlen=2]
+jugunthoGm -> geoguthOE [sametail=1]
+geoguthOE -> youtheME -> youth
+
+geongOE [label=<<b>Old English</b><br/><font color="red">geong</font><br/><font point-size="12">young</font>>]
+yongME [label=<<b>Middle<br/>English</b><br/><font color="red">yong</font>>]
+young [label=<<b>Modern<br/>English</b><br/><font color="red">young</font>>]
+jugunthoGm -> geongOE [sametail=1]
+geongOE -> yongME -> young
+// probably from the same IE form as yowanko, rather than from yuguntho
+
+yowankoC [label=<<b>Celtic</b><br/><font color="red">yowanko-</font>>]
+oacOI [label=<<b>Old<br/>Irish</b><br/><font color="red">ōac</font>>] // meaning?
+oglachIG [label=<<b>Irish<br/>Gaelic</b><br/><font color="red">oglach</font><br/><font point-size="12">soldier</font>>]
+galloglach [label=<<font color="red">galloglach</font><br/><font point-size="12">foreign soldier</font>>]
+gallowglass [label=<<b>Modern<br/>English</b><br/><font color="red">galloglass<br/>gallowglass</font>>]
+yeu -> yowankoC [sametail=1 minlen=2]
+yowankoC -> oacOI-> oglachIG
+oglachIG -> galloglach [weight=3]
+galloglach -> gallowglass [style=dashed weight=2]
+
+/* Latin */
+iuvenisL [label=<<b>Latin</b><br/><font color="red">iuvenis</font><br/><font point-size="12">young</font>>]
+yeu -> iuvenisL [sametail=1 minlen=2]
+iuvenisL -> { iuniorL iunoL iuvenilisL } [sametail=1 weight=3]
+
+iuniorL [label=<<font color="red">iūnior</font><br/><font point-size="12">younger</font>>]
+juniorME [label=<<b>Middle<br/>English</b><br/><font color="red">junior</font>>]
+junior [label=<<b>Modern<br/>English</b><br/><font color="red">junior</font>>]
+iuniorL -> juniorME [style=dashed]
+juniorME -> junior
+
+iunoL [label=<<font color="red">Iūnō</font><br/><font point-size="12">Juno</font>>] // associated with the new moon
+juno [label=<<b>Modern<br/>English</b><br/><font color="red">Juno</font>>]
+iunoL -> juno [style=dashed]
+iuniusL [label=<<font color="red">Iūnius</font><br/><font point-size="12">June</font>>]
+{ rank=same iunoL -> iuniusL }
+
+juinOF [label=<<b>Old<br/>French</b><br/><font color="red">juin</font>>]
+juniusOE [label=<<b>Old<br/>English</b><br/><font color="red">Junius</font>>]
+juneME [label=<<b>Middle<br/>English</b><br/><font color="red">June</font>>]
+june [label=<<b>Modern<br/>English</b><br/><font color="red">June</font>>]
+iuniusL -> juniusOE [sametail=1 style=dashed]
+iuniusL -> juinOF [sametail=1]
+juniusOE -> juneME [samehead=1]
+juinOF -> juneME [samehead=1 style=dashed]
+juneME -> june
+
+iuvenilisL [label=<<font color="red">iuvenīlis</font><br/><font point-size="12">juvenile?</font>>]
+juvenile [label=<<b>Modern<br/>English</b><br/><font color="red">juvenile</font>>]
+iuvenilisL -> juvenile [style=dashed]
+/* omitted: juvenescent, juvenilia */
+
+rejuvenate [label=<<b>Modern<br/>English</b><br/><font color="red">rejuvenate</font>>]
+iuvenisL -> rejuvenate [sametail=1 style=dashed]
+
+{ rank=sink youth young gallowglass junior juno june juvenile rejuvenate }
+{ rank=source aiw yeu }
+{ rank=same jugunthoGm yowankoC iuvenisL }
+{ rank=same geoguthOE geongOE juniusOE }
+{ rank=same juniorME juneME }
+
+}
