@@ -1,0 +1,171 @@
+strict digraph {
+node [shape=none]
+
+pr [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*per </font><font point-size="16">forward, through</font>> shape=box style="dashed,rounded" URL="per-list.svg" tooltip="Indo-European \"*per\" forward, through"]
+per [label=<<font color="red">per-</font><br/><font point-size="12">to lead, pass over</font>>]
+pr -> per -> { pertu pertra }
+pertu [label=<<font color="red">per-tu-</font>>]
+pertra [label=<<font color="red">per-trā</font>>]
+per -> por
+por -> { faranGm poro poreyo poor }
+por -> porno [label="?" decorate=true]
+por [label=<<font color="red">por-</font>>]
+poro [label=<<font color="red">por-o-</font>>]
+poreyo [label=<<font color="red">por-eyo-</font>>]
+poor [label=<<font color="red">pōr-</font>>]
+porno [label=<<font color="red">por-no-</font>>]
+
+// fjord, firth
+pertu -> ferthuzGm -> fjordhrON -> fjordN
+fjordhrON -> firthME [style=dashed]
+fjordN -> fjord [style=dashed]
+firthME -> firth
+ferthuzGm [label=<<b>Germanic</b><br/><font color="red">ferthuz</font><br/><font point-size="12">"place for crossing over," ford</font>>] // NGm WGm furduz
+fjordhrON [label=<<b>Old Norse</b><br/><font color="red">fjördhr</font><br/><font point-size="12">inlet, estuary</font>>]
+fjordN [label=<<b>Norwegian</b><br/><font color="red">fjord</font>>]
+fjord [label=<<b>Modern<br/>English</b><br/><font color="red">fjord</font>>]
+firthME [label=<<b>Middle<br/>English</b><br/><font color="red">firth</font>>]
+firth [label=<<b>Modern<br/>English</b><br/><font color="red">firth</font>>]
+
+// ferry
+poreyo -> farjanGm -> ferianOE -> ferienME -> ferry
+farjanGm [label=<<b>Germanic</b><br/><font color="red">farjan</font><br/><font point-size="12">to ferry</font>>] // fer-
+ferianOE [label=<<b>Old English</b><br/><font color="red">ferian</font>>]
+ferienME [label=<<b>Middle<br/>English</b><br/><font color="red">ferien</font>>]
+ferry [label=<<b>Modern<br/>English</b><br/><font color="red">ferry</font>>]
+
+// fare, wayfarer, welfare, warfare
+faranGm -> faranOE -> farenME -> { fare farereME welfarenME warrefareME }
+farereME -> weyfarereME -> wayfarer
+welfarenME -> welfare
+warrefareME -> warfare
+faranGm [label=<<b>Germanic</b><br/><font color="red">faran</font><br/><font point-size="12">to go</font>>] // fer-
+faranOE [label=<<b>Old English</b><br/><font color="red">faran</font><br/><font point-size="12">to go on a journey,<br/>get along</font>>]
+farenME [label=<<b>Middle<br/>English</b><br/><font color="red">faren</font>>]
+fare [label=<<b>Modern<br/>English</b><br/><font color="red">fare</font>>]
+farereME [label=<<font color="red">farere</font><br/><font point-size="12">traveler</font>>]
+weyfarereME [label=<<font color="red">weyfarere</font>>]
+wayfarer [label=<<b>Modern<br/>English</b><br/><font color="red">wayfarer</font>>]
+welfarenME [label=<<font color="red">welfaren</font><br/><font point-size="12">to fare well</font>>]
+welfare [label=<<b>Modern<br/>English</b><br/><font color="red">welfare</font>>]
+warrefareME [label=<<font color="red">warre fare</font><br/><font point-size="12">war journey</font>>]
+warfare [label=<<b>Modern<br/>English</b><br/><font color="red">warfare</font>>] // < ME fare (journey) < OE faru < faran
+
+// petro-: list
+pertra -> petraG
+petraG [label=<<b>Greek</b><br/><font color="red">pertrā,<br/>petrā</font><br/><font point-size="12">bedrock,<br/>cliff</font>>]
+petraG -> petrosG
+petrosG -> petroE [style=dashed]
+petrosG [label=<<font color="red">petros, petro-</font><br/><font point-size="12">rock</font>>]
+petroE [label=<<b>Modern<br/>English</b><br/><font color="red">petro-</font>>]
+
+// sal (salt)
+sal -> salL
+sal [label=<<b>Indo-<br/>European</b><br/><font color="red">sal-</font><br/><font point-size="12">salt</font>> shape=box style="dashed,rounded" URL="sal-salt.svg"]
+salL [label=<<b>Latin</b><br/><font color="red">sāl</font>>]
+
+// saltpeter
+petraG -> petraL [style=dashed]
+{ salL petraL } -> salpetraeL -> salpetreOF
+salpetreOF -> salpetreME [style=dashed]
+salpetreME -> saltpeter
+petraL [label=<<b>Latin</b><br/><font color="red">petra</font>>]
+salpetraeL [label=<<font color="red">sālpetrae</font><br/><font point-size="12">"salt of rock"</font>>]
+salpetreOF [label=<<b>Old French</b><br/><font color="red">salpetre</font>>]
+salpetreME [label=<<b>Middle<br/>English</b><br/><font color="red">salpetre</font>>]
+saltpeter [label=<<b>Modern<br/>English</b><br/><font color="red">saltpeter</font>>]
+
+// petroleum
+{ petraL oleum } -> petroleumL
+petroleumL -> petroleumME [style=dashed]
+petroleumME -> petroleum
+oleum [label=<<b>Latin</b><br/><font color="red">ōleum</font><br/><font point-size="12">oil</font>>]
+petroleumL [label=<<font color="red">petrōleum</font>>]
+petroleumME [label=<<b>Middle<br/>English</b><br/><font color="red">petroleum</font>>]
+petroleum [label=<<b>Modern<br/>English</b><br/><font color="red">petroleum</font>>]
+
+// parsley
+{ petraG selinon } -> petroselinon
+petroselinon -> petrosillum [style=dashed]
+petrosillum -> persilOF
+petrosillum -> petersilie [style=dashed]
+persilOF -> perselyME [style=dashed]
+petersilie -> perselyME -> parsley
+selinon [label=<<b>Greek</b><br/><font color="red">selīnon</font><br/><font point-size="12">celery</font>>]
+petroselinon [label=<<font color="red">petroselīnon</font>>]
+petrosillum [label=<<b>Latin</b><br/><font color="red">petroselīnum<br/>petrosillum</font>>]
+persilOF [label=<<b>Old French</b><br/><font color="red">persil</font>>]
+petersilie [label=<<b>Old English</b><br/><font color="red">petersilie</font>>]
+perselyME [label=<<b>Middle<br/>English</b><br/><font color="red">persely</font>>]
+parsley [label=<<b>Modern<br/>English</b><br/><font color="red">parsley</font>>]
+
+// ferry
+poreyo -> farjanGm -> ferianOE -> ferienME -> ferry
+farjanGm [label=<<b>Germanic</b><br/><font color="red">farjan</font><br/><font point-size="12">to ferry</font>>] // fer-
+ferianOE [label=<<b>Old English</b><br/><font color="red">ferian</font>>]
+ferienME [label=<<b>Middle<br/>English</b><br/><font color="red">ferien</font>>]
+ferry [label=<<b>Modern<br/>English</b><br/><font color="red">ferry</font>>]
+
+// pore (hole), omitted: porous, aporia
+poro -> porosG
+porosG -> porusL [style=dashed]
+porusL -> poreOF
+poreOF -> poreME [style=dashed]
+poreME -> pore
+porosG [label=<<b>Greek</b><br/><font color="red">poros</font><br/><font point-size="12">journey, passage</font>>]
+porusL [label=<<b>Latin</b><br/><font color="red">porus</font>>]
+poreOF [label=<<b>Old French</b><br/><font color="red">pore</font>>]
+poreME [label=<<b>Middle<br/>English</b><br/><font color="red">pore</font>>]
+pore [label=<<b>Modern<br/>English</b><br/><font color="red">pore</font><br/><font point-size="12">opening</font>>]
+
+// G en-
+enIE -> enG
+enIE [label=<<b>Indo-European</b><br/><font color="red">en-</font><br/><font point-size="12">in</font>> shape=box style="dashed,rounded" URL="en-in.svg"]
+enG [label=<<b>Greek</b><br/><font color="red">en-</font>>]
+
+// emporium
+{ enG porosG } -> emporosG -> emporionG
+emporionG -> emporiumL -> emporium [style=dashed]
+emporosG [label=<<font color="red">emporos</font><br/><font point-size="12">traveler,<br/>merchant</font>>]
+emporionG [label=<<font color="red">emporion</font>>]
+emporiumL [label=<<b>Latin</b><br/><font color="red">emporium</font>>]
+emporium [label=<<b>Modern<br/>English</b><br/><font color="red">emporium</font>>]
+
+// gwou- cow
+gwou -> gauhS -> gopalahS
+gwou [label=<<b>Indo-European</b><br/><font color="red">gʷou-</font><br/><font point-size="12">ox, cow</font>> shape=box style="dashed,rounded" URL="gwou-ox.svg"]
+gauhS [label=<<b>Sanskrit</b><br/><font color="red">gauḥ</font><br/><font point-size="12">cow</font>>]
+
+// guar 
+poreyo -> parayatiS -> gopalahS -> gopaliS -> guarH
+guarH -> guar [style=dashed]
+parayatiS [label=<<b>Sanskrit</b><br/><font color="red">pārayati,<br/>pālayati</font><br/><font point-size="12">he leads across<br/>safely, protects</font>>]
+gopalahS  [label=<<font color="red">gopālaḥ</font><br/><font point-size="12">cowherd</font>>]
+gopaliS [label=<<font color="red">gopālakarkaṭī</font><br/><font point-size="12">cowherder's cucumber</font><br/><font color="red">gopālī</font>>]
+guarH [label=<<b>Hindi</b><br/><font color="red">guār</font>>]
+guar [label=<<b>Modern<br/>English</b><br/><font color="red">guar</font>>]
+
+// fuhrer 
+poor -> forjanGm -> fuorenOG -> vuerenMG -> fuhrerG
+fuhrerG -> fuhrer [style=dashed]
+forjanGm [label=<<b>Germanic</b><br/><font color="red">fōr-jan</font>>]
+fuorenOG [label=<<b>Old High<br/>German</b><br/><font color="red">fuoren</font>>]
+vuerenMG [label=<<b>Middle High<br/>German</b><br/><font color="red">vüeren</font><br/><font point-size="12">to lead</font><br/><font color="red">vüerer</font><br/><font point-size="12">leader</font>>]
+fuhrerG [label=<<b>German</b><br/><font color="red">Führer</font>>]
+fuhrer [label=<<b>Modern<br/>English</b><br/><font color="red">führer</font>>]
+
+// fern
+porno -> farnoGm -> fearnOE -> fernME -> fern
+farnoGm [label=<<b>Germanic</b><br/><font color="red">far-nō</font><br/><font point-size="12">feather, leaf</font>>]
+fearnOE [label=<<b>Old English</b><br/><font color="red">fern</font><br/><font point-size="12">fern</font>>]
+fernME [label=<<b>Middle<br/>English</b><br/><font color="red">fern</font>>]
+fern [label=<<b>Modern<br/>English</b><br/><font color="red">fern</font>>]
+
+{ rank=same fjord firth ferry fare wayfarer welfare warfare petroE petroleum saltpeter parsley pore emporium fuhrer guar fern }
+{ rank=same salL -> petraL -> oleum [style=invis] }
+petraG -> petrosG [weight=3]
+// { rank=same ferthuzGm faranGm farjanGm }
+{ rank=same sal enIE gwou }
+// { rank=same sal enIE gwou pertu pertra por } messed up the order
+// { rank=same per sal enIE gwou } same
+}

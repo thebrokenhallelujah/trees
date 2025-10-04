@@ -1,0 +1,110 @@
+strict digraph {
+node [shape=none]
+
+per [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*per </font><font point-size="16">forward, through</font>> shape=box style="dashed,rounded" URL="per-list.svg" tooltip="Indo-European \"*per\" forward, through"]
+pro [label=<<font color="red">prō̆</font>>]
+per -> pro -> { prokwe probhwo proL proG roweroC }
+
+// omitted: Gk protero-, Sk pra- prakrit
+
+prokwe -> { propeL prokwinkwo prokwisamo }
+prokwe [label=<<font color="red">prokʷe</font>>]
+probhwo [label=<<font color="red">pro-bhw-o-</font>>]
+prokwinkwo [label=<<font color="red">prokʷ-inkʷo-</font>>]
+prokwisamo [label=<<font color="red">prokʷ-isamo-</font>>]
+bheue -> probhwo
+bheue [label=<<font color="red">bheuə-</font>>]
+probhwo [label=<<font color="red">pro-bhw-o-</font>> shape=box style="dashed,rounded" URL="bheu-grow4.svg"]
+wero -> roweroC
+wero [label=<<font color="red">-wero-</font>>]
+roweroC [label=<<b>Celtic</b><br/><font color="red">ro-wero-</font><br/><font point-size="12">sufficiency</font>> shape=box style="dashed,rounded" URL="wereo.svg"] // galore listed in wereo-true
+{ rank=same probhwo prokwe }
+{ rank=same propeL proL proG roweroC propinquusL proximusL }
+
+// approach
+{ adL propeL } -> appropiareL -> aprochierOF
+aprochierOF -> approchenME [style=dashed]
+approchenME -> approach
+propeL [label=<<b>Latin</b><br/><font color="red">prope</font><br/><font point-size="12">near</font><br/><font color="red">propius</font><br/><font point-size="12">nearer</font>>]
+adL [label=<<b>Latin</b><br/><font color="red">ad-</font><br/><font point-size="12">to</font>>]
+appropiareL [label=<<font color="red">appropiāre</font>>]
+aprochierOF [label=<<b>Old French</b><br/><font color="red">aprochier</font>>]
+approchenME [label=<<b>Middle<br/>English</b><br/><font color="red">approchen</font>>]
+approach [label=<<b>Modern<br/>English</b><br/><font color="red">approach</font>>]
+
+// rapprochement
+aprochierOF -> approcherF -> rapprocherF -> rapprochementF
+rapprochementF -> rapprochement [style=dashed]
+reF -> rapprocherF
+reF [label=<<b>French</b><br/><font color="red">re-</font><br/><font point-size="12">again, back</font>>]
+approcherF [label=<<b>French</b><br/><font color="red">approcher</font>>]
+rapprocherF [label=<<font color="red">rapprocher</font><br/><font point-size="12">to bring together</font>>]
+rapprochementF [label=<<font color="red">rapprochement</font>>]
+rapprochement [label=<<b>Modern<br/>English</b><br/><font color="red">rapprochement</font>>]
+
+// reproach
+{ reL propeL } -> repropiareL -> reprochierOF
+reprochierOF -> reprochenME [style=dashed]
+reprochenME -> reproach
+reL [label=<<b>Latin</b><br/><font color="red">re-</font><br/><font point-size="12">again, back</font>>]
+repropiareL [label=<<font color="red">repropiāre</font>>]
+reprochierOF [label=<<b>Old French</b><br/><font color="red">reprochier</font>>]
+reprochenME [label=<<b>Middle<br/>English</b><br/><font color="red">reprochen</font>>]
+reproach [label=<<b>Modern<br/>English</b><br/><font color="red">reproach</font>>]
+
+// propinquity
+prokwinkwo -> propinquusL -> propinquitasL -> propinquiteOF
+propinquiteOF -> propinquiteME [style=dashed]
+propinquiteME -> propinquity
+propinquusL [label=<<b>Latin</b><br/><font color="red">propinquus</font><br/><font point-size="12">near</font>>]
+propinquitasL [label=<<font color="red">propinquitās</font>>]
+propinquiteOF [label=<<b>Old French</b><br/><font color="red">propinquite</font>>]
+propinquiteME [label=<<b>Middle<br/>English</b><br/><font color="red">propinquite</font>>]
+propinquity [label=<<b>Modern<br/>English</b><br/><font color="red">propinquity</font>>]
+
+// proximate, omitted: proximal 
+prokwisamo -> proximusL -> proximareL -> proximaatusL // shorten this?
+proximaatusL -> proximate [style=dashed]
+proximusL [label=<<b>Latin</b><br/><font color="red">proximus</font><br/><font point-size="12">nearest</font>>]
+proximareL [label=<<font color="red">proximāre</font><br/><font point-size="12">to come near</font>>]
+proximaatusL [label=<<font color="red">proximātus</font>>]
+proximate [label=<<b>Modern<br/>English</b><br/><font color="red">proximate</font>>]
+
+// proximity
+proximusL -> proximitaasL -> proximiteOF
+proximiteOF -> proximityME [style=dashed]
+proximityME -> proximity
+proximitaasL [label=<<font color="red">proximitās</font>>]
+proximiteOF [label=<<b>Old French</b><br/><font color="red">proximite</font>>]
+proximityME [label=<<b>Middle<br/>English</b><br/><font color="red">proximity</font>>]
+proximity [label=<<b>Modern<br/>English</b><br/><font color="red">proximity</font>>]
+
+// approximate
+{ adL proximareL } -> approximareL
+approximareL -> approximateME [style=dashed]
+approximateME -> approximate
+approximareL [label=<<font color="red">approximāre<br/>approximātus</font>>] // 2 entries?
+approximateME [label=<<b>Middle<br/>English</b><br/><font color="red">approximate</font>>]
+approximate [label=<<b>Modern<br/>English</b><br/><font color="red">approximate</font>>]
+
+// L pro-
+proL -> pro1OF
+pro1OF -> pro1ME [style=dashed]
+pro1ME -> pro1
+proL [label=<<b>Latin</b><br/><font color="red">prō, prō-</font><br/><font point-size="12">before, for, in front of</font>>] // also prefix and without macron
+pro1OF [label=<<b>Old French</b><br/><font color="red">pro-</font>>]
+pro1ME [label=<<b>Middle<br/>English</b><br/><font color="red">pro-</font>>]
+pro1 [label=<<b>Modern<br/>English</b><br/><font color="red">pro-</font><br/><font point-size="12">favoring,<br/>substituting for</font>>]
+
+// G pro- 
+proG -> pro2OF -> pro2ME [style=dashed]
+pro2ME -> pro2
+proG [label=<<b>Greek</b><br/><font color="red">pro, pro-</font><br/><font point-size="12">before, in front, forward</font>>]
+pro2OF [label=<<b>Old French</b><br/><font color="red">pro-</font>>]
+pro2ME [label=<<b>Middle<br/>English</b><br/><font color="red">pro-</font>>]
+pro2 [label=<<b>Modern<br/>English</b><br/><font color="red">pro-</font><br/><font point-size="12">before,<br/>in front of</font>>]
+
+{ rank=same pro1 pro2 approach rapprochement reproach propinquity proximity approximate proximate }
+{ rank=same pro1OF pro2OF propinquiteOF proximiteOF aprochierOF reprochierOF } // old
+{ rank=same pro1ME pro2ME propinquiteME proximityME approximateME approchenME reprochenME }
+}

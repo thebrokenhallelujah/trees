@@ -1,0 +1,147 @@
+strict digraph {
+node [shape=none]
+
+perIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*per </font><font point-size="16">forward, through</font>> shape=box style="dashed,rounded" URL="per-list.svg" tooltip="Indo-European \"*per\" forward, through"]
+per [label=<<font color="red">per-</font><br/><font point-size="12">to lead, pass over</font>>]
+perIE -> per -> pr -> { prtu prta prto }
+pr [label=<<font color="red">pr̥-</font>>]
+prtu [label=<<font color="red">pr̥-tu-</font>>]
+prta [label=<<font color="red">pr̥-tā-</font>>]
+prto [label=<<font color="red">pr̥-to-</font>>]
+
+// ford
+prtu -> furduzGm -> fordOE -> fordME -> ford
+furduzGm [label=<<b>Germanic</b><br/><font color="red">furduz</font>>]
+fordOE [label=<<b>Old English</b><br/><font color="red">ford</font>>]
+fordME [label=<<b>Middle<br/>English</b><br/><font color="red">ford</font>>]
+ford [label=<<b>Modern<br/>English</b><br/><font color="red">ford</font>>]
+
+// L portus
+// port (harbor) [port (left side) probably comes from this one]
+prtu -> portusL -> portOF
+portusL -> portOE [style=dashed]
+portOE -> port1ME -> port1
+portusL [label=<<b>Latin</b><br/><font color="red">portus</font><br/><font point-size="12">"passage," harbor</font>>]
+portOE [label=<<b>Old English</b><br/><font color="red">port</font>>]
+port1ME [label=<<b>Middle<br/>English</b><br/><font color="red">port</font>>]
+port1 [label=<<b>Modern<br/>English</b><br/><font color="red">port</font><br/><font point-size="12">harbor</font>>]
+
+// passport
+{ passOF portOF } -> passeportF
+passeportF -> passport [style=dashed]
+passOF [label=<<b>Old<br/>French</b><br/><font color="red">passer</font><br/><font point-size="12">to pass</font>>]
+portOF [label=<<b>Old<br/>French</b><br/><font color="red">port</font>>]
+passeportF [label=<<b>French</b><br/><font color="red">passeport</font>>]
+passport [label=<<b>Modern<br/>English</b><br/><font color="red">passport</font>>]
+passOF -> fordME [style=invis]
+
+// opportune 
+{ ob portusL } -> obportumL -> opportunusL -> opportunOF
+opportunOF -> opportuneME [style=dashed]
+opportuneME -> opportune
+ob [label=<<font color="red">ob-</font><br/><font point-size="12">toward</font>> shape=box style="dashed,rounded" URL="epi-near.svg"] // include IE root?
+obportumL [label=<<font color="red">ob portum (veniēns)</font><br/><font point-size="12">(coming) toward port</font>>]
+opportunusL  [label=<<font color="red">opportūnus</font>>]
+opportunOF [label=<<b>Old French</b><br/><font color="red">opportun</font>>]
+opportuneME [label=<<b>Middle<br/>English</b><br/><font color="red">opportune</font>>]
+opportune [label=<<b>Modern<br/>English</b><br/><font color="red">opportune</font>>]
+
+// importune
+{ inL portusL } -> importunusL -> importunOF -> importunerF
+importunerF -> importune [style=dashed]
+inL [label=<<font color="red">in-</font><br/><font point-size="12">not</font>> shape=box style="dashed,rounded" URL="ne-not.svg"]
+importunusL [label=<<font color="red">importūnus</font><br/><font point-size="12">not port/refuge?</font>>] // meaning?
+importunOF [label=<<b>Old French</b><br/><font color="red">importun</font><br/><font point-size="12">inopportune</font>>]
+importunerF [label=<<b>French</b><br/><font color="red">inportuner</font>>]
+importune [label=<<b>Modern<br/>English</b><br/><font color="red">importune</font>>]
+
+// L portare, omitted: port5 (carry weapon)
+// portable
+prto -> portareL -> portabilisL -> portableOF
+portableOF -> portableME [style=dashed]
+portableME -> portable
+portareL [label=<<b>Latin</b><br/><font color="red">portāre</font><br/><font point-size="12">to carry</font>>]
+portabilisL [label=<<font color="red">portābilis</font>>]
+portableOF [label=<<b>Old French</b><br/><font color="red">portable</font>>]
+portableME [label=<<b>Middle<br/>English</b><br/><font color="red">portable</font>>]
+portable [label=<<b>Modern<br/>English</b><br/><font color="red">portable</font>>]
+
+// porter
+portareL -> portatorL -> portourAN
+portourAN -> portourME [style=dashed]
+portourME -> porter
+portatorL [label=<<font color="red">portātor</font>>]
+portourAN [label=<<b>Anglo-Norman</b><br/><font color="red">portour</font>>]
+portourME [label=<<b>Middle<br/>English</b><br/><font color="red">portour</font>>]
+porter [label=<<b>Modern<br/>English</b><br/><font color="red">porter</font><br/><font point-size="12">(at a hotel<br/>or railroad)</font>>]
+
+// portage
+portareL -> porterOF -> portageOF
+portageOF -> portageME [style=dashed]
+portageME -> portage
+porterOF [label=<<b>Old<br/>French</b><br/><font color="red">porter</font>>]
+portageOF [label=<<font color="red">portage</font>>]
+portageME [label=<<b>Middle<br/>English</b><br/><font color="red">portage</font>>]
+portage [label=<<b>Modern<br/>English</b><br/><font color="red">portage</font>>]
+
+// disport, sport
+{ desOF porterOF } -> desporterOF -> desportOF
+desporterOF -> disportenME [style=dashed]
+disportenME -> disport
+desportOF -> sporteME [style=dashed]
+sporteME -> sport
+desOF [label=<<b>Old<br/>French</b><br/><font color="red">des-</font><br/><font point-size="12">apart</font>>]
+desporterOF [label=<<font color="red">desporter</font><br/><font point-size="12">to divert</font>>]
+disportenME [label=<<b>Middle<br/>English</b><br/><font color="red">disporten</font>>]
+disport [label=<<b>Modern<br/>English</b><br/><font color="red">disport</font>>]
+desportOF [label=<<font color="red">desport</font><br/><font point-size="12">pleasure</font>>]
+sporteME [label=<<b>Middle<br/>English</b><br/><font color="red">disporte<br/>sporte</font>>]
+sport [label=<<b>Modern<br/>English</b><br/><font color="red">sport</font>>]
+
+// L porta, omitted: portiere
+// port (porthole, computer port)
+prta -> portaL -> porteOF
+porteOF -> port3ME [style=dashed]
+port3ME -> port3
+portaL [label=<<b>Latin</b><br/><font color="red">porta</font><br/><font point-size="12">gate</font>>]
+porteOF [label=<<b>Old French</b><br/><font color="red">porte</font>>]
+port3ME [label=<<b>Middle<br/>English</b><br/><font color="red">port</font>>]
+port3 [label=<<b>Modern<br/>English</b><br/><font color="red">port</font><br/><font point-size="12">(computer port,<br/>porthole, etc.)</font>>]
+
+// porch, portico 
+portaL -> porticusL -> { porcheOF porticoI }
+porcheOF -> porcheME [style=dashed]
+porcheME -> porch
+porticoI -> portico [style=dashed]
+porticusL [label=<<font color="red">porticus</font><br/><font point-size="12">portico</font>>]
+porcheOF [label=<<b>Old French</b><br/><font color="red">porche</font>>]
+porcheME [label=<<b>Middle<br/>English</b><br/><font color="red">porche</font>>]
+porch [label=<<b>Modern<br/>English</b><br/><font color="red">porch</font>>]
+porticoI [label=<<b>Italian</b><br/><font color="red">portico</font>>]
+portico [label=<<b>Modern<br/>English</b><br/><font color="red">portico</font>>]
+
+// portcullis
+columL -> coleiceOF
+{ porteOF coleiceOF } -> portecoleiceOF
+portecoleiceOF -> portcoliceME [style=dashed]
+portcoliceME -> portcullis
+columL [label=<<b>Latin</b><br/><font color="red">cōlum</font><br/><font point-size="12">seive</font>>]
+coleiceOF [label=<<b>Old French</b><br/><font color="red">coleis,<br/>coleice</font><br/><font point-size="12">sliding</font>>] // coleice = fem.
+portecoleiceOF [label=<<font color="red">porte coleice</font>>]
+portcoliceME [label=<<b>Middle<br/>English</b><br/><font color="red">port-colice</font>>]
+portcullis [label=<<b>Modern<br/>English</b><br/><font color="red">portcullis</font>>]
+
+// portal
+portaL -> portalisL -> portaleL -> portalOF
+portalOF -> portalME [style=dashed]
+portalME -> portal
+portalisL [label=<<font color="red">portālis</font><br/><font point-size="12">of a gate</font>>]
+portaleL [label=<<font color="red">portāle</font><br/><font point-size="12">city gate</font>>]
+portalOF [label=<<b>Old French</b><br/><font color="red">portal</font>>]
+portalME [label=<<b>Middle<br/>English</b><br/><font color="red">portal</font>>]
+portal [label=<<b>Modern<br/>English</b><br/><font color="red">portal</font>>]
+
+{ rank=same ford passport port1 opportune importune portable porter portage disport sport port3 porch portico portcullis portal }
+{ rank=same passOF portOF portOE opportunOF importunOF }
+{ rank=same passeportF importunerF porticoI } // modern languages
+}

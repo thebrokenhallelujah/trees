@@ -1,0 +1,80 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+treiIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*trei, *treyes</font><br/><font point-size="16">three</font>> shape=box style="dashed,rounded" URL="trei-three0.svg" tooltip="Indo-European \"*trei\" three"]
+
+/* tri- */
+triL [label=<<b>Latin</b><br/><font color="red">tri-</font>>]
+triG [label=<<b>Greek</b><br/><font color="red">tri-</font>>]
+tri [label=<<b>Modern<br/>English</b><br/><font color="red">tri-</font>>]
+treiIE -> { triL triG } [sametail=1]
+triL -> tri [style=dotted sametail=1 samehead=1]
+triG -> tri [style=dotted sametail=1 samehead=1]
+
+/* omitted: tribe (contested), triclinium (bench), several other tri's, trierarch (trireme captain) */
+
+/* trio */
+triI [label=<<b>Italian</b><br/><font color="red">tri-</font>>]
+trioF [label=<<b>French</b><br/><font color="red">trio</font><br/><font point-size="12">composition for<br/>three voices</font>>]
+trio [label=<<b>Modern<br/>English</b><br/><font color="red">trio</font>>]
+triL -> triI [sametail=1]
+triI -> trioF -> trio [style=dotted]
+
+/* triple */
+triplusL [label=<<font color="red">triplus</font><br/><font point-size="12">three-fold</font>>] // influenced by Gk triploos ?
+tripleOF [label=<<b>Old French</b><br/><font color="red">triple</font>>]
+tripleME [label=<<b>Middle<br/>English</b><br/><font color="red">triple</font>>]
+triple [label=<<b>Modern<br/>English</b><br/><font color="red">triple</font>>]
+triL -> triplusL [sametail=1]
+triplusL -> tripleOF
+tripleOF -> tripleME [style=dotted]
+tripleME -> triple
+
+/* Trimurti (Hinduism: Brahma, Vishnu, and Shiva) */
+triSk [label=<<b>Sanskrit</b><br/><font color="red">tri-</font>>]
+trimurtiSk [label=<<font color="red">trimūrtiḥ</font><br/><font point-size="12">"three forms"<br/>(Brahma, Vishnu,<br/>and Shiva)</font>>]
+trimurti [label=<<b>Modern<br/>English</b><br/><font color="red">Trimurti</font>>]
+treiIE -> triSk [sametail=1]
+triSk -> trimurtiSk
+trimurtiSk -> trimurti [style=dotted]
+
+/* triad */
+triasG [label=<<b>Greek</b><br/><font color="red">trias</font>>]
+triasL [label=<<b>Late Latin</b><br/><font color="red">trias, triad-</font>>]
+triad [label=<<b>Modern<br/>English</b><br/><font color="red">triad</font>>]
+treiIE -> triasG [sametail=1]
+triasG -> triasL -> triad [style=dotted]
+
+/* trichotomy */
+trikhaG [label=<<b>Greek</b><br/><font color="red">trikha</font><br/><font point-size="12">in three parts</font>>]
+trichotomiaNL [label=<<b>New Latin</b><br/><font color="red">trichotomia</font><br/><font point-size="12">"cut into three parts"</font>>]
+trichotomy [label=<<b>Modern<br/>English</b><br/><font color="red">trichotomy</font>>]
+treiIE -> trikhaG [sametail=1]
+trikhaG -> trichotomiaNL -> trichotomy [style=dotted]
+
+/* sitar */
+siP [label=<<b>Persian</b><br/><font color="red">si</font>>]
+tarP [label=<<b>Persian</b><br/><font color="red">tār</font><br/><font point-size="12">string</font>>] // FROM TEN-STRETCH
+sitarH [label=<<b>Hindi</b><br/><font color="red">sitār</font>>]
+sitar [label=<<b>Modern<br/>English</b><br/><font color="red">sitar</font>>]
+treiIE -> siP [sametail=1]
+{ siP tarP } -> sitarH [style=dotted samehead=1]
+sitarH -> sitar [style=dotted]
+
+/* teapoy */
+pedIE [label=<<b>Indo-<br/>European</b><br/><font color="red">ped-</font><br/><font point-size="12">foot</font>> shape=box style="dashed,rounded" URL="ped-foot4.svg"]
+paiP [label=<<b>Persian</b><br/><font color="red">pāī</font><br/><font point-size="12">leg</font>>]
+sipayaP [label=<<font color="red">si-payā</font>>]
+tipaiH [label=<<b>Hindi</b><br/><font color="red">tipāī</font>>]
+teapoy [label=<<b>Modern<br/>English</b><br/><font color="red">teapoy</font><br/><font point-size="12">a tea table</font>>]
+pedIE -> paiP
+siP -> sipayaP [samehead=1]
+paiP -> sipayaP [samehead=1]
+sipayaP -> tipaiH [style=dotted] // influenced by H tir "three"
+tipaiH -> teapoy [style=dotted] // doubtless influenced by "tea"
+
+{ rank=sink tri trio triple trimurti triad trichotomy sitar teapoy }
+{ rank=source treiIE pedIE }
+{ rank=same triL triG }
+}

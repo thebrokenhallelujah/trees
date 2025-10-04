@@ -1,0 +1,142 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+weidIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*weid-</font></td><td><font point-size="16">to see</font></td></tr></table>> tooltip="Indo-European \"*weid-\" to see" shape=rect style=dashed peripheries=1 margin=.3 URL="weid-see0.svg"]
+
+// twit
+witanGmc [label=<<b>Germanic</b><br/><font color="red">*wītan</font><br/><font point-size="12">to look after</font>>]
+aetwitanOE [label=<<b>Old English</b><br/><font color="red">ætwītan</font>>]
+atwitenME [label=<<b>Middle<br/>English</b><br/><font color="red">atwiten</font>>]
+twit [label=<<b>Modern<br/>English</b><br/><font color="red">twit</font>>]
+weidIE -> witanGmc -> aetwitanOE -> atwitenME -> twit
+
+// guide
+guidaOP [label=<<b>Old<br/>Provençal</b><br/><font color="red">guidar</font><br/><font point-size="12">to guide</font><br/><font color="red">guida</font><br/><font point-size="12">a guide</font>>]
+guideOF [label=<<b>Old French</b><br/><font color="red">guide</font>>]
+guideME [label=<<b>Middle<br/>English</b><br/><font color="red">guide</font>>]
+guide [label=<<b>Modern<br/>English</b><br/><font color="red">guide</font>>]
+witanGmc -> guidaOP
+guidaOP -> guideOF -> guideME [style=dashed]
+guideME -> guide
+
+// guy
+guieOF [label=<<b>Old French</b><br/><font color="red">guier</font><br/><font point-size="12">to guide</font><br/><font color="red">guie</font><br/><font point-size="12">a guide</font>>]
+gieME [label=<<b>Middle<br/>English</b><br/><font color="red">gie</font>>]
+guy [label=<<b>Modern<br/>English</b><br/><font color="red">guy</font><br/><font point-size="12">cable</font>>]
+witanGmc -> guieOF 
+guieOF -> gieME [style=dashed]
+gieME -> guy
+
+// wise1
+weidtoIE [label=<<font color="red">weid-to-</font>>]
+wissazGmc [label=<<b>Germanic</b><br/><font color="red">*wīssaz</font>>]
+wisOE [label=<<b>Old English</b><br/><font color="red">wīs</font><br/><font point-size="12">wise</font>>]
+wise1ME [label=<<b>Middle<br/>English</b><br/><font color="red">wise</font>>]
+wise1 [label=<<b>Modern<br/>English</b><br/><font color="red">wise</font><br/><font point-size="12">(knowledgeable)</font>>]
+weidIE -> weidtoIE -> wissazGmc -> wisOE -> wise1ME -> wise1
+
+// wisdom
+wisdomOE [label=<<b>Old English</b><br/><font color="red">wīsdōm</font><br/><font point-size="12">knowledge,<br/>wisdom</font>>]
+wisdomME [label=<<b>Middle<br/>English</b><br/><font color="red">wisdom</font>>]
+wisdom [label=<<b>Modern<br/>English</b><br/><font color="red">wisdom</font>>]
+wissazGmc -> wisdomOE -> wisdomME -> wisdom
+
+// wiseacre
+wizagOHG [label=<<b>Old High<br/>German</b><br/><font color="red">wīzag</font><br/><font point-size="12">knowledgeable</font><br/><font color="red">wīzago, wīssago</font><br/><font point-size="12">seer</font>>]
+wijsseggherMD [label=<<b>Middle Dutch</b><br/><font color="red">wijsseggher</font><br/><font point-size="12">soothsayer</font>>]
+wiseacre [label=<<b>Modern<br/>English</b><br/><font color="red">wiseacre</font>>]
+wissazGmc -> wizagOHG
+wizagOHG -> wijsseggherMD -> wiseacre [style=dashed]
+
+// wise2
+wissonGmc [label=<<font color="red">*wīssōn-</font><br/><font point-size="12">appearance</font>>]
+wiseOE [label=<<b>Old English</b><br/><font color="red">wīse</font><br/><font point-size="12">manner</font>>]
+wise2ME [label=<<b>Middle<br/>English</b><br/><font color="red">wise</font>>]
+wise2 [label=<<b>Modern<br/>English</b><br/><font color="red">wise</font><br/><font point-size="12">method</font><br/><font color="red">-wise</font>>]
+wissazGmc -> wissonGmc -> wiseOE -> wise2ME -> wise2
+
+// guise
+guiseOF [label=<<b>Old French</b><br/><font color="red">guise</font><br/><font point-size="12">manner</font>>]
+guiseME [label=<<b>Middle<br/>English</b><br/><font color="red">guise</font>>]
+guise [label=<<b>Modern<br/>English</b><br/><font color="red">guise</font>>]
+wissonGmc -> guiseOF -> guiseME [style=dashed]
+guiseME -> guise
+
+// eidetic
+weidesIE [label=<<font color="red">weid-es-</font>>]
+eidosGk [label=<<b>Greek</b><br/><font color="red">eidos</font><br/><font point-size="12">shape, form</font>>]
+eidetischGm [label=<<b>German</b><br/><font color="red">eidetisch</font>>]
+eidetic [label=<<b>Modern<br/>English</b><br/><font color="red">eidetic</font>>]
+weidIE -> weidesIE -> eidosGk
+eidosGk -> eidetischGm -> eidetic [style=dashed]
+
+// eidolon
+eidolonGk [label=<<font color="red">eidōlon</font><br/><font point-size="12">phantom, idol</font>>]
+eidolon [label=<<b>Modern<br/>English</b><br/><font color="red">eidolon</font>>]
+eidosGk -> eidolonGk
+eidolonGk -> eidolon [style=dashed]
+
+// idol
+idolumL [label=<<b>Late Latin</b><br/><font color="red">īdōlum</font>>]
+idoleOF [label=<<b>Old French</b><br/><font color="red">idole</font>>]
+idolME [label=<<b>Middle<br/>English</b><br/><font color="red">idol</font>>]
+idol [label=<<b>Modern<br/>English</b><br/><font color="red">idol</font>>]
+eidolonGk -> idolumL [style=dashed]
+idolumL -> idoleOF
+idoleOF -> idolME [style=dashed]
+idolME -> idol
+
+// idyll
+eidullionGk [label=<<font color="red">eidullion</font>>]
+idylliumL [label=<<b>Latin</b><br/><font color="red">īdyllium</font>>]
+idyll [label=<<b>Modern<br/>English</b><br/><font color="red">idyll</font>>]
+eidosGk -> eidullionGk 
+eidullionGk -> idylliumL -> idyll [style=dashed]
+
+// -oid
+oeidesGk [label=<<font color="red">-oeidēs</font>>]
+oid [label=<<b>Modern<br/>English</b><br/><font color="red">-oid</font>>]
+eidosGk -> oeidesGk
+oeidesGk -> oid [style=dashed]
+
+// kaleidoscope
+kalosGk [label=<<b>Greek</b><br/><font color="red">kalos</font><br/><font point-size="12">beautiful</font>>]
+spekIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*spek-</font><br/><font point-size="12">to observe</font>> shape=box style="dashed,rounded" URL="spek-see.svg"]
+skopeinGk [label=<<b>Greek</b><br/><font color="red">skopein,<br/>-skopion</font><br/><font point-size="12">to see</font>>]
+scopiumNL [label=<<b>New Latin</b><br/><font color="red">-scopium</font>>]
+scope [label=<<b>English</b><br/><font color="red">-scope</font>>]
+kaleidoscope [label=<<b>Modern<br/>English</b><br/><font color="red">kaleidoscope</font>>]
+spekIE -> skopeinGk
+skopeinGk -> scopiumNL -> scope [style=dashed]
+{ kalosGk eidosGk } -> kaleidoscope [style=dashed]
+scope -> kaleidoscope
+
+// Veda
+woidoIE [label=<<font color="red">woid-o-</font>>]
+vedahSk [label=<<b>Sanskrit</b><br/><font color="red">vedaḥ</font><br/><font point-size="12">knowledge, Veda</font>>]
+veda [label=<<b>Modern<br/>English</b><br/><font color="red">Veda<br/>Rig-Veda</font>>]
+weidIE -> woidoIE -> vedahSk
+vedahSk -> veda [style=dashed]
+
+// Ayurveda
+aiwIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*aiw-</font><br/><font point-size="12">life</font>> shape=box style="dashed,rounded" URL="aiw-life2.svg"]
+ayuhSk [label=<<b>Sanskrit</b><br/><font color="red">āyuḥ</font><br/><font point-size="12">life, health</font>>]
+ayurvedahSk [label=<<font color="red">āyurvedaḥ</font>>]
+ayurveda [label=<<b>Modern<br/>English</b><br/><font color="red">Ayurveda</font>>]
+aiwIE -> ayuhSk
+{ ayuhSk vedahSk } -> ayurvedahSk
+ayurvedahSk -> ayurveda [style=dashed]
+
+// Vedanta
+antIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ant-</font><br/><font point-size="12">front, forehead</font>> shape=box style="dashed,rounded" URL="ant-front.svg"]
+antahSk [label=<<b>Sanskrit</b><br/><font color="red">antaḥ</font><br/><font point-size="12">end</font>>]
+vedantahSk [label=<<font color="red">vedāntaḥ</font><br/><font point-size="12">complete knowledge<br/>of the Veda</font>>]
+vedanta [label=<<b>Modern<br/>English</b><br/><font color="red">Vedanta</font>>]
+antIE -> antahSk
+{ vedahSk antahSk } -> vedantahSk
+vedantahSk -> vedanta [style=dashed]
+
+{ rank=sink twit guide guy wise1 wisdom wiseacre wise2 guise eidetic eidolon idol idyll oid kaleidoscope veda ayurveda vedanta }
+{ rank=same spekIE aiwIE antIE weidtoIE weidesIE woidoIE }
+}

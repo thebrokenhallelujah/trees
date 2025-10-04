@@ -1,0 +1,17 @@
+strict digraph {
+node [shape=none]
+per [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*per</font></td><td><font point-size="16">forward, through</font></td></tr></table>> tooltip="Indo-European \"*per\" forward, through" shape=box peripheries=2 margin=.3]
+
+per -> { peri pr pre pro1 pro2 prai prei per_lead }
+peri [label=<<font color="red">per, peri</font>> shape=box style="dashed,rounded" URL="per-peri.svg"]
+pr [label=<<font color="red">pr̥-</font>> shape=box style="dashed,rounded" URL="per-pr.svg"]
+pre [label=<<font color="red">pr̥ə-</font>> shape=box style="dashed,rounded" URL="per-pre.svg"]
+pro1 [label=<<font color="red">prō̆ </font>pt1> shape=box style="dashed,rounded" URL="per-pro1.svg"]
+pro2 [label=<<font color="red">prō̆ </font>pt2> shape=box style="dashed,rounded" URL="per-pro2.svg"]
+prai [label=<<font color="red">prai-</font>> shape=box style="dashed,rounded" URL="per-prai1.svg"]
+prei [label=<<font color="red">prei-</font>> shape=box style="dashed,rounded" URL="per-prai2.svg"]
+per_lead [label=<<font color="red">per-</font><br/><font point-size="12">to lead, to pass over</font>>]
+per_lead -> { lead1 lead2 }
+lead1 [label=<<font color="red">per-, por-</font>> shape=box style="dashed,rounded" URL="per-lead1.svg"]
+lead2 [label=<<font color="red">pr̥-</font>> shape=box style="dashed,rounded" URL="per-lead2.svg"]
+}

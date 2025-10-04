@@ -1,0 +1,128 @@
+strict digraph {
+node [shape=none]
+per [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*per </font><font point-size="16">forward, through</font>> shape=box style="dashed,rounded" URL="per-list.svg" tooltip="Indo-European \"*per\" forward, through"]
+
+prai [label=<<font color="red">prai-, prei-</font><br/><font point-size="12">forward, before</font>>]
+per -> prai -> preis -> { preismo preistano }
+preis [label=<<font color="red">preis-</font>>]
+preismo [label=<<font color="red">preis-mo-</font>>]
+preistano [label=<<font color="red">preis-tano-</font>>]
+
+// prime (also: primal, primacy, primary, primate x2)
+preismo -> primusL -> prinOF
+prinOF -> primeME [style=dashed]
+primeME -> prime
+primusL [label=<<b>Latin</b><br/><font color="red">prīsmus, prīmus</font><br/><font point-size="12">first,foremost</font>>]
+prinOF [label=<<b>Old French</b><br/><font color="red">prin, prime</font>>] // prime is fem.
+primeME [label=<<b>Middle<br/>English</b><br/><font color="red">prime</font><br/><font point-size="12">first in occurence</font>>]
+prime [label=<<b>Modern<br/>English</b><br/><font color="red">prime</font>>]
+
+// primo
+primusL -> primoOI -> primoI
+primoI -> primoE [style=dashed]
+primoOI [label=<<b>Old Italian</b><br/><font color="red">primo</font>>]
+primoI [label=<<b>Italian</b><br/><font color="red">primo</font>>]
+primoE [label=<<b>Modern<br/>English</b><br/><font color="red">primo</font>>]
+
+// premier, premiere
+primusL -> primariusL -> premierOF -> premiereF
+premierOF -> premierME [style=dashed]
+premierME -> premier
+premiereF -> premiere [style=dashed]
+primariusL  [label=<<font color="red">prīmārius</font>>]
+premierOF [label=<<b>Old French</b><br/><font color="red">premier</font>>]
+premierME [label=<<b>Middle<br/>English</b><br/><font color="red">premier</font>>]
+premier [label=<<b>Modern<br/>English</b><br/><font color="red">premier</font>>]
+premiereF [label=<<b>French</b><br/><font color="red">première</font>>]
+premiere [label=<<b>Modern<br/>English</b><br/><font color="red">premiere</font>>]
+
+// primeval
+aiw -> aevumL
+{ primusL aevumL } -> primaevusL
+primaevusL -> primeval [style=dashed]
+aiw [label=<<b>Indo-<br/>European</b><br/><font color="red">*aiw-</font><br/><font point-size="12">life</font>> shape=box style="dashed,rounded" URL="aiw-life2.svg"]
+aevumL [label=<<b>Latin</b><br/><font color="red">aevum</font><br/><font point-size="12">age</font>>] 
+primaevusL [label=<<font color="red">prīmaevus</font><br/><font point-size="12">early in life</font>>]
+primeval [label=<<b>Modern<br/>English</b><br/><font color="red">primeval</font>>]
+
+// primitive
+primusL -> primitusL -> primitivusL -> primitifOF
+primitifOF -> primitiveME [style=dashed]
+primitiveME -> primitive
+primitusL [label=<<font color="red">prīmitus</font><br/><font point-size="12">at first</font>>]
+primitivusL [label=<<font color="red">prīmitīvus</font>>]
+primitifOF [label=<<b>Old French</b><br/><font color="red">primitif, primitive</font>>]
+primitiveME [label=<<b>Middle<br/>English</b><br/><font color="red">primitive</font>>]
+primitive [label=<<b>Modern<br/>English</b><br/><font color="red">primitive</font>>]
+
+// primordial
+{ primusL ordiri } -> primordiumL -> primordialisL
+primordialisL -> primordialME [style=dashed]
+primordialME -> primordial
+ordiri [label=<<b>Latin</b><br/><font color="red">ōrdīrī</font><br/><font point-size="12">to begin to weave</font>>]
+primordiumL [label=<<font color="red">prīmōrdium</font><br/><font point-size="12">origin</font>>]
+primordialisL [label=<<font color="red">prīmōrdiālis</font>>]
+primordialME [label=<<b>Middle<br/>English</b><br/><font color="red">primordial</font>>]
+primordial [label=<<b>Modern<br/>English</b><br/><font color="red">primordial</font>>]
+
+// IE gene-
+gene -> gignereL -> genitusL -> genituraL
+gene [label=<<b>Indo-European</b><br/><font color="red">genə-</font><br/><font point-size="12">to give birth, beget</font>> shape=box style="dashed,rounded" URL="gen-birth.svg"]
+gignereL [label=<<b>Latin</b><br/><font color="red">gignere</font><br/><font point-size="12">to beget</font>>]
+genitusL [label=<<font color="red">genitus</font>>]
+genituraL [label=<<font color="red">genitūra</font><br/><font point-size="12">birth</font>>]
+
+// primogeniture
+/*
+subgraph cluster_gen { 
+    style="dashed,rounded"
+    URL="gen-birth.svg" // does this work? nope.
+    gene -> gignereL -> genitusL -> genituraL }
+*/
+{ primusL genituraL } -> primogenituraL
+primogenituraL -> primogeniture [style=dashed]
+primogenituraL [label=<<font color="red">prīmōgenitūra</font>>]
+primogeniture [label=<<b>Modern<br/>English</b><br/><font color="red">primogeniture</font>>]
+
+// IE kap-
+kap [label=<<b>Indo-<br/>European</b><br/><font color="red">kap-</font><br/><font point-size="12">to grasp</font>> shape=box style="dashed,rounded" URL="kap-grasp.svg"]
+kap -> cepsL
+cepsL [label=<<b>Latin</b><br/><font color="red">-ceps</font><br/><font point-size="12">taker</font>>]
+
+// prince
+{ preismo cepsL } -> princepsL -> princeOF
+princeOF -> princeME [style=dashed]
+princeME -> prince
+// kap-take > L -ceps
+princepsL [label=<<b>Latin</b><br/><font color="red">prīnceps, prīncip-</font><br/><font point-size="12">"he who takes first place," leader</font>>]
+princeOF [label=<<b>Old French</b><br/><font color="red">prince<br/>princesse</font>>]
+princeME [label=<<b>Middle<br/>English</b><br/><font color="red">prince<br/>princesse</font>>]
+prince [label=<<b>Modern<br/>English</b><br/><font color="red">prince<br/>princess</font>>]
+
+// principal
+princepsL -> principalisL -> principalOF
+principalOF -> principalME [style=dashed]
+principalME -> principal
+principalisL [label=<<font color="red">prīncipālis</font>>]
+principalOF [label=<<b>Old French</b><br/><font color="red">principal</font>>]
+principalME [label=<<b>Middle<br/>English</b><br/><font color="red">principal</font>>]
+principal [label=<<b>Modern<br/>English</b><br/><font color="red">principal</font>>]
+
+// principle
+princepsL -> principiumL -> principeOF
+principeOF -> principleME [style=dashed]
+principleME -> principle
+principiumL [label=<<font color="red">prīncipium</font>>]
+principeOF [label=<<b>Old French</b><br/><font color="red">principe</font>>]
+principleME [label=<<b>Middle<br/>English</b><br/><font color="red">principle</font>>]
+principle [label=<<b>Modern<br/>English</b><br/><font color="red">principle</font>>]
+
+// pristine
+preistano -> pristinusL
+pristinusL -> pristine [style=dashed]
+pristinusL [label=<<b>Latin</b><br/><font color="red">prīstinus</font><br/><font point-size="12">former, earlier,<br/>original</font>>]
+pristine [label=<<b>Modern<br/>English</b><br/><font color="red">pristine</font>>]
+
+{ rank=same prime primoE premier premiere primeval primitive primordial primogeniture prince principal principle pristine }
+{ rank=same aiw kap gene }
+}

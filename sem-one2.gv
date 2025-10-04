@@ -1,0 +1,146 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+sem [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*sem-</font></td><td><font point-size="16">one, as one</font></td></tr></table>> tooltip="Indo-European \"*sem-\" one, as one" shape=rect style=dashed peripheries=1 margin=.3 URL="sem-one0.svg"]
+
+som [label=<<font color="red">*som-</font>>]
+soom [label=<<font color="red">*sōm-</font>>]
+sem -> { som soom } 
+
+// bonze
+samSk [label=<<b>Sanskrit</b><br/><font color="red">sam</font><br/><font point-size="12">together</font>>]
+gwhenIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*gʷhen-</font><br/><font point-size="12">to strike, kill</font>> shape=box style="dashed,rounded" URL="gwhen-strike.svg"]
+hantiSk [label=<<b>Sanskrit</b><br/><font color="red">hanti</font><br/><font point-size="12">he strikes</font>>]
+samhantiSk [label=<<font color="red">saṃhanti, saṃgha-</font><br/><font point-size="12">he puts together</font>>]
+samghahSk [label=<<font color="red">saṃghaḥ</font><br/><font point-size="12">brotherhood of monks</font>>]
+sengC [label=<<font color="green"><b>Middle Chinese</b></font><br/><font color="red">səng</font>>]
+soJ [label=<<font color="green"><b>Japanese</b></font><br/><font color="red">sō</font><br/><font point-size="12">monk</font>>]
+bonJ [label=<<font color="green"><b>Japanese</b></font><br/><font color="red">bon</font><br/><font point-size="12">ordinary</font>>]
+bonsoJ [label=<<font color="red">bonsō</font>>]
+bonzoP [label=<<b>Portuguese</b><br/><font color="red">bonzo</font>>]
+bonzeF [label=<<b>French</b><br/><font color="red">bonze</font>>]
+bonze [label=<<b>Modern<br/>English</b><br/><font color="red">bonze</font>>]
+som -> samSk
+gwhenIE -> hantiSk
+{ samSk hantiSk } -> samhantiSk -> samghahSk 
+samghahSk -> sengC -> soJ [style=dashed]
+{ bonJ soJ } -> bonsoJ
+bonsoJ -> bonzoP -> bonzeF -> bonze [style=dashed]
+
+// samsara
+saratiSk [label=<<b>Sanskrit</b><br/><font color="red">sarati</font><br/><font point-size="12">it flows</font>>]
+samsarahSk [label=<<font color="red">saṃsāraḥ</font>>]
+samsara [label=<<b>Modern<br/>English</b><br/><font color="red">samsara</font>>]
+{ samSk saratiSk } -> samsarahSk
+samsarahSk -> samsara [style=dashed]
+
+// sandhi
+dheIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dhē-</font><br/><font point-size="12">to set, put</font>> shape=box style="dashed,rounded" URL="dhe-set.svg"]
+dadhatiSk [label=<<b>Sanskrit</b><br/><font color="red">dadhāti, dhī-</font><br/><font point-size="12">he places</font>>]
+samdhihSk [label=<<font color="red">saṃdhiḥ</font><br/><font point-size="12">union, sandhi</font>>]
+sandhi [label=<<b>Modern<br/>English</b><br/><font color="red">sandhi</font>>]
+dheIE -> dadhatiSk
+{ samSk dadhatiSk } -> samdhihSk
+samdhihSk -> sandhi [style=dashed]
+
+// sanskrit
+karotiSk [label=<<b>Sanskrit</b><br/><font color="red">karoti</font><br/><font point-size="12">he makes</font>>]
+samskrtamSk [label=<<font color="red">saṃskṛtam</font><br/><font point-size="12">perefected, refined</font>>]
+sanskrit [label=<<b>Modern<br/>English</b><br/><font color="red">Sanskrit</font>>]
+{ samSk karotiSk } -> samskrtamSk
+samskrtamSk -> sanskrit [style=dashed]
+
+// same
+somo [label=<<font color="red">*som-o-</font>>]
+samaGc [label=<<b>Germanic</b><br/><font color="red">*sama-</font><br/><font point-size="12">same</font>>]
+samrON [label=<<b>Old Norse</b><br/><font color="red">samr</font>>]
+sameME [label=<<b>Middle<br/>English</b><br/><font color="red">same</font>>]
+same [label=<<b>Modern<br/>English</b><br/><font color="red">same</font>>]
+som -> somo -> samaGc -> samrON
+samrON -> sameME [style=dashed]
+sameME -> same
+
+// homo-
+homosGk [label=<<b>Greek</b><br/><font color="red">homos</font><br/><font point-size="12">same</font>>]
+homoGk [label=<<font color="red">homo-</font>>]
+homo [label=<<b>Modern<br/>English</b><br/><font color="red">homo-</font>>]
+somo -> homosGk -> homoGk
+homoGk -> homo [style=dashed]
+
+// homeo-
+homoiosGk [label=<<font color="red">homois</font>>]
+homoioGk [label=<<font color="red">homoio-</font>>]
+homeo [label=<<b>Modern<br/>English</b><br/><font color="red">homeo-</font>>]
+homosGk -> homoiosGk -> homoioGk
+homoioGk -> homeo [style=dashed]
+
+// anomalous
+homalosGk [label=<<font color="red">homalos</font><br/><font point-size="12">even</font>>]
+neIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ne</font><br/><font point-size="12">not</font>> shape=box style="dashed,rounded" URL="ne-not3.svg"]
+anGk [label=<<b>Greek</b><br/><font color="red">an-</font>>]
+anomalosGk [label=<<font color="red">anōmalos</font><br/><font point-size="12">uneven</font>>]
+anomalosL [label=<<b>Latin</b><br/><font color="red">anōmalos</font>>]
+anomalous [label=<<b>Modern<br/>English</b><br/><font color="red">anomalous</font>>]
+homosGk -> homalosGk 
+neIE -> anGk
+{ anGk homalosGk } -> anomalosGk
+anomalosGk -> anomalosL -> anomalous [style=dashed]
+
+// homily
+homilosGk [label=<<b>Greek</b><br/><font color="red">homīlos</font><br/><font point-size="12">crowd</font>>]
+homiliaGk [label=<<font color="red">homīliā</font><br/><font point-size="12">discourse</font>>]
+homiliaL [label=<<b>Latin</b><br/><font color="red">homīlia</font>>]
+omelieOF [label=<<b>Old French</b><br/><font color="red">omelie</font>>]
+omelieME [label=<<b>Middle<br/>English</b><br/><font color="red">omelie</font>>]
+homily [label=<<b>Modern<br/>English</b><br/><font color="red">homily</font>>]
+somo -> homilosGk -> homiliaGk
+homiliaGk -> homiliaL [style=dashed]
+homiliaL -> omelieOF
+omelieOF -> omelieME [style=dashed]
+omelieME -> homily
+
+// seem
+soomiGc [label=<<b>Germanic</b><br/><font color="red">*sōm-i-</font>>]
+soemrON [label=<<b>Old Norse</b><br/><font color="red">sœmr</font><br/><font point-size="12">fitting, "making one"</font>>]
+soemaON [label=<<font color="red">sœma</font><br/><font point-size="12">to conform to</font>>]
+semenME [label=<<b>Middle<br/>English</b><br/><font color="red">semen</font>>]
+seem [label=<<b>Modern<br/>English</b><br/><font color="red">seem</font>>]
+soom -> soomiGc -> soemrON -> soemaON
+soemaON -> semenME [style=dashed]
+semenME -> seem
+
+// seemly
+soemiligrON [label=<<font color="red">sœmiligr</font>>]
+semelyME [label=<<b>Middle<br/>English</b><br/><font color="red">semely</font>>]
+seemly [label=<<b>Modern<br/>English</b><br/><font color="red">seemly</font>>]
+soemrON -> soemiligrON
+soemiligrON -> semelyME [style=dashed]
+semelyME -> seemly
+
+// samizdat
+samR [label=<<b>Russian</b><br/><font color="red">sam(o)-</font><br/><font point-size="12">self</font>>]
+eghsIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*eghs</font><br/><font point-size="12">out</font>> shape=box style="dashed,rounded" URL="eghs-out.svg"]
+izR [label=<<b>Russian</b><br/><font color="red">iz</font><br/><font point-size="12">from, out of</font>>]
+doIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dō-</font><br/><font point-size="12">to give</font>> shape=box style="dashed,rounded" URL="do-give0.svg"]
+datR [label=<<b>Russian</b><br/><font color="red">dat'</font><br/><font point-size="12">to give</font>>]
+izdatR [label=<<font color="red">izdat'</font><br/><font point-size="12">to publish</font>>]
+samizdatR [label=<<font color="red">samizdat</font><br/><font point-size="12">underground press</font>>]
+samizdat [label=<<b>Modern<br/>English</b><br/><font color="red">samizdat</font>>]
+soom -> samR
+eghsIE -> izR
+doIE -> datR
+{ izR datR } -> izdatR
+{ samR izdatR } -> samizdatR
+samizdatR -> samizdat [style=dashed]
+
+// samovar
+varitR [label=<<b>Russian</b><br/><font color="red">varit'</font><br/><font point-size="12">to boil</font>>]
+samovarR [label=<<font color="red">samovar</font>>]
+samovar [label=<<b>Modern<br/>English</b><br/><font color="red">samovar</font>>]
+{ samR varitR } -> samovarR
+samovarR -> samovar [style=dashed]
+
+{ rank=sink bonze samsara sandhi sanskrit same homeo homo anomalous homily seem seemly samizdat samovar }
+{ rank=same gwhenIE dheIE neIE eghsIE }
+}

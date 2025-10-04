@@ -1,0 +1,100 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+weidIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*weid-</font></td><td><font point-size="16">to see</font></td></tr></table>> tooltip="Indo-European \"*weid-\" to see" shape=rect style=dashed peripheries=1 margin=.3 URL="weid-see0.svg"]
+widIE [label=<<font color="red">wid-</font>>]
+weidIE -> widIE
+
+// wit
+witGmc [label=<<b>Germanic</b><br/><font color="red">*wit-</font>>]
+witOE [label=<<b>Old English</b><br/><font color="red">wit, witt</font><br/><font point-size="12">intelligence</font>>]
+witME [label=<<b>Middle<br/>English</b><br/><font color="red">wit</font>>]
+wit [label=<<b>Modern<br/>English</b><br/><font color="red">wit</font><br/><font point-size="12">(noun)</font>>]
+widIE -> witGmc -> witOE -> witME -> wit
+
+// witness
+witnessGmc [label=<<font color="red">*wit-ness-</font><br/><font point-size="12">knowledge</font>>]
+witnessOE [label=<<b>Old English</b><br/><font color="red">witness</font><br/><font point-size="12">testimony</font>>]
+witnesseME [label=<<b>Middle<br/>English</b><br/><font color="red">witnesse</font>>]
+witness [label=<<b>Modern<br/>English</b><br/><font color="red">witness</font>>]
+witGmc -> witnessGmc -> witnessOE -> witnesseME -> witness
+
+// unwitting
+witanGmc [label=<<font color="red">witan</font>>]
+witanOE [label=<<b>Old English</b><br/><font color="red">witan</font><br/><font point-size="12">to know</font>>]
+wittenME [label=<<b>Middle<br/>English</b><br/><font color="red">witten<br/>unwitting</font>>]
+unwitting [label=<<b>Modern<br/>English</b><br/><font color="red">unwitting<br/>wit</font><br/><font point-size="12">(verb)</font>>]
+witGmc -> witanGmc -> witanOE -> wittenME -> unwitting
+
+// penguin
+windoIE [label=<<font color="red">*wi-n-d-o-</font>>]
+gwynW [label=<<b>Welsh</b><br/><font color="red">gwyn</font><br/><font point-size="12">white (clearly<br/>visible)</font>>]
+pengwynW [label=<<font color="red">pen gwyn</font><br/><font point-size="12">"white head,"<br/>great auk</font>>]
+penguin [label=<<b>Modern<br/>English</b><br/><font color="red">penguin</font>>]
+widIE -> windoIE -> gwynW -> pengwynW
+pengwynW -> penguin [style=dashed]
+
+// Druid
+widC [label=<<b>Celtic</b><br/><font color="red">*wid-</font><br/><font point-size="12">seer</font>>]
+deruIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*deru-, *dreu-</font><br/><font point-size="12">to be solid</font>> shape=box style="dashed,rounded" URL="deru-firm.svg"]
+druwidC [label=<<font color="red">*dru-wid-</font><br/><font point-size="12">strong seer</font>>]
+druidesL [label=<<b>Latin</b><br/><font color="red">druidēs</font>>]
+druid [label=<<b>Modern<br/>English</b><br/><font color="red">Druid</font>>]
+widIE -> widC
+{ deruIE widC } -> druwidC
+druwidC -> druidesL -> druid [style=dashed]
+
+// L videre (link)
+wideIE [label=<<font color="red">wid-ē-</font>>]
+videreL [label=<<b>Latin</b><br/><font color="red">vidēre</font>>]
+p1 [label=<p1> shape=box style="dashed,rounded" URL="weid-see3.svg"]
+p2 [label=<p2> shape=box style="dashed,rounded" URL="weid-see4.svg"]
+widIE -> wideIE -> videreL -> { p1 p2 }
+
+/// idea
+widesyaIE [label=<<font color="red">wid-es-yā-</font>>]
+ideaGk [label=<<b>Greek</b><br/><font color="red">ideā</font><br/><font point-size="12">appearance,<br/>form, idea</font>>]
+ideaL [label=<<b>Latin</b><br/><font color="red">idea</font>>]
+ideaME [label=<<b>Middle<br/>English</b><br/><font color="red">idea</font>>]
+idea [label=<<b>Modern<br/>English</b><br/><font color="red">idea</font>>]
+widIE -> widesyaIE -> ideaGk
+ideaGk -> ideaL -> ideaME [style=dashed]
+ideaME -> idea
+
+// ideal
+idealisL [label=<<b>Late Latin</b><br/><font color="red">ideālis</font><br/><font point-size="12">of divine<br/>archetypes</font>>]
+idealME [label=<<b>Middle<br/>English</b><br/><font color="red">ideal</font>>]
+ideal [label=<<b>Modern<br/>English</b><br/><font color="red">ideal</font>>]
+ideaL -> idealisL
+idealisL -> idealME [style=dashed]
+idealME -> ideal
+
+// ideo-
+ideoF [label=<<b>French</b><br/><font color="red">idéo-</font>>]
+ideo [label=<<b>Modern<br/>English</b><br/><font color="red">ideo-</font>>]
+ideaGk -> ideoF -> ideo [style=dashed]
+
+// history, story
+widtorIE [label=<<font color="red">wid-tor-</font>>]
+historGk [label=<<b>Greek</b><br/><font color="red">histōr</font><br/><font point-size="12">learned</font>>]
+historiaGk [label=<<font color="red">historein</font><br/><font point-size="12">to inquire</font><br/><font color="red">historiā</font>>]
+historiaL [label=<<b>Latin</b><br/><font color="red">historia</font>>]
+histoireOF [label=<<b>Old French</b><br/><font color="red">histoire<br/>estoire</font>>]
+histoireME [label=<<b>Middle<br/>English</b><br/><font color="red">histoire<br/>storie</font>>]
+history [label=<<b>Modern<br/>English</b><br/><font color="red">history<br/>story</font>>]
+widIE -> widtorIE -> historGk -> historiaGk
+historiaGk -> historiaL [style=dashed]
+historiaL -> histoireOF
+histoireOF -> histoireME [style=dashed]
+histoireME -> history
+
+// Hades
+haidesGk [label=<<b>Greek</b><br/><font color="red">Haidēs</font><br/><font point-size="12">"the invisible,"<br/>the underworld</font>>]
+hades [label=<<b>Modern<br/>English</b><br/><font color="red">Hades</font>>]
+widIE -> haidesGk
+haidesGk -> hades [style=dashed]
+
+{ rank=sink wit witness unwitting penguin druid idea ideal ideo history hades }
+{ rank=same deruIE widIE }
+}

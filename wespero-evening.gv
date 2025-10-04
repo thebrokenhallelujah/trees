@@ -1,0 +1,81 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+wesperoIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*wes-pero-</font></td><td><font point-size="16">evening, night</font></td></tr></table>> tooltip="Indo-European \"*wes-pero-\" evening, night" shape=box peripheries=2 margin=.3]
+
+// west
+wesIE [label=<<font color="red">*wes-</font>>]
+westoIE [label=<<font color="red">*wes-to-</font>>]
+westGmc [label=<<b>Germanic</b><br/><font color="red">*west-</font>>]
+westOE [label=<<b>Old English</b><br/><font color="red">west</font>>]
+westME [label=<<b>Middle<br/>English</b><br/><font color="red">west</font>>]
+west [label=<<b>Modern<br/>English</b><br/><font color="red">west</font>>]
+wesperoIE -> wesIE -> westoIE -> westGmc -> westOE -> westME -> west
+
+// western
+westerneOE [label=<<b>Old English</b><br/><font color="red">westerne</font>>]
+westernME [label=<<b>Middle<br/>English</b><br/><font color="red">western</font>>]
+western [label=<<b>Modern<br/>English</b><br/><font color="red">western</font>>]
+westGmc -> westerneOE -> westernME -> western
+
+// westerly
+westraOE [label=<<b>Old English</b><br/><font color="red">westra</font>>]
+westerME [label=<<b>Middle<br/>English</b><br/><font color="red">wester<br/>westerly</font>>]
+westerly [label=<<b>Modern<br/>English</b><br/><font color="red">westerly</font>>]
+westGmc -> westraOE -> westerME -> westerly
+
+// Visigoth
+wisGmc [label=<<b>Germanic</b><br/><font color="red">*wis-</font>>]
+visigothiL [label=<<b>Late Latin</b><br/><font color="red">Visigothī</font><br/><font point-size="12">"West Goths"</font>>]
+visigoth [label=<<b>Modern<br/>English</b><br/><font color="red">Visigoth</font>>]
+wesIE -> wisGmc [label="?"]
+wisGmc -> visigothiL -> visigoth [style=dashed]
+
+// vesper
+vesperL [label=<<b>Latin</b><br/><font color="red">vesper</font><br/><font point-size="12">evening</font>>]
+vesperME [label=<<b>Middle<br/>English</b><br/><font color="red">vesper</font><br/><font point-size="12">evening star</font>>]
+vesper [label=<<b>Modern<br/>English</b><br/><font color="red">vesper<br/>vespers</font>>]
+wesperoIE -> vesperL
+vesperL -> vesperME [style=dashed]
+vesperME -> vesper
+
+// vespertine
+vespertinusL [label=<<font color="red">vespertīnus</font>>]
+vespertine [label=<<b>Modern<br/>English</b><br/><font color="red">vespertine</font>>]
+vesperL -> vespertinusL
+vespertinusL -> vespertine [style=dashed]
+
+// vespertilionid
+vespertilioL [label=<<font color="red">vespertiliō</font><br/><font point-size="12">bat</font>>]
+vespertilionidaeNL [label=<<b>New Latin</b><br/><font color="red">Vespertiliōnidae</font>>]
+vespertilionid [label=<<b>Modern<br/>English</b><br/><font color="red">vespertilionid</font>>]
+vesperL -> vespertilioL
+vespertilioL -> vespertilionidaeNL -> vespertilionid [style=dashed]
+
+// pipistrelle
+vipistrelloOI [label=<<b>Old Italian</b><br/><font color="red">vipistrello</font>>]
+pipistrelloI [label=<<b>Italian</b><br/><font color="red">pipistrello</font>>]
+pipistrelleF [label=<<b>French</b><br/><font color="red">pipistrelle</font>>]
+pipistrelle [label=<<b>Modern<br/>English</b><br/><font color="red">pipistrelle</font>>]
+vespertilioL -> vipistrelloOI -> pipistrelloI
+pipistrelloI -> pipistrelleF -> pipistrelle [style=dashed]
+
+// Hesperus
+hesperosGk [label=<<b>Greek</b><br/><font color="red">hesperos</font>>]
+hesperusL [label=<<b>Latin</b><br/><font color="red">Hesperus</font>>]
+hesperusME [label=<<b>Middle<br/>English</b><br/><font color="red">Hesperus</font>>]
+hesperus [label=<<b>Modern<br/>English</b><br/><font color="red">Hesperus</font>>]
+wesperoIE -> hesperosGk
+hesperosGk -> hesperusL -> hesperusME [style=dashed]
+hesperusME -> hesperus
+
+// Hesperides
+hesperidesGk [label=<<font color="red">Hesperides</font>>]
+hesperides [label=<<b>Modern<br/>English</b><br/><font color="red">Hesperides</font>>]
+hesperosGk -> hesperidesGk
+hesperidesGk -> hesperides [style=dashed]
+
+{ rank=sink west western westerly visigoth vesper vespertine vespertilionid pipistrelle hesperus hesperides }
+{ rank=same }
+}

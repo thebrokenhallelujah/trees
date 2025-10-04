@@ -1,0 +1,104 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+weidIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*weid-</font></td><td><font point-size="16">to see</font></td></tr></table>> tooltip="Indo-European \"*weid-\" to see" shape=rect style=dashed peripheries=1 margin=.3 URL="weid-see2.svg"]
+
+videreL [label=<<b>Latin</b><br/><font color="red">vidēre</font>>]
+weidIE -> videreL
+
+// visit
+visitareL [label=<<font color="red">vīsitāre</font><br/><font point-size="12">to go to see</font>>]
+visit [label=<<b>Modern<br/>English</b><br/><font color="red">visit</font>>]
+videreL -> visitareL
+visitareL -> visit [style=dashed]
+
+// revise
+revisereL [label=<<font color="red">revīsere</font><br/><font point-size="12">to look at again</font>>]
+revise [label=<<b>Modern<br/>English</b><br/><font color="red">revise</font>>]
+videreL -> revisereL
+revisereL -> revise
+
+// review, revue
+revidereL [label=<<font color="red">revidēre</font><br/><font point-size="12">to see again</font>>]
+review [label=<<b>Modern<br/>English</b><br/><font color="red">review<br/>revue</font>>]
+videreL -> revidereL
+revidereL -> review
+
+// evident, evidence
+eghsIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*eghs</font><br/><font point-size="12">out</font>> shape=box style="dashed,rounded" URL="eghs-out.svg"]
+exL [label=<<b>Latin</b><br/><font color="red">ex-, ē-</font>>]
+evidereL [label=<<font color="red">ēvidēre</font><br/><font point-size="12">"to see out"</font>>]
+evidensL [label=<<font color="red">ēvidēns,<br/>ēvident-</font><br/><font point-size="12">obvious</font>>]
+evident [label=<<b>Modern<br/>English</b><br/><font color="red">evident<br/>evidence</font>>]
+eghsIE -> exL
+{ exL videreL } -> evidereL -> evidensL
+evidensL -> evident [style=dashed]
+
+// provide
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">forward</font>>]
+proL [label=<<b>Latin</b><br/><font color="red">prō-</font>> shape=box style="dashed,rounded" URL="per-pro2.svg"]
+providereL [label=<<font color="red">prōvidēre</font><br/><font point-size="12">"to see ahead,"<br/>to provide for</font>>]
+provide [label=<<b>Modern<br/>English</b><br/><font color="red">privide<br/>provision<br/>proviso</font>>]
+perIE -> proL
+{ proL videreL } -> providereL
+providereL -> provide [style=dashed]
+
+// prudent
+providensL [label=<<font color="red">prōvidēns,<br/>prōvident-</font>>]
+prudensL [label=<<font color="red">prūdēns,<br/>prūdent-</font>>]
+prudent [label=<<b>Modern<br/>English</b><br/><font color="red">prudent</font>>]
+providereL -> providensL -> prudensL
+prudensL -> prudent [style=dashed]
+
+// purvey, purview
+purveierAN [label=<<b>Anglo-Norman</b><br/><font color="red">purveier</font><br/><font point-size="12">to provide</font><br/><font color="red">purveu est</font><br/><font point-size="12">it is provided</font>>]
+purvey [label=<<b>Modern<br/>English</b><br/><font color="red">purvey<br/>purview</font>>]
+providereL -> purveierAN
+purveierAN -> purvey [style=dashed]
+
+// praevidere
+praeL [label=<<b>Latin</b><br/><font color="red">prae-</font>> shape=box style="dashed,rounded" URL="per-prai1.svg"]
+praevidereL [label=<<font color="red">praevidēre</font><br/><font point-size="12">"to see before"</font>>]
+praevisL [label=<<font color="red">praevīs-</font>>]
+previse [label=<<b>Modern<br/>English</b><br/><font color="red">previse</font>>]
+perIE -> praeL
+{ praeL videreL } -> praevidereL -> praevisL
+praevisL -> previse [style=dashed]
+
+// invidious
+enIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*en</font><br/><font point-size="12">in</font>> shape=box style="dashed,rounded" URL="en-in1.svg"]
+inL [label=<<b>Latin</b><br/><font color="red">in-</font>>]
+invidereL [label=<<font color="red">invidēre</font><br/><font point-size="12">"to see in"</font>>]
+invidiaL [label=<<font color="red">invidia</font><br/><font point-size="12">envy</font>>]
+invidiosusL [label=<<font color="red">invidiōsus</font>>]
+invidious [label=<<b>Modern<br/>English</b><br/><font color="red">invidious</font>>]
+enIE -> inL
+{ inL videreL } -> invidereL -> invidiaL -> invidiosusL
+invidiosusL -> invidious [style=dashed]
+
+// envy
+envieOF [label=<<b>Old French</b><br/><font color="red">envie</font>>]
+envy [label=<<b>Modern<br/>English</b><br/><font color="red">envy</font>>]
+invidiaL -> envieOF
+envieOF -> envy [style=dashed]
+
+// supervise
+uperIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*uper</font><br/><font point-size="12">over</font>> shape=box style="dashed,rounded" URL="uper-over.svg"]
+superL [label=<<b>Latin</b><br/><font color="red">super-</font>>]
+supervidereL [label=<<font color="red">supervidēre</font><br/><font point-size="12">to look over</font>>]
+supervise [label=<<b>Modern<br/>English</b><br/><font color="red">supervise</font>>]
+uperIE -> superL
+{ superL videreL } -> supervidereL
+supervidereL -> supervise [style=dashed]
+
+// survey
+surveeirOF [label=<<b>Old French</b><br/><font color="red">surveeir</font>>]
+survey [label=<<b>Modern<br/>English</b><br/><font color="red">survey</font>>]
+supervidereL -> surveeirOF 
+surveeirOF -> survey [style=dashed]
+
+
+{ rank=sink visit revise review evident provide prudent purvey previse invidious envy supervise survey }
+{ rank=same eghsIE perIE enIE uperIE }
+}

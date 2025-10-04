@@ -1,0 +1,122 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+treiIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*trei, *treyes</font><br/><font point-size="16">three</font>> shape=box style="dashed,rounded" URL="trei-three0.svg" tooltip="Indo-European \"*trei\" three"]
+
+/* dekm 
+dekmIE [label=<<b>Indo-<br/>European</b><br/><font color="red">dekm̥</font><br/><font point-size="12">ten</font>> shape=box style="dashed,rounded" URL="dekm-ten.svg"] // not made
+kontaIE [label=<<font color="red">-dkōm-tā̆, -kontā̆</font>>]
+gintaL [label=<<b>Latin</b><br/><font color="red">-gintā</font><br/><font point-size="12">ten times</font>>]
+dekmIE -> kontaIE [sametail=1]
+kontaIE -> gintaL
+*/
+
+/* Germanic */
+thrijizGm [label=<<b>Germanic</b><br/><font color="red">*thrijiz</font>>]
+treiIE -> thrijizGm [sametail=1]
+
+/* three */
+thriOE [label=<<b>Old English</b><br/><font color="red">thrīe, thrēo, thrī</font>>]
+threeME [label=<<b>Middle<br/>English</b><br/><font color="red">three</font>>]
+three [label=<<b>Modern<br/>English</b><br/><font color="red">three</font>>]
+thrijizGm -> thriOE [sametail=1]
+thriOE -> threeME -> three
+
+/* thrice */
+thrigaOE [label=<<b>Old English</b><br/><font color="red">thrīga</font><br/><font point-size="12">thrice</font>>]
+thrieME [label=<<b>Middle<br/>English</b><br/><font color="red">thrie, thries</font>>]
+thrice [label=<<b>Modern<br/>English</b><br/><font color="red">thrice</font>>]
+thrijizGm -> thrigaOE [sametail=1]
+thrigaOE -> thrieME -> thrice
+
+/* thirteen */
+threotineOE [label=<<b>Old English</b><br/><font color="red">thrēotīne</font><br/><font point-size="12">thirteen</font>>]
+thyrteneME [label=<<b>Middle<br/>English</b><br/><font color="red">thrittene,<br/>thyrtene</font>>]
+thirteen [label=<<b>Modern<br/>English</b><br/><font color="red">thirteen</font>>]
+thrijizGm -> threotineOE [sametail=1 samehead=1]
+// ADD -TINE FROM DEKM
+threotineOE -> thyrteneME -> thirteen
+
+/* thirty */
+thritigOE [label=<<b>Old English</b><br/><font color="red">thrītig</font><br/><font point-size="12">thirty</font>>]
+thirtyME [label=<<b>Middle<br/>English</b><br/><font color="red">thritty, thirty</font>>]
+thirty [label=<<b>Modern<br/>English</b><br/><font color="red">thirty</font>>]
+thrijizGm -> thritigOE [sametail=1]
+thritigOE -> thirtyME -> thirty
+
+/* trillium */
+thrirOS [label=<<b>Old Swedish</b><br/><font color="red">thrīr</font>>]
+trillingSw [label=<<b>Swedish</b><br/><font color="red">trilling</font><br/><font point-size="12">triplet</font>>]
+trilliumNL [label=<<b>New Latin</b><br/><font color="red">Trillium</font><br/><font point-size="12">genus of plants<br/>with three leaves</font>>]
+trillium [label=<<b>Modern<br/>English</b><br/><font color="red">trillium</font>>]
+thrijizGm -> thrirOS [sametail=1]
+thrirOS -> trillingSw
+trillingSw -> trilliumNL [style=dotted label="prob." decorate=true]
+trilliumNL -> trillium [style=dotted]
+
+/* Latin */
+/* omitted: trammel, trephine (surgical instrument) */
+tresL [label=<<b>Latin</b><br/><font color="red">trēs, tria</font>>]
+treiIE -> tresL [sametail=1]
+
+/* trey */
+treieOF [label=<<b>Old French</b><br/><font color="red">treie</font>>]
+treyeME [label=<<b>Middle<br/>English</b><br/><font color="red">treye</font>>]
+trey [label=<<b>Modern<br/>English</b><br/><font color="red">trey</font>>]
+tresL -> treieOF [sametail=1]
+treieOF -> treyeME [style=dotted]
+treyeME -> trey
+
+/* trecento */
+trecentoI [label=<<b>Italian</b><br/><font color="red">(mil) trecento</font><br/><font point-size="12">"(one thousand)<br/>three hundred,"<br/>14th century</font>>]
+// MAKE NODES FOR ITALIAN TRE, CENTO?
+trecento [label=<<b>Modern<br/>English</b><br/><font color="red">trecento</font>>]
+// ADD DEKM LINK
+centumL [label=<<b>Latin</b><br/><font color="red">centum</font><br/><font point-size="12">hundred</font>>]
+tresL -> trecentoI [sametail=1 samehead=1]
+centumL -> trecentoI [samehead=1]
+trecentoI -> trecento [style=dotted weight=2]
+
+/* tredecillion */
+tredecimL [label=<<font color="red">tredecim</font><br/><font point-size="12">thirteen</font>>]
+tredecillion [label=<<b>Modern<br/>English</b><br/><font color="red">tredecillion</font>>]
+// ADD DEKM LINK
+tresL -> tredecimL [sametail=1]
+tredecimL -> tredecillion [style=dotted]
+
+/* triumvir, triumvirate */
+triumvirumL [label=<<font color="red">trium virum</font><br/><font point-size="12">of three men</font>>]
+triumvir [label=<<b>Modern<br/>English</b><br/><font color="red">triumvir<br/>triumvirate</font>>]
+tresL -> triumvirumL [sametail=1]
+triumvirumL -> triumvir [style=dotted]
+
+/* trocar */
+troisOF [label=<<b>Old French</b><br/><font color="red">trois</font>>]
+troisF [label=<<b>French</b><br/><font color="red">trois</font>>]
+tresL -> troisOF [sametail=1]
+troisOF -> troisF
+kwetwerIE [label=<<b>Indo-<br/>European</b><br/><font color="red">kʷetwer-</font><br/><font point-size="12">four</font>> shape=box style="dashed,rounded" URL="kwetwer-four2.svg"]
+quadrumL [label=<<b>Latin</b><br/><font color="red">quadrum</font><br/><font point-size="12">square</font>>]
+quadrareL [label=<<font color="red">quadrāre</font><br/><font point-size="12">to make square</font>>]
+carrerOF [label=<<b>Old French</b><br/><font color="red">carrer</font>>]
+carreF [label=<<b>French</b><br/><font color="red">carre</font><br/><font point-size="12">side of an<br/>instrument</font>>]
+kwetwerIE -> quadrumL -> quadrareL -> carrerOF -> carreF
+trocartF [label=<<font color="red">trocart</font>>]
+trocar [label=<<b>Modern<br/>English</b><br/><font color="red">trocar</font><br/><font point-size="12">a surgical<br/>instrument</font>>]
+{ troisF carreF } -> trocartF [samehead=1]
+trocartF -> trocar [style=dotted]
+
+/* triskaidekaphobia */
+treisG [label=<<b>Greek</b><br/><font color="red">treis</font>>]
+triskaidekaG [label=<<font color="red">triskaideka</font><br/><font point-size="12">thirteen</font>>]
+// ADD LINK TO DEKA
+triskaidekaphobia [label=<<b>Modern<br/>English</b><br/><font color="red">triskaidekaphobia</font><br/><font point-size="12">fear of the number 13</font>>]
+treiIE -> treisG [sametail=1]
+treisG -> triskaidekaG
+triskaidekaG -> triskaidekaphobia [style=dotted]
+
+{ rank=sink three thrice thirteen thirty trillium trey trecento tredecillion triumvir trocar triskaidekaphobia }
+{ rank=source treiIE kwetwerIE }
+{ rank=same }
+}

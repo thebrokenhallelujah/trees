@@ -1,0 +1,15 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+sem [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*sem-</font></td><td><font point-size="16">one, as one</font></td></tr></table>> tooltip="Indo-European \"*sem-\" one, as one" shape=box peripheries=2 margin=.3]
+
+base [label=<base form> shape=box style="dashed,rounded" URL="sem-one1.svg" tooltip="base form"]
+som [label=<<table border="0" cellpadding="5">
+<tr><td><font color="red">*som-</font></td></tr>
+<tr><td><font color="red">*sōm-</font></td></tr>
+</table>> shape=box style="dashed,rounded" URL="sem-one2.svg" tooltip="*som-, *sōm-"]
+sm [label=<<font color="red">*sm̥-</font>> shape=box style="dashed,rounded" URL="sem-one3.svg" tooltip="*sm̥-"]
+
+sem -> { base som sm }
+}

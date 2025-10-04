@@ -1,0 +1,92 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+treiIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*trei, *treyes</font><br/><font point-size="16">three</font>> shape=box style="dashed,rounded" URL="trei-three0.svg" tooltip="Indo-European \"*trei\" three"]
+trisIE [label=<<font color="red">*tris</font><br/><font point-size="12">thrice</font>>]
+trisnoIE [label=<<font color="red">*tris-no-</font>>] // three each?
+troyoIE [label=<<font color="red">*troy-o-</font>>]
+treiIE -> { trisIE trisnoIE troyoIE }
+
+/* tern */
+terL [label=<<b>Latin</b><br/><font color="red">ter</font>>]
+terniL [label=<<font color="red">ternī</font><br/><font point-size="12">three each</font>>]
+ternasL [label=<<font color="red">ternās</font>>]
+ternesOF [label=<<b>Old French</b><br/><font color="red">ternes<br/>terne</font>>]
+terneME [label=<<b>Middle<br/>English</b><br/><font color="red">terne</font>>]
+tern [label=<<b>Modern<br/>English</b><br/><font color="red">tern</font><br/><font point-size="12">set of three,<br/>schooner</font>>]
+trisIE -> terL -> terniL -> ternasL -> ternesOF
+ternesOF -> terneME [style=dotted]
+terneME -> tern
+
+/* ternary */
+ternariusL [label=<<font color="red">ternārius</font>>]
+ternaryME [label=<<b>Middle<br/>English</b><br/><font color="red">ternary</font>>]
+ternary [label=<<b>Modern<br/>English</b><br/><font color="red">ternary</font>>]
+terniL -> ternariusL
+ternariusL -> ternaryME [style=dotted]
+ternaryME -> ternary
+
+/* terpolymer */
+terpolymer [label=<<b>Modern<br/>English</b><br/><font color="red">terpolymer</font>>]
+poluG [label=<<b>Greek</b><br/><font color="red">polus, polu-</font><br/><font point-size="12">many</font>>]
+merosG [label=<<b>Greek</b><br/><font color="red">meros</font><br/><font point-size="12">part</font>>]
+peleIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*pelə-</font><br/><font point-size="12">to fill</font>> shape=box style="dashed,rounded" URL="pele-fill.svg"]
+polumeresG [label=<<font color="red">polumerēs</font><br/><font point-size="12">made of many parts</font>>]
+peleIE -> poluG
+{ poluG merosG } -> polumeresG
+{ terL polumeresG } -> terpolymer [style=dotted]
+
+/* trisoctahedron */
+trisG [label=<<b>Greek</b><br/><font color="red">tris</font>>]
+trisIE -> trisG
+oktoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*oktō(u)</font><br/><font point-size="12">eight</font>> shape=box style="dashed,rounded" URL="okto-eight.svg"]
+oktoG [label=<<b>Greek</b><br/><font color="red">oktō</font>>]
+oktoIE -> oktoG
+sedIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*sed-</font><br/><font point-size="12">to sit</font>> shape=box style="dashed,rounded" URL="sed-sit.svg"]
+hedraG [label=<<b>Greek</b><br/><font color="red">hedrā</font><br/><font point-size="12">seat, face of a<br/>geometric solid</font>>]
+sedIE -> hedraG
+trisoctahedron [label=<<b>Modern<br/>English</b><br/><font color="red">trisoctahedron</font>>]
+{ trisG oktoG hedraG } -> trisoctahedron [style=dotted]
+
+/* Hermes Trismegistus */
+megIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*meg-</font><br/><font point-size="12">great</font>> shape=box style="dashed,rounded" URL="meg-great.svg"]
+megistosG [label=<<b>Greek</b><br/><font color="red">megistos</font><br/><font point-size="12">greatest</font>>]
+megIE -> megistosG
+trismegistosG [label=<<font color="red">(Hermēs) trismegistos</font><br/><font point-size="12">thrice-greatest (Hermes)</font>>]
+trismegistusL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">Hermēs Trismegistus</font>>]
+trismegistus [label=<<b>Modern<br/>English</b><br/><font color="red">Hermes Trismegistus</font>>]
+{ trisG megistosG } -> trismegistosG
+trismegistosG -> trismegistusL -> trismegistus [style=dotted]
+
+/* trine */
+triniL [label=<<b>Latin</b><br/><font color="red">trīnī<br/>trīnus</font><br/><font point-size="12">three each</font>>]
+trineOF [label=<<b>Old French</b><br/><font color="red">trine</font>>]
+trineME [label=<<b>Middle<br/>English</b><br/><font color="red">trine</font>>]
+trine [label=<<b>Modern<br/>English</b><br/><font color="red">trine</font><br/><font point-size="12">threefold,<br/>120° apart</font>>]
+trisnoIE -> triniL -> trineOF 
+trineOF -> trineME [style=dotted]
+trineME -> trine
+
+/* trinity */
+trinitasL [label=<<b>Latin</b><br/><font color="red">trīnitās</font>>]
+triniteOF [label=<<b>Old French</b><br/><font color="red">trinite</font>>]
+triniteME [label=<<b>Middle<br/>English</b><br/><font color="red">trinite</font>>]
+trinity [label=<<b>Modern<br/>English</b><br/><font color="red">trinity</font>>]
+triniL -> trinitasL -> triniteOF
+triniteOF -> triniteME [style=dotted]
+triniteME -> trinity
+
+/* troika */
+trojeR [label=<<b>Russian</b><br/><font color="red">troje</font><br/><font point-size="12">group of three</font>>]
+troikaR [label=<<font color="red">troĭka</font><br/><font point-size="12">three-horse carriage</font>>]
+troika [label=<<b>Modern<br/>English</b><br/><font color="red">troika</font>>]
+troyoIE -> trojeR -> troikaR
+troikaR -> troika [style=dotted]
+
+
+
+{ rank=sink tern ternary terpolymer trisoctahedron trismegistus trine trinity troika }
+{ rank=source }
+{ rank=same trisnoIE troyoIE trisIE peleIE megIE oktoIE sedIE }
+}

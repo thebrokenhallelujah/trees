@@ -1,0 +1,28 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+treiIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">trei-</font></td><td><font point-size="16">three</font></td></tr></table>> tooltip="Indo-European \"trei-\" three" shape=box peripheries=2 margin=.3]
+
+treyesIE [label=<<font color="red">treyes</font>> shape=box style="dashed,rounded" URL="trei-three1.svg" tooltip=""]
+triIE  [label=<<font color="red">tri-</font>> shape=box style="dashed,rounded" URL="trei-three2.svg" tooltip=""]
+
+trisuff [label=<<table border="0" cellpadding="5">
+<tr><td><font color="red">tri-tyo-</font></td></tr>
+<tr><td><font color="red">tri-to-</font></td></tr>
+<tr><td><font color="red">tri-pl-</font></td></tr>
+<tr><td><font color="red">tri-plek-</font></td></tr>
+<tr><td><font color="red">tri-st-i-</font></td></tr>
+</table>> shape=box style="dashed,rounded" URL="trei-three3.svg" tooltip=""]
+// suffixed and compound forms of tri-
+
+trisIE [label=<<table border="0" cellpadding="5">
+<tr><td><font color="red">tris</font></td></tr>
+<tr><td><font color="red">troy-o-</font></td></tr>
+</table>> shape=box style="dashed,rounded" URL="trei-three4.svg" tooltip=""]
+
+treiIE -> { treyesIE triIE trisIE }
+triIE -> trisuff
+
+{ rank=same }
+}

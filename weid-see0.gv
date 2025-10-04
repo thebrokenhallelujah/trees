@@ -1,0 +1,10 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+weidIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*weid-</font></td><td><font point-size="16">to see</font></td></tr></table>> tooltip="Indo-European \"*weid-\" to see" shape=box peripheries=2 margin=.3]
+
+base [label=<base and<br/>suffixed forms> shape=box style="dashed,rounded" URL="weid-see1.svg" tooltip="base and suffixed forms"]
+wid [label=<<font color="red">wid-</font>> shape=box style="dashed,rounded" URL="weid-see2.svg" tooltip="wid-"]
+weidIE -> { base wid }
+}

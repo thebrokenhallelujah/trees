@@ -1,0 +1,143 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+udIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ud-, *ūd-</font></td><td><font point-size="16">out, up</font></td></tr></table>> tooltip="Indo-European \"*ud-, *ūd-\" up, out" shape=box peripheries=2 margin=.3]
+
+// omitted: hysteresis, hysteron proteron, hubris
+
+// out
+utGm [label=<<b>Germanic</b><br/><font color="red">*ūt-</font><br/><font point-size="12">out</font>>]
+utOE [label=<<b>Old English</b><br/><font color="red">ūt</font>>]
+outME [label=<<b>Middle<br/>English</b><br/><font color="red">out</font>>]
+out [label=<<b>Modern<br/>English</b><br/><font color="red">out<br/>out-</font>>]
+udIE -> utGm -> utOE -> outME -> out
+
+// utmost
+utmestOE [label=<<font color="red">ūztmest</font>>]
+utmostME [label=<<b>Middle<br/>English</b><br/><font color="red">utmost</font>>]
+utmost [label=<<b>Modern<br/>English</b><br/><font color="red">utmost</font>>]
+utOE -> utmestOE -> utmostME -> utmost
+
+// carouse
+garG [label=<<b>German</b><br/><font color="red">gar</font><br/><font point-size="12">completely</font>>]
+garausG [label=<<font color="red">garaus</font><br/><font point-size="12">drink up</font>>]
+carouse [label=<<b>Modern<br/>English</b><br/><font color="red">carouse</font>>]
+{ garG ausG } -> garausG
+garausG -> carouse [style=dashed]
+
+// auslander
+uzOHG [label=<<b>Old High<br/>German</b><br/><font color="red">ūz</font><br/><font point-size="12">out</font>>]
+uzMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">ūz</font>>]
+ausG [label=<<b>German</b><br/><font color="red">aus</font>>]
+landG [label=<<b>German</b><br/><font color="red">Land</font><br/><font point-size="12">land</font>>]
+auslandG [label=<<font color="red">Ausland</font><br/><font point-size="12">foreign country</font>>]
+auslanderG [label=<<font color="red">Ausländer</font>>]
+auslander [label=<<b>Modern<br/>English</b><br/><font color="red">auslander</font>>]
+utGm -> uzOHG -> uzMHG -> ausG
+{ ausG landG } -> auslandG -> auslanderG
+auslanderG -> auslander [style=dashed]
+
+// outlaw
+utON [label=<<b>Old Norse</b><br/><font color="red">ūt</font>>]
+logON [label=<<b>Old Norse</b><br/><font color="red">lög</font><br/><font point-size="12">law</font>>]
+utlagiON [label=<<font color="red">ūtlagi</font>>]
+utlagaOE [label=<<b>Old English</b><br/><font color="red">ūtlaga</font>>]
+outlaueME [label=<<b>Middle<br/>English</b><br/><font color="red">outlaue</font>>]
+outlaw [label=<<b>Modern<br/>English</b><br/><font color="red">outlaw</font>>]
+utGm -> utON
+{ utON logON } -> utlagiON
+utlagiON -> utlagaOE [style=dashed]
+utlagaOE -> outlaueME -> outlaw
+
+// uitlander
+uteMD [label=<<b>Middle Dutch</b><br/><font color="red">ute</font>>]
+landMD [label=<<b>Middle Dutch</b><br/><font color="red">land</font>>]
+utelanderMD [label=<<font color="red">utelander</font><br/><font point-size="12">foreigner</font>>]
+uitlanderAf [label=<<b>Afrikaans</b><br/><font color="red">uitlander</font>>]
+uitlander [label=<<b>Modern<br/>English</b><br/><font color="red">uitlander</font>>]
+utGm -> uteMD
+{ uteMD landMD } -> utelanderMD -> uitlanderAf
+uitlanderAf -> uitlander [style=dashed]
+
+// utter 1
+utMLG [label=<<b>Middle Low<br/>German</b><br/><font color="red">ūt</font>>]
+uterenMLG [label=<<font color="red">uteren</font>>]
+outenME [label=<<font color="red">outen</font><br/><font point-size="12">to disclose</font>>]
+utterenME [label=<<b>Middle<br/>English</b><br/><font color="red">utteren</font>>]
+utter1 [label=<<b>Modern<br/>English</b><br/><font color="red">utter</font><br/><font point-size="12">speak</font>>]
+utGm -> utMLG -> uterenMLG
+uterenMLG -> utterenME [style=dashed]
+outME -> outenME -> utterenME -> utter1
+
+// utter 2
+uteraGm [label=<<font color="red">*ūt-era-</font><br/><font point-size="12">outer</font>>]
+uteraOE [label=<<b>Old English</b><br/><font color="red">ūtera</font>>]
+utterME [label=<<b>Middle<br/>English</b><br/><font color="red">utter</font>>]
+utter2 [label=<<b>Modern<br/>English</b><br/><font color="red">utter</font><br/><font point-size="12">complete</font>>]
+utGm -> uteraGm -> uteraOE -> utterME -> utter2
+
+// but
+biutanaGm [label=<<font color="red">*bi-ūtana</font><br/><font point-size="12">at the outside</font>>]
+butanOE [label=<<b>Old English</b><br/><font color="red">būtan</font>>]
+butME [label=<<b>Middle<br/>English</b><br/><font color="red">but</font>>]
+but [label=<<b>Modern<br/>English</b><br/><font color="red">but</font>>]
+utGm -> biutanaGm -> butanOE -> butME -> but
+
+// about
+onbutanOE  [label=<<font color="red">onbūtan</font>>]
+aboutME [label=<<b>Middle<br/>English</b><br/><font color="red">about</font>>]
+about [label=<<b>Modern<br/>English</b><br/><font color="red">about</font>>]
+butanOE -> onbutanOE -> aboutME -> about
+
+// ersatz
+udsIE [label=<<font color="red">*uds</font>>]
+uzGm [label=<<b>Germanic</b><br/><font color="red">*uz, *uz-</font><br/><font point-size="12">out</font>>]
+irOHG [label=<<b>Old High<br/>German</b><br/><font color="red">ir-</font>>]
+irsezzanOHG [label=<<font color="red">irsezzan</font><br/><font point-size="12">to replace</font>>]
+ersetzenG [label=<<b>German</b><br/><font color="red">ersetzen</font>>]
+ersatzG [label=<<font color="red">ersatz</font><br/><font point-size="12">replacement</font>>]
+ersatz [label=<<b>Modern<br/>English</b><br/><font color="red">ersatz</font>>]
+udIE -> udsIE -> uzGm -> irOHG -> irsezzanOHG -> ersetzenG -> ersatzG
+ersatzG -> ersatz [style=dashed]
+
+// ort
+oorMD [label=<<b>Middle Dutch</b><br/><font color="red">oor</font>>]
+edIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ed-</font><br/><font point-size="12">to eat</font>> shape=box style="dashed,rounded" URL="ed-eat.svg"]
+etenMD [label=<<b>Middle Dutch</b><br/><font color="red">eten</font>>]
+orteME [label=<<b>Middle<br/>English</b><br/><font color="red">orte</font><br/><font point-size="12">food left by<br/>animals</font>>]
+ort [label=<<b>Modern<br/>English</b><br/><font color="red">ort</font>>]
+uzGm -> oorMD
+edIE -> etenMD
+{ oorMD etenMD } -> orteME [style=dashed]
+orteME -> ort
+
+// ordeal
+uzdailjamGm [label=<<font color="red">*uz-dailjam</font><br/><font point-size="12">a portioning out</font>>]
+ordalOE [label=<<b>Old English</b><br/><font color="red">ordāl</font><br/><font point-size="12">trial by ordeal</font>>]
+ordalME [label=<<b>Middle<br/>English</b><br/><font color="red">ordal</font>>]
+ordeal [label=<<b>Modern<br/>English</b><br/><font color="red">ordeal</font>>]
+uzGm -> uzdailjamGm -> ordalOE -> ordalME -> ordeal
+
+// Ursprache
+urOHG [label=<<b>Old High<br/>German</b><br/><font color="red">ur-</font>>]
+urMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">ur-</font>>]
+urG [label=<<b>German</b><br/><font color="red">ur-</font><br/><font point-size="12">original</font>>]
+spracheG [label=<<b>German</b><br/><font color="red">Sprache</font><br/><font point-size="12">language, speech</font>>]
+urspracheG [label=<<font color="red">Ursprache</font>>]
+ursprache [label=<<b>Modern<br/>English</b><br/><font color="red">Ursprache</font>>]
+uzGm -> urOHG -> urMHG -> urG
+{ urG spracheG } -> urspracheG
+urspracheG -> ursprache [style=dashed]
+
+// vigorish
+vyR [label=<<b>Russian</b><br/><font color="red">vy-</font>>]
+igratR [label=<<b>Russian</b><br/><font color="red">igrat'</font><br/><font point-size="12">to play</font>>]
+vyigryshR [label=<<font color="red">vyigrysh</font><br/><font point-size="12">winnings</font>>]
+vigorishY [label=<<b>Yiddish</b><br/><font color="red">vigorish</font>>]
+vigorish [label=<<b>Modern<br/>English</b><br/><font color="red">vigorish</font>>]
+udIE -> vyR
+{ vyR igratR } -> vyigryshR
+vyigryshR -> vigorishY -> vigorish [style=dashed]
+
+{ rank=sink out utmost auslander carouse outlaw uitlander utter1 utter2 but about ersatz ort ordeal ursprache vigorish }
+}

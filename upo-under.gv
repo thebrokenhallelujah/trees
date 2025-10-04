@@ -1,0 +1,165 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+// omitted: Aufklärung
+
+upoIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*upo</font></td><td><font point-size="16">under, up from under</font></td></tr></table>> tooltip="Indo-European \"*upo\" under, up from under" shape=box peripheries=2 margin=.3]
+
+// up
+uppGmc [label=<<b>Germanic</b><br/><font color="red">*upp-</font><br/><font point-size="12">up</font>>]
+upOE [label=<<b>Old English</b><br/><font color="red">ūp</font>>]
+upME [label=<<b>Middle<br/>English</b><br/><font color="red">up</font><br/><font point-size="12">upward</font>>]
+uppeME [label=<<b>Middle<br/>English</b><br/><font color="red">uppe</font><br/><font point-size="12">on high</font>>]
+up [label=<<b>Modern<br/>English</b><br/><font color="red">up</font>>]
+upoIE -> uppGmc -> upOE -> { upME uppeME } -> up
+
+// up-
+uppOE [label=<<b>Old English</b><br/><font color="red">ūp-, upp-</font>>]
+up2ME [label=<<b>Middle<br/>English</b><br/><font color="red">up-</font>>]
+up2 [label=<<b>Modern<br/>English</b><br/><font color="red">up-</font>>]
+uppGmc -> uppOE -> up2ME -> up2
+
+// uproar
+upMLG [label=<<b>Middle Low<br/>German</b><br/><font color="red">up-</font>>]
+uprorMLG [label=<<font color="red">uprōr</font>>]
+uproar [label=<<b>Modern<br/>English</b><br/><font color="red">uproar</font>>]
+uppGmc -> upMLG -> uprorMLG 
+uprorMLG -> uproar [style=dashed]
+
+// open
+upanaGmc [label=<<font color="red">*upana-</font><br/><font point-size="12">set up</font>>]
+openOE [label=<<b>Old English</b><br/><font color="red">open</font>>]
+openME [label=<<b>Middle<br/>English</b><br/><font color="red">open</font>>]
+open [label=<<b>Modern<br/>English</b><br/><font color="red">open</font>>]
+upoIE -> upanaGmc -> openOE -> openME -> open
+
+// above
+ambhiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ambhi</font><br/><font point-size="12">around</font>> shape=box style="dashed,rounded" URL="ambhi-around.svg"]
+biGmc [label=<<b>Germanic</b><br/><font color="red">*bi-</font><br/><font point-size="12">by, at</font>>]
+biufanaGmc [label=<<font color="red">*bi-ufana</font><br/><font point-size="12">on, above</font>>]
+bufanOE [label=<<b>Old English</b><br/><font color="red">būfan<br/>abūfan</font>>]
+abovenME [label=<<b>Middle<br/>English</b><br/><font color="red">above</font>>]
+above [label=<<b>Modern<br/>English</b><br/><font color="red">above</font>>]
+ambhiIE -> biGmc
+{ biGmc upanaGmc } -> biufanaGmc -> bufanOE -> abovenME -> above
+
+// oft, often
+uptIE [label=<<font color="red">*up-t-</font>>]
+oftOE [label=<<b>Old English</b><br/><font color="red">oft</font>>]
+oftME [label=<<b>Middle<br/>English</b><br/><font color="red">oft<br/>often</font>>]
+oft [label=<<b>Modern<br/>English</b><br/><font color="red">oft<br/>often</font>>]
+upoIE -> uptIE [label="?" decorate=true]
+uptIE -> oftOE -> oftME -> oft
+
+// eaves
+upesIE [label=<<font color="red">*upes-</font>>]
+ubaswoGmc [label=<<b>Germanic</b><br/><font color="red">*ubaswō, *ubizwō</font><br/><font point-size="12">eaves ("that which<br/>is above")</font>>]
+efesOE [label=<<b>Old English</b><br/><font color="red">efes</font>>]
+evesME [label=<<b>Middle<br/>English</b><br/><font color="red">eves</font>>]
+eaves [label=<<b>Modern<br/>English</b><br/><font color="red">eaves</font>>]
+upoIE -> upesIE -> ubaswoGmc -> efesOE -> evesME -> eaves
+
+// eavesdrop
+obisdrupGmc [label=<<b>Germanic</b><br/><font color="red">*obisdrup-</font><br/><font point-size="12">dripping water from<br/>the eaves</font>>]
+yfesdrypeOE [label=<<b>Old English</b><br/><font color="red">yfesdrype</font><br/><font point-size="12">place where water<br/>falls from the eaves</font>>]
+evesdropME [label=<<b>Middle<br/>English</b><br/><font color="red">evesdrop</font>>]
+evesdropperME [label=<<font color="red">evesdropper</font><br/><font point-size="12">one who stands in<br/>the eavesdrop<br/>(eavesdropping)</font>>]
+eavesdrop [label=<<b>Modern<br/>English</b><br/><font color="red">eavesdropper<br/>eavesdrop</font>>]
+ubaswoGmc -> obisdrupGmc -> yfesdrypeOE -> evesdropME -> evesdropperME -> eavesdrop
+
+// sub- (omitted: soutane)
+supIE [label=<<font color="red">*(s)up-</font>>]
+subL [label=<<b>Latin</b><br/><font color="red">sub, sub-</font><br/><font point-size="12">under</font>>]
+subME [label=<<b>Middle<br/>English</b><br/><font color="red">sub-</font>>]
+sub [label=<<b>Modern<br/>English</b><br/><font color="red">sub-</font>>]
+upoIE -> supIE -> subL
+subL -> subME [style=dashed]
+subME -> sub
+
+// supine
+supinusL [label=<<b>Latin</b><br/><font color="red">supīnus</font><br/><font point-size="12">lying on the back<br/>("thrown under/backward")</font>>]
+supinumL [label=<<font color="red">supīnum (verbum)</font><br/><font point-size="12">(verb) going back</font>>]
+supinME [label=<<b>Middle<br/>English</b><br/><font color="red">supin</font><br/><font point-size="12">Latin verbal noun</font>>]
+supine [label=<<b>Modern<br/>English</b><br/><font color="red">supine</font>>]
+supIE -> supinusL -> supinumL 
+supinumL -> supinME [style=dashed]
+supinME -> supine
+
+// subterfuge
+
+// hypo-
+hupoGk [label=<<b>Greek</b><br/><font color="red">hupo, hupo-</font><br/><font point-size="12">under, beneath</font>>]
+hypo [label=<<b>Modern<br/>English</b><br/><font color="red">hypo-<br/>hyp-</font>>]
+upoIE -> hupoGk
+hupoGk -> hypo [style=dashed]
+
+// hypso
+hupsosGk [label=<<b>Greek</b><br/><font color="red">hupsos</font><br/><font point-size="12">height, top</font>>]
+hypso [label=<<b>Modern<br/>English</b><br/><font color="red">hypso-<br/>hyps-</font>>]
+upoIE -> hupsosGk
+hupsosGk -> hypso [style=dashed]
+
+// palfrey?
+
+// vassal
+staIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*stā-</font><br/><font point-size="12">to stand</font>> shape=box style="dashed,rounded" URL="sta-stand.svg"]
+upostoIE [label=<<font color="red">*upo-sto-</font>>]
+wassoC [label=<<b>Celtic</b><br/><font color="red">*wasso-</font><br/><font point-size="12">servant ("one<br/>who stands under")</font>>]
+vassusL [label=<<b>Latin</b><br/><font color="red">*vassus</font><br/><font point-size="12">vassal</font>>]
+vassalusL [label=<<font color="red">*vassalus</font>>]
+vassalOF [label=<<b>Old French</b><br/><font color="red">vassal</font>>]
+vassalME [label=<<b>Middle<br/>English</b><br/><font color="red">vassal</font>>]
+vassal [label=<<b>Modern<br/>English</b><br/><font color="red">vassal</font>>]
+{ upoIE staIE } -> upostoIE -> wassoC
+wassoC -> vassusL [style=dashed]
+vassusL -> vassalusL -> vassalOF
+vassalOF -> vassalME [style=dashed]
+vassalME -> vassal
+
+// valet
+vassellitusL [label=<<font color="red">*vassallitus</font>>]
+valetOF [label=<<b>Old French</b><br/><font color="red">vaslet, valet</font><br/><font point-size="12">servant, squire</font>>]
+valetteME [label=<<b>Middle<br/>English</b><br/><font color="red">vallette</font>>]
+valet [label=<<b>Modern<br/>English</b><br/><font color="red">valet</font>>]
+vassusL -> vassellitusL -> valetOF
+valetOF -> valetteME [style=dashed]
+valetteME -> valet
+
+// varlet
+varletOF [label=<<font color="red">varlet</font>>]
+varletME [label=<<b>Middle<br/>English</b><br/><font color="red">varlet</font>>]
+varlet [label=<<b>Modern<br/>English</b><br/><font color="red">varlet</font>>]
+valetOF -> varletOF
+varletOF -> varletME [style=dashed]
+varletME -> varlet
+
+// opal
+upaII [label=<<b>Indo-Iranian</b><br/><font color="red">*upa</font>>]
+upaSk [label=<<b>Sanskrit</b><br/><font color="red">upa</font><br/><font point-size="12">below</font>>]
+upalahSk [label=<<font color="red">upalaḥ</font><br/><font point-size="12">lower</font>>]
+opalliosGk [label=<<b>Greek</b><br/><font color="red">opallios</font>>]
+opalusL [label=<<b>Latin</b><br/><font color="red">opalus</font>>]
+opalusME [label=<<b>Middle<br/>English</b><br/><font color="red">opalus</font>>]
+opal [label=<<b>Modern<br/>English</b><br/><font color="red">opal</font>>]
+upoIE -> upaII -> upaSk -> upalahSk
+upalahSk -> opalliosGk [style=dashed label="?"]
+opalliosGk -> opalusL -> opalusME [style=dashed]
+opalusME -> opal
+
+// Upanishad
+niSk [label=<<b>Sanskrit</b><br/><font color="red">ni-</font><br/><font point-size="12">down</font>>]
+sedIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*sed-</font><br/><font point-size="12">to sit</font>> shape=box style="dashed,rounded" URL="sed-sit.svg"]
+sadSk [label=<<b>Sanskrit</b><br/><font color="red">sīdati, sad-</font><br/><font point-size="12">he sits</font>>]
+upanisadSk [label=<<font color="red">upaniṣad</font>>]
+upanishad [label=<<b>Modern<br/>English</b><br/><font color="red">Upanishad</font>>]
+sedIE -> sadSk
+{ upaSk niSk sadSk } -> upanisadSk
+upanisadSk -> upanishad [style=dashed]
+
+// Zend-Avesta
+
+
+{ rank=sink up up2 uproar open above oft eaves eavesdrop sub supine hypo hypso vassal valet varlet opal upanishad }
+{ rank=same ambhiIE staIE sedIE }
+}

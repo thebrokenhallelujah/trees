@@ -1,0 +1,114 @@
+strict digraph {
+node [shape=none]
+per [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*per </font><font point-size="16">forward, through</font>> shape=box style="dashed,rounded" URL="per-list.svg" tooltip="Indo-European \"*per\" forward, through"]
+pro [label=<<font color="red">prō̆</font>>]
+per -> pro -> { fraGm promo prowo prono }
+pro -> proko [label="?"]
+/* omitted: Gk protero-, Sk pra- prakrit */
+promo -> { framGm frumGm } // omitted: Czech pram
+prowo -> frawanGm -> { frowoGm frawazGm }
+promo [label=<<font color="red">prō-mo-</font>>]
+prowo [label=<<font color="red">prō-wo-</font>>]
+prono [label=<<font color="red">prō-no-</font>>]
+proko [label=<<font color="red">pro-ko-</font>>]
+
+{ proko reko } -> reciprocusL
+reko [label=<<font color="red">re-ko</font><br/><font point-size="12">backward</font>>] // related to re- (L/E prefix)
+{ rank=same promo prowo prono proko }
+// { rank=same fraGm pfraGm pronusL }
+
+// fro omitted: frae, froward
+fraGm -> fraON
+fraON -> froME [style=dashed label="?"]
+froME -> fro
+fraGm [label=<<b>Germanic</b><br/><font color="red">fra</font><br/><font point-size="12">forward, away from</font>>]
+fraON [label=<<b>Old Norse</b><br/><font color="red">frā</font>>]
+froME [label=<<b>Middle English</b><br/><font color="red">fro</font>>]
+fro [label=<<b>Modern<br/>English</b><br/><font color="red">fro</font>>]
+/* fret 
+{ pfraGm ed } -> fraetanGm // add it or just link?
+pfraGm [label=<<b>Germanic</b><br/><font color="red">fra-</font><br/><font point-size="12">completely</font>>] // different from other Gmc fra?
+*/
+
+// from 
+framGm -> framOE -> fromME -> from
+framGm [label=<<b>Germanic</b><br/><font color="red">fram</font><br/><font point-size="12">from</font>>]
+framOE [label=<<b>Old English</b><br/><font color="red">fram</font><br/><font point-size="12">forward, from</font>>]
+fromME [label=<<b>Middle<br/>English</b><br/><font color="red">from</font>>]
+from [label=<<b>Modern<br/>English</b><br/><font color="red">from</font>>]
+
+// frame
+framOE -> framianOE -> framenME -> frame
+framianOE [label=<<font color="red">framian</font><br/><font point-size="12">to further</font>>]
+framenME [label=<<b>Middle<br/>English</b><br/><font color="red">framen</font>>]
+frame [label=<<b>Modern<br/>English</b><br/><font color="red">frame</font>>]
+
+//furnish
+frumGm -> frumjanGm
+frumjanGm -> fournirOF -> furnisshenME [style=dashed]
+furnisshenME -> furnish
+frumGm [label=<<b>Germanic</b><br/><font color="red">frum</font><br/><font point-size="12">forward</font>>]
+frumjanGm [label=<<font color="red">frumjan</font><br/><font point-size="12">to further</font>>]
+fournirOF [label=<<b>Old French</b><br/><font color="red">fournir, fourniss-</font><br/><font point-size="12">to provide</font>>]
+furnisshenME [label=<<b>Middle<br/>English</b><br/><font color="red">furnisshen</font>>]
+furnish [label=<<b>Modern<br/>English</b><br/><font color="red">furnish</font>>]
+
+// furniture
+fournirOF -> fournitureOF
+fournitureOF -> furniture [style=dashed]
+fournitureOF [label=<<font color="red">fourniture</font>>]
+furniture [label=<<b>Modern<br/>English</b><br/><font color="red">furniture</font>>]
+
+// veneer
+fournirOF -> fournirF // OF "furnir" for this one
+fournirF -> furnierungG -> faneeringE [style=dashed] // these are too high
+faneeringE -> veneer
+fournirF [label=<<b>French</b><br/><font color="red">fournir</font>>]
+furnierungG [label=<<b>German</b><br/><font color="red">Furnierung</font>>]
+faneeringE [label=<<b>Modern<br/>English</b><br/>(obsolete)<br/><font color="red">faneering</font>>]
+veneer [label=<<font color="red">veneer</font>>]
+
+// Frau/lein, Freya, Frey
+// above: frawanGm -> { frowoGm frawazGm }
+frowoGm -> frouwaOG -> vroweMG -> frauG
+frauG -> frau [style=dashed]
+frawanGm [label=<<b>Germanic</b><br/><font color="red">frawan-</font><br/><font point-size="12">lord</font>>]
+frowoGm  [label=<<font color="red">frōwō</font><br/><font point-size="12">lady</font>>]
+frawazGm [label=<<font color="red">frawaz</font>>]
+frouwaOG [label=<<b>Old High<br/>German</b><br/><font color="red">frouwa</font>>]
+vroweMG [label=<<b>Middle<br/>High German</b><br/><font color="red">vrowe</font>>]
+frauG [label=<<b>German</b><br/><font color="red">Frau<br/>Fräulein</font>>]
+frau [label=<<b>Modern<br/>English</b><br/><font color="red">Frau<br/>Fräulein</font>>]
+
+// Freya
+frowoGm -> freyjaON -> nfreyjaON
+nfreyjaON -> freya [style=dashed]
+freyjaON [label=<<b>Old Norse</b><br/><font color="red">freyja</font><br/><font point-size="12">lady</font>>]
+nfreyjaON [label=<<font color="red">Freyja</font><br/><font point-size="12">goddess of love<br/>and beauty</font>>]
+freya [label=<<b>Middle<br/>English</b><br/><font color="red">Freya<br/>(Freyja)</font>>]
+
+// Frey
+frawazGm -> freyrON
+freyrON -> frey [style=dashed]
+frawazGm [label=<<font color="red">frawaz</font>>]
+freyrON [label=<<b>Old Norse</b><br/><font color="red">Freyr</font><br/><font point-size="12">god of peace<br/>and prosperity</font>>]
+frey [label=<<b>Modern<br/>English</b><br/><font color="red">Frey</font>>]
+
+// prone
+prono -> pronusL
+pronusL -> proneME [style=dashed]
+proneME -> prone
+pronusL [label=<<b>Latin</b><br/><font color="red">prōnus</font><br/><font point-size="12">leaning forward</font>>]
+proneME [label=<<b>Middle<br/>English</b><br/><font color="red">prone</font><br/><font point-size="12">inclined</font>>]
+prone [label=<<b>Modern<br/>English</b><br/><font color="red">prone</font>>]
+
+// reciprocal
+reciprocusL -> reciprocal [style=dashed]
+reciprocusL [label=<<b>Latin</b><br/><font color="red">reciprocus</font><br/><font point-size="12">alternating</font>>]
+reciprocal [label=<<b>Modern<br/>English</b><br/><font color="red">reciprocal</font>>]
+
+{ rank=same fro from frame furnish furniture veneer frau freya frey prone reciprocal }
+{ rank=same fraON framOE fournirOF freyjaON frouwaOG freyrON } // old
+{ rank=same froME fromME framenME furnisshenME proneME vroweMG }
+}
+

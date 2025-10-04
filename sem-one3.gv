@@ -1,0 +1,134 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+sem [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*sem-</font></td><td><font point-size="16">one, as one</font></td></tr></table>> tooltip="Indo-European \"*sem-\" one, as one" shape=rect style=dashed peripheries=1 margin=.3 URL="sem-one0.svg"]
+
+sm [label=<<font color="red">*sm̥-</font>>]
+sem -> sm
+
+// anacoluthon
+haGk [label=<<b>Greek</b><br/><font color="red">ha-, a-</font><br/><font point-size="12">together</font>>]
+keleuthosGk [label=<<b>Greek</b><br/><font color="red">keleuthos</font><br/><font point-size="12">way, path</font>>]
+akolouthosGk [label=<<font color="red">akolouthos</font><br/><font point-size="12">accompanying</font>>]
+neIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ne</font><br/><font point-size="12">not</font>> shape=box style="dashed,rounded" URL="ne-not3.svg"]
+anGk [label=<<b>Greek</b><br/><font color="red">an-</font>>]
+anakolouthosGk [label=<<font color="red">anakolouthos</font><br/><font point-size="12">inconsistent</font>>]
+anakolouthonGk [label=<<b>Late Greek</b><br/><font color="red">anakolouthon</font><br/><font point-size="12">inconsistency in logic</font>>]
+anacoluthonL [label=<<b>Late Latin</b><br/><font color="red">anacoluthon</font>>]
+anacoluthon [label=<<b>Modern<br/>English</b><br/><font color="red">anacoluthon</font>>]
+sm -> haGk
+{ haGk keleuthosGk } -> akolouthosGk
+neIE -> anGk
+{ anGk akolouthosGk } -> anakolouthosGk -> anakolouthonGk
+anakolouthonGk -> anacoluthonL -> anacoluthon [style=dashed]
+
+// acolyte
+acolytusL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">acolytus</font>>]
+acolitOF [label=<<b>Old French</b><br/><font color="red">acolit</font>>]
+acolitME [label=<<b>Middle<br/>English</b><br/><font color="red">acolit</font>>]
+acolyte [label=<<b>Modern<br/>English</b><br/><font color="red">acolyte</font>>]
+akolouthosGk -> acolytusL [style=dashed]
+acolytusL -> acolitOF
+acolitOF -> acolitME [style=dashed]
+acolitME -> acolyte
+
+// simplex
+plekIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*plek-</font><br/><font point-size="12">to plait</font>> shape=box style="dashed,rounded" URL="plek-plait.svg"]
+smplek [label=<<font color="red">*sm̥-plek-</font><br/><font point-size="12">one-fold</font>>]
+simplexL [label=<<b>Latin</b><br/><font color="red">simplex</font><br/><font point-size="12">simple</font>>]
+simplex [label=<<b>Modern<br/>English</b><br/><font color="red">simplex</font>>]
+{ sm plekIE } -> smplek -> simplexL
+simplexL -> simplex [style=dashed]
+
+// simple
+smplo [label=<<font color="red">*sm̥-plo-</font><br/><font point-size="12">onefold</font>>]
+simplusL [label=<<b>Latin</b><br/><font color="red">simplus</font><br/><font point-size="12">simple</font>>]
+simple [label=<<b>Modern<br/>English</b><br/><font color="red">simple</font>>]
+sm -> smplo -> simplusL
+{ simplusL simplexL } -> simple [style=dashed]
+
+// semplice
+sempliceI [label=<<b>Italian</b><br/><font color="red">semplice</font>>]
+semplice [label=<<b>Modern<br/>English</b><br/><font color="red">semplice</font>>]
+simplexL -> sempliceI
+sempliceI -> semplice [style=dashed]
+
+// haploid 
+haploosGk [label=<<b>Greek</b><br/><font color="red">haploos</font><br/><font point-size="12">single</font>>]
+haploid [label=<<b>Modern<br/>English</b><br/><font color="red">haploid</font>>]
+smplo -> haploosGk
+haploosGk -> haploid [style=dashed]
+
+// some
+smmo [label=<<font color="red">*sm̥m-o-</font>>]
+sumaGc [label=<<b>Germanic</b><br/><font color="red">*suma-</font>>]
+sumOE [label=<<b>Old English</b><br/><font color="red">sum, -sum</font>>]
+someME [label=<<b>Middle<br/>English</b><br/><font color="red">some, -som</font>>]
+some [label=<<b>Modern<br/>English</b><br/><font color="red">some, -some</font>>]
+sm -> smmo -> sumaGc -> sumOE -> someME -> some
+
+// similar
+smmalo [label=<<font color="red">*sm̥m-alo-</font>>]
+similisL [label=<<b>Latin</b><br/><font color="red">similis</font><br/><font point-size="12">of the same kind</font>>]
+similaireF [label=<<b>French</b><br/><font color="red">similaire</font>>]
+similar [label=<<b>Modern<br/>English</b><br/><font color="red">similar</font>>]
+sm -> smmalo -> similisL -> similaireF
+similaireF -> similar [style=dashed]
+
+// assimilate
+adL [label=<<b>Latin</b><br/><font color="red">ad-</font><br/><font point-size="12">to</font>>]
+simulareL [label=<<font color="red">simulāre</font><br/><font point-size="12">to imitate</font>>]
+assimilareL [label=<<font color="red">assimilāre, assimilāt-</font><br/><font point-size="12">to make similar to</font>>]
+assimilatenME [label=<<b>Middle<br/>English</b><br/><font color="red">assimilaten</font>>]
+assimilate [label=<<b>Modern<br/>English</b><br/><font color="red">assimilate</font>>]
+similisL -> simulareL
+{ adL simulareL } -> assimilareL
+assimilareL -> assimilatenME [style=dashed]
+assimilatenME -> assimilate
+
+// resemble
+semblerOF [label=<<b>Old French</b><br/><font color="red">sembler</font><br/><font point-size="12">to appear</font>>]
+reOF [label=<<b>Old French</b><br/><font color="red">re-</font><br/><font point-size="12">(intensive prefix)</font>>]
+resemblerOF [label=<<font color="red">resembler</font>>]
+resemblenME [label=<<b>Middle<br/>English</b><br/><font color="red">resemblen</font>>]
+resemble [label=<<b>Modern<br/>English</b><br/><font color="red">resemble</font>>]
+simulareL -> semblerOF
+{ reOF semblerOF } -> resemblerOF
+resemblerOF ->  resemblenME [style=dashed]
+resemblenME -> resemble
+
+// sincere
+kerIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ker-</font><br/><font point-size="12">to grow</font>> shape=box style="dashed,rounded" URL="ker-grow.svg"]
+smkero [label=<<font color="red">*sm̥-kēro-</font><br/><font point-size="12">of one growth</font>>]
+sincerusL [label=<<b>Latin</b><br/><font color="red">sincērus</font><br/><font point-size="12">pure. clean</font>>]
+sincere [label=<<b>Modern<br/>English</b><br/><font color="red">sincere</font>>]
+{ sm kerIE } -> smkero -> sincerusL
+sincerusL -> sincere [style=dashed]
+
+// hetero-
+smtero [label=<<font color="red">*sm̥-tero-</font>>]
+heterosGk [label=<<b>Greek</b><br/><font color="red">heteros, hetero-</font><br/><font point-size="12">one of two, other</font>>]
+hetero [label=<<b>Modern<br/>English</b><br/><font color="red">hetero-</font>>]
+sm -> smtero -> heterosGk
+heterosGk -> hetero [style=dashed]
+
+// hamadryad, hamadryas
+smma [label=<<font color="red">*sm̥ma-</font>>]
+hamaGk [label=<<b>Greek</b><br/><font color="red">hama</font><br/><font point-size="12">together with</font>>]
+deruIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*deru-</font><br/><font point-size="12">to be firm, solid, wood</font>> shape=box style="dashed,rounded" URL="deru-firm.svg"]
+drusGk [label=<<b>Greek</b><br/><font color="red">drūs</font><br/><font point-size="12">oak</font>>]
+druasGk [label=<<font color="red">Druas</font><br/><font point-size="12">dryad</font>>]
+hamadruasGk [label=<<font color="red">Hamadruas</font>>]
+hamadryasL [label=<<font color="red">Hamadryas,<br/>Hamadryad-</font>>]
+hamadryad [label=<<b>Modern<br/>English</b><br/><font color="red">hamadryad</font><br/><font point-size="12">tree nymph, king cobra</font>>]
+hamadryas [label=<<b>Modern<br/>English</b><br/><font color="red">hamadryas</font><br/><font point-size="12">baboon</font>>]
+sm -> smma -> hamaGk
+deruIE -> drusGk -> druasGk
+{ hamaGk druasGk } -> hamadruasGk
+hamadruasGk -> hamadryasL -> { hamadryad hamadryas }
+
+
+{ rank=sink anacoluthon acolyte simple haploid some simplex semplice similar assimilate resemble sincere hetero hamadryad hamadryas }
+{ rank=same neIE plekIE kerIE deruIE sm }
+}

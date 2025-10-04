@@ -1,0 +1,86 @@
+strict digraph {
+/* sources: */
+node [shape=none]
+
+tereIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*terə-</font></td><td><font point-size="16">to corss over, pass through, overcome</font></td></tr></table>> tooltip="Indo-European \"*terə-\" to corss over, pass through, overcome" shape=box peripheries=2 margin=.3]
+
+// thrill
+treIE [label=<<font color="red">*tr̥(ə)-</font>>]
+thurilaGmc [label=<<b>Germanic</b><br/><font color="red">*thur-ila-</font>>]
+thyrelOE [label=<<b>Old English</b><br/><font color="red">thyr(e)l, thȳrel</font><br/><font point-size="12">a hole</font>>]
+thyrlianOE [label=<<font color="red">thȳrlian</font>>]
+thirlenME [label=<<b>Middle<br/>English</b><br/><font color="red">thirlen</font><br/><font point-size="12">to pierce</font>>]
+thrillenME [label=<<font color="red">thrillen</font>>]
+thrill [label=<<b>Modern<br/>English</b><br/><font color="red">thrill</font>>]
+tereIE -> treIE -> thurilaGmc -> thyrelOE -> thyrlianOE -> thirlenME -> thrillenME -> thrill
+
+// nostril
+nasIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*nas-</font><br/><font point-size="12">nose</font>> shape=box style="dashed,rounded" URL="nas-nose.svg"]
+nusoGmc [label=<<b>Germanic</b><br/><font color="red">*nusō</font>>]
+nosuOE [label=<<b>Old English</b><br/><font color="red">nosu</font>>]
+nosthyrlOE [label=<<font color="red">nosthyrl</font>>]
+nostrilleME [label=<<b>Middle<br/>English</b><br/><font color="red">nostrille</font>>]
+nostril [label=<<b>Modern<br/>English</b><br/><font color="red">nostril</font>>]
+nasIE -> nusoGmc -> nosuOE
+{ nosuOE thyrelOE } -> nosthyrlOE -> nostrilleME -> nostril
+
+// thorough, through
+trekweIE [label=<<font color="red">*tr̥ə-kʷe</font>>]
+thurhGmc [label=<<b>Germanic</b><br/><font color="red">*thurh</font>>]
+thuruhOE [label=<<b>Old English</b><br/><font color="red">thuruh</font><br/><font point-size="12">from end to end,<br/>through</font>>]
+thorowME [label=<<b>Middle<br/>English</b><br/><font color="red">thorow<br/>through</font>>]
+thorough [label=<<b>Modern<br/>English</b><br/><font color="red">thorough<br/>through</font>>]
+treIE -> trekweIE -> thurhGmc -> thuruhOE -> thorowME -> thorough
+
+// nectar
+nekIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*nek-</font><br/><font point-size="12">death</font>> shape=box style="dashed,rounded" URL="nek-death.svg"]
+nektarGk [label=<<b>Greek</b><br/><font color="red">nektar</font><br/><font point-size="12">"overcoming death,"<br/>drink of the gods</font>>]
+nectar [label=<<b>Modern<br/>English</b><br/><font color="red">nectar<br/>nectarine</font>>]
+{ nekIE treIE } -> nektarGk
+nektarGk -> nectar [style=dashed]
+
+// avatar
+taratiSk [label=<<b>Sanskrit</b><br/><font color="red">tarati</font><br/><font point-size="12">he crosses</font>>]
+avaSk [label=<<b>Sanskrit</b><br/><font color="red">ava</font><br/><font point-size="12">down</font>>]
+avatarahSk [label=<<font color="red">avatāraḥ</font><br/><font point-size="12">descent (from heaven),<br/>avatar</font>>]
+avatar [label=<<b>Modern<br/>English</b><br/><font color="red">avatar</font>>]
+tereIE -> taratiSk
+{ avaSk taratiSk } -> avatarahSk
+avatarahSk -> avatar [style=dashed]
+
+// trans-
+traIE [label=<<font color="red">*trā-</font>>]
+transL [label=<<b>Latin</b><br/><font color="red">trāns, trāns-</font><br/><font point-size="12">across, beyond,<br/>through</font>>]
+trans [label=<<b>Modern<br/>English</b><br/><font color="red">trans-</font>>]
+tereIE -> traIE -> transL
+transL -> trans [style=dashed]
+
+// serai, caravansary, lamasery
+trayoIE [label=<<font color="red">*trā-yo-</font>>]
+thrayaIr [label=<<b>Iranian</b><br/><font color="red">*thrāya-</font><br/><font point-size="12">to protect</font>>]
+sarayP [label=<<b>Persian</b><br/><font color="red">sarāy</font><br/><font point-size="12">inn, palace</font>>]
+// sarayT [label=<<b>Turkish</b><br/><font color="red">saray</font><br/><font point-size="12">palace</font>>]
+serai [label=<<b>Modern<br/>English</b><br/><font color="red">serai<br/>caravansary<br/>lamasery</font>>]
+traIE -> trayoIE -> thrayaIr -> sarayP
+sarayP -> serai [style=dashed]
+
+// truculent
+truIE [label=<<font color="red">*tru-</font>>]
+trukIE [label=<<font color="red">*tru-k-</font>>]
+truxL [label=<<b>Latin</b><br/><font color="red">trux, truc-</font><br/><font point-size="12">fierce</font>>]
+truculentusL [label=<<font color="red">truculentus</font>>]
+truculent [label=<<b>Modern<br/>English</b><br/><font color="red">truculent</font>>]
+tereIE -> truIE [label="?"]
+truIE -> trukIE -> truxL -> truculentusL
+truculentusL -> truculent [style=dashed]
+
+// trunk
+trunkoIE [label=<<font color="red">*tru-n-k-o-</font>>]
+truncusL [label=<<b>Latin</b><br/><font color="red">truncus</font><br/><font point-size="12">deprived of branches</font>>]
+trunk [label=<<b>Modern<br/>English</b><br/><font color="red">trunk<br/>truncate<br/>trench<br/>truncheon</font>>]
+truIE -> trunkoIE -> truncusL
+truncusL -> trunk [style=dashed]
+
+{ rank=sink thrill nostril thorough nectar avatar trans serai truculent trunk }
+{ rank=same nasIE nekIE }
+}

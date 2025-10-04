@@ -1,0 +1,72 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+wi [label=<<b>Indo-<br/>European</b><br/><font color="red">wi-</font><br/><font point-size="12">in half, two</font>>]
+dekm [label=<<b>Indo-<br/>European</b><br/><font color="red">dekm̥-</font><br/><font point-size="12">ten</font>> shape=box style="dashed,rounded" URL="dekm-ten.svg"]
+dkmti [label=<<font color="red">(d)km̥t-ī</font><br/><font point-size="12">decade</font>>]
+wikmti [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">wīkm̥tī-</font></td><td><font point-size="16">twenty</font></td></tr></table>> tooltip="Indo-European \"wīkm̥tī-\" twenty" shape=box peripheries=2 margin=.3]
+dekm -> dkmti
+{ wi dkmti } -> wikmti [samehead=1]
+
+/* vicenary */
+vigintiL [label=<<b>Latin</b><br/><font color="red">vīgintī</font>>]
+viceniL [label=<<font color="red">vīcēnī</font><br/><font point-size="12">twenty each</font>>]
+vicenariusL [label=<<font color="red">vīcēnārius</font><br/><font point-size="12">related to 20</font>>]
+vicenary [label=<<b>Modern<br/>English</b><br/><font color="red">vicenary</font>>]
+wikmti -> vigintiL [sametail=1]
+vigintiL -> viceniL [sametail=1]
+viceniL -> vicenariusL
+vicenariusL -> vicenary [style=dashed]
+
+/* vigesimal */
+vicesimusL [label=<<font color="red">vīcēsimus<br/>vīgēsimus</font><br/><font point-size="12">twentieth</font>>]
+vigesimal [label=<<b>Modern<br/>English</b><br/><font color="red">vigesimal</font><br/><font point-size="12">occurring in<br/>intervals of 20</font>>]
+vigintiL -> vicesimusL [sametail=1]
+vicesimusL -> vigesimal [style=dashed]
+
+/* vicennial */
+viciensL [label=<<font color="red">vīciēns</font><br/><font point-size="12">twenty times</font>>]
+annusL [label=<<b>Latin</b><br/><font color="red">annus</font><br/><font point-size="12">year</font>>]
+vicenniumL [label=<<font color="red">vīcennium</font><br/><font point-size="12">period of<br/>twenty years</font>>]
+vicennial [label=<<b>Modern<br/>English</b><br/><font color="red">vicennial</font>>]
+vigintiL -> viciensL [sametail=1]
+{ viciensL annusL } -> vicenniumL [samehead=1]
+vicenniumL -> vicennial [style=dashed]
+
+/* vigintillion */
+vigintillion [label=<<b>Modern<br/>English</b><br/><font color="red">vigintillion</font><br/><font point-size="12">10^63 (US)<br/>10^120 (UK)</font>>]
+million [label=<<b>Modern<br/>English</b><br/><font color="red">million<br/>-illion</font>>]
+vigintiL -> vigintillion [style=dashed sametail=1 samehead=1]
+million -> vigintillion [samehead=1 weight=2]
+
+/* icosahedron, omitted: eicosapentaenoic acid */
+eikosiG [label=<<b>Greek</b><br/><font color="red">eikosi</font>>]
+eikosaedronG [label=<<font color="red">eikosaedron</font>>]
+icosahedron [label=<<b>Modern<br/>English</b><br/><font color="red">icosahedron</font>>] // add picture?
+sedIE [label=<<b>Indo-<br/>European</b><br/><font color="red">sed-</font><br/><font point-size="12">to sit</font>> shape=box style="dashed,rounded" URL="sed-sit.svg"]
+hedraG [label=<<b>Greek</b><br/><font color="red">hedrā</font><br/><font point-size="12">seat, face of a<br/>geometric solid</font>>]
+edronG [label=<<font color="red">-edron</font><br/><font point-size="12">-sided</font>>]
+wikmti -> eikosiG [sametail=1]
+sedIE -> hedraG -> edronG
+{ eikosiG edronG } -> eikosaedronG [samehead=1]
+eikosaedronG -> icosahedron [style=dashed]
+
+/* pachisi, Parcheesi */
+vimsatihSk [label=<<b>Sanskrit</b><br/><font color="red">viṁśatiḥ</font><br/><font point-size="12">twenty</font>>]
+pacisH [label=<<b>Hindi</b><br/><font color="red">pacīs</font><br/><font point-size="12">twenty-five</font>>]
+pacisiH [label=<<font color="red">pacīsī</font><br/><font point-size="12">(a game)</font>>]
+pachisi [label=<<b>Modern<br/>English</b><br/><font color="red">pachisi<br/>Parcheesi</font>>]
+penkweIE [label=<<b>Indo-<br/>European</b><br/><font color="red">penkʷe</font><br/><font point-size="12">five</font>> shape=box style="dashed,rounded" URL="penkwe-five.svg"]
+pancaII [label=<<b>Indo-Iranian</b><br/><font color="red">panca</font>>]
+pancaSk [label=<<b>Sanskrit</b><br/><font color="red">pañca</font>>]
+wikmti -> vimsatihSk [sametail=1]
+vimsatihSk -> pacisH [samehead=1]
+penkweIE -> pancaII -> pancaSk
+pancaSk -> pacisH [samehead=1]
+pacisH -> pacisiH
+pacisiH -> pachisi [style=dashed]
+
+{ rank=sink vicenary vigesimal vicennial vigintillion icosahedron pachisi }
+{ rank=same wikmti penkweIE sedIE }
+{ rank=same pancaSk vimsatihSk eikosiG edronG }
+}

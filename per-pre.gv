@@ -1,0 +1,121 @@
+strict digraph {
+node [shape=none]
+per [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*per </font><font point-size="16">forward, through</font>> shape=box style="dashed,rounded" URL="per-list.svg" tooltip="Indo-European \"*per\" forward, through"]
+pre [label=<<font color="red">pr̥ə-</font>>]
+per -> pre -> { premo preisto prewo prea pres proti }
+premo [label=<<font color="red">pr̥ə-mo-</font>>]
+preisto [label=<<font color="red">pr̥ə-isto-</font>>]
+prewo [label=<<font color="red">pr̥ə-wo-<br/>prōwo-</font>>]
+prea [label=<<font color="red">pr̥əā̆</font>>]
+pres [label=<<font color="red">pres-</font>>]
+{ pres gwa } -> presgwu
+gwa [label=<<font color="red">gʷ-u-</font><br/><font point-size="12">going</font>> shape=box style="dashed,rounded" URL="gwa-go.svg"]
+presgwu [label=<<font color="red">pres-gʷu</font>>]
+proti [label=<<font color="red">proti</font>>]
+/* prandial:
+{ premo ed } -> premedyo -> pramdium
+ed [label=<<font color="red">-(e)d-</font><br/><font point-size="12">to eat</font>> shape=box style="dashed,rounded" URL="ed-eat.svg"]
+premedyo [label=<<font color="red">pr̥əm-(e)d-yo-</font>>]
+pramadium [label=<<font color="red">pr̥ām-d-ium</font>>]
+*/
+prewo -> { prowarya prowato }
+prowarya [label=<<font color="red">prōw-arya-</font>>]
+prowato [label=<<font color="red">prōw-ato-</font>>]
+/* omitted: prandial (with ed-), arpent */
+/* former */
+premo -> frumaGm -> formaOE -> formeME -> formerME -> former
+frumaGm [label=<<b>Germanic</b><br/><font color="red">fruma-<br/>furma-</font>>]
+formaOE [label=<<b>Old English</b><br/><font color="red">forma</font><br/><font point-size="12">first</font>>]
+formeME [label=<<b>Middle<br/>English</b><br/><font color="red">forme</font>>]
+formerME [label=<<font color="red">former</font><br/><font point-size="12">(comparative)</font>>]
+former [label=<<b>Modern<br/>English</b><br/><font color="red">former</font>>]
+/* foremost */
+premo -> frumistaGm -> formestOE -> formestME -> foremost
+frumistaGm [label=<<b>Germanic</b><br/><font color="red">frumista-<br/>furmista-</font>>]
+formestOE [label=<<b>Old English</b><br/><font color="red">formest</font>>]
+formestME [label=<<b>Middle<br/>English</b><br/><font color="red">formest</font>>]
+foremost [label=<<b>Modern<br/>English</b><br/><font color="red">foremost</font>>]
+/* first */
+preisto -> furistaGm -> fyrstOE -> firstME -> first
+furistaGm [label=<<b>Germanic</b><br/><font color="red">furista-</font><br/><font point-size="12">foremost</font>>]
+fyrstOE [label=<<b>Old English</b><br/><font color="red">fyrst, fyrest</font><br/><font point-size="12">first</font>>]
+firstME [label=<<b>Middle<br/>English</b><br/><font color="red">first</font>>]
+first [label=<<b>Modern<br/>English</b><br/><font color="red">first</font>>]
+/* prow */
+prowarya -> proiraG
+proiraG -> proraL [style=dashed]
+proraL -> pruaI
+pruaI -> proueF -> proueME [style=dashed]
+proueME -> prow
+proiraG [label=<<b>Greek</b><br/><font color="red">prōira</font>>]
+proraL [label=<<b>Latin</b><br/><font color="red">prōra,<br/>prōda</font>>]
+pruaI [label=<<b>Italian</b><br/>dialectical<br/><font color="red">prua</font>>]
+proueF [label=<<b>French</b><br/><font color="red">proue</font>>] // Old French -> French
+proueME [label=<<b>Middle<br/>English</b><br/><font color="red">proue</font>>]
+prow [label=<<b>Modern<br/>English</b><br/><font color="red">prow</font>>]
+/* proto- */
+prowato -> protosG -> proteiosG
+protosG [label=<<b>Greek</b><br/><font color="red">prōtos,<br/>prōto-</font><br/><font point-size="12">first</font>>]
+protosG -> proton [style=dashed]
+proton [label=<<b>Modern<br/>English</b><br/><font color="red">proto-<br/>proton</font>>] // proto- list
+proteiosG [label=<<font color="red">prōteios</font><br/><font point-size="12">of the first quality</font>>]
+proteiosG -> proteineF -> protein [style=dashed]
+proteineF [label=<<b>French</b><br/><font color="red">protéine</font>>]
+protein [label=<<b>Modern<br/>English</b><br/><font color="red">protein</font>>]/* fore-: add list */
+prea -> furaGm -> foreOE -> foreME -> fore
+furaGm [label=<<b>Germanic</b><br/><font color="red">fura</font><br/><font point-size="12">before</font>>]
+foreOE [label=<<b>Old English</b><br/><font color="red">fore<br/>fore-</font><br/><font point-size="12">before, in front</font>>]
+foreME [label=<<b>Middle<br/>English</b><br/><font color="red">fore<br/>fore-</font>>]
+fore [label=<<b>Modern<br/>English</b><br/><font color="red">fore<br/>fore-</font>>]
+/* before */
+{ biGm furaGm } -> biforanaGm -> beforanOE -> biforeME -> before
+biGm [label=<<font color="red">bi-</font><br/><font point-size="12">at, by</font>>] // see ambhi
+biforanaGm [label=<<font color="red">bi-fora-na</font>>]
+beforanOE [label=<<b>Old English</b><br/><font color="red">beforan</font>>]
+biforeME [label=<<b>Middle<br/>English</b><br/><font color="red">bifore</font>>]
+before [label=<<b>Modern<br/>English</b><br/><font color="red">before</font>>]
+
+/* para-: add list, palfrey */
+prea -> paraG -> { paraE paraveredus } [style=dashed]
+paraE [label=<<b>Modern<br/>English</b><br/><font color="red">para-</font>>]
+paraG [label=<<b>Greek</b><br/><font color="red">para</font><br/><font point-size="12">beside, beyond, extra</font>>]
+paraveredus [label=<<b>Latin</b><br/><font color="red">paraverēdus</font><br/><font point-size="12">extra horse</font>>]
+paraveredus -> palafredus -> palefreiOF
+palefreiOF -> palfreyME [style=dashed]
+palfreyME -> palfrey
+palafredus [label=<<font color="red">palafrēdus</font>>]
+palefreiOF [label=<<b>Old French</b><br/><font color="red">palefrei</font>>]
+palfreyME [label=<<b>Middle<br/>English</b><br/><font color="red">palfrey</font>>]
+palfrey [label=<<b>Modern<br/>English</b><br/><font color="red">palfrey</font>>]
+/* presbyter */
+presgwu -> presbusG -> presbuterosG
+presbuterosG -> presbyterL -> presbyter [style=dashed]
+presbusG [label=<<b>Greek</b><br/><font color="red">presbus</font><br/><font point-size="12">old man, elder</font>>]
+presbuterosG [label=<<font color="red">presbuteros</font><br/><font point-size="12">(comparative)</font>>]
+presbyterL [label=<<b>Latin</b><br/><font color="red">presbyter</font>>]
+presbyter [label=<<b>Modern<br/>English</b><br/><font color="red">presbyter<br/>Presbyterian</font>>]
+/* priest: or < Gm prevost < L praepositus */
+presbyterL -> presterL
+presterL -> preostOE [style=dashed label="?"]
+preostOE -> preostME -> priest
+presterL [label=<<font color="red">prester</font>>]
+preostOE [label=<<b>Old English</b><br/><font color="red">prēost</font>>]
+preostME [label=<<b>Middle<br/>English</b><br/><font color="red">preost</font>>]
+priest [label=<<b>Modern<br/>English</b><br/><font color="red">priest</font>>]
+/* presbyopia */
+{ presbusG ops } -> presbyopiaNL -> presbyopia [style=dashed]
+ops [label=<<font color="red">ōps, ōp-</font><br/><font point-size="12">eye</font>> shape=box style="dashed,rounded" URL="okw-eye.svg"]
+presbyopiaNL [label=<<b>Latin</b><br/><font color="red">presbyopia</font><br/><font point-size="12">nearsightedness</font>>]
+presbyopia [label=<<b>Modern<br/>English</b><br/><font color="red">presbyopia</font>>]
+/* pros- */
+proti -> prosG
+prosG -> pros
+prosG [label=<<b>Greek</b><br/><font color="red">pros</font><br/><font point-size="12">near, at</font><br/><font color="red">pros-</font>>]
+pros [label=<<b>Modern<br/>English</b><br/><font color="red">pros-</font>>]
+
+{ rank=same former foremost first proton protein prow fore before paraE palfrey presbyter priest presbyopia pros }
+{ rank=same frumaGm frumistaGm furistaGm furaGm }
+{ rank=same proiraG protosG paraG presbusG prosG }
+{ rank=same gwa ops }
+{ rank=same premo preisto prowarya prowato prea presgwu proti }
+}

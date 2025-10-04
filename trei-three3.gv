@@ -1,0 +1,190 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+treiIE [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*trei, *treyes</font><br/><font point-size="16">three</font>> shape=box style="dashed,rounded" URL="trei-three0.svg" tooltip="Indo-European \"*trei\" three"]
+
+trito [label=<<font color="red">*tri-tyo-, *tri-to-</font><br/><font point-size="12">third</font>>]
+tripl [label=<<font color="red">*tri-pl-, *tri-plek-</font><br/><font point-size="12">threefold</font>>]
+tristi [label=<<font color="red">*tri-st-i-</font><br/><font point-size="12">third person<br/>standing by</font>>]
+// LINK TO STA-STAND
+treiIE -> { trito tripl tristi }
+
+/* omitted: riding (administrative division), tercel/tiercel (male hawk), tertian (every other day), sesterce (ancient coin) */
+/* triploblastic (biol) */
+
+/* third */
+thridjaGm [label=<<b>Germanic</b><br/><font color="red">*thridja-</font>>]
+thriddaOE [label=<<b>Old English</b><br/><font color="red">thridda, thirdda</font>>]
+therddeME [label=<<b>Middle<br/>English</b><br/><font color="red">thridde, therdde</font>>]
+third [label=<<b>Modern<br/>English</b><br/><font color="red">third</font>>]
+trito -> thridjaGm [sametail=1]
+thridjaGm -> thriddaOE -> therddeME -> third
+
+tertiusL [label=<<b>Latin</b><br/><font color="red">tertius</font><br/><font point-size="12">third</font>>]
+trito -> tertiusL [sametail=1]
+
+/* tercet */
+terzoI [label=<<b>Italian</b><br/><font color="red">terzo,<br/>terzetto</font>>]
+tercetF [label=<<b>French</b><br/><font color="red">tercet</font>>]
+tercet [label=<<b>Modern<br/>English</b><br/><font color="red">tercet</font>>]
+tertiusL -> terzoI [sametail=1]
+terzoI -> tercetF -> tercet [style=dotted]
+
+/* tertiary */
+tertiariusL [label=<<font color="red">tertiārius</font>>]
+tertiary [label=<<b>Modern<br/>English</b><br/><font color="red">tertiary</font>>]
+tertiusL -> tertiariusL [sametail=1]
+tertiariusL -> tertiary [style=dotted]
+
+/* tierce */
+tiersOF [label=<<b>Old French</b><br/><font color="red">tiers, tierce</font>>] // latter is fem
+tierceME [label=<<b>Middle<br/>English</b><br/><font color="red">tierce</font>>]
+tierce [label=<<b>Modern<br/>English</b><br/><font color="red">tierce</font>>]
+tertiusL -> tiersOF [sametail=1]
+tiersOF -> tierceME [style=dotted]
+tierceME -> tierce
+
+/* tritium */
+tritosG [label=<<b>Greek</b><br/><font color="red">tritos</font>>]
+tritium [label=<<b>Modern<br/>English</b><br/><font color="red">tritium</font><br/><font point-size="12">hydrogen isotope</font>>]
+trito -> tritosG [sametail=1]
+tritosG -> tritium [style=dotted]
+
+/* triplex, triplicate, triplicity */
+triplexL [label=<<b>Latin</b><br/><font color="red">triplex</font>>]
+triplex [label=<<b>Modern<br/>English</b><br/><font color="red">triplex</font>>]
+tripl -> triplexL [sametail=1]
+triplexL -> triplex [style=dotted sametail=1]
+triplicareL [label=<<font color="red">triplicāre</font><br/><font point-size="12">to triple</font><br/><font color="red">triplicātus</font>>]
+triplicateME [label=<<b>Middle<br/>English</b><br/><font color="red">triplicate</font><br/><font point-size="12">triple</font>>]
+triplicate [label=<<b>Modern<br/>English</b><br/><font color="red">triplicate</font>>]
+triplexL -> triplicareL [sametail=1]
+triplicareL -> triplicateME [style=dotted]
+triplicateME -> triplicate
+triplicitasL [label=<<font color="red">triplicitās</font><br/><font point-size="12">triplicity</font>>]
+triplicityME [label=<<b>Middle<br/>English</b><br/><font color="red">triplicity</font><br/><font point-size="12">three signs of<br/>the zodiac</font>>]
+triplicity [label=<<b>Modern<br/>English</b><br/><font color="red">triplicity</font>>]
+triplexL -> triplicitasL [sametail=1]
+triplicitasL -> triplicityME [style=dotted]
+triplicityME -> triplicity
+
+/* testis */
+testisL [label=<<b>Latin</b><br/><font color="red">testis</font><br/><font point-size="12">witness, testis</font>>]
+testes [label=<<b>Modern<br/>English</b><br/><font color="red">testis, testes </font>(pl.)>]
+tristi -> testisL 
+testisL -> testes [sametail=1 style=dotted]
+
+/* testicle */
+testiculusL [label=<<font color="red">testiculus</font><br/><font point-size="12">(diminutive)</font>>]
+testiculeME [label=<<b>Middle<br/>English</b><br/><font color="red">testicule</font>>]
+testicle [label=<<b>Modern<br/>English</b><br/><font color="red">testicle</font>>]
+testisL -> testiculusL [sametail=1]
+testiculusL -> testiculeME [style=dotted]
+testiculeME -> testicle
+
+/* testify */
+testificariL [label=<<font color="red">testificārī</font><br/><font point-size="12">to testify</font>>]
+testifienME [label=<<b>Middle<br/>English</b><br/><font color="red">testifien</font>>]
+testify [label=<<b>Modern<br/>English</b><br/><font color="red">testify</font>>]
+testisL -> testificariL [sametail=1]
+testificariL -> testifienME [style=dotted]
+testifienME -> testify
+
+/* testimony, testimonial */
+testimoniumL [label=<<font color="red">testimōnium</font><br/><font point-size="12">testimony</font>>]
+testimonieOF [label=<<b>Old French</b><br/><font color="red">testimonie</font>>]
+testimonyME [label=<<b>Middle<br/>English</b><br/><font color="red">testimony</font>>]
+testimony [label=<<b>Modern<br/>English</b><br/><font color="red">testimony</font>>]
+testisL -> testimoniumL [sametail=1]
+testimoniumL -> testimonieOF [sametail=1]
+testimonieOF -> testimonyME [style=dotted]
+testimonyME -> testimony
+testimonialisL [label=<<font color="red">testimōniālis</font><br/><font point-size="12">of evidence</font>>]
+testimonialOF [label=<<b>Old French</b><br/><font color="red">testimonial</font>>]
+testimonialME [label=<<b>Middle<br/>English</b><br/><font color="red">testimonial</font>>]
+testimonial [label=<<b>Modern<br/>English</b><br/><font color="red">testimonial</font>>]
+testimoniumL -> testimonialisL [sametail=1]
+testimonialisL -> testimonialOF
+testimonialOF -> testimonialME [style=dotted]
+testimonialME -> testimonial
+
+/* testament (omitted: testator, testatrix, testate) */
+testariL [label=<<font color="red">testārī</font><br/><font point-size="12">to testify,<br/>to make a will</font>>]
+testamentumL [label=<<font color="red">testāmentum</font><br/><font point-size="12">a will</font>>]
+testamentME [label=<<b>Middle<br/>English</b><br/><font color="red">testament</font>>]
+testament [label=<<b>Modern<br/>English</b><br/><font color="red">testament</font>>]
+testisL -> testariL [sametail=1]
+testariL -> testamentumL [sametail=1]
+testamentumL -> testamentME [style=dotted]
+testamentME -> testament
+
+/* attest */
+adL [label=<<b>Latin</b><br/><font color="red">ad-</font><br/><font point-size="12">toward, at</font>>]
+attestariL [label=<<font color="red">attestārī</font>>]
+attest [label=<<b>Modern<br/>English</b><br/><font color="red">attest</font>>]
+adL -> attestariL [samehead=1]
+testariL -> attestariL [sametail=1 samehead=1]
+attestariL -> attest [style=dotted]
+
+/* contest */
+komIE [label=<<b>Indo-<br/>European</b><br/><font color="red">kom</font><br/><font point-size="12">beside, near, with</font>> shape=box style="dashed,rounded" URL="kom-with.svg"]
+comL [label=<<b>Latin</b><br/><font color="red">com-</font><br/><font point-size="12">with, together</font>>]
+komIE -> comL
+contestariL [label=<<font color="red">contestārī</font>>]
+contesterOF [label=<<b>Old French</b><br/><font color="red">contester</font><br/><font point-size="12">to call to witness</font>>]
+contesterF [label=<<b>French</b><br/><font color="red">contester</font><br/><font point-size="12">to dispute</font><br/><font color="red">conteste</font>>]
+contest [label=<<b>Modern<br/>English</b><br/><font color="red">contest</font>>]
+comL -> contestariL [samehead=1]
+testariL -> contestariL [sametail=1 samehead=1]
+contestariL -> contesterOF -> contesterF
+contesterF -> contest [style=dotted]
+
+/* detest */
+deL [label=<<b>Latin</b><br/><font color="red">de-</font><br/><font point-size="12">from, out of,<br/>reverse</font>>]
+detestariL [label=<<font color="red">detestārī</font><br/><font point-size="12">to curse</font>>]
+detesterF [label=<<b>French</b><br/><font color="red">destester</font>>]
+detest [label=<<b>Modern<br/>English</b><br/><font color="red">detest</font>>]
+deL -> detestariL [samehead=1]
+testariL -> detestariL [sametail=1 samehead=1]
+detestariL -> detesterF
+detesterF -> detest [style=dotted]
+
+/* obtest */
+epiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">epi, opi</font><br/><font point-size="12">near, at,<br/>against</font>> shape=box style="dashed,rounded" URL="epi-near.svg"]
+obL [label=<<b>Latin</b><br/><font color="red">ob-</font><br/><font point-size="12">toward,<br/>against</font>>]
+epiIE -> obL
+obtestariL [label=<<font color="red">obtestārī</font><br/><font point-size="12">to entreat</font>>]
+obtest [label=<<b>Modern<br/>English</b><br/><font color="red">obtest</font>>]
+obL -> obtestariL [samehead=1]
+testariL -> obtestariL [sametail=1 samehead=1]
+obtestariL -> obtest [style=dotted]
+
+/* protest */
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">per</font><br/><font point-size="12">(various prepositions)</font>> shape=box style="dashed,rounded" URL="per-pro2.svg"]
+proL [label=<<b>Latin</b><br/><font color="red">prō, prō-</font><br/><font point-size="12">before, for,<br/>in front of</font>>]
+perIE -> proL
+protestariL [label=<<font color="red">prōtestārī</font>>]
+protesterOF [label=<<b>Old French</b><br/><font color="red">protester</font>>]
+protestenME [label=<<b>Middle<br/>English</b><br/><font color="red">protesten</font>>]
+protest [label=<<b>Modern<br/>English</b><br/><font color="red">protest</font>>]
+proL -> protestariL [samehead=1]
+testariL -> protestariL [sametail=1 samehead=1]
+protestariL -> protesterOF [sametail=1]
+protesterOF -> protestenME [style=dotted]
+protestenME -> protest
+
+/* Protestant */
+protestansL [label=<<font color="red">prōtestāns,<br/>prōtestant-</font><br/><font point-size="12">protesting</font>>]
+protestantGr [label=<<b>German</b><br/><font color="red">Protestant</font>>]
+protestantF [label=<<b>French</b><br/><font color="red">Protestant</font>>]
+protestant [label=<<b>Modern<br/>English</b><br/><font color="red">Protestant</font>>]
+protestariL -> protestansL [sametail=1]
+protestansL -> protestantGr [style=dotted sametail=1]
+protestantGr -> protestantF -> protestant [style=dotted]
+
+
+{ rank=sink third tercet tertiary tierce tritium triplex triplicate triplicity testes testify testimony testimonial testicle testament attest contest obtest detest protest protestant }
+{ rank=source }
+{ rank=same }
+}

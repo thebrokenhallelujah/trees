@@ -1,0 +1,115 @@
+strict digraph {
+node [shape=none]
+per [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*per </font><font point-size="16">forward, through</font>> shape=box style="dashed,rounded" URL="per-list.svg" tooltip="Indo-European \"*per\" forward, through"]
+per -> peri
+peri [label=<<font color="red">peri</font>>]
+
+/* omitted: perestroika (Slavic) */
+ferGm [label=<<b>Germanic</b><br/><font color="red">fer-, far-</font>>]
+/* put this group in its own file?:
+{ ferGm ghend } -> fergetanGm // check this: Germanic or Latin?
+ghend [label=<<font color="red">ghend-</font><br/><font point-size="12">to seize, take</font>> shape=box style="dashed,rounded" URL="ghend-take.svg"]
+*/
+
+/* frump */
+per -> ferGm -> verMD -> verrompelen
+verrompelen -> frumpleME [style=dashed]
+frumpleME -> frump [label="?"]
+verMD [label=<<b>Middle Dutch</b><br/><font color="red">ver-</font><br/><font point-size="12">completely</font>>]
+verrompelen [label=<<font color="red">verrompelen</font><br/><font point-size="12">to wrinkle</font>>]
+frumpleME [label=<<b>Middle English</b><br/><font color="red">frumple</font>>]
+frump [label=<<b>Modern<br/>English</b><br/><font color="red">frump</font>>]
+/* omitted: turnverein, veer */
+/* far */
+perero [label=<<font color="red">per-ero-</font><br/><font point-size="12">farther away</font>>]
+per -> perero -> ferraGm -> feorOE -> farME -> far
+ferraGm [label=<<b>Germanic</b><br/><font color="red">fer(e)ra</font>>]
+feorOE [label=<<b>Old English</b><br/><font color="red">feor(r)</font>>]
+farME [label=<<b>Middle English</b><br/><font color="red">far</font>>]
+far [label=<<b>Modern<br/>English</b><br/><font color="red">far</font>>]
+/* far, further -> farther */
+/* omitted: parget, parterre, parvenu */
+/* per */
+perL [label=<<b>Latin</b><br/><font color="red">per, per-</font><br/><font point-size="12">through</font>>]
+perE [label=<<b>Modern<br/>English</b><br/><font color="red">per, per-</font>>]
+per -> perL -> perE [style=dashed]
+/* paramour, paramount */
+perL -> parAN -> { paramourAN paramontAN }
+paramourAN -> paramourME [style=dashed]
+paramourME -> paramour
+parAN [label=<<b>Anglo-Norman</b><br/><font color="red">par</font>>]
+paramourAN [label=<<font color="red">par amour</font><br/><font point-size="12">by way of love,<br/>passionately</font>>]
+paramourME [label=<<b>Middle English</b><br/><font color="red">paramour</font>>]
+paramour [label=<<b>Modern<br/>English</b><br/><font color="red">paramour</font>>]
+paramontAN [label=<<font color="red">paramount</font><br/><font point-size="12">above</font>>]
+paramontAN -> paramount [style=dashed]
+paramount [label=<<b>Modern<br/>English</b><br/><font color="red">paramount</font>>]
+/* peri- */
+peri -> periG
+periG -> periE [style=dashed]
+periG [label=<<b>Greek</b><br/><font color="red">peri, peri-</font><br/><font point-size="12">around, near, beyond</font>>]
+periE [label=<<b>Modern<br/>English</b><br/><font color="red">peri-</font>>]
+
+/* Indo-Iranian */
+pariII [label=<<b>Indo-Iranian</b><br/><font color="red">pari-</font><br/><font point-size="12">around</font>>]
+peri -> pariII -> { pariS pairiAv pariOP parivaraka }
+pariS [label=<<b>Sanskrit</b><br/><font color="red">pari-</font>>]
+pairiAv [label=<<b>Avestan</b><br/><font color="red">pairi-</font>>]
+pariOP [label=<<b>Old Persian</b><br/><font color="red">pari</font><br/><font point-size="12">over</font>>]
+parivaraka [label=<<b>Old Iranian</b><br/><font color="red">pari-vāraka-</font><br/><font point-size="12">protective</font>>] // varaka=covering
+/* palanquin */
+pariS -> paryankah -> pallanko
+pallanko -> pelangki -> palanquimP -> palanquin [style=dashed]
+paryankah [label=<<font color="red">paryaṅkaḥ<br/>palyaṅkaḥ</font><br/><font point-size="12">couch, bed</font>>]
+pallanko [label=<<b>Pali</b><br/><font color="red">pallaṅko</font>>]
+pelangki [label=<<font color="green"><b>Javanese</b></font><br/><font color="red">pelangki</font>>]
+palanquimP  [label=<<b>Portuguese</b><br/><font color="red">palanquim</font>>]
+palanquin [label=<<b>Modern<br/>English</b><br/><font color="red">palanquin</font>>]
+/* paradise */
+{ pairiAv daeza } -> pairidaeza
+pairidaeza -> paradeisosG -> paradisusL [style=dashed]
+paradisusL -> paradisOF
+paradisOF -> paradisME [style=dashed]
+paradisME -> paradise
+daeza [label=<<font color="red">daēza</font><br/><font point-size="12">wall</font>> shape=box style="dashed,rounded" URL="dheigh-build.svg"]
+pairidaeza [label=<<font color="red">pairidaēza</font><br/><font point-size="12">park</font>>]
+paradeisosG [label=<<b>Greek</b><br/><font color="red">paradeisos</font><br/><font point-size="12">garden, park, paradise</font>>]
+paradisusL [label=<<b>Latin</b><br/><font color="red">paradīsus</font>>]
+paradisOF [label=<<b>Old French</b><br/><font color="red">paradis</font>>]
+paradisME [label=<<b>Middle English</b><br/><font color="red">paradis</font>>]
+paradise [label=<<b>Modern<br/>English</b><br/><font color="red">paradise</font>>]
+/* purdah */
+{ pariOP daOP } -> paridakaOP -> pardakMP -> pardahP
+pardahP -> pardahU -> purdah [style=dashed]
+daOP [label=<<font color="red">dā-</font><br/><font point-size="12">to place</font>>] // see dhe (need to include IE entry to link)
+//paridaOP [label=<<font color="red">pari-dā-</font><br/><font point-size="12">to place over</font>>]
+paridakaOP [label=<<font color="red">paridaka-</font><br/><font point-size="12">veil</font>>] // spoken only
+pardakMP [label=<<b>Middle Persian</b><br/><font color="red">pardak</font>>]
+pardahP [label=<<b>Persian</b><br/><font color="red">pardah</font>>]
+pardahU [label=<<b>Urdu</b><br/><font color="red">pardah</font>>]
+purdah [label=<<b>Modern<br/>English</b><br/><font color="red">purdah</font>>]
+/* bard (horse armor) */
+// pardahP -> bardaaA -> bardaOI -> bardaOF -> bardeME [style=dashed] // want these lines shorter
+pardahP -> bardaaA -> bardeME [style=dashed]
+bardeME -> bard
+bardaaA [label=<<font color="green"><b>Arabic</b></font><br/><font color="red">barda'a</font><br/><font point-size="12">packsaddle</font>>] // does the curve of the ' matter? (=rough breathing)
+// bardaOI [label=<<b>Old Italian</b><br/><font color="red">barda</font>>]
+// bardaOF [label=<<b>Old French</b><br/><font color="red">barda</font>>]
+bardeME [label=<<b>Middle English</b><br/><font color="red">barde</font>>]
+bard [label=<<b>Modern<br/>English</b><br/><font color="red">bard</font><br/><font point-size="12">horse armor</font>>]
+/* barbican */
+parivaraka -> barbarP -> barbarkhanP
+barbarkhanP -> barbacanaL [style=dashed]
+barbacanaL -> barbacaneOF
+barbacaneOF -> barbicanME [style=dashed]
+barbicanME -> barbican
+barbarP [label=<<b>Persian</b><br/><font color="red">barbār</font><br/><font point-size="12">buard</font>>]
+barbarkhanP [label=<<font color="red">barbārkhān</font><br/><font point-size="12">guard house</font>>]
+/* khan=house, see khan2 (caravansary) */
+barbacanaL [label=<<b>Latin</b><br/><font color="red">barbacana</font>>]
+barbacaneOF [label=<<b>Old French</b><br/><font color="red">barbacane</font>>]
+barbicanME [label=<<b>Middle English</b><br/><font color="red">barbican</font>>]
+barbican [label=<<b>Modern<br/>English</b><br/><font color="red">barbican</font>>]
+{ rank=same frump far perE paramount paramour periE palanquin paradise bard purdah barbican }
+{ rank=same periG ferGm ferraGm perL }
+}

@@ -1,0 +1,156 @@
+strict digraph {
+node [shape=none]
+per [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*per </font><font point-size="16">forward, through</font>> shape=box style="dashed,rounded" URL="per-list.svg" tooltip="Indo-European \"*per\" forward, through"]
+
+prai [label=<<font color="red">prai-, prei-</font>>]
+per -> prai -> { praeL praighesto preiyos preiwo }
+praighesto [label=<<font color="red">prai-ghes-to-</font>>]
+preiyos [label=<<font color="red">prei-yos-</font>>]
+preiwo [label=<<font color="red">prei-wo-</font>>]
+ghes -> praighesto
+ghes [label=<<b>Indo-<br/>European</b><br/><font color="red">ghes</font><br/><font point-size="12">hand</font>> shape=box style="dashed,rounded" URL="ghes-hand.svg"]
+
+// pre-, omitted: preterit find list of L prae-
+praeL -> preOF
+preOF -> preME [style=dashed]
+preME -> preE
+praeL [label=<<b>Latin</b><br/><font color="red">prae, prae-</font><br/><font point-size="12">before</font>>]
+preOF [label=<<b>Old<br/>French</b><br/><font color="red">pre-</font>>]
+preME [label=<<b>Middle<br/>English</b><br/><font color="red">pre-</font>>]
+preE [label=<<b>Modern<br/>English</b><br/><font color="red">pre-</font>>]
+/* premium, premise, prelude, preliminary, prejudice, prehensile, etc */
+
+// deik: dicare, digitus
+deik -> { dicare digitus }
+deik [label=<<b>Indo-<br/>European</b><br/><font color="red">deik-</font><br/><font point-size="12">to show</font>> shape=box style="dashed,rounded" URL="deik-show.svg"]
+dicare [label=<<b>Latin</b><br/><font color="red">dicāre</font><br/><font point-size="12">to proclaim</font>>]
+digitus [label=<<b>Latin</b><br/><font color="red">digitus</font><br/><font point-size="12">finger, toe</font>>]
+
+// preach
+{ praeL dicare } -> praedicareL -> preechierOF
+preechierOF -> prechenME [style=dashed]
+prechenME -> preach
+praedicareL [label=<<font color="red">praedicāre</font>>]
+preechierOF [label=<<b>Old French</b><br/><font color="red">preechier</font>>]
+prechenME [label=<<b>Middle<br/>English</b><br/><font color="red">prechen</font>>]
+preach [label=<<b>Modern<br/>English</b><br/><font color="red">preach</font>>]
+
+// presto
+praighesto -> praestoL [label="?"]
+praestoL -> praestusL -> prestoI
+prestoI -> { presto presteF } [style=dashed]
+praestoL [label=<<b>Latin</b><br/><font color="red">praestō</font><br/><font point-size="12">at hand, present</font>>]
+praestusL [label=<<font color="red">praestus</font><br/><font point-size="12">quick</font>>]
+prestoI [label=<<b>Italian</b><br/><font color="red">presto</font>>]
+presto [label=<<b>Modern<br/>English</b><br/><font color="red">presto</font>>]
+
+// prestidigitation
+{ presteF digitus } -> prestidigitateur -> prestidigitationF
+prestidigitationF -> prestidigitation [style=dashed]
+presteF [label=<<b>French</b><br/><font color="red">preste</font><br/><font point-size="12">nimble</font>>]
+prestidigitateur [label=<<font color="red">prestidigitateur</font><br/><font point-size="12">conjurer</font>>]
+prestidigitationF [label=<<b>French</b><br/><font color="red">prestidigitation</font>>]
+prestidigitation [label=<<b>Modern<br/>English</b><br/><font color="red">prestidigitation</font>>]
+
+// press (conscript)
+praestoL -> praestareL -> presterOF -> pressOF
+pressOF -> pressME [style=dashed]
+pressME -> prestE -> press
+praestareL [label=<<font color="red">praestāre</font><br/><font point-size="12">to furnish</font>>]
+presterOF [label=<<b>Old<br/>French</b><br/><font color="red">prester</font><br/><font point-size="12">to lend</font>>]
+pressOF [label=<<font color="red">press</font><br/><font point-size="12">enlistment<br/>money, loan</font>>]
+pressME [label=<<b>Middle<br/>English</b><br/><font color="red">press</font>>]
+prestE [label=<<b>Modern<br/>English</b><br/>(obsolete)<br/><font color="red">prest</font><br/><font point-size="12">to hire for<br/>military service</font>>]
+press [label=<<font color="red">press</font><br/><font point-size="12">to conscript,<br/>take by force</font>>]
+
+// prior, priority, omitted: prior/ess 
+preiyos -> priorL -> prioritasL -> prioriteOF
+priorL -> prior [style=dashed]
+prioriteOF -> prioriteME [style=dashed]
+prioriteME -> priority
+priorL [label=<<b>Latin</b><br/><font color="red">prior</font><br/><font point-size="12">former, higher,<br/>superior</font>>]
+prior [label=<<b>Modern<br/>English</b><br/><font color="red">prior</font><br/><font point-size="12">preceding</font>>]
+prioritasL [label=<<font color="red">priōritās</font>>] // Medieval
+
+prioriteOF [label=<<b>Old French</b><br/><font color="red">priorite</font>>]
+prioriteME [label=<<b>Middle English</b><br/><font color="red">priorite</font>>]
+priority [label=<<b>Modern<br/>English</b><br/><font color="red">priority</font>>]
+
+// private
+preiwo -> privusL -> privareL -> privatusL
+privatusL -> privatME [style=dashed]
+privatME -> private
+privusL [label=<<b>Latin</b><br/><font color="red">prīvus</font><br/><font point-size="12">single, alone</font>>]
+privareL [label=<<font color="red">prīvāre</font><br/><font point-size="12">to rob, deprive</font>>]
+privatusL [label=<<font color="red">prīvātus</font><br/><font point-size="12">not in public</font>>]
+privatME [label=<<b>Middle<br/>English</b><br/><font color="red">privat</font>>]
+private [label=<<b>Modern<br/>English</b><br/><font color="red">private</font>>]
+
+// privation
+privatusL -> privatioL -> privationOF
+privationOF -> privacionME [style=dashed]
+privacionME -> privation
+privatioL [label=<<font color="red">prīvātiō,<br/>prīvātiōn-</font>>]
+privationOF [label=<<b>Old French</b><br/><font color="red">privation</font>>]
+privacionME [label=<<b>Middle<br/>English</b><br/><font color="red">privacion</font>>]
+privation [label=<<b>Modern<br/>English</b><br/><font color="red">privation</font>>]
+
+// privy (privity?)
+privatusL -> priveOF
+priveOF -> priveME [style=dashed]
+priveME -> privy
+priveOF [label=<<b>Old French</b><br/><font color="red">prive</font>>]
+priveME [label=<<b>Middle<br/>English</b><br/><font color="red">prive</font>>]
+privy [label=<<b>Modern<br/>English</b><br/><font color="red">privy</font>>]
+
+// IE leg-
+leg -> lexL
+leg [label=<<b>Indo-<br/>European</b><br/><font color="red">leg-</font><br/><font point-size="12">to collect, to speak</font>> shape=box style="dashed,rounded" URL="leg-speak2.svg"]
+lexL [label=<<b>Latin</b><br/><font color="red">lēx, lēg-</font><br/><font point-size="12">law</font>>]
+
+// privilege
+{ privusL lexL } -> privilegiumL -> privilegeOF
+privilegeOF -> privilegeME [style=dashed]
+privilegeME -> privilege
+privilegiumL [label=<<font color="red">prīvilēgium</font><br/><font point-size="12">a law affecting one</font>>]
+privilegeOF [label=<<b>Old French</b><br/><font color="red">privilege</font>>]
+privilegeME [label=<<b>Middle<br/>English</b><br/><font color="red">privilege</font>>]
+privilege [label=<<b>Modern<br/>English</b><br/><font color="red">privilege</font>>]
+
+// deprive
+{ deL privareL } -> deprivareL -> depriverOF
+depriverOF -> deprivenME [style=dashed]
+deprivenME -> deprive
+deL [label=<<font color="red">dē-</font><br/><font point-size="12">from, out of</font>>] // possible root de-
+deprivareL [label=<<font color="red">dēprīvāre</font>>]
+depriverOF [label=<<b>Old French</b><br/><font color="red">depriver</font>>]
+deprivenME [label=<<b>Middle<br/>English</b><br/><font color="red">depriven</font>>]
+deprive [label=<<b>Modern<br/>English</b><br/><font color="red">deprive</font>>]
+
+// proper
+{ proL privusL } -> proprivoL -> propriusL -> propreOF
+propreOF -> propreME [style=dashed]
+propreME -> proper
+proL [label=<<b>Latin</b><br/><font color="red">prō-</font>> shape=box style="dashed,rounded" URL="per-pro2.svg"]
+proprivoL [label=<<font color="red">prō prīvō</font><br/><font point-size="12">in particular</font>>]
+propriusL [label=<<font color="red">proprius</font><br/><font point-size="12">one's own</font>>]
+propreOF [label=<<b>Old French</b><br/><font color="red">propre</font>>]
+propreME [label=<<b>Middle<br/>English</b><br/><font color="red">propre</font>>]
+proper [label=<<b>Modern<br/>English</b><br/><font color="red">proper</font>>]
+
+// property, propriety, omitted: proprietary, proprioceptor
+propriusL -> proprietasL -> proprieteOF
+proprieteOF -> { proprieteME propertyME } [style=dashed]
+propertyME -> property
+proprieteME -> propriety
+proprietasL [label=<<font color="red">proprietās</font><br/><font point-size="12">ownership</font>>]
+proprieteOF [label=<<b>Old French</b><br/><font color="red">propriete</font>>]
+propertyME [label=<<b>Middle<br/>English</b><br/><font color="red">property</font>>]
+property [label=<<b>Modern<br/>English</b><br/><font color="red">property</font>>]
+proprieteME [label=<<b>Middle English</b><br/><font color="red">propriete</font><br/><font point-size="12">ownership,<br/>particular character</font>>]
+propriety [label=<<b>Modern<br/>English</b><br/><font color="red">propriety</font>>]
+
+{ rank=same preE preach prior priority private privation privy privilege deprive proper property propriety prestidigitation presto press }
+{ rank=min deik ghes leg }
+{ rank=same praeL dicare praestoL privusL lexL digitus priorL proL }
+}

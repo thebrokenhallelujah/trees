@@ -1,0 +1,63 @@
+strict digraph {
+/* sources: AHD, roots */
+node [shape=none]
+
+/* omitted: vent (it's complicated), ventail, fan (questionable), wing (missing link) */
+
+weIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*wē-</font></td><td><font point-size="16">to blow</font></td></tr></table>> tooltip="Indo-European \"wē-\" to blow" shape=box peripheries=2 margin=.3]
+
+/* weather */
+wedhroIE [label=<<font color="red">*we-dhro-</font>>]
+wedramGm [label=<<b>Germanic</b><br/><font color="red">*wedram</font><br/><font point-size="12">weather</font>>]
+wederOE [label=<<b>Old English</b><br/><font color="red">weder</font>>]
+wethyrME [label=<<b>Middle<br/>English</b><br/><font color="red">wethyr</font>>]
+weather [label=<<b>Modern<br/>English</b><br/><font color="red">weather</font>>]
+weIE -> wedhroIE -> wedramGm -> wederOE -> wethyrME -> weather
+
+/* wind */
+wentoIE [label=<<font color="red">*wē-nt-o-</font><br/><font point-size="12">wind</font>>]
+windazGm [label=<<b>Germanic</b><br/><font color="red">*windaz</font>>]
+windOE [label=<<b>Old English</b><br/><font color="red">wind</font>>]
+windME [label=<<b>Middle<br/>English</b><br/><font color="red">wind</font>>]
+wind [label=<<b>Modern<br/>English</b><br/><font color="red">wind</font>>]
+weIE -> wentoIE -> windazGm -> windOE -> windME -> wind
+
+/* winnow */
+windwianOE [label=<<font color="red">windwian</font><br/><font point-size="12">to winnow</font>>]
+winwenME [label=<<b>Middle<br/>English</b><br/><font color="red">winwen</font>>]
+winnow [label=<<b>Modern<br/>English</b><br/><font color="red">winnow</font>>]
+windOE -> windwianOE -> winwenME -> winnow
+
+/* window */
+vindrON [label=<<b>Old Norse</b><br/><font color="red">vindr</font>>]
+okwIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*okʷ-</font><br/><font point-size="12">to see</font>> shape=box style="dashed,rounded" URL="okw-see.svg"]
+augaON [label=<<b>Old Norse</b><br/><font color="red">auga</font><br/><font point-size="12">eye</font>>]
+vindaugaON [label=<<font color="red">vindauga</font><br/><font point-size="12">window</font>>]
+windoweME [label=<<b>Middle<br/>English</b><br/><font color="red">windowe</font>>]
+window [label=<<b>Modern<br/>English</b><br/><font color="red">window</font>>]
+windazGm -> vindrON
+okwIE -> augaON
+{ vindrON augaON } -> vindaugaON
+vindaugaON -> windoweME [style=dotted]
+windoweME -> window
+
+/* ventilate */
+ventusL [label=<<b>Latin</b><br/><font color="red">ventus</font><br/><font point-size="12">wind</font><br/><font color="red">ventulus</font>>]
+ventilareL [label=<<font color="red">ventilāre<br/>ventilāt-</font><br/><font point-size="12">to fan</font>>]
+ventilatenME [label=<<b>Middle<br/>English</b><br/><font color="red">ventilaten</font><br/><font point-size="12">to blow away</font>>]
+ventilate [label=<<b>Modern<br/>English</b><br/><font color="red">ventilate</font>>]
+weIE -> ventusL -> ventilareL
+ventilareL -> ventilatenME [style=dotted]
+ventilatenME -> ventilate
+
+/* nirvana */
+vatiSk [label=<<b>Sanskrit</b><br/><font color="red">vāti, vā</font><br/><font point-size="12">it blows</font>>]
+nirvaSk [label=<<font color="red">nirvā-</font><br/><font point-size="12">to be extinguished</font>>]
+nirvanaSk [label=<<font color="red">nirvāna</font>>]
+nirvana [label=<<b>Modern<br/>English</b><br/><font color="red">nirvana</font>>]
+weIE -> vatiSk -> nirvaSk -> nirvanaSk
+nirvanaSk -> nirvana [style=dotted]
+
+{ rank=sink weather wind winnow window ventilate nirvana }
+{ rank=same wedramGm windazGm ventusL vatiSk }
+}

@@ -1,0 +1,127 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+ters [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ters-</font></td><td><font point-size="16">to dry</font></td></tr></table>> tooltip="Indo-European \"*ters-\" to dry" shape=box peripheries=2 margin=.3]
+
+// thirst
+trs [label=<<font color="red">*tr̥s-</font>>]
+thursGm [label=<<b>Germanic</b><br/><font color="red">*thurs-</font>>]
+thurstuGm [label=<<font color="red">*thurs-tu-</font>>]
+thurstOE [label=<<b>Old English</b><br/><font color="red">thurst</font><br/><font point-size="12">dryness, thirst</font>>]
+thirstME [label=<<b>Middle<br/>English</b><br/><font color="red">thirst</font>>]
+thirst [label=<<b>Modern<br/>English</b><br/><font color="red">thirst</font>>]
+ters -> trs -> thursGm -> thurstuGm -> thurstOE -> thirstME -> thirst
+
+// terrestrial
+tersa [label=<<font color="red">*ters-ā-</font>>]
+terraL [label=<<b>Latin</b><br/><font color="red">terra</font><br/><font point-size="12">"dry land," earth</font>>]
+terrestrisL [label=<<font color="red">terrestris</font>>]
+terrestrialME [label=<<b>Middle<br/>English</b><br/><font color="red">terrestrial</font>>]
+terrestrial [label=<<b>Modern<br/>English</b><br/><font color="red">terrestrial</font>>]
+ters -> tersa -> terraL -> terrestrisL
+terrestrisL -> terrestrialME [style=dashed]
+terrestrialME -> terrestrial
+
+// terrain
+terrenumL [label=<<font color="red">terrēnum</font>>]
+terranumL [label=<<font color="red">*terrānum</font>>]
+terrainOF [label=<<b>Old French</b><br/><font color="red">terrain</font>>]
+terrainF [label=<<b>French</b><br/><font color="red">terrain</font>>]
+terrain [label=<<b>Modern<br/>English</b><br/><font color="red">terrain</font>>]
+terraL -> terrenumL -> terranumL -> terrainOF -> terrainF
+terrainF -> terrain [style=dashed]
+
+// terrace
+terraceaL [label=<<font color="red">*terrācea</font><br/><font point-size="12">earthen</font>>]
+terrassaOP [label=<<b>Old Provençal</b><br/><font color="red">terrassa</font>>]
+terraceOF [label=<<b>Old French</b><br/><font color="red">terrace</font>>]
+terraceF [label=<<b>French</b><br/><font color="red">terrace</font>>]
+terrace [label=<<b>Modern<br/>English</b><br/><font color="red">terrace</font>>]
+terraL -> terraceaL -> terrassaOP
+terrassaOP -> terraceOF [style=dashed]
+terraceOF -> terraceF
+terraceF -> terrace [style=dashed]
+
+// terrier
+terrariusL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">terrārius</font><br/><font point-size="12">of the earth</font>>]
+terrierOF [label=<<b>Old French</b><br/><font color="red">(chien) terrier</font><br/><font point-size="12">ground (dog)</font>>]
+terrierME [label=<<b>Middle<br/>English</b><br/><font color="red">terrier</font>>]
+terrier [label=<<b>Modern<br/>English</b><br/><font color="red">terrier</font>>]
+terraL -> terrariusL -> terrierOF
+terrierOF -> terrierME [style=dashed]
+terrierME -> terrier
+
+// tureen
+terrinusL [label=<<font color="red">*terrīnus</font><br/><font point-size="12">earthen</font>>]
+terrineOF [label=<<b>Old French</b><br/><font color="red">terrin,<br/>terrine</font>>]
+terrineF [label=<<b>French</b><br/><font color="red">terrine</font>>]
+tureen [label=<<b>Modern<br/>English</b><br/><font color="red">tureen</font>>]
+terraL -> terrinusL -> terrineOF -> terrineF
+terrineF -> tureen [style=dashed]
+
+// inter
+enIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*en</font><br/><font point-size="12">in</font>> shape=box style="dashed,rounded" URL="en-in1.svg"]
+inL [label=<<b>Latin</b><br/><font color="red">in-</font>>]
+interrareL [label=<<b>Latin</b><br/><font color="red">interrāre</font>>]
+inter [label=<<b>Modern<br/>English</b><br/><font color="red">inter</font>>]
+enIE -> inL 
+{ inL terraL } -> interrareL
+interrareL -> inter [style=dashed]
+
+// mediterranian
+medhyoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*medhyo-</font><br/><font point-size="12">middle</font>> shape=box style="dashed,rounded" URL="medhyo-middle2.svg"]
+mediusL [label=<<b>Latin</b><br/><font color="red">medius</font>>]
+mediterraneusL [label=<<font color="red">mediterrāneus</font><br/><font point-size="12">inland</font>>]
+mediterranean [label=<<b>Modern<br/>English</b><br/><font color="red">mediterranean</font>>]
+medhyoIE -> mediusL
+{ mediusL terraL } -> mediterraneusL
+mediterraneusL -> mediterranean [style=dashed]
+
+// terreplein
+peleIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*pelə-</font><br/><font point-size="12">to fill</font>> shape=box style="dashed,rounded" URL="pele-fill1.svg"]
+pienoI [label=<<b>Italian</b><br/><font color="red">pieno</font><br/><font point-size="12">full</font>>]
+terraI [label=<<b>Italian</b><br/><font color="red">terra</font><br/><font point-size="12">earth</font>>]
+terrapienareI [label=<<font color="red">terrapienare</font><br/><font point-size="12">to fill with earth</font><br/><font color="red">terrapieno</font>>]
+terrepleinF [label=<<b>French</b><br/><font color="red">terreplein</font>>]
+terreplein [label=<<b>Modern<br/>English</b><br/><font color="red">terreplein</font>>]
+peleIE -> pienoI
+terraL -> terraI
+{ terraI pienoI } -> terrapienareI
+terrapienareI -> terrepleinF -> terreplein [style=dashed]
+
+// turmeric
+terrameritaL [label=<<b>Medieval Latin</b><br/><font color="red">terre merita</font><br/><font point-size="12">"deserved earth"</font>>]
+terremeriteOF [label=<<b>Old French</b><br/><font color="red">terre-merite</font><br/><font point-size="12">saffron</font>>]
+termeryteME [label=<<b>Middle<br/>English</b><br/><font color="red">termeryte</font>>]
+turmeric [label=<<b>Modern<br/>English</b><br/><font color="red">turmeric</font>>]
+terraL -> terrameritaL -> terremeriteOF
+terremeriteOF -> termeryteME [style=dashed]
+termeryteME -> turmeric
+
+// toast
+torseyo [label=<<font color="red">*tors-eyo-</font>>]
+torrereL [label=<<b>Latin</b><br/><font color="red">torrēre</font><br/><font point-size="12">to dry, parch, burn</font>>]
+tostareL [label=<<font color="red">*tostāre</font>>]
+tosterOF [label=<<b>Old French</b><br/><font color="red">toster</font>>]
+tostenME [label=<<b>Middle<br/>English</b><br/><font color="red">tosten</font>>]
+toast [label=<<b>Modern<br/>English</b><br/><font color="red">toast</font>>]
+ters -> torseyo -> torrereL -> tostareL -> tosterOF 
+tosterOF -> tostenME [style=dashed]
+tostenME -> toast
+
+// torrent
+torrensL [label=<<font color="red">torrēns, torrent-</font><br/><font point-size="12">burning</font>>]
+torrent [label=<<b>Modern<br/>English</b><br/><font color="red">torrent</font>>]
+torrereL -> torrensL
+torrensL -> torrent [style=dashed]
+
+// torrid
+torridusL [label=<<font color="red">torridus</font>>]
+torrid [label=<<b>Modern<br/>English</b><br/><font color="red">torrid</font>>]
+torrereL -> torridusL 
+torridusL -> torrid [style=dashed]
+
+{ rank=sink thirst terrestrial terrain terrace terrier tureen inter mediterranean terreplein turmeric toast torrent torrid }
+{ rank=same enIE medhyoIE peleIE trs tersa torseyo }
+}

@@ -1,0 +1,118 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+sem [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*sem-</font></td><td><font point-size="16">one, as one</font></td></tr></table>> tooltip="Indo-European \"*sem-\" one, as one" shape=rect style=dashed peripheries=1 margin=.3 URL="sem-one0.svg"]
+
+// hyphen
+hensGk [label=<<b>Greek</b><br/><font color="red">*hen-s</font>>]
+heisGk [label=<<font color="red">heis</font><br/><font point-size="12">one</font>>]
+upoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*upo</font><br/><font point-size="12">under</font>> shape=box style="dashed,rounded" URL="upo-under.svg"]
+hupoGk [label=<<b>Greek</b><br/><font color="red">hupo</font>>]
+huphhenGk [label=<<font color="red">huph' hen</font><br/><font point-size="12">in one</font>>]
+huphenGk [label=<<font color="red">huphen</font>>]
+hyphenL [label=<<b>Late Latin</b><br/><font color="red">hyphen</font>>]
+hyphen [label=<<b>Modern<br/>English</b><br/><font color="red">hyphen</font>>]
+sem -> hensGk -> heisGk
+upoIE -> hupoGk
+{ hupoGk heisGk } -> huphhenGk -> huphenGk
+huphenGk -> hyphenL -> hyphen [style=dashed]
+
+// henotheism
+henoGk [label=<<font color="red">heno-</font>>]
+dhesIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dhēs-</font><br/><font point-size="12">(various religious<br/>concepts)</font>> shape=box style="dashed,rounded" URL="dhes-god.svg"]
+theosGk [label=<<b>Greek</b><br/><font color="red">theos</font><br/><font point-size="12">god</font>>]
+henotheism [label=<<b>Modern<br/>English</b><br/><font color="red">henotheism</font>>]
+dhesIE -> theosGk
+heisGk -> henoGk
+{ henoGk theosGk } -> henotheism [style=dashed]
+
+// hendecasyllabic
+dekmIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dekm̥</font><br/><font point-size="12">ten</font>> shape=box style="dashed,rounded" URL="dekm-ten1.svg"]
+dekaGk [label=<<b>Greek</b><br/><font color="red">deka</font>>]
+hendekaGk [label=<<font color="red">hendeka</font><br/><font point-size="12">eleven</font>>]
+ksunIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ksun</font><br/><font point-size="12">with</font>> shape=box style="dashed,rounded" URL="ksun-with.svg"]
+sunGk [label=<<b>Greek</b><br/><font color="red">sun-</font>>]
+lambaneinGk [label=<<b>Greek</b><br/><font color="red">lambanein</font><br/><font point-size="12">to take</font>>]
+sullambaneinGk [label=<<font color="red">sullambanein</font>>]
+sullabeGk [label=<<font color="red">sullabē</font><br/><font point-size="12">syllable</font>>]
+hendekasullabosGk [label=<<font color="red">hendekasullabos</font>>]
+hendecasyllabusL [label=<<b>Latin</b><br/><font color="red">hendecasyllabus</font>>]
+hendecasyllabic [label=<<b>Modern<br/>English</b><br/><font color="red">hendecasyllabic</font>>]
+dekmIE -> dekaGk
+{ heisGk dekaGk } -> hendekaGk
+ksunIE -> sunGk
+{ sunGk lambaneinGk } -> sullambaneinGk -> sullabeGk
+{ hendekaGk sullabeGk } -> hendekasullabosGk
+hendekasullabosGk -> hendecasyllabusL -> hendecasyllabic [style=dashed]
+
+// hendiadys
+dwoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dwo-</font><br/><font point-size="12">two</font>> shape=box style="dashed,rounded" URL="dwo-two1.svg"]
+duoGk [label=<<b>Greek</b><br/><font color="red">duō</font>>]
+hendiaduoinGk [label=<<font color="red">hen dia duoin</font><br/><font point-size="12">one by means of two</font>>]
+hendiadysL [label=<<b>Latin</b><br/><font color="red">hendiadys</font>>]
+hendiadys [label=<<b>Modern<br/>English</b><br/><font color="red">hendiadys</font>>]
+dwoIE -> duoGk
+{ heisGk duoGk } -> hendiaduoinGk
+hendiaduoinGk -> hendiadysL -> hendiadys [style=dashed]
+
+// simultaneous
+semel [label=<<font color="red">*sem-el-</font>>]
+simulL [label=<<b>Latin</b><br/><font color="red">simul</font><br/><font point-size="12">at the same time, together</font>>]
+simultaneous [label=<<b>Modern<br/>English</b><br/><font color="red">simultaneous</font>>]
+sem -> semel -> simulL
+simulL -> simultaneous [style=dashed]
+
+// assemble
+adL [label=<<b>Latin</b><br/><font color="red">ad-</font><br/><font point-size="12">to</font>>]
+assimulareL [label=<<font color="red">*assimulāre</font>>]
+assemblerOF [label=<<b>Old French</b><br/><font color="red">assembler</font>>]
+assemblenME [label=<<b>Middle<br/>English</b><br/><font color="red">assemblen</font>>]
+assemble [label=<<b>Modern<br/>English</b><br/><font color="red">assemble</font>>]
+{ adL simulL } -> assimulareL -> assemblerOF
+assemblerOF -> assemblenME [style=dashed]
+assemblenME -> assemble
+
+// ensemble
+enIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*en</font><br/><font point-size="12">in</font>> shape=box style="dashed,rounded" URL="en-in1.svg"]
+inL [label=<<b>Latin</b><br/><font color="red">in-</font><br/><font point-size="12">(intensive prefix)</font>>]
+insimulL [label=<<b>Late Latin</b><br/><font color="red">īnsimul</font>>]
+ensembleOF [label=<<b>Old French</b><br/><font color="red">ensemble</font><br/><font point-size="12">together</font>>]
+ensembleF [label=<<b>French</b><br/><font color="red">ensemble</font>>]
+ensemble [label=<<b>Modern<br/>English</b><br/><font color="red">ensemble</font>>]
+enIE -> inL
+{ inL simulL } -> insimulL -> ensembleOF -> ensembleF
+ensembleF -> ensemble [style=dashed]
+
+// single
+semgolo [label=<<font color="red">*sem-golo-</font>>]
+singulusL [label=<<b>Latin</b><br/><font color="red">singulus</font><br/><font point-size="12">alone, single</font>>]
+singleOF [label=<<b>Old French</b><br/><font color="red">single</font>>]
+singleME [label=<<b>Middle<br/>English</b><br/><font color="red">single</font>>]
+single [label=<<b>Modern<br/>English</b><br/><font color="red">single</font>>]
+sem ->  semgolo -> singulusL -> singleOF
+singleOF -> singleME [style=dashed]
+singleME -> single
+
+// sempre
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per-</font><br/><font point-size="12">during, for</font>> shape=box style="dashed,rounded" URL="per-list.svg"]
+semperIE [label=<<font color="red">*sem-per-</font>>]
+semperL [label=<<b>Latin</b><br/><font color="red">semper</font><br/><font point-size="12">always</font>>]
+sempreI [label=<<b>Italian</b><br/><font color="red">sempre</font>>]
+sempre [label=<<b>Modern<br/>English</b><br/><font color="red">sempre</font>>]
+{ sem perIE } -> semperIE -> semperL -> sempreI
+sempreI -> sempre [style=dashed]
+
+// sempiternal
+aiwIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*aiw-, *ayu-</font><br/><font point-size="12">vital force, life,<br/>eternity</font>> shape=box style="dashed,rounded" URL="aiw-life2.svg"]
+aeternusL [label=<<b>Latin</b><br/><font color="red">aeternus</font><br/><font point-size="12">eternal</font>>]
+sempiternusL [label=<<font color="red">sempiternus</font>>]
+sempiternalisL [label=<<b>Late Latin</b><br/><font color="red">sempiternālis</font>>]
+sempiternal [label=<<b>Modern<br/>English</b><br/><font color="red">sempiternal</font>>]
+aiwIE -> aeternusL
+{ semperL aeternusL } -> sempiternusL -> sempiternalisL
+sempiternalisL -> sempiternal [style=dashed]
+
+{ rank=sink hyphen henotheism hendecasyllabic hendiadys simultaneous assemble ensemble single sempre sempiternal }
+{ rank=same upoIE dhesIE dekmIE ksunIE perIE aiwIE dwoIE enIE }
+}

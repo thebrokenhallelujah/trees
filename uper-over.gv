@@ -1,0 +1,138 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+uperIE [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*uper</font></td><td><font point-size="16">over</font></td></tr></table>> tooltip="Indo-European \"*uper\" over" shape=box peripheries=2 margin=.3]
+
+// over, over-
+uperiIE [label=<<font color="red">*uperi</font>>]
+oferOE [label=<<b>Old English</b><br/><font color="red">ofer</font>>]
+overME [label=<<b>Middle<br/>English</b><br/><font color="red">over</font>>]
+over [label=<<b>Modern<br/>English</b><br/><font color="red">over</font>>]
+uperIE -> uperiIE -> oferOE -> overME -> over
+
+// super-, super
+superIE [label=<<font color="red">*(s)uper</font>>]
+superL [label=<<b>Latin</b><br/><font color="red">super</font><br/><font point-size="12">over, above</font><br/><font color="red">super-</font>>]
+super [label=<<b>Modern<br/>English</b><br/><font color="red">super-<br/>super</font>>]
+uperIE -> superIE -> superL
+superL -> super [style=dashed]
+
+// sur-
+surOF [label=<<b>Old French</b><br/><font color="red">sur-</font>>]
+surME [label=<<b>Middle<br/>English</b><br/><font color="red">sur-</font>>]
+sur [label=<<b>Modern<br/>English</b><br/><font color="red">sur-</font>>]
+superL -> surOF
+surOF -> surME [style=dashed]
+surME -> sur
+
+// sovereign
+superanusL [label=<<font color="red">*superānus</font>>]
+soverainOF [label=<<b>Old French</b><br/><font color="red">soverain</font>>]
+soverainME [label=<<b>Middle<br/>English</b><br/><font color="red">soverain</font>>]
+sovereign [label=<<b>Modern<br/>English</b><br/><font color="red">sovereign</font>>]
+superL -> superanusL -> soverainOF
+soverainOF -> soverainME [style=dashed]
+soverainME -> sovereign
+
+// superable
+superareL [label=<<font color="red">superāre</font><br/><font point-size="12">to overcome</font>>]
+superabilisL [label=<<font color="red">superābilis</font>>]
+superable [label=<<b>Modern<br/>English</b><br/><font color="red">superable</font>>]
+superL -> superareL -> superabilisL
+superabilisL -> superable [style=dashed]
+
+// superior
+superusL [label=<<font color="red">superus</font><br/><font point-size="12">upper</font>>]
+superiorL [label=<<font color="red">superior</font><br/><font point-size="12">higher</font>>]
+superiorOF [label=<<b>Old French</b><br/><font color="red">superior</font>>]
+superiorME [label=<<b>Middle<br/>English</b><br/><font color="red">superior</font>>]
+superior [label=<<b>Modern<br/>English</b><br/><font color="red">superior</font>>]
+superL -> superusL -> superiorL -> superiorOF
+superiorOF -> superiorME [style=dashed]
+superiorME -> superior
+
+// supreme (omitted: suprême, supremo)
+supremusL [label=<<font color="red">suprēmus</font><br/><font point-size="12">highest</font>>]
+supreme [label=<<b>Modern<br/>English</b><br/><font color="red">supreme</font>>]
+superusL -> supremusL
+supremusL -> supreme [style=dashed]
+
+// sirloin
+longeOF [label=<<b>Old French</b><br/><font color="red">longe, loigne</font><br/><font point-size="12">loin</font>>]
+surlongeOF [label=<<font color="red">surlonge, *surloigne</font>>]
+surloineME [label=<<b>Middle<br/>English</b><br/><font color="red">surloine</font>>]
+sirloin [label=<<b>Modern<br/>English</b><br/><font color="red">sirloin</font>>]
+{ surOF longeOF } -> surlongeOF
+surlongeOF -> surloineME [style=dashed]
+surloineME -> sirloin
+
+// supernal
+supernoIE [label=<<font color="red">*(s)uper-no-</font>>]
+supernusL [label=<<b>Latin</b><br/><font color="red">supernus</font><br/><font point-size="12">above, upper, top</font>>]
+supernalOF [label=<<b>Old French</b><br/><font color="red">supernal</font>>]
+supernalME [label=<<b>Middle<br/>English</b><br/><font color="red">supernal</font>>]
+supernal [label=<<b>Modern<br/>English</b><br/><font color="red">supernal</font>>]
+superIE -> supernoIE -> supernusL -> supernalOF
+supernalOF -> supernalME [style=dashed]
+supernalME -> supernal
+
+// superb
+bheueIE  [label=<<b>Indo-<br/>European</b><br/><font color="red">*bheu(ə)</font><br/><font point-size="12">to be</font>> shape=box style="dashed,rounded" URL="bheue-be.svg"]
+superbhwo [label=<<font color="red">*super-bhw-o-</font><br/><font point-size="12">being above</font>>]
+superbusL [label=<<b>Latin</b><br/><font color="red">superbus</font><br/><font point-size="12">superior</font>>]
+superb [label=<<b>Modern<br/>English</b><br/><font color="red">superb</font>>]
+{ superIE bheueIE } -> superbhwo -> superbusL
+superbusL -> superb [style=dashed]
+
+// sum (omitted: summary, summation)
+supmoIE [label=<<font color="red">*sup-mo-</font>>]
+summusL [label=<<b>Latin</b><br/><font color="red">summus</font><br/><font point-size="12">highest</font>>]
+summaL [label=<<font color="red">summa</font>>]
+summeOF [label=<<b>Old French</b><br/><font color="red">summe</font>>]
+summeME [label=<<b>Middle<br/>English</b><br/><font color="red">summe</font>>]
+sum [label=<<b>Modern<br/>English</b><br/><font color="red">sum</font>>]
+superIE -> supmoIE -> summusL -> summaL -> summeOF
+summeOF -> summeME [style=dashed]
+summeME -> sum
+
+// summit
+somOF [label=<<b>Old French</b><br/><font color="red">som</font><br/><font point-size="12">top</font><br/><font color="red">sommette</font>>]
+sometME [label=<<b>Middle<br/>English</b><br/><font color="red">somet</font>>]
+summit [label=<<b>Modern<br/>English</b><br/><font color="red">summit</font>>]
+summusL -> somOF
+somOF -> sometME [style=dashed]
+sometME -> summit
+
+// supra-
+superoIE [label=<<font color="red">*super-o-</font>>]
+supraL [label=<<b>Latin</b><br/><font color="red">suprā<br/>supra-</font><br/><font point-size="12">above, beyond</font>>]
+supra [label=<<b>Modern<br/>English</b><br/><font color="red">supra-</font>>]
+superIE -> superoIE -> supraL
+supraL -> supra [style=dashed]
+
+// soprano (omitted: sopranino)
+sopraI [label=<<b>Italian</b><br/><font color="red">sopra</font>>]
+sopranoI [label=<<font color="red">soprano</font>>]
+soprano [label=<<b>Modern<br/>English</b><br/><font color="red">soprano</font>>]
+supraL -> sopraI -> sopranoI
+sopranoI -> soprano [style=dashed]
+
+// somersault
+sobreOP [label=<<b>Old Provençal</b><br/><font color="red">sobre-</font>>]
+sobresautOP [label=<<font color="red">sobresaut</font>>]
+sombresaultF [label=<<b>French</b><br/>(obsolete)<br/><font color="red">sobresault<br/>sombresault</font>>]
+somersault [label=<<b>Modern<br/>English</b><br/><font color="red">somersault</font>>]
+supraL -> sobreOP -> sobresautOP
+sobresautOP -> sombresaultF -> somersault [style=dashed]
+
+// hyper-
+huperGk [label=<<b>Greek</b><br/><font color="red">huper<br/>huper-</font><br/><font point-size="12">over, beyond</font>>]
+hyper [label=<<b>Modern<br/>English</b><br/><font color="red">hyper-</font>>]
+uperIE -> huperGk
+huperGk -> hyper [style=dashed]
+
+{ rank=sink over sovereign super superable superior supreme sur sirloin supernal superb sum summit soprano supra somersault hyper }
+{ rank=same huperGk supernusL superbusL }
+{ rank=same oferOE supernalOF }
+}

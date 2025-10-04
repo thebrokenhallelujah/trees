@@ -1,0 +1,50 @@
+strict digraph {
+node [shape=none]
+
+per [label=<<font point-size="24"><b>Indo-European</b></font><br/><font point-size="18" color="red">*per </font><font point-size="16">forward, through</font>> shape=box style="dashed,rounded" URL="per-list.svg" tooltip="Indo-European \"*per\" forward, through"]
+pr [label=<<font color="red">pr̥</font>>]
+per -> pr -> furGm
+pr -> { prt prtero prsti rank=same }
+prt [label=<<font color="red">pr̥t-</font>>]
+prtero [label=<<font color="red">pr̥t-</font>>]
+prsti [label=<<font color="red">pr̥-st-i-, por-st-i-</font>>]
+sta [label=<<b>Indo-<br/>European</b><br/><font color="red">stā</font><br/><font point-size="12">stand</font>> shape=box style="dashed,rounded" URL="sta-stand.svg"]
+sta -> prsti
+/* for, for- */
+furGm [label=<<b>Germanic</b><br/><font color="red">fur</font><br/><font point-size="12">before, in</font>>]
+furGm -> forOE -> forME -> for
+forOE [label=<<b>Old English</b><br/><font color="red">for, for-</font>>] // separate these and define?
+forME [label=<<b>Middle English</b><br/><font color="red">for, for-</font>>]
+for [label=<<b>Modern<br/>English</b><br/><font color="red">for<br/>for-</font>>]
+/* forth */
+prt -> furthGm -> forthOE -> forthME -> forth
+furthGm [label=<<b>Germanic</b><br/><font color="red">furth-</font><br/><font point-size="12">forward</font>>]
+forthOE [label=<<b>Old English</b><br/><font color="red">forth</font>>]
+forthME [label=<<b>Middle English</b><br/><font color="red">forth</font>>]
+forth [label=<<b>Modern<br/>English</b><br/><font color="red">forth</font>>]
+/* afford */
+forthOE -> forthianOE -> geforthianOE -> aforthenME -> afford
+forthianOE [label=<<font color="red">forthian</font><br/><font point-size="12">to further</font>>]
+geforthianOE [label=<<font color="red">geforthian</font><br/><font point-size="12">to carry out</font>>] // ge- see kom-
+aforthenME [label=<<b>Middle English</b><br/><font color="red">aforthen</font>>]
+afford [label=<<b>Modern<br/>English</b><br/><font color="red">afford</font>>]
+/* further, furthest (var. farther, farthest not listed) */
+prtero -> furtheraGm -> furthraOE -> furtherME -> further
+furtheraGm [label=<<b>Germanic</b><br/><font color="red">furthera-</font><br/><font point-size="12">farther away</font>>]
+furthraOE [label=<<b>Old English</b><br/><font color="red">furthra, furthor</font>>]
+furtherME [label=<<b>Middle English</b><br/><font color="red">further</font>>]
+further [label=<<b>Modern<br/>English</b><br/><font color="red">further</font>>]
+furtherME -> furthestME -> furthest
+furthestME [label=<<b>Middle English</b><br/><font color="red">furthest</font>>]
+furthest [label=<<b>Modern<br/>English</b><br/><font color="red">furthest</font>>]
+/* post */
+prsti -> postisL
+postisL -> postOE [style=dashed]
+postOE -> postME -> post
+postisL [label=<<b>Latin</b><br/><font color="red">postis</font>>]
+postOE [label=<<b>Old English</b><br/><font color="red">post</font>>]
+postME [label=<<b>Middle<br/>English</b><br/><font color="red">post</font>>]
+post [label=<<b>Modern<br/>English</b><br/><font color="red">post</font><br/><font point-size="12">pole, to put up</font>>]
+{ rank=sink for forth afford further furthest post }
+{ rank=same furGm furthGm furtheraGm postisL }
+}
