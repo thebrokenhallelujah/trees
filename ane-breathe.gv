@@ -1,0 +1,136 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+ane [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*anə-</font></td><td><font point-size="16">to breathe</font></td></tr></table>> tooltip="Indo-European \"*anə-\" to breathe" shape=box peripheries=2 margin=.3]
+anemo [label=<<font color="red">*anə-mo-</font>>]
+animaL  [label=<<b>Latin</b><br/><font color="red">anima</font><br/><font point-size="12">soul, spirit, life, breath</font>>]
+animusL [label=<<b>Latin</b><br/><font color="red">animus</font><br/><font point-size="12">reason, mind, spirit</font>>]
+anemosG [label=<<b>Greek</b><br/><font color="red">anemos</font><br/><font point-size="12">wind</font>>]
+ane -> anemo -> { animaL animusL anemosG }
+
+// anima, animus
+anima [label=<<b>Modern<br/>English</b><br/><font color="red">anima</font>>]
+animaL -> anima [style=dashed]
+animus [label=<<b>Modern<br/>English</b><br/><font color="red">animus</font>>]
+animusL -> animus [style=dashed]
+
+// animal
+animalisL [label=<<font color="red">animālis</font><br/><font point-size="12">living</font>>]
+animalL [label=<<font color="red">animal</font><br/><font point-size="12">animal</font>>]
+animal [label=<<b>Modern<br/>English</b><br/><font color="red">animal</font>>]
+animaL -> animalisL -> animalL
+animalL -> animal [style=dashed]
+
+// animate, animation
+animareL [label=<<font color="red">animāre, animāt-</font><br/><font point-size="12">to animate</font>>]
+animate [label=<<b>Modern<br/>English</b><br/><font color="red">animate<br/>animation</font>>]
+animaL -> animareL 
+animareL -> animate [style=dashed]
+
+// anime
+animeshonJ [label=<<font color="green"><b>Japanese</b></font><br/><font color="red">animēshon</font>>]
+animeJ [label=<<font color="red">anime</font>>]
+anime [label=<<b>Modern<br/>English</b><br/><font color="red">anime</font>>]
+animate -> animeshonJ [style=dashed]
+animeshonJ -> animeJ
+animeJ -> anime [style=dashed]
+
+// animato
+animareI [label=<<b>Italian</b><br/><font color="red">animare</font>>]
+animatoI [label=<<font color="red">animato</font><br/><font point-size="12">animated</font>>]
+animato [label=<<b>Modern<br/>English</b><br/><font color="red">animato</font>>]
+animareL -> animareI -> animatoI
+animatoI -> animato [style=dashed]
+
+// animosity
+animosusL [label=<<font color="red">animōsus</font><br/><font point-size="12">bold</font>>]
+animositasL [label=<<b>Late Latin</b><br/><font color="red">animōsitās</font><br/><font point-size="12">courage</font>>]
+animositeOF [label=<<b>Old French</b><br/><font color="red">animosite</font>>]
+animositeME [label=<<b>Middle<br/>English</b><br/><font color="red">animosite</font>>]
+animosity [label=<<b>Modern<br/>English</b><br/><font color="red">animosity</font>>]
+animusL -> animosusL -> animositasL -> animositeOF
+animositeOF -> animositeME [style=dashed]
+animositeME -> animosity
+
+// animadvert
+werIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*wer-</font><br/><font point-size="12">to turn, bend</font>> shape=box style="dashed,rounded" URL="wer-turn.svg"]
+vertereL [label=<<b>Latin</b><br/><font color="red">vertere</font>>]
+adL [label=<<b>Latin</b><br/><font color="red">ad-</font><br/><font point-size="12">toward</font>>]
+advertereL [label=<<font color="red">advertere</font>>]
+animadvertereL [label=<<font color="red">animadvertere</font><br/><font point-size="12">to notice</font>>]
+animadvertenME [label=<<b>Middle<br/>English</b><br/><font color="red">animadverten</font>>]
+animadvert [label=<<b>Modern<br/>English</b><br/><font color="red">animadvert</font>>]
+werIE -> vertereL
+{ adL vertereL } -> advertereL
+{ animusL advertereL } -> animadvertereL
+animadvertereL -> animadvertenME [style=dashed]
+animadvertenME -> animadvert
+
+// equanimity
+aequusL [label=<<b>Latin</b><br/><font color="red">aequus</font><br/><font point-size="12">even</font>>]
+aequanimusL [label=<<font color="red">aequanimus</font><br/><font point-size="12">even-tempered, impartial</font>>]
+aequanimitasL [label=<<font color="red">aequanimitās</font>>]
+equanimity [label=<<b>Modern<br/>English</b><br/><font color="red">equanimity</font>>]
+{ aequusL animusL } -> aequanimusL -> aequanimitasL
+aequanimitasL -> equanimity [style=dashed]
+
+// longanimity
+delIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*del-</font><br/><font point-size="12">long</font>> shape=box style="dashed,rounded" URL="del-long.svg"]
+dlongho [label=<<font color="red">*dlon-gho-</font>>]
+longusL [label=<<b>Latin</b><br/><font color="red">longus</font>>]
+longanimisL [label=<<font color="red">longanimis</font><br/><font point-size="12">patient</font>>]
+longanimitasL [label=<<b>Late Latin</b><br/><font color="red">anganimitās</font>>]
+longanimiteOF [label=<<b>Old French</b><br/><font color="red">longanimite</font>>]
+longanimiteME [label=<<b>Middle<br/>English</b><br/><font color="red">longanimite</font>>]
+longanimity [label=<<b>Modern<br/>English</b><br/><font color="red">longanimity</font>>]
+delIE -> dlongho -> longusL
+{ longusL animusL } -> longanimisL -> longanimitasL -> longanimiteOF
+longanimiteOF -> longanimiteME [style=dashed]
+longanimiteME -> longanimity
+
+// magnanimous
+megIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*meg-</font><br/><font point-size="12">great</font>> shape=box style="dashed,rounded" URL="meg-great.svg"]
+magnusL [label=<<b>Latin</b><br/><font color="red">magnus</font>>]
+magnanimusL [label=<<font color="red">magnanimus</font>>]
+magnanimous [label=<<b>Modern<br/>English</b><br/><font color="red">magnanimous</font>>]
+megIE -> magnusL
+{ magnusL animusL } -> magnanimusL
+magnanimusL -> magnanimous [style=dashed]
+
+// pusillanimous
+pullusL [label=<<b>Latin</b><br/><font color="red">pullus</font><br/><font point-size="12">young of an animal</font>>]
+pusillusL [label=<<font color="red">pusillus</font><br/><font point-size="12">weak</font>>]
+pusillanimisL [label=<<b>Late Latin</b><br/><font color="red">pusillanimis</font>>]
+pusillanimusME [label=<<b>Middle<br/>English</b><br/><font color="red">pusillanimus</font>>]
+pusillanimous [label=<<b>Modern<br/>English</b><br/><font color="red">pusillanimous</font>>]
+pullusL -> pusillusL
+{ pusillusL animusL } -> pusillanimisL
+pusillanimisL -> pusillanimusME [style=dashed]
+pusillanimusME -> pusillanimous
+
+// unanimous
+oinoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*oi-no-</font><br/><font point-size="12">one</font>> shape=box style="dashed,rounded" URL="oino-one2.svg"]
+unusL [label=<<b>Latin</b><br/><font color="red">ūnus</font>>]
+unanimusL [label=<<font color="red">ūnanimus</font>>]
+unanimous [label=<<b>Modern<br/>English</b><br/><font color="red">unanimous</font>>]
+oinoIE -> unusL
+{ unusL animusL } -> unanimusL
+unanimusL -> unanimous [style=dashed]
+
+// anemo-
+anemoG [label=<<font color="red">anemo-</font>>]
+anemoE [label=<<b>Modern<br/>English</b><br/><font color="red">anemo-</font>>]
+anemosG -> anemoG [weight=2]
+anemoG -> anemoE [style=dashed]
+
+// anemone
+anemoneG [label=<<font color="red">anemōnē</font>>]
+anemoneL [label=<<b>Latin</b><br/><font color="red">anemōnē</font>>]
+anemone [label=<<b>Modern<br/>English</b><br/><font color="red">anemone</font>>]
+anemosG -> anemoneG [label="?" decorate=true]
+anemoneG -> anemoneL -> anemone [style=dashed]
+
+{ rank=sink anima animus animal animate anime animato animosity animadvert equanimity longanimity magnanimous pusillanimous unanimous anemoE anemone }
+{ rank=same werIE delIE megIE oinoIE }
+}
