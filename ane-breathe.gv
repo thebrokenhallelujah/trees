@@ -76,7 +76,7 @@ equanimity [label=<<b>Modern<br/>English</b><br/><font color="red">equanimity</f
 aequanimitasL -> equanimity [style=dashed]
 
 // longanimity
-delIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*del-</font><br/><font point-size="12">long</font>> shape=box style="dashed,rounded" URL="del-long.svg"]
+delIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*del-</font><br/><font point-size="12">long</font>> shape=box style="dashed,rounded" URL="del-long1.svg"]
 dlongho [label=<<font color="red">*dlon-gho-</font>>]
 longusL [label=<<b>Latin</b><br/><font color="red">longus</font>>]
 longanimisL [label=<<font color="red">longanimis</font><br/><font point-size="12">patient</font>>]

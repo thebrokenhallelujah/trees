@@ -35,7 +35,7 @@ perIE -> primusL
 primaevusL -> primeval [style=dashed]
 
 // longevity
-delIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*del-</font><br/><font point-size="12">long</font>> shape=box style="dashed,rounded" URL="del-long.svg"]
+delIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*del-</font><br/><font point-size="12">long</font>> shape=box style="dashed,rounded" URL="del-long1.svg"]
 longusL [label=<<b>Latin</b><br/><font color="red">longus</font>>]
 longaevusL [label=<<font color="red">longaevus</font><br/><font point-size="12">ancient</font>>]
 longaevitasL [label=<<font color="red">longaevitās</font>>]
@@ -112,6 +112,6 @@ weidIE -> vedahSk
 ayurvedahSk -> ayurveda [style=dashed]
 
 { rank=sink coeval medieval primeval longevity eternal sempiternal age eon hygiene utopia ayurveda }
-{ rank=same komIE medhyoIE perIE delIE weidIE aiwIE semIE }
+{ rank=same komIE medhyoIE perIE delIE weidIE semIE aiwoIE aiwenIE yuIE oyuIE }
 }
 

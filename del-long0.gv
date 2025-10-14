@@ -1,0 +1,90 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+// omitted: longshore, langlauf, belong, Lombard, ling (fish), lounge
+
+del [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*del-</font></td><td><font point-size="16">long</font></td></tr></table>> tooltip="Indo-European \"*del-\" long" shape=box peripheries=2 margin=.3]
+
+// long 1
+dlongho [label=<<font color="red">*dlon-gho-</font>>]
+langazGc [label=<<b>Germanic</b><br/><font color="red">*langaz</font>>]
+langOE [label=<<b>Old English</b><br/><font color="red">lang</font>>]
+longME [label=<<b>Middle<br/>English</b><br/><font color="red">long</font>>]
+long1 [label=<<b>Modern<br/>English</b><br/><font color="red">long</font><br/><font point-size="12">great in length</font>>]
+del -> dlongho -> langazGc -> langOE -> longME -> long1
+
+// along
+antIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ant-</font><br/><font point-size="12">front, forehead</font>> shape=box style="dashed,rounded" URL="ant-front.svg"]
+andiGc [label=<<b>Germanic</b><br/><font color="red">*andi-, *anda-</font>>]
+andOE [label=<<b>Old English</b><br/><font color="red">and-</font><br/><font point-size="12">facing</font>>]
+andlangOE [label=<<font color="red">andlang</font><br/><font point-size="12">extending opposite</font>>]
+alongME [label=<<b>Middle<br/>English</b><br/><font color="red">along</font>>]
+along [label=<<b>Modern<br/>English</b><br/><font color="red">along</font>>]
+antIE -> andiGc -> andOE 
+{ andOE langOE } -> andlangOE -> alongME -> along
+
+// long 2
+langonGc [label=<<font color="red">*langōn</font>>]
+langianOE [label=<<b>Old English</b><br/><font color="red">langian</font>>]
+longenME [label=<<b>Middle<br/>English</b><br/><font color="red">longen</font>>]
+long2 [label=<<b>Modern<br/>English</b><br/><font color="red">long</font><br/><font point-size="12">yearn</font>>]
+langazGc -> langonGc -> langianOE -> longenME -> long2
+
+// linger
+langjanGc [label=<<font color="red">*langjan</font><br/><font point-size="12">to make long</font>>]
+lenganOE [label=<<b>Old English</b><br/><font color="red">lengen</font>>]
+lengenME [label=<<b>Middle<br/>English</b><br/><font color="red">lengen, lengeren</font>>]
+linger [label=<<b>Modern<br/>English</b><br/><font color="red">linger</font>>]
+langazGc -> langjanGc -> lenganOE -> lengenME -> linger
+
+// length
+langithoGc [label=<<b>Germanic</b><br/><font color="red">*langithō</font>>]
+lengthuOE [label=<<b>Old English</b><br/><font color="red">lengthu</font>>]
+lengthME [label=<<b>Middle<br/>English</b><br/><font color="red">length</font>>]
+length [label=<<b>Modern<br/>English</b><br/><font color="red">length</font>>]
+dlongho -> langithoGc -> lengthuOE -> lengthME -> length
+
+// Lent
+lenctenOE [label=<<b>Old English</b><br/><font color="red">lencten</font>>]
+lenteME [label=<<b>Middle<br/>English</b><br/><font color="red">lente</font><br/><font point-size="12">sprint, Lent</font>>]
+lent [label=<<b>Modern<br/>English</b><br/><font color="red">Lent</font>>]
+langithoGc -> lenctenOE -> lenteME -> lent
+
+// Latin longus (link)
+longusL [label=<<b>Latin</b><br/><font color="red">longus</font>> shape=box style="dashed,rounded" URL="del-long1.svg"]
+dlongho -> longusL
+
+// Greek
+dlegho [label=<<font color="red">dl̥ə-gho-</font>>]
+dolikhosG [label=<<b>Greek</b><br/><font color="red">dolikhos</font><br/><font point-size="12">long</font>>]
+del -> dlegho -> dolikhosG [weight=3]
+dolikhosG -> { dolichocephalic dolichocranial } [style=dashed]
+
+// dolichocephalic
+ghebhelIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ghebh-el-</font><br/><font point-size="12">head</font>> shape=box style="dashed,rounded" URL="ghebhel-head.svg"]
+kephaleG [label=<<b>Greek</b><br/><font color="red">kephalē</font>>]
+cephalicusL [label=<<b>Latin</b><br/><font color="red">cephalicus</font>>]
+cephaliqueF [label=<<b>French</b><br/><font color="red">céphalique</font>>]
+cephalic [label=<<b>Modern<br/>English</b><br/><font color="red">-cephalic</font>>]
+dolichocephalic [label=<<b>Modern<br/>English</b><br/><font color="red">dolichocephalic</font>>]
+ghebhelIE -> kephaleG
+kephaleG -> cephalicusL [style=dashed]
+cephalicusL -> cephaliqueF
+cephaliqueF -> cephalic [style=dashed]
+cephalic -> dolichocephalic
+
+// dolichocranial
+kerIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ker-</font><br/><font point-size="12">horn, head</font>> shape=box style="dashed,rounded" URL="ker-horn.svg"]
+kranionG [label=<<b>Greek</b><br/><font color="red">krānion</font><br/><font point-size="12">skull</font>>]
+craniumL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">crānium</font>>]
+craneumME [label=<<b>Middle<br/>English</b><br/><font color="red">craneum</font>>]
+cranium [label=<<b>Modern<br/>English</b><br/><font color="red">cranium</font>>]
+dolichocranial [label=<<b>Modern<br/>English</b><br/><font color="red">dolichocranial</font>>]
+kerIE -> kranionG
+kranionG -> craniumL -> craneumME [style=dashed]
+craneumME -> cranium -> dolichocranial
+
+{ rank=sink long1 along long2 linger length lent dolichocephalic dolichocranial }
+{ rank=same dlongho dlegho antIE kerIE ghebhelIE }
+}

@@ -17,7 +17,7 @@ un [label=<<b>Modern<br/>English</b><br/><font color="red">un-</font><br/><font 
 antiIE -> andiGmc -> andOE -> unME -> un
 
 // along
-delIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*del-</font><br/><font point-size="12">long</font>> shape=box style="dashed,rounded" URL="del-long.svg"]
+delIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*del-</font><br/><font point-size="12">long</font>> shape=box style="dashed,rounded" URL="del-long0.svg"]
 dlongho [label=<<font color="red">*dlon-gho-</font>>]
 langOE [label=<<b>Old English</b><br/><font color="red">lang</font>>]
 delIE -> dlongho -> langOE

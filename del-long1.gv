@@ -1,0 +1,123 @@
+strict digraph {
+node [shape=none]
+
+del [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*del-</font></td><td><font point-size="16">long</font></td></tr></table>> tooltip="Indo-European \"*del-\" long" shape=rect style=dashed peripheries=1 margin=.3 URL="del-long0.svg"]
+dlongho [label=<<font color="red">*dlon-gho-</font>>]
+
+// linguica
+longusL [label=<<b>Latin</b><br/><font color="red">longus</font>>]
+longaoL [label=<<b>Late Latin</b><br/><font color="red">longao</font><br/><font point-size="12">large intestine</font>>]
+linguicaP [label=<<b>Portuguese</b><br/><font color="red">linguiça</font>>]
+linguica [label=<<b>Modern<br/>English</b><br/><font color="red">linguiça</font>>]
+del -> dlongho -> longusL -> longaoL -> linguicaP
+linguicaP -> linguica [style=dashed]
+
+// longeron
+longOF [label=<<b>Old French</b><br/><font color="red">long</font>>]
+longeronOF [label=<<font color="red">longeron</font><br/><font point-size="12">beam</font>>]
+longeronF [label=<<b>French</b><br/><font color="red">longeron</font>>]
+longeron [label=<<b>Modern<br/>English</b><br/><font color="red">longeron</font>>]
+longusL -> longOF -> longeronOF -> longeronF
+longeronF -> longeron [style=dashed]
+
+// longitude
+longitudoL [label=<<font color="red">longitūdō, longitūdin-</font><br/><font point-size="12">length</font>>]
+longitudeOF [label=<<b>Old French</b><br/><font color="red">longitude</font>>]
+longitudeME [label=<<b>Middle<br/>English</b><br/><font color="red">longitude</font>>]
+longitude [label=<<b>Modern<br/>English</b><br/><font color="red">longitude</font>>]
+longusL -> longitudoL -> longitudeOF
+longitudeOF -> longitudeME [style=dashed]
+longitudeME -> longitude
+
+// longicorn
+kerIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ker-</font><br/><font point-size="12">horn, head</font>> shape=box style="dashed,rounded" URL="ker-horn.svg"]
+cornuL [label=<<b>Latin</b><br/><font color="red">cornū</font><br/><font point-size="12">horn</font>>]
+longicorniaNL [label=<<b>New Latin</b><br/><font color="red">Longicornia</font>>]
+longicorn [label=<<b>Modern<br/>English</b><br/><font color="red">longicorn</font>>]
+kerIE -> cornuL
+{ longusL cornuL } -> longicorniaNL -> longicorn [style=dashed]
+
+// elongate
+eghsIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*eghs</font><br/><font point-size="12">out</font>> shape=box style="dashed,rounded" URL="eghs-out.svg"]
+exL [label=<<b>Latin</b><br/><font color="red">ex-, ē-</font>>]
+elongareL [label=<<b>Late Latin</b><br/><font color="red">ēlongāre, ēlongāt-</font>>]
+elongate [label=<<b>Modern<br/>English</b><br/><font color="red">elongate</font>>]
+eghsIE -> exL
+{ exL longusL } -> elongareL
+elongareL -> elongate [style=dashed]
+
+// eloign
+esloignerOF [label=<<b>Old French</b><br/><font color="red">esloigner</font>>]
+elongenME [label=<<b>Middle<br/>English</b><br/><font color="red">elongen</font>>]
+eloign [label=<<b>Modern<br/>English</b><br/><font color="red">eloign</font>>]
+elongareL -> esloignerOF
+esloignerOF -> elongenME [style=dashed]
+elongenME -> eloign
+
+// longevity
+aiwIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*aiw-</font><br/><font point-size="12">vital force, life,<br/>eternity</font>> shape=box style="dashed,rounded" URL="aiw-life2.svg"]
+aevumL [label=<<b>Latin</b><br/><font color="red">aevum</font><br/><font point-size="12">age</font>>]
+longaevusL [label=<<font color="red">longaevus</font><br/><font point-size="12">ancient</font>>]
+longaevitasL [label=<<b>Late Latin</b><br/><font color="red">longaevitās</font>>]
+longevity [label=<<b>Modern<br/>English</b><br/><font color="red">longevity</font>>]
+aiwIE -> aevumL
+{ longusL aevumL } -> longaevusL -> longaevitasL
+longaevitasL -> longevity [style=dashed]
+
+// lunge
+alongierOF [label=<<font color="red">alongier</font><br/><font point-size="12">to lengthen</font>>]
+allongerF [label=<<b>French</b><br/><font color="red">allonger</font>>]
+allonge [label=<<b>Modern<br/>English</b><br/><font color="red">allonge</font><br/><font point-size="12">(obsolete)</font>>]
+lunge [label=<<font color="red">lunge</font>>]
+longOF -> alongierOF  -> allongerF
+allongerF -> allonge [style=dashed]
+allonge -> lunge
+
+// oblong
+epiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*epi, *opi</font><br/><font point-size="12">near, at, against</font>> shape=box style="dashed,rounded" URL="epi-near.svg"]
+obL [label=<<b>Latin</b><br/><font color="red">ob-</font><br/><font point-size="12">(sense uncertain)</font>>]
+oblongusL [label=<<font color="red">oblongus</font><br/><font point-size="12">oblong</font>>]
+oblongME [label=<<b>Middle<br/>English</b><br/><font color="red">oblong</font>>]
+oblong [label=<<b>Modern<br/>English</b><br/><font color="red">oblong</font>>]
+epiIE -> obL
+{ obL longusL } -> oblongusL
+oblongusL -> oblongME [style=dashed]
+oblongME -> oblong
+
+// prolong
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">(various<br/>prepositions)</font>> shape=box style="dashed,rounded" URL="per-pro2.svg"]
+proL [label=<<b>Latin</b><br/><font color="red">prō-</font><br/><font point-size="12">forth</font>>]
+prolongareL [label=<<b>Late Latin</b><br/><font color="red">prōlongāre</font>>]
+prolong [label=<<b>Modern<br/>English</b><br/><font color="red">prolong</font>>]
+perIE -> proL
+{ proL longusL } -> prolongareL
+prolongareL -> prolong [style=dashed]
+
+// purloin
+loignAN [label=<<b>Anglo-Norman</b><br/><font color="red">loign</font><br/><font point-size="12">far</font>>]
+purAN [label=<<b>Anglo-Norman</b><br/><font color="red">pur-</font><br/><font point-size="12">away</font>>]
+purloignerAN [label=<<font color="red">purloigner</font><br/><font point-size="12">to remove</font>>]
+purloinenME [label=<<b>Middle<br/>English</b><br/><font color="red">purloinen</font>>]
+purloin [label=<<b>Modern<br/>English</b><br/><font color="red">purloin</font>>]
+longusL -> loignAN
+proL -> purAN
+{ purAN loignAN } -> purloignerAN
+purloignerAN -> purloinenME [style=dashed]
+purloinenME -> purloin
+
+// longanimity
+aneIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*anə-</font><br/><font point-size="12">to breathe</font>> shape=box style="dashed,rounded" URL="ane-breathe.svg"]
+animusL [label=<<b>Latin</b><br/><font color="red">animus</font><br/><font point-size="12">mind, reason</font>>]
+longanimisL [label=<<font color="red">longanimis</font><br/><font point-size="12">patient</font>>]
+longanimitasL [label=<<b>Late Latin</b><br/><font color="red">anganimitās</font>>]
+longanimiteOF [label=<<b>Old French</b><br/><font color="red">longanimite</font>>]
+longanimiteME [label=<<b>Middle<br/>English</b><br/><font color="red">longanimite</font>>]
+longanimity [label=<<b>Modern<br/>English</b><br/><font color="red">longanimity</font>>]
+aneIE -> animusL
+{ longusL animusL } -> longanimisL -> longanimitasL -> longanimiteOF
+longanimiteOF -> longanimiteME [style=dashed]
+longanimiteME -> longanimity
+
+{ rank=sink linguica longeron longitude longicorn elongate eloign longevity lunge oblong prolong purloin longanimity }
+{ rank=same dlongho eghsIE kerIE aiwIE epiIE perIE aneIE }
+}
