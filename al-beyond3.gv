@@ -1,0 +1,93 @@
+strict digraph {
+node [shape=none]
+
+al [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*al-</font></td><td><font point-size="16">beyond</font></td></tr></table>> tooltip="Indo-European \"*al-\" beyond" shape=rect style=dashed peripheries=1 margin=.3 URL="al-beyond0.svg"]
+
+// else
+alyo [label=<<font color="red">*alyo-</font><br/><font point-size="12">other of more than two</font>>]
+aljazGmc [label=<<b>Germanic</b><br/><font color="red">*aljaz</font>>]
+ellesOE [label=<<b>Old English</b><br/><font color="red">elles</font><br/><font point-size="12">else,  otherwise</font>>]
+ellesME [label=<<b>Middle<br/>English</b><br/><font color="red">elles</font>>]
+else [label=<<b>Modern<br/>English</b><br/><font color="red">else</font>>]
+al -> alyo -> aljazGmc -> ellesOE -> ellesME -> else
+
+// eldritch
+regIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*reg-</font><br/><font point-size="12">to move in<br/>a straight line</font>> shape=box style="dashed,rounded" URL="reg-rule.svg"] // not made
+rigyoC [label=<<b>Celtic</b><br/><font color="red">*rīg-yo-</font>>]
+rikjaGmc [label=<<b>Germanic</b><br/><font color="red">*rīkja-</font>>]
+riceOE [label=<<b>Old English</b><br/><font color="red">rīce</font><br/><font point-size="12">realm</font>>]
+elOE [label=<<b>Old English</b><br/><font color="red">el-</font><br/><font point-size="12">strange, other</font>>]
+elricheME [label=<<b>Middle<br/>English</b><br/><font color="red">*elriche</font>>]
+eldritch [label=<<b>Modern<br/>English</b><br/><font color="red">eldritch</font>>]
+regIE -> rigyoC
+rigyoC -> rikjaGmc [style=dashed]
+rikjaGmc -> riceOE
+aljazGmc -> elOE
+{ elOE riceOE } -> elricheME -> eldritch
+
+// alias
+aliusL [label=<<b>Latin</b><br/><font color="red">alius</font><br/><font point-size="12">other of more<br/>than two</font>>]
+aliasL [label=<<font color="red">aliās</font><br/><font point-size="12">otherwise, at<br/>another time</font>>]
+alias [label=<<b>Modern<br/>English</b><br/><font color="red">alias</font>>]
+alyo -> aliusL -> aliasL
+aliasL -> alias [style=dashed]
+
+// alibi
+ibiL [label=<<b>Latin</b><br/><font color="red">ibi</font><br/><font point-size="12">there</font>>]
+alibiL [label=<<font color="red">alibi</font><br/><font point-size="12">elsewhere</font>>]
+alibi [label=<<b>Modern<br/>English</b><br/><font color="red">alibi</font>>]
+aliusL -> alibiL
+ibiL -> alibiL [style=dotted arrowhead=onormal]
+alibiL -> alibi [style=dashed]
+
+// alien
+alienusL [label=<<font color="red">aliēnus</font>>]
+alienOF [label=<<b>Old French</b><br/><font color="red">alien</font>>]
+alienME [label=<<b>Middle<br/>English</b><br/><font color="red">alien</font>>]
+alien [label=<<b>Modern<br/>English</b><br/><font color="red">alien</font>>]
+aliusL -> alienusL -> alienOF
+alienOF -> alienME [style=dashed]
+alienME -> alien
+
+// aliquot
+kwoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*kʷo-</font><br/><font point-size="12">who, which</font>> shape=box style="dashed,rounded" URL="kwo-who.svg"]
+quotL [label=<<b>Latin</b><br/><font color="red">quot</font><br/><font point-size="12">how many</font>>]
+aliquotL [label=<<font color="red">aliquot</font><br/><font point-size="12">several</font>>]
+aliquot [label=<<b>Modern<br/>English</b><br/><font color="red">aliquot</font>>]
+kwoIE -> quotL
+{ aliusL quotL } -> aliquotL
+aliquotL -> aliquot [style=dashed]
+
+// allo-
+allosGk [label=<<b>Greek</b><br/><font color="red">allos</font><br/><font point-size="12">other</font>>]
+alloGk [label=<<font color="red">allo-</font>>]
+allo [label=<<b>Modern<br/>English</b><br/><font color="red">allo-</font>>]
+alyo -> allosGk -> alloGk
+alloGk -> allo [style=dashed]
+
+// allegory
+agoreueinGk [label=<<b>Greek</b><br/><font color="red">agoreuein</font><br/><font point-size="12">to speak publicly</font>>]
+allegoreinGk [label=<<font color="red">allēgorein</font><br/><font point-size="12">to interpret<br/>allegorically</font>>]
+allegoriaL [label=<<b>Latin</b><br/><font color="red">allēgoria</font>>]
+allegorieME [label=<<b>Middle<br/>English</b><br/><font color="red">allegorie</font>>]
+allegory [label=<<b>Modern<br/>English</b><br/><font color="red">allegory</font>>]
+{ allosGk agoreueinGk } -> allegoreinGk
+allegoreinGk -> allegoriaL -> allegorieME [style=dashed]
+allegorieME -> allegory
+
+// parallel
+perIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*per</font><br/><font point-size="12">(various<br/>prepositions)</font>> shape=box style="dashed,rounded" URL="per-pre.svg"]
+paraGk [label=<<b>Greek</b><br/><font color="red">para-</font><br/><font point-size="12">beside</font>>]
+allelonGk [label=<<font color="red">allēlōn</font><br/><font point-size="12">of one another</font>>]
+parallelosGk [label=<<font color="red">parallēlos</font>>]
+parallelusL [label=<<b>Latin</b><br/><font color="red">parallēlus</font>>]
+parallel [label=<<b>Modern<br/>English</b><br/><font color="red">parallel</font>>]
+perIE -> paraGk
+allosGk -> allelonGk
+{ paraGk allelonGk } -> parallelosGk
+parallelosGk -> parallelusL -> parallel [style=dashed]
+
+{ rank=sink else eldritch alias alibi alien aliquot allo allegory parallel }
+{ rank=same regIE kwoIE perIE alyo }
+// { rank=same alterL antharaGmc aranaSk rigyoC aliusL allosGk }
+}

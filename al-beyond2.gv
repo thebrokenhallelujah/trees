@@ -1,0 +1,78 @@
+strict digraph {
+node [shape=none]
+
+al [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*al-</font></td><td><font point-size="16">beyond</font></td></tr></table>> tooltip="Indo-European \"*al-\" beyond" shape=rect style=dashed peripheries=1 margin=.3 URL="al-beyond0.svg"]
+
+altero [label=<<font color="red">*al-tero-</font><br/><font point-size="12">other of two</font>>]
+alterL [label=<<b>Latin</b><br/><font color="red">alter</font>>]
+al -> altero -> alterL
+
+// alter
+alterareL [label=<<b>Latin</b><br/><font color="red">alterāre</font>>]
+altererOF [label=<<b>Old French</b><br/><font color="red">alterer</font>>]
+alterenME [label=<<b>Middle<br/>English</b><br/><font color="red">alteren</font>>]
+alter [label=<<b>Modern<br/>English</b><br/><font color="red">alter</font>>]
+alterL -> alterareL -> altererOF
+altererOF -> alterenME [style=dashed]
+alterenME -> alter
+
+// altercate
+altercariL [label=<<font color="red">altercārī, altercāt-</font><br/><font point-size="12">to quarrel</font>>]
+altercate [label=<<b>Modern<br/>English</b><br/><font color="red">altercate</font>>]
+alterL -> altercariL
+altercariL -> altercate [style=dashed]
+
+// alternate
+alternusL [label=<<font color="red">alternus</font><br/><font point-size="12">by turns</font>>]
+alternareL [label=<<font color="red">alternāre, alternāt-</font>>]
+alternate [label=<<b>Modern<br/>English</b><br/><font color="red">alternate</font>>]
+alterL -> alternusL -> alternareL
+alternareL -> alternate [style=dashed]
+
+// altruism
+altruiI [label=<<b>Italian</b><br/><font color="red">altrui</font><br/><font point-size="12">someone else</font>>]
+altruismeF [label=<<b>French</b><br/><font color="red">altruisme</font>>]
+altruism [label=<<b>Modern<br/>English</b><br/><font color="red">altruism</font>>]
+alterL -> altruiI
+altruiI -> altruismeF [style=dashed label="?"]
+altruismeF -> altruism [style=dashed]
+
+// adulterate
+adL [label=<<b>Latin</b><br/><font color="red">ad</font><br/><font point-size="12">to</font>>]
+adalterumL [label=<<font color="red">ad alterum</font><br/><font point-size="12">(approaching) another<br/>(unlawfully)</font>>]
+adulterareL [label=<<font color="red">adulterāre, adulterāt-</font><br/><font point-size="12">to commit adultery with,<br/>to pollute</font>>]
+adulterate [label=<<b>Modern<br/>English</b><br/><font color="red">adulterate</font>>]
+{ adL alterL } -> adalterumL -> adulterareL
+adulterareL -> adulterate [style=dashed]
+
+// adultery
+// adulterL [label=<<font color="red">adulter</font><br/><font point-size="12">adulterer</font>>]
+// adulteriumL [label=<<font color="red">adulterium</font>>]
+adultereOF [label=<<b>Old French</b><br/><font color="red">adultere</font>>]
+adulteryME [label=<<b>Middle<br/>English</b><br/><font color="red">adultery</font>>]
+adultery [label=<<b>Modern<br/>English</b><br/><font color="red">adultery</font>>]
+adulterareL -> adultereOF
+adultereOF -> adulteryME [style=dashed]
+adulteryME -> adultery
+
+// other
+antero [label=<<font color="red">*an-tero-</font><br/><font point-size="12">other (of two)</font>>]
+antharaGmc [label=<<b>Germanic</b><br/><font color="red">*anthara-</font>>]
+otherOE [label=<<b>Old English</b><br/><font color="red">ōther</font>>]
+otherME [label=<<b>Middle<br/>English</b><br/><font color="red">other</font>>]
+other [label=<<b>Modern<br/>English</b><br/><font color="red">other</font>>]
+altero -> antero -> antharaGmc -> otherOE -> otherME -> other
+
+// Aranyaka
+aleno [label=<<font color="red">*al-eno-</font>>]
+aranaSk [label=<<b>Sanskrit</b><br/><font color="red">araṇa-</font><br/><font point-size="12">distant, foreign</font>>]
+aranyamSk [label=<<font color="red">araṇyam</font><br/><font point-size="12">foreign land,<br/>wilderness, forest</font>>]
+aranyakaSk  [label=<<font color="red">āraṇyaka-</font><br/><font point-size="12">of the forest</font>>]
+aranyakamSk [label=<<font color="red">Āraṇyakam</font>>]
+aranyaka [label=<<b>Modern<br/>English</b><br/><font color="red">Aranyaka</font>>]
+al -> aleno -> aranaSk -> aranyamSk -> aranyakaSk -> aranyakamSk
+aranyakamSk -> aranyaka [style=dashed]
+
+{ rank=sink alter altercate alternate altruism adulterate adultery other aranyaka }
+{ rank=same alterL antharaGmc aranaSk }
+}

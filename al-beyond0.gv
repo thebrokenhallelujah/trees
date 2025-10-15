@@ -1,0 +1,13 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+al [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*al-</font></td><td><font point-size="16">beyond</font></td></tr></table>> tooltip="Indo-European \"*al-\" beyond" shape=box peripheries=2 margin=.3]
+
+ol [label=<<font color="red">*ol- </font>derivatives> shape=box style="dashed,rounded" URL="al-beyond1.svg" tooltip="*ol derivatives"]
+altero [label=<<font color="red">*al-tero-, *al-eno</font>> shape=box style="dashed,rounded" URL="al-beyond2.svg" tooltip="*al-tero-, *al-eno-"]
+alyo [label=<<font color="red">*alyo-</font>> shape=box style="dashed,rounded" URL="al-beyond3.svg" tooltip="*alyo-"]
+
+al -> { ol altero alyo }
+
+}

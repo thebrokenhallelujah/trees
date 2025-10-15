@@ -1,0 +1,122 @@
+strict digraph {
+node [shape=none]
+
+al [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*al-</font></td><td><font point-size="16">beyond</font></td></tr></table>> tooltip="Indo-European \"*al-\" beyond" shape=rect style=dashed peripheries=1 margin=.3 URL="al-beyond0.svg"]
+
+ol [label=<<font color="red">*ol-</font>>]
+soIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*so-</font><br/><font point-size="12">this, that</font>> shape=box style="dashed,rounded" URL="so-that.svg"]
+olso [label=<<font color="red">*ol-se-, *ol-so-</font>>]
+al -> ol
+{ ol soIE } -> olso
+ollusL [label=<<b>Archaic Latin</b><br/><font color="red">ollus</font>>]
+illeL [label=<<b>Latin</b><br/><font color="red">ille, illa, illud</font><br/><font point-size="12">yonder, that</font>>]
+olso -> ollusL -> illeL 
+
+// alarm
+adL [label=<<b>Latin</b><br/><font color="red">ad</font><br/><font point-size="12">to</font>>]
+adillaL [label=<<font color="red">ad illa</font>>]
+allaOI [label=<<b>Old Italian</b><br/><font color="red">alla</font><br/><font point-size="12">to the</font>>]
+allarmeOI [label=<<font color="red">all'arme, allarme</font><br/><font point-size="12">to arms</font>>]
+alarmeOF [label=<<b>Old French</b><br/><font color="red">alarme</font>>]
+alarmME [label=<<b>Middle<br/>English</b><br/><font color="red">alarm</font>>]
+alarm [label=<<b>Modern<br/>English</b><br/><font color="red">alarm</font>>]
+{ adL illeL } -> adillaL -> allaOI -> allarmeOI
+allarmeOI -> alarmeOF -> alarmME [style=dashed]
+alarmME  -> alarm
+
+// alert
+regIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*reg-</font><br/><font point-size="12">to move in<br/>a straight line</font>> shape=box style="dashed,rounded" URL="reg-rule.svg"] // not made
+regereL [label=<<b>Latin</b><br/><font color="red">regere</font><br/><font point-size="12">to lead straight,<br/>to guide</font>>]
+eghsIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*eghs</font><br/><font point-size="12">out</font>> shape=box style="dashed,rounded" URL="eghs-out.svg"]
+exL [label=<<b>Latin</b><br/><font color="red">ex-, ēre-</font>>]
+erigereL [label=<<font color="red">ērigere</font><br/><font point-size="12">to set up</font>>]
+ergereI [label=<<b>Italian</b><br/><font color="red">ergere</font><br/><font point-size="12">to raise</font>>]
+ertaI [label=<<font color="red">erta</font><br/><font point-size="12">lookout</font>>]
+allertaI [label=<<b>Italian</b><br/><font color="red">all' erta</font><br/><font point-size="12">on the lookout</font>>]
+alerteF [label=<<b>French</b><br/><font color="red">alerte</font>>]
+alert [label=<<b>Modern<br/>English</b><br/><font color="red">alert</font>>]
+regIE -> regereL
+eghsIE -> exL
+{ exL regereL } -> erigereL -> ergereI -> ertaI
+{ allaOI ertaI } -> allertaI
+allertaI -> alerteF -> alert [style=dashed]
+
+// alfresco
+ilI [label=<<b>Italian</b><br/><font color="red">il</font><br/><font point-size="12">the</font>>]
+aI [label=<<b>Italian</b><br/><font color="red">a</font><br/><font point-size="12">to, in</font>>]
+alfrescoI [label=<<font color="red">al fresco</font><br/><font point-size="12">in the fresh (air)</font>>]
+alfresco [label=<<b>Modern<br/>English</b><br/><font color="red">alfresco</font>>]
+illeL -> ilI
+adL -> aI
+{ ilI aI } -> alfrescoI
+alfrescoI -> alfresco [style=dashed]
+
+// alligator
+elS [label=<<b>Spanish</b><br/><font color="red">el</font><br/><font point-size="12">the</font>>]
+ellagartoS [label=<<font color="red">el lagarto</font><br/><font point-size="12">the lizard</font>>]
+alligator [label=<<b>Modern<br/>English</b><br/><font color="red">alligator</font>>]
+illeL -> elS -> ellagartoS
+ellagartoS -> alligator [style=dashed]
+
+// voila
+weidIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*weid-</font><br/><font point-size="12">to see</font>> shape=box style="dashed,rounded" URL="weid-see3.svg"]
+videreL [label=<<b>Latin</b><br/><font color="red">vidēre</font>>]
+voirOF [label=<<b>Old French</b><br/><font color="red">voir</font>>]
+voirF [label=<<b>French</b><br/><font color="red">voir</font>>]
+laOF [label=<<b>Old French</b><br/><font color="red">la, lai</font>>]
+laF [label=<<b>French</b><br/><font color="red">là</font><br/><font point-size="12">there</font>>]
+voilaF [label=<<font color="red">voi là, voilà</font><br/><font point-size="12">look there</font>>]
+voila [label=<<b>Modern<br/>English</b><br/><font color="red">voilà</font>>]
+weidIE -> videreL -> voirOF -> voirF
+illeL -> laOF -> laF
+{ voirF laF } -> voilaF
+voilaF -> voila [style=dashed]
+
+// hoopla
+houplaF [label=<<font color="red">houp-là</font><br/><font point-size="12">upsy-daisy!</font>>]
+hoopla [label=<<b>Modern<br/>English</b><br/><font color="red">hoopla</font>>]
+laF -> houplaF
+houplaF -> hoopla [style=dashed]
+
+// lagniappe
+yapaQ [label=<<font color="green"><b>Quechua</b></font><br/><font color="red">yapa</font><br/><font point-size="12">gift</font>>]
+laS [label=<<b>Spanish</b><br/><font color="red">la</font><br/><font point-size="12">the</font>>]
+lanapaS [label=<<b>American Spanish</b><br/><font color="red">la ñapa</font><br/><font point-size="12">the gift</font>>]
+lagniappeF [label=<<b>Louisiana French</b><br/><font color="red">lagniappe</font>>]
+lagniappe [label=<<b>Modern<br/>English</b><br/><font color="red">lagniappe</font>>]
+illeL -> laS -> lanapaS
+yapaQ -> lanapaS -> lagniappeF -> lagniappe [style=dashed]
+
+ols [label=<<font color="red">*ol-s, *ol-tero-</font>>]
+ultraL [label=<<b>Latin</b><br/><font color="red">uls, *ulter, ultrā</font><br/><font point-size="12">beyond</font>>]
+ol -> ols -> ultraL
+
+// outre
+outreOF [label=<<b>Old French</b><br/><font color="red">outre</font>>]
+outrerOF [label=<<font color="red">outrer</font><br/><font point-size="12">to pass someone</font><br/><font color="red">outré</font><br/><font point-size="12">defeated</font>>]
+outreF [label=<<b>French</b><br/><font color="red">outré</font>>]
+outre [label=<<b>Modern<br/>English</b><br/><font color="red">outré</font>>]
+ultraL -> outreOF -> outrerOF -> outreF
+outreF -> outre [style=dashed]
+
+// ulterior
+ulteriorL [label=<<font color="red">ulterior</font><br/><font point-size="12">farther</font>>]
+ulterior [label=<<b>Modern<br/>English</b><br/><font color="red">ulterior</font>>]
+ultraL -> ulteriorL
+ulteriorL -> ulterior [style=dashed]
+
+// ultimate
+ultimusL [label=<<font color="red">ultimus</font><br/><font point-size="12">last</font>>]
+ultimareL [label=<<font color="red">ultimāre</font><br/><font point-size="12">to come to an end</font>>]
+ultimatusL [label=<<font color="red">ultimātus</font><br/><font point-size="12">ended</font>>]
+ultimate [label=<<b>Modern<br/>English</b><br/><font color="red">ultimate</font>>]
+ultraL -> ultimusL -> ultimareL -> ultimatusL
+ultimatusL -> ultimate [style=dashed]
+
+// ultra
+ultra [label=<<b>Modern<br/>English</b><br/><font color="red">ultra-</font>>]
+ultraL -> ultra [style=dashed]
+
+{ rank=sink alarm alert alfresco alligator voila hoopla lagniappe outre ultimate ulterior ultra }
+{ rank=same soIE regIE eghsIE weidIE }
+}
