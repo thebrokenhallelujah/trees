@@ -1,0 +1,22 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+ker [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ker-</font></td><td><font point-size="16">horn, head</font></td></tr></table>> tooltip="Indo-European \"*ker-\" horn, head" shape=box peripheries=2 margin=.3]
+
+kr [label=<<table border="0" cellpadding="5">
+<tr><td><font color="red">*kr̥-</font></td></tr>
+<tr><td><font color="red">*koru-</font></td></tr>
+</table>> shape=box style="dashed,rounded" URL="ker-horn1.svg" tooltip="*kr̥-, *koru-"]
+
+keru [label=<<table border="0" cellpadding="5">
+<tr><td><font color="red">*keru-</font></td></tr>
+<tr><td><font color="red">*kr̥ə-</font></td></tr>
+<tr><td><font color="red">*kr̥əs-no-</font></td></tr>
+<tr><td><font color="red">*krei-</font></td></tr>
+</table>> shape=box style="dashed,rounded" URL="ker-horn3.svg" tooltip="*keru-, *kr̥ə-, *kr̥əs-no-, *krei-"]
+
+keres [label=<<font color="red">*kerəs-</font>> shape=box style="dashed,rounded" URL="ker-horn4.svg" tooltip="*kerəs-"]
+
+ker -> { kr keru keres }
+}

@@ -30,7 +30,7 @@ longitudeOF -> longitudeME [style=dashed]
 longitudeME -> longitude
 
 // longicorn
-kerIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ker-</font><br/><font point-size="12">horn, head</font>> shape=box style="dashed,rounded" URL="ker-horn.svg"]
+kerIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ker-</font><br/><font point-size="12">horn, head</font>> shape=box style="dashed,rounded" URL="ker-horn2.svg"]
 cornuL [label=<<b>Latin</b><br/><font color="red">cornū</font><br/><font point-size="12">horn</font>>]
 longicorniaNL [label=<<b>New Latin</b><br/><font color="red">Longicornia</font>>]
 longicorn [label=<<b>Modern<br/>English</b><br/><font color="red">longicorn</font>>]

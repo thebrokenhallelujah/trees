@@ -1,0 +1,74 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+ker [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ker-</font></td><td><font point-size="16">horn, head</font></td></tr></table>> tooltip="Indo-European \"*ker-\" horn, head" shape=rect style=dashed peripheries=1 margin=.3 URL="ker-horn0.svg"]
+
+// horn
+kr [label=<<font color="red">*kr̥-</font>>]
+krno [label=<<font color="red">*kr̥-no-</font>>]
+hurnazGc [label=<<b>Germanic</b><br/><font color="red">*hurnaz</font>>]
+hornOE [label=<<b>Old English</b><br/><font color="red">horn</font>>]
+hornME [label=<<b>Middle<br/>English</b><br/><font color="red">horn</font>>]
+horn [label=<<b>Modern<br/>English</b><br/><font color="red">horn</font>>]
+ker -> kr -> krno -> hurnazGc -> hornOE -> hornME -> horn
+
+// alpenhorn
+hornOHG [label=<<b>Old High<br/>German</b><br/><font color="red">horn</font>>]
+hornMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">horn</font>>]
+hornGm [label=<<b>German</b><br/><font color="red">Horn</font>>]
+alpenGm [label=<<b>German</b><br/><font color="red">Alpen</font><br/><font point-size="12">Alps</font>>]
+alpenhornGm [label=<<font color="red">Alpenhorn</font>>]
+alpenhorn [label=<<b>Modern<br/>English</b><br/><font color="red">alpenhorn</font>>]
+hurnazGc -> hornOHG -> hornMHG -> hornGm
+{ alpenGm hornGm } -> alpenhornGm
+alpenhornGm -> alpenhorn [style=dashed]
+
+// althorn
+altusL [label=<<b>Latin</b><br/><font color="red">altus</font><br/><font point-size="12">high</font>>]
+altoI [label=<<b>Italian</b><br/><font color="red">alto</font><br/><font point-size="12">alto</font>>]
+altGm [label=<<b>German</b><br/><font color="red">alt</font>>]
+althornGm [label=<<font color="red">Althorn</font>>]
+althorn [label=<<b>Modern<br/>English</b><br/><font color="red">althorn</font>>]
+altusL -> altoI
+altoI -> altGm [style=dashed]
+{ altGm hornGm } -> althornGm
+althornGm -> althorn [style=dashed]
+
+// flugelhorn
+pleuIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*pleu-</font><br/><font point-size="12">to flow</font>> shape=box style="dashed,rounded" URL="pleu-flow.svg"] // not made
+flugilazGc [label=<<b>Germanic</b><br/><font color="red">*flugilaz</font>>]
+vlugelMHG [label=<<b>Middle High<br/>German</b><br/><font color="red">vlügel</font><br/><font point-size="12">wing</font>>]
+flugelGm [label=<<b>German</b><br/><font color="red">Flügel</font><br/><font point-size="12">flank</font>>]
+flugelhornGm [label=<<font color="red">Flügelhorn</font>>]
+flugelhorn [label=<<b>Modern<br/>English</b><br/><font color="red">flugelhorn</font>>]
+pleuIE -> flugilazGc -> vlugelMHG -> flugelGm
+{ flugelGm hornGm } -> flugelhornGm
+flugelhornGm -> flugelhorn [style=dashed]
+
+// corymb
+koru [label=<<font color="red">*koru-</font>>]
+korumbosGk [label=<<b>Greek</b><br/><font color="red">korumbos</font><br/><font point-size="12">head</font>>]
+corymbusL [label=<<b>Latin</b><br/><font color="red">corymbus</font><br/><font point-size="12">flower bunch</font>>]
+corymbeF [label=<<b>French</b><br/><font color="red">corymbe</font>>]
+corymb [label=<<b>Modern<br/>English</b><br/><font color="red">corymb</font>>]
+ker -> koru -> korumbosGk
+korumbosGk -> corymbusL -> corymbeF -> corymb [style=dashed]
+
+// corydalis
+korudo [label=<<font color="red">*koru-do-</font>>]
+korudosGk [label=<<b>Greek</b><br/><font color="red">korudos</font><br/><font point-size="12">crested lark</font>>]
+korudallisGk [label=<<font color="red">korudallis</font>>]
+corydalisNL [label=<<b>New Latin</b><br/><font color="red">Corydalis</font>>]
+corydalis [label=<<b>Modern<br/>English</b><br/><font color="red">corydalis</font>>]
+koru -> korudo -> korudosGk -> korudallisGk
+korudallisGk -> corydalisNL -> corydalis [style=dashed]
+
+// L cornu
+kornuI [label=<<b>Italic</b><br/><font color="red">*kor-nu</font>>]
+cornuL [label=<<b>Latin</b><br/><font color="red">cornū</font><br/><font point-size="12">horn</font>> shape=box style="dashed,rounded" URL="ker-horn2.svg"]
+{ krno koru } -> kornuI -> cornuL
+
+{ rank=sink horn alpenhorn althorn flugelhorn corymb corydalis }
+{ rank=same pleuIE }
+}

@@ -1,0 +1,120 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+ker [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ker-</font></td><td><font point-size="16">horn, head</font></td></tr></table>> tooltip="Indo-European \"*ker-\" horn, head" shape=rect style=dashed peripheries=1 margin=.3 URL="ker-horn0.svg"]
+
+// kerato-
+keres [label=<<font color="red">*kerəs-</font>>]
+kerasGk [label=<<b>Greek</b><br/><font color="red">keras</font><br/><font point-size="12">horn</font>>]
+keratoGk [label=<<font color="red">kerāto-</font>>]
+kerato [label=<<b>Modern<br/>English</b><br/><font color="red">kerato-</font>>]
+ker -> keres -> kerasGk -> keratoGk
+keratoGk -> kerato [style=dashed]
+
+// keratin
+keratin [label=<<b>Modern<br/>English</b><br/><font color="red">keratin</font>>]
+kerasGk -> keratin [style=dashed]
+
+// carat
+karationGk [label=<<font color="red">kerātion</font><br/><font point-size="12">a weight</font>>]
+qiratA [label=<<font color="green"><b>Arabic</b></font><br/><font color="red">qīrāṭ</font><br/><font point-size="12">weight of four grains</font>>]
+quaratusL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">quarātus</font>>]
+caratOF [label=<<b>Old French</b><br/><font color="red">carat</font>>]
+caratME [label=<<b>Middle<br/>English</b><br/><font color="red">carat</font>>]
+carat [label=<<b>Modern<br/>English</b><br/><font color="red">carat</font>>]
+kerasGk -> karationGk
+karationGk -> qiratA -> quaratusL [style=dashed]
+quaratusL -> caratOF
+caratOF -> caratME [style=dashed]
+caratME -> carat
+
+// cerastes
+kerastesGk [label=<<font color="red">kerastēs</font><br/><font point-size="12">horned serpent</font>>]
+cerastesL [label=<<b>Latin</b><br/><font color="red">cerastēs</font>>]
+cerastesME [label=<<b>Middle<br/>English</b><br/><font color="red">cerastes</font>>]
+cerastes [label=<<b>Modern<br/>English</b><br/><font color="red">cerastes</font>>]
+kerasGk ->  kerastesGk
+kerastesGk -> cerastesL -> cerastesME [style=dashed]
+cerastesME -> cerastes
+
+// ceratodus
+dentIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dent-</font><br/><font point-size="12">tooth</font>> shape=box style="dashed,rounded" URL="dent-tooth.svg"] // not made
+odousGk [label=<<b>Greek</b><br/><font color="red">odous</font>>]
+ceratodusNL [label=<<b>New Latin</b><br/><font color="red">Cerātodūs</font>>]
+ceratodus [label=<<b>Modern<br/>English</b><br/><font color="red">ceratodus</font>>]
+dentIE -> odousGk
+{ kerasGk odousGk } -> ceratodusNL -> ceratodus [style=dashed]
+
+// ceratopsian
+okwIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*okʷ-</font><br/><font point-size="12">to see</font>> shape=box style="dashed,rounded" URL="okw-see.svg"] // not made
+opsGk [label=<<b>Greek</b><br/><font color="red">ōps</font><br/><font point-size="12">eye, face</font>>]
+ceratopsiaNL [label=<<b>New Latin</b><br/><font color="red">Cerātōpsia</font>>]
+ceratopsian [label=<<b>Modern<br/>English</b><br/><font color="red">ceratopsian</font>>]
+okwIE -> opsGk
+{ kerasGk opsGk } -> ceratopsiaNL -> ceratopsian [style=dashed]
+
+// Monoceros (constellation)
+menIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*men-</font><br/><font point-size="12">small, isolated</font>> shape=box style="dashed,rounded" URL="men-small.svg"] // not made
+monoGk [label=<<b>Greek</b><br/><font color="red">mono-</font><br/><font point-size="12">one, single</font>>]
+monokerosGk [label=<<font color="red">monokerōs</font>>]
+monoceros [label=<<b>Modern<br/>English</b><br/><font color="red">Monoceros</font>>]
+menIE -> monoGk
+{ monoGk kerasGk } -> monokerosGk
+monokerosGk -> monoceros [style=dashed]
+
+// rhinoceros
+rhinoGk [label=<<b>Greek</b><br/><font color="red">rhīno-</font><br/><font point-size="12">nose</font>>]
+rhinokerosGk [label=<<font color="red">rhīnokerōs</font>>]
+rhinocerosL [label=<<b>Latin</b><br/><font color="red">rhīnocerōs</font>>]
+rinocerosME [label=<<b>Middle<br/>English</b><br/><font color="red">rinoceros</font>>]
+rhinoceros [label=<<b>Modern<br/>English</b><br/><font color="red">rhinoceros</font>>]
+{ rhinoGk kerasGk } -> rhinokerosGk
+rhinokerosGk -> rhinocerosL -> rinocerosME [style=dashed]
+rinocerosME -> rhinoceros
+
+// triceratops
+treiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*trei-</font><br/><font point-size="12">three</font>> shape=box style="dashed,rounded" URL="trei-three2.svg"]
+triGk [label=<<b>Greek</b><br/><font color="red">tri-</font>>]
+triceratopsNL [label=<<b>New Latin</b><br/><font color="red">Tricerātōps</font>>]
+triceratops [label=<<b>Modern<br/>English</b><br/><font color="red">triceratops</font>>]
+treiIE -> triGk
+{ triGk kerasGk opsGk } -> triceratopsNL -> triceratops [style=dashed]
+
+// sirdar
+sarahA [label=<<b>Avestan</b><br/><font color="red">sarah-</font><br/><font point-size="12">head</font>>]
+sarP [label=<<b>Persian</b><br/><font color="red">sar</font>>]
+darP [label=<<b>Persian</b><br/><font color="red">-dār</font><br/><font point-size="12">holder</font>>]
+sardarP [label=<<font color="red">sardār</font>>]
+sardarH [label=<<b>Hindi</b><br/><font color="red">sardār</font>>]
+sirdar [label=<<b>Modern<br/>English</b><br/><font color="red">sirdar</font>>]
+keres -> sarahA
+sarahA -> sarP
+{ sarP darP } -> sardarP
+sardarP -> sardarH -> sirdar [style=dashed]
+
+// tarboosh
+pushP [label=<<b>Persian</b><br/><font color="red">pūsh-</font><br/><font point-size="12">to don</font>>]
+sarpushP [label=<<font color="red">sarpūsh</font><br/><font point-size="12">headdress</font>>]
+terposhT [label=<<font color="green"><b>Turkish</b></font><br/><font color="red">terposh</font>>]
+tarbusA [label=<<font color="green"><b>Egyptian Arabic</b></font><br/><font color="red">ṭarbūš</font>>]
+tarboosh [label=<<b>Modern<br/>English</b><br/><font color="red">tarboosh</font>>]
+{ sarP pushP } -> sarpushP
+sarpushP -> terposhT -> tarbusA -> tarboosh [style=dashed]
+
+// cerebrum
+keresro [label=<<font color="red">*kerəs-ro-</font>>]
+cerebrumL [label=<<b>Latin</b><br/><font color="red">cerebrum</font><br/><font point-size="12">brain</font>>]
+cerebrum [label=<<b>Modern<br/>English</b><br/><font color="red">cerebrum</font>>]
+keres -> keresro -> cerebrumL
+cerebrumL -> cerebrum [style=dashed]
+
+// cerebellum
+cerebellumL [label=<<b>Latin</b><br/><font color="red">cerebellum</font><br/><font point-size="12">little brain</font>>]
+cerebellum [label=<<b>Modern<br/>English</b><br/><font color="red">cerebellum</font>>]
+cerebrumL -> cerebellumL
+cerebellumL -> cerebellum [style=dashed]
+
+{ rank=sink keratin kerato carat cerastes ceratodus ceratopsian monoceros rhinoceros triceratops sirdar tarboosh cerebellum cerebrum }
+{ rank=same dentIE okwIE menIE treiIE }
+}

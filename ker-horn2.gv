@@ -1,0 +1,111 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+ker [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ker-</font></td><td><font point-size="16">horn, head</font></td></tr></table>> tooltip="Indo-European \"*ker-\" horn, head" shape=rect style=dashed peripheries=1 margin=.3 URL="ker-horn0.svg"]
+
+kr [label=<<font color="red">*kr̥-</font>>]
+krno [label=<<font color="red">*kr̥-no-</font>>]
+koru [label=<<font color="red">*koru-</font>>]
+ker -> { kr koru }
+kr -> krno
+kornuI [label=<<b>Italic</b><br/><font color="red">*kor-nu</font>>]
+cornuL [label=<<b>Latin</b><br/><font color="red">cornū</font><br/><font point-size="12">horn</font>>]
+{ krno koru } -> kornuI -> cornuL
+
+// corn
+corneOF [label=<<b>Old French</b><br/><font color="red">corne</font>>]
+corneME [label=<<b>Middle<br/>English</b><br/><font color="red">corne</font>>]
+corn [label=<<b>Modern<br/>English</b><br/><font color="red">corn</font><br/><font point-size="12">toe callus</font>>]
+cornuL -> corneOF
+corneOF -> corneME [style=dashed]
+corneME -> corn
+
+// cornea
+corneusL [label=<<font color="red">corneus</font><br/><font point-size="12">horny</font>>]
+corneaL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">cornea (tēla)</font><br/><font point-size="12">horny (tissue)</font>>]
+cornea [label=<<b>Modern<br/>English</b><br/><font color="red">cornea</font>>]
+cornuL -> corneusL -> corneaL
+corneaL -> cornea [style=dashed]
+
+// corneous
+corneous [label=<<b>Modern<br/>English</b><br/><font color="red">corneous</font>>]
+corneusL -> corneous [style=dashed]
+
+// corner
+cornerAN [label=<<b>Anglo-Norman</b><br/><font color="red">corner</font>>]
+cornerME [label=<<b>Middle<br/>English</b><br/><font color="red">corner</font>>]
+corner [label=<<b>Modern<br/>English</b><br/><font color="red">corner</font>>]
+corneOF -> cornerAN
+cornerAN -> cornerME [style=dashed]
+cornerME -> corner
+
+// cornet
+cornetOF [label=<<font color="red">cornet</font>>]
+cornetME [label=<<b>Middle<br/>English</b><br/><font color="red">cornet</font>>]
+cornet [label=<<b>Modern<br/>English</b><br/><font color="red">cornet</font>>]
+corneOF -> cornetOF 
+cornetOF -> cornetME [style=dashed]
+cornetME -> cornet
+
+// corniculate
+corniculumL [label=<<font color="red">corniculum</font><br/><font point-size="12">little horn</font>>]
+corniculatusL [label=<<font color="red">corniculātus</font><br/><font point-size="12">corniculate</font>>]
+corniculate [label=<<b>Modern<br/>English</b><br/><font color="red">corniculate</font>>]
+cornuL -> corniculumL -> corniculatusL
+corniculatusL -> corniculate
+
+// bicornuate
+dwoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dwo-</font><br/><font point-size="12">two</font>> shape=box style="dashed,rounded" URL="dwo-two3.svg"]
+biL [label=<<b>Latin</b><br/><font color="red">bi-</font>>]
+bicornuate [label=<<b>Modern<br/>English</b><br/><font color="red">bicornuate<br/>bicorn</font>>]
+dwoIE -> biL
+{ biL cornuL } -> bicornuate
+
+// Capricorn
+caperL [label=<<b>Latin</b><br/><font color="red">caper, capr-</font><br/><font point-size="12">goat</font>>]
+capricornusL [label=<<font color="red">Capricornus</font>>]
+capricorn [label=<<b>Modern<br/>English</b><br/><font color="red">Capricorn</font>>]
+{ caperL cornuL } -> capricornusL
+capricornusL -> capricorn [style=dashed]
+
+// lamellicorn
+lamellaL [label=<<b>Latin</b><br/><font color="red">lāmella</font><br/><font point-size="12">thin plate</font>>]
+lamellicorniaNL [label=<<b>New Latin</b><br/><font color="red">Lāmellicornia</font>>]
+lamellicorn [label=<<b>Modern<br/>English</b><br/><font color="red">lamellicorn</font>>]
+{ lamellaL cornuL } -> lamellicorniaNL -> lamellicorn [style=dashed]
+
+// longicorn
+delIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*del-</font><br/><font point-size="12">long</font>> shape=box style="dashed,rounded" URL="del-long1.svg"]
+dlonghoIE [label=<<font color="red">*dlon-gho-</font>>]
+longusL [label=<<b>Latin</b><br/><font color="red">longus</font>>]
+longicorniaNL [label=<<b>New Latin</b><br/><font color="red">Longicornia</font>>]
+longicorn [label=<<b>Modern<br/>English</b><br/><font color="red">longicorn</font>>]
+delIE -> dlonghoIE -> longusL
+{ longusL cornuL } -> longicorniaNL -> longicorn [style=dashed]
+
+//  tricorn
+treiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*trei, *treyes</font><br/><font point-size="12">three</font>> shape=box style="dashed,rounded" URL="trei-three2.svg"]
+triL [label=<<b>Latin</b><br/><font color="red">tri-</font>>]
+tricornisL [label=<<font color="red">tricornis</font>>]
+tricorneF [label=<<b>French</b><br/><font color="red">tricorne</font>>]
+tricorn [label=<<b>Modern<br/>English</b><br/><font color="red">tricorn</font>>]
+treiIE -> triL
+{ triL cornuL } -> tricornisL -> tricorneF
+tricorneF -> tricorn [style=dashed]
+
+// unicorn
+oinoIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*oi-no-</font><br/><font point-size="12">one</font>> shape=box style="dashed,rounded" URL="oino-one2.svg"]
+unusL [label=<<b>Latin</b><br/><font color="red">ūnus</font>>]
+unicornisL [label=<<font color="red">ūnicornis</font>>]
+unicorneOF [label=<<b>Old French</b><br/><font color="red">unicorne</font>>]
+unicorneME [label=<<b>Middle<br/>English</b><br/><font color="red">unicorne</font>>]
+unicorn [label=<<b>Modern<br/>English</b><br/><font color="red">unicorn</font>>]
+oinoIE -> unusL
+{ unusL cornuL } -> unicornisL -> unicorneOF
+unicorneOF -> unicorneME [style=dashed]
+unicorneME -> unicorn
+
+{ rank=sink corn cornea corneous corner cornet corniculate bicornuate capricorn lamellicorn longicorn tricorn unicorn }
+{ rank=same dwoIE delIE treiIE oinoIE krno }
+}

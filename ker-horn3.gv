@@ -1,0 +1,150 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+ker [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*ker-</font></td><td><font point-size="16">horn, head</font></td></tr></table>> tooltip="Indo-European \"*ker-\" horn, head" shape=rect style=dashed peripheries=1 margin=.3 URL="ker-horn0.svg"]
+
+// cervine
+keru [label=<<font color="red">*keru-</font>>]
+kerwo [label=<<font color="red">*kerw-o-</font><br/><font point-size="12">having horns</font>>]
+cervusL [label=<<b>Latin</b><br/><font color="red">cervus</font><br/><font point-size="12">deer</font>>]
+cervinusL [label=<<font color="red">cervīnus</font><br/><font point-size="12">deer-like</font>>]
+cervine [label=<<b>Modern<br/>English</b><br/><font color="red">cervine</font>>]
+ker -> keru -> kerwo -> cervusL -> cervinusL
+cervinusL -> cervine [style=dashed]
+
+// serval
+cervalisL [label=<<b>Late Latin</b><br/><font color="red">cervālis</font>>]
+cervalP [label=<<b>Portuguese</b><br/><font color="red">(lobo) cerval</font><br/><font point-size="12">deerlike (wolf), lynx</font>>]
+servalF [label=<<b>French</b><br/><font color="red">serval</font>>]
+serval [label=<<b>Modern<br/>English</b><br/><font color="red">serval</font>>]
+cervusL -> cervalisL -> cervalP
+cervalP -> servalF -> serval [style=dashed]
+
+// cervix
+cervixL [label=<<b>Latin</b><br/><font color="red">cervix</font><br/><font point-size="12">neck</font>>]
+cervix [label=<<b>Modern<br/>English</b><br/><font color="red">cervix</font>>]
+kerwo -> cervixL
+cervixL -> cervix [style=dashed]
+
+// hart
+kerudo [label=<<font color="red">*keru-do-</font>>]
+herutazGc [label=<<b>Germanic</b><br/><font color="red">*herutaz</font>>]
+heorotOE [label=<<b>Old English</b><br/><font color="red">heorot</font>>]
+hartME [label=<<b>Middle<br/>English</b><br/><font color="red">hart</font>>]
+hart [label=<<b>Modern<br/>English</b><br/><font color="red">hart</font>>]
+ker -> kerudo -> herutazGc -> heorotOE -> hartME -> hart
+
+// hartebeest
+hertMD [label=<<b>Middle<br/>Dutch</b><br/><font color="red">hert</font>>]
+beestMD [label=<<b>Middle<br/>Dutch</b><br/><font color="red">beest</font><br/><font point-size="12">beast</font>>]
+hertebeestMD [label=<<font color="red">hertebeest</font>>]
+hartebeestA [label=<<b>Afrikaans</b><br/><font color="red">hartebeest</font><br/><font point-size="12">(obsolete)</font>>]
+hartebeest [label=<<b>Modern<br/>English</b><br/><font color="red">hartebeest</font>>]
+herutazGc -> hertMD
+{ hertMD beestMD } -> hertebeestMD -> hartebeestA
+hartebeestA -> hartebeest [style=dashed]
+
+// charivari
+kre [label=<<font color="red">*kr̥ə-</font>>]
+kareGk [label=<<b>Greek</b><br/><font color="red">karē, karā</font><br/><font point-size="12">head</font>>]
+gwereIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*gʷerə-</font><br/><font point-size="12">heavy</font>> shape=box style="dashed,rounded" URL="gwere-heavy.svg"]
+barusGk [label=<<b>Greek</b><br/><font color="red">barus</font>>]
+karebariaGk [label=<<font color="red">karēbariā</font><br/><font point-size="12">headache</font>>]
+caribariaL [label=<<b>Late Latin</b><br/><font color="red">carībaria</font>>]
+charivariOF [label=<<b>Old French</b><br/><font color="red">charivari</font>>]
+charivariF [label=<<b>French</b><br/><font color="red">charivari</font>>]
+charivari [label=<<b>Modern<br/>English</b><br/><font color="red">charivari<br/>shivaree</font>>]
+ker -> kre -> kareGk
+gwereIE -> barusGk
+{ kareGk barusGk } -> karebariaGk
+karebariaGk -> caribariaL [style=dashed]
+caribariaL -> charivariOF [label="?" decorate=true]
+charivariOF -> charivariF
+charivariF -> charivari [style=dashed]
+
+// cheer
+caraL [label=<<b>Late Latin</b><br/><font color="red">cara</font>>]
+chiereOF [label=<<b>Old French</b><br/><font color="red">chiere</font><br/><font point-size="12">face</font>>]
+chereME [label=<<b>Middle<br/>English</b><br/><font color="red">chere</font><br/><font point-size="12">expression, mood</font>>]
+cheer [label=<<b>Modern<br/>English</b><br/><font color="red">cheer</font>>]
+kareGk -> caraL [style=dashed]
+caraL -> chiereOF
+chiereOF -> chereME [style=dashed]
+chereME -> cheer
+
+// carotid
+karounGk [label=<<b>Greek</b><br/><font color="red">karoun</font><br/><font point-size="12">to stupefy, be stupefied</font>>]
+karotidesGk [label=<<font color="red">karōtides</font><br/><font point-size="12">carotid arteries</font>>]
+carotideF [label=<<b>French</b><br/><font color="red">carotide</font>>]
+carotid [label=<<b>Modern<br/>English</b><br/><font color="red">carotid</font>>]
+kre -> karounGk -> karotidesGk
+karotidesGk -> carotideF -> carotid [style=dashed]
+
+// carrot
+karotonGk [label=<<b>Greek</b><br/><font color="red">karōton</font><br/><font point-size="12">carrot (from its<br/>hornlike shape)</font>>]
+carotaL [label=<<b>Latin</b><br/><font color="red">carōta</font>>]
+garroiteOF [label=<<b>Old French</b><br/><font color="red">garroite</font>>]
+carotteF [label=<<b>French</b><br/><font color="red">carotte</font>>]
+carrot [label=<<b>Modern<br/>English</b><br/><font color="red">carrot</font>>]
+kre -> karotonGk
+karotonGk -> carotaL [style=dashed]
+carotaL -> garroiteOF -> carotteF
+carotteF -> carrot [style=dashed]
+
+// carotene
+karotinGm [label=<<b>German</b><br/><font color="red">Karotin</font>>]
+carotene [label=<<b>Modern<br/>English</b><br/><font color="red">carotene</font>>]
+carotaL -> karotinGm -> carotene [style=dashed]
+
+// cranium
+kresno [label=<<font color="red">*kr̥əs-no-</font>>]
+kranionGk [label=<<b>Greek</b><br/><font color="red">krānion</font><br/><font point-size="12">skull</font>>]
+craniumL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">crānium</font>>]
+craneumME [label=<<b>Middle<br/>English</b><br/><font color="red">craneum</font>>]
+cranium [label=<<b>Modern<br/>English</b><br/><font color="red">cranium</font>>]
+ker -> kresno -> kranionGk
+kranionGk -> craniumL -> craneumME [style=dashed]
+craneumME -> cranium
+
+// migraine
+hemiGk [label=<<b>Greek</b><br/><font color="red">hēmi-</font><br/><font point-size="12">half</font>>]
+hemikraniaGk [label=<<b>Greek</b><br/><font color="red">hēmikrāniā</font>>]
+hemicraniaL [label=<<b>Late Latin</b><br/><font color="red">hēmicrānia</font>>]
+migraineOF [label=<<b>Old French</b><br/><font color="red">migraine</font>>]
+migraineME [label=<<b>Middle<br/>English</b><br/><font color="red">migraine</font>>]
+migraine [label=<<b>Modern<br/>English</b><br/><font color="red">migraine</font>>]
+{ hemiGk kranionGk } -> hemikraniaGk
+hemikraniaGk -> hemicraniaL [style=dashed]
+hemicraniaL -> migraineOF
+migraineOF -> migraineME [style=dashed]
+migraineME -> migraine
+
+// olecranon
+oleneGk [label=<<b>Greek</b><br/><font color="red">ōlenē</font><br/><font point-size="12">elbow</font>>]
+olekranonGk [label=<<font color="red">ōlekrānon</font>>]
+olecranon [label=<<b>Modern<br/>English</b><br/><font color="red">olecranon</font>>]
+{ oleneGk kranionGk } -> olekranonGk
+olekranonGk -> olecranon [style=dashed]
+
+// hornet
+hurznutaGc [label=<<b>Germanic</b><br/><font color="red">*hurznuta-</font>>]
+hyrnetOE [label=<<b>Old English</b><br/><font color="red">hyrnet</font>>]
+hernetME [label=<<b>Middle<br/>English</b><br/><font color="red">hernet<br/>hornet</font>>]
+hornet [label=<<b>Modern<br/>English</b><br/><font color="red">hornet</font>>]
+kresno -> hurznutaGc -> hyrnetOE -> hernetME -> hornet
+
+// reindeer
+krei [label=<<font color="red">*krei-</font>>]
+hrainaGc [label=<<b>Germanic</b><br/><font color="red">*hraina-</font>>]
+hreinnON [label=<<b>Old Norse</b><br/><font color="red">hreinn</font><br/><font point-size="12">reindeer</font>>]
+derME [label=<<b>Middle<br/>English</b><br/><font color="red">der</font><br/><font point-size="12">animal</font>>]
+reindereME [label=<<b>Middle<br/>English</b><br/><font color="red">reindere</font>>]
+reindeer [label=<<b>Modern<br/>English</b><br/><font color="red">reindeer</font>>]
+ker -> krei -> hrainaGc -> hreinnON
+hreinnON -> reindereME [style=dashed]
+derME -> reindereME
+reindereME -> reindeer
+
+{ rank=sink cervine serval cervix hart hartebeest charivari cheer carotid carrot carotene cranium migraine olecranon hornet reindeer }
+}
