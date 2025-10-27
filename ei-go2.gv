@@ -101,7 +101,7 @@ yanuIE -> yanamSk
 gheIE -> hinaSk
 { hinaSk yanamSk } -> hinayanamSk
 hinayanamSk -> hinayana [style=dashed]
-megIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*meg-</font><br/><font point-size="12">great</font>> shape=box style="dashed,rounded" URL="meg-great.svg"]
+megIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*meg-</font><br/><font point-size="12">great</font>> shape=box style="dashed,rounded" URL="meg-great4.svg"]
 mahaSk [label=<<b>Sanskrit</b><br/><font color="red">mahā-</font><br/><font point-size="12">great</font>>]
 mahayanamSk [label=<<font color="red">Mahāyānam</font><br/><font point-size="12">greater vehicle</font>>]
 mahayana [label=<<b>Modern<br/>English</b><br/><font color="red">Mahayana</font>>]
@@ -113,7 +113,7 @@ mahayanamSk -> mahayana [style=dashed]
 ienaiGk [label=<<b>Greek</b><br/><font color="red">ienai</font><br/><font point-size="12">to go</font>>]
 ionGk [label=<<font color="red">ion</font><br/><font point-size="12">something<br/>that goes</font>>]
 ion [label=<<b>Modern<br/>English</b><br/><font color="red">ion<br/>anion<br/>cation</font>>]
-eiIE -> ienaiGk -> ionGk
+eiIE -> ienaiGk -> ionGk [weight=2]
 ionGk -> ion [style=dashed]
 
 // dysprosium
@@ -133,9 +133,10 @@ etiSk [label=<<b>Sanskrit</b><br/><font color="red">eti, ay-</font><br/><font po
 ayanamSk [label=<<font color="red">ayanam</font><br/><font point-size="12">a going, a way</font>>]
 ramayanamSk [label=<<font color="red">Rāmāyaṇam</font><br/><font point-size="12">the going of Rama</font>>]
 ramayana [label=<<b>Modern<br/>English</b><br/><font color="red">Ramayana</font>>]
-eiIE -> aitiII -> etiSk -> ayanamSk -> ramayanamSk
-ramayanamSk -> ramayana
+eiIE -> aitiII -> etiSk -> ayanamSk -> ramayanamSk [weight=2]
+ramayanamSk -> ramayana [style=dashed]
 
 { rank=sink initial initial commence count viscount constable itinerant errant janus january janitor hinayana mahayana ion dysprosium ramayana }
-{ rank=same komIE gheIE megIE perIE }
+{ rank=same komIE gheIE megIE perIE aitiII yanuIE }
+{ rank=same iterareL itinerariusL }
 }

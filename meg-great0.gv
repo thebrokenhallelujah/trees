@@ -1,0 +1,23 @@
+strict digraph {
+/* sources: AHD */
+
+meg [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*meg-</font></td><td><font point-size="16">great</font></td></tr></table>> tooltip="Indo-European \"*meg-\" great" shape=box peripheries=2 margin=.3]
+
+pg1 [label=<<table border="0" cellpadding="5">
+<tr><td><font color="red">*mik-ila-</font></td></tr>
+<tr><td><font color="red">mag-no-</font></td></tr>
+</table>> shape=box style="dashed,rounded" URL="meg-great1.svg"]
+
+pg2 [label=<<font color="red">*mag-yos-</font>> shape=box style="dashed,rounded" URL="meg-great2.svg"]
+
+pg3 [label=<<table border="0" cellpadding="5">
+<tr><td><font color="red">*meg-(ə)-isto-</font></td></tr>
+<tr><td><font color="red">*mag-samo-</font></td></tr>
+<tr><td><font color="red">*mag-ya-</font></td></tr>
+<tr><td><font color="red">*meg-ə-(l-)</font></td></tr>
+</table>> shape=box style="dashed,rounded" URL="meg-great3.svg"]
+
+pg4 [label=<<font color="red">*megh-</font>> shape=box style="dashed,rounded" URL="meg-great4.svg"]
+
+meg -> { pg1 pg2 pg3 pg4 }
+}

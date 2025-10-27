@@ -1,0 +1,70 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+meg [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*meg-</font></td><td><font point-size="16">great</font></td></tr></table>> tooltip="Indo-European \"*meg-\" great" shape=rect style=dashed peripheries=1 margin=.3 URL="meg-great0.svg"]
+
+// mahatma
+megh [label=<<font color="red">*megh-</font>>]
+mahaSk [label=<<b>Sanskrit</b><br/><font color="red">mahā-, mahat-</font><br/><font point-size="12">great</font>>]
+atmaSk [label=<<b>Sanskrit</b><br/><font color="red">ātmā</font><br/><font point-size="12">life, spirit</font>>]
+mahatmaSk [label=<<font color="red">mahātmā</font>>]
+mahatma [label=<<b>Modern<br/>English</b><br/><font color="red">mahatma</font>>]
+meg -> megh -> mahaSk
+{ mahaSk atmaSk } -> mahatmaSk
+mahatmaSk -> mahatma [style=dashed]
+
+// mahabharata
+mahabharatamSk [label=<<b>Sanskrit</b><br/><font color="red">Mahābhāratam</font><br/><font point-size="12">great (telling) of the<br/>Bharatas (a family)</font>>]
+mahabharata [label=<<b>Modern<br/>English</b><br/><font color="red">Mahabharata</font>>]
+mahaSk -> mahabharatamSk
+mahabharatamSk -> mahabharata [style=dashed]
+
+// maharajah
+regIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*reg-</font><br/><font point-size="12">to move in a<br/>straight line</font>> shape=box style="dashed,rounded" URL="reg-straight.svg"] // not made
+rajaSk [label=<<b>Sanskrit</b><br/><font color="red">rājā, rājaḥ</font><br/><font point-size="12">king</font>>]
+maharajahSk [label=<<font color="red">mahārājaḥ</font>>]
+maharajah [label=<<b>Modern<br/>English</b><br/><font color="red">maharajah</font>>]
+regIE -> rajaSk
+{ mahaSk rajaSk } -> maharajahSk
+maharajahSk -> maharajah [style=dashed]
+
+// maharani
+rajniSk [label=<<b>Sanskrit</b><br/><font color="red">rājñī</font><br/><font point-size="12">queen</font>>]
+maharajniSk [label=<<font color="red">mahārājñī</font>>]
+maharaniH [label=<<b>Hindi</b><br/><font color="red">mahārānī</font>>]
+maharani [label=<<b>Modern<br/>English</b><br/><font color="red">maharani</font>>]
+regIE -> rajniSk
+{ mahaSk rajniSk } -> maharajniSk -> maharaniH
+maharaniH -> maharani [style=dashed]
+
+// maharishi
+rsihSk [label=<<b>Sanskrit</b><br/><font color="red">ṛṣiḥ</font><br/><font point-size="12">seer, sage, saint</font>>]
+maharsihSk [label=<<font color="red">mahārṣiḥ</font>>]
+maharishi [label=<<b>Modern<br/>English</b><br/><font color="red">maharishi</font>>]
+{ mahaSk rsihSk } -> maharsihSk
+maharsihSk -> maharishi [style=dashed]
+
+// Mahayana
+eiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*ei-</font><br/><font point-size="12">to go</font>> shape=box style="dashed,rounded" URL="ei-go2.svg"]
+yanamSk [label=<<b>Sanskrit</b><br/><font color="red">yānam</font><br/><font point-size="12">vehicle</font>>]
+mahayanamSk [label=<<font color="red">Mahāyānam</font>>]
+mahayana [label=<<b>Modern<br/>English</b><br/><font color="red">Mahayana</font>>]
+eiIE -> yanamSk
+{ mahaSk yanamSk } -> mahayanamSk
+mahayanamSk -> mahayana
+
+// mahout
+meIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*mē-</font><br/><font point-size="12">to measure</font>> shape=box style="dashed,rounded" URL="me-measure.svg"] // not made
+mimiteSk [label=<<b>Sanskrit</b><br/><font color="red">mimīte, mā-</font><br/><font point-size="12">he measures</font>>]
+matramSk [label=<<font color="red">mātram</font><br/><font point-size="12">measure</font>>]
+mahamatrahSk [label=<<font color="red">mahāmātraḥ</font><br/><font point-size="12">one having great<br/>measure</font>>]
+mahavatH [label=<<b>Hindi</b><br/><font color="red">mahāvat, mahāut</font>>]
+mahout [label=<<b>Modern<br/>English</b><br/><font color="red">mahout</font>>]
+meIE -> mimiteSk -> matramSk
+{ mahaSk matramSk } -> mahamatrahSk -> mahavatH
+mahavatH -> mahout [style=dashed]
+
+{ rank=sink mahatma mahabharata maharajah maharani maharishi mahayana mahout }
+{ rank=same regIE eiIE meIE megh }
+}

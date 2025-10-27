@@ -1,0 +1,79 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+meg [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*meg-</font></td><td><font point-size="16">great</font></td></tr></table>> tooltip="Indo-European \"*meg-\" great" shape=rect style=dashed peripheries=1 margin=.3 URL="meg-great0.svg"]
+
+// maximum
+magsamo [label=<<font color="red">*mag-samo-</font><br/><font point-size="12">greatest</font>>]
+maximusL [label=<<b>Latin</b><br/><font color="red">maximus</font>>]
+maximumL [label=<<font color="red">maximum</font>>]
+maximum [label=<<b>Modern<br/>English</b><br/><font color="red">maximum</font>>]
+meg -> magsamo -> maximusL -> maximumL
+maximumL -> maximum [style=dashed]
+
+// maxim
+maximaL [label=<<font color="red">maxima (prōppositiō)</font><br/><font point-size="12">greatest (promise)</font>>]
+maximeOF [label=<<b>Old French</b><br/><font color="red">maxime</font>>]
+maximeME [label=<<b>Middle<br/>English</b><br/><font color="red">maxime</font>>]
+maxim [label=<<b>Modern<br/>English</b><br/><font color="red">maxim</font>>]
+maximusL -> maximaL -> maximeOF
+maximeOF -> maximeME [style=dashed]
+maximeME -> maxim
+
+// almagest
+megeisto [label=<<font color="red">*meg-(ə)-isto-</font><br/><font point-size="12">greatest</font>>]
+megistosGk [label=<<b>Greek</b><br/><font color="red">megistos</font>>]
+megisteGk [label=<<font color="red">megistē</font>>]
+almajistiA [label=<<font color="green"><b>Arabic</b></font><br/><font color="red">al-majisti</font>>]
+almagesteOF [label=<<b>Old French</b><br/><font color="red">almageste</font>>]
+almagesteME [label=<<b>Middle<br/>English</b><br/><font color="red">almageste</font>>]
+almagest [label=<<b>Modern<br/>English</b><br/><font color="red">almagest</font>>]
+meg -> megeisto -> megistosGk -> megisteGk
+megisteGk -> almajistiA -> almagesteOF -> almagesteME [style=dashed]
+almagesteME -> almagest
+
+// Hermes Trismegistus
+treiIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*trei-</font><br/><font point-size="12">three</font>> shape=box style="dashed,rounded" URL="trei-three4.svg"]
+trisGk [label=<<b>Greek</b><br/><font color="red">tris</font><br/><font point-size="12">thrice</font>>]
+trismegistosGk [label=<<font color="red">Hermēs trismegistos</font>>]
+trismegistusL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">Hermēs Trismegistus</font>>]
+trismegistus [label=<<b>Modern<br/>English</b><br/><font color="red">Hermes Trismegistus</font>>]
+treiIE -> trisGk
+{ trisGk megistosGk } -> trismegistosGk
+trismegistosGk -> trismegistusL -> trismegistus [style=dashed]
+
+// May
+magya [label=<<font color="red">*mag-ya-</font><br/><font point-size="12">she who is great</font>>]
+maiaL [label=<<b>Latin</b><br/><font color="red">Māia</font><br/><font point-size="12">(name of a<br/>goddess)</font>>]
+maiusL [label=<<font color="red">Māius (mēnsis)</font><br/><font point-size="12">(the month) of Maia</font>>]
+maiOF [label=<<b>Old French</b><br/><font color="red">Mai</font>>]
+mayME [label=<<b>Middle<br/>English</b><br/><font color="red">May</font>>]
+may [label=<<b>Modern<br/>English</b><br/><font color="red">May</font>>]
+meg -> magya -> maiaL -> maiusL -> maiOF
+maiOF -> mayME [style=dashed]
+mayME -> may
+
+// mega
+megel [label=<<font color="red">*meg-ə-(l-)</font>>]
+megasGk [label=<<b>Greek</b><br/><font color="red">megas, megal-</font><br/><font point-size="12">great</font>>]
+megaGk [label=<<font color="red">mega-</font>>]
+mega [label=<<b>Modern<br/>English</b><br/><font color="red">mega-</font>>]
+meg -> megel -> megasGk -> megaGk
+megaGk -> mega [style=dashed]
+
+// megalo-
+megaloGk [label=<<font color="red">megalo-</font>>]
+megalo [label=<<b>Modern<br/>English</b><br/><font color="red">megalo-</font>>]
+megasGk -> megaloGk
+megaloGk -> megalo [style=dashed]
+
+// omega
+omegaGk [label=<<b>Greek</b><br/><font color="red">ō mega</font><br/><font point-size="12">large (long) o</font>>]
+omega [label=<<b>Modern<br/>English</b><br/><font color="red">omega</font>>]
+megasGk -> omegaGk
+omegaGk -> omega [style=dashed]
+
+{ rank=sink maximum maxim almagest trismegistus may mega megalo omega }
+{ rank=same treiIE }
+}

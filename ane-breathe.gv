@@ -90,7 +90,7 @@ longanimiteOF -> longanimiteME [style=dashed]
 longanimiteME -> longanimity
 
 // magnanimous
-megIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*meg-</font><br/><font point-size="12">great</font>> shape=box style="dashed,rounded" URL="meg-great.svg"]
+megIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*meg-</font><br/><font point-size="12">great</font>> shape=box style="dashed,rounded" URL="meg-great1.svg"]
 magnusL [label=<<b>Latin</b><br/><font color="red">magnus</font>>]
 magnanimusL [label=<<font color="red">magnanimus</font>>]
 magnanimous [label=<<b>Modern<br/>English</b><br/><font color="red">magnanimous</font>>]

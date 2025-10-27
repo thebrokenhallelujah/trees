@@ -1,0 +1,102 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+meg [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*meg-</font></td><td><font point-size="16">great</font></td></tr></table>> tooltip="Indo-European \"*meg-\" great" shape=rect style=dashed peripheries=1 margin=.3 URL="meg-great0.svg"]
+
+// major
+magyos [label=<<font color="red">*mag-yos-</font><br/><font point-size="12">greater</font>>]
+maiorL [label=<<b>Latin</b><br/><font color="red">māior</font>>]
+majourME [label=<<b>Middle<br/>English</b><br/><font color="red">majour</font>>]
+major [label=<<b>Modern<br/>English</b><br/><font color="red">major</font>>]
+meg -> magyos -> maiorL
+maiorL -> majourME [style=dashed]
+majourME -> major
+
+// major-domo
+demIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dem-</font><br/><font point-size="12">house, household</font>> shape=box style="dashed,rounded" URL="dem-house.svg"]
+domusL [label=<<b>Latin</b><br/><font color="red">domus</font>>]
+maiordomusL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">māior domūs</font><br/><font point-size="12">chief of the house</font>>]
+maggiordomoI [label=<<b>Italian</b><br/><font color="red">maggiordomo</font>>]
+mayordomoS [label=<<b>Spanish</b><br/><font color="red">mayordomo</font>>]
+majordomo [label=<<b>Modern<br/>English</b><br/><font color="red">major-domo</font>>]
+demIE -> domusL
+{ maiorL domusL } -> maiordomusL -> { maggiordomoI mayordomoS }
+{ maggiordomoI mayordomoS } -> majordomo [style=dashed]
+
+// majority
+maioritasL [label=<<b>Medieval<br/>Latin</b><br/><font color="red">māiōritās</font>>]
+majoriteF [label=<<b>French</b><br/><font color="red">majorité</font>>]
+majority [label=<<b>Modern<br/>English</b><br/><font color="red">majority</font>>]
+maiorL -> maioritasL
+maioritasL -> majoriteF -> majority [style=dashed]
+
+// majuscule
+maiusculusL [label=<<font color="red">māiusculus</font><br/><font point-size="12">somewhat larger</font>>]
+majusculeF [label=<<b>French</b><br/><font color="red">majuscule</font>>]
+majuscule [label=<<b>Modern<br/>English</b><br/><font color="red">majuscule</font>>]
+maiorL -> maiusculusL
+maiusculusL -> majusculeF -> majuscule [style=dashed]
+
+// mayor
+maireOF [label=<<b>Old French</b><br/><font color="red">maire</font>>]
+maireME [label=<<b>Middle<br/>English</b><br/><font color="red">maire</font>>]
+mayor [label=<<b>Modern<br/>English</b><br/><font color="red">mayor</font>>]
+maiorL -> maireOF
+maireOF -> maireME [style=dashed]
+maireME -> mayor
+
+// maestoso
+maiestasL [label=<<b>Latin</b><br/><font color="red">māiestās</font><br/><font point-size="12">greatness, authority</font>>]
+maestaI [label=<<b>Italian</b><br/><font color="red">maestà</font>>]
+maestosoI [label=<<font color="red">maestoso</font><br/><font point-size="12">majestically</font>>]
+maestoso [label=<<b>Modern<br/>English</b><br/><font color="red">maestoso</font>>]
+magyos -> maiestasL -> maestaI -> maestosoI
+maestosoI -> maestoso [style=dashed]
+
+// majesty
+majesteOF [label=<<b>Old French</b><br/><font color="red">majeste</font>>]
+magesteME [label=<<b>Middle<br/>English</b><br/><font color="red">mageste, maieste</font>>]
+majesty [label=<<b>Modern<br/>English</b><br/><font color="red">majesty</font>>]
+maiestasL -> majesteOF
+majesteOF -> magesteME [style=dashed]
+magesteME -> majesty
+
+// maestro
+magisterL [label=<<b>Latin</b><br/><font color="red">magister, magistr-</font><br/><font point-size="12">master, high official</font>>]
+maestroI [label=<<b>Italian</b><br/><font color="red">maestro</font>>]
+maestro [label=<<b>Modern<br/>English</b><br/><font color="red">maestro</font>>]
+magyos -> magisterL -> maestroI
+maestroI -> maestro [style=dashed]
+
+// magistrate
+magistratusL [label=<<font color="red">magistrātus</font>>]
+magistratOF [label=<<b>Old French</b><br/><font color="red">magistrat</font>>]
+magistratME [label=<<b>Middle<br/>English</b><br/><font color="red">magistrat</font>>]
+magistrate [label=<<b>Modern<br/>English</b><br/><font color="red">magistrate</font>>]
+magisterL -> magistratusL -> magistratOF
+magistratOF -> magistratME [style=dashed]
+magistratME -> magistrate
+
+// master
+maegisterOE [label=<<b>Old English</b><br/><font color="red">maegister</font>>]
+masterME [label=<<b>Middle<br/>English</b><br/><font color="red">master</font>>]
+master [label=<<b>Modern<br/>English</b><br/><font color="red">master</font>>]
+magisterL -> maegisterOE [style=dashed]
+maegisterOE -> masterME -> master
+
+// mister
+mister [label=<<b>Modern<br/>English</b><br/><font color="red">mister</font>>]
+masterME -> mister
+
+// mistress
+maistreOF [label=<<b>Old French</b><br/><font color="red">maistre<br/>maistresse</font>>]
+maistresseME [label=<<b>Middle<br/>English</b><br/><font color="red">maistresse</font>>]
+mistress [label=<<b>Modern<br/>English</b><br/><font color="red">mistress</font>>]
+magisterL -> maistreOF
+maistreOF -> maistresseME [style=dashed]
+maistresseME -> mistress
+
+{ rank=sink major majordomo majority majuscule mayor maestoso majesty maestro magistrate master mister mistress }
+{ rank=same demIE magyos }
+}

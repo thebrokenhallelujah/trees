@@ -1,0 +1,95 @@
+strict digraph {
+/* sources: AHD */
+node [shape=none]
+
+meg [label=<<table border="0"><tr><td colspan="2"><font point-size="24"><b>Indo-European</b></font></td></tr><tr><td><font point-size="18" color="red">*meg-</font></td><td><font point-size="16">great</font></td></tr></table>> tooltip="Indo-European \"*meg-\" great" shape=rect style=dashed peripheries=1 margin=.3 URL="meg-great0.svg"]
+
+// much
+mikilaGc [label=<<b>Germanic</b><br/><font color="red">*mik-ila-</font>>]
+micelOE [label=<<b>Old English</b><br/><font color="red">micel, mycel</font>>]
+muchelME [label=<<b>Middle<br/>English</b><br/><font color="red">muchel, muche</font>>]
+much [label=<<b>Modern<br/>English</b><br/><font color="red">much</font>>]
+meg -> mikilaGc [len=2]
+mikilaGc -> micelOE -> muchelME  -> much [weight=2]
+
+// magnum
+magno [label=<<font color="red">*mag-no-</font>>]
+magnusL [label=<<b>Latin</b><br/><font color="red">magnus, magna, magnum</font>>]
+magnum [label=<<b>Modern<br/>English</b><br/><font color="red">magnum</font>>]
+meg -> magno -> magnusL
+magnusL -> magnum [style=dashed]
+
+// magnate
+magnatesL [label=<<b>Late Latin</b><br/><font color="red">magnātēs</font><br/><font point-size="12">magnates</font>>]
+magnatesME [label=<<b>Middle<br/>English</b><br/><font color="red">magnates</font>>]
+magnate [label=<<b>Modern<br/>English</b><br/><font color="red">magnate</font>>]
+magnusL -> magnatesL
+magnatesL -> magnatesME [style=dashed]
+magnatesME -> magnate
+
+// magnitude
+magnitudoL [label=<<font color="red">magnitūdō</font><br/><font point-size="12">size</font>>]
+magnitudeOF [label=<<b>Old French</b><br/><font color="red">magnitude</font>>]
+magnitudeME [label=<<b>Middle<br/>English</b><br/><font color="red">magnitude</font>>]
+magnitude [label=<<b>Modern<br/>English</b><br/><font color="red">magnitude</font>>]
+magnusL -> magnitudoL -> magnitudeOF
+magnitudeOF -> magnitudeME [style=dashed]
+magnitudeME -> magnitude
+
+// magnanimous
+aneIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*anə-</font><br/><font point-size="12">to breathe</font>> shape=box style="dashed,rounded" URL="ane-breathe.svg"]
+animusL [label=<<b>Latin</b><br/><font color="red">animus</font><br/><font point-size="12">soul, mind</font>>]
+magnanimusL [label=<<font color="red">magnanimus</font>>]
+magnanimous [label=<<b>Modern<br/>English</b><br/><font color="red">magnanimous</font>>]
+aneIE -> animusL
+{ magnusL animusL } -> magnanimusL
+magnanimusL -> magnanimous [style=dashed]
+
+// magnific
+dheIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*dhē-</font><br/><font point-size="12">to set, put</font>> shape=box style="dashed,rounded" URL="dhe-put.svg"] // not made
+facereL [label=<<b>Latin</b><br/><font color="red">facere</font><br/><font point-size="12">to do</font>>]
+ficusL [label=<<font color="red">-ficus</font><br/><font point-size="12">causing, making</font>>]
+magnificusL [label=<<font color="red">magnificus</font><br/><font point-size="12">magnificent</font>>]
+magnifiqueOF [label=<<b>Old French</b><br/><font color="red">magnifique</font>>]
+magnifiqueME [label=<<b>Middle<br/>English</b><br/><font color="red">magnifique</font>>]
+magnific [label=<<b>Modern<br/>English</b><br/><font color="red">magnific</font>>]
+dheIE -> facereL -> ficusL
+{ magnusL ficusL } -> magnificusL -> magnifiqueOF
+magnifiqueOF -> magnifiqueME [style=dashed]
+magnifiqueME -> magnific
+
+// magnificence
+magnificentiaL [label=<<font color="red">magnificentia</font>>]
+magnificenceOF [label=<<b>Old French</b><br/><font color="red">magnificence</font><br/><font point-size="12">splendor</font>>]
+magnificenceME [label=<<b>Middle<br/>English</b><br/><font color="red">magnificence</font>>]
+magnificence [label=<<b>Modern<br/>English</b><br/><font color="red">magnificence</font>>]
+magnificusL -> magnificentiaL -> magnificenceOF
+magnificenceOF -> magnificenceME [style=dashed]
+magnificenceME -> magnificence
+
+// magnifico
+magnificoI [label=<<b>Italian</b><br/><font color="red">magnifico</font>>]
+magnifico [label=<<b>Modern<br/>English</b><br/><font color="red">magnifico</font>>]
+magnificusL -> magnificoI
+magnificoI -> magnifico [style=dashed]
+
+// magnify
+magnificareL [label=<<font color="red">magnificāre</font><br/><font point-size="12">to extol</font>>]
+magnifierOF [label=<<b>Old French</b><br/><font color="red">magnifier</font>>]
+magnifienME [label=<<b>Middle<br/>English</b><br/><font color="red">magnifien</font>>]
+magnify [label=<<b>Modern<br/>English</b><br/><font color="red">magnify</font>>]
+magnificusL -> magnificareL -> magnifierOF
+magnifierOF -> magnifienME [style=dashed]
+magnifienME -> magnify
+
+// magniloquence
+loquensL [label=<<b>Latin</b><br/><font color="red">loquēns, loquent-</font><br/><font point-size="12">speaking</font>>]
+magniloquentiaL [label=<<font color="red">magniloquentia</font>>]
+magniloquence [label=<<b>Modern<br/>English</b><br/><font color="red">magniloquence</font>>]
+{ magnusL loquensL } -> magniloquentiaL
+magniloquentiaL -> magniloquence [style=dashed]
+
+{ rank=sink much magnum magnate magnitude magnanimous magnific magnificence magnifico magnify magniloquence }
+{ rank=same aneIE dheIE magno }
+{ rank=same mikilaGc magnusL }
+}

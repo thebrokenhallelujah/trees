@@ -50,7 +50,7 @@ trisoctahedron [label=<<b>Modern<br/>English</b><br/><font color="red">trisoctah
 { trisG oktoG hedraG } -> trisoctahedron [style=dotted]
 
 /* Hermes Trismegistus */
-megIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*meg-</font><br/><font point-size="12">great</font>> shape=box style="dashed,rounded" URL="meg-great.svg"]
+megIE [label=<<b>Indo-<br/>European</b><br/><font color="red">*meg-</font><br/><font point-size="12">great</font>> shape=box style="dashed,rounded" URL="meg-great3.svg"]
 megistosG [label=<<b>Greek</b><br/><font color="red">megistos</font><br/><font point-size="12">greatest</font>>]
 megIE -> megistosG
 trismegistosG [label=<<font color="red">(Hermēs) trismegistos</font><br/><font point-size="12">thrice-greatest (Hermes)</font>>]
